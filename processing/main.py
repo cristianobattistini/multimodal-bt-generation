@@ -1,6 +1,6 @@
 # main.py
-# Orchestratore Step 1: esporta fino a N episodi per ciascun dataset OXE (RLDS).
-# Per ogni episodio salva: frame JPEG, preview.gif (se ≥2 frame), instruction.txt (se presente), attributes.json.
+# Orchestrator Step 1: export up to N episodes for each OXE (RLDS) dataset.
+# For each episode saves: JPEG frames, preview.gif (if >=2 frames), instruction.txt (if present), attributes.json.
 
 try:
     from ._bootstrap import ensure_repo_root

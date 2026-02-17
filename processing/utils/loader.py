@@ -1,9 +1,9 @@
 # loader.py
-# Funzioni di caricamento ed export per OXE (formato RLDS) allineate al notebook ufficiale.
-# - iterate_episodes: iteratore di EPISODI TFDS (ognuno con campo 'steps')
-# - dump_attributes: salva mappa delle chiavi con shape/dtype (diagnostico)
-# - dump_episode_rlds: salva frame JPEG, preview.gif e instruction.txt se presente
-# - utility interne per chiavi annidate e conversioni immagini
+# Loading and export functions for OXE (RLDS format) aligned with the official notebook.
+# - iterate_episodes: iterator of TFDS EPISODES (each with 'steps' field)
+# - dump_attributes: save key map with shape/dtype (diagnostic)
+# - dump_episode_rlds: save JPEG frames, preview.gif and instruction.txt if present
+# - internal utilities for nested keys and image conversions
 
 from typing import Any, Dict, Generator, Sequence, Optional
 import os
@@ -18,12 +18,12 @@ import processing.utils.config as CFG
 from math import ceil
 
 # =============================================================================
-#  Utility: accesso a chiavi annidate ("a/b/c" o "a.b.c")
+#  Utility: access nested keys ("a/b/c" or "a.b.c")
 # =============================================================================
 def _get_by_path(d: Dict[str, Any], key: str) -> Any:
     """
-    Accede a percorsi tipo 'a/b/c' o 'a.b.c' dentro dict o numpy structured.
-    NON attraversa liste: per gli step usiamo accesso esplicito.
+    Access paths like 'a/b/c' or 'a.b.c' inside dict or numpy structured.
+    Does NOT traverse lists: for steps we use explicit access.
     """
     if not key:
         return None
@@ -31,17 +31,17 @@ def _get_by_path(d: Dict[str, Any], key: str) -> Any:
     cur: Any = d
     debug = bool(getattr(CFG, "debug_get_by_path", False))
     for p in parts:
-        # dict classico
+        # classic dict
         if debug:
             print(f"[DEBUG] Looking for {p} in {type(cur)}")
         if isinstance(cur, dict) and p in cur:
             cur = cur[p]
             continue
-        # elemento structured numpy (np.void) con campi nominati
+        # structured numpy element (np.void) with named fields
         if isinstance(cur, np.void) and cur.dtype.names and p in cur.dtype.names:
             cur = cur[p]
             continue
-        # oggetto con attributo p (caso rari)
+        # object with attribute p (rare case)
         if hasattr(cur, p):
             cur = getattr(cur, p)
             continue
@@ -124,7 +124,7 @@ def _make_builder(name_or_dir: str, data_dir: str | None = None):
 
 
 # =============================================================================
-#  Iteratore episodi RLDS (come nel notebook OXE)
+#  RLDS episode iterator (as in the OXE notebook)
 # =============================================================================
 def iterate_episodes(
     name_or_dir: str,
@@ -133,10 +133,10 @@ def iterate_episodes(
     skip: int = 0,
 ) -> Generator[Dict[str, Any], None, None]:
     """
-    Restituisce un generatore di EPISODI TFDS (OXE/RLDS) come dict numpy-friendly.
-    In OXE un episodio ha tipicamente 'steps/observation/...', 'steps/action/...', ecc.
+    Returns a generator of TFDS EPISODES (OXE/RLDS) as numpy-friendly dicts.
+    In OXE an episode typically has 'steps/observation/...', 'steps/action/...', etc.
 
-    Genera EPISODI TFDS (RLDS). Richiede che il builder sia registrato.
+    Yields TFDS EPISODES (RLDS). Requires the builder to be registered.
     """
     b = _make_builder(name_or_dir, data_dir=data_dir)
     ds = b.as_dataset(split=split, read_config=tfds.ReadConfig(try_autocache=False))
@@ -172,8 +172,8 @@ def iterate_episodes(
 
 def get_split_num_examples(name_or_dir: str, split: str, data_dir: str | None = None) -> int | None:
     """
-    Restituisce il numero di esempi per lo split base (es. 'train' in 'train[:100%]') se disponibile,
-    altrimenti None. Non legge i TFRecord.
+    Returns the number of examples for the base split (e.g. 'train' in 'train[:100%]') if available,
+    otherwise None. Does not read the TFRecords.
     """
     try:
         b = _make_builder(name_or_dir, data_dir=data_dir)
@@ -188,12 +188,12 @@ def get_split_num_examples(name_or_dir: str, split: str, data_dir: str | None = 
         return None
 
 # =============================================================================
-#  Conversione immagine → uint8 RGB
+#  Image conversion to uint8 RGB
 # =============================================================================
 def to_uint8_rgb(x: Any) -> np.ndarray:
     """
-    Converte una singola immagine (H,W,C) o una sequenza (T,H,W,C) in uint8 RGB.
-    Float in [0,1] viene scalato, float >1 viene clippato a [0,255].
+    Converts a single image (H,W,C) or a sequence (T,H,W,C) to uint8 RGB.
+    Float in [0,1] is scaled, float >1 is clipped to [0,255].
     """
     arr = np.asarray(x)
     if arr.ndim not in (3, 4):
@@ -210,31 +210,31 @@ def to_uint8_rgb(x: Any) -> np.ndarray:
 
 
 # =============================================================================
-#  Risoluzione immagini e istruzioni in stile RLDS
+#  RLDS-style image and instruction resolution
 # =============================================================================
 _DEFAULT_IMAGE_CANDIDATES = [
-    "steps/observation/image",  # caso standard OXE
-    "steps/image",              # alcune varianti
+    "steps/observation/image",  # standard OXE case
+    "steps/image",              # some variants
     "image",                    # fallback
 ]
 
-# candidati di camera dentro observation
+# camera candidates inside observation
 _OBS_IMAGE_CANDIDATES = ["image", "wrist_image", "hand_image", "image2"]
 
 def _resolve_image_array(episode: Dict[str, Any], image_key: str) -> np.ndarray:
     """
-    Ritorna un array (T,H,W,C) costruito iterando gli step:
-    - image_key può essere 'observation/image', 'image', 'observation/wrist_image', ecc.
-    - se non trovato, prova candidati standard in observation.
+    Returns an array (T,H,W,C) built by iterating over the steps:
+    - image_key can be 'observation/image', 'image', 'observation/wrist_image', etc.
+    - if not found, tries standard candidates in observation.
     """
     steps = episode.get("steps", [])
     if not isinstance(steps, (list, tuple)) or not steps:
         raise KeyError("Episode has no materialized 'steps' list.")
 
-    # normalizza la chiave: togli 'steps/' se presente
+    # normalize the key: remove 'steps/' prefix if present
     key = (image_key or "").replace("steps/", "")
     parts = key.split("/") if key else []
-    # se è 'observation/<camera>' prendi <camera>, altrimenti ultima parte o 'image'
+    # if 'observation/<camera>' take <camera>, otherwise last part or 'image'
     cam_key = parts[1] if len(parts) >= 2 and parts[0] == "observation" else (parts[-1] if parts else "image")
 
     frames = []
@@ -242,7 +242,7 @@ def _resolve_image_array(episode: Dict[str, Any], image_key: str) -> np.ndarray:
         obs = st.get("observation", {})
         arr = obs.get(cam_key)
         if arr is None:
-            # fallback su candidati comuni
+            # fallback to common candidates
             for cand in _OBS_IMAGE_CANDIDATES:
                 if cand in obs:
                     arr = obs[cand]
@@ -251,12 +251,12 @@ def _resolve_image_array(episode: Dict[str, Any], image_key: str) -> np.ndarray:
             frames.append(np.asarray(arr))
 
     if not frames:
-        raise KeyError(f"Nessuna immagine trovata. key='{image_key}', candidati_obs={_OBS_IMAGE_CANDIDATES}")
+        raise KeyError(f"No image found. key='{image_key}', obs_candidates={_OBS_IMAGE_CANDIDATES}")
 
-    # stack in (T,H,W,C); se singoli frame con shape (H,W,C), ok; se occasionalmente (H,W), alziamo errore esplicito
+    # stack into (T,H,W,C); single frames with shape (H,W,C) are fine; if occasionally (H,W), raise explicit error
     arr = np.stack(frames, axis=0)
     if arr.ndim != 4 or arr.shape[-1] not in (1, 3, 4):
-        raise ValueError(f"Forma immagini inattesa: {arr.shape}")
+        raise ValueError(f"Unexpected image shape: {arr.shape}")
     return arr
 
 def _first_nonempty_string(seq) -> Optional[str]:
@@ -277,44 +277,44 @@ def _first_nonempty_string(seq) -> Optional[str]:
 #  Utility text
 # =============================================================================
 def _as_text(x):
-    """Converte qualunque 'stringa' (bytes / np.bytes_ / np.str_ / scalari numpy) in str UTF-8, altrimenti None."""
+    """Converts any 'string' (bytes / np.bytes_ / np.str_ / numpy scalars) to str UTF-8, otherwise None."""
     if x is None:
         return None
     if isinstance(x, str):
         return x
-    # scalare numpy? estrai e riprova
+    # numpy scalar? extract and retry
     if hasattr(x, "item"):
         try:
             return _as_text(x.item())
         except Exception:
             pass
-    # bytes-like (incluso np.bytes_)
+    # bytes-like (including np.bytes_)
     import numpy as _np
     if isinstance(x, (bytes, bytearray, _np.bytes_)):
         try:
             return x.decode("utf-8")
         except Exception:
             return x.decode("latin-1", errors="replace")
-    # stringa numpy
+    # numpy string
     if isinstance(x, _np.str_):
         return str(x)
     return None
 
 def resolve_instruction(episode: Dict[str, Any], instruction_key: str) -> Optional[str]:
     """
-    Ordine di ricerca:
-      1) livello episodio: instruction_key se dato; poi alias noti;
-      2) livello step: instruction_key e alias, sia come campo diretto sia dentro observation.
-    Restituisce str UTF-8 oppure None.
+    Search order:
+      1) episode level: instruction_key if given; then known aliases;
+      2) step level: instruction_key and aliases, both as direct field and inside observation.
+    Returns str UTF-8 or None.
     """
-    # 1) episodio (chiave specificata)
+    # 1) episode (specified key)
     if instruction_key:
         val = _get_by_path(episode, instruction_key)
         txt = _as_text(val)
         if txt:
             return txt
 
-    # 1b) episodio (alias comuni)
+    # 1b) episode (common aliases)
     for k in ("language_instruction", "natural_language_instruction", "task/language_instruction"):
         val = _get_by_path(episode, k)
         txt = _as_text(val)
@@ -326,11 +326,11 @@ def resolve_instruction(episode: Dict[str, Any], instruction_key: str) -> Option
     candidates = [c for c in (instruction_key, "language_instruction", "natural_language_instruction", "task/language_instruction") if c]
     for st in steps:
         for k in candidates:
-            # a) campo diretto nello step
+            # a) direct field in the step
             txt = _as_text(st.get(k))
             if txt:
                 return txt
-            # b) eventualmente annidato in observation
+            # b) possibly nested in observation
             obs = st.get("observation", {})
             txt = _as_text(obs.get(k))
             if txt:
@@ -341,7 +341,7 @@ def resolve_instruction(episode: Dict[str, Any], instruction_key: str) -> Option
 
 
 # =============================================================================
-#  Dump diagnostico attributi
+#  Diagnostic attribute dump
 # =============================================================================
  
 def dump_attributes(example: Dict[str, Any], out_dir: str) -> str:
@@ -353,19 +353,19 @@ def dump_attributes(example: Dict[str, Any], out_dir: str) -> str:
     os.makedirs(out_dir, exist_ok=True)
 
     def _to_serializable(obj: Any):
-        # scalari numpy
+        # numpy scalars
         if isinstance(obj, (np.floating, np.integer, np.bool_)):
             return obj.item()
-        # tipi python base
+        # base python types
         if isinstance(obj, (bool, int, float, str)) or obj is None:
             return obj
         # array
         if isinstance(obj, np.ndarray):
             return {"__ndarray__": True, "shape": list(obj.shape), "dtype": str(obj.dtype)}
-        # record numpy (una riga di structured array)
+        # numpy record (a row of a structured array)
         if isinstance(obj, np.void) and obj.dtype.names:
             return {name: _to_serializable(obj[name]) for name in obj.dtype.names}
-        # dict / lista
+        # dict / list
         if isinstance(obj, dict):
             return {k: _to_serializable(v) for k, v in obj.items()}
         if isinstance(obj, (list, tuple)):
@@ -382,7 +382,7 @@ def dump_attributes(example: Dict[str, Any], out_dir: str) -> str:
 
 
 # =============================================================================
-#  Dump episodio: frame JPEG, preview.gif, instruction.txt
+#  Episode dump: JPEG frames, preview.gif, instruction.txt
 # =============================================================================
 def dump_episode_rlds(
     episode: Dict[str, Any],
@@ -392,17 +392,17 @@ def dump_episode_rlds(
     max_frames: int,
 ) -> Dict[str, Any]:
     """
-    Salva:
-      - raw_frames/frame_XXXX.jpg (fino a max_frames),
-      - preview.gif se ≥2 frame,
-      - instruction.txt se presente,
-      - episode_data.json con {"instruction": ..., "frames": [...]}
+    Saves:
+      - raw_frames/frame_XXXX.jpg (up to max_frames),
+      - preview.gif if >=2 frames,
+      - instruction.txt if present,
+      - episode_data.json with {"instruction": ..., "frames": [...]}
     """
     os.makedirs(out_dir, exist_ok=True)
     frames_dir = os.path.join(out_dir, "raw_frames")
     os.makedirs(frames_dir, exist_ok=True)
 
-    # Immagini (T,H,W,C) da step
+    # Images (T,H,W,C) from steps
     arr = _resolve_image_array(episode, image_key)
     arr = to_uint8_rgb(arr)
     if arr.ndim == 3:
@@ -433,10 +433,10 @@ def dump_episode_rlds(
         imgs[0].save(gif_path, save_all=True, append_images=imgs[1:], duration=120, loop=0)
         gif_flag = True
 
-    # GIF campionata: frame ogni k
+    # Sampled GIF: one frame every k
 
     raw = CFG.embeds["k_slicing"]
-    # se float in (0,1] -> percentuale; se int -> stride classico
+    # if float in (0,1] -> percentage; if int -> classic stride
     k_gif = max(1, int(round(1.0 / raw))) if isinstance(raw, float) and 0.0 < raw <= 1.0 else max(1, int(raw))
     if T >= 2 and T > k_gif:
 
@@ -444,17 +444,17 @@ def dump_episode_rlds(
         gif_sampled_path = os.path.join(out_dir, "preview_sampled.gif")
         imgs = [Image.fromarray(f) for f in arr_sampled]
         imgs[0].save(gif_sampled_path, save_all=True, append_images=imgs[1:], duration=120, loop=0)
-        print(f"[GIF] preview_sampled.gif salvata con {len(imgs)} frame (1 ogni {k_gif})")
+        print(f"[GIF] preview_sampled.gif saved with {len(imgs)} frames (1 every {k_gif})")
 
 
-    # Istruzione
+    # Instruction
     instr = resolve_instruction(episode, instruction_key)
     instr_flag = bool(instr)
     if instr_flag:
         with open(os.path.join(out_dir, "instruction.txt"), "w", encoding="utf-8") as f:
             f.write(instr)
 
-    # Serializzazione per VLM
+    # Serialization for VLM
     with open(os.path.join(out_dir, "episode_data.json"), "w", encoding="utf-8") as f:
         json.dump({"instruction": instr, "frames": frames_rel}, f, ensure_ascii=False, indent=2)
 
@@ -469,20 +469,20 @@ def dump_episode_rlds(
 
 def sample_every_k(arr: np.ndarray, k: int) -> tuple[np.ndarray, list[int]]:
     """
-    Restituisce una sotto-sequenza di frame, prendendo 1 ogni k.
-    
+    Returns a sub-sequence of frames, taking 1 every k.
+
     Args:
-        arr: array (T, H, W, C) con tutti i frame.
-        k: passo di campionamento (es. 5 = prendi un frame ogni 5)
-    
+        arr: array (T, H, W, C) with all frames.
+        k: sampling step (e.g. 5 = take one frame every 5)
+
     Returns:
-        - subset: array (T', H, W, C) con T' ≤ T
-        - indices: lista degli indici originali selezionati
+        - subset: array (T', H, W, C) with T' <= T
+        - indices: list of selected original indices
     """
     T = arr.shape[0]
     indices = list(range(0, T, k))
-    if indices[-1] != T - 1:   # se l’ultimo non è incluso
-        indices.append(T - 1)  # aggiungi ultimo frame
+    if indices[-1] != T - 1:   # if the last is not included
+        indices.append(T - 1)  # add last frame
     subset = arr[indices]
     return subset, indices
 
@@ -515,7 +515,7 @@ def parse_action_fields(step: Dict[str, Any]) -> Dict[str, Any]:
             out["terminate_episode"] = float(np.asarray(a["terminate_episode"]).squeeze())
         return out
 
-    # Caso vettoriale (Stretch, PR2, etc.)
+    # Vector case (Stretch, PR2, etc.)
     v = _to_1d(a)
     n = v.size
     if n >= 3:

@@ -1,5 +1,5 @@
 # frame_selection.py
-# STEP 1: derivazione segnali compatti da un episodio RLDS/OXE.
+# STEP 1: derive compact signals from an RLDS/OXE episode.
 from __future__ import annotations
 from typing import Any, Dict, List
 import numpy as np

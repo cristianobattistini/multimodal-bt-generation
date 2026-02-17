@@ -2,25 +2,25 @@
 # -*- coding: utf-8 -*-
 
 """
-Staging persistente per PROMPTS (p/) e FRAMES (f/) dal dato episodio fino alla fine,
-più stage di USCITA (r/) e sink automatico nel dataset.
+Persistent staging for PROMPTS (p/) and FRAMES (f/) from the given episode onward,
+plus OUTPUT stage (r/) and automatic sink to dataset.
 
-Uso tipico (LOCALS):
+Typical usage (LOCALS):
   python chat_stage.py build --from 1
   python chat_stage.py build --from 17 --dataset utokyo_xarm_pick_and_place_0.1.0
   python chat_stage.py build --from 5 --locals 1,2,3
 
-Uso tipico (ROOT, separato dai locals):
+Typical usage (ROOT, separate from locals):
   python chat_stage.py build-root --from 1
   python chat_stage.py status-root --from 10 --dataset asu_table_top_converted_externally_to_rlds_0.1.0
   python chat_stage.py rebuild-root --from 3
 
-Nuovi comandi (OUTPUT → dataset a partire da r/):
+New commands (OUTPUT -> dataset from r/):
   python chat_stage.py status-out --dataset <ds>
   python chat_stage.py apply-out  --dataset <ds> [--dry] [--rm]
   python chat_stage.py clean-out
 
-Nuovo comando (SCAFFOLD r/ segnaposto pronti al copia/incolla):
+New command (SCAFFOLD r/ placeholders ready for copy/paste):
   python chat_stage.py scaffold-out --from <n> --dataset <ds> [--locals 1,2,3] [--include both|locals|root] [--force]
 """
 
@@ -40,15 +40,15 @@ import xml.etree.ElementTree as ET
 from pathlib import Path
 from typing import List, Optional, Dict, Tuple
 
-# ====== DEFAULTS MODIFICABILI ======
+# ====== CONFIGURABLE DEFAULTS ======
 DATASET_ROOT = Path("dataset1")
 DEFAULT_DATASET = "dlr_sara_grid_clamp_converted_externally_to_rlds_0.1.0"
 EPISODE_PREFIX = "episode_"
 EP_NUM_WIDTH = 3
 DEFAULT_LOCALS = [1, 2, 3]
-P_DIR = Path("p")   # prompts (ingresso)
-F_DIR = Path("f")   # frames  (ingresso)
-R_DIR = Path("r")   # risultati (uscita) -> sink
+P_DIR = Path("p")   # prompts (input)
+F_DIR = Path("f")   # frames  (input)
+R_DIR = Path("r")   # results (output) -> sink
 # ===================================
 
 def ep_name(n: int) -> str:
@@ -107,29 +107,29 @@ def symlink_or_copy(src: Path, dst: Path):
         shutil.copy2(src, dst)
 
 # -----------------------
-# LOCALS: staging (ingresso)
+# LOCALS: staging (input)
 # -----------------------
 def prepare_episode(dataset: str, ep: int, locals_list: List[int]) -> int:
-    """Ritorna quanti local sono stati creati/aggiornati per ep (solo locals/)."""
+    """Returns how many locals were created/updated for ep (locals/ only)."""
     ep_dir = DATASET_ROOT / dataset / ep_name(ep)
     if not ep_dir.is_dir():
-        print(f"Avviso: manca {ep_dir}, salto episodio.")
+        print(f"Warning: missing {ep_dir}, skipping episode.")
         return 0
 
     created = 0
     for loc in locals_list:
         local_dir = ep_dir / "locals" / f"local_{loc}"
         if not local_dir.is_dir():
-            print(f"Avviso: manca {local_dir}, salto local.")
+            print(f"Warning: missing {local_dir}, skipping local.")
             continue
 
         prompt = pick_prompt(local_dir)
         frame  = pick_frame(local_dir)
         if prompt is None:
-            print(f"Avviso: {local_dir} senza local_prompt(.md), salto local.")
+            print(f"Warning: {local_dir} without local_prompt(.md), skipping local.")
             continue
         if frame is None:
-            print(f"Avviso: {local_dir} senza frame_*.jpg, salto local.")
+            print(f"Warning: {local_dir} without frame_*.jpg, skipping local.")
             continue
 
         label = f"E{ep:0{EP_NUM_WIDTH}d}_L{loc}"
@@ -145,13 +145,13 @@ def prepare_episode(dataset: str, ep: int, locals_list: List[int]) -> int:
 def do_build(from_ep: int, dataset: str, locals_list: List[int]) -> int:
     eps = [e for e in list_episodes(dataset) if e >= from_ep]
     if not eps:
-        print(f"Nessun episodio >= {from_ep:0{EP_NUM_WIDTH}d} in '{dataset}'.")
+        print(f"No episodes >= {from_ep:0{EP_NUM_WIDTH}d} in '{dataset}'.")
         return 0
     total = 0
     for ep in eps:
         total += prepare_episode(dataset, ep, locals_list)
-    print(f"Creati/aggiornati {total} locals in p/ e f/ "
-          f"(dataset '{dataset}', da {ep_name(from_ep)} a {ep_name(eps[-1])}).")
+    print(f"Created/updated {total} locals in p/ and f/ "
+          f"(dataset '{dataset}', from {ep_name(from_ep)} to {ep_name(eps[-1])}).")
     return total
 
 def do_rebuild(from_ep: int, dataset: str, locals_list: List[int]):
@@ -163,10 +163,10 @@ def do_rebuild(from_ep: int, dataset: str, locals_list: List[int]):
 def do_status(from_ep: int, dataset: str, locals_list: List[int]):
     eps = [e for e in list_episodes(dataset) if e >= from_ep]
     if not eps:
-        print(f"Nessun episodio >= {from_ep:0{EP_NUM_WIDTH}d} in '{dataset}'.")
+        print(f"No episodes >= {from_ep:0{EP_NUM_WIDTH}d} in '{dataset}'.")
         return
-    print(f"Processerei {len(eps)} episodi ({ep_name(eps[0])} → {ep_name(eps[-1])}), "
-          f"{len(locals_list)} local ciascuno: ~{len(eps)*len(locals_list)} coppie.")
+    print(f"Would process {len(eps)} episodes ({ep_name(eps[0])} -> {ep_name(eps[-1])}), "
+          f"{len(locals_list)} locals each: ~{len(eps)*len(locals_list)} pairs.")
 
 def do_clean():
     removed = False
@@ -174,15 +174,15 @@ def do_clean():
         if d.exists():
             shutil.rmtree(d)
             removed = True
-    print("Pulito." if removed else "Nulla da rimuovere.")
+    print("Cleaned." if removed else "Nothing to remove.")
 
 # -----------------------
-# ROOT: staging (ingresso)
+# ROOT: staging (input)
 # -----------------------
 def prepare_episode_root(dataset: str, ep: int) -> int:
     ep_dir = DATASET_ROOT / dataset / ep_name(ep)
     if not ep_dir.is_dir():
-        print(f"Avviso: manca {ep_dir}, salto episodio (root).")
+        print(f"Warning: missing {ep_dir}, skipping episode (root).")
         return 0
 
     prompt = pick_episode_prompt(ep_dir)
@@ -203,21 +203,21 @@ def prepare_episode_root(dataset: str, ep: int) -> int:
 def do_build_root(from_ep: int, dataset: str) -> int:
     eps = [e for e in list_episodes(dataset) if e >= from_ep]
     if not eps:
-        print(f"Nessun episodio >= {from_ep:0{EP_NUM_WIDTH}d} in '{dataset}'.")
+        print(f"No episodes >= {from_ep:0{EP_NUM_WIDTH}d} in '{dataset}'.")
         return 0
     total = 0
     for ep in eps:
         total += prepare_episode_root(dataset, ep)
-    print(f"Creati/aggiornati {total} ROOT (prompt/contact_sheet) in p/ e f/ "
-          f"(dataset '{dataset}', da {ep_name(from_ep)} a {ep_name(eps[-1])}).")
+    print(f"Created/updated {total} ROOT (prompt/contact_sheet) in p/ and f/ "
+          f"(dataset '{dataset}', from {ep_name(from_ep)} to {ep_name(eps[-1])}).")
     return total
 
 def do_status_root(from_ep: int, dataset: str):
     eps = [e for e in list_episodes(dataset) if e >= from_ep]
     if not eps:
-        print(f"Nessun episodio >= {from_ep:0{EP_NUM_WIDTH}d} in '{dataset}'.")
+        print(f"No episodes >= {from_ep:0{EP_NUM_WIDTH}d} in '{dataset}'.")
         return
-    print(f"Processerei {len(eps)} episodi (ROOT soltanto): ~{len(eps)} coppie (prompt + contact_sheet).")
+    print(f"Would process {len(eps)} episodes (ROOT only): ~{len(eps)} pairs (prompt + contact_sheet).")
 
 def clean_root_outputs():
     removed = False
@@ -231,14 +231,14 @@ def clean_root_outputs():
             if pth.is_file() or pth.is_symlink():
                 pth.unlink()
                 removed = True
-    print("Puliti gli output ROOT." if removed else "Nessun output ROOT da rimuovere.")
+    print("Cleaned ROOT outputs." if removed else "No ROOT outputs to remove.")
 
 def do_rebuild_root(from_ep: int, dataset: str):
     clean_root_outputs()
     do_build_root(from_ep, dataset)
 
 # -----------------------
-# OUTPUT STAGE (r/) → sink nel dataset
+# OUTPUT STAGE (r/) -> sink to dataset
 # -----------------------
 LOCAL_RE = re.compile(r"^E(?P<ep>\d{3})_L(?P<loc>\d+)_subtree\.(?P<ext>xml|json)$", re.IGNORECASE)
 ROOT_RE  = re.compile(r"^E(?P<ep>\d{3})_bt\.(?P<ext>xml|json)$", re.IGNORECASE)
@@ -253,7 +253,7 @@ def parse_stage_file(p: Path) -> Optional[Dict]:
     return None
 
 def choose_root_names(ep_dir: Path) -> Tuple[str, str]:
-    """Forza sempre la scrittura su bt.xml / meta.json."""
+    """Always writes to bt.xml / meta.json."""
     return "bt.xml", "meta.json"
 
 
@@ -274,12 +274,12 @@ def validate_file(src: Path, ext: str):
         try:
             ET.fromstring(txt)
         except ET.ParseError as e:
-            raise SystemExit(f"XML non valido in {src.name}: {e}")
+            raise SystemExit(f"Invalid XML in {src.name}: {e}")
     else:
         try:
             json.loads(txt)
         except json.JSONDecodeError as e:
-            raise SystemExit(f"JSON non valido in {src.name}: {e}")
+            raise SystemExit(f"Invalid JSON in {src.name}: {e}")
 
 def scan_stage() -> List[Dict]:
     if not R_DIR.exists():
@@ -295,7 +295,7 @@ def scan_stage() -> List[Dict]:
 
 def group_pairs(items: List[Dict]) -> Dict[str, Dict[str, Dict]]:
     """
-    Raggruppa per unità logica:
+    Group by logical unit:
       - locals: key "E###_Lk"
       - root  : key "E###"
     """
@@ -309,10 +309,10 @@ def group_pairs(items: List[Dict]) -> Dict[str, Dict[str, Dict]]:
 def cmd_status_out(dataset: str):
     items = scan_stage()
     if not items:
-        print("r/ vuota.")
+        print("r/ is empty.")
         return
     buckets = group_pairs(items)
-    print(f"Trovate {len(buckets)} unità logiche in r/:")
+    print(f"Found {len(buckets)} logical units in r/:")
     for key, b in buckets.items():
         missing = []
         if b["xml"] is None:  missing.append("XML")
@@ -325,25 +325,25 @@ def cmd_status_out(dataset: str):
             xml_name, json_name = choose_root_names(ep_dir)
             tgt_xml = ep_dir / xml_name
             tgt_json= ep_dir / json_name
-        status = "OK" if not missing else f"manca {','.join(missing)}"
+        status = "OK" if not missing else f"missing {','.join(missing)}"
         print(f"  {key:>8s} [{b['kind']}] → {tgt_xml.name}/{tgt_json.name}  ({status})")
 
 def cmd_apply_out(dataset: str, dry: bool, remove_after: bool):
     items = scan_stage()
     if not items:
-        print("r/ vuota. Nulla da applicare.")
+        print("r/ is empty. Nothing to apply.")
         return
     buckets = group_pairs(items)
     applied = 0
     for key, b in buckets.items():
         if b["xml"] is None or b["json"] is None:
-            print(f"Salto {key}: coppia incompleta (serve XML+JSON).")
+            print(f"Skipping {key}: incomplete pair (need XML+JSON).")
             continue
         validate_file(b["xml"]["path"], "xml")
         validate_file(b["json"]["path"], "json")
         dst_xml = target_for_item(b["xml"], dataset)
         dst_json= target_for_item(b["json"], dataset)
-        print(f"{'[DRY] ' if dry else ''}Scrivo {key} → {dst_xml} , {dst_json}")
+        print(f"{'[DRY] ' if dry else ''}Writing {key} -> {dst_xml} , {dst_json}")
         if not dry:
             dst_xml.write_text(b["xml"]["path"].read_text(encoding="utf-8"), encoding="utf-8")
             j = json.loads(b["json"]["path"].read_text(encoding="utf-8"))
@@ -354,13 +354,13 @@ def cmd_apply_out(dataset: str, dry: bool, remove_after: bool):
                 except: pass
                 try: b["json"]["path"].unlink()
                 except: pass
-    print(f"Applicati {applied} elementi.")
+    print(f"Applied {applied} items.")
     if applied == 0 and not dry:
-        print("Nessun file scritto (probabili coppie incomplete o nomi non conformi).")
+        print("No files written (likely incomplete pairs or non-conforming names).")
 
 def cmd_clean_out():
     if not R_DIR.exists():
-        print("r/ non esiste.")
+        print("r/ does not exist.")
         return
     removed = 0
     for p in list(R_DIR.glob("*")):
@@ -368,33 +368,33 @@ def cmd_clean_out():
         if meta:
             p.unlink(missing_ok=True)
             removed += 1
-    print(f"Puliti {removed} file in r/.")
+    print(f"Cleaned {removed} files in r/.")
 
 # -----------------------
-# SCAFFOLD r/ (segnaposto pronti al copia/incolla)
+# SCAFFOLD r/ (placeholders ready for copy/paste)
 # -----------------------
 def _ensure_r():
     R_DIR.mkdir(parents=True, exist_ok=True)
 
-XML_LOCAL_TEMPLATE = """<!-- Incolla qui SOLO l'XML del subtree (BehaviorTree.CPP v3). -->
+XML_LOCAL_TEMPLATE = """<!-- Paste here ONLY the subtree XML (BehaviorTree.CPP v3). -->
 <BehaviorTree>
 </BehaviorTree>
 """
 
 def JSON_LOCAL_TEMPLATE(ep: int, loc: int) -> str:
     return json.dumps(
-        {"label": f"E{ep:0{EP_NUM_WIDTH}d}_L{loc}", "notes": "Incolla qui i metadata del subtree."},
+        {"label": f"E{ep:0{EP_NUM_WIDTH}d}_L{loc}", "notes": "Paste subtree metadata here."},
         ensure_ascii=False, indent=2
     )
 
-XML_ROOT_TEMPLATE = """<!-- Incolla qui SOLO l'XML del FULL BT (BehaviorTree.CPP v3). -->
+XML_ROOT_TEMPLATE = """<!-- Paste here ONLY the FULL BT XML (BehaviorTree.CPP v3). -->
 <BehaviorTree>
 </BehaviorTree>
 """
 
 def JSON_ROOT_TEMPLATE(ep: int) -> str:
     return json.dumps(
-        {"label": f"E{ep:0{EP_NUM_WIDTH}d}", "notes": "Metadata del FULL BT."},
+        {"label": f"E{ep:0{EP_NUM_WIDTH}d}", "notes": "FULL BT metadata."},
         ensure_ascii=False, indent=2
     )
 
@@ -442,7 +442,7 @@ def cmd_scaffold_out(from_ep: int, dataset: str, locals_list: List[int], include
         total += scaffold_out_locals(from_ep, dataset, locals_list, force)
     if include in ("root", "both"):
         total += scaffold_out_root(from_ep, dataset, force)
-    print(f"Creati/aggiornati {total} file in r/ ({include}).{' (force)' if force else ''}")
+    print(f"Created/updated {total} files in r/ ({include}).{' (force)' if force else ''}")
 
 # -----------------------
 # CLI
@@ -456,40 +456,40 @@ def parse_locals(s: Optional[str]) -> List[int]:
         if not tok:
             continue
         if not tok.isdigit():
-            raise SystemExit("Formato --locals non valido. Esempio: --locals 1,2,3")
+            raise SystemExit("Invalid --locals format. Example: --locals 1,2,3")
         vals.append(int(tok))
     return vals or DEFAULT_LOCALS
 
 def main():
-    ap = argparse.ArgumentParser(description="Staging p/ (prompts), f/ (frames) e r/ (risultati) dal dato episodio fino alla fine.")
+    ap = argparse.ArgumentParser(description="Staging p/ (prompts), f/ (frames) and r/ (results) from the given episode onward.")
     ap.add_argument("cmd", choices=[
-        # LOCALS (ingresso)
+        # LOCALS (input)
         "build", "rebuild", "clean", "status",
-        # ROOT (ingresso)
+        # ROOT (input)
         "build-root", "rebuild-root", "clean-root", "status-root",
-        # OUTPUT (uscita → dataset)
+        # OUTPUT (output -> dataset)
         "status-out", "apply-out", "clean-out",
-        # SCAFFOLD (crea file vuoti pronti al copia/incolla)
+        # SCAFFOLD (create empty files ready for copy/paste)
         "scaffold-out"
     ])
-    ap.add_argument("--from", dest="from_ep", type=int, help="episodio di partenza (numero, es. 17)")
-    ap.add_argument("--dataset", dest="dataset", default=DEFAULT_DATASET, help="nome dataset in DATASET_ROOT")
+    ap.add_argument("--from", dest="from_ep", type=int, help="starting episode (number, e.g. 17)")
+    ap.add_argument("--dataset", dest="dataset", default=DEFAULT_DATASET, help="dataset name in DATASET_ROOT")
     ap.add_argument("--locals", dest="locals_csv", default=",".join(map(str, DEFAULT_LOCALS)),
-                    help="lista di local, es. '1,2,3' (per locals/scaffold-out)")
-    ap.add_argument("--dry", action="store_true", help="apply-out: non scrivere, mostra solo cosa farebbe")
-    ap.add_argument("--rm",  action="store_true", help="apply-out: rimuove da r/ dopo applicazione")
-    # nuovi flag per scaffold
-    ap.add_argument("--include", choices=["locals","root","both"], default="both", help="scaffold: cosa creare in r/")
-    ap.add_argument("--force", action="store_true", help="scaffold: sovrascrive file esistenti in r/")
+                    help="list of locals, e.g. '1,2,3' (for locals/scaffold-out)")
+    ap.add_argument("--dry", action="store_true", help="apply-out: do not write, only show what would be done")
+    ap.add_argument("--rm",  action="store_true", help="apply-out: remove from r/ after applying")
+    # new flags for scaffold
+    ap.add_argument("--include", choices=["locals","root","both"], default="both", help="scaffold: what to create in r/")
+    ap.add_argument("--force", action="store_true", help="scaffold: overwrite existing files in r/")
     args = ap.parse_args()
 
     if args.cmd in ("build", "rebuild", "status", "build-root", "rebuild-root", "status-root", "scaffold-out") and args.from_ep is None:
-        raise SystemExit("Parametro obbligatorio: --from <numero episodio>")
+        raise SystemExit("Required parameter: --from <episode number>")
 
     if args.cmd in ("build", "rebuild", "status", "scaffold-out"):
         locals_list = parse_locals(args.locals_csv)
 
-    # Dispatcher ingresso (p/, f/)
+    # Dispatcher input (p/, f/)
     if args.cmd in ("build", "rebuild", "status"):
         if args.cmd == "build":
             do_build(args.from_ep, args.dataset, locals_list)
@@ -508,7 +508,7 @@ def main():
     elif args.cmd == "clean-root":
         clean_root_outputs()
 
-    # Dispatcher uscita (r/ → dataset)
+    # Dispatcher output (r/ -> dataset)
     elif args.cmd == "status-out":
         cmd_status_out(args.dataset)
     elif args.cmd == "apply-out":
@@ -524,34 +524,34 @@ if __name__ == "__main__":
     main()
 
 '''
-# Dataset (già sotto DATASET_ROOT=dataset1)
+# Dataset (already under DATASET_ROOT=dataset1)
 DS="dlr_sara_grid_clamp_converted_externally_to_rlds_0.1.0"
 
-# 1) Anteprima locals da episode_001 in avanti
+# 1) Preview locals from episode_001 onward
 python chat_stage.py status --from 1 --dataset "$DS"
 
-# 2) Staging INGRESSO (locals → p/, f/)
+# 2) INPUT staging (locals -> p/, f/)
 python chat_stage.py build --from 1 --dataset "$DS" --locals 1,2,3
 
-# 3) (Opzionale) Staging INGRESSO root (prompt.md + contact_sheet.*)
+# 3) (Optional) INPUT staging root (prompt.md + contact_sheet.*)
 python chat_stage.py build-root --from 1 --dataset "$DS"
 
-# 4) Scaffold di USCITA (crea r/ con tutti i segnaposto: locals+root)
+# 4) OUTPUT scaffold (create r/ with all placeholders: locals+root)
 python chat_stage.py scaffold-out --from 1 --dataset "$DS" --include both
-# (solo locals, se preferisci)
+# (locals only, if you prefer)
 # python chat_stage.py scaffold-out --from 1 --dataset "$DS" --include locals
 
-# >>> Ora apri i file in r/ e incolla XML/JSON <<<
+# >>> Now open the files in r/ and paste XML/JSON <<<
 
-# 5) Check destinazioni prima di scrivere
+# 5) Check destinations before writing
 python chat_stage.py status-out --dataset "$DS"
 
-# 6) Applica al dataset e rimuove le coppie riuscite da r/
+# 6) Apply to dataset and remove successful pairs from r/
 python chat_stage.py apply-out --dataset "$DS" --rm
 
-# (Pulizie opzionali)
-# python chat_stage.py clean-out      # pulisce r/
-# python chat_stage.py clean-root     # rimuove solo gli output root in p/, f/
-# python chat_stage.py clean          # rimuove p/, f/, r/ (distruttivo)
+# (Optional cleanup)
+# python chat_stage.py clean-out      # cleans r/
+# python chat_stage.py clean-root     # removes only root outputs in p/, f/
+# python chat_stage.py clean          # removes p/, f/, r/ (destructive)
 
 '''

@@ -1,19 +1,19 @@
 #!/usr/bin/env python3
 """
-Raccoglie le instruction come insiemi (set) per un elenco fisso di dataset,
-senza passare argomenti da CLI. Produce:
+Collects instructions as sets for a fixed list of datasets,
+without passing CLI arguments. Produces:
 
   analysis/instruction_sets.batch1.json
   analysis/instructions_all_unique.batch1.txt
 
-Per passare al secondo batch, rimuovere i commenti sulle righe dei dataset
-al fondo dell'array DATASETS (sezione 'BATCH 2') e, opzionalmente, cambiare TAG.
+To process the second batch, uncomment the dataset lines
+at the bottom of the DATASETS array ('BATCH 2' section) and optionally change TAG.
 """
 
 import os
 import sys
 
-# Assicura che la repo root sia in sys.path anche quando eseguito da tools/
+# Ensure repo root is in sys.path even when run from tools/
 _repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir, os.pardir))
 if _repo_root not in sys.path:
     sys.path.insert(0, _repo_root)
@@ -24,17 +24,17 @@ ensure_repo_root()
 from pathlib import Path
 import json, re
 
-# Radice contenente i dataset già processati (cartelle "out_temp/<dataset>/episode_XXX/")
+# Root containing already processed datasets (folders "out_temp/<dataset>/episode_XXX/")
 ROOT = Path("out_temp")
 
 # Auto-discover all datasets in ROOT
 DATASETS = [p.name for p in ROOT.iterdir() if p.is_dir()] if ROOT.exists() else []
 
-# Tag fisso per distinguere i file di output.
+# Fixed tag to distinguish output files.
 TAG = "all"
 
 def norm(s: str) -> str:
-    """Normalizzazione blanda: trim + collasso di whitespace in singoli spazi."""
+    """Soft normalization: trim + collapse whitespace to single spaces."""
     if s is None:
         return ""
     s = s.strip()
@@ -42,9 +42,9 @@ def norm(s: str) -> str:
     return s
 
 def iter_instructions(dataset_dir: Path):
-    """Itera le instruction da final_selected/episode_data.json in tutte le episode_* del dataset."""
+    """Iterate instructions from final_selected/episode_data.json in all episode_* of the dataset."""
     for ep in sorted(dataset_dir.glob("episode_*")):
-        # Prima prova episode_data.json in final_selected
+        # First try episode_data.json in final_selected
         data_path = ep / "final_selected" / "episode_data.json"
         if data_path.exists():
             try:
@@ -55,7 +55,7 @@ def iter_instructions(dataset_dir: Path):
                     continue
             except Exception:
                 pass
-        # Fallback: instruction.txt nella root dell'episodio
+        # Fallback: instruction.txt in the episode root
         txt_path = ep / "instruction.txt"
         if txt_path.exists():
             try:
@@ -64,7 +64,7 @@ def iter_instructions(dataset_dir: Path):
                 pass
 
 def collect_unique_instructions(ds_name: str):
-    """Legge e deduplica (per stringa normalizzata) le instruction di un dataset."""
+    """Read and deduplicate (by normalized string) the instructions of a dataset."""
     uniq = set()
     ds_dir = ROOT / ds_name
     if not ds_dir.exists():
@@ -77,7 +77,7 @@ def collect_unique_instructions(ds_name: str):
 
 def main():
     if not ROOT.exists():
-        raise SystemExit(f"Cartella radice non trovata: {ROOT.resolve()}")
+        raise SystemExit(f"Root folder not found: {ROOT.resolve()}")
 
     payload = {}
     global_set = set()
@@ -85,17 +85,17 @@ def main():
     for name in DATASETS:
         ds_dir = ROOT / name
         if not ds_dir.exists():
-            print(f"Avviso: dataset mancante o non trovato: {name}")
+            print(f"Warning: dataset missing or not found: {name}")
             continue
         uniq = collect_unique_instructions(name)
         if not uniq:
-            print(f"Nota: nessuna instruction trovata in {name}")
+            print(f"Note: no instructions found in {name}")
             continue
         payload[name] = uniq
         global_set.update(uniq)
 
     if not payload:
-        raise SystemExit("Nessuna instruction raccolta. Verificare l'array DATASETS e la struttura 'out/<dataset>/episode_XXX/'.")
+        raise SystemExit("No instructions collected. Check the DATASETS array and the 'out/<dataset>/episode_XXX/' structure.")
 
     payload["_all_unique"] = sorted(global_set)
 
@@ -108,9 +108,9 @@ def main():
     txt_path.write_text("\n".join(payload["_all_unique"]), encoding="utf-8")
 
     ds_count = len([k for k in payload.keys() if k != "_all_unique"])
-    print(f"Creato: {json_path}")
-    print(f"Creato: {txt_path}")
-    print(f"Dataset coperti: {ds_count} — Istruzioni uniche globali: {len(payload['_all_unique'])}")
+    print(f"Created: {json_path}")
+    print(f"Created: {txt_path}")
+    print(f"Datasets covered: {ds_count} — Global unique instructions: {len(payload['_all_unique'])}")
 
 if __name__ == "__main__":
     main()

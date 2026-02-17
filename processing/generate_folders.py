@@ -2,16 +2,16 @@
 # -*- coding: utf-8 -*-
 
 """
-Generatore struttura dataset + prompt locali + video da 9 frame.
+Dataset structure generator + local prompts + 9-frame videos.
 
-USO TIPICO
-1) Inizializza struttura episodio:
+TYPICAL USAGE
+1) Initialize episode structure:
    python generate_folders.py --mode init --out-root out --dest-root dataset --prompt-src prompts/prompt_full.md
 
-2) Popola i prompt locali con GLOBAL_BT, NODE_LIBRARY, descrizione e COPIA i frame top-K:
+2) Populate local prompts with GLOBAL_BT, NODE_LIBRARY, description, and COPY the top-K frames:
    python generate_folders.py --mode locals --dest-root dataset --node-lib library/node_library_v_01.json
 
-3) Crea i video dei 9 frame (stesso livello di contact_sheet):
+3) Create 9-frame videos (same level as contact_sheet):
    python generate_folders.py --mode videos --out-root out --dest-root dataset --video-duration 4.0
 """
 
@@ -30,7 +30,7 @@ from pathlib import Path
 from datetime import datetime
 from typing import Optional, List, Tuple
 
-# Backend video: preferisci OpenCV; fallback a imageio-ffmpeg se disponibile.
+# Video backend: prefer OpenCV; fallback to imageio-ffmpeg if available.
 _cv2 = None
 _imageio = None
 try:
@@ -43,7 +43,7 @@ except Exception:
     except Exception:
         pass
 
-# -------------------- Pattern per compilare prompt globale --------------------
+# -------------------- Pattern for compiling global prompt --------------------
 
 PROMPT_LINE_PATTERNS = {
     "TASK INSTRUCTION": re.compile(r'^(\s*-\s*TASK INSTRUCTION:\s*)".*?"\s*$', re.IGNORECASE),
@@ -51,7 +51,7 @@ PROMPT_LINE_PATTERNS = {
     "EPISODE_ID":       re.compile(r'^(\s*-\s*EPISODE_ID:\s*)".*?"\s*$', re.IGNORECASE),
 }
 
-# -------------------- Skeleton minimi --------------------
+# -------------------- Minimal skeletons --------------------
 
 BT_XML_SKELETON = """<BehaviorTree ID="MainTree">
   <Sequence>
@@ -175,7 +175,7 @@ def indent_block(text: str, indent_spaces: int) -> str:
     lines = text.splitlines()
     return "\n".join(pad + l for l in lines)
 
-# -------------------- Prompt globale (init) --------------------
+# -------------------- Global prompt (init) --------------------
 
 def load_prompt_template(prompt_src: Path) -> str:
     if not prompt_src.exists():
@@ -220,14 +220,14 @@ def fill_prompt(template: str, instruction: str, dataset_id: str, episode_id: st
         out += "\n"
     return out
 
-# -------------------- Lettura dati episodio --------------------
+# -------------------- Episode data reading --------------------
 
 # def read_instruction(ep_out_dir: Path) -> str:
 #     instr_file = ep_out_dir / "instruction.txt"
 #     return instr_file.read_text(encoding="utf-8").strip() if instr_file.exists() else ""
 def read_instruction(ep_out_dir: Path) -> str:
     """
-    Cerca l'instruction nell'ordine:
+    Search for instruction in order:
     1. final_selected/episode_data.json
     2. episode_data.json
     3. instruction.txt
@@ -242,9 +242,9 @@ def read_instruction(ep_out_dir: Path) -> str:
                 if instruction:
                     return instruction.strip()
         except Exception as e:
-            print(f"[WARN] Errore leggendo {episode_data_file}: {e}")
+            print(f"[WARN] Error reading {episode_data_file}: {e}")
 
-    # 2. episode_data.json (nella cartella episodio, fallback)
+    # 2. episode_data.json (in episode folder, fallback)
     alt_episode_data_file = ep_out_dir / "episode_data.json"
     if alt_episode_data_file.exists():
         try:
@@ -254,7 +254,7 @@ def read_instruction(ep_out_dir: Path) -> str:
                 if instruction:
                     return instruction.strip()
         except Exception as e:
-            print(f"[WARN] Errore leggendo {alt_episode_data_file}: {e}")
+            print(f"[WARN] Error reading {alt_episode_data_file}: {e}")
 
     # 3. instruction.txt
     instr_file = ep_out_dir / "instruction.txt"
@@ -296,10 +296,10 @@ def frame_id_to_index(frame_id: Optional[str]) -> Optional[int]:
 
 def find_frame_file(out_root_for_ep: Path, frame_id: str) -> Optional[Path]:
     """
-    Trova il file immagine corrispondente a frame_id.
-    Accetta formati tipo frame_3, frame_03, frame_0003, ecc.
+    Find the image file corresponding to frame_id.
+    Accepts formats like frame_3, frame_03, frame_0003, etc.
     """
-    # normalizza numeri (frame_3 -> 3, frame_0003 -> 3)
+    # normalize numbers (frame_3 -> 3, frame_0003 -> 3)
     m = re.match(r"frame_0*(\d+)", frame_id)
     idx = int(m.group(1)) if m else None
     if idx is None:
@@ -309,7 +309,7 @@ def find_frame_file(out_root_for_ep: Path, frame_id: str) -> Optional[Path]:
     if not d.exists():
         return None
 
-    # accetta diversi pattern (2, 3 o 4 cifre)
+    # accept various patterns (2, 3, or 4 digits)
     candidate_names = [
         f"frame_{idx}.jpg",
         f"frame_{idx:02d}.jpg",
@@ -321,7 +321,7 @@ def find_frame_file(out_root_for_ep: Path, frame_id: str) -> Optional[Path]:
         if p.exists():
             return p
 
-    # fallback: cerca file che contengano l'indice numerico
+    # fallback: search for files containing the numeric index
     for p in d.glob(f"frame_*{idx}*.jpg"):
         if p.is_file():
             return p
@@ -348,7 +348,7 @@ def get_local_annotation(meta: dict, frame_id: Optional[str]) -> Optional[dict]:
             return a
     return None
 
-# -------------------- Copie file episode --------------------
+# -------------------- Episode file copies --------------------
 
 def copy_contact_sheet(ep_out_dir: Path, ep_dest: Path, overwrite: bool) -> bool:
     src_dir = ep_out_dir / "final_selected"
@@ -380,8 +380,8 @@ def sampled_frames_dir(out_ep: Path) -> Path:
 
 def list_candidate_frames(frames_dir: Path, max_n: int = 9) -> List[Path]:
     """
-    Seleziona fino a 9 frame nel formato frame_XX.* ordinati per indice.
-    Accetta jpg/jpeg/png. Se meno di 9, usa quelli disponibili.
+    Select up to 9 frames in the format frame_XX.* sorted by index.
+    Accepts jpg/jpeg/png. If fewer than 9, use those available.
     """
     if not frames_dir.exists():
         return []
@@ -399,16 +399,16 @@ def list_candidate_frames(frames_dir: Path, max_n: int = 9) -> List[Path]:
 
 def ensure_same_size(images: List["any"]) -> Tuple[int, int]:
     """
-    Restituisce (width, height) da usare nel writer.
-    Ridimensiona eventuali frame fuori misura con OpenCV, altrimenti assume uniforme.
+    Return (width, height) to use in the writer.
+    Resize any off-size frames with OpenCV; otherwise assume uniform dimensions.
     """
     if not images:
         return (0, 0)
     h0, w0 = images[0].shape[:2]
     if _cv2 is None:
-        # imageio: si assume dimensioni omogenee
+        # imageio: assume uniform dimensions
         return (w0, h0)
-    # Con OpenCV, allinea tutto a (w0, h0)
+    # With OpenCV, align everything to (w0, h0)
     out = []
     for i, img in enumerate(images):
         h, w = img.shape[:2]
@@ -426,7 +426,7 @@ def make_video_cv2(frames: List[Path], dst: Path, duration_s: float, overwrite: 
     if not imgs:
         return False
     w, h = ensure_same_size(imgs)
-    # fps calcolato per coprire esattamente la durata desiderata
+    # fps calculated to cover exactly the desired duration
     fps = max(0.1, min(60.0, len(imgs) / max(0.1, duration_s)))
     fourcc = _cv2.VideoWriter_fourcc(*"mp4v")  # mp4
     dst.parent.mkdir(parents=True, exist_ok=True)
@@ -448,7 +448,7 @@ def make_video_imageio(frames: List[Path], dst: Path, duration_s: float, overwri
     imgs = [_imageio.imread(p) for p in frames]  # RGB
     if not imgs:
         return False
-    # imageio usa "fps" nel writer; calcoliamo come sopra
+    # imageio uses "fps" in the writer; calculate as above
     fps = max(0.1, min(60.0, len(imgs) / max(0.1, duration_s)))
     dst.parent.mkdir(parents=True, exist_ok=True)
     _imageio.mimsave(str(dst), imgs, fps=fps, format="FFMPEG", codec="libx264")
@@ -456,12 +456,12 @@ def make_video_imageio(frames: List[Path], dst: Path, duration_s: float, overwri
 
 def create_contact_video(out_ep: Path, ep_dest: Path, duration_s: float, overwrite: bool, dry_run: bool) -> bool:
     """
-    Crea contact_video.mp4 accanto a contact_sheet.*, prendendo fino a 9 frame da sampled_frames.
+    Create contact_video.mp4 alongside contact_sheet.*, taking up to 9 frames from sampled_frames.
     """
     frames_dir = sampled_frames_dir(out_ep)
     frames = list_candidate_frames(frames_dir, max_n=9)
     if not frames:
-        print(f"[WARN] sampled_frames non trovati o vuoti: {frames_dir}")
+        print(f"[WARN] sampled_frames not found or empty: {frames_dir}")
         return False
     dst = ep_dest / "contact_video.mp4"
     if dry_run:
@@ -472,10 +472,10 @@ def create_contact_video(out_ep: Path, ep_dest: Path, duration_s: float, overwri
     elif _imageio is not None:
         ok = make_video_imageio(frames, dst, duration_s, overwrite)
     else:
-        raise RuntimeError("Nessun backend video disponibile. Installa 'opencv-python' oppure 'imageio[ffmpeg]'.")
+        raise RuntimeError("No video backend available. Install 'opencv-python' or 'imageio[ffmpeg]'.")
     return ok
 
-# -------------------- Modalità INIT --------------------
+# -------------------- INIT mode --------------------
 
 def init_mode(out_root: Path, dest_root: Path, prompt_src: Path, prompt_name: str, overwrite: bool, dry_run: bool):
     prompt_template = load_prompt_template(prompt_src)
@@ -489,7 +489,7 @@ def init_mode(out_root: Path, dest_root: Path, prompt_src: Path, prompt_name: st
             ep_dest = dest_root / dataset_id / episode_id
 
             instruction = read_instruction(ep_dir)
-            print(f"DUMP DEBUG: Episodio={ep_dir}, Instruction={instruction!r}")
+            print(f"DUMP DEBUG: Episode={ep_dir}, Instruction={instruction!r}")
 
             bt_path   = ep_dest / "bt.xml"
             meta_path = ep_dest / "meta.json"
@@ -530,13 +530,13 @@ def init_mode(out_root: Path, dest_root: Path, prompt_src: Path, prompt_name: st
 
     print(f"\nInit done. Episodes processed: {created + skipped} | created/updated: {created} | fully skipped: {skipped}")
 
-# -------------------- Modalità LOCALS --------------------
+# -------------------- LOCALS mode --------------------
 
 def locals_mode(project_root: Path, dest_root: Path, node_lib_path: Path, overwrite: bool, dry_run: bool):
     print(f"[DEBUG] locals_mode start: project_root={project_root}")
     print(f"[DEBUG] dest_root={dest_root}")
     if not node_lib_path or not node_lib_path.exists():
-        raise FileNotFoundError("--node-lib è obbligatorio in --mode locals e deve esistere.")
+        raise FileNotFoundError("--node-lib is required in --mode locals and must exist.")
     node_lib_text = load_text(node_lib_path)
 
     created = skipped = 0
@@ -553,7 +553,7 @@ def locals_mode(project_root: Path, dest_root: Path, node_lib_path: Path, overwr
             bt_path   = ep_dir / "bt.xml"
             meta_path = ep_dir / "meta.json"
             if not bt_path.exists():
-                print(f"[WARN] bt.xml mancante: {bt_path}. Salto locals per questo episodio.")
+                print(f"[WARN] bt.xml missing: {bt_path}. Skipping locals for this episode.")
                 continue
 
             bt_text  = load_text(bt_path)
@@ -561,17 +561,17 @@ def locals_mode(project_root: Path, dest_root: Path, node_lib_path: Path, overwr
             meta = parse_meta(meta_path) if meta_path.exists() else {}
             tld_text = guess_task_long_description(meta_path) if meta_path.exists() else guess_task_long_description(meta_path)
 
-            # Cartella out/<ds>/<ep> per risalire ai frame reali
+            # out/<ds>/<ep> folder to trace back to actual frames
             out_ep = project_root / "out" / dataset_id / episode_id
 
             locals_root = ep_dir / "locals"
             if not locals_root.exists():
-                print(f"[WARN] locals/ mancante in {ep_dir}. Eseguire prima --mode init.")
+                print(f"[WARN] locals/ missing in {ep_dir}. Run --mode init first.")
                 continue
 
-            # Scegli i top-3 dal ranking
+            # Choose top-3 from ranking
             top_frames = pick_top_k_frames(meta, k=3)
-            # Se non ci sono, lascia vuoto (verranno placeholder nei prompt)
+            # If none exist, leave empty (placeholders will be used in prompts)
             for i in range(1, 4):
                 ld = locals_root / f"local_{i}"
                 if not ld.exists():
@@ -584,7 +584,7 @@ def locals_mode(project_root: Path, dest_root: Path, node_lib_path: Path, overwr
 
                 frame_id  = top_frames[i-1] if i-1 < len(top_frames) else None
                 frame_idx = frame_id_to_index(frame_id) if frame_id else None
-                # Nome file: se trovo l'immagine reale, userò quello; altrimenti placeholder
+                # File name: if the actual image is found, use it; otherwise placeholder
                 frame_path = find_frame_file(out_ep, frame_id) if frame_id else None
                 frame_name = frame_path.name if frame_path else "frame_.jpg"
                 frame_score = get_frame_score(meta, frame_id) if frame_id else None
@@ -607,7 +607,7 @@ def locals_mode(project_root: Path, dest_root: Path, node_lib_path: Path, overwr
                     print(f"[DRY] would write {local_prompt} (frame_id={frame_id}, file={frame_name}, score={frame_score})")
                 else:
                     write_safe(local_prompt, content, overwrite=True)
-                    # copia il frame reale nella cartella local_i se esiste
+                    # copy the actual frame to the local_i folder if it exists
                     if frame_path is not None:
                         dst_img = ld / frame_path.name
                         copied = copy_safe(frame_path, dst_img, overwrite)
@@ -618,12 +618,12 @@ def locals_mode(project_root: Path, dest_root: Path, node_lib_path: Path, overwr
 
     print(f"\nLocals done. local_prompt.md created: {created} | skipped (exists): {skipped}")
 
-# -------------------- Modalità VIDEOS --------------------
+# -------------------- VIDEOS mode --------------------
 
 def videos_mode(project_root: Path, out_root: Path, dest_root: Path,
                 duration_s: float, overwrite: bool, dry_run: bool):
     if _cv2 is None and _imageio is None:
-        raise RuntimeError("Per --mode videos serve 'opencv-python' oppure 'imageio[ffmpeg]'.")
+        raise RuntimeError("For --mode videos, 'opencv-python' or 'imageio[ffmpeg]' is required.")
 
     def _has_episodes(p: Path) -> bool:
         try:
@@ -633,30 +633,30 @@ def videos_mode(project_root: Path, out_root: Path, dest_root: Path,
 
     created = skipped = 0
 
-    # Caso A: dest_root è già un dataset che contiene episode_*
+    # Case A: dest_root is already a dataset containing episode_*
     if _has_episodes(dest_root):
         datasets = [dest_root]
     else:
-        # Caso B: dest_root è la radice che contiene più dataset
+        # Case B: dest_root is the root containing multiple datasets
         datasets = [p for p in dest_root.iterdir() if p.is_dir()]
 
     for ds_dir in sorted(datasets):
         dataset_id = ds_dir.name
-        # Se ds_dir è già un episodio (uso improprio), salta con warning esplicito
+        # If ds_dir is already an episode (improper usage), skip with explicit warning
         if ds_dir.name.startswith("episode_"):
-            print(f"[WARN] atteso un dataset, trovato un episodio: {ds_dir}. Specifica il dataset o la radice corretta.")
+            print(f"[WARN] expected a dataset, found an episode: {ds_dir}. Specify the dataset or correct root.")
             continue
 
         episodes = [p for p in ds_dir.iterdir() if p.is_dir() and p.name.startswith("episode_")]
         if not episodes:
-            print(f"[WARN] nessun episodio 'episode_*' in {ds_dir}")
+            print(f"[WARN] no 'episode_*' episodes in {ds_dir}")
             continue
 
         for ep_dest in sorted(episodes):
             episode_id = ep_dest.name
             out_ep = out_root / dataset_id / episode_id
             if not out_ep.exists():
-                print(f"[WARN] out mancante per {dataset_id}/{episode_id}: {out_ep}")
+                print(f"[WARN] out missing for {dataset_id}/{episode_id}: {out_ep}")
                 continue
 
             dst = ep_dest / "contact_video.mp4"
@@ -669,15 +669,15 @@ def videos_mode(project_root: Path, out_root: Path, dest_root: Path,
                 created += 1
                 print(f"[OK]  {dataset_id}/{episode_id} → contact_video.mp4 ({duration_s:.2f}s)")
             else:
-                print(f"[WARN] {dataset_id}/{episode_id} → video non creato (frame mancanti?)")
+                print(f"[WARN] {dataset_id}/{episode_id} → video not created (missing frames?)")
 
     print(f"\nVideos done. Episodes processed: {created + skipped} | created: {created} | skipped(existing): {skipped}")
 
 
 def copy_sampled_frames(outroot: Path, destroot: Path, overwrite: bool, dryrun: bool):
     """
-    Copia la cartella sampled_frames da out/dataset/episodio/final_selected a dataset/dataset/episodio.
-    Se overwrite è True, sovrascrive i frame già esistenti.
+    Copy the sampled_frames folder from out/dataset/episode/final_selected to dataset/dataset/episode.
+    If overwrite is True, overwrite already existing frames.
     """
     print("ENTRY copy_sampled_frames")
     for dsdir in sorted([p for p in outroot.iterdir() if p.is_dir()]):
@@ -687,18 +687,18 @@ def copy_sampled_frames(outroot: Path, destroot: Path, overwrite: bool, dryrun: 
             src_frames = epdir / "final_selected" / "sampled_frames"
             dest_frames = destroot / datasetid / episodeid / "sampled_frames"
             if not src_frames.exists():
-                print(f"WARN sampled_frames non trovati per {datasetid}/{episodeid}")
+                print(f"WARN sampled_frames not found for {datasetid}/{episodeid}")
                 continue
             if dryrun:
                 print(f"DRY would copy {src_frames} to {dest_frames}")
                 continue
-            # Crea la cartella destinazione se non esiste
+            # Create destination folder if it doesn't exist
             dest_frames.mkdir(parents=True, exist_ok=True)
             for frame_file in src_frames.iterdir():
                 if frame_file.is_file():
                     dst = dest_frames / frame_file.name
                     if dst.exists() and not overwrite:
-                        print(f"SKIP {dst} esiste già; usa --overwrite per sovrascrivere.")
+                        print(f"SKIP {dst} already exists; use --overwrite to overwrite.")
                         continue
                     shutil.copy2(frame_file, dst)
                     print(f"OK copied {frame_file} -> {dst}")
@@ -710,15 +710,15 @@ def copy_sampled_frames(outroot: Path, destroot: Path, overwrite: bool, dryrun: 
 def main():
     ap = argparse.ArgumentParser(description="Generate per-episode structure, local prompts, and 9-frame videos.")
     ap.add_argument("--mode", choices=["init", "locals", "videos", "refresh_images", "copyframes"], default="init",
-                    help="init: crea struttura episodio; locals: genera prompt locali; videos: genera MP4 da 9 frame accanto a contact_sheet.")
-    ap.add_argument("--out-root", default="out", help="[init/videos] sorgente datasets/episodes (default: out)")
-    ap.add_argument("--dest-root", default="dataset", help="[init/locals/videos] destinazione (default: dataset)")
-    ap.add_argument("--prompt-src", default=None, help="[init] template prompt globale (default: prompts/prompt_full.md o prompts/prompt.md)")
-    ap.add_argument("--prompt-name", default="prompt.md", help="[init] nome file prompt generato (default: prompt.md)")
-    ap.add_argument("--node-lib", type=Path, default=None, help="[locals] path a node_library.json")
-    ap.add_argument("--video-duration", type=float, default=4.0, help="[videos] durata desiderata del video in secondi (default: 4.0)")
-    ap.add_argument("--overwrite", action="store_true", help="sovrascrive file esistenti")
-    ap.add_argument("--dry-run", action="store_true", help="stampa azioni senza scrivere")
+                    help="init: create episode structure; locals: generate local prompts; videos: generate MP4 from 9 frames alongside contact_sheet.")
+    ap.add_argument("--out-root", default="out", help="[init/videos] source datasets/episodes (default: out)")
+    ap.add_argument("--dest-root", default="dataset", help="[init/locals/videos] destination (default: dataset)")
+    ap.add_argument("--prompt-src", default=None, help="[init] global prompt template (default: prompts/prompt_full.md or prompts/prompt.md)")
+    ap.add_argument("--prompt-name", default="prompt.md", help="[init] generated prompt filename (default: prompt.md)")
+    ap.add_argument("--node-lib", type=Path, default=None, help="[locals] path to node_library.json")
+    ap.add_argument("--video-duration", type=float, default=4.0, help="[videos] desired video duration in seconds (default: 4.0)")
+    ap.add_argument("--overwrite", action="store_true", help="overwrite existing files")
+    ap.add_argument("--dry-run", action="store_true", help="print actions without writing")
     args = ap.parse_args()
 
     project_root = Path.cwd()
@@ -733,12 +733,12 @@ def main():
                     project_root / "prompts" / "prompt.md"]
             prompt_src = next((p for p in cand if p.exists()), None)
             if prompt_src is None:
-                raise FileNotFoundError("Template prompt non trovato. Specifica --prompt-src.")
+                raise FileNotFoundError("Prompt template not found. Specify --prompt-src.")
         init_mode(out_root, dest_root, prompt_src, args.prompt_name, args.overwrite, args.dry_run)
 
     elif args.mode == "locals":
         if args.node_lib is None:
-            raise FileNotFoundError("--node-lib è obbligatorio in --mode locals.")
+            raise FileNotFoundError("--node-lib is required in --mode locals.")
         locals_mode(project_root, dest_root, args.node_lib, args.overwrite, args.dry_run)
 
     elif args.mode == "videos":
@@ -751,11 +751,11 @@ def main():
         copy_sampled_frames(Path(args.out_root), Path(args.dest_root), args.overwrite, args.dry_run)
 
 
-# --- [NUOVO] helper di utilità per pulire vecchie immagini nel local_i ---
+# --- [NEW] utility helper to clean old images in local_i ---
 def remove_local_images(local_dir: Path):
     """
-    Rimuove immagini di frame precedenti in local_i/ per evitare duplicati.
-    Non tocca altri file (prompt, xml/json, ecc.).
+    Remove previous frame images in local_i/ to avoid duplicates.
+    Does not touch other files (prompt, xml/json, etc.).
     """
     for p in local_dir.iterdir():
         if p.is_file() and re.match(r"^frame_\d+\.(jpg|jpeg|png)$", p.name, re.IGNORECASE):
@@ -765,58 +765,58 @@ def remove_local_images(local_dir: Path):
                 pass
 
 
-# --- modalità refresh delle sole immagini ---
+# --- image-only refresh mode ---
 def refresh_images_mode(project_root: Path, out_root: Path, dest_root: Path,
                         overwrite: bool, dry_run: bool, k: int = 3):
     """
-    Aggiorna SOLO le immagini di episodio:
-      - contact_sheet.* in <dest>/<ds>/<ep> copiato da out/<ds>/<ep>/final_selected/
-      - i frame in locals/local_i/ copiati da out/<ds>/<ep>/final_selected/sampled_frames/
-    Non modifica bt.xml, meta.json, subtree_.xml/json, local_prompt.md.
+    Update ONLY episode images:
+      - contact_sheet.* in <dest>/<ds>/<ep> copied from out/<ds>/<ep>/final_selected/
+      - frames in locals/local_i/ copied from out/<ds>/<ep>/final_selected/sampled_frames/
+    Does not modify bt.xml, meta.json, subtree_.xml/json, local_prompt.md.
     """
     print("[ENTRY] refresh_images_mode")
     updated = skipped = 0
 
     if not dest_root.exists():
-        print(f"[ERROR] dest_root non esiste: {dest_root}")
+        print(f"[ERROR] dest_root does not exist: {dest_root}")
         print(f"         cwd={Path.cwd()}")
         return
 
-    # Riconosci se dest_root è:
-    # - A) radice multi-dataset (contiene sottocartelle dataset_id)
-    # - B) singolo dataset (contiene episodî episode_*)
+    # Determine if dest_root is:
+    # - A) multi-dataset root (contains dataset_id subfolders)
+    # - B) single dataset (contains episode_* episodes)
     def _has_episodes(p: Path) -> bool:
         return any(c.is_dir() and c.name.startswith("episode_") for c in p.iterdir())
 
     candidate_datasets: List[Path]
     if _has_episodes(dest_root):
-        # Caso B: dest_root è già la cartella del dataset
+        # Case B: dest_root is already the dataset folder
         candidate_datasets = [dest_root]
     else:
-        # Caso A: dest_root contiene più dataset
+        # Case A: dest_root contains multiple datasets
         candidate_datasets = [p for p in dest_root.iterdir() if p.is_dir()]
 
     if not candidate_datasets:
-        print(f"[WARN] Nessun dataset trovato in: {dest_root}")
+        print(f"[WARN] No datasets found in: {dest_root}")
         return
 
     for ds_dir in sorted(candidate_datasets):
         dataset_id = ds_dir.name
         print(f"\nProcessing dataset: {dataset_id}")
 
-        # Episodi: solo cartelle che iniziano con episode_
+        # Episodes: only folders starting with episode_
         episodes = [p for p in ds_dir.iterdir() if p.is_dir() and p.name.startswith("episode_")]
         if not episodes:
-            print(f"[WARN] Nessun episodio 'episode_*' in {ds_dir}")
+            print(f"[WARN] No 'episode_*' episodes in {ds_dir}")
             continue
 
         for ep_dest in sorted(episodes):
             episode_id = ep_dest.name
 
-            # cartella out/ corrispondente
+            # corresponding out/ folder
             out_ep = out_root / dataset_id / episode_id
             if not out_ep.exists():
-                print(f"[WARN] out mancante per {dataset_id}/{episode_id}: {out_ep}")
+                print(f"[WARN] out missing for {dataset_id}/{episode_id}: {out_ep}")
                 continue
 
             # 1) Contact sheet
@@ -824,32 +824,32 @@ def refresh_images_mode(project_root: Path, out_root: Path, dest_root: Path,
             if dry_run:
                 print(f"[DRY] would refresh contact_sheet for {dataset_id}/{episode_id}")
             else:
-                # Crea il contact_sheet SE NON ESISTE
+                # Create the contact_sheet IF IT DOESN'T EXIST
                 from utils.contact_sheet import create_from_dir
                 frames_dir = out_ep / "final_selected" / "sampled_frames"
                 out_contact_sheet = out_ep / "final_selected" / "contact_sheet.jpg"
                 if not out_contact_sheet.exists():
                     try:
                         create_from_dir(str(frames_dir), dataset_id, episode_id, str(out_contact_sheet), k=1, n=9, cols=3, rows=3, force=True)
-                        print(f"[OK] Creato contact_sheet: {out_contact_sheet}")
+                        print(f"[OK] Created contact_sheet: {out_contact_sheet}")
                     except Exception as e:
-                        print(f"[ERROR] Creazione contact_sheet fallita per {out_contact_sheet}: {e}")
+                        print(f"[ERROR] contact_sheet creation failed for {out_contact_sheet}: {e}")
 
                 cs_ok = copy_contact_sheet(out_ep, ep_dest, overwrite=True)
                 if cs_ok:
-                    print(f"[OK]  {dataset_id}/{episode_id} → contact_sheet aggiornato")
+                    print(f"[OK]  {dataset_id}/{episode_id} → contact_sheet updated")
                 else:
-                    print(f"[WARN] {dataset_id}/{episode_id} → contact_sheet non trovato in out/")
+                    print(f"[WARN] {dataset_id}/{episode_id} → contact_sheet not found in out/")
 
 
-            # 2) Frame nei locals (top-K dal meta, come in locals_mode)
+            # 2) Frames in locals (top-K from meta, as in locals_mode)
             meta_path = ep_dest / "meta.json"
             meta = parse_meta(meta_path) if meta_path.exists() else {}
             top_frames = pick_top_k_frames(meta, k=k)
 
             locals_root = ep_dest / "locals"
             if not locals_root.exists():
-                print(f"[WARN] locals/ mancante in {ep_dest}. Salto refresh dei frame locali.")
+                print(f"[WARN] locals/ missing in {ep_dest}. Skipping local frame refresh.")
                 continue
 
             for i in range(1, k + 1):
@@ -861,7 +861,7 @@ def refresh_images_mode(project_root: Path, out_root: Path, dest_root: Path,
                 frame_path = find_frame_file(out_ep, frame_id) if frame_id else None
 
                 if frame_path is None:
-                    print(f"[WARN] {dataset_id}/{episode_id} local_{i}: frame mancante (frame_id={frame_id})")
+                    print(f"[WARN] {dataset_id}/{episode_id} local_{i}: frame missing (frame_id={frame_id})")
                     continue
 
                 dst_img = ld / frame_path.name
@@ -873,10 +873,10 @@ def refresh_images_mode(project_root: Path, out_root: Path, dest_root: Path,
                     copied = copy_safe(frame_path, dst_img, overwrite=True)
                     if copied:
                         updated += 1
-                        print(f"[OK]  {dataset_id}/{episode_id} local_{i}: {frame_path.name} aggiornato")
+                        print(f"[OK]  {dataset_id}/{episode_id} local_{i}: {frame_path.name} updated")
                     else:
                         skipped += 1
-                        print(f"[SKIP] {dataset_id}/{episode_id} local_{i}: immagine già aggiornata")
+                        print(f"[SKIP] {dataset_id}/{episode_id} local_{i}: image already up to date")
 
     print(f"\nRefresh images done. Locals images updated: {updated} | skipped: {skipped}")
 
@@ -887,7 +887,7 @@ if __name__ == "__main__":
 
 
 '''
-Esempi:
+Examples:
 
 python generate_folders.py \
   --mode init \
@@ -907,15 +907,15 @@ python generate_folders.py \
   --video-duration 4.0 \
   --overwrite
 
-# Dry-run (verifica cosa verrebbe aggiornato, senza scrivere)
+# Dry-run (check what would be updated, without writing)
 python generate_folders.py \
   --mode refresh_images \
   --out-root out \
   --dest-root dataset/dlr_sara_grid_clamp_converted_externally_to_rlds_0.1.0 \
   --dry-run
 
-  
-# Esecuzione reale (sostituisce contact_sheet e i frame nei locals)
+
+# Actual execution (replaces contact_sheet and frames in locals)
 python generate_folders.py \
   --mode refresh_images \
   --out-root out \

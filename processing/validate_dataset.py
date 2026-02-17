@@ -1,19 +1,19 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Validator per dataset di Behavior Trees e metadati.
+Validator for Behavior Tree datasets and metadata.
 
-Cosa fa
-- Per ogni episodio in ognuno dei 5 dataset:
-  * bt.xml: valida la well-formedness XML del BT.
-    - Se nel file è presente testo extra, estrae e valida SOLO l’ULTIMO blocco <BehaviorTree>...</BehaviorTree>.
-  * meta.json: valida la sintassi JSON e verifica che meta["episode_id"] == nome cartella episodio (es. "episode_123").
-  * locals/local_{1,2,3}/subtree_.xml e subtree_.json: valida sintassi (XML/JSON).
+What it does
+- For each episode in each of the 5 datasets:
+  * bt.xml: validates BT XML well-formedness.
+    - If the file contains extra text, extracts and validates ONLY the LAST <BehaviorTree>...</BehaviorTree> block.
+  * meta.json: validates JSON syntax and checks that meta["episode_id"] == episode folder name (e.g. "episode_123").
+  * locals/local_{1,2,3}/subtree_.xml and subtree_.json: validates syntax (XML/JSON).
 
 Report
-- Per episodio: esito bt.xml e meta.json; per i 3 locals: quanti XML e JSON validi.
-- Totali globali: conteggi di validi/invalidi per bt.xml, meta.json, locals XML/JSON.
-- Elenco errori: path, episode_id, tipo ("sintattico" | "nome sbagliato") e messaggio.
+- Per episode: bt.xml and meta.json outcome; for the 3 locals: how many valid XML and JSON.
+- Global totals: valid/invalid counts for bt.xml, meta.json, locals XML/JSON.
+- Error list: path, episode_id, type ("syntax" | "wrong name") and message.
 """
 
 try:
@@ -31,7 +31,7 @@ from pathlib import Path
 from typing import Dict, List, Tuple
 from xml.etree import ElementTree as ET
 
-# Dataset root e lista dataset
+# Dataset root and dataset list
 DATASET_ROOT = Path("dataset")
 DATASETS = [
     "columbia_cairlab_pusht_real_0.1.0",
@@ -41,7 +41,7 @@ DATASETS = [
     "cmu_stretch_0.1.0",
 ]
 
-# Estrazione dell’ULTIMO blocco <BehaviorTree>...</BehaviorTree>
+# Extract the LAST <BehaviorTree>...</BehaviorTree> block
 _BT_PATTERN = re.compile(r'(<\s*BehaviorTree\b.*?</\s*BehaviorTree\s*>)',
                          re.DOTALL | re.IGNORECASE)
 

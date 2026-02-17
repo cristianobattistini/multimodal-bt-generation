@@ -6,64 +6,64 @@ dependencies:
   - python=3.10
   - pip
 
-  # --- Base pipeline (Conda: binari stabili) ---
-  - lxml            # parsing/validazione XML low-level
-  - opencv          # I/O video/immagini, estrazione frame
-  - numpy           # operazioni numeriche
-  - rich            # logging formattato
+  # --- Base pipeline (Conda: stable binaries) ---
+  - lxml            # low-level XML parsing/validation
+  - opencv          # video/image I/O, frame extraction
+  - numpy           # numeric operations
+  - rich            # formatted logging
   - typer           # CLI
   - pytest          # unit test
 
   - pip:
       # --- Base pipeline (Pip) ---
-      - pydantic==2.*      # modelli/validazione schema (Plan/Step)
-      - jsonschema         # validazione JSON contro schema
+      - pydantic==2.*      # schema models/validation (Plan/Step)
+      - jsonschema         # JSON validation against schema
 
       # --- OpenAI ---
-      - openai             # SDK ufficiale OpenAI
-      - python-dotenv      # carica .env per chiavi/endpoint
+      - openai             # Official OpenAI SDK
+      - python-dotenv      # load .env for keys/endpoints
 
       # --- Deep Learning / HF stack ---
-      # Scegli UNA delle opzioni torch sottostanti:
-      # 1) CPU-only (portabile):
+      # Choose ONE of the torch options below:
+      # 1) CPU-only (portable):
       - torch==2.3.* ; platform_system!="Linux" or platform_machine!="x86_64"
-      # 2) CUDA 12.1 (Linux/NVIDIA recenti):
+      # 2) CUDA 12.1 (recent Linux/NVIDIA):
       # - torch==2.3.*+cu121 -f https://download.pytorch.org/whl/torch_stable.html
-      # 3) CUDA 11.8 (cluster più vecchi):
+      # 3) CUDA 11.8 (older clusters):
       # - torch==2.3.*+cu118 -f https://download.pytorch.org/whl/torch_stable.html
 
-      - torchvision==0.18.*     # allinea alla versione di torch
-      - transformers            # modelli HF (LLM/VLM)
+      - torchvision==0.18.*     # align with torch version
+      - transformers            # HF models (LLM/VLM)
       - sentencepiece           # tokenizer (LLaMA/Alpaca)
-      - datasets                # gestione dataset HF
-      - huggingface_hub         # download/upload modelli
-      - safetensors             # formato pesi efficiente
-      - accelerate              # orchestrazione training/inferenza
+      - datasets                # HF dataset management
+      - huggingface_hub         # model download/upload
+      - safetensors             # efficient weight format
+      - accelerate              # training/inference orchestration
       - peft                    # LoRA/PEFT
-      - protobuf                # richiesto da vari modelli HF
+      - protobuf                # required by various HF models
 
       # --- Vision backbones / util ---
-      - timm                   # backbone vision (ViT, ecc.)
-      - einops                 # manipolazione tensori
+      - timm                   # vision backbone (ViT, etc.)
+      - einops                 # tensor manipulation
 
       # --- Detection ---
-      - ultralytics            # baseline YOLO (utile per smoke test)
+      - ultralytics            # YOLO baseline (useful for smoke tests)
       # - groundingdino          # open-vocabulary detector
-      - pyyaml                 # richiesto da groundingdino
-      - shapely                # richiesto da groundingdino
-      # - pycocotools            # metriche COCO (Linux/macOS)
-      # - pycocotools-windows  # usa questo su Windows se la riga sopra fallisce
+      - pyyaml                 # required by groundingdino
+      - shapely                # required by groundingdino
+      # - pycocotools            # COCO metrics (Linux/macOS)
+      # - pycocotools-windows  # use this on Windows if the line above fails
 
-      # --- Validazione extra ---
-      - xmlschema              # validazione XSD aggiuntiva
+      # --- Extra validation ---
+      - xmlschema              # additional XSD validation
 
-      # --- Dev tools (opzionali ma consigliati) ---
+      # --- Dev tools (optional but recommended) ---
       - mypy                   # type checking
       - black                  # formatter
       - flake8                 # linting
 
       # --- Evaluation helpers ---
-      - evaluate               # metriche su dataset
+      - evaluate               # dataset metrics
 
       # to load OXE Datasets
       - tensorflow

@@ -17,7 +17,7 @@ from embodied_bt_brain.dataset_proposer_agentic.utils.bt_prompt_spec import (
     format_actions_for_prompt,
 )
 
-# Configurazione percorsi default
+# Default path configuration
 DEFAULT_INPUT = "dataset_agentic_v1/train/data.jsonl"
 DEFAULT_OUTPUT = "dataset_agentic_student_v1/train"
 PROMPTS_DIR = ROOT / "embodied_bt_brain" / "agentic_teacher" / "prompts" / "inference"
