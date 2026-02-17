@@ -1,9 +1,0 @@
-<root main_tree_to_execute="MainTree">
-  <BehaviorTree ID="MainTree">
-    <Sequence>
-      <Action ID="NAVIGATE_TO" obj="broom.n.01_1"/>
-      <Action ID="GRASP" obj="broom.n.01_1"/>
-      <Action ID="NAVIGATE_TO" obj="floor.n.01_1"/>
-    </Sequence>
-  </BehaviorTree>
-</root>
