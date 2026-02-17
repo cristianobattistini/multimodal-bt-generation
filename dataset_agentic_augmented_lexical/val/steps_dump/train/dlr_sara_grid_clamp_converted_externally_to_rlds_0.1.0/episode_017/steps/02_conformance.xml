@@ -1,0 +1,20 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Move to grid_clamp -->
+      <Action ID="MOVE_TO" obj="grid_clamp" />
+      <!-- Retry GRASP grid_clamp up to 2 attempts -->
+      <RetryUntilSuccessful num_attempts="2">
+        <!-- Timeout: GRASP grid_clamp within 15s -->
+        <Timeout msec="15000">
+          <!-- Grasp grid_clamp -->
+          <Action ID="PICK" obj="grid_clamp" />
+        </Timeout>
+      </RetryUntilSuccessful>
+      <!-- Pick grid_clamp -->
+      <Action ID="GO_TO" obj="grid_plate" />
+      <!-- Go to grid_plate -->
+      <Action ID="PLACE_INSIDE" obj="grid_clamp" container="grid_plate" />
+    </Sequence>
+  </BehaviorTree>
+</root>

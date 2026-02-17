@@ -1,0 +1,28 @@
+{
+  "decorator_type": "mixed",
+  "mixed_subtype": "condition_retry",
+  "target_action_id": "PLACE_ON_TOP",
+  "target_obj": "right_peg",
+  "parameters": {
+    "augmentations": [
+      {
+        "type": "condition",
+        "action_id": "PLACE_ON_TOP",
+        "obj": "right_peg",
+        "params": {
+          "condition_id": "IS_HOLDING",
+          "condition_obj": "right_peg"
+        }
+      },
+      {
+        "type": "retry",
+        "action_id": "PLACE_ON_TOP",
+        "obj": "right_peg",
+        "params": {
+          "num_attempts": 2
+        }
+      }
+    ]
+  },
+  "prompt_name": "mixed/condition_retry"
+}

@@ -1,0 +1,1 @@
+Place the teapot on the stove. Check if visible and use a 15 second timeout for navigation.

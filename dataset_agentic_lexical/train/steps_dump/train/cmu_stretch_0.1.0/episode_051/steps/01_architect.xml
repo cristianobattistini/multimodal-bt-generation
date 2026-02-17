@@ -1,0 +1,10 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Locomote to drawer -->
+      <Action ID="LOCOMOTE_TO" obj="drawer" />
+      <!-- Unlatch drawer -->
+      <Action ID="UNLATCH" obj="drawer" />
+    </Sequence>
+  </BehaviorTree>
+</root>

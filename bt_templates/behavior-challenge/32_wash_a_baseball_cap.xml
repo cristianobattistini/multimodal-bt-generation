@@ -1,0 +1,17 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <Action ID="NAVIGATE_TO" obj="washer.n.03_1"/>
+      <Action ID="OPEN" obj="washer.n.03_1"/>
+      <Action ID="NAVIGATE_TO" obj="baseball_cap.n.01_1"/>
+      <Action ID="GRASP" obj="baseball_cap.n.01_1"/>
+      <Action ID="NAVIGATE_TO" obj="washer.n.03_1"/>
+      <Action ID="PLACE_INSIDE" obj="washer.n.03_1"/>
+      <Action ID="NAVIGATE_TO" obj="baseball_cap.n.01_2"/>
+      <Action ID="GRASP" obj="baseball_cap.n.01_2"/>
+      <Action ID="NAVIGATE_TO" obj="washer.n.03_1"/>
+      <Action ID="PLACE_INSIDE" obj="washer.n.03_1"/>
+      <Action ID="TOGGLE_ON" obj="washer.n.03_1"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

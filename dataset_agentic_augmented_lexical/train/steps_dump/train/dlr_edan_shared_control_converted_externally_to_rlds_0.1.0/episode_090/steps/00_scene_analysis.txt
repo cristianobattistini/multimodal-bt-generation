@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "banana"
+  destination: ""
+  expanded_instruction: "Pick up the banana from the small stool next to the table. If a grasp fails, retry up to 3 times, and if still unsuccessful push or flip the banana to reposition it before trying again."
+  scene_context: "Banana resting on a small stool next to the table; robot not holding anything; surfaces clear."
+  expected_sequence: "Approach the stool, attempt to grasp and lift the banana; if grasp fails, retry up to 3 times, then push or flip the banana to reposition and grasp it."

@@ -1,0 +1,1 @@
+Opening the fridge. Use ApproachFridgeDoor subtree for approach and grasp.

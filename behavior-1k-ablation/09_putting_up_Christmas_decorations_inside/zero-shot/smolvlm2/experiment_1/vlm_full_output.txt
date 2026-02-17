@@ -1,0 +1,39 @@
+ scene_analysis:
+  target: ["gift_box_1", "gift_box_2", "gift_box_3", "wreath", "candy_cane_1", "candy_cane_2", "candy_cane_3", "pillar_candle_1", "pillar_candle_2"]
+  destination: "sofa"
+  expanded_instruction: "Pick up each gift box and place them on the sofa, then pick up the pillar candle and place it on the table."
+scene_context:
+  initial_state: "Gift boxes on table, wreath on table, pillar candle on table, candy_cane on table, sofa on table, Christmas tree in background."
+  state: "Robot not holding anything."
+  state_chain: "Gift boxes on table, pillar candle on table, candy_cane on table, sofa on table, Christmas tree in background."
+  plan: "Move to gift_boxes, grasp each, place on the sofa, then pick up pillar candle and place it on the table."
+
+Plan:
+<root main_tree_to_execute="MainTree">
+  <Sequence>
+    <!-- Navigate to gift_boxes -->
+    <Action ID="NAVIGATE_TO" obj="gift_boxes" />
+    <!-- Grasp gift_box_1 -->
+    <Action ID="GRASP" obj="gift_box_1" />
+    <!-- Navigate to gift_boxes -->
+    <Action ID="NAVIGATE_TO" obj="gift_boxes" />
+    <!-- Place gift_box_1 on sofa -->
+    <Action ID="PLACE_ON_TOP" obj="gift_boxes" />
+    <!-- Navigate to pillar_candle -->
+    <Action ID="NAVIGATE_TO" obj="pillar_candle" />
+    <!-- Grasp pillar_candle -->
+    <Action ID="GRASP" obj="pillar_candle" />
+    <!-- Navigate to pillar_candle -->
+    <Action ID="NAVIGATE_TO" obj="pillar_candle" />
+    <!-- Place pillar_candle on table -->
+    <Action ID="PLACE_ON_TOP" obj="pillar_candle" />
+    <!-- Navigate to christmas_tree -->
+    <Action ID="NAVIGATE_TO" obj="christmas_tree" />
+    <!-- Grasp christmas_tree -->
+    <Action ID="GRASP" obj="christmas_tree" />
+    <!-- Navigate to pillar_candle -->
+    <Action ID="NAVIGATE_TO" obj="pillar_candle" />
+    <!-- Place pillar_candle on table -->
+    <Action ID="PLACE_ON_TOP" obj="pillar_candle" />
+  </Sequence>
+</root>

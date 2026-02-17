@@ -1,0 +1,1 @@
+Pick up the milk dairy. Check precondition and use a 10 second timeout for navigation.

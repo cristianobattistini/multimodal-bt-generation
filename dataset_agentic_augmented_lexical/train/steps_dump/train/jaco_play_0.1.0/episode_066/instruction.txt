@@ -1,0 +1,1 @@
+pick up the green cup. Only navigate to the object if it is visible.

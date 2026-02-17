@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "bottle"
+  destination: ""
+  expanded_instruction: "Open the blue bottle by removing its cap"
+  scene_context: "Blue bottle upright and initially capped; cap becomes removed in later frames."
+  expected_sequence: "Grasp the cap and twist or pull it off to open the bottle."

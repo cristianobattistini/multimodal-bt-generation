@@ -1,0 +1,23 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to green_can -->
+      <Action ID="NAVIGATE_TO" obj="green_can" />
+      <!-- Fallback: if GRASP green_can fails, try PUSH, FLIP to reposition -->
+      <Fallback>
+        <!-- Grasp green_can -->
+        <Action ID="GRASP" obj="green_can" />
+        <Sequence>
+          <!-- Push green_can forward toward front edge of table -->
+          <Action ID="SHOVE" obj="green_can" />
+          <!-- Grasp green_can -->
+          <Action ID="GRASP" obj="green_can" />
+        </Sequence>
+      </Fallback>
+      <!-- Navigate to top_drawer -->
+      <Action ID="NAVIGATE_TO" obj="top_drawer" />
+      <!-- Shove green_can -->
+      <Action ID="PLACE_INSIDE" obj="top_drawer" />
+    </Sequence>
+  </BehaviorTree>
+</root>

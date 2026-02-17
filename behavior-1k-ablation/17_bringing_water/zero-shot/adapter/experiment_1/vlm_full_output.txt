@@ -1,0 +1,35 @@
+scene_analysis:
+  target: "["bottle_1", "bottle_2"]"
+  destination: "coffee_table"
+  expanded_instruction: "Open the refrigerator, retrieve bottle_1 and bottle_2, place both bottles on the coffee table, and close the refrigerator after placing the bottles."
+  scene_context: "Refrigerator is closed; bottle_1 and bottle_2 are inside and not held; coffee_table has a clear surface."
+  expected_sequence: "Open the refrigerator and pick up bottle_1 and bottle_2, carry them to the coffee table, and set both bottles down on the table, then close the refrigerator."
+Plan:
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to refrigerator -->
+      <Action ID="NAVIGATE_TO" obj="electric_refrigerator"/>
+      <!-- Open refrigerator -->
+      <Action ID="OPEN" obj="electric_refrigerator"/>
+      <!-- Navigate to bottle_1 -->
+      <Action ID="NAVIGATE_TO" obj="bottle_1"/>
+      <!-- Grasp bottle_1 -->
+      <Action ID="GRASP" obj="bottle_1"/>
+      <!-- Navigate to coffee_table -->
+      <Action ID="NAVIGATE_TO" obj="coffee_table"/>
+      <!-- Place on coffee_table -->
+      <Action ID="PLACE_ON_TOP" obj="coffee_table"/>
+      <!-- Close refrigerator -->
+      <Action ID="CLOSE" obj="electric_refrigerator"/>
+      <!-- Navigate to bottle_2 -->
+      <Action ID="NAVIGATE_TO" obj="bottle_2"/>
+      <!-- Grasp bottle_2 -->
+      <Action ID="GRASP" obj="bottle_2"/>
+      <!-- Navigate to coffee_table -->
+      <Action ID="NAVIGATE_TO" obj="coffee_table"/>
+      <!-- Place on coffee_table -->
+      <Action ID="PLACE_ON_TOP" obj="coffee_table"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

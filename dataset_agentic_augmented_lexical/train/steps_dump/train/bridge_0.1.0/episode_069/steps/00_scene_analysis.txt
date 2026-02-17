@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "salt"
+  destination: "table"
+  expanded_instruction: "Pick up the salt shaker and place it on the table next to the yellow brush that sits above the napkin; if grasp fails, retry up to 3 times (within 10s), then use push or flip to reposition the shaker before placing it."
+  scene_context: "Salt shaker on stove near robot gripper; yellow brush on counter above a yellow napkin; counter area is reachable."
+  expected_sequence: "Attempt to grasp the salt shaker (retry up to 3 times within 10s); if grasp still fails, push or flip the shaker to reposition it, then move to the brush location and place the shaker beside the brush on the counter above the napkin."

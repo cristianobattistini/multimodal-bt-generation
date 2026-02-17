@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "water_bottle"
+  destination: ""
+  expanded_instruction: "Pick up the clear plastic water bottle lying on the table near the chip bag; if a grasp fails, retry up to 3 times and, if still unsuccessful, push or flip the bottle to reposition before grasping."
+  scene_context: "Water bottle lying on table on its side near a chip bag; table is clear; bottle not held."
+  expected_sequence: "Approach the bottle, grasp it securely and lift it from the table; if a grasp fails, retry (up to 3 times within ~10s) and then use a push or flip to reposition the bottle and grasp again."

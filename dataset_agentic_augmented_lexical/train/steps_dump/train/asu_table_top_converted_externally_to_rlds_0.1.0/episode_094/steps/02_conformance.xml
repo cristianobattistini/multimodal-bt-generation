@@ -1,0 +1,20 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Execute subtree ApproachWhiteBox -->
+      <SubTree ID="ApproachWhiteBox" />
+    </Sequence>
+  </BehaviorTree>
+  <!-- Subtree definition ApproachWhiteBox -->
+  <BehaviorTree ID="ApproachWhiteBox">
+    <Sequence>
+      <!-- Navigate to white_box -->
+      <Action ID="NAVIGATE_TO" obj="white_box" />
+      <!-- Retry GRASP white_box up to 2 attempts -->
+      <RetryUntilSuccessful num_attempts="2">
+        <!-- Grasp white_box -->
+        <Action ID="GRASP" obj="white_box" />
+      </RetryUntilSuccessful>
+    </Sequence>
+  </BehaviorTree>
+</root>

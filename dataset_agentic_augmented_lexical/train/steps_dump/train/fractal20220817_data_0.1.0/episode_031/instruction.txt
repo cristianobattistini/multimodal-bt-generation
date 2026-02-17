@@ -1,0 +1,1 @@
+Pick apple from white bowl. Only grasp if the object is reachable.

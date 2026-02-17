@@ -1,0 +1,41 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to pot -->
+      <Action ID="NAVIGATE_TO" obj="pot" />
+      <!-- Fallback: if GRASP lid fails, try PUSH, FLIP to reposition -->
+      <Fallback>
+        <!-- Grasp lid -->
+        <Action ID="GRASP" obj="lid" />
+        <Sequence>
+          <!-- Push lid forward toward front edge of table -->
+          <Action ID="PUSH" obj="lid" />
+          <!-- Grasp lid -->
+          <Action ID="GRASP" obj="lid" />
+        </Sequence>
+      </Fallback>
+      <!-- Navigate to table -->
+      <Action ID="NAVIGATE_TO" obj="table" />
+      <!-- Place on table -->
+      <Action ID="PLACE_ON_TOP" obj="table" />
+      <!-- Navigate to pot -->
+      <Action ID="NAVIGATE_TO" obj="pot" />
+      <!-- Grasp pot -->
+      <Action ID="GRASP" obj="pot" />
+      <!-- Navigate to plate -->
+      <Action ID="NAVIGATE_TO" obj="plate" />
+      <!-- Place on plate -->
+      <Action ID="PLACE_ON_TOP" obj="plate" />
+      <!-- Navigate to tool -->
+      <Action ID="NAVIGATE_TO" obj="tool" />
+      <!-- Grasp tool -->
+      <Action ID="GRASP" obj="tool" />
+      <!-- Navigate to pot -->
+      <Action ID="NAVIGATE_TO" obj="pot" />
+      <!-- Push pot forward toward front edge of table -->
+      <Action ID="PUSH" obj="pot" />
+      <!-- Release -->
+      <Action ID="RELEASE" />
+    </Sequence>
+  </BehaviorTree>
+</root>

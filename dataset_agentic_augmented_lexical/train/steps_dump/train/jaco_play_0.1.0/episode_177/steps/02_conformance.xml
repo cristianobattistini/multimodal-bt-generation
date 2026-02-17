@@ -1,0 +1,23 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to white_plate -->
+      <Action ID="NAVIGATE_TO" obj="white_plate" />
+      <!-- Navigate to milk_dairy -->
+      <Action ID="NAVIGATE_TO" obj="milk_dairy" />
+      <!-- Check milk_dairy is visible before GRASP -->
+      <Condition ID="IS_VISIBLE" obj="milk_dairy" />
+      <!-- Fallback: if GRASP milk_dairy fails, try alternative to reposition -->
+      <Fallback>
+        <!-- Grasp milk_dairy -->
+        <Action ID="GRASP" obj="milk_dairy" />
+        <Sequence>
+          <!-- Push milk_dairy forward toward front edge of table -->
+          <Action ID="PUSH" obj="milk_dairy" />
+          <!-- Grasp milk_dairy -->
+          <Action ID="GRASP" obj="milk_dairy" />
+        </Sequence>
+      </Fallback>
+    </Sequence>
+  </BehaviorTree>
+</root>

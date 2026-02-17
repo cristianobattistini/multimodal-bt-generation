@@ -1,0 +1,32 @@
+{
+  "decorator_type": "mixed",
+  "mixed_subtype": "retry_fallback",
+  "target_action_id": "GRASP",
+  "target_obj": "green_glass_bottle",
+  "parameters": {
+    "augmentations": [
+      {
+        "type": "retry",
+        "action_id": "GRASP",
+        "obj": "green_glass_bottle",
+        "params": {
+          "num_attempts": 2
+        }
+      },
+      {
+        "type": "fallback",
+        "action_id": "GRASP",
+        "obj": "green_glass_bottle",
+        "params": {
+          "valid_fallbacks": [
+            "PUSH",
+            "FLIP"
+          ],
+          "valid_fallbacks_str": "PUSH, FLIP",
+          "hint": "PUSH/FLIP repositions the object into a better grasping position"
+        }
+      }
+    ]
+  },
+  "prompt_name": "mixed/retry_fallback"
+}

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "pepsi_can"
+  destination: "table"
+  expanded_instruction: "Pick up the pepsi can from the table and place it down on the table surface, confirming you are holding it before placing; if placing fails, retry up to 3 times (within a 10s timeout) and, if still unsuccessful, use a push to reposition the can."
+  scene_context: "Pepsi can on left side of table, robot not holding it, table has other objects but destination area is reachable."
+  expected_sequence: "Approach the pepsi can, grasp it, confirm IS_HOLDING, move to the clear spot on the table, and attempt to set it down (retry up to 3 times within 10s); if PLACE_ON_TOP fails, use PUSH as a fallback to reposition the object."

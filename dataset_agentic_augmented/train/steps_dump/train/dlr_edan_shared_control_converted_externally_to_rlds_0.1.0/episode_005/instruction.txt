@@ -1,0 +1,1 @@
+Pick the tube. Only navigate to the tube if it is visible.

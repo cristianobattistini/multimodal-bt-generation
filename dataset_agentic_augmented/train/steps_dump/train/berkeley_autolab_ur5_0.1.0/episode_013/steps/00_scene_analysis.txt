@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "green_cloth"
+  destination: "table"
+  expanded_instruction: "Group actions into an ApproachGreenCloth subtree: sweep the green cloth across the tabletop to the left side of the table (retry up to 3 times, 10s timeout; if grasp fails, push to reposition)."
+  scene_context: "Green cloth on tabletop near robot, table surface mostly clear, nothing holding, no containers open."
+  expected_sequence: "Within the ApproachGreenCloth subtree, approach the cloth and push/sweep it across the table toward the left edge until it rests on the left side; retry up to 3 times within a 10s timeout and if grasp fails, push to reposition."

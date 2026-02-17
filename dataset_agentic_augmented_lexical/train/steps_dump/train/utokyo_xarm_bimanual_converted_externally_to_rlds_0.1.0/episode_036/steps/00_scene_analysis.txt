@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "towel"
+  destination: "green_mat"
+  expanded_instruction: "Pick up the wrinkled pink towel and unfold it, then spread it flat on the green mat. If placing it on the mat fails, retry up to 2 times and if still unsuccessful, push the towel to reposition and then lay it flat within a 10s timeout."
+  scene_context: "Wrinkled pink towel lies on a green mat; robot arms are not holding it and mat is clear."
+  expected_sequence: "Reach the towel, grasp and pull/shake to unfold, smooth its edges, and lay it flat on the green_mat. If PLACE_ON_TOP fails (after up to 2 retries or within 10s), use PUSH to reposition the towel and then place it flat."

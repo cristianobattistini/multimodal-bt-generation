@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "["blue_gear", "red_gear"]"
+  destination: "right_peg"
+  expanded_instruction: "Pick up the blue gear and insert it onto the right peg, then pick up the red gear (group actions into an ApproachRedGear subtree) and insert it onto the right peg, retrying the grasp up to 2 times if it fails."
+  scene_context: "Blue and red gears on the table; right peg empty and reachable; robot not holding anything."
+  expected_sequence: "Pick up the blue gear and place it onto the right peg, then pick up the red gear (use an ApproachRedGear subtree) and place it onto the right peg, retrying the grasp up to 2 times if the grasp fails."

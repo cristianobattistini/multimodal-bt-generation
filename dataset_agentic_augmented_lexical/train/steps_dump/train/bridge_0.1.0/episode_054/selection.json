@@ -1,0 +1,40 @@
+{
+  "decorator_type": "mixed",
+  "mixed_subtype": "condition_retry_fallback",
+  "target_action_id": "PLACE_ON_TOP",
+  "target_obj": "green_cloth",
+  "parameters": {
+    "augmentations": [
+      {
+        "type": "condition",
+        "action_id": "PLACE_ON_TOP",
+        "obj": "green_cloth",
+        "params": {
+          "condition_id": "IS_HOLDING",
+          "condition_obj": "green_cloth"
+        }
+      },
+      {
+        "type": "retry",
+        "action_id": "PLACE_ON_TOP",
+        "obj": "green_cloth",
+        "params": {
+          "num_attempts": 2
+        }
+      },
+      {
+        "type": "fallback",
+        "action_id": "PLACE_ON_TOP",
+        "obj": "green_cloth",
+        "params": {
+          "valid_fallbacks": [
+            "PUSH"
+          ],
+          "valid_fallbacks_str": "PUSH",
+          "hint": "PUSH clears obstacles from the destination"
+        }
+      }
+    ]
+  },
+  "prompt_name": "mixed/condition_retry_fallback"
+}

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "maroon_square"
+  destination: "table"
+  expanded_instruction: "Before navigating, verify the table is visible (IS_VISIBLE) — retry up to 3 times with a 10s timeout — then pick up the maroon square block from the table and place it on the table nearer the front edge."
+  scene_context: "Maroon square on table near center-front left; robot not holding it; table otherwise clear."
+  expected_sequence: "Check IS_VISIBLE on the table before NAVIGATE_TO (retry up to 3 times, 10s timeout), then move to the maroon square, grasp it (if grasp fails retry once or push to reposition), bring it to the front edge of the table, and set it down."

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "blue_button"
+  destination: ""
+  expanded_instruction: "Move the robot arm forward and press the blue button on the table until it is activated."
+  scene_context: "Blue button sits on the table near the front; robot arm is retracted and not holding anything; table is clear."
+  expected_sequence: "Position the arm over the button, extend the end effector, and push the button until it registers as pressed."

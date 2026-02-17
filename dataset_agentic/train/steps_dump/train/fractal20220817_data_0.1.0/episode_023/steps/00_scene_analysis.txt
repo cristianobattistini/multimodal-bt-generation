@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "bottom_drawer"
+  destination: ""
+  expanded_instruction: "Close the bottom drawer of the gray three-drawer cabinet until it is flush with the cabinet"
+  scene_context: "Bottom drawer is open; middle and top drawers closed; front clear and unobstructed."
+  expected_sequence: "Approach the cabinet, grasp the bottom drawer handle, and push the drawer closed until flush."

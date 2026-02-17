@@ -1,0 +1,22 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Move to kcup_holder -->
+      <Action ID="MOVE_TO" obj="kcup_holder" />
+      <!-- Open up kcup_holder -->
+      <Action ID="OPEN_UP" obj="kcup_holder" />
+      <!-- Go to kcup -->
+      <Action ID="GO_TO" obj="kcup" />
+      <!-- Grasp kcup -->
+      <Action ID="GRASP" obj="kcup" />
+      <!-- Move to kcup_holder -->
+      <Action ID="MOVE_TO" obj="kcup_holder" />
+      <!-- Place inside kcup_holder -->
+      <Action ID="PLACE_INSIDE" obj="kcup_holder" />
+      <!-- Close up kcup_holder -->
+      <Action ID="CLOSE_UP" obj="kcup_holder" />
+      <!-- Release -->
+      <Action ID="RELEASE" />
+    </Sequence>
+  </BehaviorTree>
+</root>

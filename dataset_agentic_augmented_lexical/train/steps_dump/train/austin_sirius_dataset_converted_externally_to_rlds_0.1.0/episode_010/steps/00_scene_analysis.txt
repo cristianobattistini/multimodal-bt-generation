@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "kcup"
+  destination: "kcup_holder"
+  expanded_instruction: "Using an ApproachKcup subtree: open the kcup_holder, approach and pick up the green kcup from the table (retry grasp up to 2 times if it fails), place it into the kcup_holder, and close the kcup_holder."
+  scene_context: "Kcup on table; kcup_holder is closed and reachable; gripper empty; table clear."
+  expected_sequence: "Within an ApproachKcup subtree: open the holder lid, approach and pick up the kcup (retry grasp up to 2 times on failure), insert it into the holder, and close the lid."

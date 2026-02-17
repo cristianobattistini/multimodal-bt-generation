@@ -1,0 +1,25 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <NAVIGATE_TO obj="mousetrap_1"/>
+      <GRASP obj="mousetrap_1"/>
+      <NAVIGATE_TO obj="sink"/>
+      <PLACE_NEXT_TO obj="sink"/>
+
+      <NAVIGATE_TO obj="mousetrap_2"/>
+      <GRASP obj="mousetrap_2"/>
+      <NAVIGATE_TO obj="sink"/>
+      <PLACE_NEXT_TO obj="sink"/>
+
+      <NAVIGATE_TO obj="mousetrap_3"/>
+      <GRASP obj="mousetrap_3"/>
+      <NAVIGATE_TO obj="sink"/>
+      <PLACE_NEXT_TO obj="sink"/>
+
+      <NAVIGATE_TO obj="mousetrap_4"/>
+      <GRASP obj="mousetrap_4"/>
+      <NAVIGATE_TO obj="sink"/>
+      <PLACE_NEXT_TO obj="sink"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

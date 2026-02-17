@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "peg"
+  destination: "hole"
+  expanded_instruction: "Verify the hole on the base plate is visible (IS_VISIBLE) before navigating; if not visible, retry the visibility check up to 3 times (10s timeout) then abort. Then insert the peg held by the robot into the hole on the base plate."
+  scene_context: "Peg is held above the base plate; hole visible on the plate; workspace clear."
+  expected_sequence: "Check IS_VISIBLE on the hole before navigating (retry up to 3 times within 10s); once visible, navigate, lower and align the peg over the hole, then insert it straight down until seated."

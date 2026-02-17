@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "square_bread"
+  destination: "oven"
+  expanded_instruction: "Pick up the square bread from the plate near the center and place it inside the oven."
+  scene_context: "Oven door is open; square_bread is on the white plate near center; path to oven is clear."
+  expected_sequence: "Move to the plate, pick up the square_bread, carry it to the oven opening, and place it inside."

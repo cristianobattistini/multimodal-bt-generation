@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "mug"
+  destination: ""
+  expanded_instruction: "Check that the blue cloth is visible, then navigate (within a 10s timeout) to the white mug and pour liquid from the red pitcher into it."
+  scene_context: "White mug is on blue cloth and initially empty; red pitcher nearby and reachable."
+  expected_sequence: "Verify blue cloth is visible before moving; navigate to the mug (NAVIGATE_TO within 10s), bring the red pitcher over the mug, tilt to pour liquid into the mug, then set the pitcher down."

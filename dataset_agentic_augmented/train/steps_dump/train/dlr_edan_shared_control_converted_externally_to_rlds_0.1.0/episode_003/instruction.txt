@@ -1,0 +1,1 @@
+pick the green apple. Check precondition and use a 10 second timeout for navigation.

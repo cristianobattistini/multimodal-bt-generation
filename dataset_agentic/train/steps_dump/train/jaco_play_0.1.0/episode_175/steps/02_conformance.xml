@@ -1,0 +1,12 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to gray_plate -->
+      <Action ID="NAVIGATE_TO" obj="gray_plate"/>
+      <!-- Navigate to orange_fruit -->
+      <Action ID="NAVIGATE_TO" obj="orange_fruit"/>
+      <!-- Grasp orange_fruit -->
+      <Action ID="GRASP" obj="orange_fruit"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

@@ -1,0 +1,22 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to top_drawer -->
+      <Action ID="NAVIGATE_TO" obj="top_drawer" />
+      <!-- Approach brown_chip_bag -->
+      <Action ID="APPROACH" obj="brown_chip_bag" />
+      <!-- Retry GRASP brown_chip_bag up to 2 attempts -->
+      <RetryUntilSuccessful num_attempts="2">
+        <!-- Timeout: GRASP brown_chip_bag within 10s -->
+        <Timeout msec="10000">
+          <!-- Grasp brown_chip_bag -->
+          <Action ID="GRASP" obj="brown_chip_bag" />
+        </Timeout>
+      </RetryUntilSuccessful>
+      <!-- Navigate to counter -->
+      <Action ID="GO_TO" obj="counter" />
+      <!-- Go to counter -->
+      <Action ID="SET_ON" obj="counter" />
+    </Sequence>
+  </BehaviorTree>
+</root>

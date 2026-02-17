@@ -1,0 +1,14 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Go to potato -->
+      <Action ID="GO_TO" obj="potato" />
+      <!-- Grip potato -->
+      <Action ID="GRIP" obj="potato" />
+      <!-- Move to pot_cardboard_fence -->
+      <Action ID="MOVE_TO" obj="pot_cardboard_fence" />
+      <!-- Put in pot_cardboard_fence -->
+      <Action ID="PUT_IN" obj="pot_cardboard_fence" />
+    </Sequence>
+  </BehaviorTree>
+</root>

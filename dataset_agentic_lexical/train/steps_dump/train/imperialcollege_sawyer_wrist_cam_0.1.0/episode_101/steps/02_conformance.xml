@@ -1,0 +1,10 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Go to mug -->
+      <Action ID="GO_TO" obj="mug" />
+      <!-- Grasp mug -->
+      <Action ID="GRASP" obj="mug" />
+    </Sequence>
+  </BehaviorTree>
+</root>

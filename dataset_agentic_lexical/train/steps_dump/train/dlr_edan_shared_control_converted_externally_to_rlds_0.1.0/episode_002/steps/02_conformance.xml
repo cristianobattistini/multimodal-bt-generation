@@ -1,0 +1,10 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to small_bowl -->
+      <Action ID="NAVIGATE_TO" obj="small_bowl" />
+      <!-- Pick tennis_ball -->
+      <Action ID="PICK" obj="tennis_ball" />
+    </Sequence>
+  </BehaviorTree>
+</root>

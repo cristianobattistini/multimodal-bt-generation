@@ -1,0 +1,17 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Approach white_box -->
+      <Action ID="APPROACH" obj="white_box" />
+      <!-- Pick white_box -->
+      <Action ID="PICK" obj="white_box" />
+      <!-- Go to sink -->
+      <Action ID="GO_TO" obj="sink" />
+      <!-- Retry PLACE_INSIDE sink up to 3 attempts -->
+      <RetryUntilSuccessful num_attempts="3">
+        <!-- Place inside sink -->
+        <Action ID="PUT_IN" obj="sink" />
+      </RetryUntilSuccessful>
+    </Sequence>
+  </BehaviorTree>
+</root>

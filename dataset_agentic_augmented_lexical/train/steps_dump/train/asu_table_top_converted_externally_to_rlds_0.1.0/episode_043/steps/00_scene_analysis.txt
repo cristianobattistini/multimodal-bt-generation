@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "bread"
+  destination: ""
+  expanded_instruction: "Using the ApproachBread subtree, approach the bread loaf on the table, grasp it securely, and lift it up; retry up to 3 times with a 10s timeout and if grasp fails, push to reposition."
+  scene_context: "Bread loaf on table near center front; robot arm above but not holding it; table surface clear."
+  expected_sequence: "Within the ApproachBread subtree: approach the loaf, grasp it securely, and lift it upward; allow up to 3 attempts (10s timeout) and if grasp fails, push to reposition before retry."

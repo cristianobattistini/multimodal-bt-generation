@@ -1,0 +1,24 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to gray_bowl -->
+      <Action ID="NAVIGATE_TO" obj="gray_bowl" />
+      <!-- Check gray_bowl is reachable before GRASP -->
+      <Condition ID="IS_REACHABLE" obj="gray_bowl" />
+      <!-- Fallback: if GRASP gray_bowl fails, try alternative to reposition -->
+      <Fallback>
+        <!-- Retry GRASP gray_bowl up to 2 attempts -->
+        <RetryUntilSuccessful num_attempts="2">
+          <!-- Grasp gray_bowl -->
+          <Action ID="GRASP" obj="gray_bowl" />
+        </RetryUntilSuccessful>
+        <Sequence>
+          <!-- Push gray_bowl forward toward front edge of table -->
+          <Action ID="PUSH" obj="gray_bowl" />
+          <!-- Grasp gray_bowl -->
+          <Action ID="GRASP" obj="gray_bowl" />
+        </Sequence>
+      </Fallback>
+    </Sequence>
+  </BehaviorTree>
+</root>

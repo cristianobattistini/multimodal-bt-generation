@@ -1,0 +1,21 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Execute subtree ApproachBlueBottle -->
+      <SubTree ID="ApproachBlueBottle" />
+      <!-- Approach table -->
+      <Action ID="APPROACH" obj="table" />
+      <!-- Lay on table -->
+      <Action ID="LAY_ON" obj="table" />
+    </Sequence>
+  </BehaviorTree>
+  <!-- Subtree definition ApproachBlueBottle -->
+  <BehaviorTree ID="ApproachBlueBottle">
+    <Sequence>
+      <!-- Approach to blue_bottle -->
+      <Action ID="APPROACH" obj="blue_bottle" />
+      <!-- Grasp blue_bottle -->
+      <Action ID="GRASP" obj="blue_bottle" />
+    </Sequence>
+  </BehaviorTree>
+</root>

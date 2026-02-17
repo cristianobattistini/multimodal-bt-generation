@@ -1,0 +1,5 @@
+scene_analysis:
+  target: sandal_1
+  destination: nightstand
+  expanded_instruction: Move the blue sandal from the bed onto the white nightstand next to the white chair, then place the first sandal next to the bed and the second sandal next to the white chair.
+Plan:

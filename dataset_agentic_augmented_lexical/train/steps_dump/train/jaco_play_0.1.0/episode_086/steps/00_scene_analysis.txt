@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "apple"
+  destination: "white_plate"
+  expanded_instruction: "Pick up the apple from the table and place it into the white plate. Before placing, check the white plate's IS_HOLDING status to ensure it's empty; if PLACE_INSIDE fails, retry up to 2 times."
+  scene_context: "Apple on the table left of the white plate; white_plate is empty and reachable; arm not holding anything."
+  expected_sequence: "Approach the apple, grasp it, carry it to the white plate, verify IS_HOLDING on the plate (ensure empty), attempt PLACE_INSIDE into the plate and retry PLACE_INSIDE up to 2 times if it fails, then set it down inside."

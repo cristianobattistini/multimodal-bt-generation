@@ -1,0 +1,2 @@
+Instruction: insert the peg into the hole. Retry placing inside up to 3 times if it fails.
+Allowed Actions: [PLACE_INSIDE(obj)]

@@ -1,0 +1,32 @@
+{
+  "decorator_type": "mixed",
+  "mixed_subtype": "condition_fallback",
+  "target_action_id": "PLACE_INSIDE",
+  "target_obj": "dish_rack",
+  "parameters": {
+    "augmentations": [
+      {
+        "type": "condition",
+        "action_id": "PLACE_INSIDE",
+        "obj": "dish_rack",
+        "params": {
+          "condition_id": "IS_OPEN",
+          "condition_obj": "dish_rack"
+        }
+      },
+      {
+        "type": "fallback",
+        "action_id": "PLACE_INSIDE",
+        "obj": "dish_rack",
+        "params": {
+          "valid_fallbacks": [
+            "PUSH"
+          ],
+          "valid_fallbacks_str": "PUSH",
+          "hint": "PUSH clears obstacles from inside the container"
+        }
+      }
+    ]
+  },
+  "prompt_name": "mixed/condition_fallback"
+}

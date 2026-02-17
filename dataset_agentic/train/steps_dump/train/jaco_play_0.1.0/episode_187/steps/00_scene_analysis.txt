@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "steak_meat"
+  destination: ""
+  expanded_instruction: "Pick up the steak meat from the table in front of the robot."
+  scene_context: "Steak_meat on table front-center, not held; blue_bin open at right; yellow_cup present; metal_tray closed."
+  expected_sequence: "Move to the steak_meat, grasp it firmly, and lift it clear of the table."

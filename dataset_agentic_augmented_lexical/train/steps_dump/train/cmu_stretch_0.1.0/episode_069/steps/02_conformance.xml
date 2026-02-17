@@ -1,0 +1,26 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to drawer -->
+      <Action ID="NAVIGATE_TO" obj="drawer" />
+      <!-- Fallback: if GRASP drawer fails, try alternative to reposition -->
+      <Fallback>
+        <!-- Retry GRASP drawer up to 2 attempts -->
+        <RetryUntilSuccessful num_attempts="2">
+          <!-- Grasp drawer -->
+          <Action ID="GRASP" obj="drawer" />
+        </RetryUntilSuccessful>
+        <Sequence>
+          <!-- Push drawer forward toward front edge of table -->
+          <Action ID="PUSH" obj="drawer" />
+          <!-- Grasp drawer -->
+          <Action ID="GRASP" obj="drawer" />
+        </Sequence>
+      </Fallback>
+      <!-- Open drawer -->
+      <Action ID="OPEN" obj="drawer" />
+      <!-- Release -->
+      <Action ID="RELEASE" />
+    </Sequence>
+  </BehaviorTree>
+</root>

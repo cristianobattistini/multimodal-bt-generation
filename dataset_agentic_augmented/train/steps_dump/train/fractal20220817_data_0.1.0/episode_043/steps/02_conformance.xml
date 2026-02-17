@@ -1,0 +1,28 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to green_rice_chip_bag -->
+      <Action ID="NAVIGATE_TO" obj="green_rice_chip_bag" />
+      <!-- Check green_rice_chip_bag is visible before GRASP -->
+      <Condition ID="IS_VISIBLE" obj="green_rice_chip_bag" />
+      <!-- Fallback: if GRASP green_rice_chip_bag fails, try alternative to reposition -->
+      <Fallback>
+        <!-- Timeout: GRASP green_rice_chip_bag within 15s -->
+        <Timeout msec="15000">
+          <!-- Grasp green_rice_chip_bag -->
+          <Action ID="GRASP" obj="green_rice_chip_bag" />
+        </Timeout>
+        <Sequence>
+          <!-- Push green_rice_chip_bag forward toward front edge of table -->
+          <Action ID="PUSH" obj="green_rice_chip_bag" />
+          <!-- Grasp green_rice_chip_bag -->
+          <Action ID="GRASP" obj="green_rice_chip_bag" />
+        </Sequence>
+      </Fallback>
+      <!-- Navigate to apple -->
+      <Action ID="NAVIGATE_TO" obj="apple" />
+      <!-- Place next to apple -->
+      <Action ID="PLACE_NEXT_TO" obj="apple" />
+    </Sequence>
+  </BehaviorTree>
+</root>

@@ -1,0 +1,28 @@
+{
+  "decorator_type": "mixed",
+  "mixed_subtype": "condition_retry",
+  "target_action_id": "PLACE_INSIDE",
+  "target_obj": "gray_bowl",
+  "parameters": {
+    "augmentations": [
+      {
+        "type": "condition",
+        "action_id": "PLACE_INSIDE",
+        "obj": "gray_bowl",
+        "params": {
+          "condition_id": "IS_EMPTY",
+          "condition_obj": "gray_bowl"
+        }
+      },
+      {
+        "type": "retry",
+        "action_id": "PLACE_INSIDE",
+        "obj": "gray_bowl",
+        "params": {
+          "num_attempts": 3
+        }
+      }
+    ]
+  },
+  "prompt_name": "mixed/condition_retry"
+}

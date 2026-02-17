@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "corn"
+  destination: "pan_on_stove"
+  expanded_instruction: "Pick up the corn from the counter and place it into the pan on the stove."
+  scene_context: "Corn sits on the counter not held; pan on the stove is reachable and appears empty; sink has an orange item."
+  expected_sequence: "Reach for the corn, lift it, bring it over the pan on the stove, and put it into the pan."

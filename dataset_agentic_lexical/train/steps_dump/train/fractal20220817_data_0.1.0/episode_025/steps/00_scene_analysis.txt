@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "water_bottle"
+  destination: "rxbar_chocolate"
+  expanded_instruction: "Move the water bottle and place it next to the RXBAR chocolate on the table"
+  scene_context: "Water bottle upright near table center, rxbar chocolate pack on left of table, no containers open, robot not holding anything."
+  expected_sequence: "Pick up the water bottle, bring it to the rxbar chocolate, and set it down beside the chocolate."

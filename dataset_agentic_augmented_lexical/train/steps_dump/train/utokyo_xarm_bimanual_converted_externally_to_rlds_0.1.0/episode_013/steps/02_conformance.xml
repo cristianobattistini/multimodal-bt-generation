@@ -1,0 +1,24 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to towel -->
+      <Action ID="NAVIGATE_TO" obj="towel" />
+      <!-- Check towel is graspable before GRASP -->
+      <Condition ID="IS_GRASPABLE" obj="towel" />
+      <!-- Retry GRASP towel up to 2 attempts -->
+      <RetryUntilSuccessful num_attempts="2">
+        <!-- Timeout: GRASP towel within 10s -->
+        <Timeout msec="10000">
+          <!-- Grasp towel -->
+          <Action ID="GRASP" obj="towel" />
+        </Timeout>
+      </RetryUntilSuccessful>
+      <!-- Navigate to table -->
+      <Action ID="NAVIGATE_TO" obj="table" />
+      <!-- Unfold towel -->
+      <Action ID="UNFOLD" obj="towel" />
+      <!-- Place on table -->
+      <Action ID="PLACE_ON_TOP" obj="table" />
+    </Sequence>
+  </BehaviorTree>
+</root>

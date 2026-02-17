@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "blue_cup"
+  destination: "brown_cup"
+  expanded_instruction: "Check IS_VISIBLE on the blue cup (retry up to 3 times if needed), then pick up the blue cup from the table and place it into the brown cup"
+  scene_context: "Blue cup on table left of brown cup; brown cup upright and empty; robot not holding anything; table clear"
+  expected_sequence: "Verify IS_VISIBLE on the blue cup (retry/timeout), approach the blue cup, grasp and lift it (if grasp fails retry or reposition up to 2 times), position it over the brown cup, and lower it into the brown cup."

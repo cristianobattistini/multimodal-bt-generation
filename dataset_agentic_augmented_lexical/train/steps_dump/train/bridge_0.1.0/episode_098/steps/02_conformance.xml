@@ -1,0 +1,22 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to red_towel -->
+      <Action ID="NAVIGATE_TO" obj="red_towel" />
+      <!-- Check red_towel is reachable before GRASP -->
+      <Condition ID="IS_REACHABLE" obj="red_towel" />
+      <!-- Retry GRASP red_towel up to 2 attempts -->
+      <RetryUntilSuccessful num_attempts="2">
+        <!-- Timeout: GRASP red_towel within 15s -->
+        <Timeout msec="15000">
+          <!-- Grasp red_towel -->
+          <Action ID="GRASP" obj="red_towel" />
+        </Timeout>
+      </RetryUntilSuccessful>
+      <!-- Navigate to yellow -->
+      <Action ID="NAVIGATE_TO" obj="yellow" />
+      <!-- Place next to yellow -->
+      <Action ID="PLACE_NEXT_TO" obj="yellow" />
+    </Sequence>
+  </BehaviorTree>
+</root>

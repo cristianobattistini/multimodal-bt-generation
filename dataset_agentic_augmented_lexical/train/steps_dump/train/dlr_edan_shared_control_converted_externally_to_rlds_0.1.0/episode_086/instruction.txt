@@ -1,0 +1,1 @@
+pick the mug. Only grasp if the object is graspable.

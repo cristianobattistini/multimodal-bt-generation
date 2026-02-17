@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "burger_meat"
+  destination: ""
+  expanded_instruction: "Pick up the burger meat (raw patty) from the metal tray left of the plate; if a grasp fails, retry up to 3 times, then push or flip the patty to reposition and try again."
+  scene_context: "Burger meat sits on a metal tray left of the plate; tray accessible; no containers closed; not held."
+  expected_sequence: "Move to the metal tray, grasp the burger meat, and lift it clear; if grasping fails (retry up to 3 attempts within 10s), use a push or flip to reposition the patty and then grasp and lift."

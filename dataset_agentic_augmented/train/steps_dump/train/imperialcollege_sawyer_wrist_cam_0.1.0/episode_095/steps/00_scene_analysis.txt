@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "red_pitcher"
+  destination: "mug"
+  expanded_instruction: "Check IS_REACHABLE on the red pitcher, then pick it up (grasp with a 15s timeout and retry up to 2 times if grasp fails) and pour its liquid into the mug"
+  scene_context: "Mug upright and reachable; red pitcher next to it and not held; mug partially empty."
+  expected_sequence: "Check IS_REACHABLE on the red pitcher, grasp it (15s timeout, retry up to 2 times if needed), tilt it over the mug and pour until the mug is filled."

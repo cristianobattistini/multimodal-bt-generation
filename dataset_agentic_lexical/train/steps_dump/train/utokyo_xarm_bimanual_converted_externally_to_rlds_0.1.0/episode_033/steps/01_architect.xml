@@ -1,0 +1,10 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Approach towel -->
+      <Action ID="APPROACH" obj="towel" />
+      <!-- Grab towel -->
+      <Action ID="GRAB" obj="towel" />
+    </Sequence>
+  </BehaviorTree>
+</root>

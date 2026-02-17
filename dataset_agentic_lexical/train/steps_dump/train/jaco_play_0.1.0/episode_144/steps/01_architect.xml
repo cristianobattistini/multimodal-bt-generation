@@ -1,0 +1,14 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Move to long_bread -->
+      <Action ID="MOVE_TO" obj="long_bread" />
+      <!-- Pick long_bread -->
+      <Action ID="PICK" obj="long_bread" />
+      <!-- Go to table -->
+      <Action ID="GO_TO" obj="table" />
+      <!-- Place long_bread on table -->
+      <Action ID="PLACE_ON_TOP" obj="long_bread" surface="table" />
+    </Sequence>
+  </BehaviorTree>
+</root>

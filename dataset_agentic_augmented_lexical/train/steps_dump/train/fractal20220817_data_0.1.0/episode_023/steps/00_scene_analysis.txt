@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "bottom_drawer"
+  destination: ""
+  expanded_instruction: "Using the ApproachBottomDrawer subtree, approach the gray three-drawer cabinet and close the bottom drawer until it is flush with the cabinet; retry up to 3 times within a 10s timeout and if grasp fails, push to reposition."
+  scene_context: "Bottom drawer is open; middle and top drawers closed; front clear and unobstructed."
+  expected_sequence: "ApproachBottomDrawer subtree: approach the cabinet, grasp the bottom drawer handle, and push the drawer closed until flush; if grasp fails, push to reposition and retry up to 3 times within a 10s timeout."

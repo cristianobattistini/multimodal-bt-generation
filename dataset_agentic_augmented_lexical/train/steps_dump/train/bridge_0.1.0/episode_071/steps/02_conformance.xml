@@ -1,0 +1,20 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Move to broccoli -->
+      <Action ID="MOVE_TO" obj="broccoli" />
+      <!-- Retry GRASP broccoli up to 2 attempts -->
+      <RetryUntilSuccessful num_attempts="2">
+        <!-- Timeout: GRASP broccoli within 20s -->
+        <Timeout msec="20000">
+          <!-- Grasp broccoli -->
+          <Action ID="PICK" obj="broccoli" />
+        </Timeout>
+      </RetryUntilSuccessful>
+      <!-- Pick broccoli -->
+      <Action ID="GO_TO" obj="pot" />
+      <!-- Go to pot -->
+      <Action ID="SET_IN" obj="pot" />
+    </Sequence>
+  </BehaviorTree>
+</root>

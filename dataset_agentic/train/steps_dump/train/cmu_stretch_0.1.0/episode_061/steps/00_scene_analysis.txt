@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "drawer"
+  destination: ""
+  expanded_instruction: "Open the lower kitchen drawer on the cabinet by grasping and pulling its handle outward"
+  scene_context: "Lower cabinet drawer is closed with visible handle; handle reachable and no object is held."
+  expected_sequence: "Move to the drawer, grasp the handle, and pull it outward until the drawer is open."

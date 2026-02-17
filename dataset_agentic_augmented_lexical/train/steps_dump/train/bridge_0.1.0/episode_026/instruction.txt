@@ -1,0 +1,1 @@
+pick up red srewdriver. If grasping fails, push the red srewdriver to reposition it and retry grasping.

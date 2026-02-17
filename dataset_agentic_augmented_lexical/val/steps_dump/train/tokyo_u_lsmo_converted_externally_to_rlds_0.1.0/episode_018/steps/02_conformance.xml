@@ -1,0 +1,17 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Approach book_stack -->
+      <Action ID="APPROACH" obj="book_stack" />
+      <!-- Navigate to blue_pen -->
+      <Action ID="NAVIGATE_TO" obj="blue_pen" />
+      <!-- Check blue_pen is visible before GRASP -->
+      <Condition ID="IS_VISIBLE" obj="blue_pen" />
+      <!-- Retry GRASP blue_pen up to 2 attempts -->
+      <RetryUntilSuccessful num_attempts="2">
+        <!-- Grasp blue_pen -->
+        <Action ID="PICK" obj="blue_pen" />
+      </RetryUntilSuccessful>
+    </Sequence>
+  </BehaviorTree>
+</root>

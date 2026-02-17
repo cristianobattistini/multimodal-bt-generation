@@ -1,0 +1,23 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Execute subtree ApproachBottomDrawer -->
+      <SubTree ID="ApproachBottomDrawer" />
+      <!-- Navigate to bowl -->
+      <Action ID="NAVIGATE_TO" obj="bowl" />
+      <!-- Place next to bowl -->
+      <Action ID="PLACE_NEXT_TO" obj="bowl" />
+    </Sequence>
+  </BehaviorTree>
+  <!-- Subtree definition ApproachBottomDrawer -->
+  <BehaviorTree ID="ApproachBottomDrawer">
+    <Sequence>
+      <!-- Navigate to bottom_drawer -->
+      <Action ID="NAVIGATE_TO" obj="bottom_drawer" />
+      <!-- Navigate to green_jalapeno_chip_bag -->
+      <Action ID="NAVIGATE_TO" obj="green_jalapeno_chip_bag" />
+      <!-- Grasp green_jalapeno_chip_bag -->
+      <Action ID="GRASP" obj="green_jalapeno_chip_bag" />
+    </Sequence>
+  </BehaviorTree>
+</root>

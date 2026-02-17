@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "bottle"
+  destination: ""
+  expanded_instruction: "Verify the bottle is visible (check IS_VISIBLE) before navigating, then open the bottle by removing its cap from the bottle on the surface; make the navigation step with a 20s timeout."
+  scene_context: "Bottle is upright on a clear surface with its cap attached."
+  expected_sequence: "Check the bottle is visible, then approach the bottle (NAVIGATE_TO within a 20s timeout), grasp it steady, twist and remove the cap to open it."

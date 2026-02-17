@@ -1,0 +1,16 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to basil_bottle -->
+      <Action ID="NAVIGATE_TO" obj="basil_bottle"/>
+      <!-- Grasp basil_bottle -->
+      <Action ID="GRASP" obj="basil_bottle"/>
+      <!-- Flip basil_bottle upright -->
+      <Action ID="FLIP" obj="basil_bottle"/>
+      <!-- Navigate to cardboard_fence -->
+      <Action ID="NAVIGATE_TO" obj="cardboard_fence"/>
+      <!-- Place on cardboard_fence (upright against the fence on the tray) -->
+      <Action ID="PLACE_ON_TOP" obj="cardboard_fence"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

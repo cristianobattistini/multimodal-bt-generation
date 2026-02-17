@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "die"
+  destination: ""
+  expanded_instruction: "Pick up the white die from the top surface of the black cubby shelf; navigate to the shelf top within a 15s timeout."
+  scene_context: "Two white dice on top of a black cubby shelf; robot not holding anything; shelf top reachable."
+  expected_sequence: "Move to the shelf top within a 15s timeout, grasp the die, and lift it clear of the shelf."

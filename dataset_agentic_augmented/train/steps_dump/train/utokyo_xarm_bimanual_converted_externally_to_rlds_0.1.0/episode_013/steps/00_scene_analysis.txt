@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "towel"
+  destination: "table"
+  expanded_instruction: "Check IS_GRASPABLE on the wrinkled pink towel, then pick it up from the green mat (use a 10s grasp timeout and retry grasp up to 2 times if needed) and unfold it flat on the mat on the table"
+  scene_context: "Wrinkled pink towel resting on green mat on table; towel not held; table/mat otherwise clear."
+  expected_sequence: "Check IS_GRASPABLE on the towel, reach to it, grasp opposite edges (10s timeout, retry up to 2 times if grasp fails), then pull and spread it flat on the mat."

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "orange_cloth"
+  destination: "table"
+  expanded_instruction: "Pick up the orange cloth and place it toward the top edge of the table. If grasping fails, retry up to 2 times, then use a push or flip to reposition and place it."
+  scene_context: "Orange cloth lying on the table near center-back; table surface clear; cloth not held."
+  expected_sequence: "Approach the cloth, grasp it, move it toward the top edge of the table, and set it down; if grasp fails (after up to 2 retries), use a push or flip to reposition the cloth and then place it."

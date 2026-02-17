@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "milk_dairy"
+  destination: "white_plate"
+  expanded_instruction: "Pick up the milk dairy carton and place it in the white plate."
+  scene_context: "Milk dairy carton upright on table near blue bowl; white_plate is empty and clear; nothing is held."
+  expected_sequence: "Move to the milk_dairy, pick it up, carry it to the white_plate, and place it inside."

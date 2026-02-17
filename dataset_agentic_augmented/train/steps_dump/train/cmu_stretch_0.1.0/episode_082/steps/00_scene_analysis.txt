@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "lid"
+  destination: ""
+  expanded_instruction: "Check that the lid on the pot next to the robot arm is reachable, then lift the lid off the pot. If grasping the lid fails, try pushing or flipping it to reposition before attempting to lift again."
+  scene_context: "Pot with lid closed on counter; lid not held; robot arm positioned nearby and reachable."
+  expected_sequence: "Verify IS_REACHABLE on the lid; move the arm to the pot; attempt to grasp and lift the lid (retry up to 3 times or within a 10s timeout); if grasp fails, use PUSH or FLIP to reposition the lid and then grasp and lift it."

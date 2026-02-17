@@ -1,0 +1,1 @@
+Put apple in pot. If placing inside fails, push inside the pot to clear obstacles and retry placing.

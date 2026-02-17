@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "cucumber"
+  destination: "orange_bowl"
+  expanded_instruction: "Pick up the cucumber and place it laid on its side inside the orange bowl on the table. Attempt to FLIP to orient it; if FLIP fails, retry up to 2 times then use a pushing motion to reposition the cucumber into the bowl."
+  scene_context: "Cucumber on countertop; orange bowl is open, empty, and reachable; cucumber not held."
+  expected_sequence: "Grasp the cucumber, orient it horizontally (attempt FLIP, retry up to 2 times), move to the bowl, and set it down inside lying on its side; if FLIP cannot succeed, use PUSH as alternative to reposition and place it."

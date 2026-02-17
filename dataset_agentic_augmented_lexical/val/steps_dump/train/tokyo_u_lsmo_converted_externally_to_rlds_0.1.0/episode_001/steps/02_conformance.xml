@@ -1,0 +1,18 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to table -->
+      <Action ID="NAVIGATE_TO" obj="table" />
+      <!-- Navigate to pen_holder -->
+      <Action ID="NAVIGATE_TO" obj="pen_holder" />
+      <Sequence>
+        <!-- Check blue_pen is visible before NAVIGATE_TO -->
+        <Condition ID="IS_VISIBLE" obj="blue_pen" />
+        <!-- Navigate to blue_pen -->
+        <Action ID="APPROACH" obj="blue_pen" />
+      </Sequence>
+      <!-- Approach blue_pen -->
+      <Action ID="GRASP" obj="blue_pen" />
+    </Sequence>
+  </BehaviorTree>
+</root>

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "drawer"
+  destination: ""
+  expanded_instruction: "Open the top wooden drawer in the lower cabinet beneath the counter"
+  scene_context: "Top drawer of wooden cabinet is closed and reachable under the counter; counter is clear."
+  expected_sequence: "Reach to the drawer handle, grasp it, and pull the drawer outward until open."

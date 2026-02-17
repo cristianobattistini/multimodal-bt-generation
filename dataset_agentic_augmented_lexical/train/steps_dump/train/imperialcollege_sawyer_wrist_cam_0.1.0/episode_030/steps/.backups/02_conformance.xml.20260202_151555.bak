@@ -1,0 +1,21 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to small_bowl -->
+      <Action ID="NAVIGATE_TO" obj="small_bowl" />
+      <!-- Grasp small_bowl -->
+      <Action ID="GRASP" obj="small_bowl" />
+      <!-- Navigate to large_bowl -->
+      <Action ID="NAVIGATE_TO" obj="large_bowl" />
+      <!-- Check large_bowl is holding before PLACE_INSIDE -->
+      <Condition ID="IS_HOLDING" obj="large_bowl" />
+      <!-- Retry PLACE_INSIDE large_bowl up to 2 attempts -->
+      <RetryUntilSuccessful num_attempts="2">
+        <!-- Place inside large_bowl -->
+        <Action ID="PLACE_INSIDE" obj="large_bowl" />
+      </RetryUntilSuccessful>
+      <!-- Release -->
+      <Action ID="RELEASE" />
+    </Sequence>
+  </BehaviorTree>
+</root>

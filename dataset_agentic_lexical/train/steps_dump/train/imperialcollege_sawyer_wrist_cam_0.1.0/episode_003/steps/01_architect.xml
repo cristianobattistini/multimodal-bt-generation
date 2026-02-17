@@ -1,0 +1,14 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Move to cap -->
+      <Action ID="MOVE_TO" obj="cap" />
+      <!-- Grab cap -->
+      <Action ID="GRAB" obj="cap" />
+      <!-- Go to bottle -->
+      <Action ID="GO_TO" obj="bottle" />
+      <!-- Place cap inside bottle -->
+      <Action ID="PLACE_INSIDE" obj="cap" container="bottle" />
+    </Sequence>
+  </BehaviorTree>
+</root>

@@ -1,0 +1,18 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to coke_can -->
+      <Action ID="NAVIGATE_TO" obj="coke_can" />
+      <!-- Grasp coke_can -->
+      <Action ID="GRASP" obj="coke_can" />
+      <!-- Navigate to water -->
+      <Action ID="NAVIGATE_TO" obj="water" />
+      <!-- Retry PLACE_ON_TOP table up to 5 attempts -->
+      <RetryUntilSuccessful num_attempts="5">
+        <!-- Place next to water -->
+        <Action ID="PLACE_NEXT_TO" obj="water" />
+      </RetryUntilSuccessful>
+      
+    </Sequence>
+  </BehaviorTree>
+</root>

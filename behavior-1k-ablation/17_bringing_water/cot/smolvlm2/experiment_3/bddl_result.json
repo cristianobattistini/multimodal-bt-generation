@@ -1,0 +1,22 @@
+{
+  "success": false,
+  "bt_success": false,
+  "bddl_goal": false,
+  "ticks": 0,
+  "duration": 0.16634774208068848,
+  "inference_time": 10.402399063110352,
+  "satisfied": [
+    "not(['open', '?electric_refrigerator.n.01_1'])"
+  ],
+  "unsatisfied": [
+    "forall(['?bottle.n.01', '-', 'bottle.n.01'], ['ontop', '?bottle.n.01', '?coffee_table.n.01_1'])"
+  ],
+  "task": "17_bringing_water",
+  "condition": "cot",
+  "model_dir": "smolvlm2",
+  "vlm_model": "smol500",
+  "inference_mode": "adapter",
+  "experiment": 3,
+  "timestamp": "20260214_183226",
+  "reason": "Unparseable BT (ticks=0): identical to experiment_1 and _2. Missing NAVIGATE_TO refrigerator, missing GRASP actions, incoherent action sequence."
+}

@@ -1,0 +1,12 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Approach fruit_bowl -->
+      <Action ID="APPROACH" obj="fruit_bowl" />
+      <!-- Go to orange -->
+      <Action ID="GO_TO" obj="orange" />
+      <!-- Pick orange -->
+      <Action ID="PICK" obj="orange" />
+    </Sequence>
+  </BehaviorTree>
+</root>

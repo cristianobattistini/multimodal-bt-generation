@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "green_cup"
+  destination: "dish_rack"
+  expanded_instruction: "Place the green cup, held by the robot, into the blue dish rack at the right side of the table. Before placing, check that the dish_rack is IS_OPEN (open it if needed); attempt PLACE_INSIDE with up to 3 retries (10s timeout total); if PLACE_INSIDE fails, use PUSH as an alternative to reposition the cup into a slot."
+  scene_context: "Green cup is held by the robot above the table; dish_rack is open, empty, and reachable on the right."
+  expected_sequence: "Check IS_OPEN on dish_rack and open if needed, move the held green cup over the dish_rack and set it into a slot, retry placement up to 3 times (10s timeout); if PLACE_INSIDE fails, use PUSH to reposition the cup into a slot, then release the cup."

@@ -1,0 +1,1 @@
+pick up the yellow cup. Only navigate to the object if it is reachable.

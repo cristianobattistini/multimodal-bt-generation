@@ -1,0 +1,13 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to green_cloth -->
+      <Action ID="NAVIGATE_TO" obj="green_cloth" />
+      <!-- Retry PUSH green_cloth up to 4 attempts -->
+      <RetryUntilSuccessful num_attempts="4">
+        <!-- Push green_cloth forward toward front edge of table -->
+        <Action ID="PUSH" obj="green_cloth" />
+      </RetryUntilSuccessful>
+    </Sequence>
+  </BehaviorTree>
+</root>

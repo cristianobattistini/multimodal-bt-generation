@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "black_bowl"
+  destination: ""
+  expanded_instruction: "Check IS_REACHABLE on the black bowl, then navigate to and pick up the black bowl from the table near the top center of the workspace (NAVIGATE_TO within a 20s timeout)."
+  scene_context: "Black bowl on table near top-center, not held; tray and other objects nearby; table is reachable."
+  expected_sequence: "Check IS_REACHABLE for the black bowl; NAVIGATE_TO it with a 20s timeout, approach the black bowl, grasp it securely, and lift it off the table."

@@ -1,0 +1,1 @@
+Put the white box into the sink. Only navigate to the sink if it is reachable.

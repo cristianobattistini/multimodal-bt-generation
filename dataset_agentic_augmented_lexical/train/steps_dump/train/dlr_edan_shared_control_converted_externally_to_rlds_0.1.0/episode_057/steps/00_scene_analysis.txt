@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "cube"
+  destination: ""
+  expanded_instruction: "Check that the black_shelf is reachable (IS_REACHABLE) before navigating; then navigate and pick up the cube from the lower-left cubby of the black shelf, retrying actions up to 3 times with a 10s timeout and, if a grasp fails, push to reposition and try again."
+  scene_context: "Black shelf upright and open; cube resting inside lower-left cubby; robot not holding anything."
+  expected_sequence: "Verify IS_REACHABLE on black_shelf before NAVIGATE_TO; approach the shelf, reach into the lower-left cubby, grasp the cube, and lift it out — retry steps up to 3 times with 10s timeouts and, if grasp fails, push to reposition and retry."

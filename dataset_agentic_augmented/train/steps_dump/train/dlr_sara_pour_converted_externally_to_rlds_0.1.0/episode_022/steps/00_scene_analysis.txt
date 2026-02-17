@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "brown_pitcher"
+  destination: "mug"
+  expanded_instruction: "Tilt the brown pitcher held by the robot arm and pour its contents into the white mug on the table. If a flip/reposition attempt fails, retry up to 3 times (within a 10s timeout) and then use a push to reposition the pitcher before pouring."
+  scene_context: "Brown pitcher is held by the robot arm; white mug sits on the table and is reachable."
+  expected_sequence: "Move the pitcher over the mug, tilt to pour into the mug, then upright the pitcher when finished. If a FLIP attempt fails after retries or timeout, use PUSH to reposition the object and continue the sequence."

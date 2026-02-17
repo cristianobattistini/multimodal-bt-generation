@@ -1,0 +1,10 @@
+scene_analysis:
+target: half_apple_1, half_apple_2
+destination: packing_box
+expanded_instruction: "Pick up the half_apple_1 and the half_apple_2 from the chopping_board and place them into the packing_box."
+scene_context: "Half_apple_1 and half_apple_2 are on the chopping_board; the packing_box is on the countertop."
+expected_sequence: "Pick up the half_apple_1 and the half_apple_2 from the chopping_board and place them into the packing_box."
+
+Allowed Actions: [NAVIGATE_TO(obj), GRASP(obj), PLACE_INSIDE(obj), OPEN(obj), CLOSE(obj)]
+
+Plan:

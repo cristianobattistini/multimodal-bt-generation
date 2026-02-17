@@ -1,0 +1,1 @@
+take the tiger out of the red bowl and put it in the grey bowl. Use a 20 second timeout for grasping and retry up to 2 times if it fails.

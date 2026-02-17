@@ -1,0 +1,10 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to white_box -->
+      <Action ID="NAVIGATE_TO" obj="white_box"/>
+      <!-- Grasp white_box -->
+      <Action ID="GRASP" obj="white_box"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

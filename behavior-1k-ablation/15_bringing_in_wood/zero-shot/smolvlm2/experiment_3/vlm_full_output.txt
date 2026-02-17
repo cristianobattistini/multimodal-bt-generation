@@ -1,0 +1,22 @@
+ scene_analysis:
+  target: plywood_1
+  destination: corridor_floor
+  expanded_instruction: "Bring the three plywood sheets from the garden floor to the corridor floor."
+  scene_context: "Three plywood sheets on the garden floor; no object is held; workspace clear."
+  expected_sequence: "Move to the garden floor, pick up plywood_1, place it on the floor, then pick up plywood_2 and place it on the floor, and finally pick up plywood_3 and place it on the floor."
+Plan:
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to plywood_1 -->
+      <Action ID="NAVIGATE_TO" obj="plywood_1" />
+      <!-- Grasp plywood_1 -->
+      <Action ID="GRASP" obj="plywood_1" />
+      <!-- Navigate to corridor_floor -->
+      <Action ID="NAVIGATE_TO" obj="corridor_floor" />
+      <!-- Place plywood_1 on corridor_floor -->
+      <Action ID="PLACE_ON_TOP" obj="plywood_1" />
+    </Sequence>
+  </BehaviorTree>
+  <!-- End main_tree -->
+</root>

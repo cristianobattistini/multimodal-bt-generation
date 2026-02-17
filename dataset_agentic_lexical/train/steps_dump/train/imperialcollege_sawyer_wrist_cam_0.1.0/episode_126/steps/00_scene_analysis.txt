@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "bowls"
+  destination: "table"
+  expanded_instruction: "Pick up the bowls from the cloth-covered table and stack them into a single nested pile on the table."
+  scene_context: "Several bowls lie scattered on a blue cloth-covered table, none are held and the table area is clear."
+  expected_sequence: "Collect each bowl and place it into the previous bowl to form a single stacked nest on the table."

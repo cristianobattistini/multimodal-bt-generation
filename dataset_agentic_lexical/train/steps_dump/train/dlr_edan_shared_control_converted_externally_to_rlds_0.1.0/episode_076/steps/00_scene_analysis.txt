@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "pear"
+  destination: ""
+  expanded_instruction: "Pick up the pear from the metal wire shelf next to the black cabinet"
+  scene_context: "Pear resting on open metal wire shelf beside cabinet; robot not holding anything; shelf reachable."
+  expected_sequence: "Move to the shelf, grasp the pear, and lift it clear of the shelf."

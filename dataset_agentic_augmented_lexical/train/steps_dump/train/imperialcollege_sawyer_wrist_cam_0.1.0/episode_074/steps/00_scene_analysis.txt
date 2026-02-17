@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "touchscreen"
+  destination: ""
+  expanded_instruction: "Within an ApproachTouchscreen subtree, perform a lateral swipe across the visible blue touchscreen interface (use NAVIGATE_TO with a 15s timeout)."
+  scene_context: "Blue touchscreen face visible and unobstructed; no objects held; interface icons present."
+  expected_sequence: "As part of ApproachTouchscreen subtree: place contact on the blue screen and swipe horizontally across the interface; ensure NAVIGATE_TO completes within a 15s timeout."

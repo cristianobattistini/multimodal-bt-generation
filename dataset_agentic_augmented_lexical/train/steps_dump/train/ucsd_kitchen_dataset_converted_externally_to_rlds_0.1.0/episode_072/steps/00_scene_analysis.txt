@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "white_box"
+  destination: "sink"
+  expanded_instruction: "Pick up the white box from the countertop next to the sink and place it into the sink. If placing into the sink fails, retry the place action up to 3 times."
+  scene_context: "White_box on countertop near sink, sink open and empty, box not held, countertop clear."
+  expected_sequence: "Approach the box, pick it up, move over the sink, and place it into the sink; if placing fails, retry the place action up to 3 times."

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "yellow_object"
+  destination: "table"
+  expanded_instruction: "Pick up the yellow object from the front row on the table and place it at the table center."
+  scene_context: "Yellow object on front row of table, table clear, object not held, no containers open."
+  expected_sequence: "Approach the yellow object, pick it up, move to the table center, and place it down."

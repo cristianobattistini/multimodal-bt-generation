@@ -1,0 +1,14 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Approach spatula -->
+      <Action ID="APPROACH" obj="spatula" />
+      <!-- Grasp spatula -->
+      <Action ID="GRASP" obj="spatula" />
+      <!-- Navigate to table (place at bottom-left corner) -->
+      <Action ID="NAVIGATE_TO" obj="table" />
+      <!-- Set on table -->
+      <Action ID="SET_ON" obj="table" />
+    </Sequence>
+  </BehaviorTree>
+</root>

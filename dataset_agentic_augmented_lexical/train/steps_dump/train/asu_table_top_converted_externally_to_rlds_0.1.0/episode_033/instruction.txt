@@ -1,0 +1,1 @@
+place down red square. Use a 20 second timeout for grasping and retry up to 3 times if it fails.

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "burger_meat"
+  destination: "sink"
+  expanded_instruction: "Pick up the burger meat from the table and place it into the blue sink"
+  scene_context: "Burger meat on table near plate; blue sink is open and empty on the right; no containers closed."
+  expected_sequence: "Reach the burger meat, pick it up, move to the sink, and place it inside."

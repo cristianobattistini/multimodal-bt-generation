@@ -1,0 +1,55 @@
+scene_analysis:
+  target: "["sack", "beefsteak_tomato", "carton_of_milk", "car"]"
+  destination: "electric_refrigerator"
+  expanded_instruction: "Pick up the sack from the floor, carry it to the front of the red car and set it on the car roof; then go to the open electric refrigerator and place the sack inside, then pick up the beefsteak_tomato from the floor and place it beside the fridge on the floor, next pick up the carton_of_milk from the floor and place it inside the open electric refrigerator, then close the fridge and go to the car and close the car."
+  scene_context: "Red car roof is clear; sack, beefsteak_tomato, and milk carton on floor; electric_refrigerator is open."
+  expected_sequence: "Move to the sack and pick it up, carry it to the car roof, go to the open fridge and place the sack inside, move to the floor and pick up the beefsteak_tomato to place beside the fridge, pick up the milk carton and put it into the fridge, close the fridge, and go to the car and close the car door."
+Plan:
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to sack -->
+      <Action ID="NAVIGATE_TO" obj="sack" />
+      <!-- Grasp sack -->
+      <Action ID="GRASP" obj="sack" />
+      <!-- Navigate to car -->
+      <Action ID="NAVIGATE_TO" obj="car" />
+      <!-- Place next to car -->
+      <Action ID="PLACE_NEXT_TO" obj="car" />
+      <!-- Navigate to electric_refrigerator -->
+      <Action ID="NAVIGATE_TO" obj="electric_refrigerator" />
+      <!-- Open electric_refrigerator -->
+      <Action ID="OPEN" obj="electric_refrigerator" />
+      <!-- Navigate to sack -->
+      <Action ID="NAVIGATE_TO" obj="sack" />
+      <!-- Grasp sack -->
+      <Action ID="GRASP" obj="sack" />
+      <!-- Go to electric_refrigerator -->
+      <Action ID="NAVIGATE_TO" obj="electric_refrigerator" />
+      <!-- Place inside electric_refrigerator -->
+      <Action ID="PLACE_INSIDE" obj="electric_refrigerator" />
+      <!-- Navigate to beefsteak_tomato -->
+      <Action ID="NAVIGATE_TO" obj="beefsteak_tomato" />
+      <!-- Grasp beefsteak_tomato -->
+      <Action ID="GRASP" obj="beefsteak_tomato" />
+      <!-- Navigate to carton_of_milk -->
+      <Action ID="NAVIGATE_TO" obj="carton_of_milk" />
+      <!-- Go to milk -->
+      <Action ID="NAVIGATE_TO" obj="milk" />
+      <!-- Grasp milk -->
+      <Action ID="GRASP" obj="milk" />
+      <!-- Go to electric_refrigerator -->
+      <Action ID="NAVIGATE_TO" obj="electric_refrigerator" />
+      <!-- Open electric_refrigerator -->
+      <Action ID="OPEN" obj="electric_refrigerator" />
+      <!-- Place inside electric_refrigerator -->
+      <Action ID="PLACE_INSIDE" obj="electric_refrigerator" />
+      <!-- Close electric_refrigerator -->
+      <Action ID="CLOSE" obj="electric_refrigerator" />
+      <!-- Navigate to car -->
+      <Action ID="NAVIGATE_TO" obj="car" />
+      <!-- Close car -->
+      <Action ID="CLOSE" obj="car" />
+    </Sequence>
+  </BehaviorTree>
+</root>

@@ -1,0 +1,1 @@
+pick the yellow ball. Retry grasping up to 3 times if it fails.

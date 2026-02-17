@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "red_object"
+  destination: "table"
+  expanded_instruction: "Pick up the red object from the table and place it near the front edge of the table."
+  scene_context: "Table is clear; red object on table amid other items; no containers; object not held."
+  expected_sequence: "Move to the red object, grasp it, carry it to the front edge of the table, and set it down."

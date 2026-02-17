@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "orange"
+  destination: ""
+  expanded_instruction: "Navigate to the small wire tray at the side of the black cabinet within a 20s timeout, then pick up the orange."
+  scene_context: "Orange on a small wire tray attached to the cabinet side; tray is open and reachable; nothing is held."
+  expected_sequence: "Approach the tray (complete NAVIGATE_TO within 20s), grasp the orange, and lift it clear of the tray."

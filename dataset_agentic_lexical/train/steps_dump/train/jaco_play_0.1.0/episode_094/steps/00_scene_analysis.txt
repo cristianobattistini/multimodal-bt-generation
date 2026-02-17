@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "yellow_cup"
+  destination: "oven"
+  expanded_instruction: "Pick up the yellow cup from the table edge and place it inside the oven"
+  scene_context: "Yellow cup at the table edge by a blue bin; oven door is closed."
+  expected_sequence: "Open the oven door if needed, pick up the yellow cup, move to the oven, and place it inside."

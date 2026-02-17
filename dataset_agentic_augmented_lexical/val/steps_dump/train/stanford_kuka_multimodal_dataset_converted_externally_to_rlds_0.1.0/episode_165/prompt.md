@@ -1,0 +1,2 @@
+Instruction: insert the peg into the hole. Use a 20 second timeout for placing and retry up to 3 times if it fails.
+Allowed Actions: [NAVIGATE_TO(obj), INSERT_INTO(obj)]

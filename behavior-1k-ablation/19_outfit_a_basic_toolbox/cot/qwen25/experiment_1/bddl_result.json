@@ -1,0 +1,25 @@
+{
+  "success": true,
+  "bt_success": true,
+  "bddl_goal": true,
+  "ticks": 1,
+  "duration": 88.42794275283813,
+  "inference_time": 81.09653973579407,
+  "satisfied": [
+    "inside(?drill.n.01_1, ?toolbox.n.01_1)",
+    "inside(?pliers.n.01_1, ?toolbox.n.01_1)",
+    "inside(?flashlight.n.01_1, ?toolbox.n.01_1)",
+    "inside(?allen_wrench.n.01_1, ?toolbox.n.01_1)",
+    "inside(?screwdriver.n.01_1, ?toolbox.n.01_1)",
+    "ontop(?toolbox.n.01_1, ?tabletop.n.01_1)",
+    "not(['open', '?toolbox.n.01_1'])"
+  ],
+  "unsatisfied": [],
+  "task": "19_outfit_a_basic_toolbox",
+  "condition": "cot",
+  "model_dir": "qwen25",
+  "vlm_model": "qwen",
+  "inference_mode": "adapter",
+  "experiment": 3,
+  "timestamp": "20260214_001231"
+}

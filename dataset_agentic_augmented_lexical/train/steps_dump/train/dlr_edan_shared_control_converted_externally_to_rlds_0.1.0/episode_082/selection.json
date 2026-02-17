@@ -1,0 +1,28 @@
+{
+  "decorator_type": "mixed",
+  "mixed_subtype": "condition_retry",
+  "target_action_id": "GRASP",
+  "target_obj": "die",
+  "parameters": {
+    "augmentations": [
+      {
+        "type": "condition",
+        "action_id": "GRASP",
+        "obj": "die",
+        "params": {
+          "condition_id": "IS_GRASPABLE",
+          "condition_obj": "die"
+        }
+      },
+      {
+        "type": "retry",
+        "action_id": "GRASP",
+        "obj": "die",
+        "params": {
+          "num_attempts": 2
+        }
+      }
+    ]
+  },
+  "prompt_name": "mixed/condition_retry"
+}

@@ -1,0 +1,25 @@
+{
+  "success": false,
+  "bt_success": false,
+  "bddl_goal": false,
+  "ticks": 1,
+  "duration": 34.48376131057739,
+  "inference_time": 89.25130105018616,
+  "satisfied": [
+    "inside(?club_sandwich.n.01_1, ?packing_box.n.02_1)",
+    "not(['open', '?electric_refrigerator.n.01_1'])"
+  ],
+  "unsatisfied": [
+    "forall(['?half__apple.n.01', '-', 'half__apple.n.01'], ['inside', '?half__apple.n.01', '?packing_box.n.02_1'])",
+    "inside(?chocolate_chip_cookie.n.01_1, ?packing_box.n.02_1)",
+    "inside(?bottle__of__tea.n.01_1, ?packing_box.n.02_1)"
+  ],
+  "task": "12_preparing_lunch_box",
+  "condition": "zero-shot",
+  "model_dir": "adapter",
+  "vlm_model": "gemma",
+  "inference_mode": "adapter",
+  "experiment": 2,
+  "timestamp": "20260215_223418",
+  "reason": "BT attempts all 5 objects but with confusing bottle sequence (GRASP bottle, navigate to fridge, OPEN fridge, navigate back, GRASP again, PLACE_INSIDE). Redundant actions and unnecessary OPEN mid-sequence caused physics disruption. Also executes invalid CLOSE on packing_box and bottle_of_tea instead of only refrigerator. Despite placing all 5 objects, 3 (half_apples, cookie, bottle) were displaced by physics. Only club_sandwich retained Inside predicate."
+}

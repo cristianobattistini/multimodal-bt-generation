@@ -1,0 +1,10 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Approach middle_drawer -->
+      <Action ID="APPROACH" obj="middle_drawer" />
+      <!-- Open middle_drawer -->
+      <Action ID="OPEN" obj="middle_drawer" />
+    </Sequence>
+  </BehaviorTree>
+</root>

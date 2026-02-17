@@ -1,0 +1,12 @@
+{
+  "decorator_type": "condition",
+  "mixed_subtype": null,
+  "target_action_id": "NAVIGATE_TO",
+  "target_obj": "blue_pen",
+  "parameters": {
+    "condition_id": "IS_VISIBLE",
+    "condition_obj": "blue_pen",
+    "allowed_conditions": "IS_REACHABLE, IS_VISIBLE"
+  },
+  "prompt_name": "condition"
+}

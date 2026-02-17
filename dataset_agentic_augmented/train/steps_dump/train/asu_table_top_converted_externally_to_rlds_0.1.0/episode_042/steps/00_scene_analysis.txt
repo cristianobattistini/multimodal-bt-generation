@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "red_object"
+  destination: ""
+  expanded_instruction: "Check that the red object (tall red block) is visible (IS_VISIBLE); if not, reposition and retry up to 3 times within a 10s timeout. Then pick it up from the table and hold it."
+  scene_context: "Red object on table front-center, not held; table clear; no containers open or closed."
+  expected_sequence: "Verify IS_VISIBLE on the red object before attempting a grasp (reposition/retry up to 3 times, 10s timeout); then approach the red object, grasp it securely, lift it, and hold it above the table. If grasp fails, push to reposition and retry."

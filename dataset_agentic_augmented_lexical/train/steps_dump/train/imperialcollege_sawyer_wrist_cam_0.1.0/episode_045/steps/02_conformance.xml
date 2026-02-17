@@ -1,0 +1,19 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Approach kettle -->
+      <Action ID="APPROACH" obj="kettle" />
+      <!-- Fallback: if GRASP kettle fails, try PUSH, FLIP to reposition -->
+      <Fallback>
+        <!-- Grasp kettle -->
+        <Action ID="GRIP" obj="kettle" />
+        <Sequence>
+          <!-- Push kettle forward toward front edge of table -->
+          <Action ID="SLIDE" obj="kettle" />
+          <!-- Grasp kettle -->
+          <Action ID="GRAB" obj="kettle" />
+        </Sequence>
+      </Fallback>
+    </Sequence>
+  </BehaviorTree>
+</root>

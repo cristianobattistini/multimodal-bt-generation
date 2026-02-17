@@ -1,0 +1,22 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to sandal_1 -->
+      <Action ID="NAVIGATE_TO" obj="sandal_1" />
+      <!-- Grasp sandal_1 -->
+      <Action ID="GRASP" obj="sandal_1" />
+      <!-- Navigate to nightstand -->
+      <Action ID="NAVIGATE_TO" obj="nightstand" />
+      <!-- Place on nightstand -->
+      <Action ID="PLACE_ON_TOP" obj="nightstand" />
+      <!-- Navigate to sandal_2 -->
+      <Action ID="NAVIGATE_TO" obj="sandal_2" />
+      <!-- Place on sandal_2 -->
+      <Action ID="PLACE_ON_TOP" obj="sandal_2" />
+      <!-- Navigate to bed -->
+      <Action ID="NAVIGATE_TO" obj="bed" />
+      <!-- Place on bed -->
+      <Action ID="PLACE_ON_TOP" obj="bed" />
+    </Sequence>
+  </BehaviorTree>
+</root>

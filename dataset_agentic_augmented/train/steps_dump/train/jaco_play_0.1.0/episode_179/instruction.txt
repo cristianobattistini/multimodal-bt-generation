@@ -1,0 +1,1 @@
+Place the orange fruit in the sink. Retry grasping up to 4 times if it fails.

@@ -1,0 +1,19 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to mug -->
+      <Action ID="NAVIGATE_TO" obj="mug" />
+      <!-- Fallback: if GRASP mug fails, try PUSH, FLIP to reposition -->
+      <Fallback>
+        <!-- Grasp mug -->
+        <Action ID="GRASP" obj="mug" />
+        <Sequence>
+          <!-- Push mug forward toward front edge of table -->
+          <Action ID="PUSH" obj="mug" />
+          <!-- Grasp mug -->
+          <Action ID="GRASP" obj="mug" />
+        </Sequence>
+      </Fallback>
+    </Sequence>
+  </BehaviorTree>
+</root>

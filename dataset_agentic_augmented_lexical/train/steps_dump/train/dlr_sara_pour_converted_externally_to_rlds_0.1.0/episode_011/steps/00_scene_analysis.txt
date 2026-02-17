@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "brown_pitcher"
+  destination: "mug"
+  expanded_instruction: "Take the brown pitcher from the robot arm and pour its contents into the white mug on the table; if the flip/tilt fails, retry up to 3 times."
+  scene_context: "Brown pitcher is held by the robot arm and the white mug sits on the table within reach."
+  expected_sequence: "Move the pitcher over the mug, tilt (flip) to pour into the mug, retry the flip up to 3 times if it fails, then return the pitcher upright."

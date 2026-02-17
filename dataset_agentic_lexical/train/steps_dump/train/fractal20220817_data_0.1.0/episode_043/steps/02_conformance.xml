@@ -1,0 +1,14 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to green_rice_chip_bag -->
+      <Action ID="NAVIGATE_TO" obj="green_rice_chip_bag"/>
+      <!-- Grasp green_rice_chip_bag -->
+      <Action ID="GRASP" obj="green_rice_chip_bag"/>
+      <!-- Navigate to apple (place near apple on apple) -->
+      <Action ID="NAVIGATE_TO" obj="apple"/>
+      <!-- Place next to apple -->
+      <Action ID="PLACE_NEXT_TO" obj="apple"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

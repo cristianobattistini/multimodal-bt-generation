@@ -1,0 +1,19 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to blue_cup -->
+      <Action ID="NAVIGATE_TO" obj="blue_cup" />
+      <!-- Grasp blue_cup -->
+      <Action ID="GRASP" obj="blue_cup" />
+      <!-- Navigate to brown_cup -->
+      <Action ID="NAVIGATE_TO" obj="brown_cup" />
+      <!-- Retry PLACE_INSIDE brown_cup up to 4 attempts -->
+      <RetryUntilSuccessful num_attempts="4">
+        <!-- Place inside brown_cup -->
+        <Action ID="PLACE_INSIDE" obj="brown_cup" />
+      </RetryUntilSuccessful>
+      <!-- Release -->
+      <Action ID="RELEASE" />
+    </Sequence>
+  </BehaviorTree>
+</root>

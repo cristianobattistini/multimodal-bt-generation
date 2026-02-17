@@ -1,0 +1,15 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Move to red_object -->
+      <Action ID="MOVE_TO" obj="red_object" />
+      <!-- Check red_object is visible before GRASP -->
+      <Condition ID="IS_VISIBLE" obj="red_object" />
+      <!-- Retry GRASP red_object up to 2 attempts -->
+      <RetryUntilSuccessful num_attempts="2">
+        <!-- Grasp red_object -->
+        <Action ID="CLAMP" obj="red_object" />
+      </RetryUntilSuccessful>
+    </Sequence>
+  </BehaviorTree>
+</root>

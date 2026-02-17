@@ -1,0 +1,18 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to kettle -->
+      <Action ID="NAVIGATE_TO" obj="kettle" />
+      <!-- Check kettle is reachable before GRASP -->
+      <Condition ID="IS_REACHABLE" obj="kettle" />
+      <!-- Retry GRASP kettle up to 3 attempts -->
+      <RetryUntilSuccessful num_attempts="3">
+        <!-- Timeout: GRASP kettle within 10s -->
+        <Timeout msec="10000">
+          <!-- Grasp kettle -->
+          <Action ID="GRASP" obj="kettle" />
+        </Timeout>
+      </RetryUntilSuccessful>
+    </Sequence>
+  </BehaviorTree>
+</root>

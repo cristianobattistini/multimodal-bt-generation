@@ -1,0 +1,21 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence name="move_three_eggs_to_tree">
+      <!-- Egg 1 -->
+      <NAVIGATE_TO obj="easter_egg_1"/>
+      <GRASP obj="easter_egg_1"/>
+      <NAVIGATE_TO obj="tree_1"/>
+      <PLACE_NEXT_TO obj="tree_1"/>
+      <!-- Egg 2 -->
+      <NAVIGATE_TO obj="easter_egg_2"/>
+      <GRASP obj="easter_egg_2"/>
+      <NAVIGATE_TO obj="tree_1"/>
+      <PLACE_NEXT_TO obj="tree_1"/>
+      <!-- Egg 3 -->
+      <NAVIGATE_TO obj="easter_egg_3"/>
+      <GRASP obj="easter_egg_3"/>
+      <NAVIGATE_TO obj="tree_1"/>
+      <PLACE_NEXT_TO obj="tree_1"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

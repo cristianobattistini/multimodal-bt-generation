@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "peg"
+  destination: "hole"
+  expanded_instruction: "Grasp the peg and insert it into the hole on the perforated table; if PLACE_INSIDE fails, retry it up to 2 times, and if still unsuccessful use PUSH to reposition the object before trying again."
+  scene_context: "Peg is held by the robot near a perforated table; target hole is visible and unoccupied."
+  expected_sequence: "Align the peg with the hole, lower it straight down, and insert it fully. If PLACE_INSIDE fails, retry up to 2 times; if it still fails, use PUSH to reposition the peg and then retry."

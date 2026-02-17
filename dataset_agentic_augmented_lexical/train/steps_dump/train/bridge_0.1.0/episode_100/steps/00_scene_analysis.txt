@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "vessel"
+  destination: "violet_cloth"
+  expanded_instruction: "Pick up the vessel and place it centered over the folded violet cloth on the table. Before placing, check IS_HOLDING(violet_cloth); if not holding the cloth, grasp it (retry up to 3 times, 10s timeout) and then set the vessel down centered on the cloth."
+  scene_context: "Vessel on right table edge, folded violet cloth near center-right, robot not holding anything, table reachable and mostly clear."
+  expected_sequence: "Move to the vessel, lift it, check IS_HOLDING on violet_cloth and if false grasp the cloth (retry up to 3 times, 10s timeout), move over the violet cloth, and set it down centered on the cloth."

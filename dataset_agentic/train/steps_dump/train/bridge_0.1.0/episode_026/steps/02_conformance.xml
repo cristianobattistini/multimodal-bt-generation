@@ -1,0 +1,12 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to toolbox_drawer -->
+      <Action ID="NAVIGATE_TO" obj="toolbox_drawer"/>
+      <!-- Navigate to red_srewdriver -->
+      <Action ID="NAVIGATE_TO" obj="red_srewdriver"/>
+      <!-- Grasp red_srewdriver -->
+      <Action ID="GRASP" obj="red_srewdriver"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

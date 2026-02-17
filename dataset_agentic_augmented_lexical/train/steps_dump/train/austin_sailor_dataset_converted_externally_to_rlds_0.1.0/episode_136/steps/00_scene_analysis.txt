@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "["fish", "sausage", "tomato"]"
+  destination: "frying_pan"
+  expanded_instruction: "Check the frying pan is visible (IS_VISIBLE) before navigating; then pick up the fish, sausage, and tomato from the counter and place them into the frying pan."
+  scene_context: "Fish, sausage, and tomato lie on the counter/placemat; frying pan is on the stove and empty; no objects are held."
+  expected_sequence: "Confirm the frying pan is visible before navigating (retry visibility check up to 3 times if needed), then pick each item from the counter and place it into the frying pan one by one."

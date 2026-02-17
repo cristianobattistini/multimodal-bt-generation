@@ -1,0 +1,22 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to red_square -->
+      <Action ID="NAVIGATE_TO" obj="red_square" />
+      <!-- Retry GRASP red_square up to 3 attempts -->
+      <RetryUntilSuccessful num_attempts="3">
+        <!-- Timeout: GRASP red_square within 20s -->
+        <Timeout msec="20000">
+          <!-- Grasp red_square -->
+          <Action ID="GRASP" obj="red_square" />
+        </Timeout>
+      </RetryUntilSuccessful>
+      <!-- Navigate to table -->
+      <Action ID="NAVIGATE_TO" obj="table" />
+      <!-- Place on table -->
+      <Action ID="PLACE_ON_TOP" obj="table" />
+      <!-- Release -->
+      <Action ID="RELEASE" />
+    </Sequence>
+  </BehaviorTree>
+</root>

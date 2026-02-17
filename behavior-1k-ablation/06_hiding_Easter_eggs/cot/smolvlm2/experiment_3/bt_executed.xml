@@ -1,0 +1,29 @@
+ scene_analysis:
+  target: "easter_egg_1, easter_egg_2, easter_egg_3"
+  destination: "tree_1"
+  expanded_instruction: "Pick up each Easter egg from the wicker basket and place them next to the tree on the lawn."
+  scene_context: "Easter eggs are inside the wicker basket on the lawn; the basket is on the grass and the tree is nearby."
+  expected_sequence: "Pick up each Easter egg from the wicker basket and place it next to the tree on the lawn."
+Plan:
+<root main_tree_to_execute="MainTree">
+  <Sequence>
+    <!-- Navigate to tree -->
+    <Action ID="NAVIGATE_TO" obj="tree_1" />
+    <!-- Grasp tree_1 -->
+    <Action ID="GRASP" obj="tree_1" />
+  </Sequence>
+  <!-- Navigate to easter_egg_1 -->
+  <Action ID="NAVIGATE_TO" obj="easter_egg_1" />
+  <!-- Grasp easter_egg_1 -->
+  <Action ID="GRASP" obj="easter_egg_1" />
+  <!-- Navigate to easter_egg_2 -->
+  <Action ID="NAVIGATE_TO" obj="easter_egg_2" />
+  <!-- Grasp easter_egg_2 -->
+  <Action ID="GRASP" obj="easter_egg_2" />
+  <!-- Navigate to easter_egg_3 -->
+  <Action ID="NAVIGATE_TO" obj="easter_egg_3" />
+  <!-- Grasp easter_egg_3 -->
+  <Action ID="GRASP" obj="easter_egg_3" />
+</Root>
+
+Allowed Actions: [NAVIGATE_TO(obj), GRASP(obj), PLACE_NEXT_TO(obj)]

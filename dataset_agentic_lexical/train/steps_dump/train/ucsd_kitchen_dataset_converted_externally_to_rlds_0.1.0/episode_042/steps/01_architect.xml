@@ -1,0 +1,10 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Move to faucet -->
+      <Action ID="MOVE_TO" obj="faucet" />
+      <!-- Switch on faucet -->
+      <Action ID="SWITCH_ON" obj="faucet" />
+    </Sequence>
+  </BehaviorTree>
+</root>

@@ -1,0 +1,18 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to pot -->
+      <Action ID="NAVIGATE_TO" obj="pot" />
+      <Sequence>
+        <!-- Check pot is visible before GRASP -->
+        <Condition ID="IS_VISIBLE" obj="pot" />
+        <!-- Grasp pot -->
+        <Action ID="GRASP" obj="pot" />
+      </Sequence>
+      <!-- Navigate to sink -->
+      <Action ID="NAVIGATE_TO" obj="sink" />
+      <!-- Place inside sink -->
+      <Action ID="PLACE_INSIDE" obj="sink" />
+    </Sequence>
+  </BehaviorTree>
+</root>

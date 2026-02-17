@@ -1,0 +1,21 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to blue_bowl -->
+      <Action ID="NAVIGATE_TO" obj="blue_bowl" />
+      <!-- Navigate to butter_dairy -->
+      <Action ID="NAVIGATE_TO" obj="butter_dairy" />
+      <!-- Retry GRASP butter_dairy up to 3 attempts -->
+      <RetryUntilSuccessful num_attempts="3">
+        <!-- Grasp butter_dairy -->
+        <Action ID="GRASP" obj="butter_dairy" />
+      </RetryUntilSuccessful>
+      <!-- Navigate to white_plate -->
+      <Action ID="NAVIGATE_TO" obj="white_plate" />
+      <!-- Place on white_plate -->
+      <Action ID="PLACE_ON_TOP" obj="white_plate" />
+      <!-- Release -->
+      <Action ID="RELEASE" />
+    </Sequence>
+  </BehaviorTree>
+</root>

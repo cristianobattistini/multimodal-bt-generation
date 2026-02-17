@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "yellow_capsicum"
+  destination: "table"
+  expanded_instruction: "Check IS_VISIBLE on the yellow_capsicum and, if not visible, retry up to 3 times within a 10s timeout. Once visible, reach into the steel_pan, grasp the yellow capsicum (if grasp fails, push to reposition and retry), lift it, move to the corner of the table, and set it down."
+  scene_context: "Steel pan on table contains the yellow capsicum; robot not holding it; table corner is clear."
+  expected_sequence: "Verify IS_VISIBLE on the yellow_capsicum (retry up to 3 times within 10s if needed); reach into the steel pan, grasp the yellow capsicum (on grasp failure, push to reposition and retry), lift it, move to the table corner, and set it down."

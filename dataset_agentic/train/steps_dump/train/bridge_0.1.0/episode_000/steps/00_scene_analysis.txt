@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "can"
+  destination: "table"
+  expanded_instruction: "Pick up the can and place it on the table immediately to the left side of the pot."
+  scene_context: "Can on front edge of table; pot on blue mat toward back-center-right; nothing is held; table area near pot is clear."
+  expected_sequence: "Grasp the can, move to the pot's left side on the table, and set the can down left of the pot."

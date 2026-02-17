@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "milk_dairy"
+  destination: ""
+  expanded_instruction: "Pick up the milk dairy (small light-blue carton) from the floor near the robot arm base."
+  scene_context: "Milk dairy on floor near robot base, not held; no containers closed; reachable clear floor area."
+  expected_sequence: "Move to the milk dairy, grasp it with the gripper, and lift it off the floor."

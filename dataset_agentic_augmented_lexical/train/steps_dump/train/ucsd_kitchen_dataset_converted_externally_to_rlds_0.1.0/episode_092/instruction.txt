@@ -1,0 +1,1 @@
+Turn on the faucet. Retry grasping up to 5 times if it fails.

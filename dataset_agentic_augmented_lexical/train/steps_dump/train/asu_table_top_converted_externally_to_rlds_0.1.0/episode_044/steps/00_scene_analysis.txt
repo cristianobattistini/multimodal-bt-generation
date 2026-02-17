@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "milk_box"
+  destination: "table"
+  expanded_instruction: "Pick up the milk_box from the left side of the table and place it down on the table; if using NAVIGATE_TO, enforce a 15s timeout."
+  scene_context: "Red milk_box on left side of table, not held; table surface mostly clear; robot arm free."
+  expected_sequence: "Move to the milk_box (NAVIGATE_TO with a 15s timeout), pick it up, bring it to the table surface near the robot, and set it down."

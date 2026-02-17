@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "green_glass_bottle"
+  destination: "table"
+  expanded_instruction: "Pick up the green glass bottle using the ApproachGreenGlassBottle subtree (approach → grasp → lift); retry up to 3 times with a 10s timeout and, if grasp fails, push to reposition, then place it down on the table."
+  scene_context: "Green glass bottle standing on the left side of the table; not held; table surface clear."
+  expected_sequence: "Use the ApproachGreenGlassBottle subtree: approach the bottle, grasp and lift it (retry up to 3 times, 10s timeout; if grasp fails, push to reposition), move to the target table area, and set the bottle down."

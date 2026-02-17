@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "scissors"
+  destination: ""
+  expanded_instruction: "Avoid the front obstacle and reach the scissors on the table with the robot arm"
+  scene_context: "Robot arm on table, brown pen-holder blocking direct approach to scissors, scissors on table reachable but partially occluded."
+  expected_sequence: "Move the arm around the pen-holder obstacle and extend to grasp the scissors."

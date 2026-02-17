@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "bowl"
+  destination: "yellow_cloth"
+  expanded_instruction: "Group actions into an ApproachBowl subtree: pick up the bowl and place it on the yellow cloth on the stovetop; within the subtree retry grasp up to 3 times with a 10s timeout and, if grasp fails, push to reposition before retrying."
+  scene_context: "Bowl on stovetop to the right of a clear yellow_cloth; bowl is not held; cloth is flat and unoccupied."
+  expected_sequence: "ApproachBowl subtree: approach and grasp the bowl (retry up to 3 times, 10s timeout; if grasp fails, push to reposition), lift it, move it onto the yellow_cloth, and set it down."

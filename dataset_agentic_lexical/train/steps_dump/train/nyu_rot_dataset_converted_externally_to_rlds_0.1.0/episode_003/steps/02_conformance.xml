@@ -1,0 +1,10 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to box -->
+      <Action ID="NAVIGATE_TO" obj="box" />
+      <!-- Unlock box -->
+      <Action ID="UNLOCK" obj="box" />
+    </Sequence>
+  </BehaviorTree>
+</root>

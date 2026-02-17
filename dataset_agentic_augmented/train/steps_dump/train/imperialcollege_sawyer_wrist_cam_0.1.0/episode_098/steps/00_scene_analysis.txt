@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "["white_bowl", "blue_bowl"]"
+  destination: "blue_bowl"
+  expanded_instruction: "Pick up the white bowl and place it into the blue bowl on the table; if grasp fails, retry up to 3 times (10s timeout) and use a push or flip to reposition the white bowl as a fallback."
+  scene_context: "White bowl and larger blue bowl sit separately on a clear table; no containers are closed."
+  expected_sequence: "Pick up the white bowl, move it over the blue bowl, and place it inside to form a stack. If grasp fails, retry up to 3 times (10s timeout) and use a push or flip to reposition before placing."

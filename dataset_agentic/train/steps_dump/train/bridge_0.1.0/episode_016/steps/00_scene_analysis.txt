@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "silver_vessel"
+  destination: "table"
+  expanded_instruction: "Pick up the silver vessel and place it on the table directly beneath the spoon at the back left."
+  scene_context: "Silver vessel on table near right; spoon resting on back-left edge of table; table is clear and nothing is held."
+  expected_sequence: "Approach and grasp the silver vessel, lift it, move it to the spot under the spoon at the back-left of the table, and set it down."

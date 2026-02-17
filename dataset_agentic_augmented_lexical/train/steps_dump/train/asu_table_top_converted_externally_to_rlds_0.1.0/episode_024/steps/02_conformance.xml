@@ -1,0 +1,15 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Check cocacola_bottle is visible before NAVIGATE_TO -->
+      <Condition ID="IS_VISIBLE" obj="cocacola_bottle" />
+      <!-- Timeout: NAVIGATE_TO cocacola_bottle within 15s -->
+      <Timeout msec="15000">
+        <!-- Navigate to cocacola_bottle -->
+        <Action ID="NAVIGATE_TO" obj="cocacola_bottle" />
+      </Timeout>
+      <!-- Push cocacola_bottle forward toward front edge of table -->
+      <Action ID="PUSH" obj="cocacola_bottle" />
+    </Sequence>
+  </BehaviorTree>
+</root>

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "black_bowl"
+  destination: "oven"
+  expanded_instruction: "Pick up the black bowl from the counter and place it inside the oven; before placing, check IS_HOLDING on the oven, and if PLACE_INSIDE fails retry up to 3 times."
+  scene_context: "Black bowl on counter near robot; oven door is open and oven is reachable; bowl not held."
+  expected_sequence: "Approach and grasp the black bowl, move to the open oven, verify IS_HOLDING on the oven before placing, and place the bowl inside, retrying PLACE_INSIDE up to 3 times if it fails."

@@ -1,0 +1,14 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Approach grid_clamp -->
+      <Action ID="APPROACH" obj="grid_clamp" />
+      <!-- Grip grid_clamp -->
+      <Action ID="GRIP" obj="grid_clamp" />
+      <!-- Go to grid_surface -->
+      <Action ID="GO_TO" obj="grid_surface" />
+      <!-- Deposit on grid_surface -->
+      <Action ID="DEPOSIT_ON" obj="grid_surface" />
+    </Sequence>
+  </BehaviorTree>
+</root>

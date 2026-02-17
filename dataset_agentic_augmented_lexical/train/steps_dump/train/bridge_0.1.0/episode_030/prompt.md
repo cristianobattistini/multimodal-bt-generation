@@ -1,0 +1,2 @@
+Instruction: Move the blue fork to the other side of the yellow rag. Retry grasping up to 5 times if it fails.
+Allowed Actions: [NAVIGATE_TO(obj), GRAB(obj), PLACE_ON_TOP(obj, surface)]

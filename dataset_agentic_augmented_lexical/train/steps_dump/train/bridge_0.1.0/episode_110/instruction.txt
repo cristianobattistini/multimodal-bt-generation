@@ -1,0 +1,1 @@
+Move the eggplant and place it above the yellow cloth. Check the holding precondition and retry placing on top up to 3 times if it fails.

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "green_apple"
+  destination: ""
+  expanded_instruction: "Pick up the green apple from the shelf compartment and hold it."
+  scene_context: "Green apple is inside an open shelf compartment at reachable height; surfaces nearby are unblocked."
+  expected_sequence: "Move to the shelf, reach into the compartment, grasp the green apple, and lift it out."

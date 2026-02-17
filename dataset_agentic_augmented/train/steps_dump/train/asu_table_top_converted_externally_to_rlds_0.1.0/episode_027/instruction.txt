@@ -1,0 +1,1 @@
+Move red object. If placing on top fails, push the target area to clear obstacles and retry placing on top.

@@ -1,0 +1,16 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Go to source_container -->
+      <Action ID="GO_TO" obj="source_container" />
+      <!-- Grasp source_container -->
+      <Action ID="GRASP" obj="source_container" />
+      <!-- Move to mug -->
+      <Action ID="MOVE_TO" obj="mug" />
+      <!-- Pour into mug -->
+      <Action ID="POUR" obj="mug" />
+      <!-- Let go -->
+      <Action ID="LET_GO" />
+    </Sequence>
+  </BehaviorTree>
+</root>

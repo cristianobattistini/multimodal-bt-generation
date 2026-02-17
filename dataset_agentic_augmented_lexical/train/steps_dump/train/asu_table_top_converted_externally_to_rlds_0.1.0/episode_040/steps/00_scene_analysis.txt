@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "white_carton"
+  destination: ""
+  expanded_instruction: "Navigate to the table (NAVIGATE_TO within a 15s timeout), then push the white carton on the table to move it rightward across the tabletop."
+  scene_context: "White carton sits on right side of table, not held; table surface clear and reachable; no containers open."
+  expected_sequence: "Approach the white carton (NAVIGATE_TO within a 15s timeout) and push it rightward across the table until it has moved to the right side/edge."

@@ -1,0 +1,15 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to table -->
+      <Action ID="NAVIGATE_TO" obj="table" />
+      <!-- Navigate to scissors -->
+      <Action ID="NAVIGATE_TO" obj="scissors" />
+      <!-- Retry GRASP scissors up to 2 attempts -->
+      <RetryUntilSuccessful num_attempts="2">
+        <!-- Grasp scissors -->
+        <Action ID="GRASP" obj="scissors" />
+      </RetryUntilSuccessful>
+    </Sequence>
+  </BehaviorTree>
+</root>

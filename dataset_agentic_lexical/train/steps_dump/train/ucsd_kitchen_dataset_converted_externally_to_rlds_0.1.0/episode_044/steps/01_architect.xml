@@ -1,0 +1,14 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Move to bowl -->
+      <Action ID="MOVE_TO" obj="bowl" />
+      <!-- Pick bowl -->
+      <Action ID="PICK" obj="bowl" />
+      <!-- Move to kitchen_cabinet -->
+      <Action ID="MOVE_TO" obj="kitchen_cabinet" />
+      <!-- Place inside kitchen_cabinet -->
+      <Action ID="PLACE_INSIDE" obj="kitchen_cabinet" />
+    </Sequence>
+  </BehaviorTree>
+</root>

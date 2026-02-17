@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "mug"
+  destination: "hook"
+  expanded_instruction: "Hold the blue mug and hang its handle on the metal hook at the left of the workspace. If the hang fails, retry up to 2 times, allowing up to 20s per hang attempt."
+  scene_context: "Mug is already grasped by the robot; upright metal hook at left; table surface clear."
+  expected_sequence: "Bring the mug to the hook, align the handle over the hook, and place it so the mug hangs securely; if hanging fails, retry up to 2 times, with each hang attempt allowed up to 20s."

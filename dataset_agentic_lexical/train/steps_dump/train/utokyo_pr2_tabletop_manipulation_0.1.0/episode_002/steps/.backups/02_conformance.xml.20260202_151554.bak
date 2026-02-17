@@ -1,0 +1,20 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to pink_cloth -->
+      <Action ID="NAVIGATE_TO" obj="pink_cloth"/>
+      <!-- Grasp pink_cloth -->
+      <Action ID="GRASP" obj="pink_cloth"/>
+      <!-- Fold pink_cloth (first fold to reduce size) -->
+      <Action ID="FOLD" obj="pink_cloth"/>
+      <!-- Fold pink_cloth (second fold to make smaller rectangular bundle) -->
+      <Action ID="FOLD" obj="pink_cloth"/>
+      <!-- Navigate to table -->
+      <Action ID="NAVIGATE_TO" obj="table"/>
+      <!-- Place on table -->
+      <Action ID="PLACE_ON_TOP" obj="table"/>
+      <!-- Release -->
+      <Action ID="RELEASE"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

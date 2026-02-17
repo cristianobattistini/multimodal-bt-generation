@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "rxbar_blueberry"
+  destination: ""
+  expanded_instruction: "Pick up the RXBAR blueberry bar from the tabletop surface near the front-left, retrying the grasp up to 5 times if it fails."
+  scene_context: "RXBAR blueberry on table front-left, not held; table surface clear; robot arm is nearby."
+  expected_sequence: "Approach the bar, grasp it securely (retry the grasp up to 5 times if it fails), lift it off the table, and hold it."

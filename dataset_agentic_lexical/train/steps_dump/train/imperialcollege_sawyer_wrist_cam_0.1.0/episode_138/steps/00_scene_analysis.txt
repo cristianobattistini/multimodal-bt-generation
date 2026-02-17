@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "lid"
+  destination: ""
+  expanded_instruction: "Open the white circular lid resting on the blue surface"
+  scene_context: "White circular lid on blue surface is closed and not held; container under lid is closed."
+  expected_sequence: "Reach the lid, grasp its edge, and lift it to open the container."

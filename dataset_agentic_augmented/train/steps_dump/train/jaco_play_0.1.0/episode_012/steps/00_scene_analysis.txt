@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "milk_dairy"
+  destination: "white_plate"
+  expanded_instruction: "Pick up the milk_dairy from the blue tray area and place it into the white_plate. If placing inside fails, attempt a PUSH to reposition the object and retry the place action up to 2 times within a 10s timeout."
+  scene_context: "White_plate sits on table and is empty; milk_dairy is on the blue tray near the right side; no containers closed."
+  expected_sequence: "Reach the milk_dairy on the blue tray, pick it up, move over the white_plate, and place it inside. If PLACE_INSIDE fails, use a PUSH to reposition the object and retry the place action up to 2 times within 10s."

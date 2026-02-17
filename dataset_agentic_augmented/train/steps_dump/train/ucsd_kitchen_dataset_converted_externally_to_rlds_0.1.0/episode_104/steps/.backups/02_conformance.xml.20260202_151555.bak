@@ -1,0 +1,30 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to canned_spam -->
+      <Action ID="NAVIGATE_TO" obj="canned_spam" />
+      <!-- Check canned_spam is graspable before GRASP -->
+      <Condition ID="IS_GRASPABLE" obj="canned_spam" />
+      <!-- Fallback: if GRASP canned_spam fails, try alternative to reposition -->
+      <Fallback>
+        <!-- Timeout: GRASP canned_spam within 10s -->
+        <Timeout msec="10000">
+          <!-- Grasp canned_spam -->
+          <Action ID="GRASP" obj="canned_spam" />
+        </Timeout>
+        <Sequence>
+          <!-- Push canned_spam forward toward front edge of table -->
+          <Action ID="PUSH" obj="canned_spam" />
+          <!-- Grasp canned_spam -->
+          <Action ID="GRASP" obj="canned_spam" />
+        </Sequence>
+      </Fallback>
+      <!-- Navigate to sink -->
+      <Action ID="NAVIGATE_TO" obj="sink" />
+      <!-- Place inside sink -->
+      <Action ID="PLACE_INSIDE" obj="sink" />
+      <!-- Release -->
+      <Action ID="RELEASE" />
+    </Sequence>
+  </BehaviorTree>
+</root>

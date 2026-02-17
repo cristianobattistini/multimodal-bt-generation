@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "metal_bowl"
+  destination: "orange_towel"
+  expanded_instruction: "Group actions into the ApproachMetalBowl subtree: approach and align with the metal bowl (retry up to 3 times, 10s timeout), pick up the bowl, and place it on the table behind the orange towel."
+  scene_context: "Metal bowl on the table not held; orange towel on the table; table surface clear and reachable."
+  expected_sequence: "ApproachMetalBowl subtree: move to the bowl (retry up to 3 times, 10s timeout), grasp and lift it (if grasp fails, push to reposition and retry), then place it on the table behind the orange towel."

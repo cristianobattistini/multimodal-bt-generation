@@ -1,0 +1,7 @@
+scene_analysis:
+  target: "car"
+  destination: "trunk"
+  expanded_instruction: "Reach the car trunk and grasp the tennis racket, then place the tennis racket inside the car."
+  scene_context: "Trunk is closed and the tennis racket is on the table in the living room."
+  expected_sequence: "Reach the car trunk, grasp the tennis racket, lift it clear of the table, and place it inside the car."
+Plan:

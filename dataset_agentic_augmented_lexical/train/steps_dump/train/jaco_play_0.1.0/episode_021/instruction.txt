@@ -1,0 +1,1 @@
+Place the green cup in the gray plate. Retry placing up to 5 times if it fails.

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "glass"
+  destination: ""
+  expanded_instruction: "Pick up the clear glass from the black tabletop next to the small plant. Check that the glass is reachable before attempting to grasp it; attempt the grasp within a 15s timeout and retry up to 3 times, and if grasp fails, push or flip the glass to reposition then try again."
+  scene_context: "Glass on black tabletop near plant; table surface clear; robot not holding anything; no containers closed."
+  expected_sequence: "Move to the table, verify the glass is reachable, reach for the glass, attempt to grasp it (within a 15s timeout, retry up to 3 times); if grasp fails, push or flip the glass to reposition and retry; once secured, lift it clear of the surface."

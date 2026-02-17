@@ -1,0 +1,20 @@
+{
+  "success": false,
+  "bt_success": true,
+  "bddl_goal": false,
+  "ticks": 1,
+  "duration": 32.87023687362671,
+  "inference_time": 8.897817373275757,
+  "satisfied": [],
+  "unsatisfied": [
+    "forall(['?plywood.n.01', '-', 'plywood.n.01'], ['ontop', '?plywood.n.01', '?floor.n.01_2'])"
+  ],
+  "task": "15_bringing_in_wood",
+  "condition": "zero-shot",
+  "model_dir": "smolvlm2",
+  "vlm_model": "smol500",
+  "inference_mode": "adapter",
+  "experiment": 1,
+  "timestamp": "20260213_175634",
+  "reason": "Incomplete plan: only handles plywood_1 (4 actions instead of 12). Missing plywood_2 and plywood_3 entirely. Also PLACE_ON_TOP targets plywood_1 instead of corridor_floor. BT executed but only moved 1 of 3 plywood sheets."
+}

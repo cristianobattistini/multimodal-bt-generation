@@ -1,0 +1,5 @@
+scene_analysis:
+  target: pumpkin.n.02_1
+  destination: table.n.02_1
+  expanded_instruction: Open the cabinet and place the 2 pumpkins and 3 candles inside the cabinet, then place the cauldron next to the table. Close the cabinet in the end.
+Plan:

@@ -1,0 +1,1 @@
+Lift open green garbage can lid. Only open if it is reachable.

@@ -1,0 +1,1 @@
+stack bowls. If grasping the white bowl fails, push it to reposition and retry grasping.

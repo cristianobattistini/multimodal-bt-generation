@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "["bowl_small", "bowl_large"]"
+  destination: "bowl_large"
+  expanded_instruction: "Group actions into an ApproachBowlSmall subtree: pick up the smaller bowl (retry up to 3 times on failed grasps, 10s timeout) and place it inside the larger bowl to stack them."
+  scene_context: "Small bowl is above and separate from large bowl which sits on a clear surface; no items are held."
+  expected_sequence: "Within an ApproachBowlSmall subtree: pick up the small bowl (retry up to 3 times if grasp fails; push to reposition), align it over the large bowl, and lower it into the large bowl to stack."

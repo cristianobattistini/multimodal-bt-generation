@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "spatula"
+  destination: "table"
+  expanded_instruction: "Pick up the light-blue-handled spatula from the table and place it at the table's bottom-left corner. If placing on top fails, retry placement up to 2 more times (within 10s total); if still unsuccessful, use a PUSH maneuver to reposition the spatula into place."
+  scene_context: "Spatula lies on the table near the right/top area; table surface is clear; robot is not holding anything."
+  expected_sequence: "Move to the spatula, grasp it, carry it to the table's bottom-left corner, and set it down; if PLACE_ON_TOP fails after up to 2 retries/10s, use PUSH as an alternative to reposition the object."

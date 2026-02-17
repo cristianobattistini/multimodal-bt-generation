@@ -1,0 +1,1 @@
+Place the yellow towel to the left of the colander. Only navigate to the object if it is visible.

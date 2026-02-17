@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "gray_bowl"
+  destination: "table"
+  expanded_instruction: "As part of the ApproachTable subtree, grasp the gray bowl and place it down on the table surface; if the grasp fails, retry up to 3 times or push to reposition within a 10s timeout."
+  scene_context: "Gray bowl is held by the robot arm above a clear table surface; other objects on table not obstructing placement."
+  expected_sequence: "Within the ApproachTable subtree, lower the bowl to the table and set it down; if placement fails, retry up to 3 times."

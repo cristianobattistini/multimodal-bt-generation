@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "silver_vessel"
+  destination: "purple_cloth"
+  expanded_instruction: "Pick up the silver vessel from the table and place it on the purple cloth."
+  scene_context: "Silver vessel on table left of a clear purple cloth; vessel not held; cloth unobstructed."
+  expected_sequence: "Approach and grasp the silver vessel, lift it, move over the purple cloth, and place the vessel down on the cloth."

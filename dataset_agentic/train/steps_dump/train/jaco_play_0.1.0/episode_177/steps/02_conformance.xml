@@ -1,0 +1,12 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to white_plate -->
+      <Action ID="NAVIGATE_TO" obj="white_plate"/>
+      <!-- Navigate to milk_dairy (approach carton on the plate) -->
+      <Action ID="NAVIGATE_TO" obj="milk_dairy"/>
+      <!-- Grasp milk_dairy -->
+      <Action ID="GRASP" obj="milk_dairy"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

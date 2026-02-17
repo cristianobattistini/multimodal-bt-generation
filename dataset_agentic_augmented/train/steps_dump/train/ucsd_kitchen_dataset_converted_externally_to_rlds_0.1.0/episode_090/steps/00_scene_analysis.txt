@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "teapot"
+  destination: "stove"
+  expanded_instruction: "Pick up the teapot from the countertop and place it on the stove; confirm the teapot is visible before navigating and use a 15s navigate timeout."
+  scene_context: "Teapot resting on countertop near stove; teapot not held; stove surface clear and reachable."
+  expected_sequence: "Confirm teapot is visible, navigate to it (within a 15s timeout), approach and grasp the teapot, lift it, move it over the stove, and set it down."

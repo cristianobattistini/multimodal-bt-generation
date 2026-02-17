@@ -1,0 +1,262 @@
+{
+  "_meta": {
+    "description": "Task status tracking for BEHAVIOR-1K Challenge50",
+    "status_values": {
+      "untested": "Not yet simulated",
+      "working": "Works (with or without overrides)",
+      "needs_tuning": "Requires override, to be implemented",
+      "failing": "Does not work even with overrides (structural issue)"
+    },
+    "last_updated": "2026-02-05"
+  },
+  "00_turning_on_radio": {
+    "status": "working",
+    "notes": "Testato 2026-02-05, funziona con default",
+    "override_applied": false
+  },
+  "01_picking_up_trash": {
+    "status": "needs_tuning",
+    "notes": "Robot urta il cestino durante NAVIGATE_TO, aumentato approach_distance a 1.5m",
+    "override_applied": true
+  },
+  "02_putting_away_Halloween_decorations": {
+    "status": "untested",
+    "notes": "",
+    "override_applied": false
+  },
+  "03_cleaning_up_plates_and_food": {
+    "status": "untested",
+    "notes": "",
+    "override_applied": false
+  },
+  "04_can_meat": {
+    "status": "untested",
+    "notes": "",
+    "override_applied": false
+  },
+  "05_setting_mousetraps": {
+    "status": "untested",
+    "notes": "",
+    "override_applied": false
+  },
+  "06_hiding_Easter_eggs": {
+    "status": "untested",
+    "notes": "",
+    "override_applied": false
+  },
+  "07_picking_up_toys": {
+    "status": "untested",
+    "notes": "",
+    "override_applied": false
+  },
+  "08_rearranging_kitchen_furniture": {
+    "status": "untested",
+    "notes": "",
+    "override_applied": false
+  },
+  "09_putting_up_Christmas_decorations_inside": {
+    "status": "untested",
+    "notes": "",
+    "override_applied": false
+  },
+  "10_set_up_a_coffee_station_in_your_kitchen": {
+    "status": "untested",
+    "notes": "",
+    "override_applied": false
+  },
+  "11_putting_dishes_away_after_cleaning": {
+    "status": "untested",
+    "notes": "",
+    "override_applied": false
+  },
+  "12_preparing_lunch_box": {
+    "status": "untested",
+    "notes": "",
+    "override_applied": false
+  },
+  "13_loading_the_car": {
+    "status": "untested",
+    "notes": "",
+    "override_applied": false
+  },
+  "14_carrying_in_groceries": {
+    "status": "untested",
+    "notes": "",
+    "override_applied": false
+  },
+  "15_bringing_in_wood": {
+    "status": "untested",
+    "notes": "",
+    "override_applied": false
+  },
+  "16_moving_boxes_to_storage": {
+    "status": "untested",
+    "notes": "",
+    "override_applied": false
+  },
+  "17_bringing_water": {
+    "status": "untested",
+    "notes": "",
+    "override_applied": false
+  },
+  "18_tidying_bedroom": {
+    "status": "needs_tuning",
+    "notes": "Robot urta sandal_1. Soluzione: nextto_placement_direction=right per piazzare sandali sul lato destro del letto",
+    "override_applied": true
+  },
+  "19_outfit_a_basic_toolbox": {
+    "status": "untested",
+    "notes": "",
+    "override_applied": false
+  },
+  "20_sorting_vegetables": {
+    "status": "untested",
+    "notes": "",
+    "override_applied": false
+  },
+  "21_collecting_childrens_toys": {
+    "status": "untested",
+    "notes": "",
+    "override_applied": false
+  },
+  "22_putting_shoes_on_rack": {
+    "status": "untested",
+    "notes": "",
+    "override_applied": false
+  },
+  "23_boxing_books_up_for_storage": {
+    "status": "untested",
+    "notes": "",
+    "override_applied": false
+  },
+  "24_storing_food": {
+    "status": "untested",
+    "notes": "",
+    "override_applied": false
+  },
+  "25_clearing_food_from_table_into_fridge": {
+    "status": "untested",
+    "notes": "",
+    "override_applied": false
+  },
+  "26_assembling_gift_baskets": {
+    "status": "untested",
+    "notes": "",
+    "override_applied": false
+  },
+  "27_sorting_household_items": {
+    "status": "untested",
+    "notes": "",
+    "override_applied": false
+  },
+  "28_getting_organized_for_work": {
+    "status": "untested",
+    "notes": "",
+    "override_applied": false
+  },
+  "29_clean_up_your_desk": {
+    "status": "untested",
+    "notes": "",
+    "override_applied": false
+  },
+  "30_setting_the_fire": {
+    "status": "untested",
+    "notes": "",
+    "override_applied": false
+  },
+  "31_clean_boxing_gloves": {
+    "status": "untested",
+    "notes": "",
+    "override_applied": false
+  },
+  "32_wash_a_baseball_cap": {
+    "status": "untested",
+    "notes": "",
+    "override_applied": false
+  },
+  "33_wash_dog_toys": {
+    "status": "untested",
+    "notes": "",
+    "override_applied": false
+  },
+  "34_hanging_pictures": {
+    "status": "untested",
+    "notes": "",
+    "override_applied": false
+  },
+  "35_attach_a_camera_to_a_tripod": {
+    "status": "untested",
+    "notes": "",
+    "override_applied": false
+  },
+  "36_clean_a_patio": {
+    "status": "untested",
+    "notes": "",
+    "override_applied": false
+  },
+  "37_clean_a_trumpet": {
+    "status": "untested",
+    "notes": "",
+    "override_applied": false
+  },
+  "38_spraying_for_bugs": {
+    "status": "untested",
+    "notes": "",
+    "override_applied": false
+  },
+  "39_spraying_fruit_trees": {
+    "status": "untested",
+    "notes": "",
+    "override_applied": false
+  },
+  "40_make_microwave_popcorn": {
+    "status": "untested",
+    "notes": "",
+    "override_applied": false
+  },
+  "41_cook_cabbage": {
+    "status": "untested",
+    "notes": "",
+    "override_applied": false
+  },
+  "42_chop_an_onion": {
+    "status": "untested",
+    "notes": "",
+    "override_applied": false
+  },
+  "43_slicing_vegetables": {
+    "status": "untested",
+    "notes": "",
+    "override_applied": false
+  },
+  "44_chopping_wood": {
+    "status": "untested",
+    "notes": "",
+    "override_applied": false
+  },
+  "45_cook_hot_dogs": {
+    "status": "untested",
+    "notes": "",
+    "override_applied": false
+  },
+  "46_cook_bacon": {
+    "status": "untested",
+    "notes": "",
+    "override_applied": false
+  },
+  "47_freeze_pies": {
+    "status": "untested",
+    "notes": "",
+    "override_applied": false
+  },
+  "48_canning_food": {
+    "status": "untested",
+    "notes": "",
+    "override_applied": false
+  },
+  "49_make_pizza": {
+    "status": "untested",
+    "notes": "",
+    "override_applied": false
+  }
+}

@@ -1,0 +1,14 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Approach faucet_handle -->
+      <Action ID="APPROACH" obj="faucet_handle" />
+      <!-- Clamp faucet_handle -->
+      <Action ID="CLAMP" obj="faucet_handle" />
+      <!-- Switch on faucet_handle -->
+      <Action ID="SWITCH_ON" obj="faucet_handle" />
+      <!-- Let go -->
+      <Action ID="LET_GO" />
+    </Sequence>
+  </BehaviorTree>
+</root>

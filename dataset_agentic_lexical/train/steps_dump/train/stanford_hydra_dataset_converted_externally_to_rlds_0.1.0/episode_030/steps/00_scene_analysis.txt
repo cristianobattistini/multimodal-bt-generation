@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "dishes"
+  destination: "dish_rack"
+  expanded_instruction: "Pick up the dishes from the sink area and place them into the dish_rack."
+  scene_context: "Dish rack partially filled and reachable; additional dishes and a utensil in the adjacent basin; robot not holding objects."
+  expected_sequence: "Reach to each dish in the basin, pick it up, and place it into the dish_rack upright."

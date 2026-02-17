@@ -1,0 +1,4882 @@
+{
+  "created_at": "2026-01-28T17:42:51.447143",
+  "args": {
+    "input_dir": "dataset_agentic",
+    "output_dir": "dataset_agentic_augmented",
+    "max_train": 735,
+    "max_val": 76,
+    "seed": 42,
+    "model": null
+  },
+  "total_planned": 811,
+  "train_count": 735,
+  "val_count": 76,
+  "episodes": [
+    {
+      "dataset_id": "fractal20220817_data_0.1.0",
+      "episode_id": "episode_004",
+      "instruction": "pick brown chip bag from top drawer and place on counter",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_101",
+      "instruction": "place the gray bowl in the table",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_030",
+      "instruction": "Move the blue fork to the other side of the yellow rag.",
+      "split": "train"
+    },
+    {
+      "dataset_id": "asu_table_top_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_018",
+      "instruction": "hold pepsi bottle",
+      "split": "train"
+    },
+    {
+      "dataset_id": "asu_table_top_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_047",
+      "instruction": "put down glass bottle",
+      "split": "train"
+    },
+    {
+      "dataset_id": "imperialcollege_sawyer_wrist_cam_0.1.0",
+      "episode_id": "episode_009",
+      "instruction": "pick up shoe",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_062",
+      "instruction": "unzip zipper bag",
+      "split": "train"
+    },
+    {
+      "dataset_id": "asu_table_top_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_072",
+      "instruction": "pick up milk carton",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_049",
+      "instruction": "Move cucumber to bowl, laying down.",
+      "split": "train"
+    },
+    {
+      "dataset_id": "fractal20220817_data_0.1.0",
+      "episode_id": "episode_044",
+      "instruction": "knock water bottle over",
+      "split": "train"
+    },
+    {
+      "dataset_id": "nyu_rot_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_000",
+      "instruction": "erase the board",
+      "split": "train"
+    },
+    {
+      "dataset_id": "stanford_hydra_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_080",
+      "instruction": "place dishes in the dish rack",
+      "split": "train"
+    },
+    {
+      "dataset_id": "fractal20220817_data_0.1.0",
+      "episode_id": "episode_042",
+      "instruction": "place rxbar chocolate into middle drawer",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_168",
+      "instruction": "pick up the green cup",
+      "split": "train"
+    },
+    {
+      "dataset_id": "dlr_edan_shared_control_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_009",
+      "instruction": "pick the glass",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_048",
+      "instruction": "Pick up the pot and place it behind the orange cloth",
+      "split": "train"
+    },
+    {
+      "dataset_id": "stanford_hydra_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_059",
+      "instruction": "place dishes in the dish rack",
+      "split": "train"
+    },
+    {
+      "dataset_id": "utokyo_xarm_bimanual_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_036",
+      "instruction": "Unfold a wrinkled towel.",
+      "split": "train"
+    },
+    {
+      "dataset_id": "nyu_rot_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_001",
+      "instruction": "pour the almonds into the cup",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_004",
+      "instruction": "Move the kadai and place it at the right edge of the table.",
+      "split": "train"
+    },
+    {
+      "dataset_id": "asu_table_top_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_089",
+      "instruction": "push green bottle",
+      "split": "train"
+    },
+    {
+      "dataset_id": "asu_table_top_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_077",
+      "instruction": "push coke bottle",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_045",
+      "instruction": "pick up the butter dairy",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_182",
+      "instruction": "place the square bread in the table",
+      "split": "train"
+    },
+    {
+      "dataset_id": "asu_table_top_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_086",
+      "instruction": "push brown object",
+      "split": "train"
+    },
+    {
+      "dataset_id": "asu_table_top_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_074",
+      "instruction": "place down blue bottle",
+      "split": "train"
+    },
+    {
+      "dataset_id": "nyu_rot_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_003",
+      "instruction": "open the box",
+      "split": "train"
+    },
+    {
+      "dataset_id": "fractal20220817_data_0.1.0",
+      "episode_id": "episode_018",
+      "instruction": "open top drawer",
+      "split": "train"
+    },
+    {
+      "dataset_id": "fractal20220817_data_0.1.0",
+      "episode_id": "episode_025",
+      "instruction": "move water bottle near rxbar chocolate",
+      "split": "train"
+    },
+    {
+      "dataset_id": "ucsd_kitchen_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_090",
+      "instruction": "Place the teapot on the stove",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_141",
+      "instruction": "pick up the black bowl",
+      "split": "train"
+    },
+    {
+      "dataset_id": "asu_table_top_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_057",
+      "instruction": "place down maroon object",
+      "split": "train"
+    },
+    {
+      "dataset_id": "austin_sailor_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_149",
+      "instruction": "Place the bread, butter, and milk from the table onto the serving area.",
+      "split": "train"
+    },
+    {
+      "dataset_id": "asu_table_top_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_104",
+      "instruction": "hold green glass bottle",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_012",
+      "instruction": "Grab the bell pepper outside of the pot and place it towards the bottom of the table to the right side of the yellow towel.",
+      "split": "train"
+    },
+    {
+      "dataset_id": "utokyo_xarm_pick_and_place_0.1.0",
+      "episode_id": "episode_006",
+      "instruction": "Pick up a white plate, and then place it on the red plate.",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_105",
+      "instruction": "place the milk dairy in the table",
+      "split": "train"
+    },
+    {
+      "dataset_id": "ucsd_kitchen_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_019",
+      "instruction": "Turn on the faucet",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_082",
+      "instruction": "place the gray bowl in the dish rack",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_005",
+      "instruction": "Put the banana on the green cloth",
+      "split": "train"
+    },
+    {
+      "dataset_id": "asu_table_top_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_097",
+      "instruction": "pick up bread",
+      "split": "train"
+    },
+    {
+      "dataset_id": "imperialcollege_sawyer_wrist_cam_0.1.0",
+      "episode_id": "episode_034",
+      "instruction": "pick up apple",
+      "split": "train"
+    },
+    {
+      "dataset_id": "berkeley_autolab_ur5_0.1.0",
+      "episode_id": "episode_032",
+      "instruction": "take the tiger out of the red bowl and put it in the grey bowl",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_032",
+      "instruction": "place the black bowl in the gray plate",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_087",
+      "instruction": "flip pot upright in sink distractors",
+      "split": "train"
+    },
+    {
+      "dataset_id": "ucsd_kitchen_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_031",
+      "instruction": "Put the canned spam into the sink",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_046",
+      "instruction": "put corn in pan which is on stove distractors",
+      "split": "train"
+    },
+    {
+      "dataset_id": "utokyo_pr2_opening_fridge_0.1.0",
+      "episode_id": "episode_004",
+      "instruction": "opening the fridge",
+      "split": "train"
+    },
+    {
+      "dataset_id": "ucsd_kitchen_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_039",
+      "instruction": "Open the carbinet door",
+      "split": "train"
+    },
+    {
+      "dataset_id": "fractal20220817_data_0.1.0",
+      "episode_id": "episode_021",
+      "instruction": "pick blue chip bag from bottom drawer and place on counter",
+      "split": "train"
+    },
+    {
+      "dataset_id": "fractal20220817_data_0.1.0",
+      "episode_id": "episode_019",
+      "instruction": "pick banana from white bowl",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_199",
+      "instruction": "place the butter dairy in the white plate",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_064",
+      "instruction": "Place the red fork to the left of the left burner",
+      "split": "train"
+    },
+    {
+      "dataset_id": "asu_table_top_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_021",
+      "instruction": "hold coke bottle",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_160",
+      "instruction": "pick up the apple fruit",
+      "split": "train"
+    },
+    {
+      "dataset_id": "asu_table_top_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_014",
+      "instruction": "move maroon square",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_019",
+      "instruction": "put sushi on plate",
+      "split": "train"
+    },
+    {
+      "dataset_id": "asu_table_top_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_081",
+      "instruction": "hold white box",
+      "split": "train"
+    },
+    {
+      "dataset_id": "imperialcollege_sawyer_wrist_cam_0.1.0",
+      "episode_id": "episode_011",
+      "instruction": "open lid",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_003",
+      "instruction": "pick up the gray bowl",
+      "split": "train"
+    },
+    {
+      "dataset_id": "imperialcollege_sawyer_wrist_cam_0.1.0",
+      "episode_id": "episode_033",
+      "instruction": "put apple in pot",
+      "split": "train"
+    },
+    {
+      "dataset_id": "fractal20220817_data_0.1.0",
+      "episode_id": "episode_012",
+      "instruction": "move green rice chip bag near brown chip bag",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_033",
+      "instruction": "pick up the apple fruit",
+      "split": "train"
+    },
+    {
+      "dataset_id": "asu_table_top_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_023",
+      "instruction": "pick up maroon cube",
+      "split": "train"
+    },
+    {
+      "dataset_id": "fractal20220817_data_0.1.0",
+      "episode_id": "episode_047",
+      "instruction": "move water bottle near paper bowl",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_029",
+      "instruction": "Place the mushroom into the pot",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_000",
+      "instruction": "Place the can to the left of the pot.",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_176",
+      "instruction": "pick up the square bread",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_043",
+      "instruction": "Put the corn to the left of the pan",
+      "split": "train"
+    },
+    {
+      "dataset_id": "utokyo_xarm_bimanual_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_031",
+      "instruction": "Unfold a wrinkled towel.",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_022",
+      "instruction": "Take the silver vessel and place it on the purple cloth.",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_086",
+      "instruction": "put potato in pot cardboard fence",
+      "split": "train"
+    },
+    {
+      "dataset_id": "asu_table_top_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_012",
+      "instruction": "pick red cube",
+      "split": "train"
+    },
+    {
+      "dataset_id": "fractal20220817_data_0.1.0",
+      "episode_id": "episode_003",
+      "instruction": "move coke can near water bottle",
+      "split": "train"
+    },
+    {
+      "dataset_id": "nyu_rot_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_006",
+      "instruction": "hang the hanger on the rod",
+      "split": "train"
+    },
+    {
+      "dataset_id": "berkeley_autolab_ur5_0.1.0",
+      "episode_id": "episode_074",
+      "instruction": "pick up the blue cup and put it into the brown cup.",
+      "split": "train"
+    },
+    {
+      "dataset_id": "utokyo_xarm_bimanual_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_015",
+      "instruction": "Reach a towel.",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_032",
+      "instruction": "PICK UP THE SPOON AND PUT NEAR THE VESSEL",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_147",
+      "instruction": "pick up the milk dairy",
+      "split": "train"
+    },
+    {
+      "dataset_id": "berkeley_autolab_ur5_0.1.0",
+      "episode_id": "episode_020",
+      "instruction": "sweep the green cloth to the left side of the table",
+      "split": "train"
+    },
+    {
+      "dataset_id": "berkeley_autolab_ur5_0.1.0",
+      "episode_id": "episode_073",
+      "instruction": "pick up the blue cup and put it into the brown cup.",
+      "split": "train"
+    },
+    {
+      "dataset_id": "austin_sailor_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_176",
+      "instruction": "Place the bread, butter, and milk from the table onto the serving area.",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_134",
+      "instruction": "place the steak meat in the oven",
+      "split": "train"
+    },
+    {
+      "dataset_id": "imperialcollege_sawyer_wrist_cam_0.1.0",
+      "episode_id": "episode_094",
+      "instruction": "stack bowls",
+      "split": "train"
+    },
+    {
+      "dataset_id": "asu_table_top_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_093",
+      "instruction": "pick coke can",
+      "split": "train"
+    },
+    {
+      "dataset_id": "ucsd_kitchen_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_085",
+      "instruction": "Open the oven door",
+      "split": "train"
+    },
+    {
+      "dataset_id": "imperialcollege_sawyer_wrist_cam_0.1.0",
+      "episode_id": "episode_016",
+      "instruction": "put apple in pot",
+      "split": "train"
+    },
+    {
+      "dataset_id": "utokyo_pr2_opening_fridge_0.1.0",
+      "episode_id": "episode_014",
+      "instruction": "opening the fridge",
+      "split": "train"
+    },
+    {
+      "dataset_id": "dlr_edan_shared_control_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_082",
+      "instruction": "pick the die",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_189",
+      "instruction": "place the yellow cup in the sink",
+      "split": "train"
+    },
+    {
+      "dataset_id": "imperialcollege_sawyer_wrist_cam_0.1.0",
+      "episode_id": "episode_072",
+      "instruction": "insert cap in bottle",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_014",
+      "instruction": "Move the Orange cloth towards the top of the table",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_081",
+      "instruction": "Move blue napkin to space in front of cans.",
+      "split": "train"
+    },
+    {
+      "dataset_id": "ucsd_kitchen_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_081",
+      "instruction": "Turn on the faucet",
+      "split": "train"
+    },
+    {
+      "dataset_id": "fractal20220817_data_0.1.0",
+      "episode_id": "episode_034",
+      "instruction": "pick rxbar blueberry",
+      "split": "train"
+    },
+    {
+      "dataset_id": "ucsd_kitchen_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_026",
+      "instruction": "Open the carbinet door",
+      "split": "train"
+    },
+    {
+      "dataset_id": "fractal20220817_data_0.1.0",
+      "episode_id": "episode_030",
+      "instruction": "open middle drawer",
+      "split": "train"
+    },
+    {
+      "dataset_id": "asu_table_top_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_019",
+      "instruction": "move green glass bottle",
+      "split": "train"
+    },
+    {
+      "dataset_id": "asu_table_top_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_008",
+      "instruction": "raise bread",
+      "split": "train"
+    },
+    {
+      "dataset_id": "cmu_stretch_0.1.0",
+      "episode_id": "episode_027",
+      "instruction": "pull open a dishwasher",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_121",
+      "instruction": "place the apple fruit in the table",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_185",
+      "instruction": "place the gray bowl in the white plate",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_071",
+      "instruction": "put broccoli in pot cardboardfence",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_069",
+      "instruction": "Place the salt next to the brush above the napkin.",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_183",
+      "instruction": "pick up the steak meat",
+      "split": "train"
+    },
+    {
+      "dataset_id": "imperialcollege_sawyer_wrist_cam_0.1.0",
+      "episode_id": "episode_071",
+      "instruction": "open lid",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_042",
+      "instruction": "pick up the apple fruit",
+      "split": "train"
+    },
+    {
+      "dataset_id": "imperialcollege_sawyer_wrist_cam_0.1.0",
+      "episode_id": "episode_006",
+      "instruction": "put cup in dishwasher",
+      "split": "train"
+    },
+    {
+      "dataset_id": "dlr_edan_shared_control_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_038",
+      "instruction": "pick the tube",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_096",
+      "instruction": "Place wok on top of purple cloth.",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_074",
+      "instruction": "put eggplant into pan",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_095",
+      "instruction": "place the white object in the pot on table",
+      "split": "train"
+    },
+    {
+      "dataset_id": "fractal20220817_data_0.1.0",
+      "episode_id": "episode_009",
+      "instruction": "knock orange can over",
+      "split": "train"
+    },
+    {
+      "dataset_id": "berkeley_autolab_ur5_0.1.0",
+      "episode_id": "episode_054",
+      "instruction": "sweep the green cloth to the left side of the table",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_101",
+      "instruction": "Move the orange object to the left of the pot.",
+      "split": "train"
+    },
+    {
+      "dataset_id": "asu_table_top_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_069",
+      "instruction": "pick blue can",
+      "split": "train"
+    },
+    {
+      "dataset_id": "fractal20220817_data_0.1.0",
+      "episode_id": "episode_032",
+      "instruction": "move green rice chip bag near orange",
+      "split": "train"
+    },
+    {
+      "dataset_id": "nyu_rot_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_002",
+      "instruction": "hang the bag on the hook",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_043",
+      "instruction": "place the butter dairy in the gray bowl",
+      "split": "train"
+    },
+    {
+      "dataset_id": "asu_table_top_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_001",
+      "instruction": "pick green bottle",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_059",
+      "instruction": "put broccoli in pot or pan",
+      "split": "train"
+    },
+    {
+      "dataset_id": "cmu_stretch_0.1.0",
+      "episode_id": "episode_059",
+      "instruction": "pull open a dishwasher",
+      "split": "train"
+    },
+    {
+      "dataset_id": "austin_sirius_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_019",
+      "instruction": "Insert the blue gear onto the right peg, followed by the red gear",
+      "split": "train"
+    },
+    {
+      "dataset_id": "dlr_edan_shared_control_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_091",
+      "instruction": "pick the disk",
+      "split": "train"
+    },
+    {
+      "dataset_id": "asu_table_top_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_053",
+      "instruction": "hold coke bottle",
+      "split": "train"
+    },
+    {
+      "dataset_id": "asu_table_top_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_058",
+      "instruction": "move white box",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_038",
+      "instruction": "Hold the yellow capsicum from steel pan and place it on the corner of the table.",
+      "split": "train"
+    },
+    {
+      "dataset_id": "imperialcollege_sawyer_wrist_cam_0.1.0",
+      "episode_id": "episode_036",
+      "instruction": "pick up apple",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_054",
+      "instruction": "Place the red fork on the green cloth.",
+      "split": "train"
+    },
+    {
+      "dataset_id": "fractal20220817_data_0.1.0",
+      "episode_id": "episode_016",
+      "instruction": "place water bottle upright",
+      "split": "train"
+    },
+    {
+      "dataset_id": "imperialcollege_sawyer_wrist_cam_0.1.0",
+      "episode_id": "episode_095",
+      "instruction": "pour in mug",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_034",
+      "instruction": "Place the red pepper on the bottom right corner of the table.",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_073",
+      "instruction": "place the butter dairy in the sink",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_088",
+      "instruction": "put pear in bowl cardboardfence",
+      "split": "train"
+    },
+    {
+      "dataset_id": "asu_table_top_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_042",
+      "instruction": "hold red object",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_035",
+      "instruction": "put strawberry on plate and stuffedduck in pot or pan in sink",
+      "split": "train"
+    },
+    {
+      "dataset_id": "fractal20220817_data_0.1.0",
+      "episode_id": "episode_023",
+      "instruction": "close bottom drawer",
+      "split": "train"
+    },
+    {
+      "dataset_id": "nyu_rot_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_005",
+      "instruction": "reach the blue mark on the table",
+      "split": "train"
+    },
+    {
+      "dataset_id": "asu_table_top_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_071",
+      "instruction": "move pepsi can",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_041",
+      "instruction": "put carrot in pot cardboard fence",
+      "split": "train"
+    },
+    {
+      "dataset_id": "asu_table_top_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_016",
+      "instruction": "place down green glass bottle",
+      "split": "train"
+    },
+    {
+      "dataset_id": "imperialcollege_sawyer_wrist_cam_0.1.0",
+      "episode_id": "episode_098",
+      "instruction": "stack bowls",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_093",
+      "instruction": "Move the yellow brush to the left of the bowl.",
+      "split": "train"
+    },
+    {
+      "dataset_id": "fractal20220817_data_0.1.0",
+      "episode_id": "episode_024",
+      "instruction": "place apple into top drawer",
+      "split": "train"
+    },
+    {
+      "dataset_id": "asu_table_top_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_103",
+      "instruction": "place down red can",
+      "split": "train"
+    },
+    {
+      "dataset_id": "imperialcollege_sawyer_wrist_cam_0.1.0",
+      "episode_id": "episode_159",
+      "instruction": "put apple in pot",
+      "split": "train"
+    },
+    {
+      "dataset_id": "asu_table_top_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_107",
+      "instruction": "place down glass bottle",
+      "split": "train"
+    },
+    {
+      "dataset_id": "imperialcollege_sawyer_wrist_cam_0.1.0",
+      "episode_id": "episode_076",
+      "instruction": "pour in mug",
+      "split": "train"
+    },
+    {
+      "dataset_id": "fractal20220817_data_0.1.0",
+      "episode_id": "episode_045",
+      "instruction": "move redbull can near 7up can",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_113",
+      "instruction": "pick up the green cup",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_055",
+      "instruction": "Move the sushi on the top left of the table.",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_111",
+      "instruction": "Pick up the yellow flower and place it behind the pot",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_060",
+      "instruction": "pick up the yellow cup",
+      "split": "train"
+    },
+    {
+      "dataset_id": "fractal20220817_data_0.1.0",
+      "episode_id": "episode_039",
+      "instruction": "pick green jalapeno chip bag from bottom drawer and place on counter",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_036",
+      "instruction": "pick up the long bread",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_088",
+      "instruction": "place the steak meat in the black bowl",
+      "split": "train"
+    },
+    {
+      "dataset_id": "imperialcollege_sawyer_wrist_cam_0.1.0",
+      "episode_id": "episode_008",
+      "instruction": "hang cup",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_144",
+      "instruction": "place the long bread in the table",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_042",
+      "instruction": "put knife on cutting board",
+      "split": "train"
+    },
+    {
+      "dataset_id": "asu_table_top_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_090",
+      "instruction": "raise red can",
+      "split": "train"
+    },
+    {
+      "dataset_id": "cmu_stretch_0.1.0",
+      "episode_id": "episode_073",
+      "instruction": "open drawer",
+      "split": "train"
+    },
+    {
+      "dataset_id": "imperialcollege_sawyer_wrist_cam_0.1.0",
+      "episode_id": "episode_056",
+      "instruction": "grasp can",
+      "split": "train"
+    },
+    {
+      "dataset_id": "asu_table_top_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_036",
+      "instruction": "hold blue bottle",
+      "split": "train"
+    },
+    {
+      "dataset_id": "ucsd_kitchen_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_114",
+      "instruction": "Put the bowl inside the kitchen cabinet",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_179",
+      "instruction": "place the orange fruit in the sink",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_018",
+      "instruction": "pick up the yellow cup",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_040",
+      "instruction": "place the long bread in the gray bowl",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_157",
+      "instruction": "place the gray bowl in the oven",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_105",
+      "instruction": "Move the blue cloth to the right in front of the cans",
+      "split": "train"
+    },
+    {
+      "dataset_id": "ucsd_kitchen_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_092",
+      "instruction": "Turn on the faucet",
+      "split": "train"
+    },
+    {
+      "dataset_id": "imperialcollege_sawyer_wrist_cam_0.1.0",
+      "episode_id": "episode_125",
+      "instruction": "pour in mug",
+      "split": "train"
+    },
+    {
+      "dataset_id": "utokyo_pr2_opening_fridge_0.1.0",
+      "episode_id": "episode_000",
+      "instruction": "opening the fridge",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_102",
+      "instruction": "place the orange fruit in the sink",
+      "split": "train"
+    },
+    {
+      "dataset_id": "nyu_rot_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_004",
+      "instruction": "hang the mug on the hook",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_027",
+      "instruction": "Place the yellow towel to the left of the colander",
+      "split": "train"
+    },
+    {
+      "dataset_id": "berkeley_autolab_ur5_0.1.0",
+      "episode_id": "episode_041",
+      "instruction": "put the ranch bottle into the pot",
+      "split": "train"
+    },
+    {
+      "dataset_id": "austin_buds_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_007",
+      "instruction": "Take the lid off the pot, put the pot on the plate, and use the tool to push to pot to the front of the table.",
+      "split": "train"
+    },
+    {
+      "dataset_id": "cmu_stretch_0.1.0",
+      "episode_id": "episode_042",
+      "instruction": "pull open a dishwasher",
+      "split": "train"
+    },
+    {
+      "dataset_id": "berkeley_autolab_ur5_0.1.0",
+      "episode_id": "episode_091",
+      "instruction": "take the tiger out of the red bowl and put it in the grey bowl",
+      "split": "train"
+    },
+    {
+      "dataset_id": "asu_table_top_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_027",
+      "instruction": "move red object",
+      "split": "train"
+    },
+    {
+      "dataset_id": "utokyo_pr2_tabletop_manipulation_0.1.0",
+      "episode_id": "episode_078",
+      "instruction": "picking a bread",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_146",
+      "instruction": "place the green cup in the dish rack",
+      "split": "train"
+    },
+    {
+      "dataset_id": "utokyo_pr2_tabletop_manipulation_0.1.0",
+      "episode_id": "episode_037",
+      "instruction": "folding a cloth",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_037",
+      "instruction": "place the milk dairy in the white plate",
+      "split": "train"
+    },
+    {
+      "dataset_id": "asu_table_top_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_096",
+      "instruction": "place down maroon cube",
+      "split": "train"
+    },
+    {
+      "dataset_id": "asu_table_top_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_006",
+      "instruction": "place down blue bottle",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_060",
+      "instruction": "put pot or pan on stove and put corncob in pot or pan",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_166",
+      "instruction": "place the burger meat in the sink",
+      "split": "train"
+    },
+    {
+      "dataset_id": "fractal20220817_data_0.1.0",
+      "episode_id": "episode_008",
+      "instruction": "pick 7up can from bottom shelf of fridge",
+      "split": "train"
+    },
+    {
+      "dataset_id": "asu_table_top_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_091",
+      "instruction": "pick up yellow object",
+      "split": "train"
+    },
+    {
+      "dataset_id": "asu_table_top_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_105",
+      "instruction": "move bread",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_053",
+      "instruction": "Move the bowl to the left of the blue towel",
+      "split": "train"
+    },
+    {
+      "dataset_id": "dlr_sara_pour_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_016",
+      "instruction": "Pour into the mug",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_002",
+      "instruction": "Slide the cloth diagonally to the front of the spoon",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_050",
+      "instruction": "Slide the green rag into the corner near the blue handle.",
+      "split": "train"
+    },
+    {
+      "dataset_id": "utokyo_pr2_tabletop_manipulation_0.1.0",
+      "episode_id": "episode_000",
+      "instruction": "folding a cloth",
+      "split": "train"
+    },
+    {
+      "dataset_id": "imperialcollege_sawyer_wrist_cam_0.1.0",
+      "episode_id": "episode_155",
+      "instruction": "grasp can",
+      "split": "train"
+    },
+    {
+      "dataset_id": "asu_table_top_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_108",
+      "instruction": "pick bread",
+      "split": "train"
+    },
+    {
+      "dataset_id": "asu_table_top_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_000",
+      "instruction": "put down blue can",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_039",
+      "instruction": "pick up the steak meat",
+      "split": "train"
+    },
+    {
+      "dataset_id": "asu_table_top_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_032",
+      "instruction": "place down red bottle",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_090",
+      "instruction": "close fridge",
+      "split": "train"
+    },
+    {
+      "dataset_id": "asu_table_top_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_011",
+      "instruction": "pick blue bottle",
+      "split": "train"
+    },
+    {
+      "dataset_id": "cmu_stretch_0.1.0",
+      "episode_id": "episode_077",
+      "instruction": "lift up a lid from the pot",
+      "split": "train"
+    },
+    {
+      "dataset_id": "asu_table_top_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_041",
+      "instruction": "move milk box",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_152",
+      "instruction": "place the green cup in the dish rack",
+      "split": "train"
+    },
+    {
+      "dataset_id": "asu_table_top_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_043",
+      "instruction": "raise bread",
+      "split": "train"
+    },
+    {
+      "dataset_id": "fractal20220817_data_0.1.0",
+      "episode_id": "episode_027",
+      "instruction": "place redbull can into top drawer",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_076",
+      "instruction": "take sushi off plate",
+      "split": "train"
+    },
+    {
+      "dataset_id": "berkeley_autolab_ur5_0.1.0",
+      "episode_id": "episode_083",
+      "instruction": "put the ranch bottle into the pot",
+      "split": "train"
+    },
+    {
+      "dataset_id": "dlr_edan_shared_control_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_067",
+      "instruction": "pick the red apple",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_104",
+      "instruction": "Pick the white item up and place it on the pan",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_075",
+      "instruction": "Move the mushroom to the top of the blue cloth",
+      "split": "train"
+    },
+    {
+      "dataset_id": "dlr_edan_shared_control_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_048",
+      "instruction": "pick the cube",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_002",
+      "instruction": "pick up the square bread",
+      "split": "train"
+    },
+    {
+      "dataset_id": "austin_buds_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_020",
+      "instruction": "Take the lid off the pot, put the pot on the plate, and use the tool to push to pot to the front of the table.",
+      "split": "train"
+    },
+    {
+      "dataset_id": "cmu_stretch_0.1.0",
+      "episode_id": "episode_089",
+      "instruction": "pull open a dishwasher",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_038",
+      "instruction": "place the yellow cup in the white plate",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_167",
+      "instruction": "place the butter dairy in the table",
+      "split": "train"
+    },
+    {
+      "dataset_id": "ucsd_kitchen_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_022",
+      "instruction": "Place the teapot on the stove",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_078",
+      "instruction": "Move the utensil and place it at the edge of the table near the wall.",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_007",
+      "instruction": "place the green cup in the oven",
+      "split": "train"
+    },
+    {
+      "dataset_id": "berkeley_autolab_ur5_0.1.0",
+      "episode_id": "episode_067",
+      "instruction": "put the ranch bottle into the pot",
+      "split": "train"
+    },
+    {
+      "dataset_id": "austin_sirius_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_038",
+      "instruction": "Insert the blue gear onto the right peg, followed by the red gear",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_089",
+      "instruction": "open oven",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_040",
+      "instruction": "put green squash in pot or pan",
+      "split": "train"
+    },
+    {
+      "dataset_id": "dlr_edan_shared_control_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_005",
+      "instruction": "pick the tube",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_104",
+      "instruction": "place the apple fruit in the black bowl",
+      "split": "train"
+    },
+    {
+      "dataset_id": "utokyo_xarm_bimanual_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_013",
+      "instruction": "Unfold a wrinkled towel.",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_031",
+      "instruction": "place the black bowl in the dish rack",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_061",
+      "instruction": "Put the pot to the right of the spoon.",
+      "split": "train"
+    },
+    {
+      "dataset_id": "austin_sirius_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_045",
+      "instruction": "Open the kcup holder, insert the kcup into the holder, and close the kcup holder",
+      "split": "train"
+    },
+    {
+      "dataset_id": "asu_table_top_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_060",
+      "instruction": "pick up red object",
+      "split": "train"
+    },
+    {
+      "dataset_id": "asu_table_top_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_046",
+      "instruction": "raise blue bottle",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_045",
+      "instruction": "put potato in pot cardboard fence",
+      "split": "train"
+    },
+    {
+      "dataset_id": "asu_table_top_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_037",
+      "instruction": "place down red square",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_012",
+      "instruction": "place the milk dairy in the white plate",
+      "split": "train"
+    },
+    {
+      "dataset_id": "imperialcollege_sawyer_wrist_cam_0.1.0",
+      "episode_id": "episode_103",
+      "instruction": "put apple in pot",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_021",
+      "instruction": "Move red fork directly below the eggplant.",
+      "split": "train"
+    },
+    {
+      "dataset_id": "austin_buds_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_021",
+      "instruction": "Take the lid off the pot, put the pot on the plate, and use the tool to push to pot to the front of the table.",
+      "split": "train"
+    },
+    {
+      "dataset_id": "fractal20220817_data_0.1.0",
+      "episode_id": "episode_007",
+      "instruction": "open middle drawer",
+      "split": "train"
+    },
+    {
+      "dataset_id": "dlr_edan_shared_control_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_077",
+      "instruction": "pick the die",
+      "split": "train"
+    },
+    {
+      "dataset_id": "nyu_rot_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_008",
+      "instruction": "close the door",
+      "split": "train"
+    },
+    {
+      "dataset_id": "austin_buds_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_003",
+      "instruction": "Take the lid off the pot, put the pot on the plate, and use the tool to push to pot to the front of the table.",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_103",
+      "instruction": "Put the red spoon in between the pan and the green cloth",
+      "split": "train"
+    },
+    {
+      "dataset_id": "utokyo_pr2_tabletop_manipulation_0.1.0",
+      "episode_id": "episode_023",
+      "instruction": "folding a cloth",
+      "split": "train"
+    },
+    {
+      "dataset_id": "austin_sirius_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_025",
+      "instruction": "Open the kcup holder, insert the kcup into the holder, and close the kcup holder",
+      "split": "train"
+    },
+    {
+      "dataset_id": "asu_table_top_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_022",
+      "instruction": "pick green bottle",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_111",
+      "instruction": "place the long bread in the gray bowl",
+      "split": "train"
+    },
+    {
+      "dataset_id": "utokyo_xarm_bimanual_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_020",
+      "instruction": "Reach a towel.",
+      "split": "train"
+    },
+    {
+      "dataset_id": "asu_table_top_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_026",
+      "instruction": "push maroon square",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_006",
+      "instruction": "Put the napkin in the bottom right hand corner of the table.",
+      "split": "train"
+    },
+    {
+      "dataset_id": "dlr_edan_shared_control_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_090",
+      "instruction": "pick the banana",
+      "split": "train"
+    },
+    {
+      "dataset_id": "fractal20220817_data_0.1.0",
+      "episode_id": "episode_017",
+      "instruction": "place green jalapeno chip bag into top drawer",
+      "split": "train"
+    },
+    {
+      "dataset_id": "cmu_stretch_0.1.0",
+      "episode_id": "episode_044",
+      "instruction": "open drawer",
+      "split": "train"
+    },
+    {
+      "dataset_id": "austin_sailor_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_012",
+      "instruction": "Place the fish, sausage, and tomato into the frying pan.",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_082",
+      "instruction": "Move the chocolate from the pan to the left of the cloth.",
+      "split": "train"
+    },
+    {
+      "dataset_id": "imperialcollege_sawyer_wrist_cam_0.1.0",
+      "episode_id": "episode_050",
+      "instruction": "put apple in pot",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_110",
+      "instruction": "Move the eggplant and place it above the yellow cloth.",
+      "split": "train"
+    },
+    {
+      "dataset_id": "utokyo_pr2_tabletop_manipulation_0.1.0",
+      "episode_id": "episode_068",
+      "instruction": "picking a grape",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_102",
+      "instruction": "flip cup upright",
+      "split": "train"
+    },
+    {
+      "dataset_id": "fractal20220817_data_0.1.0",
+      "episode_id": "episode_035",
+      "instruction": "pick orange from top drawer and place on counter",
+      "split": "train"
+    },
+    {
+      "dataset_id": "imperialcollege_sawyer_wrist_cam_0.1.0",
+      "episode_id": "episode_100",
+      "instruction": "insert cap in bottle",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_016",
+      "instruction": "Move the silver vessel and place it below the spoon.",
+      "split": "train"
+    },
+    {
+      "dataset_id": "cmu_stretch_0.1.0",
+      "episode_id": "episode_066",
+      "instruction": "pull open a dishwasher",
+      "split": "train"
+    },
+    {
+      "dataset_id": "stanford_hydra_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_055",
+      "instruction": "place dishes in the dish rack",
+      "split": "train"
+    },
+    {
+      "dataset_id": "imperialcollege_sawyer_wrist_cam_0.1.0",
+      "episode_id": "episode_004",
+      "instruction": "insert cap in bottle",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_086",
+      "instruction": "place the apple fruit in the white plate",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_070",
+      "instruction": "pick up the steak meat",
+      "split": "train"
+    },
+    {
+      "dataset_id": "fractal20220817_data_0.1.0",
+      "episode_id": "episode_014",
+      "instruction": "pick sponge from middle drawer and place on counter",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_033",
+      "instruction": "Move cucumber to the upper left of counter.",
+      "split": "train"
+    },
+    {
+      "dataset_id": "fractal20220817_data_0.1.0",
+      "episode_id": "episode_020",
+      "instruction": "pick water bottle",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_001",
+      "instruction": "Move the silver pot from in front of the red can, to next to the blue towel at the front edge of the table.",
+      "split": "train"
+    },
+    {
+      "dataset_id": "berkeley_autolab_ur5_0.1.0",
+      "episode_id": "episode_080",
+      "instruction": "pick up the blue cup and put it into the brown cup.",
+      "split": "train"
+    },
+    {
+      "dataset_id": "austin_sirius_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_042",
+      "instruction": "Open the kcup holder, insert the kcup into the holder, and close the kcup holder",
+      "split": "train"
+    },
+    {
+      "dataset_id": "dlr_edan_shared_control_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_060",
+      "instruction": "pick the die",
+      "split": "train"
+    },
+    {
+      "dataset_id": "austin_buds_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_019",
+      "instruction": "Take the lid off the pot, put the pot on the plate, and use the tool to push to pot to the front of the table.",
+      "split": "train"
+    },
+    {
+      "dataset_id": "asu_table_top_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_095",
+      "instruction": "place down pepsi can",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_021",
+      "instruction": "place the green cup in the gray plate",
+      "split": "train"
+    },
+    {
+      "dataset_id": "imperialcollege_sawyer_wrist_cam_0.1.0",
+      "episode_id": "episode_018",
+      "instruction": "pour in mug",
+      "split": "train"
+    },
+    {
+      "dataset_id": "utokyo_pr2_opening_fridge_0.1.0",
+      "episode_id": "episode_016",
+      "instruction": "opening the fridge",
+      "split": "train"
+    },
+    {
+      "dataset_id": "imperialcollege_sawyer_wrist_cam_0.1.0",
+      "episode_id": "episode_093",
+      "instruction": "stack bowls",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_094",
+      "instruction": "lift bowl",
+      "split": "train"
+    },
+    {
+      "dataset_id": "utokyo_xarm_pick_and_place_0.1.0",
+      "episode_id": "episode_017",
+      "instruction": "Pick up a white plate, and then place it on the red plate.",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_108",
+      "instruction": "open oven",
+      "split": "train"
+    },
+    {
+      "dataset_id": "imperialcollege_sawyer_wrist_cam_0.1.0",
+      "episode_id": "episode_121",
+      "instruction": "hang cup",
+      "split": "train"
+    },
+    {
+      "dataset_id": "berkeley_autolab_ur5_0.1.0",
+      "episode_id": "episode_004",
+      "instruction": "pick up the blue cup and put it into the brown cup.",
+      "split": "train"
+    },
+    {
+      "dataset_id": "austin_sirius_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_036",
+      "instruction": "Open the kcup holder, insert the kcup into the holder, and close the kcup holder",
+      "split": "train"
+    },
+    {
+      "dataset_id": "dlr_edan_shared_control_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_006",
+      "instruction": "pick the mug",
+      "split": "train"
+    },
+    {
+      "dataset_id": "ucsd_kitchen_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_072",
+      "instruction": "Put the white box into the sink",
+      "split": "train"
+    },
+    {
+      "dataset_id": "asu_table_top_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_013",
+      "instruction": "move white carton",
+      "split": "train"
+    },
+    {
+      "dataset_id": "asu_table_top_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_109",
+      "instruction": "place down red cube",
+      "split": "train"
+    },
+    {
+      "dataset_id": "austin_sailor_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_080",
+      "instruction": "Place the bread, butter, and milk from the table onto the serving area.",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_016",
+      "instruction": "place the long bread in the sink",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_091",
+      "instruction": "upright basil bottle cardboard fence",
+      "split": "train"
+    },
+    {
+      "dataset_id": "austin_sirius_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_000",
+      "instruction": "Insert the blue gear onto the right peg, followed by the red gear",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_067",
+      "instruction": "Hold the mushroom which is infront of the oven and drop it under the tiffin box, which is on the right edge of the table.",
+      "split": "train"
+    },
+    {
+      "dataset_id": "fractal20220817_data_0.1.0",
+      "episode_id": "episode_015",
+      "instruction": "place coke can into bottom drawer",
+      "split": "train"
+    },
+    {
+      "dataset_id": "ucsd_kitchen_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_038",
+      "instruction": "Put the canned spam into the sink",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_181",
+      "instruction": "pick up the black bowl",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_037",
+      "instruction": "Move the spoon to the right of the pot",
+      "split": "train"
+    },
+    {
+      "dataset_id": "fractal20220817_data_0.1.0",
+      "episode_id": "episode_002",
+      "instruction": "pick apple from white bowl",
+      "split": "train"
+    },
+    {
+      "dataset_id": "asu_table_top_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_064",
+      "instruction": "pick red object",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_052",
+      "instruction": "take cup off plate",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_071",
+      "instruction": "pick up the milk dairy",
+      "split": "train"
+    },
+    {
+      "dataset_id": "asu_table_top_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_002",
+      "instruction": "put down white carton",
+      "split": "train"
+    },
+    {
+      "dataset_id": "imperialcollege_sawyer_wrist_cam_0.1.0",
+      "episode_id": "episode_061",
+      "instruction": "pick up shoe",
+      "split": "train"
+    },
+    {
+      "dataset_id": "asu_table_top_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_029",
+      "instruction": "place down green glass bottle",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_191",
+      "instruction": "place the orange fruit in the sink",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_125",
+      "instruction": "place the black bowl in the sink",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_187",
+      "instruction": "pick up the steak meat",
+      "split": "train"
+    },
+    {
+      "dataset_id": "fractal20220817_data_0.1.0",
+      "episode_id": "episode_029",
+      "instruction": "place redbull can upright",
+      "split": "train"
+    },
+    {
+      "dataset_id": "asu_table_top_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_039",
+      "instruction": "push maroon object",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_031",
+      "instruction": "Move the peeler and place it at the left edge of the table.",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_024",
+      "instruction": "put potato on plate",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_013",
+      "instruction": "flip orange pot upright in sink",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_001",
+      "instruction": "place the gray bowl in the dish rack",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_017",
+      "instruction": "Move the colander in front of the red spoon",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_066",
+      "instruction": "moved pot onto the yellow cloth",
+      "split": "train"
+    },
+    {
+      "dataset_id": "dlr_edan_shared_control_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_056",
+      "instruction": "pick the tennis ball",
+      "split": "train"
+    },
+    {
+      "dataset_id": "imperialcollege_sawyer_wrist_cam_0.1.0",
+      "episode_id": "episode_063",
+      "instruction": "open lid",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_077",
+      "instruction": "place the milk dairy in the black bowl",
+      "split": "train"
+    },
+    {
+      "dataset_id": "austin_buds_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_008",
+      "instruction": "Take the lid off the pot, put the pot on the plate, and use the tool to push to pot to the front of the table.",
+      "split": "train"
+    },
+    {
+      "dataset_id": "ucsd_kitchen_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_066",
+      "instruction": "Put the white box into the sink",
+      "split": "train"
+    },
+    {
+      "dataset_id": "dlr_edan_shared_control_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_057",
+      "instruction": "pick the cube",
+      "split": "train"
+    },
+    {
+      "dataset_id": "austin_sirius_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_043",
+      "instruction": "Insert the blue gear onto the right peg, followed by the red gear",
+      "split": "train"
+    },
+    {
+      "dataset_id": "cmu_stretch_0.1.0",
+      "episode_id": "episode_039",
+      "instruction": "open drawer",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_020",
+      "instruction": "flip cup upright",
+      "split": "train"
+    },
+    {
+      "dataset_id": "cmu_stretch_0.1.0",
+      "episode_id": "episode_082",
+      "instruction": "lift up a lid from the pot",
+      "split": "train"
+    },
+    {
+      "dataset_id": "asu_table_top_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_061",
+      "instruction": "pick up white carton",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_057",
+      "instruction": "pick up pot from sink distractors",
+      "split": "train"
+    },
+    {
+      "dataset_id": "dlr_edan_shared_control_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_076",
+      "instruction": "pick the pear",
+      "split": "train"
+    },
+    {
+      "dataset_id": "fractal20220817_data_0.1.0",
+      "episode_id": "episode_006",
+      "instruction": "pick sponge from top drawer and place on counter",
+      "split": "train"
+    },
+    {
+      "dataset_id": "austin_sailor_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_123",
+      "instruction": "Place the pan onto the stove and place the fish and sausage into the pan.",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_036",
+      "instruction": "Move the pepper to the right of the cloth.",
+      "split": "train"
+    },
+    {
+      "dataset_id": "austin_buds_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_009",
+      "instruction": "Take the lid off the pot, put the pot on the plate, and use the tool to push to pot to the front of the table.",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_007",
+      "instruction": "place the silver pot on the yellow napkin",
+      "split": "train"
+    },
+    {
+      "dataset_id": "asu_table_top_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_067",
+      "instruction": "pick red object",
+      "split": "train"
+    },
+    {
+      "dataset_id": "fractal20220817_data_0.1.0",
+      "episode_id": "episode_010",
+      "instruction": "pick rxbar chocolate",
+      "split": "train"
+    },
+    {
+      "dataset_id": "cmu_stretch_0.1.0",
+      "episode_id": "episode_088",
+      "instruction": "lift up a lid from the pot",
+      "split": "train"
+    },
+    {
+      "dataset_id": "asu_table_top_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_051",
+      "instruction": "pick cocacola can",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_039",
+      "instruction": "close fridge",
+      "split": "train"
+    },
+    {
+      "dataset_id": "asu_table_top_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_076",
+      "instruction": "pick white box",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_073",
+      "instruction": "Pick up the metal bowl and place it behind the orange towel .",
+      "split": "train"
+    },
+    {
+      "dataset_id": "dlr_sara_pour_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_005",
+      "instruction": "Pour into the mug",
+      "split": "train"
+    },
+    {
+      "dataset_id": "asu_table_top_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_056",
+      "instruction": "push milk box",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_085",
+      "instruction": "Push the croissant to the right of the table",
+      "split": "train"
+    },
+    {
+      "dataset_id": "asu_table_top_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_087",
+      "instruction": "pick up red can",
+      "split": "train"
+    },
+    {
+      "dataset_id": "asu_table_top_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_015",
+      "instruction": "move green bottle",
+      "split": "train"
+    },
+    {
+      "dataset_id": "austin_sirius_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_021",
+      "instruction": "Insert the blue gear onto the right peg, followed by the red gear",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_193",
+      "instruction": "place the steak meat in the white plate",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_072",
+      "instruction": "PICK UP THE SPOON ANDPUT ON THE TOWEL",
+      "split": "train"
+    },
+    {
+      "dataset_id": "fractal20220817_data_0.1.0",
+      "episode_id": "episode_037",
+      "instruction": "place rxbar chocolate into middle drawer",
+      "split": "train"
+    },
+    {
+      "dataset_id": "imperialcollege_sawyer_wrist_cam_0.1.0",
+      "episode_id": "episode_119",
+      "instruction": "open lid",
+      "split": "train"
+    },
+    {
+      "dataset_id": "asu_table_top_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_045",
+      "instruction": "push red object",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_063",
+      "instruction": "Move the pot on the yellow towel.",
+      "split": "train"
+    },
+    {
+      "dataset_id": "asu_table_top_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_066",
+      "instruction": "move green bottle",
+      "split": "train"
+    },
+    {
+      "dataset_id": "utokyo_xarm_bimanual_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_010",
+      "instruction": "Reach a towel.",
+      "split": "train"
+    },
+    {
+      "dataset_id": "ucsd_kitchen_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_074",
+      "instruction": "Place the teapot on the stove",
+      "split": "train"
+    },
+    {
+      "dataset_id": "asu_table_top_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_083",
+      "instruction": "pick up brown object",
+      "split": "train"
+    },
+    {
+      "dataset_id": "asu_table_top_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_048",
+      "instruction": "raise white carton",
+      "split": "train"
+    },
+    {
+      "dataset_id": "asu_table_top_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_059",
+      "instruction": "put down milk box",
+      "split": "train"
+    },
+    {
+      "dataset_id": "imperialcollege_sawyer_wrist_cam_0.1.0",
+      "episode_id": "episode_134",
+      "instruction": "pick up mug",
+      "split": "train"
+    },
+    {
+      "dataset_id": "dlr_edan_shared_control_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_085",
+      "instruction": "pick the red apple",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_010",
+      "instruction": "Slide the blue rag forward to the edge of the table.",
+      "split": "train"
+    },
+    {
+      "dataset_id": "dlr_sara_pour_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_000",
+      "instruction": "Pour into the mug",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_051",
+      "instruction": "Move the pan to the right of the bottle and banana.",
+      "split": "train"
+    },
+    {
+      "dataset_id": "fractal20220817_data_0.1.0",
+      "episode_id": "episode_005",
+      "instruction": "pick green jalapeno chip bag from bottom drawer and place on counter",
+      "split": "train"
+    },
+    {
+      "dataset_id": "asu_table_top_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_080",
+      "instruction": "hold brown object",
+      "split": "train"
+    },
+    {
+      "dataset_id": "austin_sailor_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_069",
+      "instruction": "Place the fish, sausage, and tomato into the frying pan.",
+      "split": "train"
+    },
+    {
+      "dataset_id": "utokyo_pr2_tabletop_manipulation_0.1.0",
+      "episode_id": "episode_050",
+      "instruction": "folding a cloth",
+      "split": "train"
+    },
+    {
+      "dataset_id": "ucsd_kitchen_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_070",
+      "instruction": "Put the canned spam into the sink",
+      "split": "train"
+    },
+    {
+      "dataset_id": "asu_table_top_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_010",
+      "instruction": "put down glass bottle",
+      "split": "train"
+    },
+    {
+      "dataset_id": "imperialcollege_sawyer_wrist_cam_0.1.0",
+      "episode_id": "episode_107",
+      "instruction": "stack bowls",
+      "split": "train"
+    },
+    {
+      "dataset_id": "dlr_edan_shared_control_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_093",
+      "instruction": "pick the yellow ball",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_026",
+      "instruction": "pick up red srewdriver",
+      "split": "train"
+    },
+    {
+      "dataset_id": "berkeley_autolab_ur5_0.1.0",
+      "episode_id": "episode_045",
+      "instruction": "put the ranch bottle into the pot",
+      "split": "train"
+    },
+    {
+      "dataset_id": "austin_sailor_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_078",
+      "instruction": "Place the bread, butter, and milk from the table onto the serving area.",
+      "split": "train"
+    },
+    {
+      "dataset_id": "asu_table_top_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_073",
+      "instruction": "pick up bread",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_076",
+      "instruction": "place the gray bowl in the oven",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_133",
+      "instruction": "pick up the gray bowl",
+      "split": "train"
+    },
+    {
+      "dataset_id": "fractal20220817_data_0.1.0",
+      "episode_id": "episode_000",
+      "instruction": "pick rxbar chocolate from bottom drawer and place on counter",
+      "split": "train"
+    },
+    {
+      "dataset_id": "ucsd_kitchen_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_004",
+      "instruction": "Put the bowl inside the kitchen cabinet",
+      "split": "train"
+    },
+    {
+      "dataset_id": "asu_table_top_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_063",
+      "instruction": "put down blue bottle",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_122",
+      "instruction": "place the apple fruit in the gray plate",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_093",
+      "instruction": "place the butter dairy in the black bowl",
+      "split": "train"
+    },
+    {
+      "dataset_id": "imperialcollege_sawyer_wrist_cam_0.1.0",
+      "episode_id": "episode_022",
+      "instruction": "pick up kettle",
+      "split": "train"
+    },
+    {
+      "dataset_id": "asu_table_top_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_017",
+      "instruction": "move maroon square",
+      "split": "train"
+    },
+    {
+      "dataset_id": "imperialcollege_sawyer_wrist_cam_0.1.0",
+      "episode_id": "episode_025",
+      "instruction": "insert cap in bottle",
+      "split": "train"
+    },
+    {
+      "dataset_id": "imperialcollege_sawyer_wrist_cam_0.1.0",
+      "episode_id": "episode_000",
+      "instruction": "insert toast",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_026",
+      "instruction": "pick up the gray bowl",
+      "split": "train"
+    },
+    {
+      "dataset_id": "austin_sirius_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_013",
+      "instruction": "Open the kcup holder, insert the kcup into the holder, and close the kcup holder",
+      "split": "train"
+    },
+    {
+      "dataset_id": "asu_table_top_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_055",
+      "instruction": "push pepsi can",
+      "split": "train"
+    },
+    {
+      "dataset_id": "imperialcollege_sawyer_wrist_cam_0.1.0",
+      "episode_id": "episode_070",
+      "instruction": "pick up mug",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_066",
+      "instruction": "pick up the green cup",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_003",
+      "instruction": "put knife on cutting board",
+      "split": "train"
+    },
+    {
+      "dataset_id": "stanford_hydra_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_041",
+      "instruction": "place dishes in the dish rack",
+      "split": "train"
+    },
+    {
+      "dataset_id": "nyu_rot_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_013",
+      "instruction": "stack the cups",
+      "split": "train"
+    },
+    {
+      "dataset_id": "cmu_stretch_0.1.0",
+      "episode_id": "episode_001",
+      "instruction": "pull open a dishwasher",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_106",
+      "instruction": "pick up the apple fruit",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_009",
+      "instruction": "Place the cheese wedge on the front right side of the table",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_126",
+      "instruction": "pick up the black bowl",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_099",
+      "instruction": "Put the shaker into the pot.",
+      "split": "train"
+    },
+    {
+      "dataset_id": "cmu_stretch_0.1.0",
+      "episode_id": "episode_050",
+      "instruction": "open drawer",
+      "split": "train"
+    },
+    {
+      "dataset_id": "dlr_edan_shared_control_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_028",
+      "instruction": "pick the yellow ball",
+      "split": "train"
+    },
+    {
+      "dataset_id": "utokyo_xarm_pick_and_place_0.1.0",
+      "episode_id": "episode_013",
+      "instruction": "Pick up a white plate, and then place it on the red plate.",
+      "split": "train"
+    },
+    {
+      "dataset_id": "asu_table_top_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_040",
+      "instruction": "push white carton",
+      "split": "train"
+    },
+    {
+      "dataset_id": "imperialcollege_sawyer_wrist_cam_0.1.0",
+      "episode_id": "episode_157",
+      "instruction": "swipe",
+      "split": "train"
+    },
+    {
+      "dataset_id": "fractal20220817_data_0.1.0",
+      "episode_id": "episode_028",
+      "instruction": "pick pepsi can from top drawer and place on counter",
+      "split": "train"
+    },
+    {
+      "dataset_id": "austin_sailor_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_190",
+      "instruction": "Place the fish, sausage, and tomato into the frying pan.",
+      "split": "train"
+    },
+    {
+      "dataset_id": "asu_table_top_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_092",
+      "instruction": "raise pepsi can",
+      "split": "train"
+    },
+    {
+      "dataset_id": "asu_table_top_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_102",
+      "instruction": "put down pepsi bottle",
+      "split": "train"
+    },
+    {
+      "dataset_id": "dlr_edan_shared_control_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_025",
+      "instruction": "pick the orange",
+      "split": "train"
+    },
+    {
+      "dataset_id": "imperialcollege_sawyer_wrist_cam_0.1.0",
+      "episode_id": "episode_030",
+      "instruction": "stack bowls",
+      "split": "train"
+    },
+    {
+      "dataset_id": "fractal20220817_data_0.1.0",
+      "episode_id": "episode_043",
+      "instruction": "move green rice chip bag near apple",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_095",
+      "instruction": "place the square bread in the blue bowl",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_099",
+      "instruction": "place the gray bowl in the sink",
+      "split": "train"
+    },
+    {
+      "dataset_id": "austin_buds_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_012",
+      "instruction": "Take the lid off the pot, put the pot on the plate, and use the tool to push to pot to the front of the table.",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_118",
+      "instruction": "pick up the steak meat",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_109",
+      "instruction": "Move the mushroom and put it in the pot.",
+      "split": "train"
+    },
+    {
+      "dataset_id": "berkeley_autolab_ur5_0.1.0",
+      "episode_id": "episode_060",
+      "instruction": "take the tiger out of the red bowl and put it in the grey bowl",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_069",
+      "instruction": "place the black bowl in the oven",
+      "split": "train"
+    },
+    {
+      "dataset_id": "cmu_stretch_0.1.0",
+      "episode_id": "episode_054",
+      "instruction": "lift up a lid from the pot",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_172",
+      "instruction": "place the burger meat in the black bowl",
+      "split": "train"
+    },
+    {
+      "dataset_id": "imperialcollege_sawyer_wrist_cam_0.1.0",
+      "episode_id": "episode_054",
+      "instruction": "pour in mug",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_057",
+      "instruction": "place the long bread in the sink",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_044",
+      "instruction": "Hold and move the tiffin box from center of the table to right edge of the table.",
+      "split": "train"
+    },
+    {
+      "dataset_id": "dlr_edan_shared_control_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_071",
+      "instruction": "pick the tube",
+      "split": "train"
+    },
+    {
+      "dataset_id": "imperialcollege_sawyer_wrist_cam_0.1.0",
+      "episode_id": "episode_005",
+      "instruction": "open lid",
+      "split": "train"
+    },
+    {
+      "dataset_id": "austin_sirius_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_007",
+      "instruction": "Insert the blue gear onto the right peg, followed by the red gear",
+      "split": "train"
+    },
+    {
+      "dataset_id": "asu_table_top_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_085",
+      "instruction": "move yellow object",
+      "split": "train"
+    },
+    {
+      "dataset_id": "imperialcollege_sawyer_wrist_cam_0.1.0",
+      "episode_id": "episode_028",
+      "instruction": "stack bowls",
+      "split": "train"
+    },
+    {
+      "dataset_id": "asu_table_top_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_033",
+      "instruction": "place down red square",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_092",
+      "instruction": "put broccoli in pot or pan",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_109",
+      "instruction": "place the butter dairy in the sink",
+      "split": "train"
+    },
+    {
+      "dataset_id": "imperialcollege_sawyer_wrist_cam_0.1.0",
+      "episode_id": "episode_135",
+      "instruction": "grasp can",
+      "split": "train"
+    },
+    {
+      "dataset_id": "ucsd_kitchen_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_057",
+      "instruction": "Put the green box into the sink",
+      "split": "train"
+    },
+    {
+      "dataset_id": "stanford_hydra_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_015",
+      "instruction": "place dishes in the dish rack",
+      "split": "train"
+    },
+    {
+      "dataset_id": "cmu_stretch_0.1.0",
+      "episode_id": "episode_025",
+      "instruction": "open drawer",
+      "split": "train"
+    },
+    {
+      "dataset_id": "imperialcollege_sawyer_wrist_cam_0.1.0",
+      "episode_id": "episode_017",
+      "instruction": "swipe",
+      "split": "train"
+    },
+    {
+      "dataset_id": "berkeley_autolab_ur5_0.1.0",
+      "episode_id": "episode_016",
+      "instruction": "pick up the blue cup and put it into the brown cup.",
+      "split": "train"
+    },
+    {
+      "dataset_id": "dlr_edan_shared_control_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_089",
+      "instruction": "pick the green apple",
+      "split": "train"
+    },
+    {
+      "dataset_id": "utokyo_pr2_tabletop_manipulation_0.1.0",
+      "episode_id": "episode_047",
+      "instruction": "picking a grape",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_035",
+      "instruction": "place the apple fruit in the sink",
+      "split": "train"
+    },
+    {
+      "dataset_id": "cmu_stretch_0.1.0",
+      "episode_id": "episode_017",
+      "instruction": "open drawer",
+      "split": "train"
+    },
+    {
+      "dataset_id": "stanford_hydra_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_002",
+      "instruction": "place dishes in the dish rack",
+      "split": "train"
+    },
+    {
+      "dataset_id": "fractal20220817_data_0.1.0",
+      "episode_id": "episode_022",
+      "instruction": "move pepsi can near 7up can",
+      "split": "train"
+    },
+    {
+      "dataset_id": "berkeley_autolab_ur5_0.1.0",
+      "episode_id": "episode_070",
+      "instruction": "take the tiger out of the red bowl and put it in the grey bowl",
+      "split": "train"
+    },
+    {
+      "dataset_id": "dlr_sara_pour_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_022",
+      "instruction": "Pour into the mug",
+      "split": "train"
+    },
+    {
+      "dataset_id": "dlr_sara_pour_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_011",
+      "instruction": "Pour into the mug",
+      "split": "train"
+    },
+    {
+      "dataset_id": "nyu_rot_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_010",
+      "instruction": "insert the peg in the cup",
+      "split": "train"
+    },
+    {
+      "dataset_id": "utokyo_xarm_pick_and_place_0.1.0",
+      "episode_id": "episode_011",
+      "instruction": "Pick up a white plate, and then place it on the red plate.",
+      "split": "train"
+    },
+    {
+      "dataset_id": "berkeley_autolab_ur5_0.1.0",
+      "episode_id": "episode_098",
+      "instruction": "take the tiger out of the red bowl and put it in the grey bowl",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_034",
+      "instruction": "pick up the burger meat",
+      "split": "train"
+    },
+    {
+      "dataset_id": "utokyo_xarm_bimanual_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_005",
+      "instruction": "Unfold a wrinkled towel.",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_019",
+      "instruction": "place the burger meat in the oven",
+      "split": "train"
+    },
+    {
+      "dataset_id": "dlr_edan_shared_control_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_015",
+      "instruction": "pick the tube",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_177",
+      "instruction": "pick up the milk dairy",
+      "split": "train"
+    },
+    {
+      "dataset_id": "asu_table_top_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_078",
+      "instruction": "push milk carton",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_097",
+      "instruction": "pick up the long bread",
+      "split": "train"
+    },
+    {
+      "dataset_id": "imperialcollege_sawyer_wrist_cam_0.1.0",
+      "episode_id": "episode_021",
+      "instruction": "swipe",
+      "split": "train"
+    },
+    {
+      "dataset_id": "asu_table_top_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_034",
+      "instruction": "put down glass bottle",
+      "split": "train"
+    },
+    {
+      "dataset_id": "asu_table_top_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_052",
+      "instruction": "pick up maroon cube",
+      "split": "train"
+    },
+    {
+      "dataset_id": "imperialcollege_sawyer_wrist_cam_0.1.0",
+      "episode_id": "episode_158",
+      "instruction": "pick up shoe",
+      "split": "train"
+    },
+    {
+      "dataset_id": "dlr_edan_shared_control_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_002",
+      "instruction": "pick the tennis ball",
+      "split": "train"
+    },
+    {
+      "dataset_id": "imperialcollege_sawyer_wrist_cam_0.1.0",
+      "episode_id": "episode_081",
+      "instruction": "insert toast",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_058",
+      "instruction": "Move the pot to the left edge of the table",
+      "split": "train"
+    },
+    {
+      "dataset_id": "dlr_edan_shared_control_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_086",
+      "instruction": "pick the mug",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_098",
+      "instruction": "move red towel to just left of yellow knife",
+      "split": "train"
+    },
+    {
+      "dataset_id": "imperialcollege_sawyer_wrist_cam_0.1.0",
+      "episode_id": "episode_085",
+      "instruction": "open bottle",
+      "split": "train"
+    },
+    {
+      "dataset_id": "asu_table_top_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_084",
+      "instruction": "place down green glass bottle",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_139",
+      "instruction": "place the butter dairy in the sink",
+      "split": "train"
+    },
+    {
+      "dataset_id": "fractal20220817_data_0.1.0",
+      "episode_id": "episode_036",
+      "instruction": "place green jalapeno chip bag into middle drawer",
+      "split": "train"
+    },
+    {
+      "dataset_id": "cmu_stretch_0.1.0",
+      "episode_id": "episode_036",
+      "instruction": "pull open a dishwasher",
+      "split": "train"
+    },
+    {
+      "dataset_id": "fractal20220817_data_0.1.0",
+      "episode_id": "episode_046",
+      "instruction": "pick blue plastic bottle",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_097",
+      "instruction": "upright metal pot cardboard fence",
+      "split": "train"
+    },
+    {
+      "dataset_id": "imperialcollege_sawyer_wrist_cam_0.1.0",
+      "episode_id": "episode_074",
+      "instruction": "swipe",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_015",
+      "instruction": "Move the strawberry and place on orange towel",
+      "split": "train"
+    },
+    {
+      "dataset_id": "imperialcollege_sawyer_wrist_cam_0.1.0",
+      "episode_id": "episode_045",
+      "instruction": "pick up kettle",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_123",
+      "instruction": "pick up the gray bowl",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_028",
+      "instruction": "pick up bowl and put in small4fbox",
+      "split": "train"
+    },
+    {
+      "dataset_id": "imperialcollege_sawyer_wrist_cam_0.1.0",
+      "episode_id": "episode_132",
+      "instruction": "hang cup",
+      "split": "train"
+    },
+    {
+      "dataset_id": "cmu_stretch_0.1.0",
+      "episode_id": "episode_049",
+      "instruction": "lift open green garbage can lid",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_008",
+      "instruction": "put eggplant into pot or pan",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_140",
+      "instruction": "place the square bread in the oven",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_047",
+      "instruction": "put corn into bowl",
+      "split": "train"
+    },
+    {
+      "dataset_id": "utokyo_xarm_pick_and_place_0.1.0",
+      "episode_id": "episode_000",
+      "instruction": "Pick up a white plate, and then place it on the red plate.",
+      "split": "train"
+    },
+    {
+      "dataset_id": "austin_sailor_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_136",
+      "instruction": "Place the fish, sausage, and tomato into the frying pan.",
+      "split": "train"
+    },
+    {
+      "dataset_id": "ucsd_kitchen_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_129",
+      "instruction": "Put the white box into the sink",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_089",
+      "instruction": "place the orange fruit in the sink",
+      "split": "train"
+    },
+    {
+      "dataset_id": "berkeley_autolab_ur5_0.1.0",
+      "episode_id": "episode_081",
+      "instruction": "sweep the green cloth to the left side of the table",
+      "split": "train"
+    },
+    {
+      "dataset_id": "asu_table_top_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_054",
+      "instruction": "put down red bottle",
+      "split": "train"
+    },
+    {
+      "dataset_id": "berkeley_autolab_ur5_0.1.0",
+      "episode_id": "episode_052",
+      "instruction": "take the tiger out of the red bowl and put it in the grey bowl",
+      "split": "train"
+    },
+    {
+      "dataset_id": "berkeley_autolab_ur5_0.1.0",
+      "episode_id": "episode_079",
+      "instruction": "take the tiger out of the red bowl and put it in the grey bowl",
+      "split": "train"
+    },
+    {
+      "dataset_id": "imperialcollege_sawyer_wrist_cam_0.1.0",
+      "episode_id": "episode_080",
+      "instruction": "open bottle",
+      "split": "train"
+    },
+    {
+      "dataset_id": "berkeley_autolab_ur5_0.1.0",
+      "episode_id": "episode_015",
+      "instruction": "take the tiger out of the red bowl and put it in the grey bowl",
+      "split": "train"
+    },
+    {
+      "dataset_id": "asu_table_top_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_009",
+      "instruction": "pick up brown object",
+      "split": "train"
+    },
+    {
+      "dataset_id": "dlr_edan_shared_control_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_080",
+      "instruction": "pick the cube",
+      "split": "train"
+    },
+    {
+      "dataset_id": "austin_sailor_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_011",
+      "instruction": "Place the bread, butter, and milk from the table onto the serving area.",
+      "split": "train"
+    },
+    {
+      "dataset_id": "austin_sailor_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_045",
+      "instruction": "Place the pan onto the stove and place the fish and sausage into the pan.",
+      "split": "train"
+    },
+    {
+      "dataset_id": "cmu_stretch_0.1.0",
+      "episode_id": "episode_069",
+      "instruction": "open drawer",
+      "split": "train"
+    },
+    {
+      "dataset_id": "stanford_hydra_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_019",
+      "instruction": "place dishes in the dish rack",
+      "split": "train"
+    },
+    {
+      "dataset_id": "ucsd_kitchen_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_059",
+      "instruction": "Turn on the faucet",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_098",
+      "instruction": "place the green cup in the dish rack",
+      "split": "train"
+    },
+    {
+      "dataset_id": "dlr_edan_shared_control_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_034",
+      "instruction": "pick the orange",
+      "split": "train"
+    },
+    {
+      "dataset_id": "dlr_edan_shared_control_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_053",
+      "instruction": "pick the green apple",
+      "split": "train"
+    },
+    {
+      "dataset_id": "imperialcollege_sawyer_wrist_cam_0.1.0",
+      "episode_id": "episode_020",
+      "instruction": "pick up pan",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_163",
+      "instruction": "place the black bowl in the oven",
+      "split": "train"
+    },
+    {
+      "dataset_id": "berkeley_autolab_ur5_0.1.0",
+      "episode_id": "episode_076",
+      "instruction": "pick up the blue cup and put it into the brown cup.",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_103",
+      "instruction": "place the yellow cup in the dish rack",
+      "split": "train"
+    },
+    {
+      "dataset_id": "ucsd_kitchen_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_104",
+      "instruction": "Put the canned spam into the sink",
+      "split": "train"
+    },
+    {
+      "dataset_id": "imperialcollege_sawyer_wrist_cam_0.1.0",
+      "episode_id": "episode_073",
+      "instruction": "pick up bottle",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_083",
+      "instruction": "Put the metal pot on the blue cloth.",
+      "split": "train"
+    },
+    {
+      "dataset_id": "cmu_stretch_0.1.0",
+      "episode_id": "episode_083",
+      "instruction": "lift open green garbage can lid",
+      "split": "train"
+    },
+    {
+      "dataset_id": "utokyo_xarm_bimanual_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_034",
+      "instruction": "Unfold a wrinkled towel.",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_023",
+      "instruction": "Move the cloth from the edge of the table to near cucumber.",
+      "split": "train"
+    },
+    {
+      "dataset_id": "asu_table_top_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_003",
+      "instruction": "move brown object",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_053",
+      "instruction": "place the gray bowl in the sink",
+      "split": "train"
+    },
+    {
+      "dataset_id": "imperialcollege_sawyer_wrist_cam_0.1.0",
+      "episode_id": "episode_043",
+      "instruction": "pour in mug",
+      "split": "train"
+    },
+    {
+      "dataset_id": "berkeley_autolab_ur5_0.1.0",
+      "episode_id": "episode_071",
+      "instruction": "pick up the blue cup and put it into the brown cup.",
+      "split": "train"
+    },
+    {
+      "dataset_id": "berkeley_autolab_ur5_0.1.0",
+      "episode_id": "episode_065",
+      "instruction": "put the ranch bottle into the pot",
+      "split": "train"
+    },
+    {
+      "dataset_id": "austin_sailor_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_013",
+      "instruction": "Place the bread, butter, and milk from the table onto the serving area.",
+      "split": "train"
+    },
+    {
+      "dataset_id": "austin_sirius_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_016",
+      "instruction": "Insert the blue gear onto the right peg, followed by the red gear",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_050",
+      "instruction": "pick up the butter dairy",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_107",
+      "instruction": "Place the bowl on the yellow cloth.",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_161",
+      "instruction": "place the gray bowl in the dish rack",
+      "split": "train"
+    },
+    {
+      "dataset_id": "austin_sailor_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_062",
+      "instruction": "Place the fish, sausage, and tomato into the frying pan.",
+      "split": "train"
+    },
+    {
+      "dataset_id": "fractal20220817_data_0.1.0",
+      "episode_id": "episode_033",
+      "instruction": "place green can into top drawer",
+      "split": "train"
+    },
+    {
+      "dataset_id": "asu_table_top_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_099",
+      "instruction": "put down bread",
+      "split": "train"
+    },
+    {
+      "dataset_id": "fractal20220817_data_0.1.0",
+      "episode_id": "episode_026",
+      "instruction": "move pepsi can near blue plastic bottle",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_023",
+      "instruction": "pick up the square bread",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_049",
+      "instruction": "place the green cup in the dish rack",
+      "split": "train"
+    },
+    {
+      "dataset_id": "austin_sirius_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_015",
+      "instruction": "Open the kcup holder, insert the kcup into the holder, and close the kcup holder",
+      "split": "train"
+    },
+    {
+      "dataset_id": "asu_table_top_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_050",
+      "instruction": "hold red square",
+      "split": "train"
+    },
+    {
+      "dataset_id": "imperialcollege_sawyer_wrist_cam_0.1.0",
+      "episode_id": "episode_078",
+      "instruction": "pick up bottle",
+      "split": "train"
+    },
+    {
+      "dataset_id": "asu_table_top_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_088",
+      "instruction": "put down maroon object",
+      "split": "train"
+    },
+    {
+      "dataset_id": "berkeley_autolab_ur5_0.1.0",
+      "episode_id": "episode_058",
+      "instruction": "pick up the blue cup and put it into the brown cup.",
+      "split": "train"
+    },
+    {
+      "dataset_id": "cmu_stretch_0.1.0",
+      "episode_id": "episode_102",
+      "instruction": "lift up a lid from the pot",
+      "split": "train"
+    },
+    {
+      "dataset_id": "imperialcollege_sawyer_wrist_cam_0.1.0",
+      "episode_id": "episode_059",
+      "instruction": "put cup in dishwasher",
+      "split": "train"
+    },
+    {
+      "dataset_id": "dlr_edan_shared_control_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_023",
+      "instruction": "pick the disk",
+      "split": "train"
+    },
+    {
+      "dataset_id": "stanford_hydra_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_103",
+      "instruction": "place dishes in the dish rack",
+      "split": "train"
+    },
+    {
+      "dataset_id": "imperialcollege_sawyer_wrist_cam_0.1.0",
+      "episode_id": "episode_115",
+      "instruction": "pick up bottle",
+      "split": "train"
+    },
+    {
+      "dataset_id": "dlr_edan_shared_control_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_099",
+      "instruction": "pick the red apple",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_024",
+      "instruction": "pick up the milk dairy",
+      "split": "train"
+    },
+    {
+      "dataset_id": "fractal20220817_data_0.1.0",
+      "episode_id": "episode_001",
+      "instruction": "close middle drawer",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_078",
+      "instruction": "pick up the gray bowl",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_084",
+      "instruction": "place the butter dairy in the gray bowl",
+      "split": "train"
+    },
+    {
+      "dataset_id": "ucsd_kitchen_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_125",
+      "instruction": "Turn on the faucet",
+      "split": "train"
+    },
+    {
+      "dataset_id": "ucsd_kitchen_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_117",
+      "instruction": "Put the green box into the sink",
+      "split": "train"
+    },
+    {
+      "dataset_id": "imperialcollege_sawyer_wrist_cam_0.1.0",
+      "episode_id": "episode_108",
+      "instruction": "pick up mug",
+      "split": "train"
+    },
+    {
+      "dataset_id": "utokyo_pr2_tabletop_manipulation_0.1.0",
+      "episode_id": "episode_027",
+      "instruction": "folding a cloth",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_020",
+      "instruction": "pick up the burger meat",
+      "split": "train"
+    },
+    {
+      "dataset_id": "cmu_stretch_0.1.0",
+      "episode_id": "episode_099",
+      "instruction": "pull open a dishwasher",
+      "split": "train"
+    },
+    {
+      "dataset_id": "ucsd_kitchen_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_036",
+      "instruction": "Open the oven door",
+      "split": "train"
+    },
+    {
+      "dataset_id": "ucsd_kitchen_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_132",
+      "instruction": "Open the carbinet door",
+      "split": "train"
+    },
+    {
+      "dataset_id": "dlr_edan_shared_control_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_064",
+      "instruction": "pick the orange",
+      "split": "train"
+    },
+    {
+      "dataset_id": "dlr_edan_shared_control_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_051",
+      "instruction": "pick the cube",
+      "split": "train"
+    },
+    {
+      "dataset_id": "dlr_edan_shared_control_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_070",
+      "instruction": "pick the green apple",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_015",
+      "instruction": "pick up the burger meat",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_112",
+      "instruction": "place the orange fruit in the table",
+      "split": "train"
+    },
+    {
+      "dataset_id": "imperialcollege_sawyer_wrist_cam_0.1.0",
+      "episode_id": "episode_069",
+      "instruction": "pick up kettle",
+      "split": "train"
+    },
+    {
+      "dataset_id": "austin_sirius_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_012",
+      "instruction": "Open the kcup holder, insert the kcup into the holder, and close the kcup holder",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_196",
+      "instruction": "pick up the green cup",
+      "split": "train"
+    },
+    {
+      "dataset_id": "austin_sailor_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_144",
+      "instruction": "Place the pan onto the stove and place the fish and sausage into the pan.",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_094",
+      "instruction": "place the yellow cup in the oven",
+      "split": "train"
+    },
+    {
+      "dataset_id": "imperialcollege_sawyer_wrist_cam_0.1.0",
+      "episode_id": "episode_163",
+      "instruction": "pick up apple",
+      "split": "train"
+    },
+    {
+      "dataset_id": "utokyo_xarm_pick_and_place_0.1.0",
+      "episode_id": "episode_022",
+      "instruction": "Pick up a white plate, and then place it on the red plate.",
+      "split": "train"
+    },
+    {
+      "dataset_id": "imperialcollege_sawyer_wrist_cam_0.1.0",
+      "episode_id": "episode_124",
+      "instruction": "pick up shoe",
+      "split": "train"
+    },
+    {
+      "dataset_id": "nyu_rot_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_011",
+      "instruction": "turn the knob",
+      "split": "train"
+    },
+    {
+      "dataset_id": "utokyo_xarm_bimanual_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_011",
+      "instruction": "Unfold a wrinkled towel.",
+      "split": "train"
+    },
+    {
+      "dataset_id": "cmu_stretch_0.1.0",
+      "episode_id": "episode_108",
+      "instruction": "lift up a lid from the pot",
+      "split": "train"
+    },
+    {
+      "dataset_id": "dlr_edan_shared_control_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_055",
+      "instruction": "pick the die",
+      "split": "train"
+    },
+    {
+      "dataset_id": "imperialcollege_sawyer_wrist_cam_0.1.0",
+      "episode_id": "episode_019",
+      "instruction": "pick up pan",
+      "split": "train"
+    },
+    {
+      "dataset_id": "ucsd_kitchen_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_137",
+      "instruction": "Put the canned spam into the sink",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_083",
+      "instruction": "place the butter dairy in the table",
+      "split": "train"
+    },
+    {
+      "dataset_id": "austin_sirius_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_010",
+      "instruction": "Open the kcup holder, insert the kcup into the holder, and close the kcup holder",
+      "split": "train"
+    },
+    {
+      "dataset_id": "utokyo_pr2_tabletop_manipulation_0.1.0",
+      "episode_id": "episode_028",
+      "instruction": "picking a grape",
+      "split": "train"
+    },
+    {
+      "dataset_id": "asu_table_top_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_031",
+      "instruction": "pick cocacola bottle",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_011",
+      "instruction": "pick up the black bowl",
+      "split": "train"
+    },
+    {
+      "dataset_id": "imperialcollege_sawyer_wrist_cam_0.1.0",
+      "episode_id": "episode_067",
+      "instruction": "pick up bottle",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_149",
+      "instruction": "place the milk dairy in the sink",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_119",
+      "instruction": "place the apple fruit in the sink",
+      "split": "train"
+    },
+    {
+      "dataset_id": "nyu_rot_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_009",
+      "instruction": "insert the peg in the cup",
+      "split": "train"
+    },
+    {
+      "dataset_id": "asu_table_top_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_075",
+      "instruction": "place down maroon square",
+      "split": "train"
+    },
+    {
+      "dataset_id": "asu_table_top_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_030",
+      "instruction": "put down white box",
+      "split": "train"
+    },
+    {
+      "dataset_id": "cmu_stretch_0.1.0",
+      "episode_id": "episode_133",
+      "instruction": "lift open green garbage can lid",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_017",
+      "instruction": "pick up the long bread",
+      "split": "train"
+    },
+    {
+      "dataset_id": "dlr_edan_shared_control_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_078",
+      "instruction": "pick the die",
+      "split": "train"
+    },
+    {
+      "dataset_id": "ucsd_kitchen_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_010",
+      "instruction": "Open the carbinet door",
+      "split": "train"
+    },
+    {
+      "dataset_id": "imperialcollege_sawyer_wrist_cam_0.1.0",
+      "episode_id": "episode_089",
+      "instruction": "pick up pan",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_004",
+      "instruction": "pick up the orange fruit",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_065",
+      "instruction": "put sweet potato in pot which is in sink distractors",
+      "split": "train"
+    },
+    {
+      "dataset_id": "asu_table_top_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_044",
+      "instruction": "place down milk box",
+      "split": "train"
+    },
+    {
+      "dataset_id": "asu_table_top_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_094",
+      "instruction": "pick up white box",
+      "split": "train"
+    },
+    {
+      "dataset_id": "cmu_stretch_0.1.0",
+      "episode_id": "episode_078",
+      "instruction": "lift open green garbage can lid",
+      "split": "train"
+    },
+    {
+      "dataset_id": "austin_sailor_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_010",
+      "instruction": "Place the fish, sausage, and tomato into the frying pan.",
+      "split": "train"
+    },
+    {
+      "dataset_id": "utokyo_pr2_tabletop_manipulation_0.1.0",
+      "episode_id": "episode_044",
+      "instruction": "picking a bread",
+      "split": "train"
+    },
+    {
+      "dataset_id": "austin_sirius_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_023",
+      "instruction": "Insert the blue gear onto the right peg, followed by the red gear",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_180",
+      "instruction": "place the apple fruit in the sink",
+      "split": "train"
+    },
+    {
+      "dataset_id": "utokyo_pr2_tabletop_manipulation_0.1.0",
+      "episode_id": "episode_033",
+      "instruction": "folding a cloth",
+      "split": "train"
+    },
+    {
+      "dataset_id": "dlr_edan_shared_control_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_073",
+      "instruction": "pick the die",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_151",
+      "instruction": "place the gray bowl in the table",
+      "split": "train"
+    },
+    {
+      "dataset_id": "austin_buds_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_015",
+      "instruction": "Take the lid off the pot, put the pot on the plate, and use the tool to push to pot to the front of the table.",
+      "split": "train"
+    },
+    {
+      "dataset_id": "cmu_stretch_0.1.0",
+      "episode_id": "episode_033",
+      "instruction": "open drawer",
+      "split": "train"
+    },
+    {
+      "dataset_id": "asu_table_top_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_070",
+      "instruction": "hold blue bottle",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_025",
+      "instruction": "open fridge",
+      "split": "train"
+    },
+    {
+      "dataset_id": "dlr_edan_shared_control_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_016",
+      "instruction": "pick the tube",
+      "split": "train"
+    },
+    {
+      "dataset_id": "imperialcollege_sawyer_wrist_cam_0.1.0",
+      "episode_id": "episode_026",
+      "instruction": "open lid",
+      "split": "train"
+    },
+    {
+      "dataset_id": "dlr_sara_pour_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_023",
+      "instruction": "Pour into the mug",
+      "split": "train"
+    },
+    {
+      "dataset_id": "berkeley_autolab_ur5_0.1.0",
+      "episode_id": "episode_018",
+      "instruction": "sweep the green cloth to the left side of the table",
+      "split": "train"
+    },
+    {
+      "dataset_id": "asu_table_top_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_035",
+      "instruction": "raise maroon square",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_110",
+      "instruction": "place the gray bowl in the dish rack",
+      "split": "train"
+    },
+    {
+      "dataset_id": "imperialcollege_sawyer_wrist_cam_0.1.0",
+      "episode_id": "episode_029",
+      "instruction": "hang cup",
+      "split": "train"
+    },
+    {
+      "dataset_id": "cmu_stretch_0.1.0",
+      "episode_id": "episode_122",
+      "instruction": "open door",
+      "split": "train"
+    },
+    {
+      "dataset_id": "imperialcollege_sawyer_wrist_cam_0.1.0",
+      "episode_id": "episode_092",
+      "instruction": "pick up mug",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_018",
+      "instruction": "put sweet potato in pot",
+      "split": "train"
+    },
+    {
+      "dataset_id": "cmu_stretch_0.1.0",
+      "episode_id": "episode_080",
+      "instruction": "pull open a dishwasher",
+      "split": "train"
+    },
+    {
+      "dataset_id": "ucsd_kitchen_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_102",
+      "instruction": "Turn on the faucet",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_190",
+      "instruction": "place the long bread in the sink",
+      "split": "train"
+    },
+    {
+      "dataset_id": "austin_buds_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_016",
+      "instruction": "Take the lid off the pot, put the pot on the plate, and use the tool to push to pot to the front of the table.",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_192",
+      "instruction": "pick up the orange fruit",
+      "split": "train"
+    },
+    {
+      "dataset_id": "austin_sailor_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_112",
+      "instruction": "Place the bread, butter, and milk from the table onto the serving area.",
+      "split": "train"
+    },
+    {
+      "dataset_id": "austin_sirius_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_041",
+      "instruction": "Open the kcup holder, insert the kcup into the holder, and close the kcup holder",
+      "split": "train"
+    },
+    {
+      "dataset_id": "dlr_sara_pour_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_017",
+      "instruction": "Pour into the mug",
+      "split": "train"
+    },
+    {
+      "dataset_id": "utokyo_xarm_bimanual_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_045",
+      "instruction": "Reach a towel.",
+      "split": "train"
+    },
+    {
+      "dataset_id": "dlr_edan_shared_control_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_021",
+      "instruction": "pick the yellow ball",
+      "split": "train"
+    },
+    {
+      "dataset_id": "asu_table_top_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_100",
+      "instruction": "push bottle",
+      "split": "train"
+    },
+    {
+      "dataset_id": "stanford_hydra_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_052",
+      "instruction": "place dishes in the dish rack",
+      "split": "train"
+    },
+    {
+      "dataset_id": "nyu_rot_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_007",
+      "instruction": "press the button",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_022",
+      "instruction": "pick up the orange fruit",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_169",
+      "instruction": "place the gray bowl in the oven",
+      "split": "train"
+    },
+    {
+      "dataset_id": "ucsd_kitchen_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_049",
+      "instruction": "Place the teapot on the stove",
+      "split": "train"
+    },
+    {
+      "dataset_id": "austin_sirius_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_044",
+      "instruction": "Open the kcup holder, insert the kcup into the holder, and close the kcup holder",
+      "split": "train"
+    },
+    {
+      "dataset_id": "ucsd_kitchen_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_068",
+      "instruction": "Open the oven door",
+      "split": "train"
+    },
+    {
+      "dataset_id": "stanford_hydra_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_005",
+      "instruction": "place dishes in the dish rack",
+      "split": "train"
+    },
+    {
+      "dataset_id": "berkeley_autolab_ur5_0.1.0",
+      "episode_id": "episode_044",
+      "instruction": "put the ranch bottle into the pot",
+      "split": "train"
+    },
+    {
+      "dataset_id": "ucsd_kitchen_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_148",
+      "instruction": "Put the bowl inside the kitchen cabinet",
+      "split": "train"
+    },
+    {
+      "dataset_id": "cmu_stretch_0.1.0",
+      "episode_id": "episode_029",
+      "instruction": "pull open a dishwasher",
+      "split": "train"
+    },
+    {
+      "dataset_id": "berkeley_autolab_ur5_0.1.0",
+      "episode_id": "episode_026",
+      "instruction": "put the ranch bottle into the pot",
+      "split": "train"
+    },
+    {
+      "dataset_id": "cmu_stretch_0.1.0",
+      "episode_id": "episode_090",
+      "instruction": "lift open green garbage can lid",
+      "split": "train"
+    },
+    {
+      "dataset_id": "austin_buds_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_024",
+      "instruction": "Take the lid off the pot, put the pot on the plate, and use the tool to push to pot to the front of the table.",
+      "split": "train"
+    },
+    {
+      "dataset_id": "fractal20220817_data_0.1.0",
+      "episode_id": "episode_031",
+      "instruction": "pick apple from white bowl",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_132",
+      "instruction": "pick up the square bread",
+      "split": "train"
+    },
+    {
+      "dataset_id": "ucsd_kitchen_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_015",
+      "instruction": "Open the oven door",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_084",
+      "instruction": "flip pot upright in sink distractors",
+      "split": "train"
+    },
+    {
+      "dataset_id": "berkeley_autolab_ur5_0.1.0",
+      "episode_id": "episode_096",
+      "instruction": "take the tiger out of the red bowl and put it in the grey bowl",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_100",
+      "instruction": "Place the vessel over the violet cloth.",
+      "split": "train"
+    },
+    {
+      "dataset_id": "fractal20220817_data_0.1.0",
+      "episode_id": "episode_041",
+      "instruction": "move green rice chip bag near rxbar blueberry",
+      "split": "train"
+    },
+    {
+      "dataset_id": "berkeley_autolab_ur5_0.1.0",
+      "episode_id": "episode_034",
+      "instruction": "pick up the blue cup and put it into the brown cup.",
+      "split": "train"
+    },
+    {
+      "dataset_id": "berkeley_autolab_ur5_0.1.0",
+      "episode_id": "episode_017",
+      "instruction": "take the tiger out of the red bowl and put it in the grey bowl",
+      "split": "train"
+    },
+    {
+      "dataset_id": "cmu_stretch_0.1.0",
+      "episode_id": "episode_055",
+      "instruction": "open drawer",
+      "split": "train"
+    },
+    {
+      "dataset_id": "austin_buds_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_013",
+      "instruction": "Take the lid off the pot, put the pot on the plate, and use the tool to push to pot to the front of the table.",
+      "split": "train"
+    },
+    {
+      "dataset_id": "austin_sailor_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_047",
+      "instruction": "Place the fish, sausage, and tomato into the frying pan.",
+      "split": "train"
+    },
+    {
+      "dataset_id": "berkeley_autolab_ur5_0.1.0",
+      "episode_id": "episode_037",
+      "instruction": "pick up the blue cup and put it into the brown cup.",
+      "split": "train"
+    },
+    {
+      "dataset_id": "dlr_edan_shared_control_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_022",
+      "instruction": "pick the orange",
+      "split": "train"
+    },
+    {
+      "dataset_id": "asu_table_top_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_028",
+      "instruction": "place down brown object",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_194",
+      "instruction": "place the orange fruit in the gray plate",
+      "split": "train"
+    },
+    {
+      "dataset_id": "imperialcollege_sawyer_wrist_cam_0.1.0",
+      "episode_id": "episode_064",
+      "instruction": "put apple in pot",
+      "split": "train"
+    },
+    {
+      "dataset_id": "cmu_stretch_0.1.0",
+      "episode_id": "episode_028",
+      "instruction": "open drawer",
+      "split": "train"
+    },
+    {
+      "dataset_id": "cmu_stretch_0.1.0",
+      "episode_id": "episode_087",
+      "instruction": "open door",
+      "split": "train"
+    },
+    {
+      "dataset_id": "ucsd_kitchen_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_098",
+      "instruction": "Turn on the faucet",
+      "split": "train"
+    },
+    {
+      "dataset_id": "ucsd_kitchen_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_067",
+      "instruction": "Put the bowl inside the kitchen cabinet",
+      "split": "train"
+    },
+    {
+      "dataset_id": "utokyo_pr2_tabletop_manipulation_0.1.0",
+      "episode_id": "episode_038",
+      "instruction": "picking a grape",
+      "split": "train"
+    },
+    {
+      "dataset_id": "ucsd_kitchen_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_108",
+      "instruction": "Open the carbinet door",
+      "split": "train"
+    },
+    {
+      "dataset_id": "berkeley_autolab_ur5_0.1.0",
+      "episode_id": "episode_021",
+      "instruction": "sweep the green cloth to the left side of the table",
+      "split": "train"
+    },
+    {
+      "dataset_id": "cmu_stretch_0.1.0",
+      "episode_id": "episode_032",
+      "instruction": "lift up a lid from the pot",
+      "split": "train"
+    },
+    {
+      "dataset_id": "asu_table_top_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_101",
+      "instruction": "raise coke bottle",
+      "split": "train"
+    },
+    {
+      "dataset_id": "ucsd_kitchen_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_135",
+      "instruction": "Put the green box into the sink",
+      "split": "train"
+    },
+    {
+      "dataset_id": "asu_table_top_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_062",
+      "instruction": "put down bread",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_063",
+      "instruction": "pick up the milk dairy",
+      "split": "train"
+    },
+    {
+      "dataset_id": "stanford_hydra_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_051",
+      "instruction": "place dishes in the dish rack",
+      "split": "train"
+    },
+    {
+      "dataset_id": "berkeley_autolab_ur5_0.1.0",
+      "episode_id": "episode_013",
+      "instruction": "sweep the green cloth to the left side of the table",
+      "split": "train"
+    },
+    {
+      "dataset_id": "dlr_edan_shared_control_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_044",
+      "instruction": "pick the cube",
+      "split": "train"
+    },
+    {
+      "dataset_id": "imperialcollege_sawyer_wrist_cam_0.1.0",
+      "episode_id": "episode_140",
+      "instruction": "insert toast",
+      "split": "train"
+    },
+    {
+      "dataset_id": "stanford_hydra_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_048",
+      "instruction": "place dishes in the dish rack",
+      "split": "train"
+    },
+    {
+      "dataset_id": "utokyo_xarm_bimanual_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_040",
+      "instruction": "Unfold a wrinkled towel.",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_077",
+      "instruction": "Put the metal pot in front of the blue cloth.",
+      "split": "train"
+    },
+    {
+      "dataset_id": "imperialcollege_sawyer_wrist_cam_0.1.0",
+      "episode_id": "episode_041",
+      "instruction": "insert toast",
+      "split": "train"
+    },
+    {
+      "dataset_id": "austin_sailor_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_034",
+      "instruction": "Place the pan onto the stove and place the fish and sausage into the pan.",
+      "split": "train"
+    },
+    {
+      "dataset_id": "austin_sailor_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_087",
+      "instruction": "Place the pan onto the stove and place the fish and sausage into the pan.",
+      "split": "train"
+    },
+    {
+      "dataset_id": "berkeley_autolab_ur5_0.1.0",
+      "episode_id": "episode_014",
+      "instruction": "take the tiger out of the red bowl and put it in the grey bowl",
+      "split": "train"
+    },
+    {
+      "dataset_id": "imperialcollege_sawyer_wrist_cam_0.1.0",
+      "episode_id": "episode_112",
+      "instruction": "open bottle",
+      "split": "train"
+    },
+    {
+      "dataset_id": "cmu_stretch_0.1.0",
+      "episode_id": "episode_016",
+      "instruction": "lift open green garbage can lid",
+      "split": "train"
+    },
+    {
+      "dataset_id": "dlr_edan_shared_control_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_003",
+      "instruction": "pick the green apple",
+      "split": "train"
+    },
+    {
+      "dataset_id": "imperialcollege_sawyer_wrist_cam_0.1.0",
+      "episode_id": "episode_091",
+      "instruction": "insert toast",
+      "split": "train"
+    },
+    {
+      "dataset_id": "dlr_edan_shared_control_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_014",
+      "instruction": "pick the pear",
+      "split": "train"
+    },
+    {
+      "dataset_id": "imperialcollege_sawyer_wrist_cam_0.1.0",
+      "episode_id": "episode_126",
+      "instruction": "stack bowls",
+      "split": "train"
+    },
+    {
+      "dataset_id": "austin_sirius_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_026",
+      "instruction": "Open the kcup holder, insert the kcup into the holder, and close the kcup holder",
+      "split": "train"
+    },
+    {
+      "dataset_id": "utokyo_xarm_bimanual_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_006",
+      "instruction": "Unfold a wrinkled towel.",
+      "split": "train"
+    },
+    {
+      "dataset_id": "imperialcollege_sawyer_wrist_cam_0.1.0",
+      "episode_id": "episode_068",
+      "instruction": "grasp can",
+      "split": "train"
+    },
+    {
+      "dataset_id": "utokyo_xarm_pick_and_place_0.1.0",
+      "episode_id": "episode_012",
+      "instruction": "Pick up a white plate, and then place it on the red plate.",
+      "split": "train"
+    },
+    {
+      "dataset_id": "berkeley_autolab_ur5_0.1.0",
+      "episode_id": "episode_030",
+      "instruction": "take the tiger out of the red bowl and put it in the grey bowl",
+      "split": "train"
+    },
+    {
+      "dataset_id": "bridge_0.1.0",
+      "episode_id": "episode_070",
+      "instruction": "Move the spatula to the bottom left corner of the table.",
+      "split": "train"
+    },
+    {
+      "dataset_id": "nyu_rot_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_012",
+      "instruction": "insert the peg in the cup",
+      "split": "train"
+    },
+    {
+      "dataset_id": "imperialcollege_sawyer_wrist_cam_0.1.0",
+      "episode_id": "episode_101",
+      "instruction": "pick up mug",
+      "split": "train"
+    },
+    {
+      "dataset_id": "austin_sailor_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_103",
+      "instruction": "Place the pan onto the stove and place the fish and sausage into the pan.",
+      "split": "train"
+    },
+    {
+      "dataset_id": "berkeley_autolab_ur5_0.1.0",
+      "episode_id": "episode_108",
+      "instruction": "put the ranch bottle into the pot",
+      "split": "train"
+    },
+    {
+      "dataset_id": "cmu_stretch_0.1.0",
+      "episode_id": "episode_005",
+      "instruction": "lift open green garbage can lid",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_175",
+      "instruction": "pick up the orange fruit",
+      "split": "train"
+    },
+    {
+      "dataset_id": "austin_sirius_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_002",
+      "instruction": "Insert the blue gear onto the right peg, followed by the red gear",
+      "split": "train"
+    },
+    {
+      "dataset_id": "imperialcollege_sawyer_wrist_cam_0.1.0",
+      "episode_id": "episode_123",
+      "instruction": "put cup in dishwasher",
+      "split": "train"
+    },
+    {
+      "dataset_id": "austin_sailor_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_156",
+      "instruction": "Place the pan onto the stove and place the fish and sausage into the pan.",
+      "split": "train"
+    },
+    {
+      "dataset_id": "dlr_sara_pour_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_002",
+      "instruction": "Pour into the mug",
+      "split": "train"
+    },
+    {
+      "dataset_id": "berkeley_autolab_ur5_0.1.0",
+      "episode_id": "episode_057",
+      "instruction": "pick up the blue cup and put it into the brown cup.",
+      "split": "train"
+    },
+    {
+      "dataset_id": "asu_table_top_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_025",
+      "instruction": "put down red can",
+      "split": "train"
+    },
+    {
+      "dataset_id": "berkeley_autolab_ur5_0.1.0",
+      "episode_id": "episode_048",
+      "instruction": "pick up the blue cup and put it into the brown cup.",
+      "split": "train"
+    },
+    {
+      "dataset_id": "utokyo_pr2_opening_fridge_0.1.0",
+      "episode_id": "episode_006",
+      "instruction": "opening the fridge",
+      "split": "train"
+    },
+    {
+      "dataset_id": "cmu_stretch_0.1.0",
+      "episode_id": "episode_045",
+      "instruction": "lift up a lid from the pot",
+      "split": "train"
+    },
+    {
+      "dataset_id": "asu_table_top_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_082",
+      "instruction": "pick maroon square",
+      "split": "train"
+    },
+    {
+      "dataset_id": "fractal20220817_data_0.1.0",
+      "episode_id": "episode_038",
+      "instruction": "place coke can into middle drawer",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_129",
+      "instruction": "pick up the milk dairy",
+      "split": "train"
+    },
+    {
+      "dataset_id": "cmu_stretch_0.1.0",
+      "episode_id": "episode_004",
+      "instruction": "lift open green garbage can lid",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_051",
+      "instruction": "pick up the yellow cup",
+      "split": "train"
+    },
+    {
+      "dataset_id": "stanford_hydra_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_040",
+      "instruction": "place dishes in the dish rack",
+      "split": "train"
+    },
+    {
+      "dataset_id": "ucsd_kitchen_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_029",
+      "instruction": "Put the white box into the sink",
+      "split": "train"
+    },
+    {
+      "dataset_id": "utokyo_pr2_tabletop_manipulation_0.1.0",
+      "episode_id": "episode_020",
+      "instruction": "folding a cloth",
+      "split": "train"
+    },
+    {
+      "dataset_id": "cmu_stretch_0.1.0",
+      "episode_id": "episode_057",
+      "instruction": "pull open a dishwasher",
+      "split": "train"
+    },
+    {
+      "dataset_id": "imperialcollege_sawyer_wrist_cam_0.1.0",
+      "episode_id": "episode_141",
+      "instruction": "insert toast",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_025",
+      "instruction": "place the milk dairy in the table",
+      "split": "train"
+    },
+    {
+      "dataset_id": "utokyo_xarm_pick_and_place_0.1.0",
+      "episode_id": "episode_019",
+      "instruction": "Pick up a white plate, and then place it on the red plate.",
+      "split": "train"
+    },
+    {
+      "dataset_id": "asu_table_top_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_038",
+      "instruction": "place down white box",
+      "split": "train"
+    },
+    {
+      "dataset_id": "asu_table_top_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_024",
+      "instruction": "push cocacola bottle",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_052",
+      "instruction": "place the gray bowl in the table",
+      "split": "train"
+    },
+    {
+      "dataset_id": "jaco_play_0.1.0",
+      "episode_id": "episode_153",
+      "instruction": "pick up the butter dairy",
+      "split": "train"
+    },
+    {
+      "dataset_id": "cmu_stretch_0.1.0",
+      "episode_id": "episode_118",
+      "instruction": "open door",
+      "split": "train"
+    },
+    {
+      "dataset_id": "berkeley_autolab_ur5_0.1.0",
+      "episode_id": "episode_000",
+      "instruction": "sweep the green cloth to the left side of the table",
+      "split": "train"
+    },
+    {
+      "dataset_id": "utokyo_pr2_tabletop_manipulation_0.1.0",
+      "episode_id": "episode_060",
+      "instruction": "picking a bread",
+      "split": "train"
+    },
+    {
+      "dataset_id": "cmu_stretch_0.1.0",
+      "episode_id": "episode_064",
+      "instruction": "lift up a lid from the pot",
+      "split": "train"
+    },
+    {
+      "dataset_id": "utokyo_pr2_tabletop_manipulation_0.1.0",
+      "episode_id": "episode_045",
+      "instruction": "picking a bread",
+      "split": "train"
+    },
+    {
+      "dataset_id": "austin_sirius_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_037",
+      "instruction": "Open the kcup holder, insert the kcup into the holder, and close the kcup holder",
+      "split": "train"
+    },
+    {
+      "dataset_id": "fractal20220817_data_0.1.0",
+      "episode_id": "episode_040",
+      "instruction": "knock green can over",
+      "split": "train"
+    },
+    {
+      "dataset_id": "fractal20220817_data_0.1.0",
+      "episode_id": "episode_011",
+      "instruction": "pick apple",
+      "split": "train"
+    },
+    {
+      "dataset_id": "dlr_edan_shared_control_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_052",
+      "instruction": "pick the orange",
+      "split": "train"
+    },
+    {
+      "dataset_id": "imperialcollege_sawyer_wrist_cam_0.1.0",
+      "episode_id": "episode_037",
+      "instruction": "swipe",
+      "split": "train"
+    },
+    {
+      "dataset_id": "stanford_hydra_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_004",
+      "instruction": "place dishes in the dish rack",
+      "split": "train"
+    },
+    {
+      "dataset_id": "tokyo_u_lsmo_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_018",
+      "instruction": "avoid obstacle and reach the blue pen",
+      "split": "val"
+    },
+    {
+      "dataset_id": "ucsd_pick_and_place_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_251",
+      "instruction": "pick up the red object from the table",
+      "split": "val"
+    },
+    {
+      "dataset_id": "tokyo_u_lsmo_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_041",
+      "instruction": "avoid obstacle and reach the blue pen",
+      "split": "val"
+    },
+    {
+      "dataset_id": "tokyo_u_lsmo_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_043",
+      "instruction": "avoid obstacle and reach the blue pen",
+      "split": "val"
+    },
+    {
+      "dataset_id": "tokyo_u_lsmo_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_007",
+      "instruction": "avoid obstacle and reach the blue pen",
+      "split": "val"
+    },
+    {
+      "dataset_id": "ucsd_pick_and_place_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_268",
+      "instruction": "pick up the red object from the table",
+      "split": "val"
+    },
+    {
+      "dataset_id": "ucsd_pick_and_place_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_236",
+      "instruction": "pick up the red object from the table",
+      "split": "val"
+    },
+    {
+      "dataset_id": "stanford_kuka_multimodal_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_002",
+      "instruction": "insert the peg into the hole",
+      "split": "val"
+    },
+    {
+      "dataset_id": "tokyo_u_lsmo_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_001",
+      "instruction": "avoid obstacle and reach the blue pen",
+      "split": "val"
+    },
+    {
+      "dataset_id": "tokyo_u_lsmo_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_038",
+      "instruction": "avoid obstacle and reach the scissors",
+      "split": "val"
+    },
+    {
+      "dataset_id": "tokyo_u_lsmo_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_049",
+      "instruction": "avoid obstacle and reach the scissors",
+      "split": "val"
+    },
+    {
+      "dataset_id": "stanford_kuka_multimodal_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_074",
+      "instruction": "insert the peg into the hole",
+      "split": "val"
+    },
+    {
+      "dataset_id": "tokyo_u_lsmo_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_006",
+      "instruction": "avoid obstacle and reach the scissors",
+      "split": "val"
+    },
+    {
+      "dataset_id": "ucsd_pick_and_place_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_303",
+      "instruction": "pick up the red object from the table",
+      "split": "val"
+    },
+    {
+      "dataset_id": "stanford_kuka_multimodal_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_188",
+      "instruction": "insert the peg into the hole",
+      "split": "val"
+    },
+    {
+      "dataset_id": "ucsd_pick_and_place_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_088",
+      "instruction": "place the pot in the sink",
+      "split": "val"
+    },
+    {
+      "dataset_id": "stanford_kuka_multimodal_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_149",
+      "instruction": "insert the peg into the hole",
+      "split": "val"
+    },
+    {
+      "dataset_id": "stanford_kuka_multimodal_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_058",
+      "instruction": "insert the peg into the hole",
+      "split": "val"
+    },
+    {
+      "dataset_id": "tokyo_u_lsmo_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_024",
+      "instruction": "avoid obstacle and reach the blue pen",
+      "split": "val"
+    },
+    {
+      "dataset_id": "ucsd_pick_and_place_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_125",
+      "instruction": "place the pot in the sink",
+      "split": "val"
+    },
+    {
+      "dataset_id": "ucsd_pick_and_place_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_209",
+      "instruction": "pick up the green object from the table",
+      "split": "val"
+    },
+    {
+      "dataset_id": "tokyo_u_lsmo_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_032",
+      "instruction": "avoid obstacle and reach the blue pen",
+      "split": "val"
+    },
+    {
+      "dataset_id": "tokyo_u_lsmo_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_028",
+      "instruction": "avoid obstacle and reach the blue pen",
+      "split": "val"
+    },
+    {
+      "dataset_id": "ucsd_pick_and_place_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_309",
+      "instruction": "place the pot in the sink",
+      "split": "val"
+    },
+    {
+      "dataset_id": "dlr_sara_grid_clamp_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_031",
+      "instruction": "Place grid clamp",
+      "split": "val"
+    },
+    {
+      "dataset_id": "dlr_sara_grid_clamp_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_015",
+      "instruction": "Place grid clamp",
+      "split": "val"
+    },
+    {
+      "dataset_id": "dlr_sara_grid_clamp_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_011",
+      "instruction": "Place grid clamp",
+      "split": "val"
+    },
+    {
+      "dataset_id": "tokyo_u_lsmo_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_047",
+      "instruction": "avoid obstacle and reach the blue pen",
+      "split": "val"
+    },
+    {
+      "dataset_id": "stanford_kuka_multimodal_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_016",
+      "instruction": "insert the peg into the hole",
+      "split": "val"
+    },
+    {
+      "dataset_id": "tokyo_u_lsmo_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_029",
+      "instruction": "avoid obstacle and reach the scissors",
+      "split": "val"
+    },
+    {
+      "dataset_id": "tokyo_u_lsmo_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_037",
+      "instruction": "avoid obstacle and reach the scissors",
+      "split": "val"
+    },
+    {
+      "dataset_id": "ucsd_pick_and_place_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_229",
+      "instruction": "pick up the green object from the table",
+      "split": "val"
+    },
+    {
+      "dataset_id": "tokyo_u_lsmo_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_021",
+      "instruction": "avoid obstacle and reach the scissors",
+      "split": "val"
+    },
+    {
+      "dataset_id": "dlr_sara_grid_clamp_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_072",
+      "instruction": "Place grid clamp",
+      "split": "val"
+    },
+    {
+      "dataset_id": "ucsd_pick_and_place_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_115",
+      "instruction": "place the pot in the sink",
+      "split": "val"
+    },
+    {
+      "dataset_id": "dlr_sara_grid_clamp_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_082",
+      "instruction": "Place grid clamp",
+      "split": "val"
+    },
+    {
+      "dataset_id": "stanford_kuka_multimodal_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_165",
+      "instruction": "insert the peg into the hole",
+      "split": "val"
+    },
+    {
+      "dataset_id": "ucsd_pick_and_place_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_176",
+      "instruction": "place the pot in the sink",
+      "split": "val"
+    },
+    {
+      "dataset_id": "dlr_sara_grid_clamp_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_037",
+      "instruction": "Place grid clamp",
+      "split": "val"
+    },
+    {
+      "dataset_id": "tokyo_u_lsmo_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_035",
+      "instruction": "avoid obstacle and reach the blue pen",
+      "split": "val"
+    },
+    {
+      "dataset_id": "tokyo_u_lsmo_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_045",
+      "instruction": "avoid obstacle and reach the scissors",
+      "split": "val"
+    },
+    {
+      "dataset_id": "tokyo_u_lsmo_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_033",
+      "instruction": "avoid obstacle and reach the scissors",
+      "split": "val"
+    },
+    {
+      "dataset_id": "ucsd_pick_and_place_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_064",
+      "instruction": "pick up the red object from the table",
+      "split": "val"
+    },
+    {
+      "dataset_id": "tokyo_u_lsmo_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_015",
+      "instruction": "avoid obstacle and reach the blue pen",
+      "split": "val"
+    },
+    {
+      "dataset_id": "dlr_sara_grid_clamp_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_089",
+      "instruction": "Place grid clamp",
+      "split": "val"
+    },
+    {
+      "dataset_id": "tokyo_u_lsmo_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_034",
+      "instruction": "avoid obstacle and reach the blue pen",
+      "split": "val"
+    },
+    {
+      "dataset_id": "tokyo_u_lsmo_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_036",
+      "instruction": "avoid obstacle and reach the scissors",
+      "split": "val"
+    },
+    {
+      "dataset_id": "ucsd_pick_and_place_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_275",
+      "instruction": "place the pot in the sink",
+      "split": "val"
+    },
+    {
+      "dataset_id": "dlr_sara_grid_clamp_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_042",
+      "instruction": "Place grid clamp",
+      "split": "val"
+    },
+    {
+      "dataset_id": "tokyo_u_lsmo_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_046",
+      "instruction": "avoid obstacle and reach the blue pen",
+      "split": "val"
+    },
+    {
+      "dataset_id": "ucsd_pick_and_place_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_083",
+      "instruction": "place the pot in the sink",
+      "split": "val"
+    },
+    {
+      "dataset_id": "ucsd_pick_and_place_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_369",
+      "instruction": "pick up the red object from the table",
+      "split": "val"
+    },
+    {
+      "dataset_id": "ucsd_pick_and_place_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_013",
+      "instruction": "place the pot in the sink",
+      "split": "val"
+    },
+    {
+      "dataset_id": "ucsd_pick_and_place_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_124",
+      "instruction": "place the pot in the sink",
+      "split": "val"
+    },
+    {
+      "dataset_id": "stanford_kuka_multimodal_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_146",
+      "instruction": "insert the peg into the hole",
+      "split": "val"
+    },
+    {
+      "dataset_id": "tokyo_u_lsmo_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_011",
+      "instruction": "avoid obstacle and reach the scissors",
+      "split": "val"
+    },
+    {
+      "dataset_id": "ucsd_pick_and_place_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_184",
+      "instruction": "pick up the red object from the table",
+      "split": "val"
+    },
+    {
+      "dataset_id": "ucsd_pick_and_place_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_134",
+      "instruction": "place the pot in the sink",
+      "split": "val"
+    },
+    {
+      "dataset_id": "dlr_sara_grid_clamp_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_052",
+      "instruction": "Place grid clamp",
+      "split": "val"
+    },
+    {
+      "dataset_id": "tokyo_u_lsmo_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_039",
+      "instruction": "avoid obstacle and reach the scissors",
+      "split": "val"
+    },
+    {
+      "dataset_id": "ucsd_pick_and_place_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_222",
+      "instruction": "place the pot in the sink",
+      "split": "val"
+    },
+    {
+      "dataset_id": "dlr_sara_grid_clamp_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_043",
+      "instruction": "Place grid clamp",
+      "split": "val"
+    },
+    {
+      "dataset_id": "ucsd_pick_and_place_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_177",
+      "instruction": "place the pot in the sink",
+      "split": "val"
+    },
+    {
+      "dataset_id": "ucsd_pick_and_place_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_295",
+      "instruction": "place the pot in the sink",
+      "split": "val"
+    },
+    {
+      "dataset_id": "dlr_sara_grid_clamp_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_004",
+      "instruction": "Place grid clamp",
+      "split": "val"
+    },
+    {
+      "dataset_id": "ucsd_pick_and_place_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_375",
+      "instruction": "pick up the red object from the table",
+      "split": "val"
+    },
+    {
+      "dataset_id": "ucsd_pick_and_place_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_005",
+      "instruction": "pick up the red object from the table",
+      "split": "val"
+    },
+    {
+      "dataset_id": "stanford_kuka_multimodal_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_025",
+      "instruction": "insert the peg into the hole",
+      "split": "val"
+    },
+    {
+      "dataset_id": "stanford_kuka_multimodal_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_056",
+      "instruction": "insert the peg into the hole",
+      "split": "val"
+    },
+    {
+      "dataset_id": "dlr_sara_grid_clamp_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_017",
+      "instruction": "Place grid clamp",
+      "split": "val"
+    },
+    {
+      "dataset_id": "stanford_kuka_multimodal_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_036",
+      "instruction": "insert the peg into the hole",
+      "split": "val"
+    },
+    {
+      "dataset_id": "ucsd_pick_and_place_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_310",
+      "instruction": "place the pot in the sink",
+      "split": "val"
+    },
+    {
+      "dataset_id": "tokyo_u_lsmo_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_031",
+      "instruction": "avoid obstacle and reach the blue pen",
+      "split": "val"
+    },
+    {
+      "dataset_id": "dlr_sara_grid_clamp_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_081",
+      "instruction": "Place grid clamp",
+      "split": "val"
+    },
+    {
+      "dataset_id": "ucsd_pick_and_place_dataset_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_148",
+      "instruction": "place the pot in the sink",
+      "split": "val"
+    },
+    {
+      "dataset_id": "tokyo_u_lsmo_converted_externally_to_rlds_0.1.0",
+      "episode_id": "episode_022",
+      "instruction": "avoid obstacle and reach the scissors",
+      "split": "val"
+    }
+  ]
+}

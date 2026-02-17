@@ -1,0 +1,19 @@
+{
+  "success": true,
+  "bt_success": true,
+  "bddl_goal": true,
+  "ticks": 1,
+  "duration": 107.95349359512329,
+  "inference_time": 40.61941123008728,
+  "satisfied": [
+    "or(['and', ['ontop', '?storage_container.n.01_1', '?floor.n.01_2'], ['ontop', '?storage_container.n.01_2', '?storage_container.n.01_1']], ['and', ['ontop', '?storage_container.n.01_2', '?floor.n.01_2'], ['ontop', '?storage_container.n.01_1', '?storage_container.n.01_2']])"
+  ],
+  "unsatisfied": [],
+  "task": "16_moving_boxes_to_storage",
+  "condition": "zero-shot",
+  "model_dir": "gpt5",
+  "vlm_model": null,
+  "inference_mode": "openai",
+  "experiment": 1,
+  "timestamp": "20260213_221259"
+}

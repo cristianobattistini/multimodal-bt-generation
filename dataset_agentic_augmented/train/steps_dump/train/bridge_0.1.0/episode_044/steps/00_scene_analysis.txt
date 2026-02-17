@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "tiffin_box"
+  destination: "table"
+  expanded_instruction: "Pick up the stainless tiffin box from the center of the table and place it on the right edge of the table. Before placing, check IS_HOLDING on the table; if not holding, retry the grasp up to 3 times (within a 10s timeout) and reposition if needed."
+  scene_context: "Tiffin box on center of wooden table, table surface clear, tiffin not held."
+  expected_sequence: "Approach and grasp the tiffin box at the table center, verify IS_HOLDING on the table, carry it to the table's right edge, and set it down; if IS_HOLDING is false before place, retry pickup up to 3 times (10s timeout) or push to reposition and then place."

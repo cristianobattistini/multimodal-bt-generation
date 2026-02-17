@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "pan"
+  destination: ""
+  expanded_instruction: "Pick up the white pan with the black handle from the blue surface"
+  scene_context: "Pan lies on a blue surface, handle exposed and not held; surface appears clear."
+  expected_sequence: "Approach the pan, grasp the handle, and lift the pan off the surface."

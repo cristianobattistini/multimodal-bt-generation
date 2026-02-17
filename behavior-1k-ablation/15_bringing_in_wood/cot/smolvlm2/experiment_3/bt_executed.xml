@@ -1,0 +1,22 @@
+<root main_tree_to_execute="MainTree">
+  <Sequence>
+    <Sequence>
+      <Action>NAVIGATE_TO plywood_1</Action>
+      <Action>GRASP plywood_1</Action>
+      <Action>NAVIGATE_TO corridor_floor</Action>
+      <Action>PLACE_ON_TOP plywood_1</Action>
+    </Sequence>
+    <Sequence>
+      <Action>NAVIGATE_TO plywood_2</Action>
+      <Action>GRASP plywood_2</Action>
+      <Action>NAVIGATE_TO corridor_floor</Action>
+      <Action>PLACE_ON_TOP plywood_2</Action>
+    </Sequence>
+    <Sequence>
+      <Action>NAVIGATE_TO plywood_3</Action>
+      <Action>GRASP plywood_3</Action>
+      <Action>NAVIGATE_TO corridor_floor</Action>
+      <Action>PLACE_ON_TOP plywood_3</Action>
+    </Sequence>
+  </Sequence>
+</root>

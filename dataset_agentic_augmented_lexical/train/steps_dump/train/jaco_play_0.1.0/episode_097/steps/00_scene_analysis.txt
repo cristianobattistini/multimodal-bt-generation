@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "long_bread"
+  destination: ""
+  expanded_instruction: "Use the ApproachLongBread subtree: pick up the long bread (yellow loaf) from the table, with retries (up to 3) and a 10s timeout."
+  scene_context: "Yellow long bread on table near other toys; nothing covering it and not held; bin open on right."
+  expected_sequence: "Within the ApproachLongBread subtree: move to the loaf, grasp the long bread securely, and lift it off the table; retry the grasp up to 3 times within a 10s timeout, and if grasp fails, push to reposition then retry."

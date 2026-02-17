@@ -1,0 +1,33 @@
+scene_analysis:
+  target: "["sack", "beefsteak_tomato", "carton_of_milk"]"
+  destination: "car"
+  expanded_instruction: "Pick up the sack from the floor, then carry the sack and the beefsteak_tomato to the red car and place them next to the car on its hood; then open the car trunk, place the carton_of_milk inside, and close the trunk."
+  scene_context: "Car is open and accessible; sack on floor; electric_refrigerator is closed and reachable; milk carton on floor."
+  expected_sequence: "Pick up the sack, carry both the sack and the beefsteak_tomato to the car and set them down next to the car on its hood; open the car trunk, place the carton_of_milk inside, and close the trunk."
+Plan:
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to sack -->
+      <Action ID="NAVIGATE_TO" obj="sack" />
+      <!-- Grasp sack -->
+      <Action ID="GRASP" obj="sack" />
+      <!-- Navigate to car -->
+      <Action ID="NAVIGATE_TO" obj="car" />
+      <!-- Place next to car -->
+      <Action ID="PLACE_NEXT_TO" obj="car" />
+      <!-- Open car trunk -->
+      <Action ID="OPEN" obj="car" />
+      <!-- Go to electric_refrigerator -->
+      <Action ID="NAVIGATE_TO" obj="electric_refrigerator" />
+      <!-- Grasp carton_of_milk -->
+      <Action ID="GRASP" obj="carton_of_milk" />
+      <!-- Go to car -->
+      <Action ID="NAVIGATE_TO" obj="car" />
+      <!-- Place inside car -->
+      <Action ID="PLACE_INSIDE" obj="car" />
+      <!-- Close electric_refrigerator -->
+      <Action ID="CLOSE" obj="electric_refrigerator" />
+    </Sequence>
+  </BehaviorTree>
+</root>

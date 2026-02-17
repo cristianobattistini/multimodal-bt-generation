@@ -1,0 +1,29 @@
+ scene_analysis:
+  target: storage_container_1
+  destination: garage_floor
+  expanded_instruction: "Open the door, then pick up the white storage container from the table and place it on the garage floor."
+  scene_context: "White storage container on table near the blue couch; door is closed and reachable; no containers on garage floor."
+  expected_sequence: "Open the door, pick up the white storage container from the table, move it to the garage floor, and set it down."
+Plan:
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to door -->
+      <Action ID="NAVIGATE_TO" obj="door" />
+      <!-- Open door -->
+      <Action ID="OPEN" />
+      <!-- Navigate to storage_container_1 -->
+      <Action ID="NAVIGATE_TO" obj="storage_container_1" />
+      <!-- Grasp storage_container_1 -->
+      <Action ID="GRASP" obj="storage_container_1" />
+      <!-- Place on garage_floor -->
+      <Action ID="PLACE_ON_TOP" obj="garage_floor" />
+      <!-- Navigate to storage_container_2 -->
+      <Action ID="NAVIGATE_TO" obj="storage_container_2" />
+      <!-- Grasp storage_container_2 -->
+      <Action ID="GRASP" obj="storage_container_2" />
+      <!-- Place on garage_floor -->
+      <Action ID="PLACE_ON_TOP" obj="garage_floor" />
+    </Sequence>
+  </BehaviorTree>
+</root>

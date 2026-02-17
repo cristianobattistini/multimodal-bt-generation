@@ -1,0 +1,16 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to sweet_potato -->
+      <Action ID="NAVIGATE_TO" obj="sweet_potato"/>
+      <!-- Grasp sweet_potato -->
+      <Action ID="GRASP" obj="sweet_potato"/>
+      <!-- Navigate to pot_in_sink -->
+      <Action ID="NAVIGATE_TO" obj="pot_in_sink"/>
+      <!-- Place inside pot_in_sink -->
+      <Action ID="PLACE_INSIDE" obj="pot_in_sink"/>
+      <!-- Release -->
+      <Action ID="RELEASE"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

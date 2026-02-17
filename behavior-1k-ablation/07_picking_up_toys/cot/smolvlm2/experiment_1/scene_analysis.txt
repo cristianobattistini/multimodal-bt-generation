@@ -1,0 +1,8 @@
+scene_analysis:
+  target: "board_game_1"
+  destination: "toy_box"
+  expanded_instruction: "Pick up the board_game_1 toy from the table and place it into the toy_box on the table."
+  scene_context: "Board_game_1 is on the table near the door; toy_box is open and empty."
+  expected_sequence: "Approach the board_game_1, grasp it, lift it, move to the toy_box, and place it inside."
+  num_toys: [6]
+Plan:

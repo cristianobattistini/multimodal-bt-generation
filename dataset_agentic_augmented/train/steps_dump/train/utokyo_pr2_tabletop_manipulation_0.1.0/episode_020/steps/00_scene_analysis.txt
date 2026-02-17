@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "pink_cloth"
+  destination: "table"
+  expanded_instruction: "Pick up the pink cloth from the table and fold it neatly in half on the table. When folding, allow up to 10s; if the fold fails retry up to 3 times and, if needed, use UNFOLD or FLIP to reposition the cloth."
+  scene_context: "Pink cloth lying flat on a clear table; robot not holding anything; no closed containers."
+  expected_sequence: "Move to the pink cloth, grasp and fold it once along the middle within a 10s timeout; if the fold fails retry up to 3 times and, if still unsuccessful, use UNFOLD or FLIP to reposition, then smooth and place the folded cloth on the table."

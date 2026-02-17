@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "tiger"
+  destination: "grey_bowl"
+  expanded_instruction: "Take the tiger out of the red bowl on the table and place it into the grey bowl on the table. Before grasping, check that the tiger is graspable; if grasp fails retry GRASP up to 2 times, and if still failing use PUSH or FLIP to reposition it before placing."
+  scene_context: "Red bowl contains the tiger; grey bowl is empty and reachable on the table; no object is held."
+  expected_sequence: "Check IS_GRASPABLE on the tiger; attempt GRASP (retry up to 2 times on failure); if GRASP still fails, use PUSH or FLIP to reposition the tiger; then lift the tiger out of the red bowl, move it over the grey bowl, and set it down inside."

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "blue_button"
+  destination: ""
+  expanded_instruction: "Group actions into the ApproachBlueButton subtree: move the robot arm forward, position it over the table's blue button, and press the button until it is activated; if activation fails, reposition and retry up to 3 times with a 10s timeout."
+  scene_context: "Blue button sits on the table near the front; robot arm is retracted and not holding anything; table is clear."
+  expected_sequence: "ApproachBlueButton subtree: position the arm over the button, extend the end effector, and push the button until it registers as pressed; if the press fails, reposition and retry up to 3 times within a 10s timeout."

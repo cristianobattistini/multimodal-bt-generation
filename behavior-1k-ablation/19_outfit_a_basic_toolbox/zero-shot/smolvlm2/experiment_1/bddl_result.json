@@ -1,0 +1,27 @@
+{
+  "success": false,
+  "bt_success": false,
+  "bddl_goal": false,
+  "ticks": 1,
+  "duration": 11.634956121444702,
+  "inference_time": 9.026050806045532,
+  "satisfied": [
+    "ontop(?toolbox.n.01_1, ?tabletop.n.01_1)"
+  ],
+  "unsatisfied": [
+    "inside(?drill.n.01_1, ?toolbox.n.01_1)",
+    "inside(?pliers.n.01_1, ?toolbox.n.01_1)",
+    "inside(?flashlight.n.01_1, ?toolbox.n.01_1)",
+    "inside(?allen_wrench.n.01_1, ?toolbox.n.01_1)",
+    "inside(?screwdriver.n.01_1, ?toolbox.n.01_1)",
+    "not(['open', '?toolbox.n.01_1'])"
+  ],
+  "reason": "bt_structure_error: used PLACE_INSIDE obj='tools' (invalid generic reference) instead of individual tool names; no GRASP actions; toolbox left open",
+  "task": "19_outfit_a_basic_toolbox",
+  "condition": "zero-shot",
+  "model_dir": "smolvlm2",
+  "vlm_model": "smol500",
+  "inference_mode": "adapter",
+  "experiment": 1,
+  "timestamp": "20260214_001742"
+}

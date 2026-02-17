@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "milk_dairy"
+  destination: "black_bowl"
+  expanded_instruction: "Group actions into the ApproachMilkDairy subtree: approach the milk_dairy carton on the floor near the robot and pick it up (retry up to 3 times with a 10s timeout; if grasp fails, push to reposition), then move to the black_bowl by the robot base and place the carton inside."
+  scene_context: "Milk_dairy carton on floor near robot front, not held; black_bowl on floor by robot base and appears empty."
+  expected_sequence: "Approach the milk_dairy (as ApproachMilkDairy subtree), pick it up (retry up to 3 times; 10s timeout; if grasp fails, push to reposition), move to the black_bowl, and place the carton inside."

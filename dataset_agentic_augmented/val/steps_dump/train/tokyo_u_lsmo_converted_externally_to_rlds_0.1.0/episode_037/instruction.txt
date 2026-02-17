@@ -1,0 +1,1 @@
+Avoid obstacle and reach the scissors. Use ApproachTable subtree for approach and grasp.

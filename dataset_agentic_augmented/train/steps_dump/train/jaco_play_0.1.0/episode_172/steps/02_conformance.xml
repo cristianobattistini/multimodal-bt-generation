@@ -1,0 +1,23 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to burger_meat -->
+      <Action ID="NAVIGATE_TO" obj="burger_meat" />
+      <!-- Fallback: if GRASP burger_meat fails, try PUSH, FLIP to reposition -->
+      <Fallback>
+        <!-- Grasp burger_meat -->
+        <Action ID="GRASP" obj="burger_meat" />
+        <Sequence>
+          <!-- Push burger_meat forward toward front edge of table -->
+          <Action ID="PUSH" obj="burger_meat" />
+          <!-- Grasp burger_meat -->
+          <Action ID="GRASP" obj="burger_meat" />
+        </Sequence>
+      </Fallback>
+      <!-- Navigate to black_bowl -->
+      <Action ID="NAVIGATE_TO" obj="black_bowl" />
+      <!-- Place inside black_bowl -->
+      <Action ID="PLACE_INSIDE" obj="black_bowl" />
+    </Sequence>
+  </BehaviorTree>
+</root>

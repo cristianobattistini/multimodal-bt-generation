@@ -1,0 +1,21 @@
+{
+  "success": true,
+  "bt_success": true,
+  "bddl_goal": true,
+  "ticks": 1,
+  "duration": 270.2683963775635,
+  "inference_time": 52.09941601753235,
+  "satisfied": [
+    "inside(?container.n.01_1, ?car.n.01_1)",
+    "inside(?digital_camera.n.01_1, ?container.n.01_1)",
+    "inside(?tennis_racket.n.01_1, ?car.n.01_1)"
+  ],
+  "unsatisfied": [],
+  "task": "13_loading_the_car",
+  "condition": "zero-shot",
+  "model_dir": "adapter",
+  "vlm_model": "gemma",
+  "inference_mode": "adapter",
+  "experiment": 4,
+  "timestamp": "20260215_121817"
+}

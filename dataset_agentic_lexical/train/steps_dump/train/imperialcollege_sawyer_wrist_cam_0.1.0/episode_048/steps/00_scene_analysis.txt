@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "white_dot"
+  destination: "translucent_bubble"
+  expanded_instruction: "Swipe the small white dot downward/forward so it moves into the translucent bubble under the device."
+  scene_context: "Small white dot below a hanging device, translucent bubble present and empty, nothing is being held."
+  expected_sequence: "Swipe the dot toward the translucent bubble so it enters and joins the bubble."

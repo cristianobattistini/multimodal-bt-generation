@@ -1,0 +1,23 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Execute subtree ApproachGreenRiceChipBag -->
+      <SubTree ID="ApproachGreenRiceChipBag" />
+      <!-- Navigate to table -->
+      <Action ID="NAVIGATE_TO" obj="table" />
+      <!-- Place on table -->
+      <Action ID="PLACE_ON_TOP" obj="table" />
+      <!-- Release -->
+      <Action ID="RELEASE" />
+    </Sequence>
+  </BehaviorTree>
+  <!-- Subtree definition ApproachGreenRiceChipBag -->
+  <BehaviorTree ID="ApproachGreenRiceChipBag">
+    <Sequence>
+      <!-- Navigate to green_rice_chip_bag -->
+      <Action ID="NAVIGATE_TO" obj="green_rice_chip_bag" />
+      <!-- Grasp green_rice_chip_bag -->
+      <Action ID="GRASP" obj="green_rice_chip_bag" />
+    </Sequence>
+  </BehaviorTree>
+</root>

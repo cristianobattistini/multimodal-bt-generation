@@ -1,0 +1,1 @@
+Place down red bottle. Use ApproachRedBottle subtree for approach and grasp.

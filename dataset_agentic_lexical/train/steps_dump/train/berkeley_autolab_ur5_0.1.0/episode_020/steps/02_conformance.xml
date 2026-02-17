@@ -1,0 +1,10 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to green_cloth -->
+      <Action ID="NAVIGATE_TO" obj="green_cloth" />
+      <!-- Shove green_cloth -->
+      <Action ID="SHOVE" obj="green_cloth" />
+    </Sequence>
+  </BehaviorTree>
+</root>

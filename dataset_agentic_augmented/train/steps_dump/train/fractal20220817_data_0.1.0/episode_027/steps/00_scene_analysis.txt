@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "redbull_can"
+  destination: "top_drawer"
+  expanded_instruction: "Pick up the redbull can from the table and place it into the top drawer. Use the ApproachRedbullCan subtree for the approach (retry up to 3 times, 10s timeout); if grasp fails, push to reposition and retry."
+  scene_context: "Top drawer is open; redbull can on table near drawer edge; drawer interior clear; can not held."
+  expected_sequence: "Move to the can using the ApproachRedbullCan subtree (approach with up to 3 retries and 10s timeout), grasp it, lift and position it over the open top drawer, and set it inside; if grasp or lift fails, push to reposition and try again."

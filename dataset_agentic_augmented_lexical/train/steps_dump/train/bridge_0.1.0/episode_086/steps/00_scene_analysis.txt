@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "potato"
+  destination: "pot"
+  expanded_instruction: "Pick up the potato from the cutting board and place it into the orange pot inside the cardboard fence, using NAVIGATE_TO with a 10s timeout when moving to the board or pot."
+  scene_context: "Potato on wooden cutting_board near other produce; orange pot is open and inside the cardboard fence; nothing is held."
+  expected_sequence: "Navigate to the cutting board within a 10s NAVIGATE_TO timeout, reach for the potato, grasp it, move over the pot (NAVIGATE_TO within 10s), and place the potato into the pot."

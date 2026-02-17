@@ -1,0 +1,15 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to black_cabinet -->
+      <Action ID="NAVIGATE_TO" obj="black_cabinet" />
+      <!-- Navigate to disk -->
+      <Action ID="NAVIGATE_TO" obj="disk" />
+      <!-- Retry GRASP disk up to 3 attempts -->
+      <RetryUntilSuccessful num_attempts="3">
+        <!-- Grasp disk -->
+        <Action ID="GRASP" obj="disk" />
+      </RetryUntilSuccessful>
+    </Sequence>
+  </BehaviorTree>
+</root>

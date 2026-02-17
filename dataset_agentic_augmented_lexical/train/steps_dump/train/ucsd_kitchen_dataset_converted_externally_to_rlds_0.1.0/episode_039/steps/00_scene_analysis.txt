@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "carbinet_door"
+  destination: ""
+  expanded_instruction: "Open the carbinet door on the upper right cabinet by pulling its handle outward; if opening fails, retry up to 5 times."
+  scene_context: "Upper right cabinet door is closed and reachable; robot arm is not holding anything; front space clear."
+  expected_sequence: "Approach the handle, grasp it, and pull the door outward until it is open. If it fails to open, retry the opening up to 5 times."

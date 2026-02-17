@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "white_carton"
+  destination: "table"
+  expanded_instruction: "Navigate to the table (NAVIGATE_TO within a 15s timeout) and place the white carton currently held by the robot down onto the table."
+  scene_context: "White carton is held by the robot above a clear table surface in front center."
+  expected_sequence: "Navigate to the table within a 15s NAVIGATE_TO timeout, lower the white carton to the table, and release it so it rests on the surface."

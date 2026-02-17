@@ -1,0 +1,10 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to table -->
+      <Action ID="NAVIGATE_TO" obj="table" />
+      <!-- Lay on table -->
+      <Action ID="LAY_ON" obj="table" />
+    </Sequence>
+  </BehaviorTree>
+</root>

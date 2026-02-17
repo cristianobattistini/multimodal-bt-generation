@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "dishes"
+  destination: "dish_rack"
+  expanded_instruction: "Pick up the dirty dishes and utensils from the adjacent basin and place them into the dish_rack, retrying the placement up to 2 times if it fails and, if still unsuccessful, use a push to reposition the item before trying again."
+  scene_context: "Dish_rack is partially empty; dishes and utensils are in the adjacent basin; robot not holding anything; rack reachable."
+  expected_sequence: "Move to the basin, pick up each dish or utensil, and place them into open slots of the dish_rack; if a PLACE_INSIDE action fails, retry up to 2 times, and if it still fails, use PUSH to reposition the object and then place it."

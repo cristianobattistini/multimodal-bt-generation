@@ -1,0 +1,12 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Approach hook -->
+      <Action ID="APPROACH" obj="hook" />
+      <!-- Drape on hook -->
+      <Action ID="DRAPE" obj="hook" />
+      <!-- Ungrasp -->
+      <Action ID="UNGRASP" />
+    </Sequence>
+  </BehaviorTree>
+</root>

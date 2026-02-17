@@ -1,0 +1,20 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to ranch_bottle -->
+      <Action ID="NAVIGATE_TO" obj="ranch_bottle" />
+      <!-- Grasp ranch_bottle -->
+      <Action ID="GRASP" obj="ranch_bottle" />
+      <Sequence>
+        <!-- Check pot is visible before NAVIGATE_TO -->
+        <Condition ID="IS_VISIBLE" obj="pot" />
+        <!-- Navigate to pot -->
+        <Action ID="NAVIGATE_TO" obj="pot" />
+      </Sequence>
+      <!-- Place inside pot -->
+      <Action ID="PLACE_INSIDE" obj="pot" />
+      <!-- Release -->
+      <Action ID="RELEASE" />
+    </Sequence>
+  </BehaviorTree>
+</root>

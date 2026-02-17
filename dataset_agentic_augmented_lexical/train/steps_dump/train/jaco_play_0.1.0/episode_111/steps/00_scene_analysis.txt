@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "long_bread"
+  destination: "gray_bowl"
+  expanded_instruction: "Pick up the long bread and place it into the gray bowl on the left side of the workspace, first checking that the gray_bowl IS_OPEN; if it is closed, attempt to open it and retry up to 3 times (within a 10s timeout) before placing inside."
+  scene_context: "Gray bowl is empty and reachable; long_bread not visible in scene; gripper is empty."
+  expected_sequence: "Go to the bread, grasp it, bring it to the gray bowl, check IS_OPEN on gray_bowl and open/retry up to 3 times (within 10s) if closed, then set it inside."

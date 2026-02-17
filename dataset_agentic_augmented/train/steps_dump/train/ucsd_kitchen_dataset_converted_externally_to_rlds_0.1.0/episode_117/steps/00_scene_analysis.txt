@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "green_box"
+  destination: "sink"
+  expanded_instruction: "Using an ApproachGreenBox subtree (approach and adjust; retry up to 3 times within 10s), pick up the green box from the countertop and place it into the sink; if grasp fails, push to reposition and retry."
+  scene_context: "Green box standing on the countertop; sink is empty and reachable; box not held."
+  expected_sequence: "ApproachGreenBox subtree: reach to the green box (adjust pose, retry up to 3 times within 10s), grasp and lift it, move over the sink, and place it inside; if grasp fails, push to reposition and retry."

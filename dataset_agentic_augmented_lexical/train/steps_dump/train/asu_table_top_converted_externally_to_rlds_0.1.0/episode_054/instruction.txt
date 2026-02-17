@@ -1,0 +1,1 @@
+put down red bottle. If grasping fails, push it to reposition and retry grasping.

@@ -1,0 +1,19 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Execute subtree ApproachGreenCloth -->
+      <SubTree ID="ApproachGreenCloth" />
+      <!-- Push green_cloth forward toward front edge of table -->
+      <Action ID="PUSH" obj="green_cloth" />
+    </Sequence>
+  </BehaviorTree>
+  <!-- Subtree definition ApproachGreenCloth -->
+  <BehaviorTree ID="ApproachGreenCloth">
+    <Sequence>
+      <!-- Navigate to green_cloth -->
+      <Action ID="NAVIGATE_TO" obj="green_cloth" />
+      <!-- Grasp green_cloth -->
+      <Action ID="GRASP" obj="green_cloth" />
+    </Sequence>
+  </BehaviorTree>
+</root>

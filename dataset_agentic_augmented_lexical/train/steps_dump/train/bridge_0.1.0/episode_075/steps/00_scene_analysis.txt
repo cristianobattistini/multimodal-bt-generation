@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "mushroom"
+  destination: "blue_cloth"
+  expanded_instruction: "Pick up the mushroom from the table and place it on top of the blue cloth. If placing on top fails, retry up to 3 times; if still unsuccessful, use a push to reposition the mushroom onto the cloth."
+  scene_context: "Mushroom on wooden table near stove; blue cloth folded on table and clear; gripper not holding anything; no containers open."
+  expected_sequence: "Move to the mushroom, grasp and lift it, carry it to the blue cloth, and set it down on top. If PLACE_ON_TOP fails after up to 3 retries, use PUSH as an alternative to reposition the object onto the cloth."

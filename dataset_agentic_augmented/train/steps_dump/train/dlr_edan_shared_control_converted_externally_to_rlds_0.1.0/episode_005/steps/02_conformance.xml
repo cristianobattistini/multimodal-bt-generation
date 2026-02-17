@@ -1,0 +1,18 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to black_shelving_unit -->
+      <Action ID="NAVIGATE_TO" obj="black_shelving_unit" />
+      <Sequence>
+        <!-- Check tube is visible before NAVIGATE_TO -->
+        <Condition ID="IS_VISIBLE" obj="tube" />
+        <!-- Navigate to tube -->
+        <Action ID="NAVIGATE_TO" obj="tube" />
+      </Sequence>
+      <!-- Grasp tube -->
+      <Action ID="GRASP" obj="tube" />
+      <!-- Release -->
+      <Action ID="RELEASE" />
+    </Sequence>
+  </BehaviorTree>
+</root>

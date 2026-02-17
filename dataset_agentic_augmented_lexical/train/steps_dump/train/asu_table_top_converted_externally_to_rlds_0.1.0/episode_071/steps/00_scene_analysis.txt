@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "pepsi_can"
+  destination: "table"
+  expanded_instruction: "Pick up the pepsi can from the right side of the table and place it on the table near the robot; ensure the can is visible before attempting the grasp, use a 15s timeout for the grasp attempt, and if grasp fails try pushing or flipping to reposition it."
+  scene_context: "Pepsi can sits on the right side of the table; no containers; can is not held and workspace is clear."
+  expected_sequence: "Approach the can, confirm it is visible, grasp and lift it within a 15s timeout, then place it on the table near the robot's base; if grasp fails, retry or use push/flip to reposition the object and then place it."

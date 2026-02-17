@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "hanger"
+  destination: "rod"
+  expanded_instruction: "Pick up the black hanger from the table edge and place its hook over the metal rod so it hangs securely. If grasping fails, retry up to 2 times; if still unsuccessful, push or flip the hanger to reposition it and then try again."
+  scene_context: "Hanger resting on table edge near a metal rod with blue tape; rod is free and robot gripper not holding the hanger."
+  expected_sequence: "Reach to the hanger, grasp it (retry grasp up to 2 times if it fails), move the hook over the rod, and release so the hanger hangs on the rod; if grasp repeatedly fails, push or flip the hanger to reposition it and then attempt grasp again."

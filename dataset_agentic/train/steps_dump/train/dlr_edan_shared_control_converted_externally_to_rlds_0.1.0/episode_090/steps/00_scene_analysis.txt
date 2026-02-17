@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "banana"
+  destination: ""
+  expanded_instruction: "Pick up the banana from the small stool next to the table"
+  scene_context: "Banana resting on a small stool next to the table; robot not holding anything; surfaces clear."
+  expected_sequence: "Approach the stool, grasp the banana, and lift it up."

@@ -1,0 +1,14 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to table -->
+      <Action ID="NAVIGATE_TO" obj="table"/>
+      <!-- Navigate to brown_pencil_holder while avoiding toy_ball (approach via curved path) -->
+      <Action ID="NAVIGATE_TO" obj="brown_pencil_holder"/>
+      <!-- Grasp scissors -->
+      <Action ID="GRASP" obj="scissors"/>
+      <!-- Release -->
+      <Action ID="RELEASE"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

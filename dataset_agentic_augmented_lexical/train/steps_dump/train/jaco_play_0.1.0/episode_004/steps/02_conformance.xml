@@ -1,0 +1,20 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Execute subtree ApproachOrangeFruit -->
+      <SubTree ID="ApproachOrangeFruit" />
+    </Sequence>
+  </BehaviorTree>
+  <!-- Subtree definition ApproachOrangeFruit -->
+  <BehaviorTree ID="ApproachOrangeFruit">
+    <Sequence>
+      <!-- Navigate to orange_fruit -->
+      <Action ID="NAVIGATE_TO" obj="orange_fruit" />
+      <!-- Retry GRASP orange_fruit up to 2 attempts -->
+      <RetryUntilSuccessful num_attempts="2">
+        <!-- Grasp orange_fruit -->
+        <Action ID="GRASP" obj="orange_fruit" />
+      </RetryUntilSuccessful>
+    </Sequence>
+  </BehaviorTree>
+</root>

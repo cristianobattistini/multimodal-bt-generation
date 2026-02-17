@@ -1,0 +1,41 @@
+{
+  "decorator_type": "mixed",
+  "mixed_subtype": "condition_retry_fallback",
+  "target_action_id": "GRASP",
+  "target_obj": "tiger",
+  "parameters": {
+    "augmentations": [
+      {
+        "type": "condition",
+        "action_id": "GRASP",
+        "obj": "tiger",
+        "params": {
+          "condition_id": "IS_GRASPABLE",
+          "condition_obj": "tiger"
+        }
+      },
+      {
+        "type": "retry",
+        "action_id": "GRASP",
+        "obj": "tiger",
+        "params": {
+          "num_attempts": 2
+        }
+      },
+      {
+        "type": "fallback",
+        "action_id": "GRASP",
+        "obj": "tiger",
+        "params": {
+          "valid_fallbacks": [
+            "PUSH",
+            "FLIP"
+          ],
+          "valid_fallbacks_str": "PUSH, FLIP",
+          "hint": "PUSH/FLIP repositions the object into a better grasping position"
+        }
+      }
+    ]
+  },
+  "prompt_name": "mixed/condition_retry_fallback"
+}

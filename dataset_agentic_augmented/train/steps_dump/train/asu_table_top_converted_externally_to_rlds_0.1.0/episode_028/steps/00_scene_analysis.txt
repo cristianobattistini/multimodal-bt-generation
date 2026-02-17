@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "brown_object"
+  destination: "table"
+  expanded_instruction: "Pick up the brown object from its current spot (navigate to it within a 10s NAVIGATE_TO timeout) and place it down on the table."
+  scene_context: "Brown object on right side of table near robot, not held; table surface otherwise clear; robot arm free."
+  expected_sequence: "Approach and grasp the brown object (NAVIGATE_TO must complete within 10s), lift it, move to the table surface, and set it down."

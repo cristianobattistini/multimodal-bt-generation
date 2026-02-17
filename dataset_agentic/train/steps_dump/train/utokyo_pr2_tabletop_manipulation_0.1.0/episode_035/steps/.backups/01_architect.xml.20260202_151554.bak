@@ -1,0 +1,18 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to cloth -->
+      <Action ID="NAVIGATE_TO" obj="cloth"/>
+      <!-- Grasp cloth -->
+      <Action ID="GRASP" obj="cloth"/>
+      <!-- Navigate to table -->
+      <Action ID="NAVIGATE_TO" obj="table"/>
+      <!-- Fold cloth in half -->
+      <Action ID="FOLD" obj="cloth"/>
+      <!-- Place on table (neatly on table surface) -->
+      <Action ID="PLACE_ON_TOP" obj="table"/>
+      <!-- Release -->
+      <Action ID="RELEASE"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

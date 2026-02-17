@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "kcup"
+  destination: "kcup_holder"
+  expanded_instruction: "Open the kcup holder, place the green-topped kcup from the table into the holder, and close the holder."
+  scene_context: "Green-topped kcup on table; kcup_holder is closed and empty; kcup not held."
+  expected_sequence: "Open the holder, pick up the kcup and insert it into the holder, then close the holder."

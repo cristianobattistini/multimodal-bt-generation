@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "touchscreen"
+  destination: ""
+  expanded_instruction: "As part of the ApproachTouchscreen subtree, perform a single continuous swipe across the blue device's touchscreen from one side to the other (retry up to 2 times, 10s timeout)."
+  scene_context: "Blue device with visible touchscreen lies on surface, screen unobstructed and not held."
+  expected_sequence: "Within the ApproachTouchscreen subtree, contact the screen with a finger or tool and slide it across the display in one smooth motion; if approach fails, retry up to 2 times within a 10s timeout."

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "dishes"
+  destination: "dish_rack"
+  expanded_instruction: "Pick up the dishes (plate and cup) from the drying mat and place them into the dish_rack."
+  scene_context: "Dish_rack is empty and open; plate and cup sit on the drying mat to the right; nothing is held."
+  expected_sequence: "Pick up the plate and place it into the rack slots, then pick up the cup and place it upright in the rack."

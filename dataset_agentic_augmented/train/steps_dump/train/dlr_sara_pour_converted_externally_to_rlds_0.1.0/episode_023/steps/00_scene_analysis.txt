@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "brown_pitcher"
+  destination: "mug"
+  expanded_instruction: "Check that the brown pitcher is reachable, then pick it up and pour its contents into the white mug on the table; if the initial grasp fails retry up to 3 times and, if still unsuccessful, push and flip the pitcher to reposition before trying again."
+  scene_context: "Brown pitcher located to the robot's right; white mug on table in front; both reachable and unobstructed."
+  expected_sequence: "Check IS_REACHABLE on brown_pitcher; reach to the pitcher, attempt to grasp and lift it (retry grasp up to 3 times); if grasp fails, use PUSH and FLIP to reposition then grasp; tilt over the white mug to pour, then lower and release the pitcher."

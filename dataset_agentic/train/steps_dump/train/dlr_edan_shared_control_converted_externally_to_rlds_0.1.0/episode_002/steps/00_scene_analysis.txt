@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "tennis_ball"
+  destination: ""
+  expanded_instruction: "Pick up the yellow tennis ball from the small bowl on the side table next to the black shelf."
+  scene_context: "Bowl on side table contains tennis balls and is open; ball is not held and table area is reachable."
+  expected_sequence: "Move the arm to the bowl, grasp a tennis ball, and lift it clear from the bowl."

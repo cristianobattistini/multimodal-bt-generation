@@ -1,0 +1,42 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to fish -->
+      <Action ID="NAVIGATE_TO" obj="fish" />
+      <!-- Grasp fish -->
+      <Action ID="GRASP" obj="fish" />
+      <Sequence>
+        <!-- Check frying_pan is visible before NAVIGATE_TO -->
+        <Condition ID="IS_VISIBLE" obj="frying_pan" />
+        <!-- Navigate to frying_pan -->
+        <Action ID="NAVIGATE_TO" obj="frying_pan" />
+      </Sequence>
+      <!-- Place inside frying_pan -->
+      <Action ID="PLACE_INSIDE" obj="frying_pan" />
+      <!-- Navigate to sausage -->
+      <Action ID="NAVIGATE_TO" obj="sausage" />
+      <!-- Grasp sausage -->
+      <Action ID="GRASP" obj="sausage" />
+      <Sequence>
+        <!-- Check frying_pan is visible before NAVIGATE_TO -->
+        <Condition ID="IS_VISIBLE" obj="frying_pan" />
+        <!-- Navigate to frying_pan -->
+        <Action ID="NAVIGATE_TO" obj="frying_pan" />
+      </Sequence>
+      <!-- Place inside frying_pan -->
+      <Action ID="PLACE_INSIDE" obj="frying_pan" />
+      <!-- Navigate to tomato -->
+      <Action ID="NAVIGATE_TO" obj="tomato" />
+      <!-- Grasp tomato -->
+      <Action ID="GRASP" obj="tomato" />
+      <Sequence>
+        <!-- Check frying_pan is visible before NAVIGATE_TO -->
+        <Condition ID="IS_VISIBLE" obj="frying_pan" />
+        <!-- Navigate to frying_pan -->
+        <Action ID="NAVIGATE_TO" obj="frying_pan" />
+      </Sequence>
+      <!-- Place inside frying_pan -->
+      <Action ID="PLACE_INSIDE" obj="frying_pan" />
+    </Sequence>
+  </BehaviorTree>
+</root>

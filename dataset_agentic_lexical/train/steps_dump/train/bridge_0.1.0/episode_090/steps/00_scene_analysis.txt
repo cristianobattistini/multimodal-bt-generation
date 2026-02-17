@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "fridge"
+  destination: ""
+  expanded_instruction: "Close the fridge door until it is fully shut."
+  scene_context: "Fridge door is open; handle visible; robot arm near door and not holding it."
+  expected_sequence: "Reach to the handle, pull/push the door closed until it latches."

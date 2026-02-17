@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "["small_bowl", "large_bowl"]"
+  destination: "large_bowl"
+  expanded_instruction: "Pick up the small bowl and place it inside the large bowl so they are stacked. Before placing, check IS_HOLDING on the large_bowl (confirm you are not holding it), and if the PLACE_INSIDE action fails retry it up to 2 times."
+  scene_context: "Two bowls on the table; one larger bowl is empty and reachable; neither is held."
+  expected_sequence: "Pick up the small bowl, move it over the large bowl, check IS_HOLDING on the large_bowl before PLACE_INSIDE, and place it inside to nest them; if PLACE_INSIDE fails, retry up to 2 times."

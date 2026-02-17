@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "peg"
+  destination: "cup"
+  expanded_instruction: "Insert the peg held by the robot into the blue cup on the table."
+  scene_context: "Peg attached to robot end-effector; blue cup on table, open and reachable; table clear."
+  expected_sequence: "Align the peg above the cup, lower it straight down, and insert it into the cup."

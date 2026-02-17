@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "dustpan"
+  destination: ""
+  expanded_instruction: "Swipe the dustpan across the blue surface to push the small white pellet"
+  scene_context: "Dustpan resting on blue surface with a small white pellet ahead; surface is clear and dustpan not held."
+  expected_sequence: "Place the dustpan behind the pellet and sweep forward to push the pellet along the surface."

@@ -1,0 +1,24 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Place gym shoes on hallstand, paired together -->
+      <Action ID="NAVIGATE_TO" obj="gym_shoe.n.01_1"/>
+      <Action ID="GRASP" obj="gym_shoe.n.01_1"/>
+      <Action ID="NAVIGATE_TO" obj="hallstand.n.01_1"/>
+      <Action ID="PLACE_ON_TOP" obj="hallstand.n.01_1"/>
+      <Action ID="NAVIGATE_TO" obj="gym_shoe.n.01_2"/>
+      <Action ID="GRASP" obj="gym_shoe.n.01_2"/>
+      <Action ID="NAVIGATE_TO" obj="gym_shoe.n.01_1"/>
+      <Action ID="PLACE_NEXT_TO" obj="gym_shoe.n.01_1"/>
+      <!-- Place sandals on hallstand, paired together -->
+      <Action ID="NAVIGATE_TO" obj="sandal.n.01_1"/>
+      <Action ID="GRASP" obj="sandal.n.01_1"/>
+      <Action ID="NAVIGATE_TO" obj="hallstand.n.01_1"/>
+      <Action ID="PLACE_ON_TOP" obj="hallstand.n.01_1"/>
+      <Action ID="NAVIGATE_TO" obj="sandal.n.01_2"/>
+      <Action ID="GRASP" obj="sandal.n.01_2"/>
+      <Action ID="NAVIGATE_TO" obj="sandal.n.01_1"/>
+      <Action ID="PLACE_NEXT_TO" obj="sandal.n.01_1"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

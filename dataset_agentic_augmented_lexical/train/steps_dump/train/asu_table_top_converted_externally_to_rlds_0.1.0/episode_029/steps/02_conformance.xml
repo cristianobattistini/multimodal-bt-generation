@@ -1,0 +1,16 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Check table is holding before PLACE_ON_TOP -->
+      <Condition ID="IS_HOLDING" obj="table" />
+      <!-- Retry PLACE_ON_TOP table up to 2 attempts -->
+      <RetryUntilSuccessful num_attempts="2">
+        <!-- Timeout: PLACE_ON_TOP table within 15s -->
+        <Timeout msec="15000">
+          <!-- Place on table -->
+          <Action ID="SET_ON" obj="table" />
+        </Timeout>
+      </RetryUntilSuccessful>
+    </Sequence>
+  </BehaviorTree>
+</root>

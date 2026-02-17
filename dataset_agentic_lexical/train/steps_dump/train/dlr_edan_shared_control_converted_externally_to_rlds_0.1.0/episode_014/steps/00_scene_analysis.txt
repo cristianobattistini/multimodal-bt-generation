@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "pear"
+  destination: ""
+  expanded_instruction: "Pick up the green pear from the small plate on the side shelf next to a red apple."
+  scene_context: "Pear on small plate on side shelf next to a red apple; nothing is held; no containers open."
+  expected_sequence: "Move to the pear, grasp it from the plate, and lift it up."

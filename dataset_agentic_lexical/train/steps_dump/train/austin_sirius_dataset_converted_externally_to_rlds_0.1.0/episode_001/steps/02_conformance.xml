@@ -1,0 +1,22 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Go to blue_gear -->
+      <Action ID="GO_TO" obj="blue_gear" />
+      <!-- Pick blue_gear -->
+      <Action ID="PICK" obj="blue_gear" />
+      <!-- Navigate to right_peg -->
+      <Action ID="NAVIGATE_TO" obj="right_peg" />
+      <!-- Set on right_peg -->
+      <Action ID="SET_ON" obj="right_peg" />
+      <!-- Navigate to red_gear -->
+      <Action ID="NAVIGATE_TO" obj="red_gear" />
+      <!-- Grip red_gear -->
+      <Action ID="GRIP" obj="red_gear" />
+      <!-- Go to right_peg -->
+      <Action ID="GO_TO" obj="right_peg" />
+      <!-- Place red_gear on right_peg -->
+      <Action ID="PLACE_ON_TOP" obj="red_gear" surface="right_peg" />
+    </Sequence>
+  </BehaviorTree>
+</root>

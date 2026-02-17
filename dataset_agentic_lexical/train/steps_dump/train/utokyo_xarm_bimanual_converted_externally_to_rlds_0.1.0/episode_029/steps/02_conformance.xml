@@ -1,0 +1,10 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Move to towel -->
+      <Action ID="MOVE_TO" obj="towel" />
+      <!-- Grip towel -->
+      <Action ID="GRIP" obj="towel" />
+    </Sequence>
+  </BehaviorTree>
+</root>

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "white_box"
+  destination: "sink"
+  expanded_instruction: "Pick up the white box from the upper shelf and place it into the sink; NAVIGATE_TO the shelf within a 10s timeout."
+  scene_context: "White box on upper shelf above countertop; sink is empty and reachable; robot not holding anything; drawers closed."
+  expected_sequence: "NAVIGATE_TO the upper shelf within a 10s timeout, reach to the white box, grasp it, move over the sink, and place it inside."

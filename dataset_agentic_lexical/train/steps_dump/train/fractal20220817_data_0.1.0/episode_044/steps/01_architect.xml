@@ -1,0 +1,10 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to water bottle -->
+      <Action ID="NAVIGATE_TO" obj="water_bottle"/>
+      <!-- Push water bottle to topple it over -->
+      <Action ID="PUSH" obj="water_bottle"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

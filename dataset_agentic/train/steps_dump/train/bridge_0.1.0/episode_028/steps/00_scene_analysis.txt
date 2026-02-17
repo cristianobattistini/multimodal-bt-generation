@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "bowl"
+  destination: "small4fbox"
+  expanded_instruction: "Pick up the blue bowl from the counter and place it into the open small4fbox."
+  scene_context: "Blue bowl on counter; small4fbox (cardboard box) is open and empty; nothing is currently held."
+  expected_sequence: "Reach to the bowl, grasp and lift it, move over the open small4fbox, and place the bowl inside."

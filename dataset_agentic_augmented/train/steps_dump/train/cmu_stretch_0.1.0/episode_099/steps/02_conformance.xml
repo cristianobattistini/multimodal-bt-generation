@@ -1,0 +1,19 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Execute subtree ApproachDishwasher -->
+      <SubTree ID="ApproachDishwasher" />
+      <!-- Open dishwasher -->
+      <Action ID="OPEN" obj="dishwasher" />
+    </Sequence>
+  </BehaviorTree>
+  <!-- Subtree definition ApproachDishwasher -->
+  <BehaviorTree ID="ApproachDishwasher">
+    <Sequence>
+      <!-- Navigate to dishwasher -->
+      <Action ID="NAVIGATE_TO" obj="dishwasher" />
+      <!-- Open dishwasher -->
+      <Action ID="OPEN" obj="dishwasher" />
+    </Sequence>
+  </BehaviorTree>
+</root>

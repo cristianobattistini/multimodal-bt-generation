@@ -1,0 +1,29 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Execute subtree ApproachYellowPlate -->
+      <SubTree ID="ApproachYellowPlate" />
+      <!-- Navigate to dish_rack -->
+      <Action ID="NAVIGATE_TO" obj="dish_rack" />
+      <!-- Set in dish_rack -->
+      <Action ID="SET_IN" obj="dish_rack" />
+      <!-- Navigate white_cup -->
+      <Action ID="NAVIGATE_TO" obj="white_cup" />
+      <!-- Pick white_cup -->
+      <Action ID="PICK" obj="white_cup" />
+      <!-- Navigate dish_rack -->
+      <Action ID="NAVIGATE_TO" obj="dish_rack" />
+      <!-- Place white_cup inside dish_rack -->
+      <Action ID="PLACE_INSIDE" obj="white_cup" container="dish_rack" />
+    </Sequence>
+  </BehaviorTree>
+  <!-- Subtree definition ApproachYellowPlate -->
+  <BehaviorTree ID="ApproachYellowPlate">
+    <Sequence>
+      <!-- Navigate to yellow_plate -->
+      <Action ID="NAVIGATE_TO" obj="yellow_plate" />
+      <!-- Pick yellow_plate -->
+      <Action ID="PICK" obj="yellow_plate" />
+    </Sequence>
+  </BehaviorTree>
+</root>

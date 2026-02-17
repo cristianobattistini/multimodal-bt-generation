@@ -1,0 +1,10 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to peg_hole -->
+      <Action ID="NAVIGATE_TO" obj="peg_hole"/>
+      <!-- Place peg inside peg_hole (insert straight down) -->
+      <Action ID="PLACE_INSIDE" obj="peg_hole"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

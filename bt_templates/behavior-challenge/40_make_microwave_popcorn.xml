@@ -1,0 +1,14 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <Action ID="NAVIGATE_TO" obj="microwave.n.02_1"/>
+      <Action ID="OPEN" obj="microwave.n.02_1"/>
+      <Action ID="NAVIGATE_TO" obj="popcorn__bag.n.01_1"/>
+      <Action ID="GRASP" obj="popcorn__bag.n.01_1"/>
+      <Action ID="NAVIGATE_TO" obj="microwave.n.02_1"/>
+      <Action ID="PLACE_INSIDE" obj="microwave.n.02_1"/>
+      <Action ID="CLOSE" obj="microwave.n.02_1"/>
+      <Action ID="TOGGLE_ON" obj="microwave.n.02_1"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

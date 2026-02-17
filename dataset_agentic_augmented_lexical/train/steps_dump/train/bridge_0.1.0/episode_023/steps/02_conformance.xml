@@ -1,0 +1,23 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to cloth -->
+      <Action ID="NAVIGATE_TO" obj="cloth" />
+      <!-- Fallback: if GRASP cloth fails, try PUSH, FLIP to reposition -->
+      <Fallback>
+        <!-- Grasp cloth -->
+        <Action ID="GRASP" obj="cloth" />
+        <Sequence>
+          <!-- Push cloth forward toward front edge of table -->
+          <Action ID="PUSH" obj="cloth" />
+          <!-- Grasp cloth -->
+          <Action ID="GRASP" obj="cloth" />
+        </Sequence>
+      </Fallback>
+      <!-- Navigate to cucumber -->
+      <Action ID="NAVIGATE_TO" obj="cucumber" />
+      <!-- Place next to cucumber -->
+      <Action ID="PLACE_NEXT_TO" obj="cucumber" />
+    </Sequence>
+  </BehaviorTree>
+</root>

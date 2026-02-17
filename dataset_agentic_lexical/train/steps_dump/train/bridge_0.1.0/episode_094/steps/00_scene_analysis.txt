@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "bowl"
+  destination: ""
+  expanded_instruction: "Lift the light blue bowl out of the open drawer"
+  scene_context: "Drawer is open; light blue bowl sits inside drawer and is not held; surrounding table area reachable."
+  expected_sequence: "Reach into the drawer, grasp the bowl securely, and lift it out upward."

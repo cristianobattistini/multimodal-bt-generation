@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "pear"
+  destination: "bowl_cardboardfence"
+  expanded_instruction: "Pick up the pear and place it into the blue bowl on the cardboardfence"
+  scene_context: "Pear on tray near back edge; blue bowl on left is empty; cardboard fence upright and reachable."
+  expected_sequence: "Reach to the pear, pick it up, carry it to the blue bowl at the cardboardfence, and set it inside."

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "board"
+  destination: ""
+  expanded_instruction: "Erase the whiteboard surface to remove the purple marks using the robot's eraser"
+  scene_context: "Whiteboard mounted and reachable; small purple marks near center; eraser tool attached to robot arm."
+  expected_sequence: "Move the eraser into contact with the board and wipe over the marks until the board is clean."

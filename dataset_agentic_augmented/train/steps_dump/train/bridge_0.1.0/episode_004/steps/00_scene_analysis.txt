@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "kadai"
+  destination: "table"
+  expanded_instruction: "Verify the kadai at the table's back-left is visible before grasping (retry up to 3 times within a 10s timeout); pick it up, and if the grasp fails push to reposition and retry, then place it on the right edge of the table."
+  scene_context: "Kadai sits on a blue cloth at the back-left of the table, not held; table surface otherwise reachable and right edge clear."
+  expected_sequence: "Check IS_VISIBLE on the kadai at the table's back-left, retry up to 3 times within 10s if needed; move to the kadai, grasp and lift it (if grasp fails push to reposition and retry), carry it to the table's right edge, and set it down there."

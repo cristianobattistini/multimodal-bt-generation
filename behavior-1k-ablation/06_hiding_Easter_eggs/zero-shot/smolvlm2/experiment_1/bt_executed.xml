@@ -1,0 +1,18 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to tree -->
+      <Action ID="NAVIGATE_TO" obj="tree_1" />
+      <!-- Grasp tree_1 -->
+      <Action ID="GRASP" obj="tree_1" />
+      <!-- Navigate to Easter_egg_2 -->
+      <Action ID="NAVIGATE_TO" obj="easter_egg_2" />
+      <!-- Place Easter_egg_2 next to tree -->
+      <Action ID="PLACE_NEXT_TO" obj="easter_egg_2" />
+      <!-- Navigate to Easter_egg_3 -->
+      <Action ID="NAVIGATE_TO" obj="easter_egg_3" />
+      <!-- Place Easter_egg_3 next to tree -->
+      <Action ID="PLACE_NEXT_TO" obj="easter_egg_3" />
+    </Sequence>
+  </BehaviorTree>
+</root>

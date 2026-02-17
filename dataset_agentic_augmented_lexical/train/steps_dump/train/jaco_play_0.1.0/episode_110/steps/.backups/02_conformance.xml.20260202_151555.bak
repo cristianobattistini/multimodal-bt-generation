@@ -1,0 +1,19 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to gray_bowl -->
+      <Action ID="NAVIGATE_TO" obj="gray_bowl" />
+      <!-- Grasp gray_bowl -->
+      <Action ID="GRASP" obj="gray_bowl" />
+      <!-- Navigate to dish_rack -->
+      <Action ID="NAVIGATE_TO" obj="dish_rack" />
+      <!-- Retry PLACE_INSIDE dish_rack up to 5 attempts -->
+      <RetryUntilSuccessful num_attempts="5">
+        <!-- Place inside dish_rack -->
+        <Action ID="PLACE_INSIDE" obj="dish_rack" />
+      </RetryUntilSuccessful>
+      <!-- Release -->
+      <Action ID="RELEASE" />
+    </Sequence>
+  </BehaviorTree>
+</root>

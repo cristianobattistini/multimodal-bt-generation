@@ -1,0 +1,80 @@
+================================================================================
+LEXICAL TRANSFORM STATISTICS REPORT
+================================================================================
+Generated: 2026-02-02T19:20:20.639484
+Source Dataset: dataset_agentic
+Mode: full
+Seed: 42
+
+--------------------------------------------------------------------------------
+EPISODE STATISTICS
+--------------------------------------------------------------------------------
+Total Episodes: 1622
+Preserved (unchanged): 805 (49.6%)
+Transformed: 817 (50.4%)
+
+--------------------------------------------------------------------------------
+STRATIFICATION (50% per subdataset)
+--------------------------------------------------------------------------------
+asu_table_top_converted_externally_to_rlds_0.1.0: 110 total -> 55 preserved, 55 transformed
+austin_buds_dataset_converted_externally_to_rlds_0.1.0: 25 total -> 12 preserved, 13 transformed
+austin_sailor_dataset_converted_externally_to_rlds_0.1.0: 75 total -> 37 preserved, 38 transformed
+austin_sirius_dataset_converted_externally_to_rlds_0.1.0: 50 total -> 25 preserved, 25 transformed
+berkeley_autolab_ur5_0.1.0: 100 total -> 50 preserved, 50 transformed
+bridge_0.1.0: 109 total -> 54 preserved, 55 transformed
+cmu_stretch_0.1.0: 105 total -> 52 preserved, 53 transformed
+dlr_edan_shared_control_converted_externally_to_rlds_0.1.0: 104 total -> 52 preserved, 52 transformed
+dlr_sara_grid_clamp_converted_externally_to_rlds_0.1.0: 25 total -> 12 preserved, 13 transformed
+dlr_sara_pour_converted_externally_to_rlds_0.1.0: 25 total -> 12 preserved, 13 transformed
+fractal20220817_data_0.1.0: 48 total -> 24 preserved, 24 transformed
+imperialcollege_sawyer_wrist_cam_0.1.0: 170 total -> 85 preserved, 85 transformed
+jaco_play_0.1.0: 200 total -> 100 preserved, 100 transformed
+nyu_rot_dataset_converted_externally_to_rlds_0.1.0: 14 total -> 7 preserved, 7 transformed
+stanford_hydra_dataset_converted_externally_to_rlds_0.1.0: 25 total -> 12 preserved, 13 transformed
+stanford_kuka_multimodal_dataset_converted_externally_to_rlds_0.1.0: 25 total -> 12 preserved, 13 transformed
+tokyo_u_lsmo_converted_externally_to_rlds_0.1.0: 50 total -> 25 preserved, 25 transformed
+ucsd_kitchen_dataset_converted_externally_to_rlds_0.1.0: 135 total -> 67 preserved, 68 transformed
+ucsd_pick_and_place_dataset_converted_externally_to_rlds_0.1.0: 52 total -> 26 preserved, 26 transformed
+utokyo_pr2_opening_fridge_0.1.0: 25 total -> 12 preserved, 13 transformed
+utokyo_pr2_tabletop_manipulation_0.1.0: 75 total -> 37 preserved, 38 transformed
+utokyo_xarm_bimanual_converted_externally_to_rlds_0.1.0: 50 total -> 25 preserved, 25 transformed
+utokyo_xarm_pick_and_place_0.1.0: 25 total -> 12 preserved, 13 transformed
+
+--------------------------------------------------------------------------------
+TRANSFORMATION STATISTICS
+--------------------------------------------------------------------------------
+Total Transformations: 1651
+
+By Type:
+  - synonym: 1444 (87.5%)
+  - two_param: 123 (7.5%)
+  - solitary: 84 (5.1%)
+
+--------------------------------------------------------------------------------
+PRIMITIVE USAGE (Original vs Transformed)
+--------------------------------------------------------------------------------
+Primitive                                  Original  Transformed    Total    Orig%
+--------------------------------------------------------------------------------
+CLOSE                                             8            9       17    47.1%
+FLIP                                              4            6       10    40.0%
+FOLD                                             10            9       19    52.6%
+GRASP                                           420          411      831    50.5%
+HANG                                              4            4        8    50.0%
+NAVIGATE_TO                                     786          795     1581    49.7%
+OPEN                                             53           59      112    47.3%
+PLACE_INSIDE                                    132          136      268    49.3%
+PLACE_NEXT_TO                                     5            6       11    45.5%
+PLACE_ON_TOP                                    121          131      252    48.0%
+POUR                                              7           10       17    41.2%
+PUSH                                             23           20       43    53.5%
+RELEASE                                          50           42       92    54.3%
+TOGGLE_ON                                         8            6       14    57.1%
+UNFOLD                                            6            6       12    50.0%
+WIPE                                              2            1        3    66.7%
+
+--------------------------------------------------------------------------------
+MINIMUM RATIO CHECK (>= 30%)
+--------------------------------------------------------------------------------
+All primitives meet minimum ratio requirement. [OK]
+
+================================================================================

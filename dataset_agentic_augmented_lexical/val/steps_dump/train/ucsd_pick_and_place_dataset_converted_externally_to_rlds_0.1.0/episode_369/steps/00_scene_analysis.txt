@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "red_object"
+  destination: ""
+  expanded_instruction: "Pick up the red object from the table near the blue square; when grasping allow a 15s timeout and retry up to 3 times, and if grasp fails, push or flip the object to reposition before retrying."
+  scene_context: "Red object on black table near a blue square; not held; table surface otherwise clear."
+  expected_sequence: "Move to the red object, grasp it securely (15s timeout, retry up to 3 times) and lift it off the table; if grasp keeps failing, push or flip to reposition then grasp."

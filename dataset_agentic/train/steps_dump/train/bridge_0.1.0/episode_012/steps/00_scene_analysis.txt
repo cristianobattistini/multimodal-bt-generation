@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "bell_pepper"
+  destination: "table"
+  expanded_instruction: "Pick up the red bell pepper next to the metal pot and place it on the table toward the bottom, to the right of the yellow towel."
+  scene_context: "Red bell pepper partially outside a metal pot on the table; yellow towel left of center; nothing is held."
+  expected_sequence: "Reach to the bell pepper beside the pot and pick it up, then move to the table bottom-right and place it to the right of the yellow towel."

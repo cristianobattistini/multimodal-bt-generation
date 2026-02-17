@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "kettle"
+  destination: ""
+  expanded_instruction: "Pick up the kettle (white kettle with black handle) from the table, first check that the kettle is reachable; then grasp the handle with a 15 second timeout and retry up to 3 times if the grasp fails."
+  scene_context: "Kettle upright on table with handle visible; not held; surface clear and reachable."
+  expected_sequence: "Approach the kettle, check IS_REACHABLE before attempting to grasp; grasp the handle securely (15s timeout, retry up to 3 times if grasp fails), and lift the kettle off the table."

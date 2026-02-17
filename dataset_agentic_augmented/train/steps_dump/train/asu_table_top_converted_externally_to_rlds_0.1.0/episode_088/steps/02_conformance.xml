@@ -1,0 +1,17 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Execute subtree ApproachTable -->
+      <SubTree ID="ApproachTable" />
+    </Sequence>
+  </BehaviorTree>
+  <!-- Subtree definition ApproachTable -->
+  <BehaviorTree ID="ApproachTable">
+    <Sequence>
+      <!-- Navigate to table -->
+      <Action ID="NAVIGATE_TO" obj="table" />
+      <!-- Place on table -->
+      <Action ID="PLACE_ON_TOP" obj="table" />
+    </Sequence>
+  </BehaviorTree>
+</root>

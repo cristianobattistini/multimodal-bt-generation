@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "door"
+  destination: ""
+  expanded_instruction: "Close the small gray door on the side of the device until it is fully shut"
+  scene_context: "Side gray door is open on the device; door not held and area in front is clear."
+  expected_sequence: "Approach the device, grasp or push the door, and close it until it is fully latched."

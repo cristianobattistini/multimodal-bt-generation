@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "lid"
+  destination: ""
+  expanded_instruction: "Open the white circular lid on the blue surface by lifting or rotating it until the container is open; if opening fails, retry up to 3 times."
+  scene_context: "White circular lid on blue surface is closed and not held; surrounding surface clear."
+  expected_sequence: "Reach the lid, grasp its edge, and lift or twist it to open the container, retrying up to 3 times if an attempt fails."

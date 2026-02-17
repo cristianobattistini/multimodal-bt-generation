@@ -1,0 +1,19 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to orange_fruit -->
+      <Action ID="NAVIGATE_TO" obj="orange_fruit" />
+      <!-- Retry GRASP orange_fruit up to 4 attempts -->
+      <RetryUntilSuccessful num_attempts="4">
+        <!-- Grasp orange_fruit -->
+        <Action ID="GRASP" obj="orange_fruit" />
+      </RetryUntilSuccessful>
+      <!-- Navigate to sink -->
+      <Action ID="NAVIGATE_TO" obj="sink" />
+      <!-- Place inside sink -->
+      <Action ID="PLACE_INSIDE" obj="sink" />
+      <!-- Release -->
+      <Action ID="RELEASE" />
+    </Sequence>
+  </BehaviorTree>
+</root>

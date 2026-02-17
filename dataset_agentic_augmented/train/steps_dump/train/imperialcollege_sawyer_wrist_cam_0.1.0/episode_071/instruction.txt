@@ -1,0 +1,1 @@
+Open lid. Use a 15 second timeout for navigation.

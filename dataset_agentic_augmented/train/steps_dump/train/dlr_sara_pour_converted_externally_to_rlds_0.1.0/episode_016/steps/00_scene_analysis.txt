@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "mug"
+  destination: ""
+  expanded_instruction: "Navigate to the white mug on the table (NAVIGATE_TO within 15s timeout), then pour the liquid into the mug until partially or fully filled as needed"
+  scene_context: "White mug sits on the table; mug is upright and uncovered; robot arm is nearby not holding the mug."
+  expected_sequence: "Bring the source container over the mug (NAVIGATE_TO within 15s timeout), tilt it to pour into the mug, then stop when filled"

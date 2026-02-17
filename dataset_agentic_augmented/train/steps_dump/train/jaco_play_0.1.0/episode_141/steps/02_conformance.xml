@@ -1,0 +1,21 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Execute subtree ApproachBlueTray -->
+      <SubTree ID="ApproachBlueTray" />
+      <!-- Navigate to black_bowl -->
+      <Action ID="NAVIGATE_TO" obj="black_bowl" />
+    </Sequence>
+  </BehaviorTree>
+  <!-- Subtree definition ApproachBlueTray -->
+  <BehaviorTree ID="ApproachBlueTray">
+    <Sequence>
+      <!-- Navigate to blue_tray -->
+      <Action ID="NAVIGATE_TO" obj="blue_tray" />
+      <!-- Navigate to black_bowl -->
+      <Action ID="NAVIGATE_TO" obj="black_bowl" />
+      <!-- Grasp black_bowl -->
+      <Action ID="GRASP" obj="black_bowl" />
+    </Sequence>
+  </BehaviorTree>
+</root>

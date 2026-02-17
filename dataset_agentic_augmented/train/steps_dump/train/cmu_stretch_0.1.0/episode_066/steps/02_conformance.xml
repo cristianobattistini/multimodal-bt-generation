@@ -1,0 +1,17 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to dishwasher_door -->
+      <Action ID="NAVIGATE_TO" obj="dishwasher_door" />
+      <!-- Grasp dishwasher_door -->
+      <Action ID="GRASP" obj="dishwasher_door" />
+      <!-- Retry OPEN dishwasher_door up to 2 attempts -->
+      <RetryUntilSuccessful num_attempts="2">
+        <!-- Open dishwasher_door -->
+        <Action ID="OPEN" obj="dishwasher_door" />
+      </RetryUntilSuccessful>
+      <!-- Release -->
+      <Action ID="RELEASE" />
+    </Sequence>
+  </BehaviorTree>
+</root>

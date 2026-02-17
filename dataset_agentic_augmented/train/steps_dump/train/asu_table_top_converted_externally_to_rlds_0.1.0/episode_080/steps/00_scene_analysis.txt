@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "brown_object"
+  destination: ""
+  expanded_instruction: "Navigate to the brown object (orange/brown bottle near the front-right of the table) within a 10s timeout, then pick it up and hold it."
+  scene_context: "Brown/orange bottle sits front-right on the table, robot gripper is empty, table reachable and other bottles nearby."
+  expected_sequence: "Navigate to the brown bottle within a 10s timeout, move the arm to the bottle, grasp it securely, and lift it to hold above the table."

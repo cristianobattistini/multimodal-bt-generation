@@ -1,0 +1,12 @@
+{
+  "decorator_type": "condition",
+  "mixed_subtype": null,
+  "target_action_id": "PUSH",
+  "target_obj": "milk_carton",
+  "parameters": {
+    "condition_id": "IS_REACHABLE",
+    "condition_obj": "milk_carton",
+    "allowed_conditions": "IS_REACHABLE, IS_VISIBLE"
+  },
+  "prompt_name": "condition"
+}

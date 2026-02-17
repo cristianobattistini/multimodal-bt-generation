@@ -1,0 +1,15 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to mug -->
+      <Action ID="NAVIGATE_TO" obj="mug" />
+      <!-- Pour into mug -->
+      <Action ID="POUR" obj="mug" />
+      <!-- Timeout: FLIP brown_pitcher within 15s -->
+      <Timeout msec="15000">
+        <!-- Return brown_pitcher upright (flip) -->
+        <Action ID="FLIP" obj="brown_pitcher" />
+      </Timeout>
+    </Sequence>
+  </BehaviorTree>
+</root>

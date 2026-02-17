@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "cap"
+  destination: "bottle"
+  expanded_instruction: "Check that the bottle is empty, pick up the cap, and insert it into the bottle opening until it is seated; if insertion fails, retry up to 3 times."
+  scene_context: "Bottle is open on a blue cloth, cap is nearby on the cloth and not held, surface clear."
+  expected_sequence: "Check bottle is empty, reach for the cap, pick it up, align it with the bottle opening, and insert it until seated, retrying the insert up to 3 times if it fails."

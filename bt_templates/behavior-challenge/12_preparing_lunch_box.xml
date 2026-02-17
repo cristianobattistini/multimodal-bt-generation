@@ -1,0 +1,35 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Pack apple halves -->
+      <Action ID="NAVIGATE_TO" obj="half__apple.n.01_1"/>
+      <Action ID="GRASP" obj="half__apple.n.01_1"/>
+      <Action ID="NAVIGATE_TO" obj="packing_box.n.02_1"/>
+      <Action ID="PLACE_INSIDE" obj="packing_box.n.02_1"/>
+      <Action ID="NAVIGATE_TO" obj="half__apple.n.01_2"/>
+      <Action ID="GRASP" obj="half__apple.n.01_2"/>
+      <Action ID="NAVIGATE_TO" obj="packing_box.n.02_1"/>
+      <Action ID="PLACE_INSIDE" obj="packing_box.n.02_1"/>
+      <!-- Pack sandwich -->
+      <Action ID="NAVIGATE_TO" obj="club_sandwich.n.01_1"/>
+      <Action ID="GRASP" obj="club_sandwich.n.01_1"/>
+      <Action ID="NAVIGATE_TO" obj="packing_box.n.02_1"/>
+      <Action ID="PLACE_INSIDE" obj="packing_box.n.02_1"/>
+      <!-- Pack cookie -->
+      <Action ID="NAVIGATE_TO" obj="chocolate_chip_cookie.n.01_1"/>
+      <Action ID="GRASP" obj="chocolate_chip_cookie.n.01_1"/>
+      <Action ID="NAVIGATE_TO" obj="packing_box.n.02_1"/>
+      <Action ID="PLACE_INSIDE" obj="packing_box.n.02_1"/>
+      <!-- Get tea from fridge -->
+      <Action ID="NAVIGATE_TO" obj="electric_refrigerator.n.01_1"/>
+      <Action ID="OPEN" obj="electric_refrigerator.n.01_1"/>
+      <Action ID="NAVIGATE_TO" obj="bottle__of__tea.n.01_1"/>
+      <Action ID="GRASP" obj="bottle__of__tea.n.01_1"/>
+      <Action ID="NAVIGATE_TO" obj="packing_box.n.02_1"/>
+      <Action ID="PLACE_INSIDE" obj="packing_box.n.02_1"/>
+      <!-- Close fridge -->
+      <Action ID="NAVIGATE_TO" obj="electric_refrigerator.n.01_1"/>
+      <Action ID="CLOSE" obj="electric_refrigerator.n.01_1"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

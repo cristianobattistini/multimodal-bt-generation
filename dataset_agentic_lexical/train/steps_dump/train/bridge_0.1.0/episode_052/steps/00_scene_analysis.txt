@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "cup"
+  destination: "stovetop"
+  expanded_instruction: "Pick up the red cup from the green plate and place it on the stovetop next to the plate."
+  scene_context: "Red cup sitting on green plate on the stovetop; cup not held; stovetop surface clear enough to place cup."
+  expected_sequence: "Reach to the cup, lift it off the plate, and set it down on the stovetop next to the plate."

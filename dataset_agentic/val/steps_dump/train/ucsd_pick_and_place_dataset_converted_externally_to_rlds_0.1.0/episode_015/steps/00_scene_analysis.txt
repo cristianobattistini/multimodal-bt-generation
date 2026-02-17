@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "red_object"
+  destination: ""
+  expanded_instruction: "Pick up the red object resting on the table near the front-center"
+  scene_context: "Table is clear with blue markers; red_object is on the table and not held; no containers."
+  expected_sequence: "Move to the red object, grasp it, and lift it off the table."

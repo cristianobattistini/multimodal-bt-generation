@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "cabinet_right_door"
+  destination: ""
+  expanded_instruction: "Check IS_CLOSED on cabinet_right_door first; if it is closed, open the right small door of the white cabinet on the counter. If opening fails, retry up to 2 more times and recheck IS_CLOSED before each attempt."
+  scene_context: "White cabinet doors are closed; right small door closed and reachable; workspace clear."
+  expected_sequence: "Verify cabinet_right_door is closed (IS_CLOSED) before attempting to open; then reach to the right cabinet door handle and pull it open. If grasp or pull fails, retry up to 3 times, rechecking IS_CLOSED and using a 10s timeout per attempt."

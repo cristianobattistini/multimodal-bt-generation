@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "green_glass_bottle"
+  destination: ""
+  expanded_instruction: "Pick up the green glass bottle from the table and move it to a nearby clear area on the table; if grasping fails, retry up to 2 times and, if still unsuccessful, use push or flip to reposition the bottle into the clear spot."
+  scene_context: "Green glass bottle on front-left of table, not held; table mostly clear and reachable; no containers open."
+  expected_sequence: "Approach the bottle, grasp and lift it (retry up to 2 times on failure), then place it down in a nearby clear spot on the table; if grasp repeatedly fails, use push or flip as a fallback to reposition it into that spot."

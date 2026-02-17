@@ -1,0 +1,12 @@
+{
+  "decorator_type": "condition",
+  "mixed_subtype": null,
+  "target_action_id": "CLOSE",
+  "target_obj": "door",
+  "parameters": {
+    "condition_id": "IS_OPEN",
+    "condition_obj": "door",
+    "allowed_conditions": "IS_OPEN, IS_REACHABLE"
+  },
+  "prompt_name": "condition"
+}

@@ -1,0 +1,16 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Remove sheet 1 from bed, put on floor -->
+      <Action ID="NAVIGATE_TO" obj="sheet.n.03_1"/>
+      <Action ID="GRASP" obj="sheet.n.03_1"/>
+      <Action ID="NAVIGATE_TO" obj="floor.n.01_1"/>
+      <Action ID="PLACE_ON_TOP" obj="floor.n.01_1"/>
+      <!-- Pick sheet 2 from floor, put on bed -->
+      <Action ID="NAVIGATE_TO" obj="sheet.n.03_2"/>
+      <Action ID="GRASP" obj="sheet.n.03_2"/>
+      <Action ID="NAVIGATE_TO" obj="bed.n.01_1"/>
+      <Action ID="PLACE_ON_TOP" obj="bed.n.01_1"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

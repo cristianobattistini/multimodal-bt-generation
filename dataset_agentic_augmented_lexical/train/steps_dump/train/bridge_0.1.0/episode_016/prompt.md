@@ -1,0 +1,2 @@
+Instruction: Move the silver vessel and place it below the spoon. Check if reachable and use a 15 second timeout for navigation.
+Allowed Actions: [NAVIGATE_TO(obj), GRASP(obj), APPROACH(obj), PLACE_ON_TOP(obj)]

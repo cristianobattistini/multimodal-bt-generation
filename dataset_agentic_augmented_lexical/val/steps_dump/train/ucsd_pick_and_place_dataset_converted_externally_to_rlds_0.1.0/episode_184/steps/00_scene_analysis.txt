@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "red_object"
+  destination: ""
+  expanded_instruction: "Pick up the red object from the table (red cylinder near the center-left of the table). Group actions into an ApproachRedObject subtree—approach and align to the object within a 10s timeout, retry up to 3 times, and include recovery actions (e.g., push to reposition) if grasping fails."
+  scene_context: "Table is clear; red object sits on the table and is not held; robot arm starts above the table."
+  expected_sequence: "Approach the red object, grasp it securely, and lift it off the table. Execute this via the ApproachRedObject subtree: approach and align (10s timeout), retry up to 3 times, and if grasp fails, push to reposition and retry before lifting."

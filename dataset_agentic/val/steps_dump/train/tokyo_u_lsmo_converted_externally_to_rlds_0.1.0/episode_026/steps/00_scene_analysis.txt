@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "blue_pen"
+  destination: ""
+  expanded_instruction: "Move to and reach the blue pen on the table while avoiding the white curved obstacle between agent and pen"
+  scene_context: "Blue pen upright in a holder on the table; white curved arm obstructs direct approach; holder and table are reachable."
+  expected_sequence: "Approach the pen via a side path that avoids the white arm and then reach forward to grasp the blue pen."

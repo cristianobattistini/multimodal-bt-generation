@@ -1,0 +1,26 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to stainless_pot -->
+      <Action ID="NAVIGATE_TO" obj="stainless_pot" />
+      <!-- Navigate to lid -->
+      <Action ID="NAVIGATE_TO" obj="lid" />
+      <!-- Fallback: if GRASP lid fails, try alternative to reposition -->
+      <Fallback>
+        <!-- Retry GRASP lid up to 2 attempts -->
+        <RetryUntilSuccessful num_attempts="2">
+          <!-- Grasp lid -->
+          <Action ID="GRASP" obj="lid" />
+        </RetryUntilSuccessful>
+        <Sequence>
+          <!-- Push lid forward toward front edge of table -->
+          <Action ID="PUSH" obj="lid" />
+          <!-- Grasp lid -->
+          <Action ID="GRASP" obj="lid" />
+        </Sequence>
+      </Fallback>
+      <!-- Open lid -->
+      <Action ID="OPEN" obj="lid" />
+    </Sequence>
+  </BehaviorTree>
+</root>

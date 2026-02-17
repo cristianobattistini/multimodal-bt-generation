@@ -1,0 +1,40 @@
+{
+  "decorator_type": "mixed",
+  "mixed_subtype": "timeout_retry_fallback",
+  "target_action_id": "GRASP",
+  "target_obj": "pear",
+  "parameters": {
+    "augmentations": [
+      {
+        "type": "timeout",
+        "action_id": "GRASP",
+        "obj": "pear",
+        "params": {
+          "msec": 10000
+        }
+      },
+      {
+        "type": "retry",
+        "action_id": "GRASP",
+        "obj": "pear",
+        "params": {
+          "num_attempts": 3
+        }
+      },
+      {
+        "type": "fallback",
+        "action_id": "GRASP",
+        "obj": "pear",
+        "params": {
+          "valid_fallbacks": [
+            "PUSH",
+            "FLIP"
+          ],
+          "valid_fallbacks_str": "PUSH, FLIP",
+          "hint": "PUSH/FLIP repositions the object into a better grasping position"
+        }
+      }
+    ]
+  },
+  "prompt_name": "mixed/timeout_retry_fallback"
+}

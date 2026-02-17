@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "butter_dairy"
+  destination: "sink"
+  expanded_instruction: "Check that the blue sink basin is reachable (IS_REACHABLE) before navigating; retry reachability check up to 3 times with a 10s timeout. Then pick up the butter dairy from the table and navigate to the sink, grasp it, and place it into the basin. If grasp fails, try repositioning and retry the grasp."
+  scene_context: "Butter dairy on the table next to a green cup; blue sink basin is open and empty; robot not holding anything."
+  expected_sequence: "Check IS_REACHABLE on the blue sink basin (retry up to 3 times, 10s timeout); approach the butter dairy, grasp it, carry it to the sink, navigate only if reachable, and place it inside the basin; if grasp fails, reposition and retry."

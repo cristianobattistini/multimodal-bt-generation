@@ -1,0 +1,10 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to board -->
+      <Action ID="NAVIGATE_TO" obj="board"/>
+      <!-- Wipe board -->
+      <Action ID="WIPE" obj="board"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

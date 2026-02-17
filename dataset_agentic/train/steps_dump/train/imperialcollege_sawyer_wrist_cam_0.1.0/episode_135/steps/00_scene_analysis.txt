@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "can"
+  destination: ""
+  expanded_instruction: "Pick up the can resting on the blue cloth surface"
+  scene_context: "Can resting on blue cloth surface; no containers open; gripper not holding the object; surface otherwise clear."
+  expected_sequence: "Move to the can, close the gripper around it, and lift it off the cloth."

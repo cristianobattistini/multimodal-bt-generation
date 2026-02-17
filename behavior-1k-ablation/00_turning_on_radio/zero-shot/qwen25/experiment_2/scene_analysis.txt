@@ -1,0 +1,7 @@
+scene_analysis:
+  target: "radio_receiver"
+  destination: ""
+  expanded_instruction: "Move to the radio_receiver on the table and flip the power switch to turn it on."
+  scene_context: "Table clear; red radio_receiver with power switch at front-center resting on table; no containers open; robot not holding anything."
+  expected_sequence: "Approach the radio_receiver, grasp the power switch, and flip it so the device is powered on."
+Plan:

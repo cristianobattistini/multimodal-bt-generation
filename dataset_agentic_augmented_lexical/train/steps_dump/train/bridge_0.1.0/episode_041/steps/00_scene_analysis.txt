@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "carrot"
+  destination: "pot"
+  expanded_instruction: "Check that the orange carrot is reachable, then pick up the orange carrot and place it into the orange pot inside the cardboard fence; if grasp fails retry up to 3 times and, if still unsuccessful, push or flip the carrot to reposition it."
+  scene_context: "Cardboard fence surrounds the wooden board; carrot on board near fence; pot on board is empty and reachable."
+  expected_sequence: "Approach the carrot, check IS_REACHABLE, grasp and lift it (retry grasp up to 3 times on failure), if grasp fails use push or flip to reposition, move over the pot, and place the carrot into the pot."

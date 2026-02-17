@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "red_apple"
+  destination: ""
+  expanded_instruction: "Pick up the red apple from the small stool next to the black shelf; if a grasp fails, retry up to 3 times and, if still unsuccessful within 10s, use a push or flip to reposition the apple before attempting to grasp again."
+  scene_context: "Red apple on small stool beside black shelf; stool surface reachable and unblocked; apple not held."
+  expected_sequence: "Approach the stool, grasp the red apple, and lift it clear of the surface; if grasp fails, retry (up to 3 attempts/10s) and then push or flip the apple to reposition before reattempting the grasp."

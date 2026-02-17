@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "green_cup"
+  destination: ""
+  expanded_instruction: "Pick up the green cup from the metal tray at the left side of the table, first checking IS_GRASPABLE on the cup; retry grasp up to 3 times if needed, and if grasping fails, reposition the cup by pushing or flipping it before trying again."
+  scene_context: "Green cup sits on a small metal tray at left of table; cup not held; table surfaces clear; no containers closed."
+  expected_sequence: "Move to the tray, check IS_GRASPABLE for the green cup, then grasp (retry up to 3 times on failure) and lift it off the tray; if grasp fails, push or flip the cup to reposition and retry."

@@ -1,0 +1,18 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to faucet_handle -->
+      <Action ID="NAVIGATE_TO" obj="faucet_handle" />
+      <!-- Grasp faucet_handle -->
+      <Action ID="GRASP" obj="faucet_handle" />
+      <Sequence>
+        <!-- Check faucet_handle is reachable before TOGGLE_ON -->
+        <Condition ID="IS_REACHABLE" obj="faucet_handle" />
+        <!-- Toggle on faucet_handle -->
+        <Action ID="TOGGLE_ON" obj="faucet_handle" />
+      </Sequence>
+      <!-- Release -->
+      <Action ID="RELEASE" />
+    </Sequence>
+  </BehaviorTree>
+</root>

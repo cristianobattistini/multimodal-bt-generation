@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "green_glass_bottle"
+  destination: "table"
+  expanded_instruction: "Pick up the green glass bottle from the left side of the table and place it down on the table, attempting the grasp with a 15s timeout and retrying up to 2 times; if grasp fails, use push or flip to reposition before placing."
+  scene_context: "Green glass bottle upright on left side of table, not held; table surface reachable and mostly clear."
+  expected_sequence: "Reach to the bottle, attempt to grasp and lift it (grasp has a 15s timeout and may be retried up to 2 times); if grasp fails, push or flip to reposition the bottle, then move to the target spot on the table and set it down."

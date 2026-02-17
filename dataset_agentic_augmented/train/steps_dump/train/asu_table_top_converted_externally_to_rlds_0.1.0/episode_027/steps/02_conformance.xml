@@ -1,0 +1,24 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to red_object -->
+      <Action ID="NAVIGATE_TO" obj="red_object" />
+      <!-- Grasp red_object -->
+      <Action ID="GRASP" obj="red_object" />
+      <!-- Navigate to table -->
+      <Action ID="NAVIGATE_TO" obj="table" />
+      <!-- Fallback: if PLACE_ON_TOP table fails, try PUSH to reposition -->
+      <Fallback>
+        <!-- Place on table -->
+        <Action ID="PLACE_ON_TOP" obj="table" />
+        <Sequence>
+          <!-- Push table forward toward front edge of table -->
+          <Action ID="PUSH" obj="table" />
+          <!-- Place on table -->
+          <Action ID="PLACE_ON_TOP" obj="table" />
+        </Sequence>
+      </Fallback>
+      
+    </Sequence>
+  </BehaviorTree>
+</root>

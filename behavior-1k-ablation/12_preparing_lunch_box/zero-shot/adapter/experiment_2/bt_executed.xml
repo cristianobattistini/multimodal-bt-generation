@@ -1,0 +1,62 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to chopping_board -->
+      <Action ID="NAVIGATE_TO" obj="chopping_board" />
+      <!-- Grasp club_sandwich -->
+      <Action ID="GRASP" obj="club_sandwich" />
+      <!-- Navigate to packing_box -->
+      <Action ID="NAVIGATE_TO" obj="packing_box" />
+      <!-- Place inside packing_box -->
+      <Action ID="PLACE_INSIDE" obj="packing_box" />
+      <!-- Navigate to bottle_of_tea -->
+      <Action ID="NAVIGATE_TO" obj="bottle_of_tea" />
+      <!-- Grasp bottle_of_tea -->
+      <Action ID="GRASP" obj="bottle_of_tea" />
+      <!-- Navigate to electric_refrigerator -->
+      <Action ID="NAVIGATE_TO" obj="electric_refrigerator" />
+      <!-- Open electric_refrigerator -->
+      <Action ID="OPEN" obj="electric_refrigerator" />
+      <!-- Open bottle_of_tea -->
+      <Action ID="NAVIGATE_TO" obj="bottle_of_tea" />
+      <!-- Navigate to bottle_of_tea -->
+      <Action ID="GRASP" obj="bottle_of_tea" />
+      <!-- Navigate to bottle_of_tea -->
+      <Action ID="NAVIGATE_TO" obj="packing_box" />
+      <!-- Place inside packing_box -->
+      <Action ID="PLACE_INSIDE" obj="packing_box" />
+      <!-- Navigate to chopping_board -->
+      <Action ID="NAVIGATE_TO" obj="chopping_board" />
+      <!-- Grasp half_apple_1 -->
+      <Action ID="GRASP" obj="half_apple_1" />
+      <!-- Navigate to packing_box -->
+      <Action ID="NAVIGATE_TO" obj="packing_box" />
+      <!-- Place inside packing_box -->
+      <Action ID="PLACE_INSIDE" obj="packing_box" />
+      <!-- Navigate to chopping_board -->
+      <Action ID="NAVIGATE_TO" obj="chopping_board" />
+      <!-- Grasp half_apple_2 -->
+      <Action ID="GRASP" obj="half_apple_2" />
+      <!-- Navigate to packing_box -->
+      <Action ID="NAVIGATE_TO" obj="packing_box" />
+      <!-- Place inside packing_box -->
+      <Action ID="PLACE_INSIDE" obj="packing_box" />
+      <!-- Navigate to chopping_board -->
+      <Action ID="NAVIGATE_TO" obj="chopping_board" />
+      <!-- Grasp chocolate_chip_cookie -->
+      <Action ID="GRASP" obj="chocolate_chip_cookie" />
+      <!-- Navigate to packing_box -->
+      <Action ID="NAVIGATE_TO" obj="packing_box" />
+      <!-- Place inside packing_box -->
+      <Action ID="PLACE_INSIDE" obj="packing_box" />
+      <!-- Navigate to packing_box -->
+      <Action ID="NAVIGATE_TO" obj="packing_box" />
+      <!-- Close packing_box -->
+      <Action ID="CLOSE" obj="packing_box" />
+      <!-- Navigate to bottle_of_tea -->
+      <Action ID="NAVIGATE_TO" obj="bottle_of_tea" />
+      <!-- Close bottle_of_tea -->
+      <Action ID="CLOSE" obj="bottle_of_tea" />
+    </Sequence>
+  </BehaviorTree>
+</root>

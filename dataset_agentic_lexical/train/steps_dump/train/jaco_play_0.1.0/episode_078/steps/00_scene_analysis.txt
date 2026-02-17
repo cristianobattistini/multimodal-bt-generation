@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "gray_bowl"
+  destination: ""
+  expanded_instruction: "Pick up the gray bowl sitting inside the blue tray on the table."
+  scene_context: "Gray bowl rests in blue tray on table, not held; table clear; yellow cup on scale; no closed containers."
+  expected_sequence: "Move to the blue tray, grasp the gray bowl, and lift it clear of the tray."

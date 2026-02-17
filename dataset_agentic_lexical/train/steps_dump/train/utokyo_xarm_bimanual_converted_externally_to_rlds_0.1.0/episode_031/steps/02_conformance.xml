@@ -1,0 +1,16 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Move to wrinkled_towel -->
+      <Action ID="MOVE_TO" obj="wrinkled_towel" />
+      <!-- Pick wrinkled_towel -->
+      <Action ID="PICK" obj="wrinkled_towel" />
+      <!-- Locomote to grass_mat -->
+      <Action ID="LOCOMOTE_TO" obj="grass_mat" />
+      <!-- Spread wrinkled_towel -->
+      <Action ID="SPREAD" obj="wrinkled_towel" />
+      <!-- Place on grass_mat -->
+      <Action ID="PLACE_ON_TOP" obj="grass_mat" />
+    </Sequence>
+  </BehaviorTree>
+</root>

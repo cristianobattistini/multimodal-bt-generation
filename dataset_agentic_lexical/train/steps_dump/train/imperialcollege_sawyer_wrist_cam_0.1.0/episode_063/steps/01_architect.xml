@@ -1,0 +1,10 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Advance to lid -->
+      <Action ID="ADVANCE_TO" obj="lid" />
+      <!-- Open up lid -->
+      <Action ID="OPEN_UP" obj="lid" />
+    </Sequence>
+  </BehaviorTree>
+</root>

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "green_squash"
+  destination: "pot"
+  expanded_instruction: "Pick up the green squash from the counter and place it into the pot on the stove."
+  scene_context: "Green squash on counter beside sink; pot/saucepan on stove is empty and reachable; nothing is held."
+  expected_sequence: "Grasp the green squash, move it over the pot on the stove, and place it inside."

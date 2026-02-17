@@ -1,0 +1,20 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence name="main_sequence">
+      <NAVIGATE_TO obj="book"/>
+      <GRASP obj="book"/>
+      <NAVIGATE_TO obj="table"/>
+      <PLACE_ON_TOP dest="table"/>
+
+      <NAVIGATE_TO obj="sandal_1"/>
+      <GRASP obj="sandal_1"/>
+      <NAVIGATE_TO obj="bed"/>
+      <PLACE_NEXT_TO dest="bed"/>
+
+      <NAVIGATE_TO obj="sandal_2"/>
+      <GRASP obj="sandal_2"/>
+      <NAVIGATE_TO obj="sandal_1"/>
+      <PLACE_NEXT_TO dest="sandal_1"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

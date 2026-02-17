@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "sushi_top_left"
+  destination: "table"
+  expanded_instruction: "Pick up the sushi at the top-left of the table and place it on the table nearer the front-center."
+  scene_context: "Sushi rests on a yellow cloth at the table's top-left; bowl present; nothing is held; table mostly clear."
+  expected_sequence: "Reach the sushi, grasp it, lift it off the cloth, move toward the front-center of the table, and set it down."

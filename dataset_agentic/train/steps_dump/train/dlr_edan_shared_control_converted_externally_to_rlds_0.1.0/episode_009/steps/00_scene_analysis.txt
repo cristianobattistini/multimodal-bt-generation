@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "glass"
+  destination: ""
+  expanded_instruction: "Pick up the clear glass from the black tabletop next to the small plant."
+  scene_context: "Glass on black tabletop near plant; table surface clear; robot not holding anything; no containers closed."
+  expected_sequence: "Move to the table, reach for the glass, grasp it securely, and lift it clear of the surface."

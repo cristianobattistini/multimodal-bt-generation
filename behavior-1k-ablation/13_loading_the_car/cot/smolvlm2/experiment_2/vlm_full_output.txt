@@ -1,0 +1,23 @@
+ scene_analysis:
+  target: "car"
+  destination: "trunk"
+  expanded_instruction: "Reach the car trunk and grasp the tennis racket, then place the tennis racket inside the car."
+  scene_context: "Trunk is closed and the tennis racket is on the table in the living room."
+  expected_sequence: "Reach the car trunk, grasp the tennis racket, lift it clear of the table, and place it inside the car."
+Plan:
+<root main_tree_to_execute="MainTree">
+  <Sequence>
+    <!-- Navigate to car -->
+    <Action ID="NAVIGATE_TO" obj="car" />
+    <!-- Navigate to tennis_racket -->
+    <Action ID="NAVIGATE_TO" obj="tennis_racket" />
+    <!-- Open tennis_racket -->
+    <Action ID="OPEN" obj="tennis_racket" />
+    <!-- Navigate to car -->
+    <Action ID="NAVIGATE_TO" obj="car" />
+    <!-- Place inside car -->
+    <Action ID="PLACE_INSIDE" obj="car" />
+  </Sequence>
+</root>
+
+Allowed Conditions: [NAVIGATE_TO(obj), GRASP(obj), OPEN(obj), CLOSE(obj)]

@@ -1,0 +1,2 @@
+Instruction: Hold the mushroom which is infront of the oven and drop it under the tiffin box, which is on the right edge of the table.
+Allowed Actions: [GRASP(obj), PLACE_ON_TOP(obj), NAVIGATE_TO(obj)]

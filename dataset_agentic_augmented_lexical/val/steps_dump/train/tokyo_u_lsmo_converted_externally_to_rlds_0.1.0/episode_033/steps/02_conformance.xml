@@ -1,0 +1,25 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to table -->
+      <Action ID="NAVIGATE_TO" obj="table" />
+      <!-- Navigate to brown_holder -->
+      <Action ID="NAVIGATE_TO" obj="brown_holder" />
+      <!-- Check scissors is graspable before GRASP -->
+      <Condition ID="IS_GRASPABLE" obj="scissors" />
+      <!-- Fallback: if GRASP scissors fails, try alternative to reposition -->
+      <Fallback>
+        <!-- Grasp scissors -->
+        <Action ID="PICK" obj="scissors" />
+        <Sequence>
+          <!-- Push table forward toward front edge of table -->
+          <Action ID="PUSH" obj="table" />
+          <!-- Grasp scissors -->
+          <Action ID="GRASP" obj="scissors" />
+        </Sequence>
+      </Fallback>
+      <!-- Pick scissors -->
+      <Action ID="RELEASE" />
+    </Sequence>
+  </BehaviorTree>
+</root>

@@ -1,0 +1,1 @@
+lift open green garbage can lid. Use a 15 second timeout for grasping and retry up to 3 times if it fails.

@@ -1,0 +1,26 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Mousetrap 1: grasp from cabinet, place next to sink -->
+      <Action ID="NAVIGATE_TO" obj="mousetrap.n.01_1"/>
+      <Action ID="GRASP" obj="mousetrap.n.01_1"/>
+      <Action ID="NAVIGATE_TO" obj="sink.n.01_1"/>
+      <Action ID="PLACE_NEXT_TO" obj="sink.n.01_1"/>
+      <!-- Mousetrap 2: grasp from cabinet, place next to sink -->
+      <Action ID="NAVIGATE_TO" obj="mousetrap.n.01_2"/>
+      <Action ID="GRASP" obj="mousetrap.n.01_2"/>
+      <Action ID="NAVIGATE_TO" obj="sink.n.01_1"/>
+      <Action ID="PLACE_NEXT_TO" obj="sink.n.01_1"/>
+      <!-- Mousetrap 3: grasp from cabinet, place next to sink -->
+      <Action ID="NAVIGATE_TO" obj="mousetrap.n.01_3"/>
+      <Action ID="GRASP" obj="mousetrap.n.01_3"/>
+      <Action ID="NAVIGATE_TO" obj="sink.n.01_1"/>
+      <Action ID="PLACE_NEXT_TO" obj="sink.n.01_1"/>
+      <!-- Mousetrap 4: grasp from cabinet, place next to sink -->
+      <Action ID="NAVIGATE_TO" obj="mousetrap.n.01_4"/>
+      <Action ID="GRASP" obj="mousetrap.n.01_4"/>
+      <Action ID="NAVIGATE_TO" obj="sink.n.01_1"/>
+      <Action ID="PLACE_NEXT_TO" obj="sink.n.01_1"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

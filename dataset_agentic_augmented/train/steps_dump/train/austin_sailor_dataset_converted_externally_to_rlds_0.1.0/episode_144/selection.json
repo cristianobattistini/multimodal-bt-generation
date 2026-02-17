@@ -1,0 +1,28 @@
+{
+  "decorator_type": "mixed",
+  "mixed_subtype": "condition_timeout",
+  "target_action_id": "NAVIGATE_TO",
+  "target_obj": "fish",
+  "parameters": {
+    "augmentations": [
+      {
+        "type": "condition",
+        "action_id": "NAVIGATE_TO",
+        "obj": "fish",
+        "params": {
+          "condition_id": "IS_REACHABLE",
+          "condition_obj": "fish"
+        }
+      },
+      {
+        "type": "timeout",
+        "action_id": "NAVIGATE_TO",
+        "obj": "fish",
+        "params": {
+          "msec": 15000
+        }
+      }
+    ]
+  },
+  "prompt_name": "mixed/condition_timeout"
+}

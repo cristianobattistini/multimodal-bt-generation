@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "gray_bowl"
+  destination: "dish_rack"
+  expanded_instruction: "Group actions into an ApproachGrayBowl subtree: approach and pick up the gray bowl from the counter (retry up to 3 times, 10s timeout; if grasp fails, push to reposition), then place it into the blue dish rack."
+  scene_context: "Gray bowl on counter near rack, dish rack open and empty, bowl not held."
+  expected_sequence: "ApproachGrayBowl subtree: reach the bowl, attempt grasp (retry up to 3 times, 10s timeout; if grasp fails, push to reposition), lift, move over the blue dish rack, and set the bowl inside."

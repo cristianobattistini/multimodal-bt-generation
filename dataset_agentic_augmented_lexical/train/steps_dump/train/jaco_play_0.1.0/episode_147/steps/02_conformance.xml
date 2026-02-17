@@ -1,0 +1,17 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to blue_bowl -->
+      <Action ID="NAVIGATE_TO" obj="blue_bowl" />
+      <!-- Check milk_dairy is visible before NAVIGATE_TO -->
+      <Condition ID="IS_VISIBLE" obj="milk_dairy" />
+      <!-- Timeout: NAVIGATE_TO milk_dairy within 10s -->
+      <Timeout msec="10000">
+        <!-- Navigate to milk_dairy -->
+        <Action ID="NAVIGATE_TO" obj="milk_dairy" />
+      </Timeout>
+      <!-- Grasp milk_dairy -->
+      <Action ID="GRASP" obj="milk_dairy" />
+    </Sequence>
+  </BehaviorTree>
+</root>

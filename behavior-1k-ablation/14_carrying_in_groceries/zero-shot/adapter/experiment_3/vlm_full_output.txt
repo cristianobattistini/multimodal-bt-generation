@@ -1,0 +1,41 @@
+scene_analysis:
+  target: "["beefsteak_tomato", "carton_of_milk"]"
+  destination: "electric_refrigerator"
+  expanded_instruction: "Gather the sack, the beefsteak tomato, and the carton of milk, then place them inside the electric refrigerator, and close the car and the refrigerator when done."
+  scene_context: "Groceries in the open trunk of a red car; electric refrigerator is open and reachable; no object is held."
+  expected_sequence: "Gather the sack, the tomato, and the carton, place the sack beside the refrigerator, put the beefsteak tomato and carton into the refrigerator, then close the car and refrigerator when done."
+Plan:
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to sack -->
+      <Action ID="NAVIGATE_TO" obj="sack"/>
+      <!-- Grasp sack -->
+      <Action ID="GRASP" obj="sack"/>
+      <!-- Navigate to electric_refrigerator -->
+      <Action ID="NAVIGATE_TO" obj="electric_refrigerator"/>
+      <!-- Place beside electric_refrigerator -->
+      <Action ID="PLACE_NEXT_TO" obj="electric_refrigerator"/>
+      <!-- Navigate to beefsteak_tomato -->
+      <Action ID="NAVIGATE_TO" obj="beefsteak_tomato"/>
+      <!-- Grasp beefsteak_tomato -->
+      <Action ID="GRASP" obj="beefsteak_tomato"/>
+      <!-- Navigate to electric_refrigerator -->
+      <Action ID="NAVIGATE_TO" obj="electric_refrigerator"/>
+      <!-- Place inside electric_refrigerator -->
+      <Action ID="PLACE_INSIDE" obj="electric_refrigerator"/>
+      <!-- Navigate to carton_of_milk -->
+      <Action ID="NAVIGATE_TO" obj="carton_of_milk"/>
+      <!-- Grasp carton_of_milk -->
+      <Action ID="GRASP" obj="carton_of_milk"/>
+      <!-- Navigate to electric_refrigerator -->
+      <Action ID="NAVIGATE_TO" obj="electric_refrigerator"/>
+      <!-- Place inside electric_refrigerator -->
+      <Action ID="PLACE_INSIDE" obj="electric_refrigerator"/>
+      <!-- Open car -->
+      <Action ID="OPEN" obj="car"/>
+      <!-- Open electric_refrigerator -->
+      <Action ID="OPEN" obj="electric_refrigerator"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

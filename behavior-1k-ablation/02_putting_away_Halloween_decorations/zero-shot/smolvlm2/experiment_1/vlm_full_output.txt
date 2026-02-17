@@ -1,0 +1,25 @@
+ scene_analysis:
+  target: pumpkin.n.02_1
+  destination: cabinet.n.01_1
+  expanded_instruction: Open the cabinet and place the 2 pumpkins and 3 candles inside the cabinet, then place the cauldron next to the table. Close the cabinet in the end.
+Plan:
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to pumpkin -->
+      <Action ID="NAVIGATE_TO" obj="pumpkin" />
+      <!-- Grasp pumpkin -->
+      <Action ID="GRASP" obj="pumpkin" />
+      <!-- Place inside cabinet -->
+      <Action ID="PLACE_INSIDE" obj="cabinet" />
+      <!-- Place next to table -->
+      <Action ID="PLACE_NEXT_TO" obj="table" />
+      <!-- Open cabinet -->
+      <Action ID="OPEN" />
+      <!-- Place next to table -->
+      <Action ID="PLACE_NEXT_TO" obj="table" />
+      <!-- Close cabinet -->
+      <Action ID="CLOSE" />
+    </Sequence>
+  </BehaviorTree>
+</root>

@@ -1,0 +1,21 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Execute subtree ApproachWorkSurface -->
+      <SubTree ID="ApproachWorkSurface" />
+      <!-- Grasp scissors -->
+      <Action ID="GRASP" obj="scissors" />
+      <!-- Release -->
+      <Action ID="RELEASE" />
+    </Sequence>
+  </BehaviorTree>
+  <!-- Subtree definition ApproachWorkSurface -->
+  <BehaviorTree ID="ApproachWorkSurface">
+    <Sequence>
+      <!-- Navigate to work_surface -->
+      <Action ID="NAVIGATE_TO" obj="work_surface" />
+      <!-- Navigate to scissors -->
+      <Action ID="NAVIGATE_TO" obj="scissors" />
+    </Sequence>
+  </BehaviorTree>
+</root>

@@ -1,0 +1,2 @@
+Instruction: Place the gray bowl in the sink. Retry placing inside up to 4 times if it fails.
+Allowed Actions: [NAVIGATE_TO(obj), PUT_IN(obj)]

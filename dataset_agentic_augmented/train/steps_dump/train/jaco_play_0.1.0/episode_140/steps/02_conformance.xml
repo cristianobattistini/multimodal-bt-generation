@@ -1,0 +1,20 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to square_bread -->
+      <Action ID="NAVIGATE_TO" obj="square_bread" />
+      <!-- Retry GRASP square_bread up to 3 attempts -->
+      <RetryUntilSuccessful num_attempts="3">
+        <!-- Timeout: GRASP square_bread within 20s -->
+        <Timeout msec="20000">
+          <!-- Grasp square_bread -->
+          <Action ID="GRASP" obj="square_bread" />
+        </Timeout>
+      </RetryUntilSuccessful>
+      <!-- Navigate to oven -->
+      <Action ID="NAVIGATE_TO" obj="oven" />
+      <!-- Place inside oven -->
+      <Action ID="PLACE_INSIDE" obj="oven" />
+    </Sequence>
+  </BehaviorTree>
+</root>

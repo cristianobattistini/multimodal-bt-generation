@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "milk_dairy"
+  destination: ""
+  expanded_instruction: "Pick up the milk dairy (small blue-topped carton) from the black coaster near the center of the table; retry the grasp up to 3 times if it fails, and if still unsuccessful, push or flip the carton to reposition and try again."
+  scene_context: "Milk_dairy sits on a black coaster near center table; not held; table is reachable and unobstructed."
+  expected_sequence: "Approach the milk_dairy, grasp the carton on the coaster, and lift it clear of the table; if the grasp fails, retry up to 3 times, and if still failing, push or flip to reposition then grasp and lift."

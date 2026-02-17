@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "apple"
+  destination: ""
+  expanded_instruction: "Navigate to the table within a 15s timeout, then pick up the red apple from the table next to the blue tray and green cup"
+  scene_context: "Red apple on table near robot base, not held; table surface clear and reachable."
+  expected_sequence: "Approach the apple (ensure NAVIGATE_TO completes within 15s), grasp it securely, and lift it off the table."

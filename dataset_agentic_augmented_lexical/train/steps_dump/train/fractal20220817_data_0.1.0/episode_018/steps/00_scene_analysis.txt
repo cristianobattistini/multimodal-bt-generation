@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "top_drawer"
+  destination: ""
+  expanded_instruction: "Open the top drawer of the small gray dresser at the front by pulling its handle until the drawer is open. Use the ApproachTopDrawer subtree for the approach and interaction, with a 10s timeout and retry up to 3 times if initial attempts fail."
+  scene_context: "Top drawer is closed; dresser in front; robot arm near the drawer handle and not holding anything."
+  expected_sequence: "ApproachTopDrawer subtree: move the arm to the drawer handle, grasp it, and pull the top drawer outward until it is open; if grasp fails, push to reposition and retry up to 3 times, abort after 10s timeout."

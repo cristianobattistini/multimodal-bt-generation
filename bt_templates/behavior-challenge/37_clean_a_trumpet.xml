@@ -1,0 +1,9 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <Action ID="NAVIGATE_TO" obj="scrub_brush.n.01_1"/>
+      <Action ID="GRASP" obj="scrub_brush.n.01_1"/>
+      <Action ID="NAVIGATE_TO" obj="cornet.n.01_1"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

@@ -1,0 +1,1 @@
+Sweep the green cloth to the left side of the table. Retry pushing up to 4 times if it fails.

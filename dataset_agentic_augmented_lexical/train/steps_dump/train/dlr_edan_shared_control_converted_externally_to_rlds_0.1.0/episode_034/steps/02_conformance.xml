@@ -1,0 +1,13 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Timeout: NAVIGATE_TO orange within 20s -->
+      <Timeout msec="20000">
+        <!-- Navigate to orange -->
+        <Action ID="MOVE_TO" obj="orange" />
+      </Timeout>
+      <!-- Move to orange -->
+      <Action ID="PICK" obj="orange" />
+    </Sequence>
+  </BehaviorTree>
+</root>

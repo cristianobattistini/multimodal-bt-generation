@@ -1,0 +1,14 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to green_can -->
+      <Action ID="NAVIGATE_TO" obj="green_can" />
+      <Sequence>
+        <!-- Check green_can is visible before PUSH -->
+        <Condition ID="IS_VISIBLE" obj="green_can" />
+        <!-- Push green_can forward toward front edge of table -->
+        <Action ID="PUSH" obj="green_can" />
+      </Sequence>
+    </Sequence>
+  </BehaviorTree>
+</root>

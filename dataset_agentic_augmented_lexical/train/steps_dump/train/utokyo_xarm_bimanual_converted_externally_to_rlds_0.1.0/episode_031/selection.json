@@ -1,0 +1,14 @@
+{
+  "decorator_type": "fallback",
+  "mixed_subtype": null,
+  "target_action_id": "UNFOLD",
+  "target_obj": "wrinkled_towel",
+  "parameters": {
+    "valid_fallbacks": [
+      "FLIP"
+    ],
+    "valid_fallbacks_str": "FLIP",
+    "fallback_hints": "FLIP repositions the cloth for unfolding"
+  },
+  "prompt_name": "fallback"
+}

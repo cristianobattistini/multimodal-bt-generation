@@ -1,0 +1,19 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Approach butter_dairy -->
+      <Action ID="APPROACH" obj="butter_dairy" />
+      <!-- Pick butter_dairy -->
+      <Action ID="PICK" obj="butter_dairy" />
+      <!-- Navigate to gray_bowl -->
+      <Action ID="NAVIGATE_TO" obj="gray_bowl" />
+      <!-- Check gray_bowl is empty before PLACE_INSIDE -->
+      <Condition ID="IS_EMPTY" obj="gray_bowl" />
+      <!-- Retry PLACE_INSIDE gray_bowl up to 3 attempts -->
+      <RetryUntilSuccessful num_attempts="3">
+        <!-- Place inside gray_bowl -->
+        <Action ID="PLACE_INSIDE" obj="gray_bowl" />
+      </RetryUntilSuccessful>
+    </Sequence>
+  </BehaviorTree>
+</root>

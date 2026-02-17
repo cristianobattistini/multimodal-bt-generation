@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "milk_dairy"
+  destination: "white_plate"
+  expanded_instruction: "Using the ApproachMilkDairy subtree, approach the milk dairy carton (retry up to 3 times with a 10s timeout), pick it up (if grasp fails, push to reposition and retry), and place it in the white plate."
+  scene_context: "Milk dairy carton upright on table near blue bowl; white_plate is empty and clear; nothing is held."
+  expected_sequence: "ApproachMilkDairy subtree: move to the milk_dairy (retry up to 3 times, 10s timeout); pick it up (if grasp fails, push to reposition and retry); carry it to the white_plate; place it inside."

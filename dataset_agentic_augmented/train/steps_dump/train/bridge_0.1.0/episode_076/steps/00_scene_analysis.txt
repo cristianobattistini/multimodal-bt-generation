@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "sushi"
+  destination: ""
+  expanded_instruction: "Pick up the red sushi piece from the yellow plate; when placing it later, check IS_HOLDING on the table before PLACE_ON_TOP and retry PLACE_ON_TOP up to 2 times if it fails."
+  scene_context: "Yellow plate on table with a red sushi piece on it; nothing is held and no containers are closed."
+  expected_sequence: "Approach the plate, grasp the sushi piece, and lift it off the plate; before placing check table IS_HOLDING, and if PLACE_ON_TOP fails retry up to 2 times."

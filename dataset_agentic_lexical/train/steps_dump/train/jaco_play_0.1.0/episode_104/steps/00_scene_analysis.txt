@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "apple"
+  destination: "black_bowl"
+  expanded_instruction: "Place the red apple held by the robot into the black bowl on the table"
+  scene_context: "Robot arm is holding a red apple above the table; black bowl (pan) is open and empty and reachable."
+  expected_sequence: "Bring the held apple over the black bowl and release it gently into the bowl."

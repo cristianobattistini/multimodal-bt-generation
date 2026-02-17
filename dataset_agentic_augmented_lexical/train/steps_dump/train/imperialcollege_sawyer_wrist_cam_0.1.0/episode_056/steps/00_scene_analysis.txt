@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "can"
+  destination: ""
+  expanded_instruction: "Check that the blue work surface is reachable (IS_REACHABLE), then navigate to the blue surface within a 10s timeout and pick up the can in front of you."
+  scene_context: "Blue fabric with small round reflective buttons; no object is currently held and no can is clearly visible."
+  expected_sequence: "Verify IS_REACHABLE for the blue surface, NAVIGATE_TO the surface (within 10s timeout), locate the can, and grasp it."

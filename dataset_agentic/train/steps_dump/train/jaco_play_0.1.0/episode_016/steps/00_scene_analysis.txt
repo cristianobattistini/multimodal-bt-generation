@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "long_bread"
+  destination: "sink"
+  expanded_instruction: "Pick up the long bread from the counter next to the orange and place it into the blue sink basin"
+  scene_context: "Blue sink basin on counter is open and clear; long bread lies on the counter near the orange and toaster, not held."
+  expected_sequence: "Move to the long bread, grasp it, carry it over the sink basin, and set it inside."

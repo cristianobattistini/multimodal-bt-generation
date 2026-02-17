@@ -1,0 +1,1 @@
+Take the silver vessel and place it on the purple cloth. If placing on top fails, push the destination cloth area to clear obstacles or reposition the cloth and then retry placing.

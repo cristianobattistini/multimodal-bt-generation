@@ -1,0 +1,25 @@
+scene_analysis:
+  target: "storage_container_1"
+  destination: "garage_floor"
+  expanded_instruction: "Open the closed wooden door first, then pick up storage_container_1 and place it on the garage_floor, then pick up storage_container_2 and stack it on top of storage_container_1."
+  scene_context: "The scene shows a closed interior wooden door in a mostly empty garage-like room with a clear concrete floor and good lighting. The storage containers are not in view but are available objects in the workspace."
+  expected_sequence: "Navigate to the door and open it. Navigate to storage_container_1, grasp it, navigate to the garage_floor, and place it on the floor. Then navigate to storage_container_2, grasp it, navigate to storage_container_1, and place storage_container_2 on top of storage_container_1."
+Plan:
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence name="open_and_move_stack">
+      <NAVIGATE_TO obj="door"/>
+      <OPEN obj="door"/>
+
+      <NAVIGATE_TO obj="storage_container_1"/>
+      <GRASP obj="storage_container_1"/>
+      <NAVIGATE_TO obj="garage_floor"/>
+      <PLACE_ON_TOP obj="garage_floor"/>
+
+      <NAVIGATE_TO obj="storage_container_2"/>
+      <GRASP obj="storage_container_2"/>
+      <NAVIGATE_TO obj="storage_container_1"/>
+      <PLACE_ON_TOP obj="storage_container_1"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

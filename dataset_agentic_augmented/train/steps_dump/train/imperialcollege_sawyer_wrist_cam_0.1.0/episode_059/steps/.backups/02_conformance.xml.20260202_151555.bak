@@ -1,0 +1,23 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Execute subtree ApproachCup -->
+      <SubTree ID="ApproachCup" />
+      <!-- Navigate to dishwasher -->
+      <Action ID="NAVIGATE_TO" obj="dishwasher" />
+      <!-- Place inside dishwasher -->
+      <Action ID="PLACE_INSIDE" obj="dishwasher" />
+      <!-- Release -->
+      <Action ID="RELEASE" />
+    </Sequence>
+  </BehaviorTree>
+  <!-- Subtree definition ApproachCup -->
+  <BehaviorTree ID="ApproachCup">
+    <Sequence>
+      <!-- Navigate to cup -->
+      <Action ID="NAVIGATE_TO" obj="cup" />
+      <!-- Grasp cup -->
+      <Action ID="GRASP" obj="cup" />
+    </Sequence>
+  </BehaviorTree>
+</root>

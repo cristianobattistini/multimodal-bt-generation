@@ -1,0 +1,29 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to red_kettle -->
+      <Action ID="NAVIGATE_TO" obj="red_kettle" />
+      <!-- Fallback: if GRASP red_kettle fails, try PUSH, FLIP to reposition -->
+      <Fallback>
+        <!-- Grasp red_kettle -->
+        <Action ID="GRASP" obj="red_kettle" />
+        <Sequence>
+          <!-- Push red_kettle forward toward front edge of table -->
+          <Action ID="PUSH" obj="red_kettle" />
+          <!-- Grasp red_kettle -->
+          <Action ID="GRASP" obj="red_kettle" />
+        </Sequence>
+      </Fallback>
+      <!-- Navigate to mug -->
+      <Action ID="NAVIGATE_TO" obj="mug" />
+      <!-- Pour into mug -->
+      <Action ID="POUR" obj="mug" />
+      <!-- Navigate to table -->
+      <Action ID="NAVIGATE_TO" obj="table" />
+      <!-- Place on table -->
+      <Action ID="PLACE_ON_TOP" obj="table" />
+      <!-- Release -->
+      <Action ID="RELEASE" />
+    </Sequence>
+  </BehaviorTree>
+</root>

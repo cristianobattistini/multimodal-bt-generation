@@ -1,0 +1,1 @@
+Insert the blue gear onto the right peg, followed by the red gear. If placing on top fails, push at the destination to clear or reposition obstacles, then retry placing on top.

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "die"
+  destination: ""
+  expanded_instruction: "Check IS_VISIBLE for the die before navigating to the front of the black shelving unit; if not visible, retry up to 3 times within a 10s timeout. Then navigate to the front and pick up the die from the shelf."
+  scene_context: "Black shelving unit upright and accessible; die resting at front edge of a middle cubby; not held."
+  expected_sequence: "Check IS_VISIBLE on the die before moving (retry up to 3 times within 10s if not visible), then move close, reach into the cubby, grasp the die, and lift it out."

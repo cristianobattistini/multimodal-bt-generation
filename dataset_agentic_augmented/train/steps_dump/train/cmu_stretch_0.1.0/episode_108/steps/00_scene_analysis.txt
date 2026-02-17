@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "pot_lid"
+  destination: ""
+  expanded_instruction: "Lift the lid off the pot sitting on the table, attempting to grasp the lid with a 20s timeout and retrying the grasp up to 2 times if it fails."
+  scene_context: "Pot with lid on sits on table; lid is not held; robot arm is nearby and reachable."
+  expected_sequence: "Approach the pot, grasp the lid (20s timeout; retry grasp up to 2 times on failure), and lift it up away from the pot."

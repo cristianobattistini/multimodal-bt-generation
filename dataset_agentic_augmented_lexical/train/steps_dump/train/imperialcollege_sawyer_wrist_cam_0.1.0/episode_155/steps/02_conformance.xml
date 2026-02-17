@@ -1,0 +1,21 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to can -->
+      <Action ID="NAVIGATE_TO" obj="can" />
+      <!-- Fallback: if GRASP can fails, try PUSH, FLIP to reposition -->
+      <Fallback>
+        <!-- Grasp can -->
+        <Action ID="GRASP" obj="can" />
+        <Sequence>
+          <!-- Push can forward toward front edge of table -->
+          <Action ID="PUSH" obj="can" />
+          <!-- Grasp can -->
+          <Action ID="GRASP" obj="can" />
+        </Sequence>
+      </Fallback>
+      <!-- Release -->
+      <Action ID="RELEASE" />
+    </Sequence>
+  </BehaviorTree>
+</root>

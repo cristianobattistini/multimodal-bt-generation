@@ -1,0 +1,31 @@
+ scene_analysis:
+  target: ["drill", "pliers", "flashlight", "allen_wrench", "screwdriver"]
+  destination: "toolbox"
+  expanded_instruction: "Open the toolbox on the tabletop and place all five tools inside, closing the toolbox when all tools are inside."
+  scene_context: "Toolbox is open on the tabletop and all tools are on the tabletop; no tools are held."
+  expected_sequence: "Open the toolbox, pick up each tool one by one, place each tool into the toolbox, and close the toolbox when all tools are inside."
+Plan:
+<root main_tree_to_execute="MainTree">
+  <Sequence>
+    <!-- Open toolbox -->
+    <Action ID="OPEN" obj="toolbox" />
+  </Sequence>
+  <!-- Navigate to drill -->
+  <Action ID="NAVIGATE_TO" obj="drill" />
+  <!-- Navigate to pliers -->
+  <Action ID="NAVIGATE_TO" obj="pliers" />
+  <!-- Navigate to flashlight -->
+  <Action ID="NAVIGATE_TO" obj="flashlight" />
+  <!-- Navigate to allen_wrench -->
+  <Action ID="NAVIGATE_TO" obj="allen_wrench" />
+  <!-- Navigate to screwdriver -->
+  <Action ID="NAVIGATE_TO" obj="screwdriver" />
+  <!-- Navigate to toolbox -->
+  <Action ID="NAVIGATE_TO" obj="toolbox" />
+  <!-- Place all tools inside toolbox -->
+  <Action ID="PLACE_INSIDE" obj="toolbox" />
+  <!-- Close toolbox -->
+  <Action ID="CLOSE" obj="toolbox" />
+  <!-- Place all tools back on table -->
+  <Action ID="RELEASE" />
+</Sequence>

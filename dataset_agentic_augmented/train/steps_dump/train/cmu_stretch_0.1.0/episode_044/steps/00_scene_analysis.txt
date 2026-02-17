@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "drawer"
+  destination: ""
+  expanded_instruction: "Open the drawer in the wooden cabinet below the counter, grouping the approach and pre-grasp steps into an ApproachDrawer subtree."
+  scene_context: "Wooden cabinet drawer is closed with visible handle; path clear and not held."
+  expected_sequence: "Approach (in ApproachDrawer subtree), grasp the drawer handle (retry up to 3 times; if grasp fails, push to reposition), and pull the drawer outward until open (within a 10s timeout)."

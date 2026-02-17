@@ -1,0 +1,7 @@
+scene_analysis:
+  target: "tools"
+  destination: "toolbox"
+  expanded_instruction: "Move all five tools on the tabletop (drill, pliers, flashlight, allen_wrench, screwdriver) into the red toolbox on the same tabletop, then close the toolbox. The toolbox starts closed and must stay on the tabletop."
+  scene_context: "Utility_room with a long tabletop. A red toolbox is on the left side of the tabletop and is closed. Visible tools on the tabletop: pliers (front), screwdriver and allen_wrench (center), flashlight (near center), and a drill (right, near the wall)."
+  expected_sequence: "Navigate to the toolbox and open it. Then, for each tool: navigate to the tool, grasp it, navigate back to the toolbox, and place it inside. After all five tools are inside, close the toolbox."
+Plan:

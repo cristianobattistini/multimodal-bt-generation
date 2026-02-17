@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "bowl"
+  destination: "kitchen_cabinet"
+  expanded_instruction: "Pick up the bowl from the counter next to the sink and place it on the shelf inside the kitchen cabinet"
+  scene_context: "Bowl on counter near sink; kitchen cabinet door/shelf is open and shelf space available; bowl not held."
+  expected_sequence: "Reach the bowl and grasp it, move up to the open cabinet, and set the bowl on the shelf inside."

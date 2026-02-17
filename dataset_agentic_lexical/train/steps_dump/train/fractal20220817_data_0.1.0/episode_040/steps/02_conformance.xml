@@ -1,0 +1,10 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to green_can -->
+      <Action ID="NAVIGATE_TO" obj="green_can"/>
+      <!-- Push green_can to topple it onto its side on the metal_table -->
+      <Action ID="PUSH" obj="green_can"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

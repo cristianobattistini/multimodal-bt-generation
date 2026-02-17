@@ -1,0 +1,25 @@
+{
+  "success": false,
+  "bt_success": true,
+  "bddl_goal": false,
+  "ticks": 1,
+  "duration": 245.0387954711914,
+  "inference_time": 59.971826791763306,
+  "satisfied": [
+    "inside(?club_sandwich.n.01_1, ?packing_box.n.02_1)",
+    "inside(?bottle__of__tea.n.01_1, ?packing_box.n.02_1)",
+    "not(['open', '?electric_refrigerator.n.01_1'])"
+  ],
+  "unsatisfied": [
+    "forall(['?half__apple.n.01', '-', 'half__apple.n.01'], ['inside', '?half__apple.n.01', '?packing_box.n.02_1'])",
+    "inside(?chocolate_chip_cookie.n.01_1, ?packing_box.n.02_1)"
+  ],
+  "task": "12_preparing_lunch_box",
+  "condition": "zero-shot",
+  "model_dir": "qwen25",
+  "vlm_model": "qwen",
+  "inference_mode": "adapter",
+  "experiment": 1,
+  "timestamp": "20260215_221444",
+  "reason": "BT omits half_apple_2 entirely and duplicates chocolate_chip_cookie GRASP (attempts to pick cookie twice). Second GRASP on already-placed cookie likely extracted it from packing_box, breaking Inside predicate. Missing half_apple_2 causes forall predicate failure. Club_sandwich and bottle_of_tea correctly placed."
+}

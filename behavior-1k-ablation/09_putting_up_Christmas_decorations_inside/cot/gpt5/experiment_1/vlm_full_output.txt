@@ -1,0 +1,61 @@
+scene_analysis:
+  target: "multiple_objects"
+  destination: ""
+  expanded_instruction: "Move each of the three gift boxes next to the christmas_tree; place the wreath and the first two candy canes on top of the sofa; and place the third candy cane and both pillar candles on top of the table, processing each item one by one."
+  scene_context: "A christmas_tree is visible near the right side of the room; an L-shaped sofa is on the left; a low table is centered with a kitchen further back. At least two gift boxes are visible on the floor; the other listed small items may be elsewhere in the room but are assumed present and reachable."
+  expected_sequence: "For each gift box (1→3): navigate to it, grasp it, navigate to the christmas_tree, and place it next to the tree. Then for the wreath and candy_cane_1 and candy_cane_2: navigate to each, grasp it, navigate to the sofa, and place it on top. Finally for candy_cane_3, pillar_candle_1, and pillar_candle_2: navigate to each, grasp it, navigate to the table, and place it on top."
+
+Plan:
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence name="decorate_and_arrange">
+      <!-- Gift boxes to christmas_tree -->
+      <NAVIGATE_TO obj="gift_box_1"/>
+      <GRASP obj="gift_box_1"/>
+      <NAVIGATE_TO obj="christmas_tree"/>
+      <PLACE_NEXT_TO obj="christmas_tree"/>
+
+      <NAVIGATE_TO obj="gift_box_2"/>
+      <GRASP obj="gift_box_2"/>
+      <NAVIGATE_TO obj="christmas_tree"/>
+      <PLACE_NEXT_TO obj="christmas_tree"/>
+
+      <NAVIGATE_TO obj="gift_box_3"/>
+      <GRASP obj="gift_box_3"/>
+      <NAVIGATE_TO obj="christmas_tree"/>
+      <PLACE_NEXT_TO obj="christmas_tree"/>
+
+      <!-- Wreath and two candy canes to sofa (on top) -->
+      <NAVIGATE_TO obj="wreath"/>
+      <GRASP obj="wreath"/>
+      <NAVIGATE_TO obj="sofa"/>
+      <PLACE_ON_TOP obj="sofa"/>
+
+      <NAVIGATE_TO obj="candy_cane_1"/>
+      <GRASP obj="candy_cane_1"/>
+      <NAVIGATE_TO obj="sofa"/>
+      <PLACE_ON_TOP obj="sofa"/>
+
+      <NAVIGATE_TO obj="candy_cane_2"/>
+      <GRASP obj="candy_cane_2"/>
+      <NAVIGATE_TO obj="sofa"/>
+      <PLACE_ON_TOP obj="sofa"/>
+
+      <!-- Remaining items to table (on top) -->
+      <NAVIGATE_TO obj="candy_cane_3"/>
+      <GRASP obj="candy_cane_3"/>
+      <NAVIGATE_TO obj="table"/>
+      <PLACE_ON_TOP obj="table"/>
+
+      <NAVIGATE_TO obj="pillar_candle_1"/>
+      <GRASP obj="pillar_candle_1"/>
+      <NAVIGATE_TO obj="table"/>
+      <PLACE_ON_TOP obj="table"/>
+
+      <NAVIGATE_TO obj="pillar_candle_2"/>
+      <GRASP obj="pillar_candle_2"/>
+      <NAVIGATE_TO obj="table"/>
+      <PLACE_ON_TOP obj="table"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

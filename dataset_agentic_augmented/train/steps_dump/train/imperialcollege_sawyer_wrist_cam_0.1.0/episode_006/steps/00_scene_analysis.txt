@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "cup"
+  destination: "dishwasher"
+  expanded_instruction: "Navigate to the dishwasher (complete NAVIGATE_TO within a 15s timeout), pick up the pink cup and place it into the dishwasher lower rack"
+  scene_context: "Dishwasher door is closed; pink cup is outside the dishwasher and reachable."
+  expected_sequence: "Navigate to the dishwasher within a 15s timeout, open the dishwasher, put the pink cup into the lower rack, and close the door."

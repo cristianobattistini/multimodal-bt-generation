@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "tube"
+  destination: ""
+  expanded_instruction: "Group actions into the ApproachTube subtree: pick up the white tube from the top of the black shelf; retry up to 3 times with a 10s timeout and if grasp fails, push to reposition."
+  scene_context: "White tube resting on top of black shelf; shelf open; tube not held; workspace unobstructed."
+  expected_sequence: "ApproachTube subtree: move to the shelf, grasp the tube on the top surface, and lift it; retry up to 3 times (10s timeout each) and if grasp fails, push to reposition before retrying."

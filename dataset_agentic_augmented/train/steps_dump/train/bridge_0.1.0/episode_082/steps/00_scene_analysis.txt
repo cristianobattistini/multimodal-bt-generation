@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "chocolate"
+  destination: "table"
+  expanded_instruction: "Pick the chocolate out of the metal pan and place it on the table to the left of the orange cloth. If PLACE_ON_TOP fails, retry up to 3 times, then use PUSH to reposition the chocolate."
+  scene_context: "Chocolate is in a metal pan on the table; orange cloth on table; pan not held; tabletop left of cloth is clear."
+  expected_sequence: "Remove the chocolate from the pan, move it slightly forward and place it on the table just left of the cloth. If PLACE_ON_TOP fails within 10s or after 3 attempts, use PUSH to reposition the object."

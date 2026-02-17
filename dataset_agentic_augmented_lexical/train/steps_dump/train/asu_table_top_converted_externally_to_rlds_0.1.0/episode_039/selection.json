@@ -1,0 +1,10 @@
+{
+  "decorator_type": "retry",
+  "mixed_subtype": null,
+  "target_action_id": "PUSH",
+  "target_obj": "maroon_object",
+  "parameters": {
+    "num_attempts": 2
+  },
+  "prompt_name": "retry"
+}

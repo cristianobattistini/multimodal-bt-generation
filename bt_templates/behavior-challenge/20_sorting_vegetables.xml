@@ -1,0 +1,61 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Bowl 1: bok choy + vidalia onions -->
+      <Action ID="NAVIGATE_TO" obj="bok_choy.n.02_1"/>
+      <Action ID="GRASP" obj="bok_choy.n.02_1"/>
+      <Action ID="NAVIGATE_TO" obj="mixing_bowl.n.01_1"/>
+      <Action ID="PLACE_INSIDE" obj="mixing_bowl.n.01_1"/>
+      <Action ID="NAVIGATE_TO" obj="bok_choy.n.02_2"/>
+      <Action ID="GRASP" obj="bok_choy.n.02_2"/>
+      <Action ID="NAVIGATE_TO" obj="mixing_bowl.n.01_1"/>
+      <Action ID="PLACE_INSIDE" obj="mixing_bowl.n.01_1"/>
+      <Action ID="NAVIGATE_TO" obj="bok_choy.n.02_3"/>
+      <Action ID="GRASP" obj="bok_choy.n.02_3"/>
+      <Action ID="NAVIGATE_TO" obj="mixing_bowl.n.01_1"/>
+      <Action ID="PLACE_INSIDE" obj="mixing_bowl.n.01_1"/>
+      <Action ID="NAVIGATE_TO" obj="vidalia_onion.n.01_1"/>
+      <Action ID="GRASP" obj="vidalia_onion.n.01_1"/>
+      <Action ID="NAVIGATE_TO" obj="mixing_bowl.n.01_1"/>
+      <Action ID="PLACE_INSIDE" obj="mixing_bowl.n.01_1"/>
+      <Action ID="NAVIGATE_TO" obj="vidalia_onion.n.01_2"/>
+      <Action ID="GRASP" obj="vidalia_onion.n.01_2"/>
+      <Action ID="NAVIGATE_TO" obj="mixing_bowl.n.01_1"/>
+      <Action ID="PLACE_INSIDE" obj="mixing_bowl.n.01_1"/>
+      <Action ID="NAVIGATE_TO" obj="vidalia_onion.n.01_3"/>
+      <Action ID="GRASP" obj="vidalia_onion.n.01_3"/>
+      <Action ID="NAVIGATE_TO" obj="mixing_bowl.n.01_1"/>
+      <Action ID="PLACE_INSIDE" obj="mixing_bowl.n.01_1"/>
+      <!-- Bowl 2: leeks + broccoli -->
+      <Action ID="NAVIGATE_TO" obj="leek.n.02_1"/>
+      <Action ID="GRASP" obj="leek.n.02_1"/>
+      <Action ID="NAVIGATE_TO" obj="mixing_bowl.n.01_2"/>
+      <Action ID="PLACE_INSIDE" obj="mixing_bowl.n.01_2"/>
+      <Action ID="NAVIGATE_TO" obj="leek.n.02_2"/>
+      <Action ID="GRASP" obj="leek.n.02_2"/>
+      <Action ID="NAVIGATE_TO" obj="mixing_bowl.n.01_2"/>
+      <Action ID="PLACE_INSIDE" obj="mixing_bowl.n.01_2"/>
+      <Action ID="NAVIGATE_TO" obj="broccoli.n.02_1"/>
+      <Action ID="GRASP" obj="broccoli.n.02_1"/>
+      <Action ID="NAVIGATE_TO" obj="mixing_bowl.n.01_2"/>
+      <Action ID="PLACE_INSIDE" obj="mixing_bowl.n.01_2"/>
+      <Action ID="NAVIGATE_TO" obj="broccoli.n.02_2"/>
+      <Action ID="GRASP" obj="broccoli.n.02_2"/>
+      <Action ID="NAVIGATE_TO" obj="mixing_bowl.n.01_2"/>
+      <Action ID="PLACE_INSIDE" obj="mixing_bowl.n.01_2"/>
+      <!-- Bowl 3: sweet corn -->
+      <Action ID="NAVIGATE_TO" obj="sweet_corn.n.02_1"/>
+      <Action ID="GRASP" obj="sweet_corn.n.02_1"/>
+      <Action ID="NAVIGATE_TO" obj="mixing_bowl.n.01_3"/>
+      <Action ID="PLACE_INSIDE" obj="mixing_bowl.n.01_3"/>
+      <Action ID="NAVIGATE_TO" obj="sweet_corn.n.02_2"/>
+      <Action ID="GRASP" obj="sweet_corn.n.02_2"/>
+      <Action ID="NAVIGATE_TO" obj="mixing_bowl.n.01_3"/>
+      <Action ID="PLACE_INSIDE" obj="mixing_bowl.n.01_3"/>
+      <Action ID="NAVIGATE_TO" obj="sweet_corn.n.02_3"/>
+      <Action ID="GRASP" obj="sweet_corn.n.02_3"/>
+      <Action ID="NAVIGATE_TO" obj="mixing_bowl.n.01_3"/>
+      <Action ID="PLACE_INSIDE" obj="mixing_bowl.n.01_3"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

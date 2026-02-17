@@ -1,0 +1,19 @@
+scene_analysis:
+  target: "radio_receiver"
+  destination: ""
+  expanded_instruction: "Move to the radio_receiver on the table and flip the power switch to turn it on."
+  scene_context: "Table clear; red radio_receiver with power switch at front-center resting on table; no containers open; robot not holding anything."
+  expected_sequence: "Approach the radio_receiver, grasp the power switch, and flip it so the device is powered on."
+Plan:
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to table -->
+      <Action ID="NAVIGATE_TO" obj="table"/>
+      <!-- Navigate to radio_receiver -->
+      <Action ID="NAVIGATE_TO" obj="radio_receiver"/>
+      <!-- Toggle on radio_receiver -->
+      <Action ID="TOGGLE_ON" obj="radio_receiver"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

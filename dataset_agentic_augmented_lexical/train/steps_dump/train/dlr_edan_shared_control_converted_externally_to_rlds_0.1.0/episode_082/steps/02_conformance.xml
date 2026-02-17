@@ -1,0 +1,15 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Go to die -->
+      <Action ID="GO_TO" obj="die" />
+      <!-- Check die is graspable before GRASP -->
+      <Condition ID="IS_GRASPABLE" obj="die" />
+      <!-- Retry GRASP die up to 2 attempts -->
+      <RetryUntilSuccessful num_attempts="2">
+        <!-- Grasp die -->
+        <Action ID="GRASP" obj="die" />
+      </RetryUntilSuccessful>
+    </Sequence>
+  </BehaviorTree>
+</root>

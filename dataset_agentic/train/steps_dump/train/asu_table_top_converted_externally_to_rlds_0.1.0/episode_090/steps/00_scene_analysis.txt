@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "red_can"
+  destination: ""
+  expanded_instruction: "Pick up the red can from the table and lift it upward"
+  scene_context: "Red can upright near front center of table, not held; table mostly clear; no containers open."
+  expected_sequence: "Approach the red can, grasp it firmly, and lift it upward."

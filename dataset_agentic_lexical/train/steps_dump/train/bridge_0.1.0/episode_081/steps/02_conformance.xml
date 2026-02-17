@@ -1,0 +1,14 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Approach blue_napkin -->
+      <Action ID="APPROACH" obj="blue_napkin" />
+      <!-- Grab blue_napkin -->
+      <Action ID="GRAB" obj="blue_napkin" />
+      <!-- Approach table -->
+      <Action ID="APPROACH" obj="table" />
+      <!-- Place blue_napkin on table -->
+      <Action ID="PLACE_ON_TOP" obj="blue_napkin" surface="table" />
+    </Sequence>
+  </BehaviorTree>
+</root>

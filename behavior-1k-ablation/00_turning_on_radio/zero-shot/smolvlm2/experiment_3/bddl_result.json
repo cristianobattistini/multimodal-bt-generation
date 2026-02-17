@@ -1,0 +1,19 @@
+{
+  "success": true,
+  "bt_success": true,
+  "bddl_goal": true,
+  "ticks": 1,
+  "duration": 2.2485156059265137,
+  "inference_time": 8.859830856323242,
+  "satisfied": [
+    "toggled_on(?radio_receiver.n.01_1)"
+  ],
+  "unsatisfied": [],
+  "task": "00_turning_on_radio",
+  "condition": "zero-shot",
+  "model_dir": "smolvlm2",
+  "vlm_model": "smol500",
+  "inference_mode": "adapter",
+  "experiment": 3,
+  "timestamp": "20260212_221134"
+}

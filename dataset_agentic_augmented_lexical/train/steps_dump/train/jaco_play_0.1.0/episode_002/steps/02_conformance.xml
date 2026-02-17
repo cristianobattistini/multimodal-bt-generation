@@ -1,0 +1,24 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Move to square_bread -->
+      <Action ID="MOVE_TO" obj="square_bread" />
+      <!-- Check square_bread is visible before GRASP -->
+      <Condition ID="IS_VISIBLE" obj="square_bread" />
+      <!-- Fallback: if GRASP square_bread fails, try alternative to reposition -->
+      <Fallback>
+        <!-- Retry GRASP square_bread up to 2 attempts -->
+        <RetryUntilSuccessful num_attempts="2">
+          <!-- Grasp square_bread -->
+          <Action ID="GRIP" obj="square_bread" />
+        </RetryUntilSuccessful>
+        <Sequence>
+          <!-- Push square_bread forward toward front edge of table -->
+          <Action ID="SHOVE" obj="square_bread" />
+          <!-- Grasp square_bread -->
+          <Action ID="GRASP" obj="square_bread" />
+        </Sequence>
+      </Fallback>
+    </Sequence>
+  </BehaviorTree>
+</root>

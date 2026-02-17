@@ -1,0 +1,25 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to milk_dairy -->
+      <Action ID="NAVIGATE_TO" obj="milk_dairy" />
+      <!-- Grasp milk_dairy -->
+      <Action ID="GRASP" obj="milk_dairy" />
+      <!-- Navigate to white_plate -->
+      <Action ID="NAVIGATE_TO" obj="white_plate" />
+      <!-- Fallback: if PLACE_INSIDE white_plate fails, try PUSH to reposition -->
+      <Fallback>
+        <!-- Place inside white_plate -->
+        <Action ID="PLACE_INSIDE" obj="white_plate" />
+        <Sequence>
+          <!-- Push white_plate forward toward front edge of table -->
+          <Action ID="PUSH" obj="white_plate" />
+          <!-- Place inside white_plate -->
+          <Action ID="PLACE_INSIDE" obj="white_plate" />
+        </Sequence>
+      </Fallback>
+      <!-- Release -->
+      <Action ID="RELEASE" />
+    </Sequence>
+  </BehaviorTree>
+</root>

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "maroon_object"
+  destination: "table"
+  expanded_instruction: "Check that the table is reachable (IS_REACHABLE) before navigating; then pick up the maroon object from the table and place it down on the table surface. If the reach check or navigation fails, retry up to 3 times or abort."
+  scene_context: "Maroon object on table near center; robot arm nearby and not holding it; table surface clear."
+  expected_sequence: "Check IS_REACHABLE on the table first; if reachable, move to the maroon object, pick it up with the arm, then place it down on the table surface. If reach, navigation, or grasp fails, retry up to 3 times (10s timeout) or abort."

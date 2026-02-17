@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "gray_bowl"
+  destination: ""
+  expanded_instruction: "Pick up the gray bowl from the blue tray next to the robot arm, retrying the grasp up to 3 times if it fails."
+  scene_context: "Gray bowl in blue tray beside robot arm; tray partially occupied, other items nearby but not blocking."
+  expected_sequence: "Approach the tray, grasp the gray bowl (retry up to 3 times on failure), and lift it out clear of the tray."

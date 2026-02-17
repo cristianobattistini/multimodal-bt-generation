@@ -1,0 +1,20 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to gray_bowl -->
+      <Action ID="NAVIGATE_TO" obj="gray_bowl" />
+      <!-- Grasp gray_bowl -->
+      <Action ID="GRASP" obj="gray_bowl" />
+      <!-- Navigate to oven -->
+      <Action ID="NAVIGATE_TO" obj="oven" />
+      <!-- Check oven is empty before PLACE_INSIDE -->
+      <Condition ID="IS_EMPTY" obj="oven" />
+      <!-- Retry PLACE_INSIDE oven up to 3 attempts -->
+      <RetryUntilSuccessful num_attempts="3">
+        <!-- Place inside oven -->
+        <Action ID="PLACE_INSIDE" obj="oven" />
+      </RetryUntilSuccessful>
+      
+    </Sequence>
+  </BehaviorTree>
+</root>

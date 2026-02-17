@@ -1,0 +1,14 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Approach bottle -->
+      <Action ID="APPROACH" obj="bottle" />
+      <!-- Grab bottle -->
+      <Action ID="GRAB" obj="bottle" />
+      <!-- Unlock bottle -->
+      <Action ID="UNLOCK" obj="bottle" />
+      <!-- Ungrasp -->
+      <Action ID="UNGRASP" />
+    </Sequence>
+  </BehaviorTree>
+</root>

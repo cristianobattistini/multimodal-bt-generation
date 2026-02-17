@@ -1,0 +1,36 @@
+{
+  "decorator_type": "mixed",
+  "mixed_subtype": "condition_timeout_retry",
+  "target_action_id": "GRASP",
+  "target_obj": "fridge_door",
+  "parameters": {
+    "augmentations": [
+      {
+        "type": "condition",
+        "action_id": "GRASP",
+        "obj": "fridge_door",
+        "params": {
+          "condition_id": "IS_VISIBLE",
+          "condition_obj": "fridge_door"
+        }
+      },
+      {
+        "type": "timeout",
+        "action_id": "GRASP",
+        "obj": "fridge_door",
+        "params": {
+          "msec": 15000
+        }
+      },
+      {
+        "type": "retry",
+        "action_id": "GRASP",
+        "obj": "fridge_door",
+        "params": {
+          "num_attempts": 2
+        }
+      }
+    ]
+  },
+  "prompt_name": "mixed/condition_timeout_retry"
+}

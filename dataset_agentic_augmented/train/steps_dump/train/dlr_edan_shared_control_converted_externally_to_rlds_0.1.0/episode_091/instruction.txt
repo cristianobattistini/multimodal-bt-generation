@@ -1,0 +1,1 @@
+Pick the disk. Retry grasping up to 3 times if it fails.

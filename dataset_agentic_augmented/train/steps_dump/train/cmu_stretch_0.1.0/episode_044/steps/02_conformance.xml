@@ -1,0 +1,21 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Execute subtree ApproachDrawer -->
+      <SubTree ID="ApproachDrawer" />
+      <!-- Open drawer -->
+      <Action ID="OPEN" obj="drawer" />
+      <!-- Release -->
+      <Action ID="RELEASE" />
+    </Sequence>
+  </BehaviorTree>
+  <!-- Subtree definition ApproachDrawer -->
+  <BehaviorTree ID="ApproachDrawer">
+    <Sequence>
+      <!-- Navigate to drawer -->
+      <Action ID="NAVIGATE_TO" obj="drawer" />
+      <!-- Grasp drawer -->
+      <Action ID="GRASP" obj="drawer" />
+    </Sequence>
+  </BehaviorTree>
+</root>

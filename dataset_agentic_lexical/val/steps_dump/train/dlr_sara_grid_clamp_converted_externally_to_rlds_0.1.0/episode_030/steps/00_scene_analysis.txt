@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "grid_clamp"
+  destination: "grid_board"
+  expanded_instruction: "Pick up the grid clamp from the table and place it onto the wooden grid board in the front workspace"
+  scene_context: "Grid clamp pieces on the table front; wooden grid board clear and reachable; clamp not held."
+  expected_sequence: "Reach the clamp, pick it up, move to the wooden grid board, and set the clamp down in the grid area."

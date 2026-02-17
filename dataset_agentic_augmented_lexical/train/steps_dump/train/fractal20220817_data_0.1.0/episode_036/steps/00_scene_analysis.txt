@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "green_jalapeno_chip_bag"
+  destination: "middle_drawer"
+  expanded_instruction: "Pick up the green jalapeno chip bag from the countertop and place it into the middle drawer, retrying the grasp up to 3 times with a 20s timeout if the grasp fails."
+  scene_context: "Middle drawer is open and empty; chip bag on countertop near drawer and not held."
+  expected_sequence: "Reach to the bag, grasp it (retry up to 3 times with a 20s timeout if needed), then move it down and place it into the open middle drawer."

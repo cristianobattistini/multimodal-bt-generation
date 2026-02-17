@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "green_box"
+  destination: "sink"
+  expanded_instruction: "Pick up the green box from the counter and place it inside the sink, verifying IS_OPEN on the sink before placing (if closed, open it). If the IS_OPEN check fails, retry the check/open sequence up to 3 times with a 10s timeout."
+  scene_context: "Green box standing on the front center counter; sink visible and unobstructed beneath counter."
+  expected_sequence: "Reach to the box, grasp it, move over the sink, check IS_OPEN on the sink before PLACE_INSIDE (open if needed), and place the box into the sink — retry the IS_OPEN check/open up to 3 times with a 10s timeout if it fails."

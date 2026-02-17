@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "yellow_cup"
+  destination: ""
+  expanded_instruction: "Check that the yellow cup is visible (check IS_VISIBLE on yellow_cup; retry up to 3 times with a 10s timeout), then pick up the yellow cup from the blue tray on the table."
+  scene_context: "Yellow cup upright on a blue tray at table edge, cup not held, robot gripper nearby and reachable."
+  expected_sequence: "Verify yellow cup is visible before navigating (if not visible, retry up to 3 times within a 10s timeout). Then move to the tray, grasp the yellow cup, and lift it clear of the tray."

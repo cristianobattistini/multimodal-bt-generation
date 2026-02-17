@@ -1,0 +1,25 @@
+{
+  "success": false,
+  "bt_success": true,
+  "bddl_goal": false,
+  "ticks": 1,
+  "duration": 38.15721774101257,
+  "inference_time": 8.557883739471436,
+  "satisfied": [
+    "inside(?club_sandwich.n.01_1, ?packing_box.n.02_1)",
+    "not(['open', '?electric_refrigerator.n.01_1'])"
+  ],
+  "unsatisfied": [
+    "forall(['?half__apple.n.01', '-', 'half__apple.n.01'], ['inside', '?half__apple.n.01', '?packing_box.n.02_1'])",
+    "inside(?chocolate_chip_cookie.n.01_1, ?packing_box.n.02_1)",
+    "inside(?bottle__of__tea.n.01_1, ?packing_box.n.02_1)"
+  ],
+  "task": "12_preparing_lunch_box",
+  "condition": "zero-shot",
+  "model_dir": "smolvlm2",
+  "vlm_model": "smol500",
+  "inference_mode": "adapter",
+  "experiment": 1,
+  "timestamp": "20260215_213350",
+  "reason": "BT only places 2 of 5 required objects (half_apple_1, club_sandwich). Completely omits half_apple_2, chocolate_chip_cookie, and bottle_of_tea. Uses wrong object name 'refrigerator' instead of 'electric_refrigerator' for OPEN/CLOSE actions. Refrigerator stayed closed because OPEN on wrong name failed silently."
+}

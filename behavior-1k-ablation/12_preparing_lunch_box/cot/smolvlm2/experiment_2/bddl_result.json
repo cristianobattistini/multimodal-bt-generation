@@ -1,0 +1,25 @@
+{
+  "success": false,
+  "bt_success": false,
+  "bddl_goal": false,
+  "ticks": 0,
+  "duration": 0.18292975425720215,
+  "inference_time": 24.917644739151,
+  "satisfied": [
+    "not(['open', '?electric_refrigerator.n.01_1'])"
+  ],
+  "unsatisfied": [
+    "forall(['?half__apple.n.01', '-', 'half__apple.n.01'], ['inside', '?half__apple.n.01', '?packing_box.n.02_1'])",
+    "inside(?club_sandwich.n.01_1, ?packing_box.n.02_1)",
+    "inside(?chocolate_chip_cookie.n.01_1, ?packing_box.n.02_1)",
+    "inside(?bottle__of__tea.n.01_1, ?packing_box.n.02_1)"
+  ],
+  "task": "12_preparing_lunch_box",
+  "condition": "cot",
+  "model_dir": "smolvlm2",
+  "vlm_model": "smol500",
+  "inference_mode": "adapter",
+  "experiment": 2,
+  "timestamp": "20260215_213121",
+  "reason": "Model generated malformed BT XML missing <BehaviorTree> wrapper and omitting bottle_of_tea and CLOSE refrigerator actions. BT parser failed to execute (0 ticks, 0.18s duration). No objects were placed."
+}

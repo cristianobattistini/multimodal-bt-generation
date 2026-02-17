@@ -1,0 +1,1 @@
+Put the green box into the sink. Retry placing inside up to 5 times if it fails.

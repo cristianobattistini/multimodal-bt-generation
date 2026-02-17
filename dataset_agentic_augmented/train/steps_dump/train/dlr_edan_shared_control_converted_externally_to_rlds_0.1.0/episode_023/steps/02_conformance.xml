@@ -1,0 +1,16 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <Sequence>
+        <!-- Check black_shelf is visible before NAVIGATE_TO -->
+        <Condition ID="IS_VISIBLE" obj="black_shelf" />
+        <!-- Navigate to black_shelf -->
+        <Action ID="NAVIGATE_TO" obj="black_shelf" />
+      </Sequence>
+      <!-- Navigate to disk -->
+      <Action ID="NAVIGATE_TO" obj="disk" />
+      <!-- Grasp disk -->
+      <Action ID="GRASP" obj="disk" />
+    </Sequence>
+  </BehaviorTree>
+</root>

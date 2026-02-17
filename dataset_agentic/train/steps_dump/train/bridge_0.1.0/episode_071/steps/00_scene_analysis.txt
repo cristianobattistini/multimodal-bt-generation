@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "broccoli"
+  destination: "pot"
+  expanded_instruction: "Pick up the broccoli from the cardboard fence area and place it into the metal pot on the stove."
+  scene_context: "Broccoli on the cardboard fence edge, not held; metal pot on stove is open and reachable; cardboard fence present."
+  expected_sequence: "Approach the broccoli, grasp it, move to the metal pot, and place the broccoli inside."

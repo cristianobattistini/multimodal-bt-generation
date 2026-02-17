@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "canned_spam"
+  destination: "sink"
+  expanded_instruction: "Pick up the canned spam from the counter at the right side and place it into the sink."
+  scene_context: "Canned_spam on the right counter next to the faucet; sink basin open and clear; cabinets closed; can not held."
+  expected_sequence: "Reach the can, grasp and lift it, move over the sink, and set it into the basin."

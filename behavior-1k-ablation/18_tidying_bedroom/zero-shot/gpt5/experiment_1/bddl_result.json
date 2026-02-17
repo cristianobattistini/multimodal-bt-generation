@@ -1,0 +1,21 @@
+{
+  "success": true,
+  "bt_success": true,
+  "bddl_goal": true,
+  "ticks": 1,
+  "duration": 84.96082663536072,
+  "inference_time": 19.40517258644104,
+  "satisfied": [
+    "nextto(?sandal.n.01_1, ?bed.n.01_1)",
+    "nextto(?sandal.n.01_2, ?sandal.n.01_1)",
+    "exists(['?table.n.02', '-', 'table.n.02'], ['ontop', '?book.n.02_1', '?table.n.02'])"
+  ],
+  "unsatisfied": [],
+  "task": "18_tidying_bedroom",
+  "condition": "zero-shot",
+  "model_dir": "gpt5",
+  "vlm_model": null,
+  "inference_mode": "openai",
+  "experiment": 5,
+  "timestamp": "20260214_105543"
+}

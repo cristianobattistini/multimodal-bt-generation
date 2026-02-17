@@ -1,0 +1,24 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to gray_plate -->
+      <Action ID="NAVIGATE_TO" obj="gray_plate" />
+      <!-- Fallback: if PLACE_INSIDE gray_plate fails, try alternative to reposition -->
+      <Fallback>
+        <!-- Retry PLACE_INSIDE gray_plate up to 2 attempts -->
+        <RetryUntilSuccessful num_attempts="2">
+          <!-- Place inside gray_plate -->
+          <Action ID="PLACE_INSIDE" obj="gray_plate" />
+        </RetryUntilSuccessful>
+        <Sequence>
+          <!-- Push gray_plate forward toward front edge of table -->
+          <Action ID="PUSH" obj="gray_plate" />
+          <!-- Place inside gray_plate -->
+          <Action ID="PLACE_INSIDE" obj="gray_plate" />
+        </Sequence>
+      </Fallback>
+      <!-- Release -->
+      <Action ID="RELEASE" />
+    </Sequence>
+  </BehaviorTree>
+</root>

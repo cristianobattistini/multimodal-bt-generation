@@ -1,0 +1,6 @@
+scene_analysis:
+  target: ["fish", "sausage", "tomato"]
+  destination: "frying_pan"
+  expanded_instruction: "Pick up the fish, the sausage, and the tomato from the mat/counter and place them into the frying_pan on the counter."
+  scene_context: "Frying pan on counter is empty and reachable; fish and sausage lie on the mat/plate; tomato is on the counter; robot not holding anything."
+  expected_sequence: "Pick up each item (fish, sausage, tomato) one at a time and place them into the frying pan."

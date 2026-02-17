@@ -1,0 +1,12 @@
+{
+  "decorator_type": "condition",
+  "mixed_subtype": null,
+  "target_action_id": "PUSH",
+  "target_obj": "green_can",
+  "parameters": {
+    "condition_id": "IS_VISIBLE",
+    "condition_obj": "green_can",
+    "allowed_conditions": "IS_REACHABLE, IS_VISIBLE"
+  },
+  "prompt_name": "condition"
+}

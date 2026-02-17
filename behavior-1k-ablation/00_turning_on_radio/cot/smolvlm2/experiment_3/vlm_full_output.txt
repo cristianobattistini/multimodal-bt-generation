@@ -1,0 +1,21 @@
+ scene_analysis:
+  target: "radio_receiver"
+  destination: "table"
+  expanded_instruction: "Turn on the red radio receiver on the table in the living room."
+  scene_context: "Radio receiver is on the table in the living room; table is clear and reachable."
+  expected_sequence: "Approach the radio receiver, grasp the receiver, and rotate the receiver to turn it on."
+Plan:
+<root main_tree_to_execute="MainTree">
+  <Sequence>
+    <!-- Navigate to radio_receiver -->
+    <Action>
+      <!-- Navigate to radio_receiver -->
+      <Target>radio_receiver</Target>
+    </Action>
+    <!-- Toggle on radio_receiver -->
+    <Action>
+      <!-- Toggle on radio_receiver -->
+      <Destination>table</Destination>
+    </Action>
+  </Sequence>
+</root>

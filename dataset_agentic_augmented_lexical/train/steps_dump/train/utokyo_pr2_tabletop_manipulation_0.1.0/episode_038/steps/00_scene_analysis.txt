@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "grape"
+  destination: ""
+  expanded_instruction: "Use the ApproachGrape subtree: pick a single grape from the small bunch of dark grapes on the table and lift it into the robot hand; retry up to 3 times with a 10s timeout, and if the grasp fails, push to reposition and retry."
+  scene_context: "Bunch of dark grapes on table near a plate; plate present; robot not holding anything; table clear otherwise."
+  expected_sequence: "Within the ApproachGrape subtree: move the arm to the bunch, grasp one grape from the cluster, and lift it up; allow up to 3 retries with a 10s timeout, and if grasp fails, push to reposition before retrying."

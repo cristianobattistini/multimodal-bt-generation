@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "pot"
+  destination: "sink"
+  expanded_instruction: "Check the pot is visible (IS_VISIBLE) before grasping; if not visible, retry up to 3 times within 10s. Then pick up the pot from the stovetop and place it in the sink."
+  scene_context: "Pot on stovetop/counter to the left of a clear sink; pot not held."
+  expected_sequence: "Verify pot visibility (IS_VISIBLE) before approach; if not visible, re-check up to 3 times within 10s. Go to the pot, grasp and lift it (if grasp fails, try reposition/push and retry), move over the sink, and place it inside."

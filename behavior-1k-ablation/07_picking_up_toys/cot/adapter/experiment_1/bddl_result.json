@@ -1,0 +1,21 @@
+{
+  "success": true,
+  "bt_success": true,
+  "bddl_goal": true,
+  "ticks": 1,
+  "duration": 181.34310698509216,
+  "inference_time": 79.4321837425232,
+  "satisfied": [
+    "exists(['?toy_box.n.01', '-', 'toy_box.n.01'], ['forall', ['?jigsaw_puzzle.n.01', '-', 'jigsaw_puzzle.n.01'], ['inside', '?jigsaw_puzzle.n.01', '?toy_box.n.01']])",
+    "exists(['?toy_box.n.01', '-', 'toy_box.n.01'], ['forall', ['?board_game.n.01', '-', 'board_game.n.01'], ['inside', '?board_game.n.01', '?toy_box.n.01']])",
+    "exists(['?toy_box.n.01', '-', 'toy_box.n.01'], ['forall', ['?tennis_ball.n.01', '-', 'tennis_ball.n.01'], ['inside', '?tennis_ball.n.01', '?toy_box.n.01']])"
+  ],
+  "unsatisfied": [],
+  "task": "07_picking_up_toys",
+  "condition": "cot",
+  "model_dir": "adapter",
+  "vlm_model": "gemma",
+  "inference_mode": "adapter",
+  "experiment": 1,
+  "timestamp": "20260212_173508"
+}

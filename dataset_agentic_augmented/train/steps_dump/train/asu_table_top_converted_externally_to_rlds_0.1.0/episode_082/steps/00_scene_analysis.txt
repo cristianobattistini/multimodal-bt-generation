@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "maroon_square"
+  destination: ""
+  expanded_instruction: "Pick up the maroon square block from the table: first check that the maroon square is reachable, then grasp it (within a 15s timeout); if grasp fails, push or flip the block to reposition and retry."
+  scene_context: "Table has multiple objects; maroon square resting on table near the right front; no containers open and object not held."
+  expected_sequence: "Approach the maroon square, verify it is reachable, grasp it within a 15s timeout, and lift it off the table; if grasp fails, use push or flip to reposition and retry (up to 3 attempts)."

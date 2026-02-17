@@ -1,0 +1,36 @@
+{
+  "decorator_type": "mixed",
+  "mixed_subtype": "condition_timeout_retry",
+  "target_action_id": "PLACE_ON_TOP",
+  "target_obj": "table",
+  "parameters": {
+    "augmentations": [
+      {
+        "type": "condition",
+        "action_id": "PLACE_ON_TOP",
+        "obj": "table",
+        "params": {
+          "condition_id": "IS_HOLDING",
+          "condition_obj": "table"
+        }
+      },
+      {
+        "type": "timeout",
+        "action_id": "PLACE_ON_TOP",
+        "obj": "table",
+        "params": {
+          "msec": 10000
+        }
+      },
+      {
+        "type": "retry",
+        "action_id": "PLACE_ON_TOP",
+        "obj": "table",
+        "params": {
+          "num_attempts": 2
+        }
+      }
+    ]
+  },
+  "prompt_name": "mixed/condition_timeout_retry"
+}

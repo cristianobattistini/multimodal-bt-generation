@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "chocolate"
+  destination: "table"
+  expanded_instruction: "Pick the chocolate out of the metal pan and place it on the table to the left of the orange cloth."
+  scene_context: "Chocolate is in a metal pan on the table; orange cloth on table; pan not held; tabletop left of cloth is clear."
+  expected_sequence: "Remove the chocolate from the pan, move it slightly forward and place it on the table just left of the cloth."

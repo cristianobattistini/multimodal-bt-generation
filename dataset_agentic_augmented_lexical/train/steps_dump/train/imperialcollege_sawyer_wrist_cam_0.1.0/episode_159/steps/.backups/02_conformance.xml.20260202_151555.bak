@@ -1,0 +1,25 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to apple -->
+      <Action ID="NAVIGATE_TO" obj="apple" />
+      <!-- Grasp apple -->
+      <Action ID="GRASP" obj="apple" />
+      <!-- Navigate to pot -->
+      <Action ID="NAVIGATE_TO" obj="pot" />
+      <!-- Fallback: if PLACE_INSIDE pot fails, try PUSH to reposition -->
+      <Fallback>
+        <!-- Place inside pot -->
+        <Action ID="PLACE_INSIDE" obj="pot" />
+        <Sequence>
+          <!-- Push pot forward toward front edge of table -->
+          <Action ID="PUSH" obj="pot" />
+          <!-- Place inside pot -->
+          <Action ID="PLACE_INSIDE" obj="pot" />
+        </Sequence>
+      </Fallback>
+      <!-- Release -->
+      <Action ID="RELEASE" />
+    </Sequence>
+  </BehaviorTree>
+</root>

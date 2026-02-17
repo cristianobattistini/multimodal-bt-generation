@@ -1,0 +1,13 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to blue_rag -->
+      <Action ID="NAVIGATE_TO" obj="blue_rag" />
+      <!-- Retry PUSH blue_rag up to 2 attempts -->
+      <RetryUntilSuccessful num_attempts="2">
+        <!-- Push blue_rag forward toward front edge of table -->
+        <Action ID="PUSH" obj="blue_rag" />
+      </RetryUntilSuccessful>
+    </Sequence>
+  </BehaviorTree>
+</root>

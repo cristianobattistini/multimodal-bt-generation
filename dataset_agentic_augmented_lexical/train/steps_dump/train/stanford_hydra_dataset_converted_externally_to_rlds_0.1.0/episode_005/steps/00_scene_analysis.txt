@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "["yellow_plate", "white_cup"]"
+  destination: "dish_rack"
+  expanded_instruction: "Pick up the yellow plate and white cup from the drying towel and place them into the dish_rack; before placing, check that the dish_rack is open (IS_OPEN) and, if a PLACE_INSIDE attempt fails, retry up to 3 times within a 10s timeout then use a PUSH to reposition the object as a fallback."
+  scene_context: "Yellow plate and white cup on the towel to the right; dish_rack is empty and reachable."
+  expected_sequence: "Check dish_rack IS_OPEN, pick up the plate and attempt to place it into the dish_rack (retry up to 3 times within 10s); if placing fails, push to reposition and secure it, then pick up the cup and repeat the same place-with-retries and push-as-fallback procedure."

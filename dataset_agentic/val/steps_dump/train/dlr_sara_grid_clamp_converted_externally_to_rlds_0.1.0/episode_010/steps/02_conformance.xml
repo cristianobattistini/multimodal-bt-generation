@@ -1,0 +1,14 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to grid_clamp -->
+      <Action ID="NAVIGATE_TO" obj="grid_clamp"/>
+      <!-- Grasp grid_clamp -->
+      <Action ID="GRASP" obj="grid_clamp"/>
+      <!-- Navigate to grid_board -->
+      <Action ID="NAVIGATE_TO" obj="grid_board"/>
+      <!-- Place inside grid_board (insert into an available slot) -->
+      <Action ID="PLACE_INSIDE" obj="grid_board"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

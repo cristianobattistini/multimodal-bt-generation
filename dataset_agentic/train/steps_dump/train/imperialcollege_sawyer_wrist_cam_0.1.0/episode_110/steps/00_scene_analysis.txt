@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "kettle"
+  destination: ""
+  expanded_instruction: "Pick up the white kettle from the surface by its handle"
+  scene_context: "Kettle upright on a blue cloth/table, lid closed, not held, surface otherwise clear."
+  expected_sequence: "Move to the kettle, grasp the handle firmly, and lift it off the surface."

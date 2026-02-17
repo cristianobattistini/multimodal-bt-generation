@@ -1,0 +1,17 @@
+{
+  "success": true,
+  "bt_success": true,
+  "bddl_goal": true,
+  "ticks": 1,
+  "duration": 90.05431318283081,
+  "inference_time": 49.6466498374939,
+  "satisfied": [
+    "exists(['?tree.n.01', '-', 'tree.n.01'], ['forall', ['?easter_egg.n.01', '-', 'easter_egg.n.01'], ['and', ['nextto', '?easter_egg.n.01', '?tree.n.01']]])",
+    "forall(['?easter_egg.n.01', '-', 'easter_egg.n.01'], ['and', ['not', ['inside', '?easter_egg.n.01', '?wicker_basket.n.01_1']], ['ontop', '?easter_egg.n.01', '?lawn.n.01_1']])"
+  ],
+  "unsatisfied": [],
+  "task": "06_hiding_Easter_eggs",
+  "model": "adapter",
+  "experiment": 1,
+  "timestamp": "20260210_100740"
+}

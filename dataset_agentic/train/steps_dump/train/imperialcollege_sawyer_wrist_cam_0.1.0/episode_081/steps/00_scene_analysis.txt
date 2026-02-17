@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "toast"
+  destination: "toaster_slot"
+  expanded_instruction: "Pick up the toast slice and insert it into the slot of the red toaster"
+  scene_context: "Toast slice on counter near a red toaster; toaster upright with empty slots; nothing is held."
+  expected_sequence: "Reach the toast, pick it up, and place it into the toaster slot."

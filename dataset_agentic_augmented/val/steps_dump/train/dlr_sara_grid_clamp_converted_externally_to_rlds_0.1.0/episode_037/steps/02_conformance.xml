@@ -1,0 +1,29 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to grid_clamp -->
+      <Action ID="NAVIGATE_TO" obj="grid_clamp" />
+      <!-- Fallback: if GRASP grid_clamp fails, try alternative to reposition -->
+      <Fallback>
+        <!-- Retry GRASP grid_clamp up to 2 attempts -->
+        <RetryUntilSuccessful num_attempts="2">
+          <!-- Timeout: GRASP grid_clamp within 15s -->
+          <Timeout msec="15000">
+            <!-- Grasp grid_clamp -->
+            <Action ID="GRASP" obj="grid_clamp" />
+          </Timeout>
+        </RetryUntilSuccessful>
+        <Sequence>
+          <!-- Push grid_clamp forward toward front edge of table -->
+          <Action ID="PUSH" obj="grid_clamp" />
+          <!-- Grasp grid_clamp -->
+          <Action ID="GRASP" obj="grid_clamp" />
+        </Sequence>
+      </Fallback>
+      <!-- Navigate to grid_board -->
+      <Action ID="NAVIGATE_TO" obj="grid_board" />
+      <!-- Place on grid_board -->
+      <Action ID="PLACE_ON_TOP" obj="grid_board" />
+    </Sequence>
+  </BehaviorTree>
+</root>

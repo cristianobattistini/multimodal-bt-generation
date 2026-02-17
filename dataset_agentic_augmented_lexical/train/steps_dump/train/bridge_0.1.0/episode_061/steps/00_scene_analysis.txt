@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "pot"
+  destination: "table"
+  expanded_instruction: "Pick up the pot (orange bowl) and place it on the table to the right of the spoon. Before placing, check IS_HOLDING on the table and retry placement up to 3 times if the check fails."
+  scene_context: "Table clear; spoon at left edge, pot near center, towel with strawberry at right; no object is held."
+  expected_sequence: "Approach the pot, lift it, move slightly right of the spoon, check IS_HOLDING on the table, and set the pot down on the table; if the check fails retry placement up to 3 times (within 10s timeout)."

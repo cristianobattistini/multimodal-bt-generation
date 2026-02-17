@@ -1,0 +1,53 @@
+scene_analysis:
+  target: "["bottle_1", "bottle_2"]"
+  destination: "coffee_table"
+  expanded_instruction: "Pick up the two bottles from the open refrigerator in the kitchen, carry them to the living room, and place them on the coffee table one at a time; ensure the refrigerator door is closed when you finish."
+  scene_context: "Two bottles inside an open electric refrigerator; fridge door is open and reachable; coffee table clear in the living room area."
+  expected_sequence: "Reach into the refrigerator, pick up each bottle, move to the living room, place one bottle down, then return to the fridge, pick up the second bottle, move to the coffee table, and set it down; verify the fridge door is closed before returning."
+Plan:
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to bottle_1 -->
+      <Action ID="NAVIGATE_TO" obj="bottle_1" />
+      <!-- Grasp bottle_1 -->
+      <Action ID="GRASP" obj="bottle_1" />
+      <!-- Navigate to electric_refrigerator -->
+      <Action ID="NAVIGATE_TO" obj="electric_refrigerator" />
+      <!-- Open electric_refrigerator -->
+      <Action ID="OPEN" obj="electric_refrigerator" />
+      <!-- Navigate to bottle_2 -->
+      <Action ID="NAVIGATE_TO" obj="bottle_2" />
+      <!-- Grasp bottle_2 -->
+      <Action ID="GRASP" obj="bottle_2" />
+      <!-- Close electric_refrigerator -->
+      <Action ID="CLOSE" obj="electric_refrigerator" />
+      <!-- Navigate to living_room -->
+      <Action ID="NAVIGATE_TO" obj="living_room" />
+      <!-- Navigate to coffee_table -->
+      <Action ID="NAVIGATE_TO" obj="coffee_table" />
+      <!-- Place on coffee_table -->
+      <Action ID="PLACE_ON_TOP" obj="coffee_table" />
+      <!-- Navigate to bottle_1 -->
+      <Action ID="NAVIGATE_TO" obj="bottle_1" />
+      <!-- Grasp bottle_1 -->
+      <Action ID="GRASP" obj="bottle_1" />
+      <!-- Navigate to living_room -->
+      <Action ID="NAVIGATE_TO" obj="living_room" />
+      <!-- Navigate to coffee_table -->
+      <Action ID="NAVIGATE_TO" obj="coffee_table" />
+      <!-- Place on coffee_table -->
+      <Action ID="PLACE_ON_TOP" obj="coffee_table" />
+      <!-- Navigate to bottle_2 -->
+      <Action ID="NAVIGATE_TO" obj="bottle_2" />
+      <!-- Grasp bottle_2 -->
+      <Action ID="GRASP" obj="bottle_2" />
+      <!-- Navigate to living_room -->
+      <Action ID="NAVIGATE_TO" obj="living_room" />
+      <!-- Navigate to coffee_table -->
+      <Action ID="NAVIGATE_TO" obj="coffee_table" />
+      <!-- Place on coffee_table -->
+      <Action ID="PLACE_ON_TOP" obj="coffee_table" />
+    </Sequence>
+  </BehaviorTree>
+</root>

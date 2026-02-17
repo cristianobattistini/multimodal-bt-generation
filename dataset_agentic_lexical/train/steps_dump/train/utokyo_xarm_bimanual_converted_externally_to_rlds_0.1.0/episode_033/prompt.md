@@ -1,0 +1,2 @@
+Instruction: Reach a towel.
+Allowed Actions: [APPROACH(obj), GRAB(obj)]

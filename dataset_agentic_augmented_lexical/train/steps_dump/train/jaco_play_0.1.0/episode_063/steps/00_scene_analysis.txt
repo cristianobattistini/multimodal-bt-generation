@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "milk_dairy"
+  destination: ""
+  expanded_instruction: "Ensure the milk dairy (small blue-and-white carton) on the blue tray next to the green cup is visible, then pick it up; if the grasp fails, retry up to 2 times."
+  scene_context: "Milk carton in blue tray on table, tray is open and reachable, no object is held."
+  expected_sequence: "Confirm the milk is visible on the blue tray, approach the tray, attempt to grasp the milk carton and lift it out, retrying the grasp up to 2 times if it fails."

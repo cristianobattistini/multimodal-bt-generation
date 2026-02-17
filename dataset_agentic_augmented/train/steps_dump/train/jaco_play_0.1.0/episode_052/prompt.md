@@ -1,0 +1,4 @@
+Instruction: place the gray bowl in the table. Check if reachable and use a 15 second timeout for navigation.
+Allowed Actions: [PLACE_NEXT_TO(obj), NAVIGATE_TO(obj)]
+Allowed Conditions: [IS_REACHABLE]
+* Constraints: Robustness: Check condition before NAVIGATE_TO, then use Timeout (msec="15000").

@@ -1,0 +1,22 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to table -->
+      <Action ID="NAVIGATE_TO" obj="table" />
+      <Sequence>
+        <!-- Check table is holding before PLACE_ON_TOP -->
+        <Condition ID="IS_HOLDING" obj="table" />
+        <!-- Retry PLACE_ON_TOP table up to 2 attempts -->
+        <RetryUntilSuccessful num_attempts="2">
+          <!-- Timeout: PLACE_ON_TOP table within 10s -->
+          <Timeout msec="10000">
+            <!-- Place on table -->
+            <Action ID="PLACE_ON_TOP" obj="table" />
+          </Timeout>
+        </RetryUntilSuccessful>
+      </Sequence>
+      <!-- Release -->
+      <Action ID="RELEASE" />
+    </Sequence>
+  </BehaviorTree>
+</root>

@@ -1,0 +1,14 @@
+<root main_tree_to_execute="MainTree">
+  <Sequence>
+    <!-- Navigate to radio_receiver -->
+    <Action>
+      <!-- Navigate to radio_receiver -->
+      <Target>radio_receiver</Target>
+    </Action>
+    <!-- Toggle on radio_receiver -->
+    <Action>
+      <!-- Toggle on radio_receiver -->
+      <Destination>table</Destination>
+    </Action>
+  </Sequence>
+</root>

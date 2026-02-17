@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "maroon_square"
+  destination: ""
+  expanded_instruction: "Pick up the maroon square from the table and lift it upward"
+  scene_context: "Maroon square standing on the table left-front; robot arm not holding anything; table surface reachable and mostly clear."
+  expected_sequence: "Move the arm to the maroon square, grasp it firmly, and raise it upward off the table."

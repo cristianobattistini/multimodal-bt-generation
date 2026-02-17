@@ -1,0 +1,22 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to dishes -->
+      <Action ID="NAVIGATE_TO" obj="dishes" />
+      <!-- Check dishes is reachable before GRASP -->
+      <Condition ID="IS_REACHABLE" obj="dishes" />
+      <!-- Retry GRASP dishes up to 2 attempts -->
+      <RetryUntilSuccessful num_attempts="2">
+        <!-- Timeout: GRASP dishes within 10s -->
+        <Timeout msec="10000">
+          <!-- Grasp dishes -->
+          <Action ID="GRASP" obj="dishes" />
+        </Timeout>
+      </RetryUntilSuccessful>
+      <!-- Navigate to dish_rack -->
+      <Action ID="NAVIGATE_TO" obj="dish_rack" />
+      <!-- Place inside dish_rack -->
+      <Action ID="PLACE_INSIDE" obj="dish_rack" />
+    </Sequence>
+  </BehaviorTree>
+</root>

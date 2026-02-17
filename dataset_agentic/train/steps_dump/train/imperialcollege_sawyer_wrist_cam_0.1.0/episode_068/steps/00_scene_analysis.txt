@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "can"
+  destination: ""
+  expanded_instruction: "Pick up the small silver can resting on the blue surface"
+  scene_context: "Small silver can resting on a blue surface near a shadowed edge; surface clear; can not held."
+  expected_sequence: "Move to the can, reach down, and grasp it securely."

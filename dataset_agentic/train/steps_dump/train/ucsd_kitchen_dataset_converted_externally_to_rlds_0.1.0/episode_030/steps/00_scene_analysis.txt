@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "teapot"
+  destination: "stove"
+  expanded_instruction: "Place the teapot on the stove so it sits on the stovetop surface"
+  scene_context: "Teapot is already resting on the stovetop; stove surface appears clear and reachable."
+  expected_sequence: "Verify the teapot is stably on the stove and do not move it if already placed."

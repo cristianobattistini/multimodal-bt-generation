@@ -1,0 +1,14 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Move to cup -->
+      <Action ID="MOVE_TO" obj="cup" />
+      <!-- Grasp cup -->
+      <Action ID="GRASP" obj="cup" />
+      <!-- Navigate to stovetop -->
+      <Action ID="NAVIGATE_TO" obj="stovetop" />
+      <!-- Place cup on stovetop -->
+      <Action ID="PLACE_ON_TOP" obj="cup" surface="stovetop" />
+    </Sequence>
+  </BehaviorTree>
+</root>

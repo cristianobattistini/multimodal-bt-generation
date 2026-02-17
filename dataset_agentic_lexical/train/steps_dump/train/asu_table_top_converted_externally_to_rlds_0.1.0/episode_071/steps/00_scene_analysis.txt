@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "pepsi_can"
+  destination: "table"
+  expanded_instruction: "Pick up the pepsi can from the right side of the table and place it on the table near the robot"
+  scene_context: "Pepsi can sits on the right side of the table; no containers; can is not held and workspace is clear."
+  expected_sequence: "Approach the can, grasp and lift it, then place it on the table near the robot's base."

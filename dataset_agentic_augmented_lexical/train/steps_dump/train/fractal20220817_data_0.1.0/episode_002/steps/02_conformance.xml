@@ -1,0 +1,20 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to white_bowl -->
+      <Action ID="NAVIGATE_TO" obj="white_bowl" />
+      <!-- Navigate to apple -->
+      <Action ID="NAVIGATE_TO" obj="apple" />
+      <!-- Check apple is visible before GRASP -->
+      <Condition ID="IS_VISIBLE" obj="apple" />
+      <!-- Retry GRASP apple up to 3 attempts -->
+      <RetryUntilSuccessful num_attempts="3">
+        <!-- Timeout: GRASP apple within 15s -->
+        <Timeout msec="15000">
+          <!-- Grasp apple -->
+          <Action ID="GRASP" obj="apple" />
+        </Timeout>
+      </RetryUntilSuccessful>
+    </Sequence>
+  </BehaviorTree>
+</root>

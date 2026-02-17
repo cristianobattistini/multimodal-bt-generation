@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "black_bowl"
+  destination: ""
+  expanded_instruction: "Pick up the black bowl from the table; if a grasp fails, retry up to 3 times, and if still unsuccessful, push or flip the bowl to reposition it."
+  scene_context: "Black bowl on table near a blue bowl and red ball; not held; table surface reachable and mostly clear."
+  expected_sequence: "Move to the black bowl, grasp its rim (retry up to 3 times if needed), and lift it off the table; if grasp fails after retries, push or flip the bowl to reposition it, then grasp and lift."

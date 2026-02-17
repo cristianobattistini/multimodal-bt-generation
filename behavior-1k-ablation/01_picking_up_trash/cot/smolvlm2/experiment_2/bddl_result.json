@@ -1,0 +1,20 @@
+{
+  "success": false,
+  "bt_success": false,
+  "bddl_goal": false,
+  "ticks": 0,
+  "duration": 0.20790457725524902,
+  "inference_time": 6.935512542724609,
+  "satisfied": [],
+  "unsatisfied": [
+    "forall(['?can__of__soda.n.01', '-', 'can__of__soda.n.01'], ['inside', '?can__of__soda.n.01', '?ashcan.n.01_1'])"
+  ],
+  "task": "01_picking_up_trash",
+  "condition": "cot",
+  "model_dir": "smolvlm2",
+  "vlm_model": "smol500",
+  "inference_mode": "adapter",
+  "experiment": 2,
+  "timestamp": "20260213_090154",
+  "reason": "Wrong plan semantics: GRASPs ashcan (container) instead of can_of_soda, only 4 actions for 3 objects. Missing <BehaviorTree> wrapper. BT parse failed (0 ticks)."
+}

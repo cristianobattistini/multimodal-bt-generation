@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "white_carton"
+  destination: ""
+  expanded_instruction: "Lift the white carton upward from the table"
+  scene_context: "White carton sitting on right side of table, not held; table is clear and no containers are closed."
+  expected_sequence: "Move to the white carton, grasp it securely, and lift it upward."

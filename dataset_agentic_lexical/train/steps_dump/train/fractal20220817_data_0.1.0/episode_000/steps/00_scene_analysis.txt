@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "rxbar_chocolate"
+  destination: "counter"
+  expanded_instruction: "Pick the RXBAR chocolate from the bottom drawer and place it on the counter next to the sponge."
+  scene_context: "Bottom drawer is open with rxbar inside and not held; counter surface is clear aside from a sponge and cup."
+  expected_sequence: "Reach into the open bottom drawer, grasp the rxbar, withdraw it, and set it down on the counter."

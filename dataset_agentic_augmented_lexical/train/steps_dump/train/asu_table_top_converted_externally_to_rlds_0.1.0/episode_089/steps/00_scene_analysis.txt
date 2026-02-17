@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "green_bottle"
+  destination: ""
+  expanded_instruction: "Push the green bottle on the right side of the table forward along the tabletop, retrying the push up to 3 times if it fails."
+  scene_context: "Green bottle upright on right table area, not held; table surface clear and reachable; no closed containers."
+  expected_sequence: "Move the arm to the bottle and push it forward along the table until it has moved past the initial position, retrying the push up to 3 times if a push fails."

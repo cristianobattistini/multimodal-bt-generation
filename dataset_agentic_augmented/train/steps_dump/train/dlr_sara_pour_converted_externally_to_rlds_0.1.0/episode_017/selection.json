@@ -1,0 +1,10 @@
+{
+  "decorator_type": "timeout",
+  "mixed_subtype": null,
+  "target_action_id": "FLIP",
+  "target_obj": "brown_pitcher",
+  "parameters": {
+    "msec": 15000
+  },
+  "prompt_name": "timeout"
+}

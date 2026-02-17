@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "coke_can"
+  destination: "table"
+  expanded_instruction: "Pick up the coke can and place it on the table next to the water bottle"
+  scene_context: "Coke can and upright water bottle both on table; no containers open and nothing is held; table is reachable."
+  expected_sequence: "Move to the coke can, pick it up, carry it to the water bottle, and place it next to the bottle on the table."

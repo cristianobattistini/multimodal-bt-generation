@@ -1,0 +1,15 @@
+scene_analysis:
+  target: "radio_receiver"
+  destination: ""
+  expanded_instruction: "In the living_room, approach the radio_receiver placed on the table and turn it on."
+  scene_context: "A radio receiver is visible on the table in the living_room near a sofa; it appears reachable. No relocation is required, only toggling power on."
+  expected_sequence: "First navigate to the radio_receiver on the table, then use TOGGLE_ON to power it on."
+Plan:
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <NAVIGATE_TO obj="radio_receiver"/>
+      <TOGGLE_ON obj="radio_receiver"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

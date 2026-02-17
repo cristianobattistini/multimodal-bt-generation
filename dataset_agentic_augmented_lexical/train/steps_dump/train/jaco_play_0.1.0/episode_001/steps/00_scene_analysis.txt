@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "gray_bowl"
+  destination: "dish_rack"
+  expanded_instruction: "Pick up the gray bowl from the table and place it inside the blue dish rack, using a grasp with a 10s timeout (retry up to 2 times); if grasp fails, push or flip to reposition the bowl."
+  scene_context: "Gray bowl on table, not held; blue dish_rack is open and clear; nearby yellow cup and orange not blocking."
+  expected_sequence: "Lift the gray bowl, carry it to the dish rack, and set it inside the rack, using a grasp with a 10s timeout (retry up to 2 times); if grasp fails, push or flip to reposition the object before placing."

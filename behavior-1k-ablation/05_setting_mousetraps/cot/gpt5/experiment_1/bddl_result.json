@@ -1,0 +1,17 @@
+{
+  "success": true,
+  "bt_success": true,
+  "bddl_goal": true,
+  "ticks": 1,
+  "duration": 64.39709377288818,
+  "inference_time": 13.402299880981445,
+  "satisfied": [
+    "exists(['?floor.n.01', '-', 'floor.n.01'], ['forall', ['?mousetrap.n.01', '-', 'mousetrap.n.01'], ['ontop', '?mousetrap.n.01', '?floor.n.01']])",
+    "exists(['?sink.n.01', '-', 'sink.n.01'], ['forn', ['2'], ['?mousetrap.n.01', '-', 'mousetrap.n.01'], ['or', ['under', '?mousetrap.n.01', '?sink.n.01'], ['nextto', '?mousetrap.n.01', '?sink.n.01']]])"
+  ],
+  "unsatisfied": [],
+  "task": "05_setting_mousetraps",
+  "model": "gpt5",
+  "experiment": 1,
+  "timestamp": "20260210_093448"
+}

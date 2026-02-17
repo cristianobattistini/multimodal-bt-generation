@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "apple_fruit"
+  destination: "sink"
+  expanded_instruction: "Pick up the apple fruit from the table and place it into the blue sink basin. For the grasp action use a 10s timeout and retry the grasp up to 2 times if it fails."
+  scene_context: "Apple on table near the robot; blue sink basin is open, empty, and reachable; nothing blocking path."
+  expected_sequence: "Move to the apple, grasp it (use a 10s timeout, retry up to 2 times on failure), carry it to the sink, and place it inside."

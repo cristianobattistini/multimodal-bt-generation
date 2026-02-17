@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "black_bowl"
+  destination: ""
+  expanded_instruction: "First check that the black bowl on the blue tray is visible (IS_VISIBLE), retry up to 3 times within a 10s timeout if needed; then pick up the black bowl from the blue tray on the table. If grasp fails, push to reposition and retry."
+  scene_context: "Black bowl sits in a blue tray on the table; tray is accessible and bowl is not held."
+  expected_sequence: "Verify black bowl visibility (IS_VISIBLE), retry visibility check up to 3 times within 10s; Move to the tray, grasp the black bowl, and lift it out of the tray. If grasp fails, push to reposition and retry grasp."

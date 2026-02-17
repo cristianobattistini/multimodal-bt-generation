@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "water_bottle"
+  destination: "table"
+  expanded_instruction: "Pick up the water bottle and place it on the table near the paper bowl"
+  scene_context: "Water bottle and paper bowl both on the table; nothing is held and table surface is reachable."
+  expected_sequence: "Reach the bottle, pick it up, move to the bowl area on the table, and place the bottle down next to the paper bowl."

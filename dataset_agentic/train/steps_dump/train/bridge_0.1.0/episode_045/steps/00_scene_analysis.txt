@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "potato"
+  destination: "pot_cardboard_fence"
+  expanded_instruction: "Pick up the potato and place it into the orange pot inside the cardboard fence"
+  scene_context: "Potato on wooden board; orange pot is inside cardboard fence and open; nothing is held."
+  expected_sequence: "Lift the potato from the board and put it into the orange pot inside the cardboard fence."

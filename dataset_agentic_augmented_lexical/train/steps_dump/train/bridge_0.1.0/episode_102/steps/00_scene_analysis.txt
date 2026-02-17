@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "cup"
+  destination: "basin"
+  expanded_instruction: "Verify the blue cup is visible (IS_VISIBLE) before navigating; if not visible, retry up to 3 times within a 10s timeout, then navigate and flip the cup from its upside-down position to upright in the basin."
+  scene_context: "Cup is upside-down inside a clear basin; basin is reachable and cup is not held."
+  expected_sequence: "Check IS_VISIBLE on the cup before NAVIGATE_TO, retry up to 3 times within 10s if needed; approach and grasp the cup, rotate it upright, and place it back in the basin upright. If grasp fails, push to reposition and retry once."

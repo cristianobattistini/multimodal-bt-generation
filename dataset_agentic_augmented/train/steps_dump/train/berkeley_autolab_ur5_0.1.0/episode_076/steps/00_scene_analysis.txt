@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "blue_cup"
+  destination: "brown_cup"
+  expanded_instruction: "Pick up the blue cup from the table and place it inside the brown cup; when navigating to the table use NAVIGATE_TO with a 10s timeout."
+  scene_context: "Blue cup left on table, brown cup right on table; both upright, reachable, no container closed."
+  expected_sequence: "Navigate to and approach the blue cup (use NAVIGATE_TO with a 10s timeout), grasp it, lift and move it over the brown cup, then insert and release it inside."

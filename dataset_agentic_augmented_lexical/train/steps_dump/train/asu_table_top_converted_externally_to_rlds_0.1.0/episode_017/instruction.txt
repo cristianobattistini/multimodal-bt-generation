@@ -1,0 +1,1 @@
+move maroon square. Only navigate to the object if it is visible.

@@ -1,0 +1,42 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to fish -->
+      <Action ID="NAVIGATE_TO" obj="fish" />
+      <!-- Grasp fish -->
+      <Action ID="GRASP" obj="fish" />
+      <!-- Move to frying_pan -->
+      <Action ID="MOVE_TO" obj="frying_pan" />
+      <Sequence>
+        <!-- Check frying_pan is empty before PLACE_INSIDE -->
+        <Condition ID="IS_EMPTY" obj="frying_pan" />
+        <!-- Place inside frying_pan -->
+        <Action ID="SET_IN" obj="frying_pan" />
+      </Sequence>
+      <!-- Set in frying_pan -->
+      <Action ID="NAVIGATE_TO" obj="sausage" />
+      <!-- Grasp sausage -->
+      <Action ID="GRASP" obj="sausage" />
+      <!-- Navigate to frying_pan -->
+      <Action ID="MOVE_TO" obj="frying_pan" />
+      <Sequence>
+        <!-- Check frying_pan is empty before PLACE_INSIDE -->
+        <Condition ID="IS_EMPTY" obj="frying_pan" />
+        <!-- Place inside frying_pan -->
+        <Action ID="PLACE_INSIDE" obj="frying_pan" />
+      </Sequence>
+      <!-- Move to frying_pan -->
+      <Action ID="GO_TO" obj="tomato" />
+      <!-- Grasp tomato -->
+      <Action ID="GRASP" obj="tomato" />
+      <!-- Go to tomato -->
+      <Action ID="NAVIGATE_TO" obj="frying_pan" />
+      <Sequence>
+        <!-- Check frying_pan is empty before PLACE_INSIDE -->
+        <Condition ID="IS_EMPTY" obj="frying_pan" />
+        <!-- Place inside frying_pan -->
+        <Action ID="PLACE_INSIDE" obj="frying_pan" />
+      </Sequence>
+    </Sequence>
+  </BehaviorTree>
+</root>

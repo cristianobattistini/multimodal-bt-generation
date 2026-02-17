@@ -1,0 +1,21 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Execute subtree ApproachRedbullCan -->
+      <SubTree ID="ApproachRedbullCan" />
+      <!-- Approach top_drawer -->
+      <Action ID="APPROACH" obj="top_drawer" />
+      <!-- Insert into top_drawer -->
+      <Action ID="INSERT_INTO" obj="top_drawer" />
+    </Sequence>
+  </BehaviorTree>
+  <!-- Subtree definition ApproachRedbullCan -->
+  <BehaviorTree ID="ApproachRedbullCan">
+    <Sequence>
+      <!-- Approach to redbull_can -->
+      <Action ID="APPROACH" obj="redbull_can" />
+      <!-- Grasp redbull_can -->
+      <Action ID="GRASP" obj="redbull_can" />
+    </Sequence>
+  </BehaviorTree>
+</root>

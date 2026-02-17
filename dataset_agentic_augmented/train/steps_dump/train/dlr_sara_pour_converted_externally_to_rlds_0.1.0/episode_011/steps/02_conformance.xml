@@ -1,0 +1,15 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to mug -->
+      <Action ID="NAVIGATE_TO" obj="mug" />
+      <!-- Pour into mug -->
+      <Action ID="POUR" obj="mug" />
+      <!-- Retry FLIP brown_pitcher up to 3 attempts -->
+      <RetryUntilSuccessful num_attempts="3">
+        <!-- Return brown_pitcher upright (flip) -->
+        <Action ID="FLIP" obj="brown_pitcher" />
+      </RetryUntilSuccessful>
+    </Sequence>
+  </BehaviorTree>
+</root>

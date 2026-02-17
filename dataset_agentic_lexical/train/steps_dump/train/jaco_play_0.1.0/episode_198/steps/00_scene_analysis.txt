@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "long_bread"
+  destination: ""
+  expanded_instruction: "Pick up the long bread (yellow loaf) from the table next to the orange"
+  scene_context: "Long bread on table to the right of the orange; table clear; bread not held."
+  expected_sequence: "Move to the long bread, grasp it securely, and lift it off the table."

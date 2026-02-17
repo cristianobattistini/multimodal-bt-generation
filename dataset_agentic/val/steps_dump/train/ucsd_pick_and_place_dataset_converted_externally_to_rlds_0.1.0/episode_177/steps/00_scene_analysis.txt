@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "pot"
+  destination: "sink"
+  expanded_instruction: "Pick up the pot from the countertop and place it into the sink."
+  scene_context: "Pot on countertop left of sink; sink empty and clear; pot not held."
+  expected_sequence: "Move to the pot, grasp it, carry it over the sink, and set it down inside."

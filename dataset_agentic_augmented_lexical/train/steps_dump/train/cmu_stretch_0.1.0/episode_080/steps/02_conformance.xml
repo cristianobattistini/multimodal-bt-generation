@@ -1,0 +1,19 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Approach dishwasher -->
+      <Action ID="APPROACH" obj="dishwasher" />
+      <!-- Approach dishwasher_handle -->
+      <Action ID="APPROACH" obj="dishwasher_handle" />
+      <!-- Grab dishwasher_handle -->
+      <Action ID="GRAB" obj="dishwasher_handle" />
+      <!-- Retry OPEN dishwasher up to 5 attempts -->
+      <RetryUntilSuccessful num_attempts="5">
+        <!-- Open dishwasher -->
+        <Action ID="OPEN_UP" obj="dishwasher" />
+      </RetryUntilSuccessful>
+      <!-- Open up dishwasher -->
+      <Action ID="LET_GO" />
+    </Sequence>
+  </BehaviorTree>
+</root>

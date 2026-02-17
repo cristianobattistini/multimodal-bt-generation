@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "red_object"
+  destination: ""
+  expanded_instruction: "Pick up the red object (red block) from the table; if a grasp fails, retry up to 3 times (within 10s) and, if needed, use a push or flip to reposition the block before retrying."
+  scene_context: "Red block on table near robot base, block not held, table otherwise clear, no closed containers."
+  expected_sequence: "Approach the red block, grasp it firmly, and lift it off the table. If grasp fails, retry up to 3 times (within 10s) or push/flip to reposition the object, then grasp and lift."

@@ -1,0 +1,23 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to table -->
+      <Action ID="NAVIGATE_TO" obj="table" />
+      <!-- Navigate to black_holder -->
+      <Action ID="NAVIGATE_TO" obj="black_holder" />
+      <!-- Navigate to blue_pen -->
+      <Action ID="NAVIGATE_TO" obj="blue_pen" />
+      <!-- Fallback: if GRASP blue_pen fails, try PUSH, FLIP to reposition -->
+      <Fallback>
+        <!-- Grasp blue_pen -->
+        <Action ID="GRASP" obj="blue_pen" />
+        <Sequence>
+          <!-- Push blue_pen forward toward front edge of table -->
+          <Action ID="PUSH" obj="blue_pen" />
+          <!-- Grasp blue_pen -->
+          <Action ID="GRASP" obj="blue_pen" />
+        </Sequence>
+      </Fallback>
+    </Sequence>
+  </BehaviorTree>
+</root>

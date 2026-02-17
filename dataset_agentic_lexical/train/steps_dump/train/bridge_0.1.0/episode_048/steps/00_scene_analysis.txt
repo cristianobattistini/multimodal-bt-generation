@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "pot"
+  destination: "orange_cloth"
+  expanded_instruction: "Pick up the metal pot from the left side of the table and place it behind the orange cloth on the table."
+  scene_context: "Pot on left table edge, orange_cloth on right with spoon on top, robot gripper empty, table otherwise clear."
+  expected_sequence: "Approach the pot and grasp it, carry it across the table, and set it down behind the orange cloth."

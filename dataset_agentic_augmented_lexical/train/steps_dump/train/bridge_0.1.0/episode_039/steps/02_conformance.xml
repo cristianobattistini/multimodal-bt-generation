@@ -1,0 +1,17 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Approach fridge_door -->
+      <Action ID="APPROACH" obj="fridge_door" />
+      <!-- Grab fridge_door -->
+      <Action ID="GRAB" obj="fridge_door" />
+      <!-- Retry CLOSE fridge_door up to 5 attempts -->
+      <RetryUntilSuccessful num_attempts="5">
+        <!-- Close fridge_door -->
+        <Action ID="SHUT" obj="fridge_door" />
+      </RetryUntilSuccessful>
+      <!-- Shut fridge_door -->
+      <Action ID="DROP" />
+    </Sequence>
+  </BehaviorTree>
+</root>

@@ -1,0 +1,22 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to oven_door -->
+      <Action ID="NAVIGATE_TO" obj="oven_door" />
+      <!-- Check oven_door is reachable before GRASP -->
+      <Condition ID="IS_REACHABLE" obj="oven_door" />
+      <!-- Retry GRASP oven_door up to 3 attempts -->
+      <RetryUntilSuccessful num_attempts="3">
+        <!-- Timeout: GRASP oven_door within 10s -->
+        <Timeout msec="10000">
+          <!-- Grasp oven_door -->
+          <Action ID="GRASP" obj="oven_door" />
+        </Timeout>
+      </RetryUntilSuccessful>
+      <!-- Open oven_door -->
+      <Action ID="OPEN" obj="oven_door" />
+      <!-- Release -->
+      <Action ID="RELEASE" />
+    </Sequence>
+  </BehaviorTree>
+</root>

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "towel"
+  destination: ""
+  expanded_instruction: "Reach the pink towel lying on the table and grasp it; if the grasp fails, retry up to 3 times, then push or flip the towel to reposition before trying again."
+  scene_context: "Pink towel flat on table front; robot arm not holding anything; table surface clear."
+  expected_sequence: "Move the arm forward to the towel and grasp its edge; if grasp fails, retry up to 3 times, then push or flip to reposition and attempt the grasp again."

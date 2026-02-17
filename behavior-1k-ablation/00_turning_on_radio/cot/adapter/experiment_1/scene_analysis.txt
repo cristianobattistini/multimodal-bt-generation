@@ -1,0 +1,7 @@
+scene_analysis:
+  target: "radio_receiver"
+  destination: ""
+  expanded_instruction: "Pick up the radio receiver from the table and turn it on by connecting its antenna to the radio receiver."
+  scene_context: "Radio is on the table near the front; robot not holding it; table surface clear."
+  expected_sequence: "Move to the radio, pick it up, align the antenna with the receiver, and turn it on."
+Plan:

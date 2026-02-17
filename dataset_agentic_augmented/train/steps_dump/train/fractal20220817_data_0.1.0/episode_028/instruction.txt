@@ -1,0 +1,1 @@
+Pick pepsi can from top drawer and place on counter. Retry grasping up to 5 times if it fails.

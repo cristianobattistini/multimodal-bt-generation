@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "disk"
+  destination: ""
+  expanded_instruction: "Pick up the disk from the middle shelf of the black cabinet"
+  scene_context: "Black cabinet with open shelves; white disk resting on middle shelf right side; disk not held; approach clear."
+  expected_sequence: "Move to the cabinet, reach into the middle shelf, grasp the disk, and lift it out."

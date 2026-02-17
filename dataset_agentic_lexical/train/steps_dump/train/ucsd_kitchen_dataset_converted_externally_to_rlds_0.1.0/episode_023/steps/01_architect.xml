@@ -1,0 +1,10 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Approach faucet -->
+      <Action ID="APPROACH" obj="faucet" />
+      <!-- Activate faucet -->
+      <Action ID="ACTIVATE" obj="faucet" />
+    </Sequence>
+  </BehaviorTree>
+</root>

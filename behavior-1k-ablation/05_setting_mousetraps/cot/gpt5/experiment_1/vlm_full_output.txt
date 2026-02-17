@@ -1,0 +1,33 @@
+scene_analysis:
+  target: "mousetraps"
+  destination: "sink"
+  expanded_instruction: "In the bathroom, pick up the four mousetraps that are on the cabinet shelf and place each one on the floor next to the bathroom sink. Do them one by one so all four end up beside the sink."
+  scene_context: "Bathroom scene with a cabinet holding four visible mousetraps and a nearby sink; the floor beside the sink is available for placement."
+  expected_sequence: "For each mousetrap (1 through 4): navigate to the specific mousetrap on the cabinet, grasp it, navigate to the sink, and place it next to the sink onto the floor."
+
+Plan:
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <NAVIGATE_TO obj="mousetrap_1"/>
+      <GRASP obj="mousetrap_1"/>
+      <NAVIGATE_TO obj="sink"/>
+      <PLACE_NEXT_TO obj="sink"/>
+
+      <NAVIGATE_TO obj="mousetrap_2"/>
+      <GRASP obj="mousetrap_2"/>
+      <NAVIGATE_TO obj="sink"/>
+      <PLACE_NEXT_TO obj="sink"/>
+
+      <NAVIGATE_TO obj="mousetrap_3"/>
+      <GRASP obj="mousetrap_3"/>
+      <NAVIGATE_TO obj="sink"/>
+      <PLACE_NEXT_TO obj="sink"/>
+
+      <NAVIGATE_TO obj="mousetrap_4"/>
+      <GRASP obj="mousetrap_4"/>
+      <NAVIGATE_TO obj="sink"/>
+      <PLACE_NEXT_TO obj="sink"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

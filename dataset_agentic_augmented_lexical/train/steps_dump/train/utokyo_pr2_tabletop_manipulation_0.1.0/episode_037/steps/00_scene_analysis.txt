@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "pink_cloth"
+  destination: "table"
+  expanded_instruction: "Use the ApproachPinkCloth subtree to group approach actions: Fold the pink cloth on the table into a smaller, neat rectangle by folding it in half and smoothing it flat. If grasping fails, retry up to 3 times with a 10s timeout and if still unsuccessful, push to reposition the cloth and try again."
+  scene_context: "Pink cloth lies flat on a clear table; robot arm is nearby and not holding the cloth."
+  expected_sequence: "Use the ApproachPinkCloth subtree: reach toward the cloth, align and grasp an edge (retry up to 3 times, 10s timeout; if grasp fails, push to reposition and retry), fold the grasped edge toward the center (then fold again if needed), smooth the cloth flat, and leave the folded cloth on the table."

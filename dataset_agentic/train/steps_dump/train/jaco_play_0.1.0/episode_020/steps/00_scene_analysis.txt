@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "burger_meat"
+  destination: ""
+  expanded_instruction: "Pick up the burger meat (raw patty) from the metal tray left of the plate."
+  scene_context: "Burger meat sits on a metal tray left of the plate; tray accessible; no containers closed; not held."
+  expected_sequence: "Move to the metal tray, grasp the burger meat, and lift it clear."

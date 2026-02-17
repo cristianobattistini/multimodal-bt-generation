@@ -1,0 +1,27 @@
+{
+  "decorator_type": "mixed",
+  "mixed_subtype": "timeout_retry",
+  "target_action_id": "GRASP",
+  "target_obj": "brown_chip_bag",
+  "parameters": {
+    "augmentations": [
+      {
+        "type": "timeout",
+        "action_id": "GRASP",
+        "obj": "brown_chip_bag",
+        "params": {
+          "msec": 10000
+        }
+      },
+      {
+        "type": "retry",
+        "action_id": "GRASP",
+        "obj": "brown_chip_bag",
+        "params": {
+          "num_attempts": 2
+        }
+      }
+    ]
+  },
+  "prompt_name": "mixed/timeout_retry"
+}

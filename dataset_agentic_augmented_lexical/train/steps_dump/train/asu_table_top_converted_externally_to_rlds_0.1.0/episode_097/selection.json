@@ -1,0 +1,10 @@
+{
+  "decorator_type": "retry",
+  "mixed_subtype": null,
+  "target_action_id": "GRASP",
+  "target_obj": "bread",
+  "parameters": {
+    "num_attempts": 3
+  },
+  "prompt_name": "retry"
+}

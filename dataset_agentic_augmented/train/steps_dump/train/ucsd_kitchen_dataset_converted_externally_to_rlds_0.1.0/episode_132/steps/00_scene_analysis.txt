@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "carbinet_door"
+  destination: ""
+  expanded_instruction: "Check that the carbinet door on the top shelf of the wooden cabinet is reachable (IS_REACHABLE); then open that cabinet door."
+  scene_context: "Top cabinet door is closed and not held; handle visible and reachable; surrounding surfaces clear."
+  expected_sequence: "Approach the cabinet, verify carbinet_door is reachable (IS_REACHABLE), grasp the door handle, and pull the door open; if not reachable, reposition and retry up to 3 times within a 10s timeout."

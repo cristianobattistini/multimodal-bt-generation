@@ -1,0 +1,7 @@
+scene_analysis:
+  target: "board_game_1, board_game_2, board_game_3, jigsaw_puzzle_1, jigsaw_puzzle_2, tennis_ball"
+  destination: "toy_box"
+  expanded_instruction: "Pick up each of the 6 toys (board_game_1, board_game_2, board_game_3, jigsaw_puzzle_1, jigsaw_puzzle_2, tennis_ball) and place them into the open toy_box on the table."
+  scene_context: "Table has toys (board_games and puzzles) and an open toy_box; no objects are held; path to toy_box is clear."
+  expected_sequence: "For each toy, pick it up from the table, move over the toy_box, and place it inside until all 6 are inside."
+Plan:

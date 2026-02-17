@@ -1,0 +1,1 @@
+put down white box. Check precondition and retry placing on top up to 3 times if it fails.

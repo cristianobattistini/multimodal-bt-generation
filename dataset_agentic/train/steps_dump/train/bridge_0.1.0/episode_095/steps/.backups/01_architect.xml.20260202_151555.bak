@@ -1,0 +1,16 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to white_object -->
+      <Action ID="NAVIGATE_TO" obj="white_object"/>
+      <!-- Grasp white_object -->
+      <Action ID="GRASP" obj="white_object"/>
+      <!-- Navigate to pot_on_table -->
+      <Action ID="NAVIGATE_TO" obj="pot_on_table"/>
+      <!-- Place inside pot_on_table -->
+      <Action ID="PLACE_INSIDE" obj="pot_on_table"/>
+      <!-- Release -->
+      <Action ID="RELEASE"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "blue_cup"
+  destination: "brown_cup"
+  expanded_instruction: "Pick up the blue cup from the table and place it into the upright brown cup on the table. Use a grouped ApproachBlueCup subtree for the approach and grasp with retries (up to 3) and a 10s timeout; if grasp fails, push to reposition and retry."
+  scene_context: "Blue cup on table; brown cup upright on table and empty; nothing is held; table area reachable and clear."
+  expected_sequence: "ApproachBlueCup subtree: reach to the blue cup (retry up to 3 times, 10s timeout), grasp and lift it (if grasp fails, push to reposition and retry), move over the brown cup, and lower the blue cup into the brown cup."

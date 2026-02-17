@@ -1,0 +1,13 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Timeout: NAVIGATE_TO table within 15s -->
+      <Timeout msec="15000">
+        <!-- Navigate to table -->
+        <Action ID="NAVIGATE_TO" obj="table" />
+      </Timeout>
+      <!-- Place on table -->
+      <Action ID="PLACE_ON_TOP" obj="table" />
+    </Sequence>
+  </BehaviorTree>
+</root>

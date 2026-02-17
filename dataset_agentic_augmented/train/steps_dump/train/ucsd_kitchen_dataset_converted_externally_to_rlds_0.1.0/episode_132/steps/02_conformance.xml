@@ -1,0 +1,18 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to carbinet_door -->
+      <Action ID="NAVIGATE_TO" obj="carbinet_door" />
+      <!-- Grasp carbinet_door -->
+      <Action ID="GRASP" obj="carbinet_door" />
+      <Sequence>
+        <!-- Check carbinet_door is reachable before OPEN -->
+        <Condition ID="IS_REACHABLE" obj="carbinet_door" />
+        <!-- Open carbinet_door -->
+        <Action ID="OPEN" obj="carbinet_door" />
+      </Sequence>
+      <!-- Release -->
+      <Action ID="RELEASE" />
+    </Sequence>
+  </BehaviorTree>
+</root>

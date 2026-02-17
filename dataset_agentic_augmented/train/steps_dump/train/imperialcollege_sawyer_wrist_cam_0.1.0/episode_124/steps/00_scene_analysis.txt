@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "shoe"
+  destination: ""
+  expanded_instruction: "Check the white shoe resting on the blue surface is graspable before picking it up; attempt the grasp within a 10s timeout and retry up to 2 times if it fails."
+  scene_context: "White shoe lying on a clear blue floor/mat, not held, no closed containers."
+  expected_sequence: "Approach the shoe, verify it is graspable, grasp it securely (within a 10s timeout, retry up to 2 times if needed), and lift it up."

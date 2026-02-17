@@ -1,0 +1,53 @@
+scene_analysis:
+  target: ["board_game_1", "board_game_2", "board_game_3", "jigsaw_puzzle_1", "jigsaw_puzzle_2", "tennis_ball"]
+  destination: "toy_box"
+  expanded_instruction: "Pick up each of the 6 toys (board_game_1, board_game_2, board_game_3, jigsaw_puzzle_1, jigsaw_puzzle_2, tennis_ball) and place them one by one into the gray toy_box on the table."
+  scene_context: "Gray toy_box on the table is open and empty; board_game_1, board_game_2, and board_game_3 are on the counter near the box; jigsaw_puzzle_1 is on the floor; tennis_ball is on the table; nothing is held."
+  expected_sequence: "For each toy, approach the object, pick it up, move it to the gray toy_box on the table, and release it inside until all 6 toys are placed inside the box."
+Plan:
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to board_game_1 -->
+      <Action ID="NAVIGATE_TO" obj="board_game_1"/>
+      <!-- Grasp board_game_1 -->
+      <Action ID="GRASP" obj="board_game_1"/>
+      <!-- Navigate to toy_box -->
+      <Action ID="NAVIGATE_TO" obj="toy_box"/>
+      <!-- Place inside toy_box -->
+      <Action ID="PLACE_INSIDE" obj="toy_box"/>
+      <!-- Navigate to board_game_2 -->
+      <Action ID="NAVIGATE_TO" obj="board_game_2"/>
+      <!-- Grasp board_game_2 -->
+      <Action ID="GRASP" obj="board_game_2"/>
+      <!-- Navigate to toy_box -->
+      <Action ID="NAVIGATE_TO" obj="toy_box"/>
+      <!-- Place inside toy_box -->
+      <Action ID="PLACE_INSIDE" obj="toy_box"/>
+      <!-- Navigate to board_game_3 -->
+      <Action ID="NAVIGATE_TO" obj="board_game_3"/>
+      <!-- Grasp board_game_3 -->
+      <Action ID="GRASP" obj="board_game_3"/>
+      <!-- Navigate to toy_box -->
+      <Action ID="NAVIGATE_TO" obj="toy_box"/>
+      <!-- Place inside toy_box -->
+      <Action ID="PLACE_INSIDE" obj="toy_box"/>
+      <!-- Navigate to jigsaw_puzzle_1 -->
+      <Action ID="NAVIGATE_TO" obj="jigsaw_puzzle_1"/>
+      <!-- Grasp jigsaw_puzzle_1 -->
+      <Action ID="GRASP" obj="jigsaw_puzzle_1"/>
+      <!-- Navigate to toy_box -->
+      <Action ID="NAVIGATE_TO" obj="toy_box"/>
+      <!-- Place inside toy_box -->
+      <Action ID="PLACE_INSIDE" obj="toy_box"/>
+      <!-- Navigate to tennis_ball -->
+      <Action ID="NAVIGATE_TO" obj="tennis_ball"/>
+      <!-- Grasp tennis_ball -->
+      <Action ID="GRASP" obj="tennis_ball"/>
+      <!-- Navigate to toy_box -->
+      <Action ID="NAVIGATE_TO" obj="toy_box"/>
+      <!-- Place inside toy_box -->
+      <Action ID="PLACE_INSIDE" obj="toy_box"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

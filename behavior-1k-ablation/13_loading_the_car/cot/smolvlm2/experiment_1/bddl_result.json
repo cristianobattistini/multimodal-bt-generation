@@ -1,0 +1,22 @@
+{
+  "success": false,
+  "bt_success": false,
+  "bddl_goal": false,
+  "ticks": 0,
+  "duration": 0.12480330467224121,
+  "inference_time": 7.206284523010254,
+  "satisfied": [],
+  "unsatisfied": [
+    "inside(?container.n.01_1, ?car.n.01_1)",
+    "inside(?digital_camera.n.01_1, ?container.n.01_1)",
+    "inside(?tennis_racket.n.01_1, ?car.n.01_1)"
+  ],
+  "task": "13_loading_the_car",
+  "condition": "cot",
+  "model_dir": "smolvlm2",
+  "vlm_model": "smol500",
+  "inference_mode": "adapter",
+  "experiment": 1,
+  "timestamp": "20260215_094411",
+  "reason": "Invalid XML structure (ticks=0): missing BehaviorTree wrapper, nonsensical action (OPEN tennis_racket), incomplete plan (5 actions instead of ~14 required)"
+}

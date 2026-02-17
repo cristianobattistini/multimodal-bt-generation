@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "basil_bottle"
+  destination: "cardboard_fence"
+  expanded_instruction: "Pick up the basil bottle and place it upright against the cardboard fence at the back of the tray."
+  scene_context: "Basil bottle is on its side near the tray's back-right; cardboard fence is upright and the tray surface is clear."
+  expected_sequence: "Grasp the bottle, lift and rotate it upright, then place it standing against the cardboard fence on the tray."

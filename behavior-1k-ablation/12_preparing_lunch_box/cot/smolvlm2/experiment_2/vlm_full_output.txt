@@ -1,0 +1,78 @@
+ scene_analysis:
+target: half_apple_1, half_apple_2
+destination: packing_box
+expanded_instruction: "Pick up the half_apple_1 and the half_apple_2 from the chopping_board and place them into the packing_box."
+scene_context: "Half_apple_1 and half_apple_2 are on the chopping_board; the packing_box is on the countertop."
+expected_sequence: "Pick up the half_apple_1 and the half_apple_2 from the chopping_board and place them into the packing_box."
+
+Allowed Actions: [NAVIGATE_TO(obj), GRASP(obj), PLACE_INSIDE(obj), OPEN(obj), CLOSE(obj)]
+
+Plan:
+<root main_tree_to_execute="MainTree">
+  <Sequence>
+    <!-- Navigate to half_apple_1 -->
+    <Action ID="NAVIGATE_TO" obj="half_apple_1" />
+    <!-- Grasp half_apple_1 -->
+    <Action ID="GRASP" obj="half_apple_1" />
+    <!-- Place inside packing_box -->
+    <Action ID="PLACE_INSIDE" obj="packing_box" />
+    <!-- Navigate to half_apple_2 -->
+    <Action ID="NAVIGATE_TO" obj="half_apple_2" />
+    <!-- Grasp half_apple_2 -->
+    <Action ID="GRASP" obj="half_apple_2" />
+    <!-- Place inside packing_box -->
+    <Action ID="PLACE_INSIDE" obj="packing_box" />
+    <!-- Navigate to electric_refrigerator -->
+    <Action ID="NAVIGATE_TO" obj="electric_refrigerator" />
+    <!-- Open refrigerator -->
+    <Action ID="OPEN" obj="electric_refrigerator" />
+    <!-- Navigate to chocolate_chip_cookie -->
+    <Action ID="NAVIGATE_TO" obj="chocolate_chip_cookie" />
+    <!-- Grasp chocolate_chip_cookie -->
+    <Action ID="GRASP" obj="chocolate_chip_cookie" />
+    <!-- Place inside packing_box -->
+    <Action ID="PLACE_INSIDE" obj="packing_box" />
+    <!-- Navigate to chopping_board -->
+    <Action ID="NAVIGATE_TO" obj="chopping_board" />
+    <!-- Grasp chopping_board -->
+    <Action ID="GRASP" obj="chopping_board" />
+    <!-- Place inside packing_box -->
+    <Action ID="PLACE_INSIDE" obj="packing_box" />
+  </Sequence>
+</root>
+
+Plan:
+<root main_tree_to_execute="MainTree">
+  <Sequence>
+    <!-- Navigate to club_sandwich -->
+    <Action ID="NAVIGATE_TO" obj="club_sandwich" />
+    <!-- Grasp club_sandwich -->
+    <Action ID="GRASP" obj="club_sandwich" />
+    <!-- Place inside packing_box -->
+    <Action ID="PLACE_INSIDE" obj="packing_box" />
+    <!-- Navigate to half_apple_1 -->
+    <Action ID="NAVIGATE_TO" obj="half_apple_1" />
+    <!-- Grasp half_apple_1 -->
+    <Action ID="GRASP" obj="half_apple_1" />
+    <!-- Place inside packing_box -->
+    <Action ID="PLACE_INSIDE" obj="packing_box" />
+    <!-- Navigate to half_apple_2 -->
+    <Action ID="NAVIGATE_TO" obj="half_apple_2" />
+    <!-- Grasp half_apple_2 -->
+    <Action ID="GRASP" obj="half_apple_2" />
+    <!-- Place inside packing_box -->
+    <Action ID="PLACE_INSIDE" obj="packing_box" />
+    <!-- Navigate to electric_refrigerator -->
+    <Action ID="NAVIGATE_TO" obj="electric_refrigerator" />
+    <!-- Open refrigerator -->
+    <Action ID="OPEN" obj="electric_refrigerator" />
+    <!-- Navigate to chocolate_chip_cookie -->
+    <Action ID="NAVIGATE_TO" obj="chocolate_chip_cookie" />
+    <!-- Grasp chocolate_chip_cookie -->
+    <Action ID="GRASP" obj="chocolate_chip_cookie" />
+    <!-- Place inside packing_box -->
+    <Action ID="PLACE_INSIDE" obj="packing_box" />
+  </Sequence>
+</root>
+
+Allowed Actions: [NAVIGATE_TO(obj), GRASP(obj), PLACE_INSIDE(obj), OPEN(obj), CLOSE(obj)]

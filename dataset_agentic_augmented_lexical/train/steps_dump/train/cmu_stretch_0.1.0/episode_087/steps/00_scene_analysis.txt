@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "door"
+  destination: ""
+  expanded_instruction: "Open the white cabinet door on the small white sideboard using the ApproachDoor subtree."
+  scene_context: "White cabinet doors are closed; handles visible; nothing is held and countertop is clear."
+  expected_sequence: "Use the ApproachDoor subtree: move to the cabinet (retry up to 3 times, 10s timeout), grasp the door handle (if grasp fails, push to reposition), and pull the door open."

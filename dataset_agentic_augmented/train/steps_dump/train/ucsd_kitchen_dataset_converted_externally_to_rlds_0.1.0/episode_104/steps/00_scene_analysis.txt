@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "canned_spam"
+  destination: "sink"
+  expanded_instruction: "Check that the canned spam is graspable, then pick it up from the countertop (grasp action within a 10s timeout, retry up to 3 times); if grasp fails, use push and flip to reposition the can, then place it into the sink."
+  scene_context: "Canned_spam on countertop next to the sink; sink is empty and reachable; robot not holding anything."
+  expected_sequence: "Approach the can, verify IS_GRASPABLE, attempt GRASP (within 10s, retry up to 3 times), lift and move over the sink; if grasp fails, PUSH or FLIP to reposition the can, then set the can down inside the sink."

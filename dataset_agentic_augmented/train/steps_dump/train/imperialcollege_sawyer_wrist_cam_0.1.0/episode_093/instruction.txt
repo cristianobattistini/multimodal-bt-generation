@@ -1,0 +1,1 @@
+stack bowls. Check if graspable, use a 15 second timeout for grasping; if it times out, try pushing the object to improve graspability.

@@ -1,0 +1,1 @@
+Move the mushroom to the top of the blue cloth. If placing on top fails, push the destination to clear obstacles and retry placing on top.

@@ -1,0 +1,23 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to toast -->
+      <Action ID="NAVIGATE_TO" obj="toast" />
+      <!-- Fallback: if GRASP toast fails, try PUSH, FLIP to reposition -->
+      <Fallback>
+        <!-- Grasp toast -->
+        <Action ID="GRASP" obj="toast" />
+        <Sequence>
+          <!-- Push toast forward toward front edge of table -->
+          <Action ID="PUSH" obj="toast" />
+          <!-- Grasp toast -->
+          <Action ID="GRASP" obj="toast" />
+        </Sequence>
+      </Fallback>
+      <!-- Navigate to toaster_slot -->
+      <Action ID="NAVIGATE_TO" obj="toaster_slot" />
+      <!-- Place inside toaster_slot -->
+      <Action ID="PLACE_INSIDE" obj="toaster_slot" />
+    </Sequence>
+  </BehaviorTree>
+</root>

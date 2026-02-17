@@ -1,0 +1,36 @@
+{
+  "decorator_type": "mixed",
+  "mixed_subtype": "condition_timeout_retry",
+  "target_action_id": "GRASP",
+  "target_obj": "pot",
+  "parameters": {
+    "augmentations": [
+      {
+        "type": "condition",
+        "action_id": "GRASP",
+        "obj": "pot",
+        "params": {
+          "condition_id": "IS_GRASPABLE",
+          "condition_obj": "pot"
+        }
+      },
+      {
+        "type": "timeout",
+        "action_id": "GRASP",
+        "obj": "pot",
+        "params": {
+          "msec": 10000
+        }
+      },
+      {
+        "type": "retry",
+        "action_id": "GRASP",
+        "obj": "pot",
+        "params": {
+          "num_attempts": 2
+        }
+      }
+    ]
+  },
+  "prompt_name": "mixed/condition_timeout_retry"
+}

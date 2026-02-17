@@ -1,0 +1,24 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to pan -->
+      <Action ID="NAVIGATE_TO" obj="pan" />
+      <!-- Check pan is visible before GRASP -->
+      <Condition ID="IS_VISIBLE" obj="pan" />
+      <!-- Fallback: if GRASP pan fails, try alternative to reposition -->
+      <Fallback>
+        <!-- Timeout: GRASP pan within 10s -->
+        <Timeout msec="10000">
+          <!-- Grasp pan -->
+          <Action ID="GRASP" obj="pan" />
+        </Timeout>
+        <Sequence>
+          <!-- Push pan forward toward front edge of table -->
+          <Action ID="PUSH" obj="pan" />
+          <!-- Grasp pan -->
+          <Action ID="GRASP" obj="pan" />
+        </Sequence>
+      </Fallback>
+    </Sequence>
+  </BehaviorTree>
+</root>

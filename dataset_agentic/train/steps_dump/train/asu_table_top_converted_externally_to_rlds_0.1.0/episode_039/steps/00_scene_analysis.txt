@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "maroon_object"
+  destination: ""
+  expanded_instruction: "Push the maroon rectangular block on the left side of the table."
+  scene_context: "Maroon block upright at left on table, not held; table surface clear; robot arm above table."
+  expected_sequence: "Move the arm to contact the maroon block and push it across the table to the front area."

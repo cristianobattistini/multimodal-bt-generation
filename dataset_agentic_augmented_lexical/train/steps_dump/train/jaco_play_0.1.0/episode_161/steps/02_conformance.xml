@@ -1,0 +1,18 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to gray_bowl -->
+      <Action ID="NAVIGATE_TO" obj="gray_bowl" />
+      <!-- Grasp gray_bowl -->
+      <Action ID="GRASP" obj="gray_bowl" />
+      <Sequence>
+        <!-- Check dish_rack is reachable before NAVIGATE_TO -->
+        <Condition ID="IS_REACHABLE" obj="dish_rack" />
+        <!-- Navigate to dish_rack -->
+        <Action ID="NAVIGATE_TO" obj="dish_rack" />
+      </Sequence>
+      <!-- Place inside dish_rack -->
+      <Action ID="PLACE_INSIDE" obj="dish_rack" />
+    </Sequence>
+  </BehaviorTree>
+</root>

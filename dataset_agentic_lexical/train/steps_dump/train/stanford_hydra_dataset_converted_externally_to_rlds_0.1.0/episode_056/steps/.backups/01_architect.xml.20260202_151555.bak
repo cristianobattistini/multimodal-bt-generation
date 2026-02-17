@@ -1,0 +1,26 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to yellow_plate -->
+      <Action ID="NAVIGATE_TO" obj="yellow_plate"/>
+      <!-- Grasp yellow_plate -->
+      <Action ID="GRASP" obj="yellow_plate"/>
+      <!-- Navigate to dish_rack -->
+      <Action ID="NAVIGATE_TO" obj="dish_rack"/>
+      <!-- Place into dish_rack (vertically into rack slots) -->
+      <Action ID="PLACE_INSIDE" obj="dish_rack"/>
+      <!-- Release -->
+      <Action ID="RELEASE"/>
+      <!-- Navigate to blue_spoon -->
+      <Action ID="NAVIGATE_TO" obj="blue_spoon"/>
+      <!-- Grasp blue_spoon -->
+      <Action ID="GRASP" obj="blue_spoon"/>
+      <!-- Navigate to dish_rack -->
+      <Action ID="NAVIGATE_TO" obj="dish_rack"/>
+      <!-- Place into dish_rack -->
+      <Action ID="PLACE_INSIDE" obj="dish_rack"/>
+      <!-- Release -->
+      <Action ID="RELEASE"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

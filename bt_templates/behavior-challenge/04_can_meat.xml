@@ -1,0 +1,49 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Open cabinet and get jars -->
+      <Action ID="NAVIGATE_TO" obj="cabinet.n.01_1"/>
+      <Action ID="OPEN" obj="cabinet.n.01_1"/>
+      <Action ID="NAVIGATE_TO" obj="hinged_jar.n.01_1"/>
+      <Action ID="GRASP" obj="hinged_jar.n.01_1"/>
+      <Action ID="NAVIGATE_TO" obj="countertop.n.01_1"/>
+      <Action ID="PLACE_ON_TOP" obj="countertop.n.01_1"/>
+      <Action ID="NAVIGATE_TO" obj="hinged_jar.n.01_2"/>
+      <Action ID="GRASP" obj="hinged_jar.n.01_2"/>
+      <Action ID="NAVIGATE_TO" obj="countertop.n.01_1"/>
+      <Action ID="PLACE_ON_TOP" obj="countertop.n.01_1"/>
+      <!-- Fill jar 1 with 2 bratwursts -->
+      <Action ID="OPEN" obj="hinged_jar.n.01_1"/>
+      <Action ID="NAVIGATE_TO" obj="bratwurst.n.01_1"/>
+      <Action ID="GRASP" obj="bratwurst.n.01_1"/>
+      <Action ID="NAVIGATE_TO" obj="hinged_jar.n.01_1"/>
+      <Action ID="PLACE_INSIDE" obj="hinged_jar.n.01_1"/>
+      <Action ID="NAVIGATE_TO" obj="bratwurst.n.01_2"/>
+      <Action ID="GRASP" obj="bratwurst.n.01_2"/>
+      <Action ID="NAVIGATE_TO" obj="hinged_jar.n.01_1"/>
+      <Action ID="PLACE_INSIDE" obj="hinged_jar.n.01_1"/>
+      <Action ID="CLOSE" obj="hinged_jar.n.01_1"/>
+      <!-- Fill jar 2 with 2 bratwursts -->
+      <Action ID="OPEN" obj="hinged_jar.n.01_2"/>
+      <Action ID="NAVIGATE_TO" obj="bratwurst.n.01_3"/>
+      <Action ID="GRASP" obj="bratwurst.n.01_3"/>
+      <Action ID="NAVIGATE_TO" obj="hinged_jar.n.01_2"/>
+      <Action ID="PLACE_INSIDE" obj="hinged_jar.n.01_2"/>
+      <Action ID="NAVIGATE_TO" obj="bratwurst.n.01_4"/>
+      <Action ID="GRASP" obj="bratwurst.n.01_4"/>
+      <Action ID="NAVIGATE_TO" obj="hinged_jar.n.01_2"/>
+      <Action ID="PLACE_INSIDE" obj="hinged_jar.n.01_2"/>
+      <Action ID="CLOSE" obj="hinged_jar.n.01_2"/>
+      <!-- Return jars to cabinet -->
+      <Action ID="NAVIGATE_TO" obj="hinged_jar.n.01_1"/>
+      <Action ID="GRASP" obj="hinged_jar.n.01_1"/>
+      <Action ID="NAVIGATE_TO" obj="cabinet.n.01_1"/>
+      <Action ID="PLACE_INSIDE" obj="cabinet.n.01_1"/>
+      <Action ID="NAVIGATE_TO" obj="hinged_jar.n.01_2"/>
+      <Action ID="GRASP" obj="hinged_jar.n.01_2"/>
+      <Action ID="NAVIGATE_TO" obj="cabinet.n.01_1"/>
+      <Action ID="PLACE_INSIDE" obj="cabinet.n.01_1"/>
+      <Action ID="CLOSE" obj="cabinet.n.01_1"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

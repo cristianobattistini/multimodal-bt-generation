@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "vessel"
+  destination: "violet_cloth"
+  expanded_instruction: "Pick up the vessel and place it centered over the folded violet cloth on the table."
+  scene_context: "Vessel on right table edge, folded violet cloth near center-right, robot not holding anything, table reachable and mostly clear."
+  expected_sequence: "Move to the vessel, lift it, move over the violet cloth, and set it down centered on the cloth."

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "faucet"
+  destination: ""
+  expanded_instruction: "Turn on the sink faucet handle to start water flow from the tap, retrying the grasp up to 5 times if it fails."
+  scene_context: "Faucet is off, sink is clear, faucet handle reachable on the sink, robot arm free."
+  expected_sequence: "Move the arm to the faucet handle and rotate or lift it to the on position until water flows; if the grasp fails, retry up to 5 times."

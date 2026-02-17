@@ -1,0 +1,28 @@
+{
+  "decorator_type": "mixed",
+  "mixed_subtype": "condition_timeout",
+  "target_action_id": "NAVIGATE_TO",
+  "target_obj": "rxbar_blueberry",
+  "parameters": {
+    "augmentations": [
+      {
+        "type": "condition",
+        "action_id": "NAVIGATE_TO",
+        "obj": "rxbar_blueberry",
+        "params": {
+          "condition_id": "IS_REACHABLE",
+          "condition_obj": "rxbar_blueberry"
+        }
+      },
+      {
+        "type": "timeout",
+        "action_id": "NAVIGATE_TO",
+        "obj": "rxbar_blueberry",
+        "params": {
+          "msec": 20000
+        }
+      }
+    ]
+  },
+  "prompt_name": "mixed/condition_timeout"
+}

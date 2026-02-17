@@ -1,0 +1,25 @@
+{
+  "success": true,
+  "bt_success": true,
+  "bddl_goal": true,
+  "ticks": 1,
+  "duration": 147.78447890281677,
+  "inference_time": 29.433136701583862,
+  "satisfied": [
+    "inside(?drill.n.01_1, ?toolbox.n.01_1)",
+    "inside(?pliers.n.01_1, ?toolbox.n.01_1)",
+    "inside(?flashlight.n.01_1, ?toolbox.n.01_1)",
+    "inside(?allen_wrench.n.01_1, ?toolbox.n.01_1)",
+    "inside(?screwdriver.n.01_1, ?toolbox.n.01_1)",
+    "ontop(?toolbox.n.01_1, ?tabletop.n.01_1)",
+    "not(['open', '?toolbox.n.01_1'])"
+  ],
+  "unsatisfied": [],
+  "task": "19_outfit_a_basic_toolbox",
+  "condition": "zero-shot",
+  "model_dir": "gpt5",
+  "vlm_model": null,
+  "inference_mode": "openai",
+  "experiment": 2,
+  "timestamp": "20260214_003459"
+}

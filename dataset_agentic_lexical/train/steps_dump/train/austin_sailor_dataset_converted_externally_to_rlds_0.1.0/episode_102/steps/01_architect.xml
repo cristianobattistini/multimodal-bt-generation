@@ -1,0 +1,30 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to bread -->
+      <Action ID="NAVIGATE_TO" obj="bread" />
+      <!-- Grasp bread -->
+      <Action ID="GRASP" obj="bread" />
+      <!-- Approach serving_area -->
+      <Action ID="APPROACH" obj="serving_area" />
+      <!-- Put on serving_area -->
+      <Action ID="PUT_ON" obj="serving_area" />
+      <!-- Go to butter -->
+      <Action ID="GO_TO" obj="butter" />
+      <!-- Grasp butter -->
+      <Action ID="GRASP" obj="butter" />
+      <!-- Move to serving_area -->
+      <Action ID="MOVE_TO" obj="serving_area" />
+      <!-- Place butter on serving_area -->
+      <Action ID="PLACE_ON_TOP" obj="butter" surface="serving_area" />
+      <!-- Go to milk -->
+      <Action ID="GO_TO" obj="milk" />
+      <!-- Pick milk -->
+      <Action ID="PICK" obj="milk" />
+      <!-- Approach serving_area -->
+      <Action ID="APPROACH" obj="serving_area" />
+      <!-- Place milk on serving_area -->
+      <Action ID="PLACE_ON_TOP" obj="milk" surface="serving_area" />
+    </Sequence>
+  </BehaviorTree>
+</root>

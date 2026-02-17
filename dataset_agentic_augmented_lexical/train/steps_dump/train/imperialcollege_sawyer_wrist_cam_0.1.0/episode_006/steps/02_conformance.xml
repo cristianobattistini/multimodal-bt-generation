@@ -1,0 +1,25 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to dishwasher -->
+      <Action ID="NAVIGATE_TO" obj="dishwasher" />
+      <!-- Open dishwasher -->
+      <Action ID="OPEN" obj="dishwasher" />
+      <!-- Timeout: NAVIGATE_TO cup within 15s -->
+      <Timeout msec="15000">
+        <!-- Navigate to cup -->
+        <Action ID="NAVIGATE_TO" obj="cup" />
+      </Timeout>
+      <!-- Grasp cup -->
+      <Action ID="GRAB" obj="cup" />
+      <!-- Grab cup -->
+      <Action ID="NAVIGATE_TO" obj="dishwasher_lower_rack" />
+      <!-- Place inside dishwasher_lower_rack -->
+      <Action ID="PLACE_INSIDE" obj="dishwasher_lower_rack" />
+      <!-- Navigate to dishwasher -->
+      <Action ID="NAVIGATE_TO" obj="dishwasher" />
+      <!-- Close dishwasher -->
+      <Action ID="LATCH" obj="dishwasher" />
+    </Sequence>
+  </BehaviorTree>
+</root>

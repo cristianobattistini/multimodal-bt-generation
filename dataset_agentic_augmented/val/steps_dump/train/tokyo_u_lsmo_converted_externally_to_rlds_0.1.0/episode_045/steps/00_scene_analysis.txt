@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "scissors"
+  destination: ""
+  expanded_instruction: "Move the robot arm while avoiding the pen holder obstacle and reach the scissors on the table to grasp them; if grasp fails, retry up to 3 times and, if still unsuccessful, push or flip the scissors to reposition and then grasp within a 10s timeout."
+  scene_context: "Robot arm on table left, scissors on rear-right of table, dark pen_holder between arm and scissors; no containers open."
+  expected_sequence: "Navigate the arm around the pen_holder obstacle and reach forward to grasp the scissors; if grasp fails, attempt push or flip to reposition and retry grasp (up to 3 attempts)."

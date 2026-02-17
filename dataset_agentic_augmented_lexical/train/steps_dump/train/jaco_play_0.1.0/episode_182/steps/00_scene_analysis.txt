@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "square_bread"
+  destination: "table"
+  expanded_instruction: "Check that the table is reachable before navigating; then pick up the square bread from the plate and place it on the table, navigating with a 15s timeout."
+  scene_context: "Square bread on the plate near the robot; table surface clear and reachable; no containers closed."
+  expected_sequence: "Verify IS_REACHABLE on the table, reach to the plate, lift the square bread, navigate to the table (within a 15s timeout), and set it down."

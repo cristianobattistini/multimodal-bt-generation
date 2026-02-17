@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "sweet_potato"
+  destination: "metal_pot"
+  expanded_instruction: "Pick up the sweet potato from the countertop and place it into the metal pot"
+  scene_context: "Sweet potato on countertop rear-right; metal pot on countertop rear-left and empty; nothing is held."
+  expected_sequence: "Reach for the sweet potato, lift it, move to the pot, and put it inside."

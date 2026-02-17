@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "peg"
+  destination: "hole"
+  expanded_instruction: "Insert the peg held by the robot into the hole on the base plate."
+  scene_context: "Peg is held above the base plate; hole visible on the plate; workspace clear."
+  expected_sequence: "Lower and align the peg over the hole, then insert it straight down until seated."

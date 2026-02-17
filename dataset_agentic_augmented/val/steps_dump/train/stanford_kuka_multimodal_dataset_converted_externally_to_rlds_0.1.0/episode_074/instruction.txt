@@ -1,0 +1,1 @@
+insert the peg into the hole. If placing inside fails, push inside the hole to clear or re-center obstacles and then retry placing inside.

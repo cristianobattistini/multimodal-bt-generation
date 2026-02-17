@@ -1,0 +1,1 @@
+hold red object. Only grasp if the object is visible.

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "cocacola_bottle"
+  destination: ""
+  expanded_instruction: "Pick up the cocacola bottle from the front-left area of the table; if a grasp attempt fails, retry up to 3 times with a 15-second timeout per grasp."
+  scene_context: "Table visible and clear; cocacola bottle sitting front-left on table; no container, not held."
+  expected_sequence: "Move to the bottle, grasp it securely (retry up to 3 times if needed, 15s timeout per attempt), and lift it off the table."

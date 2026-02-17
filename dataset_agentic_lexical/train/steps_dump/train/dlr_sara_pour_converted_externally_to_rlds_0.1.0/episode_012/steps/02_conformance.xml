@@ -1,0 +1,10 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Tip into mug -->
+      <Action ID="TIP_INTO" obj="mug" />
+      <!-- Turn over pouring_pitcher -->
+      <Action ID="TURN_OVER" obj="pouring_pitcher" />
+    </Sequence>
+  </BehaviorTree>
+</root>

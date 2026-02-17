@@ -1,0 +1,16 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Move to pink_cloth -->
+      <Action ID="MOVE_TO" obj="pink_cloth" />
+      <!-- Grasp pink_cloth -->
+      <Action ID="GRASP" obj="pink_cloth" />
+      <!-- Navigate to table -->
+      <Action ID="NAVIGATE_TO" obj="table" />
+      <!-- Crease pink_cloth -->
+      <Action ID="CREASE" obj="pink_cloth" />
+      <!-- Place on table -->
+      <Action ID="PLACE_ON_TOP" obj="table" />
+    </Sequence>
+  </BehaviorTree>
+</root>

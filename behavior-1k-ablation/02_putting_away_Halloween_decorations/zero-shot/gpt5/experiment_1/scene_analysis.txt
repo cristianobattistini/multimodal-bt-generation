@@ -1,0 +1,7 @@
+scene_analysis:
+  target: "pumpkins_candles_and_caldron"
+  destination: "cabinet_and_table"
+  expanded_instruction: "Open cabinet.n.01_1, put pumpkin.n.02_1, pumpkin.n.02_2 and candle.n.01_1, candle.n.01_2, candle.n.01_3 inside it; then place caldron.n.01_1 next to table.n.02_1; finally close the cabinet."
+  scene_context: "The scene appears very dark; specific object poses are not clearly visible, but the listed objects are assumed present in the workspace."
+  expected_sequence: "Navigate to the cabinet and open it. For each pumpkin and candle: navigate to the item, grasp it, navigate back to the cabinet, and place it inside. Then navigate to the cauldron, grasp it, navigate to the table, and place the cauldron next to the table. Finally, return to the cabinet and close it."
+Plan:

@@ -1,0 +1,13 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Go to lid -->
+      <Action ID="GO_TO" obj="lid" />
+      <!-- Retry OPEN lid up to 4 attempts -->
+      <RetryUntilSuccessful num_attempts="4">
+        <!-- Open lid -->
+        <Action ID="UNLOCK" obj="lid" />
+      </RetryUntilSuccessful>
+    </Sequence>
+  </BehaviorTree>
+</root>

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "["pan", "fish", "sausage"]"
+  destination: "stove"
+  expanded_instruction: "Place the pan onto the stove (if placing fails, retry up to 5 times), then place the fish and the sausage into that pan."
+  scene_context: "Small frying pan on the counter edge; fish and sausage on plate on the placemat; stove area clear."
+  expected_sequence: "Pick up the pan and set it on the stove (retry up to 5 times if placement fails), then pick up the fish and sausage one by one and place them into the pan."

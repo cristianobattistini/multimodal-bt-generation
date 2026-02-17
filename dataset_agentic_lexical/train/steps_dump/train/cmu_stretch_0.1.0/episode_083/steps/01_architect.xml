@@ -1,0 +1,14 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Move to green_garbage_can_lid -->
+      <Action ID="MOVE_TO" obj="green_garbage_can_lid" />
+      <!-- Grasp green_garbage_can_lid -->
+      <Action ID="GRASP" obj="green_garbage_can_lid" />
+      <!-- Unseal green_garbage_can_lid -->
+      <Action ID="UNSEAL" obj="green_garbage_can_lid" />
+      <!-- Release -->
+      <Action ID="RELEASE" />
+    </Sequence>
+  </BehaviorTree>
+</root>

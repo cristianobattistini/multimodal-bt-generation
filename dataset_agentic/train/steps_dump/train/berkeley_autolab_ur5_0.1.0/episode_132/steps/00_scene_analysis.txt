@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "ranch_bottle"
+  destination: "pot"
+  expanded_instruction: "Pick up the ranch bottle from the table and place it into the pot (metal bowl) on the table."
+  scene_context: "Ranch bottle lies on the table; metal pot bowl on table is open and reachable; bottle not held."
+  expected_sequence: "Approach and grasp the ranch bottle, lift and move it over the pot, then lower and release it into the pot."

@@ -1,0 +1,25 @@
+ Scene_analysis:
+  target: ["bottle_1", "bottle_2"]
+  destination: "coffee_table"
+  expanded_instruction: "Open the electric_refrigerator and pick up bottle_1 from the refrigerator, then pick up bottle_2 from the countertop and place them on the coffee table."
+  scene_context: "Electric_refrigerator is closed and on the counter; bottle_1 is on the counter near the stove; bottle_2 is on the counter near the stove."
+  expected_sequence: "Open the refrigerator, pick up bottle_1 from the counter, pick up bottle_2 from the counter, place them on the coffee table, then close the refrigerator."
+Plan:
+<root main_tree_to_execute="MainTree">
+  <Sequence>
+    <!-- Navigate to bottle_1 -->
+    <Action ID="NAVIGATE_TO" obj="bottle_1" />
+    <!-- Open electric_refrigerator -->
+    <Action ID="OPEN" obj="electric_refrigerator" />
+    <!-- Navigate to bottle_2 -->
+    <Action ID="NAVIGATE_TO" obj="bottle_2" />
+    <!-- Place bottle_1 on top of coffee_table -->
+    <Action ID="PLACE_ON_TOP" obj="bottle_1" />
+    <!-- Navigate to bottle_2 -->
+    <Action ID="NAVIGATE_TO" obj="bottle_2" />
+    <!-- Place bottle_2 on top of coffee_table -->
+    <Action ID="PLACE_ON_TOP" obj="bottle_2" />
+    <!-- Close electric_refrigerator -->
+    <Action ID="CLOSE" obj="electric_refrigerator" />
+  </Sequence>
+</root>

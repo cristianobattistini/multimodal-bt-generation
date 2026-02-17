@@ -1,0 +1,31 @@
+scene_analysis:
+  target: "sack"
+  destination: "electric_refrigerator"
+  expanded_instruction: "Retrieve the groceries by taking the sack from the open car trunk, bring it inside, place the sack next to the electric_refrigerator, then take out the beefsteak_tomato and carton_of_milk and store them inside the electric_refrigerator. Finally, close both the refrigerator and the car."
+  scene_context: "The car trunk appears open with a grocery sack visible inside. The electric_refrigerator is available elsewhere indoors. The beefsteak_tomato and carton_of_milk are assumed to be with the groceries in the sack."
+  expected_sequence: "Go to the car, open it if needed, pick up the sack, go to the refrigerator and set the sack next to it. Open the refrigerator. Then, from the sack area, grasp the beefsteak_tomato and place it inside the refrigerator; repeat for the carton_of_milk. Close the refrigerator, return to the car, and close the car."
+
+Plan:
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <NAVIGATE_TO obj="car"/>
+      <OPEN obj="car"/>
+      <GRASP obj="sack"/>
+      <NAVIGATE_TO obj="electric_refrigerator"/>
+      <PLACE_NEXT_TO obj="sack"/>
+      <OPEN obj="electric_refrigerator"/>
+      <NAVIGATE_TO obj="sack"/>
+      <GRASP obj="beefsteak_tomato"/>
+      <NAVIGATE_TO obj="electric_refrigerator"/>
+      <PLACE_INSIDE obj="beefsteak_tomato"/>
+      <NAVIGATE_TO obj="sack"/>
+      <GRASP obj="carton_of_milk"/>
+      <NAVIGATE_TO obj="electric_refrigerator"/>
+      <PLACE_INSIDE obj="carton_of_milk"/>
+      <CLOSE obj="electric_refrigerator"/>
+      <NAVIGATE_TO obj="car"/>
+      <CLOSE obj="car"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

@@ -1,0 +1,2 @@
+Instruction: place the butter dairy in the gray bowl. Check precondition and retry placing inside up to 3 times if it fails.
+Allowed Actions: [APPROACH(obj), PICK(obj), NAVIGATE_TO(obj), PLACE_INSIDE(obj)]

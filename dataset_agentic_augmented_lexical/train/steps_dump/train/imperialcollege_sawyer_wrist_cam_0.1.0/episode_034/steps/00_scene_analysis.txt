@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "apple"
+  destination: ""
+  expanded_instruction: "Pick up the apple resting on the blue surface, navigating to it within a 20s timeout."
+  scene_context: "Apple on a blue cloth/surface, not held, no containers nearby, surface clear."
+  expected_sequence: "Move to the apple within a 20s navigation timeout and grasp it to lift it from the surface."

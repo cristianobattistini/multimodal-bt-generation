@@ -1,0 +1,1 @@
+Move the pepper to the right of the cloth. If placing on top fails, push the destination area on the table to clear obstacles and then retry placing on top.

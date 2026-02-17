@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "pot"
+  destination: "orange_cloth"
+  expanded_instruction: "Pick up the metal pot from the left side of the table and place it behind the orange cloth on the table. Before navigating to the cloth, check IS_REACHABLE on orange_cloth; if not reachable retry up to 3 times or reposition and replan."
+  scene_context: "Pot on left table edge, orange_cloth on right with spoon on top, robot gripper empty, table otherwise clear."
+  expected_sequence: "Check IS_REACHABLE on orange_cloth before navigating; if reachable, approach the pot and grasp it, carry it across the table, and set it down behind the orange cloth. If grasp or placement fails, retry or reposition as needed."

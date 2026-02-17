@@ -1,0 +1,21 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Move to apple_fruit -->
+      <Action ID="MOVE_TO" obj="apple_fruit" />
+      <!-- Fallback: if GRASP apple_fruit fails, try PUSH, FLIP to reposition -->
+      <Fallback>
+        <!-- Grasp apple_fruit -->
+        <Action ID="PICK" obj="apple_fruit" />
+        <Sequence>
+          <!-- Push apple_fruit forward toward front edge of table -->
+          <Action ID="SHOVE" obj="apple_fruit" />
+          <!-- Grasp apple_fruit -->
+          <Action ID="PICK" obj="apple_fruit" />
+        </Sequence>
+      </Fallback>
+      <!-- Pick apple_fruit -->
+      <Action ID="UNGRASP" />
+    </Sequence>
+  </BehaviorTree>
+</root>

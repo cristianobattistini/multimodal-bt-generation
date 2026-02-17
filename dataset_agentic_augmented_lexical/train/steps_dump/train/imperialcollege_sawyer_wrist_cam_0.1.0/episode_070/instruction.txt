@@ -1,0 +1,1 @@
+Pick up mug. Use ApproachMug subtree for approach and grasp.

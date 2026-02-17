@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "pepsi_can"
+  destination: ""
+  expanded_instruction: "Push the blue Pepsi can on the table a short distance forward"
+  scene_context: "Pepsi can on table front-center, not held; table clear; robot arm nearby and free."
+  expected_sequence: "Move the arm to contact the Pepsi can and push it forward across the table."

@@ -1,0 +1,27 @@
+scene_analysis:
+  target: "easter_eggs"
+  destination: "tree_1"
+  expanded_instruction: "In the garden, retrieve the three Easter eggs from the wicker basket on the lawn and place each egg next to the same tree (tree_1)."
+  scene_context: "The scene shows a grassy lawn with trees and shrubs; a prominent tree (tree_1) stands ahead. The wicker basket with the eggs is mentioned in the instruction but not visible in the current view."
+  expected_sequence: "For each egg (easter_egg_1, easter_egg_2, easter_egg_3): navigate to the egg, grasp it from the basket, navigate to tree_1, and place it next to tree_1."
+Plan:
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence name="place_three_eggs_next_to_tree">
+      <Action ID="NAVIGATE_TO" object="easter_egg_1"/>
+      <Action ID="GRASP" object="easter_egg_1"/>
+      <Action ID="NAVIGATE_TO" object="tree_1"/>
+      <Action ID="PLACE_NEXT_TO" object="tree_1"/>
+
+      <Action ID="NAVIGATE_TO" object="easter_egg_2"/>
+      <Action ID="GRASP" object="easter_egg_2"/>
+      <Action ID="NAVIGATE_TO" object="tree_1"/>
+      <Action ID="PLACE_NEXT_TO" object="tree_1"/>
+
+      <Action ID="NAVIGATE_TO" object="easter_egg_3"/>
+      <Action ID="GRASP" object="easter_egg_3"/>
+      <Action ID="NAVIGATE_TO" object="tree_1"/>
+      <Action ID="PLACE_NEXT_TO" object="tree_1"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

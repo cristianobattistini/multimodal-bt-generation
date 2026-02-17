@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "apple_fruit"
+  destination: "sink"
+  expanded_instruction: "Navigate to the apple fruit on the floor under the arm (NAVIGATE_TO with a 10s timeout), pick it up, and place it inside the blue sink basin."
+  scene_context: "Apple on floor under robot arm, sink (blue basin) is open and empty, apple not held."
+  expected_sequence: "Approach and grasp the apple (NAVIGATE_TO must complete within a 10s timeout), carry it to the sink, and set it down inside the basin."

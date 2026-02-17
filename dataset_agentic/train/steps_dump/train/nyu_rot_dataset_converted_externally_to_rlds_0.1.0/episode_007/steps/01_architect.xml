@@ -1,0 +1,10 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to blue_button -->
+      <Action ID="NAVIGATE_TO" obj="blue_button"/>
+      <!-- Push blue_button (press until activated) -->
+      <Action ID="PUSH" obj="blue_button"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

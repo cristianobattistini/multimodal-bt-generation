@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "red_pepper"
+  destination: "table"
+  expanded_instruction: "Pick up the red pepper and place it on the bottom-right corner of the table."
+  scene_context: "Red pepper on the left-back area of the table; table surface mostly clear; robot not holding anything."
+  expected_sequence: "Approach the red pepper and grasp it, carry it to the table's bottom-right corner, and set it down."

@@ -1,0 +1,25 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Approach kcup_holder -->
+      <Action ID="APPROACH" obj="kcup_holder" />
+      <!-- Retry OPEN kcup_holder up to 4 attempts -->
+      <RetryUntilSuccessful num_attempts="4">
+        <!-- Open kcup_holder -->
+        <Action ID="OPEN" obj="kcup_holder" />
+      </RetryUntilSuccessful>
+      <!-- Navigate to kcup -->
+      <Action ID="MOVE_TO" obj="kcup" />
+      <!-- Move to kcup -->
+      <Action ID="GRAB" obj="kcup" />
+      <!-- Grab kcup -->
+      <Action ID="NAVIGATE_TO" obj="kcup_holder" />
+      <!-- Place inside kcup_holder -->
+      <Action ID="PLACE_INSIDE" obj="kcup_holder" />
+      <!-- Navigate to kcup_holder -->
+      <Action ID="APPROACH" obj="kcup_holder" />
+      <!-- Approach kcup_holder -->
+      <Action ID="LATCH" obj="kcup_holder" />
+    </Sequence>
+  </BehaviorTree>
+</root>

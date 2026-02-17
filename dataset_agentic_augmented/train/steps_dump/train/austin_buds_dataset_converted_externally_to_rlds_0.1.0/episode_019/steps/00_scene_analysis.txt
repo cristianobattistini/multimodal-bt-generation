@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "["lid","pot","tool"]"
+  destination: "plate"
+  expanded_instruction: "Remove the lid from the pot on the stove, place the pot onto the plate (if grasp fails, retry up to 3 times; if still unsuccessful, use push or flip to reposition), then use the tool (spatula) to push the pot to the front edge of the table."
+  scene_context: "Pot has lid on and sits on stove; plate and spatula/tool are on the table and reachable; front table edge is clear."
+  expected_sequence: "Take off the lid and set it aside, put the pot onto the plate (if grasp fails, retry up to 3 times; if still failing, push or flip to reposition), then use the tool to push the pot forward to the front edge of the table."

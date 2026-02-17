@@ -1,0 +1,30 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to cap -->
+      <Action ID="NAVIGATE_TO" obj="cap" />
+      <!-- Check cap is visible before GRASP -->
+      <Condition ID="IS_VISIBLE" obj="cap" />
+      <!-- Fallback: if GRASP cap fails, try alternative to reposition -->
+      <Fallback>
+        <!-- Timeout: GRASP cap within 10s -->
+        <Timeout msec="10000">
+          <!-- Grasp cap -->
+          <Action ID="GRASP" obj="cap" />
+        </Timeout>
+        <Sequence>
+          <!-- Push cap forward toward front edge of table -->
+          <Action ID="PUSH" obj="cap" />
+          <!-- Grasp cap -->
+          <Action ID="GRASP" obj="cap" />
+        </Sequence>
+      </Fallback>
+      <!-- Navigate to bottle -->
+      <Action ID="NAVIGATE_TO" obj="bottle" />
+      <!-- Place inside bottle -->
+      <Action ID="PLACE_INSIDE" obj="bottle" />
+      <!-- Release -->
+      <Action ID="RELEASE" />
+    </Sequence>
+  </BehaviorTree>
+</root>

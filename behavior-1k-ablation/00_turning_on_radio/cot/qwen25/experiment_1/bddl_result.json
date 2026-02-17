@@ -1,0 +1,19 @@
+{
+  "success": true,
+  "bt_success": true,
+  "bddl_goal": true,
+  "ticks": 1,
+  "duration": 2.2710039615631104,
+  "inference_time": 14.415244817733765,
+  "satisfied": [
+    "toggled_on(?radio_receiver.n.01_1)"
+  ],
+  "unsatisfied": [],
+  "task": "00_turning_on_radio",
+  "condition": "cot",
+  "model_dir": "qwen25",
+  "vlm_model": "qwen",
+  "inference_mode": "adapter",
+  "experiment": 1,
+  "timestamp": "20260212_221752"
+}

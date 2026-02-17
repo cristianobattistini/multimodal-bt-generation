@@ -1,0 +1,13 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Timeout: NAVIGATE_TO brown_object within 20s -->
+      <Timeout msec="20000">
+        <!-- Navigate to brown_object -->
+        <Action ID="NAVIGATE_TO" obj="brown_object" />
+      </Timeout>
+      <!-- Push brown_object forward toward front edge of table -->
+      <Action ID="PUSH" obj="brown_object" />
+    </Sequence>
+  </BehaviorTree>
+</root>

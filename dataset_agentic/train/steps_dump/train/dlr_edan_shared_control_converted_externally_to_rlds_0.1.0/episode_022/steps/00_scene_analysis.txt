@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "orange"
+  destination: ""
+  expanded_instruction: "Pick up the orange from the small round stool shelf next to the black cabinet."
+  scene_context: "Orange resting on a small round stool shelf beside a closed black cabinet; orange not held; approach unobstructed."
+  expected_sequence: "Move the arm to the orange, grasp it firmly, and lift it off the stool shelf."

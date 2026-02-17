@@ -1,0 +1,16 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Go to table -->
+      <Action ID="GO_TO" obj="table" />
+      <!-- Approach blue_pen -->
+      <Action ID="APPROACH" obj="blue_pen" />
+      <!-- Grip blue_pen -->
+      <Action ID="GRIP" obj="blue_pen" />
+      <!-- Move to table -->
+      <Action ID="MOVE_TO" obj="table" />
+      <!-- Let go -->
+      <Action ID="LET_GO" />
+    </Sequence>
+  </BehaviorTree>
+</root>

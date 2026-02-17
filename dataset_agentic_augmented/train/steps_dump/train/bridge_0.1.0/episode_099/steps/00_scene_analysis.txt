@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "shaker"
+  destination: "pot"
+  expanded_instruction: "Pick up the shaker (orange body green lid) from the counter and place it into the metal pot on the counter. Allow up to 20s for each grasp attempt and retry the grasp up to 3 times if it fails."
+  scene_context: "Shaker on counter right of pot; metal pot is open on counter; shaker not held; counter otherwise clear."
+  expected_sequence: "Reach to the shaker, attempt to grasp and lift it (allow up to 20s per grasp, retry up to 3 times on failure), move over the pot, and place the shaker into the pot."

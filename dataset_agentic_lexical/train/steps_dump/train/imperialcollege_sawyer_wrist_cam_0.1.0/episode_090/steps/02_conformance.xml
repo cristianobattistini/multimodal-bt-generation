@@ -1,0 +1,10 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to blue_container -->
+      <Action ID="NAVIGATE_TO" obj="blue_container"/>
+      <!-- Open lid -->
+      <Action ID="OPEN" obj="lid"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

@@ -1,0 +1,28 @@
+{
+  "decorator_type": "mixed",
+  "mixed_subtype": "condition_timeout",
+  "target_action_id": "NAVIGATE_TO",
+  "target_obj": "black_bowl",
+  "parameters": {
+    "augmentations": [
+      {
+        "type": "condition",
+        "action_id": "NAVIGATE_TO",
+        "obj": "black_bowl",
+        "params": {
+          "condition_id": "IS_REACHABLE",
+          "condition_obj": "black_bowl"
+        }
+      },
+      {
+        "type": "timeout",
+        "action_id": "NAVIGATE_TO",
+        "obj": "black_bowl",
+        "params": {
+          "msec": 20000
+        }
+      }
+    ]
+  },
+  "prompt_name": "mixed/condition_timeout"
+}

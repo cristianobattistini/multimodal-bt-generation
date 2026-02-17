@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "green_apple"
+  destination: ""
+  expanded_instruction: "Check that the green apple is reachable, then navigate (within a 15s timeout) to the small shelf bowl near the counter and pick up the green apple."
+  scene_context: "Green and red apples in a bowl on a small shelf; robot not holding anything; shelf accessible."
+  expected_sequence: "Check IS_REACHABLE on the green apple, then NAVIGATE_TO the shelf (within a 15s timeout), reach into the bowl, grasp the green apple, and lift it clear of the bowl."

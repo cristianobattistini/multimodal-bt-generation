@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "blue_mark"
+  destination: ""
+  expanded_instruction: "Move the robot arm so its end effector reaches and contacts the blue mark on the table; if a push to make contact fails, retry the push up to 5 times."
+  scene_context: "Robot arm at table edge, blue mark visible on tabletop, table clear and mark not obstructed."
+  expected_sequence: "Position the arm over the blue mark and lower the end effector until it contacts the mark, retrying any failed push up to 5 times."

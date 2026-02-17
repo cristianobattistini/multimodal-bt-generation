@@ -1,0 +1,12 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to mousetraps -->
+      <Action ID="NAVIGATE_TO" obj="mousetraps" />
+      <!-- Grasp mousetraps -->
+      <Action ID="GRASP" obj="mousetraps" />
+      <!-- Place next to sink -->
+      <Action ID="PLACE_NEXT_TO" obj="sink" />
+    </Sequence>
+  </Root>
+</root>

@@ -1,0 +1,24 @@
+{
+  "success": false,
+  "bt_success": false,
+  "bddl_goal": false,
+  "ticks": 1,
+  "duration": 18.32645893096924,
+  "inference_time": 122.39050889015198,
+  "satisfied": [],
+  "unsatisfied": [
+    "forall(['?gift_box.n.01', '-', 'gift_box.n.01'], ['or', ['nextto', '?gift_box.n.01', '?christmas_tree.n.05_1'], ['under', '?gift_box.n.01', '?christmas_tree.n.05_1'], ['touching', '?gift_box.n.01', '?christmas_tree.n.05_1']])",
+    "exists(['?table.n.02', '-', 'table.n.02'], ['forall', ['?pillar_candle.n.01', '-', 'pillar_candle.n.01'], ['ontop', '?pillar_candle.n.01', '?table.n.02']])",
+    "exists(['?table.n.02', '-', 'table.n.02'], ['forn', ['1'], ['?candy_cane.n.01', '-', 'candy_cane.n.01'], ['ontop', '?candy_cane.n.01', '?table.n.02']])",
+    "exists(['?sofa.n.01', '-', 'sofa.n.01'], ['forall', ['?wreath.n.01', '-', 'wreath.n.01'], ['ontop', '?wreath.n.01', '?sofa.n.01']])",
+    "exists(['?sofa.n.01', '-', 'sofa.n.01'], ['forn', ['2'], ['?candy_cane.n.01', '-', 'candy_cane.n.01'], ['ontop', '?candy_cane.n.01', '?sofa.n.01']])"
+  ],
+  "task": "09_putting_up_Christmas_decorations_inside",
+  "condition": "zero-shot",
+  "model_dir": "qwen25",
+  "vlm_model": "qwen",
+  "inference_mode": "adapter",
+  "experiment": 1,
+  "timestamp": "20260212_200715",
+  "failure_reason": "Multiple BT errors: (1) gift_box_1 placed next_to table instead of christmas_tree, (2) gift_box_2 placed next_to sofa instead of christmas_tree, (3) candy_cane_2 placed on_top table instead of sofa, (4) candy_cane_3 uses hallucinated object 'candle_stick' and hallucinated action 'SET_ON' (not in Allowed Actions). BT fails at SET_ON execution."
+}

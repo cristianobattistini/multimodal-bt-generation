@@ -1,0 +1,28 @@
+{
+  "decorator_type": "mixed",
+  "mixed_subtype": "condition_timeout",
+  "target_action_id": "NAVIGATE_TO",
+  "target_obj": "grid_board",
+  "parameters": {
+    "augmentations": [
+      {
+        "type": "condition",
+        "action_id": "NAVIGATE_TO",
+        "obj": "grid_board",
+        "params": {
+          "condition_id": "IS_VISIBLE",
+          "condition_obj": "grid_board"
+        }
+      },
+      {
+        "type": "timeout",
+        "action_id": "NAVIGATE_TO",
+        "obj": "grid_board",
+        "params": {
+          "msec": 10000
+        }
+      }
+    ]
+  },
+  "prompt_name": "mixed/condition_timeout"
+}

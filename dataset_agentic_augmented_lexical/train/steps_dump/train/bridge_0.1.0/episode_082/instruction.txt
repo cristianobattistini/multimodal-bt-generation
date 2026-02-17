@@ -1,0 +1,1 @@
+Move the chocolate from the pan to the left of the cloth. If placing on the table fails, push the destination area to clear obstacles and retry placing.

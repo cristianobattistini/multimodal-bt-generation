@@ -1,0 +1,22 @@
+ scene_analysis:
+  target: ashcan
+  destination: kitchen
+  expanded_instruction: Put the three cans of soda from the living room into the trash can in the kitchen.
+  scene_context: Three cans of soda are on the floor in the living room; the kitchen counter is empty.
+  expected_sequence: Move to the living room and pick up the cans, then place them into the trash can on the kitchen counter.
+Plan:
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to ashcan -->
+      <Action ID="NAVIGATE_TO" obj="ashcan" />
+      <!-- Grasp ashcan -->
+      <Action ID="GRASP" obj="ashcan" />
+      <!-- Navigate to kitchen -->
+      <Action ID="NAVIGATE_TO" obj="kitchen" />
+      <!-- Place inside kitchen -->
+      <Action ID="PLACE_INSIDE" obj="kitchen" />
+    </Sequence>
+  </BehaviorTree>
+  <!-- End MainTree -->
+</root>

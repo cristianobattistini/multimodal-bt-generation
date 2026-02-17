@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "door"
+  destination: ""
+  expanded_instruction: "Open the cabinet door on the white sideboard, organizing the approach into an ApproachDoor subtree and performing NAVIGATE_TO with a 20s timeout."
+  scene_context: "White sideboard cabinet doors are closed; handles visible; nothing held; table clear."
+  expected_sequence: "Within the ApproachDoor subtree, NAVIGATE_TO the cabinet (within a 20s timeout), reach the cabinet, grasp the door handle, and pull the door open."

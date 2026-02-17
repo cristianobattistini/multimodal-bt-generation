@@ -1,0 +1,1 @@
+avoid obstacle and reach the blue pen. Only navigate to the target if it is visible.

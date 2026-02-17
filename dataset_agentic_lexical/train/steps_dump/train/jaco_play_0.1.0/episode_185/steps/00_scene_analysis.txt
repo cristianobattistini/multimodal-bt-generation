@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "gray_bowl"
+  destination: "white_plate"
+  expanded_instruction: "Pick up the gray bowl from the table and place it inside the white plate on the table."
+  scene_context: "Gray bowl on table; white plate on table and empty; no containers closed and nothing currently held."
+  expected_sequence: "Approach the gray bowl, lift it, move over the white plate, and set the bowl into the plate."

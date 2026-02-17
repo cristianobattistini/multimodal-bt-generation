@@ -1,0 +1,2 @@
+Instruction: Place grid clamp. Use a 15 second timeout for grasping and retry up to 2 times if it fails.
+Allowed Actions: [MOVE_TO(obj), PICK(obj), GO_TO(obj), PLACE_INSIDE(obj, container)]

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "faucet_handle"
+  destination: ""
+  expanded_instruction: "Verify that the faucet handle is reachable (IS_REACHABLE). If reachable, reach the silver faucet handle over the sink and turn it to start the water flow; if not, reposition the arm and retry up to 3 times or abort after a 10s timeout."
+  scene_context: "Sink with upright silver faucet; faucet currently off; countertop clear; robot arm not holding anything."
+  expected_sequence: "Check IS_REACHABLE on faucet_handle; if not reachable, reposition arm and retry (up to 3 times, 10s timeout). Once reachable, move the arm to the faucet, grasp or press the handle (if grasp fails, push to reposition), and rotate or lift it to turn the water on."

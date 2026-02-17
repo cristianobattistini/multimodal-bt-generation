@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "white_box"
+  destination: "table"
+  expanded_instruction: "Check that the white box is reachable, then pick up the white box and place it down on the table (NAVIGATE_TO should be performed with a 10s timeout)."
+  scene_context: "White box on near-right edge of table, other cans and bottle present, robot not holding it, table clear enough to place."
+  expected_sequence: "Check IS_REACHABLE(white_box); NAVIGATE_TO white_box within a 10s timeout; approach and grasp the white box; move above the table surface; set it down."

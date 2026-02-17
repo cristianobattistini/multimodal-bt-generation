@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "pot"
+  destination: "sink"
+  expanded_instruction: "Using an ApproachPot subtree to group approach actions, pick up the pot from the countertop and place it into the sink; retry approach/grasp up to 3 times with a 10s timeout and if a grasp fails, push to reposition."
+  scene_context: "Pot on countertop left of sink; sink is empty and reachable; pot is not held."
+  expected_sequence: "ApproachPot subtree: move to the pot (retry up to 3 times, 10s timeout), grasp it (if grasp fails, push to reposition), carry it over the sink, and set it down inside."

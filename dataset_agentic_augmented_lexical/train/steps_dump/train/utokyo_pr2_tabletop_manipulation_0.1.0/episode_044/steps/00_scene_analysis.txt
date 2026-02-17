@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "bread"
+  destination: ""
+  expanded_instruction: "Check that the bread is reachable (IS_REACHABLE) before navigating; if unreachable, retry the check up to 3 times then abort. Then move to the bread on the small white plate on the green cloth, grasp it, and lift it off the plate."
+  scene_context: "Bread on a white plate resting on a green cloth; plate and bread are reachable and not held."
+  expected_sequence: "Check IS_REACHABLE on the bread (retry up to 3 times with a 10s timeout); if reachable, navigate to the bread on the plate, grasp the bread, and lift it off the plate."

@@ -1,0 +1,35 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <NAVIGATE_TO obj="tennis_ball"/>
+      <GRASP obj="tennis_ball"/>
+      <NAVIGATE_TO obj="toy_box"/>
+      <PLACE_INSIDE obj="tennis_ball"/>
+
+      <NAVIGATE_TO obj="board_game_1"/>
+      <GRASP obj="board_game_1"/>
+      <NAVIGATE_TO obj="toy_box"/>
+      <PLACE_INSIDE obj="board_game_1"/>
+
+      <NAVIGATE_TO obj="jigsaw_puzzle_1"/>
+      <GRASP obj="jigsaw_puzzle_1"/>
+      <NAVIGATE_TO obj="toy_box"/>
+      <PLACE_INSIDE obj="jigsaw_puzzle_1"/>
+
+      <NAVIGATE_TO obj="board_game_2"/>
+      <GRASP obj="board_game_2"/>
+      <NAVIGATE_TO obj="toy_box"/>
+      <PLACE_INSIDE obj="board_game_2"/>
+
+      <NAVIGATE_TO obj="board_game_3"/>
+      <GRASP obj="board_game_3"/>
+      <NAVIGATE_TO obj="toy_box"/>
+      <PLACE_INSIDE obj="board_game_3"/>
+
+      <NAVIGATE_TO obj="jigsaw_puzzle_2"/>
+      <GRASP obj="jigsaw_puzzle_2"/>
+      <NAVIGATE_TO obj="toy_box"/>
+      <PLACE_INSIDE obj="jigsaw_puzzle_2"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

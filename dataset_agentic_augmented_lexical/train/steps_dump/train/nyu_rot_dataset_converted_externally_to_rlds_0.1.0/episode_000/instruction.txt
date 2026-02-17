@@ -1,0 +1,1 @@
+Erase the board. Use a 15 second timeout for wiping.

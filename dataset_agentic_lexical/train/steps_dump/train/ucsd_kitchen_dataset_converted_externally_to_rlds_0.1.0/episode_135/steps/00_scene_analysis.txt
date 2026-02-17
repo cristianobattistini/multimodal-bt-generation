@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "green_box"
+  destination: "sink"
+  expanded_instruction: "Pick up the green box from the counter and place it inside the sink."
+  scene_context: "Green box standing on the front center counter; sink visible and unobstructed beneath counter."
+  expected_sequence: "Reach to the box, grasp it, move over the sink, and place the box into the sink."

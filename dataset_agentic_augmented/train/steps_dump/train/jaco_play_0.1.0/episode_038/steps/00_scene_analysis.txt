@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "yellow_cup"
+  destination: "white_plate"
+  expanded_instruction: "Pick up the yellow cup from the table and place it into the white plate on the table. If a grasp fails, retry up to 4 times."
+  scene_context: "White plate is on the table and empty; yellow cup is on the table nearby; no containers are closed and nothing is held."
+  expected_sequence: "Reach to the yellow cup, grasp it (if grasp fails, retry up to 4 times), move over the white plate, and set the cup into the plate."

@@ -1,0 +1,12 @@
+{
+  "decorator_type": "condition",
+  "mixed_subtype": null,
+  "target_action_id": "NAVIGATE_TO",
+  "target_obj": "stove",
+  "parameters": {
+    "condition_id": "IS_REACHABLE",
+    "condition_obj": "stove",
+    "allowed_conditions": "IS_REACHABLE, IS_VISIBLE"
+  },
+  "prompt_name": "condition"
+}

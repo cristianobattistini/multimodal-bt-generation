@@ -1,0 +1,42 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to sack -->
+      <Action ID="NAVIGATE_TO" obj="sack" />
+      <!-- Grasp sack -->
+      <Action ID="GRASP" obj="sack" />
+      <!-- Navigate to car -->
+      <Action ID="NAVIGATE_TO" obj="car" />
+      <!-- Place next to refrigerator -->
+      <Action ID="PLACE_NEXT_TO" obj="refrigerator" />
+      <!-- Navigate to beefsteak_tomato -->
+      <Action ID="NAVIGATE_TO" obj="beefsteak_tomato" />
+      <!-- Grasp beefsteak_tomato -->
+      <Action ID="GRASP" obj="beefsteak_tomato" />
+      <!-- Navigate to refrigerator -->
+      <Action ID="NAVIGATE_TO" obj="refrigerator" />
+      <!-- Place inside refrigerator -->
+      <Action ID="PLACE_INSIDE" obj="refrigerator" />
+      <!-- Navigate to carton_of_milk -->
+      <Action ID="NAVIGATE_TO" obj="carton_of_milk" />
+      <!-- Grasp carton_of_milk -->
+      <Action ID="GRASP" obj="carton_of_milk" />
+      <!-- Navigate to refrigerator -->
+      <Action ID="NAVIGATE_TO" obj="refrigerator" />
+      <!-- Place inside refrigerator -->
+      <Action ID="PLACE_INSIDE" obj="refrigerator" />
+      <!-- Open car -->
+      <Action ID="OPEN" obj="car" />
+      <!-- Navigate to sack -->
+      <Action ID="NAVIGATE_TO" obj="sack" />
+      <!-- Grasp sack -->
+      <Action ID="GRASP" obj="sack" />
+      <!-- Navigate to car -->
+      <Action ID="NAVIGATE_TO" obj="car" />
+      <!-- Place inside car -->
+      <Action ID="PLACE_INSIDE" obj="car" />
+      <!-- Close car -->
+      <Action ID="CLOSE" obj="car" />
+    </Sequence>
+  </BehaviorTree>
+</root>

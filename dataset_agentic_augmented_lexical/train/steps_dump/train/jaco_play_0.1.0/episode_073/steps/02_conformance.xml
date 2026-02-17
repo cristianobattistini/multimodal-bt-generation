@@ -1,0 +1,20 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to butter_dairy -->
+      <Action ID="NAVIGATE_TO" obj="butter_dairy" />
+      <!-- Retry GRASP butter_dairy up to 2 attempts -->
+      <RetryUntilSuccessful num_attempts="2">
+        <!-- Timeout: GRASP butter_dairy within 10s -->
+        <Timeout msec="10000">
+          <!-- Grasp butter_dairy -->
+          <Action ID="PICK" obj="butter_dairy" />
+        </Timeout>
+      </RetryUntilSuccessful>
+      <!-- Pick butter_dairy -->
+      <Action ID="ADVANCE_TO" obj="sink" />
+      <!-- Advance to sink -->
+      <Action ID="PLACE_INSIDE" obj="butter_dairy" container="sink" />
+    </Sequence>
+  </BehaviorTree>
+</root>

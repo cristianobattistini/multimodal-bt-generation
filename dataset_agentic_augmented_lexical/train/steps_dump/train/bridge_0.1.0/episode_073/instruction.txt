@@ -1,0 +1,1 @@
+Pick up the metal bowl and place it behind the orange towel. Use ApproachMetalBowl subtree for approach and grasp.

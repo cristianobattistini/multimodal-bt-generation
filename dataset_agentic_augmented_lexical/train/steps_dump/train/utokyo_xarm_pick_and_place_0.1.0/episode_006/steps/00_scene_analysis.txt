@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "white_plate"
+  destination: "red_plate"
+  expanded_instruction: "Group actions into ApproachWhitePlate subtree: pick up the white plate from the table and place it on the red plate at the table edge. Within ApproachWhitePlate, approach the white plate (10s timeout, retry up to 3 times), secure a grasp (if grasp fails, push to reposition and retry), lift, move over the red plate, and set the white plate down on the red plate."
+  scene_context: "White plate on table center, red plate at left table edge, neither held, table surface clear."
+  expected_sequence: "ApproachWhitePlate subtree: reach the white plate (timeout 10s, retry up to 3x), grasp and lift it (if grasp fails, push to reposition and retry), move over the red plate, and set the white plate down on the red plate."

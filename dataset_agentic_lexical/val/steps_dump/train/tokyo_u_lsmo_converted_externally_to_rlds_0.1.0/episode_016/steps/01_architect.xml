@@ -1,0 +1,12 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to right_side_holder (avoid utensil_box) -->
+      <Action ID="NAVIGATE_TO" obj="right_side_holder"/>
+      <!-- Navigate to scissors -->
+      <Action ID="NAVIGATE_TO" obj="scissors"/>
+      <!-- Grasp scissors -->
+      <Action ID="GRASP" obj="scissors"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

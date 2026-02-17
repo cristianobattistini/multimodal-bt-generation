@@ -1,0 +1,30 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to redbull_can -->
+      <Action ID="NAVIGATE_TO" obj="redbull_can" />
+      <!-- Grasp redbull_can -->
+      <Action ID="GRASP" obj="redbull_can" />
+      <!-- Navigate to table -->
+      <Action ID="NAVIGATE_TO" obj="table" />
+      <!-- Check table is holding before PLACE_ON_TOP -->
+      <Condition ID="IS_HOLDING" obj="table" />
+      <!-- Fallback: if PLACE_ON_TOP table fails, try alternative to reposition -->
+      <Fallback>
+        <!-- Retry PLACE_ON_TOP table up to 2 attempts -->
+        <RetryUntilSuccessful num_attempts="2">
+          <!-- Place on table -->
+          <Action ID="PLACE_ON_TOP" obj="table" />
+        </RetryUntilSuccessful>
+        <Sequence>
+          <!-- Push table forward toward front edge of table -->
+          <Action ID="PUSH" obj="table" />
+          <!-- Place on table -->
+          <Action ID="PLACE_ON_TOP" obj="table" />
+        </Sequence>
+      </Fallback>
+      <!-- Release -->
+      <Action ID="RELEASE" />
+    </Sequence>
+  </BehaviorTree>
+</root>

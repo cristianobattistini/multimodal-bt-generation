@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "towel"
+  destination: "green_mat"
+  expanded_instruction: "Using an ApproachTowel subtree, pick up and spread the wrinkled pink towel flat on the green mat to remove wrinkles; if a grasp fails, retry up to 3 times with a 10s timeout per attempt, and if necessary push to reposition before retrying."
+  scene_context: "Pink towel is wrinkled and lying on the green mat, not held, mat otherwise clear."
+  expected_sequence: "Approach the towel (handled by ApproachTowel subtree), grasp and pull/spread its edges outward, and lay it flat on the green mat; for each grasp retry up to 3 times with a 10s timeout, and if grasp fails push to reposition before retrying."

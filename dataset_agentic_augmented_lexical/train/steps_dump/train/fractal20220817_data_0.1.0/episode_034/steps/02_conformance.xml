@@ -1,0 +1,13 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to rxbar_blueberry -->
+      <Action ID="NAVIGATE_TO" obj="rxbar_blueberry" />
+      <!-- Retry GRASP rxbar_blueberry up to 5 attempts -->
+      <RetryUntilSuccessful num_attempts="5">
+        <!-- Grasp rxbar_blueberry -->
+        <Action ID="GRASP" obj="rxbar_blueberry" />
+      </RetryUntilSuccessful>
+    </Sequence>
+  </BehaviorTree>
+</root>

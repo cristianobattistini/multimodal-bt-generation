@@ -1,0 +1,1 @@
+pick up pan. Check if reachable before grasping, retry grasping up to 3 times; if all fail, push it to reposition.

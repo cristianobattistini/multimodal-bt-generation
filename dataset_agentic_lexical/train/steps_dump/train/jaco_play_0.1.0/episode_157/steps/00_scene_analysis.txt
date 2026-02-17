@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "gray_bowl"
+  destination: "oven"
+  expanded_instruction: "Pick up the gray bowl (with the orange) from the table and place it inside the oven."
+  scene_context: "Gray bowl with orange on the table; oven door open and empty; bowl not held."
+  expected_sequence: "Lift the gray bowl, move to the open oven, and place the bowl inside."

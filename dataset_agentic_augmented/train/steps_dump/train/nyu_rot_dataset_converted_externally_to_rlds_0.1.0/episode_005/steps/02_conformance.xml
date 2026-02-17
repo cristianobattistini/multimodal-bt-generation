@@ -1,0 +1,13 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to blue_mark -->
+      <Action ID="NAVIGATE_TO" obj="blue_mark" />
+      <!-- Retry PUSH blue_mark up to 5 attempts -->
+      <RetryUntilSuccessful num_attempts="5">
+        <!-- Push blue_mark forward toward front edge of table -->
+        <Action ID="PUSH" obj="blue_mark" />
+      </RetryUntilSuccessful>
+    </Sequence>
+  </BehaviorTree>
+</root>

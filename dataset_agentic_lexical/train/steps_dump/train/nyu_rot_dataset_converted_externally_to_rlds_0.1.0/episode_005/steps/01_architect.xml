@@ -1,0 +1,10 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to blue_mark -->
+      <Action ID="NAVIGATE_TO" obj="blue_mark"/>
+      <!-- Push blue_mark -->
+      <Action ID="PUSH" obj="blue_mark"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

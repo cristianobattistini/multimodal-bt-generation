@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "blue_pen"
+  destination: ""
+  expanded_instruction: "Check that the blue_pen is visible (retry up to 3 times within 10s) before navigating; then avoid the stack of books and reach the blue pen standing in the pen holder on the table."
+  scene_context: "Robot arm not holding anything; blue pen upright in pen_holder on table; stack_of_books between arm and pen; table clear."
+  expected_sequence: "Check IS_VISIBLE blue_pen (retry up to 3x within 10s) before NAVIGATE_TO; NAVIGATE_TO table area avoiding the stack_of_books; move the arm around the stack_of_books and grasp the blue_pen from the pen_holder; if grasp fails, reposition and retry (or push to reposition)."

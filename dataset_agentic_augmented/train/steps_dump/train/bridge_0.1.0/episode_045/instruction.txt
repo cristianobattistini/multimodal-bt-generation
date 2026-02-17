@@ -1,0 +1,1 @@
+Put potato in pot cardboard fence. Retry placing inside up to 3 times if it fails.

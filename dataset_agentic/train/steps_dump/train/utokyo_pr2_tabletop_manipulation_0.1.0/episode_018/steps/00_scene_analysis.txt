@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "bread"
+  destination: ""
+  expanded_instruction: "Pick up the bread resting on the green cloth next to the white plate."
+  scene_context: "Bread on green cloth beside a white plate; robot arm not holding anything; table surface clear."
+  expected_sequence: "Move the arm to the bread, grasp it securely, and lift it up."

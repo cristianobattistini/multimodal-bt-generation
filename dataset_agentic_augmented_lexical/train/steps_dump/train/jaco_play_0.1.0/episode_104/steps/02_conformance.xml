@@ -1,0 +1,14 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <Sequence>
+        <!-- Check black_bowl is visible before NAVIGATE_TO -->
+        <Condition ID="IS_VISIBLE" obj="black_bowl" />
+        <!-- Navigate to black_bowl -->
+        <Action ID="NAVIGATE_TO" obj="black_bowl" />
+      </Sequence>
+      <!-- Place inside black_bowl -->
+      <Action ID="PLACE_INSIDE" obj="black_bowl" />
+    </Sequence>
+  </BehaviorTree>
+</root>

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "kcup"
+  destination: "kcup_holder"
+  expanded_instruction: "Open the kcup holder, check the kcup is visible before grasping, pick up the kcup from the table (retry grasp up to 3 times within 10s; if grasp fails, push or flip to reposition and retry), place the kcup into the kcup holder, and close the kcup holder."
+  scene_context: "Kcup on table; kcup_holder is closed and located to the right; holder and table clear and reachable."
+  expected_sequence: "Open the holder lid, ensure the kcup is visible, pick up the kcup (retry up to 3 times; if grasp fails, push or flip to reposition), insert it into an empty slot in the holder, then close the lid."

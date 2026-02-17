@@ -1,0 +1,17 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Timeout: NAVIGATE_TO sweet_potato within 15s -->
+      <Timeout msec="15000">
+        <!-- Navigate to sweet_potato -->
+        <Action ID="MOVE_TO" obj="sweet_potato" />
+      </Timeout>
+      <!-- Move to sweet_potato -->
+      <Action ID="GRIP" obj="sweet_potato" />
+      <!-- Grip sweet_potato -->
+      <Action ID="NAVIGATE_TO" obj="pot_in_sink" />
+      <!-- Place inside pot_in_sink -->
+      <Action ID="PLACE_INSIDE" obj="pot_in_sink" />
+    </Sequence>
+  </BehaviorTree>
+</root>

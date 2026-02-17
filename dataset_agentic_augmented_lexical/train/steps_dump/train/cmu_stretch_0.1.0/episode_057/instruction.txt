@@ -1,0 +1,1 @@
+pull open a dishwasher. If grasping fails, push the dishwasher to reposition it and retry grasping.

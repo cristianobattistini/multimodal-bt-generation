@@ -1,0 +1,13 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to long_bread -->
+      <Action ID="NAVIGATE_TO" obj="long_bread" />
+      <!-- Retry GRASP long_bread up to 3 attempts -->
+      <RetryUntilSuccessful num_attempts="3">
+        <!-- Grasp long_bread -->
+        <Action ID="GRASP" obj="long_bread" />
+      </RetryUntilSuccessful>
+    </Sequence>
+  </BehaviorTree>
+</root>

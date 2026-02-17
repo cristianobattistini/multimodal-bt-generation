@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "burger_meat"
+  destination: "oven"
+  expanded_instruction: "Pick up the burger_meat from the counter near the robot arm and place it inside the metal oven on the left."
+  scene_context: "Oven on left appears closed; burger_meat on counter near the robot arm; area between arm and oven clear."
+  expected_sequence: "Open the oven if closed, pick up the burger_meat, place it inside the oven, and close the oven."

@@ -1,0 +1,44 @@
+scene_analysis:
+  target: "tools"
+  destination: "toolbox"
+  expanded_instruction: "Open the closed red toolbox on the left side of the countertop. Collect all five tools visible in the scene — the drill on the far-right countertop, the pliers on top of the left washer, the red-handled screwdriver on the middle countertop, the brown flashlight near the wall on the right countertop, and the small allen_wrench on the countertop — place each into the toolbox, then close the toolbox."
+  scene_context: "The toolbox is closed on the left of the countertop. The drill and flashlight are on the right side of the countertop near the wall. The screwdriver is on the middle of the countertop. The pliers are on top of the left washing machine. The allen_wrench is on the countertop near the center."
+  expected_sequence: "Navigate to the toolbox and open it. For each tool (drill, pliers, flashlight, allen_wrench, screwdriver): navigate to the tool, grasp it, navigate back to the toolbox, and place it inside. Finally, navigate to the toolbox and close it."
+
+Plan:
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <NAVIGATE_TO obj="toolbox"/>
+      <OPEN obj="toolbox"/>
+
+      <NAVIGATE_TO obj="drill"/>
+      <GRASP obj="drill"/>
+      <NAVIGATE_TO obj="toolbox"/>
+      <PLACE_INSIDE obj="drill"/>
+
+      <NAVIGATE_TO obj="pliers"/>
+      <GRASP obj="pliers"/>
+      <NAVIGATE_TO obj="toolbox"/>
+      <PLACE_INSIDE obj="pliers"/>
+
+      <NAVIGATE_TO obj="flashlight"/>
+      <GRASP obj="flashlight"/>
+      <NAVIGATE_TO obj="toolbox"/>
+      <PLACE_INSIDE obj="flashlight"/>
+
+      <NAVIGATE_TO obj="allen_wrench"/>
+      <GRASP obj="allen_wrench"/>
+      <NAVIGATE_TO obj="toolbox"/>
+      <PLACE_INSIDE obj="allen_wrench"/>
+
+      <NAVIGATE_TO obj="screwdriver"/>
+      <GRASP obj="screwdriver"/>
+      <NAVIGATE_TO obj="toolbox"/>
+      <PLACE_INSIDE obj="screwdriver"/>
+
+      <NAVIGATE_TO obj="toolbox"/>
+      <CLOSE obj="toolbox"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

@@ -1,0 +1,21 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence name="retrieve_and_place_two_bottles">
+      <NAVIGATE_TO obj="electric_refrigerator"/>
+      <OPEN obj="electric_refrigerator"/>
+
+      <NAVIGATE_TO obj="bottle_1"/>
+      <GRASP obj="bottle_1"/>
+      <NAVIGATE_TO obj="coffee_table"/>
+      <PLACE_ON_TOP obj="coffee_table"/>
+
+      <NAVIGATE_TO obj="bottle_2"/>
+      <GRASP obj="bottle_2"/>
+      <NAVIGATE_TO obj="coffee_table"/>
+      <PLACE_ON_TOP obj="coffee_table"/>
+
+      <NAVIGATE_TO obj="electric_refrigerator"/>
+      <CLOSE obj="electric_refrigerator"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

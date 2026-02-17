@@ -1,0 +1,2 @@
+Instruction: Place grid clamp
+Allowed Actions: [GO_TO(obj), GRIP(obj), NAVIGATE_TO(obj), PLACE_ON_TOP(obj)]

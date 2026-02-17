@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "coke_can"
+  destination: ""
+  expanded_instruction: "Pick up the red coke can from the table in front of the robot, using the ApproachCokeCan subtree to approach and align (10s timeout, retry up to 3 times)."
+  scene_context: "Coke can (red) on the tabletop near center-front, not held; table is clear and robot arm is free."
+  expected_sequence: "Use the ApproachCokeCan subtree to move the arm to the can (10s timeout, retry up to 3 times), grasp the coke can firmly, and lift it clear of the table; if grasp fails, attempt a push-to-reposition then retry."

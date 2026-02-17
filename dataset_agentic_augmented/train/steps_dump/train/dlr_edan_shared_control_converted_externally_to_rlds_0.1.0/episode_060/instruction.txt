@@ -1,0 +1,1 @@
+pick the die. Only navigate to if the die is visible.

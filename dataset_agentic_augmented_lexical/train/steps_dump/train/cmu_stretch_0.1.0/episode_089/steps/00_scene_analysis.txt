@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "dishwasher"
+  destination: ""
+  expanded_instruction: "Pull open the dishwasher door by grasping its handle and pulling it outward; first navigate to the dishwasher within a 20s NAVIGATE_TO timeout."
+  scene_context: "Dishwasher door is closed with visible handle; handle reachable and area in front clear."
+  expected_sequence: "Approach the dishwasher (NAVIGATE_TO within 20s), grasp the handle, and pull the door open."

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "salt"
+  destination: "table"
+  expanded_instruction: "Pick up the salt shaker and place it on the table next to the yellow brush that sits above the napkin."
+  scene_context: "Salt shaker on stove near robot gripper; yellow brush on counter above a yellow napkin; counter area is reachable."
+  expected_sequence: "Grasp the salt shaker, move to the brush location, and place the salt down beside the brush on the counter above the napkin."

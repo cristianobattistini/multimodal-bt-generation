@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "apple_fruit"
+  destination: ""
+  expanded_instruction: "Pick up the red apple fruit from the table; if grasp fails, retry up to 3 times and use push or flip to reposition before retrying."
+  scene_context: "Table surface with a red apple on it; no container; robot arm not holding the apple."
+  expected_sequence: "Approach the apple, grasp it, and lift it from the table; if grasp fails, push or flip to reposition and retry (up to 3 attempts within 10s), then grasp and lift."

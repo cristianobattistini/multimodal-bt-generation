@@ -1,0 +1,7 @@
+scene_analysis:
+  target: "radio_receiver"
+  destination: ""
+  expanded_instruction: "In the living_room, go to the radio receiver sitting on the glass table and turn it on."
+  scene_context: "A red radio_receiver is on top of the table in the living_room near a blue sofa. The task is to power it on; no relocation is needed."
+  expected_sequence: "Navigate to the radio_receiver, then toggle it on."
+Plan:

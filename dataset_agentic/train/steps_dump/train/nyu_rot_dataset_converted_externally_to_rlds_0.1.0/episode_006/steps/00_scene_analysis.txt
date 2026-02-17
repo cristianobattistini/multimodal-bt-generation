@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "hanger"
+  destination: "rod"
+  expanded_instruction: "Pick up the black hanger from the table edge and place its hook over the metal rod so it hangs securely."
+  scene_context: "Hanger resting on table edge near a metal rod with blue tape; rod is free and robot gripper not holding the hanger."
+  expected_sequence: "Reach to the hanger, grasp it, move the hook over the rod, and release so the hanger hangs on the rod."

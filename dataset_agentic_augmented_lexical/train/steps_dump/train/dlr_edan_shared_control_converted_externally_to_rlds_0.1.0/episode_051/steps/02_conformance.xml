@@ -1,0 +1,24 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Go to cube -->
+      <Action ID="GO_TO" obj="cube" />
+      <!-- Check cube is visible before GRASP -->
+      <Condition ID="IS_VISIBLE" obj="cube" />
+      <!-- Fallback: if GRASP cube fails, try alternative to reposition -->
+      <Fallback>
+        <!-- Timeout: GRASP cube within 15s -->
+        <Timeout msec="15000">
+          <!-- Grasp cube -->
+          <Action ID="LATCH_ONTO" obj="cube" />
+        </Timeout>
+        <Sequence>
+          <!-- Push cube forward toward front edge of table -->
+          <Action ID="NUDGE" obj="cube" />
+          <!-- Grasp cube -->
+          <Action ID="PICK" obj="cube" />
+        </Sequence>
+      </Fallback>
+    </Sequence>
+  </BehaviorTree>
+</root>

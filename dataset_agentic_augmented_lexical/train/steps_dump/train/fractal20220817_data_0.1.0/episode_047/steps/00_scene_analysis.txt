@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "water_bottle"
+  destination: "table"
+  expanded_instruction: "Check the water bottle is graspable, then pick up the water bottle (grasp within a 10s timeout, retry up to 3 times; if grasp fails, push or flip to reposition) and place it on the table near the paper bowl"
+  scene_context: "Water bottle and paper bowl both on the table; nothing is held and table surface is reachable."
+  expected_sequence: "Verify IS_GRASPABLE on the bottle, reach and attempt GRASP (within 10s, retry up to 3x); if GRASP fails use PUSH or FLIP to reposition the bottle, then move to the bowl area on the table and place the bottle down next to the paper bowl."

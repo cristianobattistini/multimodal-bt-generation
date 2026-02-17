@@ -1,0 +1,2 @@
+Instruction: Place the fish, sausage, and tomato into the frying pan. Retry placing inside up to 4 times if it fails.
+Allowed Actions: [NAVIGATE_TO(obj), GRASP(obj), PLACE_INSIDE(obj)]

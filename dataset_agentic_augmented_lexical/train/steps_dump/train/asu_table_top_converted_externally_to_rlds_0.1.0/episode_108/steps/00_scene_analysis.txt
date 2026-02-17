@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "bread"
+  destination: ""
+  expanded_instruction: "Navigate to the front-center of the table (NAVIGATE_TO within a 20s timeout) and pick up the bread loaf."
+  scene_context: "Bread loaf sits front-center on the table, not held; table is clear and no containers are closed."
+  expected_sequence: "Approach the bread (NAVIGATE_TO within a 20s timeout), grasp the loaf securely, and lift it off the table."

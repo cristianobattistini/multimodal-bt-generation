@@ -1,0 +1,15 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Timeout: NAVIGATE_TO black_cubby_shelf within 15s -->
+      <Timeout msec="15000">
+        <!-- Navigate to black_cubby_shelf -->
+        <Action ID="NAVIGATE_TO" obj="black_cubby_shelf" />
+      </Timeout>
+      <!-- Navigate to die -->
+      <Action ID="NAVIGATE_TO" obj="die" />
+      <!-- Grasp die -->
+      <Action ID="GRASP" obj="die" />
+    </Sequence>
+  </BehaviorTree>
+</root>

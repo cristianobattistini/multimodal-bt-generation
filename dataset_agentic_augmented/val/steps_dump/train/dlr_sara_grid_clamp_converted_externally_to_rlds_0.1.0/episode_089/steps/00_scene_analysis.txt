@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "grid_clamp"
+  destination: "grid_surface"
+  expanded_instruction: "Pick up the grid_clamp from the tabletop pile and place it on the wooden grid surface — verify the clamp is held before placing, retry the place up to 2 times if it fails, and if placing still fails use a push to reposition it on the grid."
+  scene_context: "Grid clamps are on the table in a small pile; wooden grid surface is clear and reachable; nothing held."
+  expected_sequence: "Reach to the clamp, pick it up, move over the grid surface, check IS_HOLDING before attempting to set it down, retry PLACE_ON_TOP up to 2 times on failure, and if placing fails use PUSH to reposition the object onto the grid."

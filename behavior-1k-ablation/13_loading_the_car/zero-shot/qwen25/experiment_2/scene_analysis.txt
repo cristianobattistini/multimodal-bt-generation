@@ -1,0 +1,7 @@
+scene_analysis:
+  target: "["tennis_racket", "container", "digital_camera"]"
+  destination: "car"
+  expanded_instruction: "Check that the car trunk is closed; if so, open it. Then pick up the tennis_racket from the table in the living room, pick up the container from the floor in the living room, and place both items into the car trunk. Finally, pick up the digital_camera and place it inside the container."
+  scene_context: "Car trunk is closed and reachable; tennis_racket on table in living room; container on floor in living room; nothing is held."
+  expected_sequence: "Verify trunk is closed (open if needed); move to the tennis_racket and pick it up, then move to the container and pick it up; place both into the trunk. Then move to the digital_camera and place it inside the container (if container is closed, open it). Close the trunk when finished."
+Plan:

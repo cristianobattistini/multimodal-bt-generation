@@ -1,0 +1,44 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <Action ID="NAVIGATE_TO" obj="electric_refrigerator.n.01_1"/>
+      <Action ID="OPEN" obj="electric_refrigerator.n.01_1"/>
+      <Action ID="NAVIGATE_TO" obj="cabinet.n.01_1"/>
+      <Action ID="OPEN" obj="cabinet.n.01_1"/>
+      <Action ID="NAVIGATE_TO" obj="steak.n.01_1"/>
+      <Action ID="GRASP" obj="steak.n.01_1"/>
+      <Action ID="NAVIGATE_TO" obj="chopping_board.n.01_1"/>
+      <Action ID="PLACE_ON_TOP" obj="chopping_board.n.01_1"/>
+      <Action ID="NAVIGATE_TO" obj="pineapple.n.02_1"/>
+      <Action ID="GRASP" obj="pineapple.n.02_1"/>
+      <Action ID="NAVIGATE_TO" obj="chopping_board.n.01_1"/>
+      <Action ID="PLACE_ON_TOP" obj="chopping_board.n.01_1"/>
+      <Action ID="NAVIGATE_TO" obj="carving_knife.n.01_1"/>
+      <Action ID="GRASP" obj="carving_knife.n.01_1"/>
+      <Action ID="NAVIGATE_TO" obj="steak.n.01_1"/>
+      <Action ID="CUT" obj="steak.n.01_1"/>
+      <Action ID="NAVIGATE_TO" obj="pineapple.n.02_1"/>
+      <Action ID="CUT" obj="pineapple.n.02_1"/>
+      <Action ID="NAVIGATE_TO" obj="diced__steak.n.01_1"/>
+      <Action ID="GRASP" obj="diced__steak.n.01_1"/>
+      <Action ID="NAVIGATE_TO" obj="bowl.n.01_1"/>
+      <Action ID="PLACE_INSIDE" obj="bowl.n.01_1"/>
+      <Action ID="NAVIGATE_TO" obj="diced__pineapple.n.01_1"/>
+      <Action ID="GRASP" obj="diced__pineapple.n.01_1"/>
+      <Action ID="NAVIGATE_TO" obj="bowl.n.01_2"/>
+      <Action ID="PLACE_INSIDE" obj="bowl.n.01_2"/>
+      <Action ID="NAVIGATE_TO" obj="bowl.n.01_1"/>
+      <Action ID="GRASP" obj="bowl.n.01_1"/>
+      <Action ID="NAVIGATE_TO" obj="cabinet.n.01_1"/>
+      <Action ID="PLACE_INSIDE" obj="cabinet.n.01_1"/>
+      <Action ID="NAVIGATE_TO" obj="bowl.n.01_2"/>
+      <Action ID="GRASP" obj="bowl.n.01_2"/>
+      <Action ID="NAVIGATE_TO" obj="cabinet.n.01_1"/>
+      <Action ID="PLACE_INSIDE" obj="cabinet.n.01_1"/>
+      <Action ID="NAVIGATE_TO" obj="electric_refrigerator.n.01_1"/>
+      <Action ID="CLOSE" obj="electric_refrigerator.n.01_1"/>
+      <Action ID="NAVIGATE_TO" obj="cabinet.n.01_1"/>
+      <Action ID="CLOSE" obj="cabinet.n.01_1"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

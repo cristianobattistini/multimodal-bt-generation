@@ -1,0 +1,15 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Approach tennis_ball -->
+      <Action ID="APPROACH" obj="tennis_ball" />
+      <!-- Check tennis_ball is graspable before GRASP -->
+      <Condition ID="IS_GRASPABLE" obj="tennis_ball" />
+      <!-- Retry GRASP tennis_ball up to 2 attempts -->
+      <RetryUntilSuccessful num_attempts="2">
+        <!-- Grasp tennis_ball -->
+        <Action ID="GRASP" obj="tennis_ball" />
+      </RetryUntilSuccessful>
+    </Sequence>
+  </BehaviorTree>
+</root>

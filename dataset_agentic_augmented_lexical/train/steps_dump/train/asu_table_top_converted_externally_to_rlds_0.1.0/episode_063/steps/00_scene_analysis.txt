@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "blue_bottle"
+  destination: "table"
+  expanded_instruction: "Pick up the blue bottle from the table and put it down on the table, navigating to the bottle within a 20s timeout."
+  scene_context: "Blue bottle upright on left side of table, not held; table surface clear and reachable."
+  expected_sequence: "Approach the blue bottle (navigate within a 20s timeout), grasp it, move to the table area, and set the bottle down."

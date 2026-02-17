@@ -1,0 +1,37 @@
+scene_analysis:
+  target: ["can_of_soda_1", "can_of_soda_2", "can_of_soda_3"]
+  destination: "ashcan"
+  expanded_instruction: "Pick up the three cans of soda (can_of_soda_1, can_of_soda_2, can_of_soda_3) from the living_room and place them into the trash can in the kitchen."
+  scene_context: "Trash can is open and empty; three cans of soda (can_1, can_2, can_3) are on the floor in the living_room and not held."
+  expected_sequence: "Pick up each can one by one and place it into the trash can until all three cans are inside."
+Plan:
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to can_of_soda_1 -->
+      <Action ID="NAVIGATE_TO" obj="can_of_soda_1" />
+      <!-- Grasp can_of_soda_1 -->
+      <Action ID="GRASP" obj="can_of_soda_1" />
+      <!-- Navigate to ashcan -->
+      <Action ID="NAVIGATE_TO" obj="ashcan" />
+      <!-- Place inside ashcan -->
+      <Action ID="PLACE_INSIDE" obj="ashcan" />
+      <!-- Navigate to can_of_soda_2 -->
+      <Action ID="NAVIGATE_TO" obj="can_of_soda_2" />
+      <!-- Grasp can_of_soda_2 -->
+      <Action ID="GRASP" obj="can_of_soda_2" />
+      <!-- Navigate to ashcan -->
+      <Action ID="NAVIGATE_TO" obj="ashcan" />
+      <!-- Place inside ashcan -->
+      <Action ID="PLACE_INSIDE" obj="ashcan" />
+      <!-- Navigate to can_of_soda_3 -->
+      <Action ID="NAVIGATE_TO" obj="can_of_soda_3" />
+      <!-- Grasp can_of_soda_3 -->
+      <Action ID="GRASP" obj="can_of_soda_3" />
+      <!-- Navigate to ashcan -->
+      <Action ID="NAVIGATE_TO" obj="ashcan" />
+      <!-- Place inside ashcan -->
+      <Action ID="PLACE_INSIDE" obj="ashcan" />
+    </Sequence>
+  </BehaviorTree>
+</root>

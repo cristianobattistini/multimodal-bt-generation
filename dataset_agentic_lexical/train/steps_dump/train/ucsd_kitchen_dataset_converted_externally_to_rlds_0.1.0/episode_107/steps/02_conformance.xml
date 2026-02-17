@@ -1,0 +1,14 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to teapot -->
+      <Action ID="NAVIGATE_TO" obj="teapot" />
+      <!-- Grip teapot -->
+      <Action ID="GRIP" obj="teapot" />
+      <!-- Approach stove -->
+      <Action ID="APPROACH" obj="stove" />
+      <!-- Place teapot on stove -->
+      <Action ID="PLACE_ON_TOP" obj="teapot" surface="stove" />
+    </Sequence>
+  </BehaviorTree>
+</root>

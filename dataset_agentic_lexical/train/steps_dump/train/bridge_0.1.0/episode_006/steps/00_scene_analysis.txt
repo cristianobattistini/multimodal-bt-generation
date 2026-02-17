@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "napkin"
+  destination: "table"
+  expanded_instruction: "Pick up the blue napkin from the table and place it in the bottom right corner of the table."
+  scene_context: "Blue napkin on the table near the right side; robot not holding it; table surface clear."
+  expected_sequence: "Reach to the napkin, grasp it, move to the table's bottom-right corner, and set it down there."

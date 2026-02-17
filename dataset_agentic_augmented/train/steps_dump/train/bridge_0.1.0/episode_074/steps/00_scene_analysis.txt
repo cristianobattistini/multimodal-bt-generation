@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "eggplant"
+  destination: "frying_pan"
+  expanded_instruction: "Pick up the eggplant from the sink edge and place it into the frying_pan in the orange holder. If a grasp fails, retry up to 3 times; if still unsuccessful, use a push or flip to reposition the eggplant and then place it, all within a 10s timeout."
+  scene_context: "Eggplant on sink edge near orange basket; frying_pan in orange holder is empty and reachable; gripper not holding anything."
+  expected_sequence: "Approach and grasp the eggplant, lift it, move over the frying_pan, and place it inside. If grasp fails, retry up to 3 times, then push or flip to reposition and place it, within a 10s timeout."

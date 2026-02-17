@@ -1,0 +1,21 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Execute subtree ApproachGrayBowl -->
+      <SubTree ID="ApproachGrayBowl" />
+      <!-- Navigate to dish_rack -->
+      <Action ID="NAVIGATE_TO" obj="dish_rack" />
+      <!-- Place inside dish_rack -->
+      <Action ID="PLACE_INSIDE" obj="dish_rack" />
+    </Sequence>
+  </BehaviorTree>
+  <!-- Subtree definition ApproachGrayBowl -->
+  <BehaviorTree ID="ApproachGrayBowl">
+    <Sequence>
+      <!-- Navigate to gray_bowl -->
+      <Action ID="NAVIGATE_TO" obj="gray_bowl" />
+      <!-- Grasp gray_bowl -->
+      <Action ID="GRASP" obj="gray_bowl" />
+    </Sequence>
+  </BehaviorTree>
+</root>

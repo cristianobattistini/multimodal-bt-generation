@@ -1,0 +1,24 @@
+{
+  "success": false,
+  "bt_success": false,
+  "bddl_goal": false,
+  "ticks": 1,
+  "duration": 62.83768367767334,
+  "inference_time": 94.11045932769775,
+  "satisfied": [
+    "forall(['?candle.n.01', '-', 'candle.n.01'], ['exists', ['?cabinet.n.01', '-', 'cabinet.n.01'], ['inside', '?candle.n.01', '?cabinet.n.01']])"
+  ],
+  "unsatisfied": [
+    "forall(['?pumpkin.n.02', '-', 'pumpkin.n.02'], ['exists', ['?cabinet.n.01', '-', 'cabinet.n.01'], ['inside', '?pumpkin.n.02', '?cabinet.n.01']])",
+    "exists(['?table.n.02', '-', 'table.n.02'], ['nextto', '?caldron.n.01_1', '?table.n.02'])",
+    "forall(['?cabinet.n.01', '-', 'cabinet.n.01'], ['not', ['open', '?cabinet.n.01']])"
+  ],
+  "task": "02_putting_away_Halloween_decorations",
+  "condition": "zero-shot",
+  "model_dir": "adapter",
+  "vlm_model": "gemma",
+  "inference_mode": "adapter",
+  "experiment": 1,
+  "timestamp": "20260213_151020",
+  "reason": "BT incomplete: missing pumpkin.n.02_2 entirely, and missing GRASP action for cauldron before PLACE_NEXT_TO (navigate-place without grasping)."
+}

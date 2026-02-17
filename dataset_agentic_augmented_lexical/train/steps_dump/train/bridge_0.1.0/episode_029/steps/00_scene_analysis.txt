@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "mushroom"
+  destination: "metal_pot"
+  expanded_instruction: "Approach the mushroom using an ApproachMushroom subtree, pick it up (retry grasp up to 3 times if it fails), and place it into the metal pot."
+  scene_context: "Mushroom on countertop not held; metal pot empty and reachable; towel and spoon nearby."
+  expected_sequence: "Move to the mushroom (grouped as ApproachMushroom subtree), pick it up (retry grasp up to 3 times if it fails), and place it into the metal pot."

@@ -1,0 +1,1 @@
+pick the banana. If grasping fails, push it slightly to reposition it and retry.

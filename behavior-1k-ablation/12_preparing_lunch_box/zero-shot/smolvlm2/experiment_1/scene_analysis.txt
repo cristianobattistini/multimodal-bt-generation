@@ -1,0 +1,7 @@
+scene_analysis:
+  target: half_apple_1
+  destination: packing_box
+  expanded_instruction: "Put the half_apple into the packing_box on the countertop."
+  scene_context: "Half_apple_1 is on the countertop near the chopping board; the packing_box is on the countertop and is open."
+  expected_sequence: "Pick up the half_apple and place it into the packing_box on the countertop."
+Plan:

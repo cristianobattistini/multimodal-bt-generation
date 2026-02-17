@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "butter_dairy"
+  destination: "table"
+  expanded_instruction: "Using the ApproachBlueBowl subtree, pick up the butter dairy from the blue bowl and place it on the table surface; if approach or grasp fails retry up to 3 times with a 10s timeout and if grasp fails push to reposition before retrying."
+  scene_context: "Butter_dairy sits in a blue_bowl on the table; robot_gripper is empty; table surface is clear."
+  expected_sequence: "ApproachBlueBowl subtree: reach into the blue bowl, grasp the butter_dairy (retry grasp up to 3 times, if grasp fails push to reposition), lift it out, move to the table area, and set it down (each step with ~10s timeout)."

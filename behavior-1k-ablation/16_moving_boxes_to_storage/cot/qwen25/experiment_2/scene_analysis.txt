@@ -1,0 +1,7 @@
+scene_analysis:
+  target: "["door", "storage_container_1", "storage_container_2"]"
+  destination: "garage_floor"
+  expanded_instruction: "Open the door by pulling the door handle (if grasp fails retry up to 3 times with a 10s timeout); then navigate to the door (retry up to 3 times with a 10s timeout), approach storage_container_1 (retry up to 3 times with a 10s timeout), reach into storage_container_1, pick it up (if grasp fails retry up to 3 times with a 10s timeout), carry it to the nearby garage_floor (retry up to 3 times with a 10s timeout), and set it down; next, approach storage_container_2, pick up the smaller object from storage_container_2 (if grasp fails retry up to 3 times with a 10s timeout), move to the larger container on the floor, and set it on top."
+  scene_context: "Door is closed with handle accessible; storage containers on the floor are closed and reachable; garage_floor area is clear."
+  expected_sequence: "Open the door by grasping and pulling the handle (retry up to 3 times within 10s if grasp fails); then open the door and reach to each storage container one at a time (retry up to 3 times within 10s if grasp fails) — when grasping the door handle, lift the door outward until fully open; carry items from the containers to the garage_floor and place them down."
+Plan:

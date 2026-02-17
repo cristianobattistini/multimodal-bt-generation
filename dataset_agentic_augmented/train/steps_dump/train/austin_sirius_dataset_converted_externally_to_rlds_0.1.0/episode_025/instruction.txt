@@ -1,0 +1,1 @@
+Open the kcup holder, insert the kcup into the holder, and close the kcup holder. Retry opening up to 4 times if it fails.

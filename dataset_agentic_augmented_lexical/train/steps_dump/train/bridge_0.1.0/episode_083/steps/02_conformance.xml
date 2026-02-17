@@ -1,0 +1,21 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Execute subtree ApproachMetalPot -->
+      <SubTree ID="ApproachMetalPot" />
+      <!-- Navigate to blue_cloth -->
+      <Action ID="NAVIGATE_TO" obj="blue_cloth" />
+      <!-- Place on blue_cloth -->
+      <Action ID="PLACE_ON_TOP" obj="blue_cloth" />
+    </Sequence>
+  </BehaviorTree>
+  <!-- Subtree definition ApproachMetalPot -->
+  <BehaviorTree ID="ApproachMetalPot">
+    <Sequence>
+      <!-- Navigate to metal_pot -->
+      <Action ID="NAVIGATE_TO" obj="metal_pot" />
+      <!-- Grasp metal_pot -->
+      <Action ID="GRASP" obj="metal_pot" />
+    </Sequence>
+  </BehaviorTree>
+</root>

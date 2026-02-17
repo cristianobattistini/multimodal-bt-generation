@@ -1,0 +1,33 @@
+scene_analysis:
+  target: "storage_container_1"
+  destination: "storage_container_1"
+  expanded_instruction: "Open the door (with your hands being empty), then go to storage_container_1 (pick up the small orange container), move to the garage floor, and place it down."
+  scene_context: "Door is closed on the wall; small orange container is on the floor near the wall; nearby storage_container_2 is open and empty; robot is free and reachable."
+  expected_sequence: "Open the door (make sure hands are empty before opening), reach to the container, grasp it (pick it up), carry it to the garage floor, then set it down."
+Plan:
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to door -->
+      <Action ID="NAVIGATE_TO" obj="door" />
+      <!-- Open door -->
+      <Action ID="OPEN" obj="door" />
+      <!-- Navigate to small_orange_container (grasp small_orange_container) -->
+      <Action ID="NAVIGATE_TO" obj="small_orange_container" />
+      <!-- Grasp small_orange_container -->
+      <Action ID="GRASP" obj="small_orange_container" />
+      <!-- Navigate to garage_floor -->
+      <Action ID="NAVIGATE_TO" obj="garage_floor" />
+      <!-- Place on garage_floor -->
+      <Action ID="PLACE_ON_TOP" obj="garage_floor" />
+      <!-- Navigate to storage_container_1 -->
+      <Action ID="NAVIGATE_TO" obj="storage_container_1" />
+      <!-- Grasp small_orange_container -->
+      <Action ID="GRASP" obj="small_orange_container" />
+      <!-- Navigate to storage_container_1 -->
+      <Action ID="NAVIGATE_TO" obj="storage_container_1" />
+      <!-- Place on storage_container_1 -->
+      <Action ID="PLACE_ON_TOP" obj="storage_container_1" />
+    </Sequence>
+  </BehaviorTree>
+</root>

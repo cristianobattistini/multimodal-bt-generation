@@ -1,0 +1,25 @@
+ scene_analysis:
+  target: ["pumpkin", "candle", "cauldron"]
+  destination: "cabinet"
+  expanded_instruction: "Open the cabinet and pick up each decoration one by one (pumpkin, candle, cauldron) and place them inside the cabinet, then close the cabinet."
+  scene_context: "Cabinet is open and reachable; pumpkins and candles are on the table; cauldron is on the table."
+  expected_sequence: "Open the cabinet, pick up each decoration (pumpkin, candle, cauldron) one by one, place them inside the cabinet, then close the cabinet."
+Plan:
+<root main_tree_to_execute="MainTree">
+  <Sequence>
+    <!-- Open the cabinet -->
+    <Action ID="OPEN" obj="cabinet" />
+    <!-- Navigate to pumpkin -->
+    <Action ID="NAVIGATE_TO" obj="pumpkin" />
+    <!-- Grasp pumpkin -->
+    <Action ID="GRASP" obj="pumpkin" />
+    <!-- Place inside cabinet -->
+    <Action ID="PLACE_INSIDE" obj="cabinet" />
+    <!-- Place next to table -->
+    <Action ID="PLACE_NEXT_TO" obj="table" />
+  </Sequence>
+  <!-- Close cabinet -->
+  <Action ID="CLOSE" obj="cabinet" />
+  <!-- Place cauldron next to table -->
+  <Action ID="PLACE_NEXT_TO" obj="table" />
+</root>

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "scissors"
+  destination: ""
+  expanded_instruction: "Avoid the nearby brown holder and approach the scissors in the brown holder on the right side of the table. Before grasping, check that the scissors are graspable; if not graspable or GRASP fails (retry up to 3 times within a 10s timeout), use PUSH or FLIP to reposition them and then attempt grasp."
+  scene_context: "Scissors in a brown holder on the table right; a stack/box near the arm blocks a straight path; robot_arm not holding anything."
+  expected_sequence: "Move around the obstructing box, reach into the brown holder, check IS_GRASPABLE on the scissors, and attempt GRASP (retry up to 3 times within 10s); if GRASP fails, use PUSH and/or FLIP to reposition the scissors, then grasp."

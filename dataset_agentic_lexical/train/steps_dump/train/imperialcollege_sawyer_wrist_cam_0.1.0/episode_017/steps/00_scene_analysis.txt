@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "wine_glass"
+  destination: ""
+  expanded_instruction: "Swipe the wine_glass horizontally to the right across the blue surface"
+  scene_context: "Wine glass resting on a clear blue surface, not held, surface unobstructed."
+  expected_sequence: "Move to the glass and swipe it rightward across the surface until it is moved."

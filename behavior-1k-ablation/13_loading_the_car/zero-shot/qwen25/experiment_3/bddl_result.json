@@ -1,0 +1,22 @@
+{
+  "success": false,
+  "bt_success": false,
+  "bddl_goal": false,
+  "ticks": 1,
+  "duration": 60.719560384750366,
+  "inference_time": 45.30555319786072,
+  "satisfied": [],
+  "unsatisfied": [
+    "inside(?container.n.01_1, ?car.n.01_1)",
+    "inside(?digital_camera.n.01_1, ?container.n.01_1)",
+    "inside(?tennis_racket.n.01_1, ?car.n.01_1)"
+  ],
+  "task": "13_loading_the_car",
+  "condition": "zero-shot",
+  "model_dir": "qwen25",
+  "vlm_model": "qwen",
+  "inference_mode": "adapter",
+  "experiment": 3,
+  "timestamp": "20260215_115838",
+  "reason": "Object hallucination: uses 'cargo' and 'seat' (not in Available Objects), missing OPEN(car) before placements, missing camera-inside-container step"
+}

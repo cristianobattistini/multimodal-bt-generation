@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "bowl"
+  destination: "kitchen_cabinet"
+  expanded_instruction: "Pick up the bowl from the stove top and place it inside the kitchen cabinet, ensuring any grasp is attempted within a 10s timeout and retried up to 3 times if it fails."
+  scene_context: "Lower kitchen cabinet door is open; bowl on stovetop/counter not held; cabinet interior appears clear."
+  expected_sequence: "Reach the bowl, attempt to grasp and lift it (grasp has a 10s timeout and should be retried up to 3 times if it fails), then place it inside the open kitchen cabinet."

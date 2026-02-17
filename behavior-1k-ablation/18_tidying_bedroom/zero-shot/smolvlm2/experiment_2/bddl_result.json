@@ -1,0 +1,22 @@
+{
+  "success": false,
+  "bt_success": false,
+  "bddl_goal": false,
+  "ticks": 0,
+  "duration": 0.155242919921875,
+  "inference_time": 53.10146880149841,
+  "satisfied": [],
+  "unsatisfied": [
+    "nextto(?sandal.n.01_1, ?bed.n.01_1)",
+    "nextto(?sandal.n.01_2, ?sandal.n.01_1)",
+    "exists(['?table.n.02', '-', 'table.n.02'], ['ontop', '?book.n.02_1', '?table.n.02'])"
+  ],
+  "reason": "vlm_parse_error: hallucinated 22 non-existent sandals (sandal_3 through sandal_22); places all sandals ON TOP of nightstand instead of next to bed; completely ignores book; BT parsing failed (ticks=0)",
+  "task": "18_tidying_bedroom",
+  "condition": "zero-shot",
+  "model_dir": "smolvlm2",
+  "vlm_model": "smol500",
+  "inference_mode": "adapter",
+  "experiment": 2,
+  "timestamp": "20260214_090514"
+}

@@ -1,0 +1,25 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to sweet_potato -->
+      <Action ID="NAVIGATE_TO" obj="sweet_potato" />
+      <!-- Fallback: if GRASP sweet_potato fails, try PUSH, FLIP to reposition -->
+      <Fallback>
+        <!-- Grasp sweet_potato -->
+        <Action ID="GRASP" obj="sweet_potato" />
+        <Sequence>
+          <!-- Push sweet_potato forward toward front edge of table -->
+          <Action ID="PUSH" obj="sweet_potato" />
+          <!-- Grasp sweet_potato -->
+          <Action ID="GRASP" obj="sweet_potato" />
+        </Sequence>
+      </Fallback>
+      <!-- Navigate to metal_pot -->
+      <Action ID="NAVIGATE_TO" obj="metal_pot" />
+      <!-- Place inside metal_pot -->
+      <Action ID="PLACE_INSIDE" obj="metal_pot" />
+      <!-- Release -->
+      <Action ID="RELEASE" />
+    </Sequence>
+  </BehaviorTree>
+</root>

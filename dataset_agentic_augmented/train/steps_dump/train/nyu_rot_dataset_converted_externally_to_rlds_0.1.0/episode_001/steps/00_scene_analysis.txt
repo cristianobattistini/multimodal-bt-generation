@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "almonds"
+  destination: "cup"
+  expanded_instruction: "Tilt the container holding the almonds and pour the almonds into the yellow cup on the table. Before pouring, check IS_HOLDING on the cup; perform the POUR with a 10s timeout and retry up to 3 times if it fails."
+  scene_context: "Yellow cup on table; robot arm already holding the almonds container and moves it above the cup."
+  expected_sequence: "Move the container over the cup and tilt it to pour the almonds into the cup. Check the cup is held (IS_HOLDING) before POUR; execute POUR with a 10s timeout and retry up to 3 times on failure."

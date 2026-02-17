@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "scissors"
+  destination: ""
+  expanded_instruction: "Avoid the front obstacle and reach the scissors on the table with the robot arm, grouping actions into an ApproachWorkSurface subtree; retry up to 3 times with a 10s timeout, and if grasp fails, push to reposition."
+  scene_context: "Robot arm on table, brown pen-holder blocking direct approach to scissors, scissors on table reachable but partially occluded."
+  expected_sequence: "Move the arm around the pen-holder obstacle and extend to grasp the scissors as part of the ApproachWorkSurface subtree; retry the approach up to 3 times, and if grasp fails, push to reposition."

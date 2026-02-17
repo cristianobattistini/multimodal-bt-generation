@@ -1,0 +1,22 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to pot_or_pan -->
+      <Action ID="NAVIGATE_TO" obj="pot_or_pan"/>
+      <!-- Grasp pot_or_pan -->
+      <Action ID="GRASP" obj="pot_or_pan"/>
+      <!-- Navigate to stove -->
+      <Action ID="NAVIGATE_TO" obj="stove"/>
+      <!-- Place on stove -->
+      <Action ID="PLACE_ON_TOP" obj="stove"/>
+      <!-- Navigate to corncob -->
+      <Action ID="NAVIGATE_TO" obj="corncob"/>
+      <!-- Grasp corncob -->
+      <Action ID="GRASP" obj="corncob"/>
+      <!-- Navigate to pot_or_pan -->
+      <Action ID="NAVIGATE_TO" obj="pot_or_pan"/>
+      <!-- Place corncob inside pot_or_pan -->
+      <Action ID="PLACE_INSIDE" obj="pot_or_pan"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

@@ -1,0 +1,1 @@
+Open middle drawer. Use ApproachMiddleDrawer subtree for approach and grasp.

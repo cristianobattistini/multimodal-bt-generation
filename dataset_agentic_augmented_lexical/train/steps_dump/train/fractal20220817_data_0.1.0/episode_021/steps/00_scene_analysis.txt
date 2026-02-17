@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "blue_chip_bag"
+  destination: "counter"
+  expanded_instruction: "Using the ApproachBottomDrawer subtree, pick up the blue chip bag from the open bottom drawer and place it on the counter surface — retry up to 3 times with a 10s timeout for each attempt and, if a grasp fails, push to reposition and try again."
+  scene_context: "Bottom drawer is open with the blue chip bag inside; counter surface is clear and reachable."
+  expected_sequence: "ApproachBottomDrawer: reach into the open bottom drawer, grasp the blue chip bag, lift it out, and place it on the counter — allow up to 3 retries with a 10s timeout per attempt; if grasp fails, push to reposition and retry."

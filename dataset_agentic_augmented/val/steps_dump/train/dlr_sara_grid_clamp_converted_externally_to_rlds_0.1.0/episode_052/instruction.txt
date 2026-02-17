@@ -1,0 +1,1 @@
+Place grid clamp. If grasping fails, push the grid clamp to reposition it and retry grasping.

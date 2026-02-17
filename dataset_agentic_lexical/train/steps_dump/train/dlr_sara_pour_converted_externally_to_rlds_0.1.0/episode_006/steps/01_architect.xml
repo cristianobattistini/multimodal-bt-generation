@@ -1,0 +1,18 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Move to brown_kettle -->
+      <Action ID="MOVE_TO" obj="brown_kettle" />
+      <!-- Grip brown_kettle -->
+      <Action ID="GRIP" obj="brown_kettle" />
+      <!-- Move to white_mug -->
+      <Action ID="MOVE_TO" obj="white_mug" />
+      <!-- Empty into white_mug -->
+      <Action ID="EMPTY_INTO" obj="white_mug" />
+      <!-- Locomote to table -->
+      <Action ID="LOCOMOTE_TO" obj="table" />
+      <!-- Stack on table -->
+      <Action ID="STACK_ON" obj="table" />
+    </Sequence>
+  </BehaviorTree>
+</root>

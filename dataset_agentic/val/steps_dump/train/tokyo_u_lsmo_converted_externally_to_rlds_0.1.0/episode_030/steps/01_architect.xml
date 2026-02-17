@@ -1,0 +1,12 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to pen_holder while avoiding the stack_of_books -->
+      <Action ID="NAVIGATE_TO" obj="pen_holder"/>
+      <!-- Navigate to scissors inside the pen_holder -->
+      <Action ID="NAVIGATE_TO" obj="scissors"/>
+      <!-- Grasp scissors -->
+      <Action ID="GRASP" obj="scissors"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

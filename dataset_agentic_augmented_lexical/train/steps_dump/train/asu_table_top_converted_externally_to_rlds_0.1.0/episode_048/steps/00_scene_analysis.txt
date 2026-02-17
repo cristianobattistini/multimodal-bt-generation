@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "white_carton"
+  destination: ""
+  expanded_instruction: "Use ApproachWhiteCarton subtree: lift the white carton upward from the table, with a 10s timeout and retry up to 3 times if needed."
+  scene_context: "White carton sitting on right side of table, not held; table is clear and no containers are closed."
+  expected_sequence: "Within ApproachWhiteCarton subtree: move to the white carton, grasp it securely (if grasp fails, push to reposition and retry up to 3 times), then lift it upward within a 10s timeout."

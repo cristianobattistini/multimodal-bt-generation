@@ -1,0 +1,10 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to carbinet_door -->
+      <Action ID="NAVIGATE_TO" obj="carbinet_door"/>
+      <!-- Open carbinet_door -->
+      <Action ID="OPEN" obj="carbinet_door"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

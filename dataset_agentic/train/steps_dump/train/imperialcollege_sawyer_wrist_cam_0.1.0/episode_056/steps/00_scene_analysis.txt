@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "can"
+  destination: ""
+  expanded_instruction: "Pick up the can from the blue surface in front of you"
+  scene_context: "Blue fabric with small round reflective buttons; no object is currently held and no can is clearly visible."
+  expected_sequence: "Move to the blue surface, locate the can, and grasp it."

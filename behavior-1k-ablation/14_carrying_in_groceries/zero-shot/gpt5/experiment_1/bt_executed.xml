@@ -1,0 +1,23 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <NAVIGATE_TO obj="car"/>
+      <OPEN obj="car"/>
+      <GRASP obj="sack"/>
+      <NAVIGATE_TO obj="electric_refrigerator"/>
+      <PLACE_NEXT_TO obj="sack"/>
+      <OPEN obj="electric_refrigerator"/>
+      <NAVIGATE_TO obj="sack"/>
+      <GRASP obj="beefsteak_tomato"/>
+      <NAVIGATE_TO obj="electric_refrigerator"/>
+      <PLACE_INSIDE obj="beefsteak_tomato"/>
+      <NAVIGATE_TO obj="sack"/>
+      <GRASP obj="carton_of_milk"/>
+      <NAVIGATE_TO obj="electric_refrigerator"/>
+      <PLACE_INSIDE obj="carton_of_milk"/>
+      <CLOSE obj="electric_refrigerator"/>
+      <NAVIGATE_TO obj="car"/>
+      <CLOSE obj="car"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "cocacola_bottle"
+  destination: ""
+  expanded_instruction: "Check that the cocacola_bottle is visible, then navigate to the front-center of the table (navigate_to with a 15s timeout) and push the cocacola bottle a short distance forward toward the table edge."
+  scene_context: "Table clear aside from several bottles/cans; cocacola_bottle upright near front-center and not held; robot arm above table."
+  expected_sequence: "Check IS_VISIBLE on cocacola_bottle before navigating; NAVIGATE_TO the bottle with a 15s timeout, then move the arm to contact the cocacola_bottle and push it forward toward the table edge."

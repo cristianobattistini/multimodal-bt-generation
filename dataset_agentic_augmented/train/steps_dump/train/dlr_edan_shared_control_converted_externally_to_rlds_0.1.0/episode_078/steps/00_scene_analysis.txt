@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "die"
+  destination: ""
+  expanded_instruction: "Check that the small white die is visible in the cubby of the black shelf, then reach in and pick up the die — attempt each grasp with a 10s timeout and retry up to 3 times if it fails."
+  scene_context: "Black shelf with open cubbies; small white die visible inside a middle cubby; die not held; floor clear."
+  expected_sequence: "Verify the die is visible, reach into the cubby, attempt to grasp the die (10s timeout per attempt, retry up to 3 times on failure), and then lift it out."

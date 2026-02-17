@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "apple_fruit"
+  destination: "gray_plate"
+  expanded_instruction: "Pick up the apple fruit from the table and place it into the gray plate, retrying the place-inside action up to 4 times if it fails."
+  scene_context: "Apple on the table near the robot, not held; gray plate on table and clear."
+  expected_sequence: "Move to the apple, grasp it, carry it over the gray plate, and set it down inside; if PLACE_INSIDE fails, retry up to 4 times."

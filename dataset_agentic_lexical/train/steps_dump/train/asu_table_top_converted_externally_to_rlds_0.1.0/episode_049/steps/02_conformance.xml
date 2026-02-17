@@ -1,0 +1,10 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Move to green_bottle -->
+      <Action ID="MOVE_TO" obj="green_bottle" />
+      <!-- Grip green_bottle -->
+      <Action ID="GRIP" obj="green_bottle" />
+    </Sequence>
+  </BehaviorTree>
+</root>

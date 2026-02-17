@@ -1,0 +1,14 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Move to work_surface -->
+      <Action ID="MOVE_TO" obj="work_surface" />
+      <!-- Move to scissors -->
+      <Action ID="MOVE_TO" obj="scissors" />
+      <!-- Pick scissors -->
+      <Action ID="PICK" obj="scissors" />
+      <!-- Drop -->
+      <Action ID="DROP" />
+    </Sequence>
+  </BehaviorTree>
+</root>

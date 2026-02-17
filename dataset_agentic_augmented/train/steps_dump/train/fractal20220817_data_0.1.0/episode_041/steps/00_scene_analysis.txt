@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "green_rice_chip_bag"
+  destination: "rxbar_blueberry"
+  expanded_instruction: "Pick up the green rice chip bag and place it next to the RXBAR blueberry bar on the table. Before navigating, check IS_REACHABLE on rxbar_blueberry and then NAVIGATE_TO it with a 20s timeout."
+  scene_context: "Table surface clear; green rice chip bag lies near the top edge; rxbar_blueberry lies on lower table; no containers open."
+  expected_sequence: "Approach the green rice chip bag, pick it up, check IS_REACHABLE on rxbar_blueberry, NAVIGATE_TO the RXBAR blueberry within a 20s timeout, and set the bag down adjacent to it."

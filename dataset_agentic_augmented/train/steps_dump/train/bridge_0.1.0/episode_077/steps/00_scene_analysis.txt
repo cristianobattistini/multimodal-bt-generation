@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "metal_pot"
+  destination: "blue_cloth"
+  expanded_instruction: "Pick up the metal pot and place it on the table directly in front of the blue cloth; attempt a grasp (retry up to 3 times, 10s total), and if grasp fails use push or flip to reposition the pot before placing it."
+  scene_context: "Metal pot sits on the table; blue cloth on table near center; no containers open; table area between pot and cloth clear."
+  expected_sequence: "Attempt to pick up the metal pot (retry grasp up to 3 times, 10s timeout); if grasp fails, use push or flip to reposition it, then move it to the table position just in front of the blue cloth and set it down."

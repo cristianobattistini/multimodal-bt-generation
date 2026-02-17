@@ -1,0 +1,21 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to peg_hole -->
+      <Action ID="NAVIGATE_TO" obj="peg_hole" />
+      <!-- Fallback: if PLACE_INSIDE peg_hole fails, try PUSH to reposition -->
+      <Fallback>
+        <!-- Place inside peg_hole -->
+        <Action ID="PLACE_INSIDE" obj="peg_hole" />
+        <Sequence>
+          <!-- Push peg_hole forward toward front edge of table -->
+          <Action ID="PUSH" obj="peg_hole" />
+          <!-- Place inside peg_hole -->
+          <Action ID="PLACE_INSIDE" obj="peg_hole" />
+        </Sequence>
+      </Fallback>
+      <!-- Release -->
+      <Action ID="RELEASE" />
+    </Sequence>
+  </BehaviorTree>
+</root>

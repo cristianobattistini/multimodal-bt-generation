@@ -1,0 +1,35 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to pan -->
+      <Action ID="NAVIGATE_TO" obj="pan" />
+      <!-- Grasp pan -->
+      <Action ID="GRASP" obj="pan" />
+      <!-- Navigate to placemat -->
+      <Action ID="NAVIGATE_TO" obj="placemat" />
+      <Sequence>
+        <!-- Check stove is holding before PLACE_ON_TOP -->
+        <Condition ID="IS_HOLDING" obj="stove" />
+        <!-- Place next to placemat -->
+        <Action ID="PLACE_NEXT_TO" obj="placemat" />
+      </Sequence>
+      
+      <!-- Navigate to fish -->
+      <Action ID="NAVIGATE_TO" obj="fish" />
+      <!-- Grasp fish -->
+      <Action ID="GRASP" obj="fish" />
+      <!-- Navigate to pan -->
+      <Action ID="NAVIGATE_TO" obj="pan" />
+      <!-- Place inside pan -->
+      <Action ID="PLACE_INSIDE" obj="pan" />
+      <!-- Navigate to sausage -->
+      <Action ID="NAVIGATE_TO" obj="sausage" />
+      <!-- Grasp sausage -->
+      <Action ID="GRASP" obj="sausage" />
+      <!-- Navigate to pan -->
+      <Action ID="NAVIGATE_TO" obj="pan" />
+      <!-- Place inside pan -->
+      <Action ID="PLACE_INSIDE" obj="pan" />
+    </Sequence>
+  </BehaviorTree>
+</root>

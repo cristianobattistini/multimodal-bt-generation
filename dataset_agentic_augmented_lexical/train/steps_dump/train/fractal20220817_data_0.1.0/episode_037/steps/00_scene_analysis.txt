@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "rxbar_chocolate"
+  destination: "middle_drawer"
+  expanded_instruction: "Pick up the rxbar chocolate from the tabletop and place it into the open middle drawer. Before navigating to the drawer, check IS_REACHABLE on middle_drawer; if unreachable, retry the check up to 3 times with a 10s timeout, then abort and report failure."
+  scene_context: "Middle drawer is open; rxbar_chocolate on top surface near front-left, not held; drawer interior appears clear."
+  expected_sequence: "Check IS_REACHABLE on middle_drawer before NAVIGATE_TO; if reachable, move to the bar, grasp it, move over the open middle drawer, and place it inside. If the reachability check fails, retry up to 3 times (10s each) and abort if still unreachable."

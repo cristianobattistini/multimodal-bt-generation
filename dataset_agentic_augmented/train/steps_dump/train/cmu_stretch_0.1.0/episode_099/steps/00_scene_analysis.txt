@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "dishwasher"
+  destination: ""
+  expanded_instruction: "As part of the ApproachDishwasher subtree, pull open the dishwasher door by grasping its handle and pulling it downwards until the door opens; if the grasp fails retry up to 3 times, with a 10s timeout and small repositioning pushes between attempts."
+  scene_context: "Dishwasher door is closed with handle visible and arm positioned nearby; floor clear."
+  expected_sequence: "Within the ApproachDishwasher subtree: move the arm to the handle, grasp it firmly, and pull the door open until it stays open; if grasp or pull fails retry up to 3 times (10s timeout) and push to reposition before retrying."

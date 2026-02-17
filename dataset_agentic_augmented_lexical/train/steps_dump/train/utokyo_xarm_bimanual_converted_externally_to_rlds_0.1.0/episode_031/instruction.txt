@@ -1,0 +1,1 @@
+Unfold a wrinkled towel. If unfolding fails, flip the towel to reposition it and retry unfolding.

@@ -1,0 +1,17 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to blue_tray -->
+      <Action ID="NAVIGATE_TO" obj="blue_tray" />
+      <!-- Navigate to apple -->
+      <Action ID="NAVIGATE_TO" obj="apple" />
+      <!-- Check apple is visible before GRASP -->
+      <Condition ID="IS_VISIBLE" obj="apple" />
+      <!-- Retry GRASP apple up to 3 attempts -->
+      <RetryUntilSuccessful num_attempts="3">
+        <!-- Grasp apple -->
+        <Action ID="GRASP" obj="apple" />
+      </RetryUntilSuccessful>
+    </Sequence>
+  </BehaviorTree>
+</root>

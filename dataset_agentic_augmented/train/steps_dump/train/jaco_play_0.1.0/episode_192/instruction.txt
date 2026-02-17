@@ -1,0 +1,1 @@
+Pick up the orange fruit. If grasping fails, push it slightly to reposition it and retry.

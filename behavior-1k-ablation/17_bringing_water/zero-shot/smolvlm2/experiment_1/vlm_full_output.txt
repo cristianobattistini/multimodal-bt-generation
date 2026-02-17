@@ -1,0 +1,154 @@
+ scene_analysis:
+  target: bottle_1
+  destination: coffee_table
+  expanded_instruction: "Retrieve the two bottles from the refrigerator in the kitchen and place them on the coffee table."
+  scene_context: "Bottles on the refrigerator are closed; the coffee table is clear and reachable."
+  expected_sequence: "Reach to the refrigerator, grasp the bottles, lift them, and place them on the coffee table."
+Plan:
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to refrigerator -->
+      <Action ID="NAVIGATE_TO" obj="electric_refrigerator" />
+      <!-- Open refrigerator -->
+      <Action ID="OPEN" />
+      <!-- Navigate to bottle_1 -->
+      <Action ID="NAVIGATE_TO" obj="bottle_1" />
+      <!-- Grasp bottle_1 -->
+      <Action ID="GRASP" obj="bottle_1" />
+      <!-- Navigate to bottle_2 -->
+      <Action ID="NAVIGATE_TO" obj="bottle_2" />
+      <!-- Open bottle_2 -->
+      <Action ID="OPEN" />
+      <!-- Navigate to table -->
+      <Action ID="NAVIGATE_TO" obj="table" />
+      <!-- Place bottle_1 on table -->
+      <Action ID="PLACE_ON_TOP" obj="bottle_1" />
+      <!-- Navigate to table -->
+      <Action ID="NAVIGATE_TO" obj="table" />
+      <!-- Place bottle_2 on table -->
+      <Action ID="PLACE_ON_TOP" obj="bottle_2" />
+      <!-- Open refrigerator -->
+      <Action ID="OPEN" />
+      <!-- Navigate to living_room -->
+      <Action ID="NAVIGATE_TO" obj="living_room" />
+      <!-- Place bottle_1 on living_room -->
+      <Action ID="PLACE_ON_TOP" obj="bottle_1" />
+      <!-- Navigate to table -->
+      <Action ID="NAVIGATE_TO" obj="table" />
+      <!-- Place bottle_2 on table -->
+      <Action ID="PLACE_ON_TOP" obj="bottle_2" />
+      <!-- Open refrigerator -->
+      <Action ID="OPEN" />
+      <!-- Navigate to living_room -->
+      <Action ID="NAVIGATE_TO" obj="living_room" />
+      <!-- Place bottle_1 on living_room -->
+      <Action ID="PLACE_ON_TOP" obj="bottle_1" />
+      <!-- Navigate to table -->
+      <Action ID="NAVIGATE_TO" obj="table" />
+      <!-- Place bottle_2 on table -->
+      <Action ID="PLACE_ON_TOP" obj="bottle_2" />
+      <!-- Open refrigerator -->
+      <Action ID="OPEN" />
+      <!-- Navigate to living_room -->
+      <Action ID="NAVIGATE_TO" obj="living_room" />
+      <!-- Place bottle_1 on living_room -->
+      <Action ID="PLACE_ON_TOP" obj="bottle_1" />
+      <!-- Navigate to table -->
+      <Action ID="NAVIGATE_TO" obj="table" />
+      <!-- Place bottle_2 on table -->
+      <Action ID="PLACE_ON_TOP" obj="bottle_2" />
+      <!-- Open refrigerator -->
+      <Action ID="OPEN" />
+      <!-- Navigate to living_room -->
+      <Action ID="NAVIGATE_TO" obj="living_room" />
+      <!-- Place bottle_1 on living_room -->
+      <Action ID="PLACE_ON_TOP" obj="bottle_1" />
+      <!-- Navigate to table -->
+      <Action ID="NAVIGATE_TO" obj="table" />
+      <!-- Place bottle_2 on table -->
+      <Action ID="PLACE_ON_TOP" obj="bottle_2" />
+      <!-- Open refrigerator -->
+      <Action ID="OPEN" />
+      <!-- Navigate to living_room -->
+      <Action ID="NAVIGATE_TO" obj="living_room" />
+      <!-- Place bottle_1 on living_room -->
+      <Action ID="PLACE_ON_TOP" obj="bottle_1" />
+      <!-- Navigate to table -->
+      <Action ID="NAVIGATE_TO" obj="table" />
+      <!-- Place bottle_2 on table -->
+      <Action ID="PLACE_ON_TOP" obj="bottle_2" />
+      <!-- Open refrigerator -->
+      <Action ID="OPEN" />
+      <!-- Navigate to living_room -->
+      <Action ID="NAVIGATE_TO" obj="living_room" />
+      <!-- Place bottle_1 on living_room -->
+      <Action ID="PLACE_ON_TOP" obj="bottle_1" />
+      <!-- Navigate to table -->
+      <Action ID="NAVIGATE_TO" obj="table" />
+      <!-- Place bottle_2 on table -->
+      <Action ID="PLACE_ON_TOP" obj="bottle_2" />
+      <!-- Open refrigerator -->
+      <Action ID="OPEN" />
+      <!-- Navigate to living_room -->
+      <Action ID="NAVIGATE_TO" obj="living_room" />
+      <!-- Place bottle_1 on living_room -->
+      <Action ID="PLACE_ON_TOP" obj="bottle_1" />
+      <!-- Navigate to table -->
+      <Action ID="NAVIGATE_TO" obj="table" />
+      <!-- Place bottle_2 on table -->
+      <Action ID="PLACE_ON_TOP" obj="bottle_2" />
+      <!-- Open refrigerator -->
+      <Action ID="OPEN" />
+      <!-- Navigate to living_room -->
+      <Action ID="NAVIGATE_TO" obj="living_room" />
+      <!-- Place bottle_1 on living_room -->
+      <Action ID="PLACE_ON_TOP" obj="bottle_1" />
+      <!-- Navigate to table -->
+      <Action ID="NAVIGATE_TO" obj="table" />
+      <!-- Place bottle_2 on table -->
+      <Action ID="PLACE_ON_TOP" obj="bottle_2" />
+      <!-- Open refrigerator -->
+      <Action ID="OPEN" />
+      <!-- Navigate to living_room -->
+      <Action ID="NAVIGATE_TO" obj="living_room" />
+      <!-- Place bottle_1 on living_room -->
+      <Action ID="PLACE_ON_TOP" obj="bottle_1" />
+      <!-- Navigate to table -->
+      <Action ID="NAVIGATE_TO" obj="table" />
+      <!-- Place bottle_2 on table -->
+      <Action ID="PLACE_ON_TOP" obj="bottle_2" />
+      <!-- Open refrigerator -->
+      <Action ID="OPEN" />
+      <!-- Navigate to living_room -->
+      <Action ID="NAVIGATE_TO" obj="living_room" />
+      <!-- Place bottle_1 on living_room -->
+      <Action ID="PLACE_ON_TOP" obj="bottle_1" />
+      <!-- Navigate to table -->
+      <Action ID="NAVIGATE_TO" obj="table" />
+      <!-- Place bottle_2 on table -->
+      <Action ID="PLACE_ON_TOP" obj="bottle_2" />
+      <!-- Open refrigerator -->
+      <Action ID="OPEN" />
+      <!-- Navigate to living_room -->
+      <Action ID="NAVIGATE_TO" obj="living_room" />
+      <!-- Place bottle_1 on living_room -->
+      <Action ID="PLACE_ON_TOP" obj="bottle_1" />
+      <!-- Navigate to table -->
+      <Action ID="NAVIGATE_TO" obj="table" />
+      <!-- Place bottle_2 on table -->
+      <Action ID="PLACE_ON_TOP" obj="bottle_2" />
+      <!-- Open refrigerator -->
+      <Action ID="OPEN" />
+      <!-- Navigate to living_room -->
+      <Action ID="NAVIGATE_TO" obj="living_room" />
+      <!-- Place bottle_1 on living_room -->
+      <Action ID="PLACE_ON_TOP" obj="bottle_1" />
+      <!-- Navigate to table -->
+      <Action ID="NAVIGATE_TO" obj="table" />
+      <!-- Place bottle_2 on table -->
+      <Action ID="PLACE_ON_TOP" obj="bottle_2" />
+      <!-- Open refrigerator -->
+      <Action ID="OPEN" />
+      <!-- Navigate to living_room -->
+     

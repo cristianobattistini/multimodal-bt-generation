@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "green_cloth"
+  destination: "table"
+  expanded_instruction: "Sweep the green cloth across the tabletop and place it on the left side of the table"
+  scene_context: "Green cloth on the table near the top-right edge; table surface clear; robot not holding the cloth."
+  expected_sequence: "Approach the cloth, push/sweep it across the table toward the left side until it rests there."

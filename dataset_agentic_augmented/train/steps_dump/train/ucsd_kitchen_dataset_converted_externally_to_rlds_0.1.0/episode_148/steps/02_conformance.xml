@@ -1,0 +1,26 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to bowl -->
+      <Action ID="NAVIGATE_TO" obj="bowl" />
+      <!-- Fallback: if GRASP bowl fails, try alternative to reposition -->
+      <Fallback>
+        <!-- Retry GRASP bowl up to 2 attempts -->
+        <RetryUntilSuccessful num_attempts="2">
+          <!-- Grasp bowl -->
+          <Action ID="GRASP" obj="bowl" />
+        </RetryUntilSuccessful>
+        <Sequence>
+          <!-- Push bowl forward toward front edge of table -->
+          <Action ID="PUSH" obj="bowl" />
+          <!-- Grasp bowl -->
+          <Action ID="GRASP" obj="bowl" />
+        </Sequence>
+      </Fallback>
+      <!-- Navigate to kitchen_cabinet -->
+      <Action ID="NAVIGATE_TO" obj="kitchen_cabinet" />
+      <!-- Place inside kitchen_cabinet -->
+      <Action ID="PLACE_INSIDE" obj="kitchen_cabinet" />
+    </Sequence>
+  </BehaviorTree>
+</root>

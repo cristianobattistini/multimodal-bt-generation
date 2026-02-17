@@ -1,0 +1,17 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Approach glass_bottle -->
+      <Action ID="APPROACH" obj="glass_bottle" />
+      <!-- Grasp glass_bottle -->
+      <Action ID="GRASP" obj="glass_bottle" />
+      <!-- Approach table -->
+      <Action ID="APPROACH" obj="table" />
+      <!-- Retry PLACE_ON_TOP table up to 3 attempts -->
+      <RetryUntilSuccessful num_attempts="3">
+        <!-- Place on table -->
+        <Action ID="PLACE_ON_TOP" obj="table" />
+      </RetryUntilSuccessful>
+    </Sequence>
+  </BehaviorTree>
+</root>

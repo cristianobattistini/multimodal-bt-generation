@@ -1,0 +1,1 @@
+Move white carton. Retry placing on top up to 3 times if it fails.

@@ -1,0 +1,19 @@
+{
+  "success": true,
+  "bt_success": true,
+  "bddl_goal": true,
+  "ticks": 1,
+  "duration": 2.872664451599121,
+  "inference_time": 42.26241111755371,
+  "satisfied": [
+    "toggled_on(?radio_receiver.n.01_1)"
+  ],
+  "unsatisfied": [],
+  "task": "00_turning_on_radio",
+  "condition": "zero-shot",
+  "model_dir": "adapter",
+  "vlm_model": "gemma",
+  "inference_mode": "adapter",
+  "experiment": 2,
+  "timestamp": "20260212_214847"
+}

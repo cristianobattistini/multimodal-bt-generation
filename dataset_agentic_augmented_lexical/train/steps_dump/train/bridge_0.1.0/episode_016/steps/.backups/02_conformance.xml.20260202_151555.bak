@@ -1,0 +1,21 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Check silver_vessel is reachable before NAVIGATE_TO -->
+      <Condition ID="IS_REACHABLE" obj="silver_vessel" />
+      <!-- Timeout: NAVIGATE_TO silver_vessel within 15s -->
+      <Timeout msec="15000">
+        <!-- Navigate to silver_vessel -->
+        <Action ID="NAVIGATE_TO" obj="silver_vessel" />
+      </Timeout>
+      <!-- Grasp silver_vessel -->
+      <Action ID="GRASP" obj="silver_vessel" />
+      <!-- Navigate to table -->
+      <Action ID="NAVIGATE_TO" obj="table" />
+      <!-- Place on table -->
+      <Action ID="PLACE_ON_TOP" obj="table" />
+      <!-- Release -->
+      <Action ID="RELEASE" />
+    </Sequence>
+  </BehaviorTree>
+</root>

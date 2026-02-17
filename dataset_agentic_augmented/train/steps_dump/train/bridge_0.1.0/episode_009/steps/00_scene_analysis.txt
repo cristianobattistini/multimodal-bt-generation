@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "cheese_wedge"
+  destination: "table"
+  expanded_instruction: "Pick up the cheese_wedge from the metal bowl on the left and place it on the front right side of the table; retry the grasp up to 3 times, and if grasp fails use push or flip to reposition the wedge."
+  scene_context: "Cheese_wedge in metal bowl at left of table; bowl and sponge on table; no containers closed; table front-right is reachable."
+  expected_sequence: "Approach the bowl, attempt to grasp and remove the cheese_wedge (retry up to 3 times); if grasp fails, push or flip to reposition it, then move to the table and place it on the front right side."

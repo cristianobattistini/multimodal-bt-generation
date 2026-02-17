@@ -1,0 +1,14 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to fridge_door -->
+      <Action ID="NAVIGATE_TO" obj="fridge_door" />
+      <!-- Grasp fridge_door -->
+      <Action ID="GRASP" obj="fridge_door" />
+      <!-- Open up fridge_door -->
+      <Action ID="OPEN_UP" obj="fridge_door" />
+      <!-- Release -->
+      <Action ID="RELEASE" />
+    </Sequence>
+  </BehaviorTree>
+</root>

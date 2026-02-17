@@ -1,0 +1,19 @@
+{
+  "success": true,
+  "bt_success": true,
+  "bddl_goal": true,
+  "ticks": 1,
+  "duration": 111.33398604393005,
+  "inference_time": 48.912554025650024,
+  "satisfied": [
+    "or(['and', ['ontop', '?storage_container.n.01_1', '?floor.n.01_2'], ['ontop', '?storage_container.n.01_2', '?storage_container.n.01_1']], ['and', ['ontop', '?storage_container.n.01_2', '?floor.n.01_2'], ['ontop', '?storage_container.n.01_1', '?storage_container.n.01_2']])"
+  ],
+  "unsatisfied": [],
+  "task": "16_moving_boxes_to_storage",
+  "condition": "cot",
+  "model_dir": "adapter",
+  "vlm_model": "gemma",
+  "inference_mode": "adapter",
+  "experiment": 2,
+  "timestamp": "20260213_231720"
+}

@@ -1,0 +1,10 @@
+{
+  "decorator_type": "retry",
+  "mixed_subtype": null,
+  "target_action_id": "CLOSE",
+  "target_obj": "fridge_door",
+  "parameters": {
+    "num_attempts": 5
+  },
+  "prompt_name": "retry"
+}

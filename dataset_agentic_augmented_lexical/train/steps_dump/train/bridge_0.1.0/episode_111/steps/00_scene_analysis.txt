@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "yellow_flower"
+  destination: "pot"
+  expanded_instruction: "Pick up the yellow flower from the countertop and place it behind the pot on the countertop. When grasping, use a 10s timeout and retry up to 3 times; if grasping fails, reposition the flower by pushing or flipping it and then place it behind the pot."
+  scene_context: "Yellow_flower on countertop near back edge; metal pot (bowl) left on countertop; gripper not holding anything; space behind pot is clear."
+  expected_sequence: "Move to the flower, pick it up (grasp within 10s, retry up to 3 times), move behind the pot, and set the flower on the countertop behind the pot. If grasp ultimately fails, reposition the flower by pushing or flipping it and then place it behind the pot."

@@ -1,0 +1,7 @@
+scene_analysis:
+  target: "["sack", "beefsteak_tomato", "carton_of_milk"]"
+  destination: "electric_refrigerator"
+  expanded_instruction: "Pick up the sack from the floor, then reach into the electric refrigerator and pick up the beefsteak_tomato and the carton_of_milk one at a time and put them inside; confirm the fridge is open before each placement and close it afterward."
+  scene_context: "Electric refrigerator door is closed and open; sack lies on the floor left of the refrigerator; both the beefsteak_tomato and the carton_of_milk are inside the refrigerator but not held."
+  expected_sequence: "Move to the sack and pick it up, then open the fridge and reach in one at a time to grab the beefsteak_tomato and the carton_of_milk, place each item inside the fridge and close the fridge. Verify IS_OPEN on electric_refrigerator before placing inside."
+Plan:

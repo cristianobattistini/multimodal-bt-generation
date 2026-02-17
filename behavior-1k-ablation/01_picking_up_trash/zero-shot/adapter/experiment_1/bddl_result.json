@@ -1,0 +1,19 @@
+{
+  "success": true,
+  "bt_success": true,
+  "bddl_goal": true,
+  "ticks": 1,
+  "duration": 69.16252374649048,
+  "inference_time": 53.666611433029175,
+  "satisfied": [
+    "forall(['?can__of__soda.n.01', '-', 'can__of__soda.n.01'], ['inside', '?can__of__soda.n.01', '?ashcan.n.01_1'])"
+  ],
+  "unsatisfied": [],
+  "task": "01_picking_up_trash",
+  "condition": "zero-shot",
+  "model_dir": "adapter",
+  "vlm_model": "gemma",
+  "inference_mode": "adapter",
+  "experiment": 1,
+  "timestamp": "20260213_083635"
+}

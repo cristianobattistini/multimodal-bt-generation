@@ -1,0 +1,1 @@
+place down maroon object. Only navigate to if it is reachable.

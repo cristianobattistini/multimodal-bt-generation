@@ -1,0 +1,16 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to potato -->
+      <Action ID="NAVIGATE_TO" obj="potato"/>
+      <!-- Grasp potato -->
+      <Action ID="GRASP" obj="potato"/>
+      <!-- Navigate to pot_cardboard_fence -->
+      <Action ID="NAVIGATE_TO" obj="pot_cardboard_fence"/>
+      <!-- Place inside pot_cardboard_fence (put potato into the orange pot inside the cardboard fence) -->
+      <Action ID="PLACE_INSIDE" obj="pot_cardboard_fence"/>
+      <!-- Release -->
+      <Action ID="RELEASE"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

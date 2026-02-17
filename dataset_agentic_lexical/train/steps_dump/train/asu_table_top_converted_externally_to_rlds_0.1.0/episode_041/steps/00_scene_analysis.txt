@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "milk_box"
+  destination: "table"
+  expanded_instruction: "Pick up the milk box (small white-blue carton on the right side of the table) and place it on the table"
+  scene_context: "Table visible and mostly clear; milk_box on right among small items; milk_box not held; no containers open."
+  expected_sequence: "Approach the milk_box, pick it up, and place it on the table (clear area)."

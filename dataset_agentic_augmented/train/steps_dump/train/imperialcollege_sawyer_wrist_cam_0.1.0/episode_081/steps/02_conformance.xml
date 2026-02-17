@@ -1,0 +1,22 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to toast -->
+      <Action ID="NAVIGATE_TO" obj="toast" />
+      <!-- Check toast is graspable before GRASP -->
+      <Condition ID="IS_GRASPABLE" obj="toast" />
+      <!-- Retry GRASP toast up to 2 attempts -->
+      <RetryUntilSuccessful num_attempts="2">
+        <!-- Timeout: GRASP toast within 10s -->
+        <Timeout msec="10000">
+          <!-- Grasp toast -->
+          <Action ID="GRASP" obj="toast" />
+        </Timeout>
+      </RetryUntilSuccessful>
+      <!-- Navigate to toaster_slot -->
+      <Action ID="NAVIGATE_TO" obj="toaster_slot" />
+      <!-- Place inside toaster_slot -->
+      <Action ID="PLACE_INSIDE" obj="toaster_slot" />
+    </Sequence>
+  </BehaviorTree>
+</root>

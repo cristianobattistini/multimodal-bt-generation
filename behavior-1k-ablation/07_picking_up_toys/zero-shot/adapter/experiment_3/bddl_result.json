@@ -1,0 +1,19 @@
+{
+  "success": false,
+  "bt_success": true,
+  "bddl_goal": false,
+  "ticks": 1,
+  "duration": 495.80370688438416,
+  "inference_time": 81.27648496627808,
+  "satisfied": [
+    "exists(['?toy_box.n.01', '-', 'toy_box.n.01'], ['forall', ['?board_game.n.01', '-', 'board_game.n.01'], ['inside', '?board_game.n.01', '?toy_box.n.01']])",
+    "exists(['?toy_box.n.01', '-', 'toy_box.n.01'], ['forall', ['?tennis_ball.n.01', '-', 'tennis_ball.n.01'], ['inside', '?tennis_ball.n.01', '?toy_box.n.01']])"
+  ],
+  "unsatisfied": [
+    "exists(['?toy_box.n.01', '-', 'toy_box.n.01'], ['forall', ['?jigsaw_puzzle.n.01', '-', 'jigsaw_puzzle.n.01'], ['inside', '?jigsaw_puzzle.n.01', '?toy_box.n.01']])"
+  ],
+  "task": "07_picking_up_toys",
+  "model": "adapter",
+  "experiment": 2,
+  "timestamp": "20260207_190908"
+}

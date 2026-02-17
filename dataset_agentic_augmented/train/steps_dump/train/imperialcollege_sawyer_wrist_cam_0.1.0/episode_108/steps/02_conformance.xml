@@ -1,0 +1,21 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to mug -->
+      <Action ID="NAVIGATE_TO" obj="mug" />
+      <!-- Check mug is visible before GRASP -->
+      <Condition ID="IS_VISIBLE" obj="mug" />
+      <!-- Fallback: if GRASP mug fails, try alternative to reposition -->
+      <Fallback>
+        <!-- Grasp mug -->
+        <Action ID="GRASP" obj="mug" />
+        <Sequence>
+          <!-- Push mug forward toward front edge of table -->
+          <Action ID="PUSH" obj="mug" />
+          <!-- Grasp mug -->
+          <Action ID="GRASP" obj="mug" />
+        </Sequence>
+      </Fallback>
+    </Sequence>
+  </BehaviorTree>
+</root>

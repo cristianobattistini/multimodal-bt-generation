@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "green_object"
+  destination: ""
+  expanded_instruction: "Pick up the small green object from the table near the small blue card; if grasp fails, retry up to 3 times (within 10s), then push or flip to reposition and attempt the grasp again."
+  scene_context: "Table is clear; green object resting on table near a small blue card; robot not holding it."
+  expected_sequence: "Move to the green object, grasp it securely, and lift it off the table; if grasp fails, retry up to 3 times, then push or flip to reposition and retry."

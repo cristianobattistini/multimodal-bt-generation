@@ -1,0 +1,16 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to can -->
+      <Action ID="NAVIGATE_TO" obj="can" />
+      <!-- Retry GRASP can up to 2 attempts -->
+      <RetryUntilSuccessful num_attempts="2">
+        <!-- Timeout: GRASP can within 20s -->
+        <Timeout msec="20000">
+          <!-- Grasp can -->
+          <Action ID="GRASP" obj="can" />
+        </Timeout>
+      </RetryUntilSuccessful>
+    </Sequence>
+  </BehaviorTree>
+</root>

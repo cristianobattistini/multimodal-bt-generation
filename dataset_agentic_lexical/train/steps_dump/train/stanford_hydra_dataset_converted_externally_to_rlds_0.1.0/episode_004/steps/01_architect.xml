@@ -1,0 +1,22 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Approach plate -->
+      <Action ID="APPROACH" obj="plate" />
+      <!-- Grab plate -->
+      <Action ID="GRAB" obj="plate" />
+      <!-- Navigate to dish_rack -->
+      <Action ID="NAVIGATE_TO" obj="dish_rack" />
+      <!-- Place inside dish_rack -->
+      <Action ID="PLACE_INSIDE" obj="dish_rack" />
+      <!-- Go to cup -->
+      <Action ID="GO_TO" obj="cup" />
+      <!-- Grab cup -->
+      <Action ID="GRAB" obj="cup" />
+      <!-- Move to dish_rack -->
+      <Action ID="MOVE_TO" obj="dish_rack" />
+      <!-- Place cup inside dish_rack -->
+      <Action ID="PLACE_INSIDE" obj="cup" container="dish_rack" />
+    </Sequence>
+  </BehaviorTree>
+</root>

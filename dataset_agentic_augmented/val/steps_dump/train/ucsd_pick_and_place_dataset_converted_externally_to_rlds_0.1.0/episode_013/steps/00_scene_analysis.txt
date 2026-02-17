@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "pot"
+  destination: "sink"
+  expanded_instruction: "Pick up the pot from the countertop next to the stove and place it into the sink. When grasping, allow a 15s timeout and retry the grasp up to 2 times; if grasp fails, try pushing or flipping the pot to reposition it before retrying."
+  scene_context: "Pot on countertop left of sink; sink is empty and reachable; robot not holding the pot."
+  expected_sequence: "Approach and attempt to grasp the pot (grasp has a 15s timeout, retry up to 2 times); if grasp fails, push or flip to reposition, then grasp, lift it, move it over the sink, and set it down inside."

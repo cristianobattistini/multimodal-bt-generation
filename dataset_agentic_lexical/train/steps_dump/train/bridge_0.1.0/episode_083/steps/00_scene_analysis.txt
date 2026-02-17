@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "metal_pot"
+  destination: "blue_cloth"
+  expanded_instruction: "Pick up the metal pot from the table and place it on the blue cloth."
+  scene_context: "Metal pot on table, not held; blue cloth on table and clear; no containers closed."
+  expected_sequence: "Lift the metal pot, move it over the blue cloth, and place it down on the cloth."

@@ -1,0 +1,23 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Approach milk_box -->
+      <Action ID="APPROACH" obj="milk_box" />
+      <!-- Fallback: if GRASP milk_box fails, try PUSH, FLIP to reposition -->
+      <Fallback>
+        <!-- Grasp milk_box -->
+        <Action ID="PICK" obj="milk_box" />
+        <Sequence>
+          <!-- Push milk_box forward toward front edge of table -->
+          <Action ID="NUDGE" obj="milk_box" />
+          <!-- Grasp milk_box -->
+          <Action ID="GRAB" obj="milk_box" />
+        </Sequence>
+      </Fallback>
+      <!-- Pick milk_box -->
+      <Action ID="MOVE_TO" obj="table" />
+      <!-- Nudge milk_box -->
+      <Action ID="PUT_ON" obj="table" />
+    </Sequence>
+  </BehaviorTree>
+</root>

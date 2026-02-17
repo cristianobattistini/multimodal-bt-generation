@@ -1,0 +1,14 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to toolbox -->
+      <Action ID="NAVIGATE_TO" obj="toolbox" />
+      <!-- Open toolbox -->
+      <Action ID="OPEN" obj="toolbox" />
+      <!-- Place tools into toolbox -->
+      <Action ID="PLACE_INSIDE" obj="tools" destination="toolbox" />
+      <!-- Close toolbox -->
+      <Action ID="CLOSE" obj="toolbox" />
+    </Sequence>
+  </BehaviorTree>
+</root>

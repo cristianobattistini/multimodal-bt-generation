@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "slice_of_toast"
+  destination: "toaster_slot"
+  expanded_instruction: "Check the toaster_slot is visible before navigating; navigate to it within a 10s timeout, then pick up the slice of toast and insert it into the toaster slot until it is seated."
+  scene_context: "Toaster on table with open slot; slice of toast nearby and not yet inside; surface clear."
+  expected_sequence: "Verify the toaster_slot is visible, navigate to it (within a 10s timeout), approach the toast, pick it up, and place it into the toaster slot until it is inserted."

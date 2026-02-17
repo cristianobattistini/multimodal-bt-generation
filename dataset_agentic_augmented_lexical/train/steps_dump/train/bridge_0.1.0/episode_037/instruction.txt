@@ -1,0 +1,1 @@
+Move the spoon to the right of the pot. If grasping fails, push the spoon to reposition it and retry grasping.

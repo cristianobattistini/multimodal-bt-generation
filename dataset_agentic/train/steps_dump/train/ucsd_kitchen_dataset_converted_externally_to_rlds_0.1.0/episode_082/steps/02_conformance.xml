@@ -1,0 +1,14 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to canned_spam -->
+      <Action ID="NAVIGATE_TO" obj="canned_spam"/>
+      <!-- Grasp canned_spam -->
+      <Action ID="GRASP" obj="canned_spam"/>
+      <!-- Navigate to sink -->
+      <Action ID="NAVIGATE_TO" obj="sink"/>
+      <!-- Place inside sink -->
+      <Action ID="PLACE_INSIDE" obj="sink"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

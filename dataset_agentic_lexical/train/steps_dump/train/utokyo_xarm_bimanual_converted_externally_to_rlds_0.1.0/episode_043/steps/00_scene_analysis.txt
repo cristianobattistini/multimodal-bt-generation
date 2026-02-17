@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "towel"
+  destination: ""
+  expanded_instruction: "Reach for the pink towel lying on the table and grasp it"
+  scene_context: "Pink towel lying flat on table front; table surface clear; robot arm above table and not holding anything."
+  expected_sequence: "Move the arm over the towel, lower the gripper, and grasp the towel."

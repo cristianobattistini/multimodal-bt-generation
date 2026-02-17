@@ -1,0 +1,19 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Execute subtree ApproachWhiteCarton -->
+      <SubTree ID="ApproachWhiteCarton" />
+      <!-- Release -->
+      <Action ID="RELEASE" />
+    </Sequence>
+  </BehaviorTree>
+  <!-- Subtree definition ApproachWhiteCarton -->
+  <BehaviorTree ID="ApproachWhiteCarton">
+    <Sequence>
+      <!-- Navigate to white_carton -->
+      <Action ID="NAVIGATE_TO" obj="white_carton" />
+      <!-- Grasp white_carton -->
+      <Action ID="GRASP" obj="white_carton" />
+    </Sequence>
+  </BehaviorTree>
+</root>

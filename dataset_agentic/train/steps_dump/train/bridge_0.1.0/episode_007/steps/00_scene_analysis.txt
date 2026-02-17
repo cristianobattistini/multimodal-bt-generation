@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "silver_pot"
+  destination: "yellow_napkin"
+  expanded_instruction: "Pick up the silver pot from the countertop and place it on the yellow napkin"
+  scene_context: "Silver pot on countertop right of a clear yellow napkin; robot arm not holding anything; surfaces unobstructed."
+  expected_sequence: "Approach the pot, grasp and lift it, move over the yellow napkin, and place the pot down on the napkin."

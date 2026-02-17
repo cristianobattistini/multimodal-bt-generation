@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "["pot", "lid", "tool"]"
+  destination: "plate"
+  expanded_instruction: "Remove the lid from the pot, verify the pot is visible before attempting to grasp (check IS_VISIBLE), then grasp the pot and place it onto the plate; if grasp fails, retry up to 3 times within a 10s timeout and otherwise use a push or flip to reposition the pot, then use the tool to push the pot to the front edge of the table."
+  scene_context: "Pot on table with lid nearby, plate on table, tool (spatula) accessible, front edge of table clear."
+  expected_sequence: "Confirm pot is visible, take the lid off the pot, grasp the pot and set it onto the plate (retry grasp up to 3 times within 10s); if grasp fails, push or flip the pot to reposition it, then push the pot forward to the table's front edge using the tool."

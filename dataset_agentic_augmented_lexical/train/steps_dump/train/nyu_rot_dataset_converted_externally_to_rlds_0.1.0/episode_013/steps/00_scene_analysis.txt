@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "cups"
+  destination: "table"
+  expanded_instruction: "Verify each cup is visible, then pick up the cups on the table and stack them into a single vertical pile on the table; if a grasp fails retry up to 3 times (or within a 10s timeout), and if grasping still fails use a push or flip to reposition the cup before retrying."
+  scene_context: "Blue cup(s) on table; table clear; robot not holding any cup at start."
+  expected_sequence: "Approach the cups, check each is visible before attempting a grasp, pick them up one by one and place each onto the other to form a stacked pile; if a grasp fails retry up to 3 times (or within 10s), and if it still fails push or flip the cup to reposition and then attempt the grasp again."

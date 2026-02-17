@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "pitcher"
+  destination: "mug"
+  expanded_instruction: "Pick up the pitcher and pour its contents into the white mug on the table"
+  scene_context: "White mug on table center front; pitcher on table near robot base; no containers open/closed."
+  expected_sequence: "Reach the pitcher, lift and tilt it over the mug to pour, then set the pitcher back down."

@@ -1,0 +1,32 @@
+<root main_tree_to_execute="MainTree">
+  <Sequence>
+    <!-- Navigate to club_sandwich -->
+    <Action ID="NAVIGATE_TO" obj="club_sandwich" />
+    <!-- Grasp club_sandwich -->
+    <Action ID="GRASP" obj="club_sandwich" />
+    <!-- Place inside packing_box -->
+    <Action ID="PLACE_INSIDE" obj="packing_box" />
+    <!-- Navigate to half_apple_1 -->
+    <Action ID="NAVIGATE_TO" obj="half_apple_1" />
+    <!-- Grasp half_apple_1 -->
+    <Action ID="GRASP" obj="half_apple_1" />
+    <!-- Place inside packing_box -->
+    <Action ID="PLACE_INSIDE" obj="packing_box" />
+    <!-- Navigate to half_apple_2 -->
+    <Action ID="NAVIGATE_TO" obj="half_apple_2" />
+    <!-- Grasp half_apple_2 -->
+    <Action ID="GRASP" obj="half_apple_2" />
+    <!-- Place inside packing_box -->
+    <Action ID="PLACE_INSIDE" obj="packing_box" />
+    <!-- Navigate to electric_refrigerator -->
+    <Action ID="NAVIGATE_TO" obj="electric_refrigerator" />
+    <!-- Open refrigerator -->
+    <Action ID="OPEN" obj="electric_refrigerator" />
+    <!-- Navigate to chocolate_chip_cookie -->
+    <Action ID="NAVIGATE_TO" obj="chocolate_chip_cookie" />
+    <!-- Grasp chocolate_chip_cookie -->
+    <Action ID="GRASP" obj="chocolate_chip_cookie" />
+    <!-- Place inside packing_box -->
+    <Action ID="PLACE_INSIDE" obj="packing_box" />
+  </Sequence>
+</root>

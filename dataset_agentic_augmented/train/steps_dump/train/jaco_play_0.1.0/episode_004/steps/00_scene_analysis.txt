@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "orange_fruit"
+  destination: ""
+  expanded_instruction: "Within an ApproachOrangeFruit subtree, pick up the orange fruit from the tabletop near the front of the workspace."
+  scene_context: "Tabletop clear; orange fruit resting on table, not held; nearby bowl and blue tub are open and not blocking."
+  expected_sequence: "Within the ApproachOrangeFruit subtree: approach the orange, grasp it securely (if grasp fails, retry up to 2 times), and lift it clear of the table."

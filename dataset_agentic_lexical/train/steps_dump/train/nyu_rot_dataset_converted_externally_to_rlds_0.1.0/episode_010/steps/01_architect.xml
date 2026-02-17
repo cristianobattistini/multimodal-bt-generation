@@ -1,0 +1,10 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Go to blue_cup -->
+      <Action ID="GO_TO" obj="blue_cup" />
+      <!-- Place peg inside blue_cup -->
+      <Action ID="PLACE_INSIDE" obj="blue_cup" />
+    </Sequence>
+  </BehaviorTree>
+</root>

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "scissors"
+  destination: ""
+  expanded_instruction: "Move the robot arm to the scissors on the table while avoiding the black organizer obstacle; if grasping fails, retry up to 2 times, then use push or flip to reposition the scissors as a fallback."
+  scene_context: "Scissors lie on the table near a black organizer at the rear; robot arm is free and table surface mostly clear."
+  expected_sequence: "Navigate the arm around the black organizer to reach and grasp the scissors; if the grasp fails, retry up to 2 times, then use push or flip to reposition the scissors and grasp them."

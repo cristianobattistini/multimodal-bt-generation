@@ -1,0 +1,1 @@
+pick orange from top drawer and place on counter. Check precondition and retry placing on top up to 3 times if it fails.

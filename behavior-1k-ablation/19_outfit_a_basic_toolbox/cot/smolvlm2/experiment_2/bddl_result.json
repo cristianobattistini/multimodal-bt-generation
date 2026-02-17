@@ -1,0 +1,27 @@
+{
+  "success": false,
+  "bt_success": false,
+  "bddl_goal": false,
+  "ticks": 0,
+  "duration": 0.17102885246276855,
+  "inference_time": 11.106926441192627,
+  "satisfied": [
+    "ontop(?toolbox.n.01_1, ?tabletop.n.01_1)",
+    "not(['open', '?toolbox.n.01_1'])"
+  ],
+  "unsatisfied": [
+    "inside(?drill.n.01_1, ?toolbox.n.01_1)",
+    "inside(?pliers.n.01_1, ?toolbox.n.01_1)",
+    "inside(?flashlight.n.01_1, ?toolbox.n.01_1)",
+    "inside(?allen_wrench.n.01_1, ?toolbox.n.01_1)",
+    "inside(?screwdriver.n.01_1, ?toolbox.n.01_1)"
+  ],
+  "reason": "vlm_parse_error: malformed XML - Sequence closes after OPEN, remaining actions orphaned; no GRASP actions; only NAVIGATE_TO + single PLACE_INSIDE without individual tool handling",
+  "task": "19_outfit_a_basic_toolbox",
+  "condition": "cot",
+  "model_dir": "smolvlm2",
+  "vlm_model": "smol500",
+  "inference_mode": "adapter",
+  "experiment": 2,
+  "timestamp": "20260213_235504"
+}

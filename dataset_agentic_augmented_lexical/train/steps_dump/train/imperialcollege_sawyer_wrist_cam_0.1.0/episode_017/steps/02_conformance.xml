@@ -1,0 +1,14 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to wine_glass -->
+      <Action ID="NAVIGATE_TO" obj="wine_glass" />
+      <Sequence>
+        <!-- Check wine_glass is reachable before PUSH -->
+        <Condition ID="IS_REACHABLE" obj="wine_glass" />
+        <!-- Push wine_glass forward toward front edge of table -->
+        <Action ID="PUSH" obj="wine_glass" />
+      </Sequence>
+    </Sequence>
+  </BehaviorTree>
+</root>

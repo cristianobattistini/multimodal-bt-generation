@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "red_fork"
+  destination: "table"
+  expanded_instruction: "Move the red fork so it is placed directly below the purple eggplant on the table."
+  scene_context: "Purple eggplant resting on the table; red fork on the table not held; table surface clear and reachable."
+  expected_sequence: "Pick up the red fork, move to the spot directly beneath the eggplant on the table, and place it down."

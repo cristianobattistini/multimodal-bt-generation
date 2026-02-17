@@ -1,0 +1,3 @@
+Instruction: Pour into the mug. Use a 15 second timeout for navigation.
+Allowed Actions: [GRASP(obj), POUR(obj), RELEASE(), NAVIGATE_TO(obj)]
+* Constraints: Robustness: Wrap NAVIGATE_TO with Timeout (msec="15000").

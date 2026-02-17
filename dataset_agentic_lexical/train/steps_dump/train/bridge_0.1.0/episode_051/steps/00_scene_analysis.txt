@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "pan"
+  destination: "table"
+  expanded_instruction: "Move the pan and place it on the table to the right of the bottle and banana"
+  scene_context: "Pan on left table edge, bottle near back center, banana near center; nothing held and table area clear."
+  expected_sequence: "Pick up the pan, carry it to the table area right of the bottle and banana, and set it down there."

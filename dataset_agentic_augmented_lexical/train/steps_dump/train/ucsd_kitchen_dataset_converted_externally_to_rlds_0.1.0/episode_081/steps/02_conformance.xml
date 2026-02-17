@@ -1,0 +1,17 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to faucet_handle -->
+      <Action ID="NAVIGATE_TO" obj="faucet_handle" />
+      <!-- Grasp faucet_handle -->
+      <Action ID="GRASP" obj="faucet_handle" />
+      <!-- Retry TOGGLE_ON faucet_handle up to 3 attempts -->
+      <RetryUntilSuccessful num_attempts="3">
+        <!-- Toggle on faucet_handle -->
+        <Action ID="TOGGLE_ON" obj="faucet_handle" />
+      </RetryUntilSuccessful>
+      <!-- Release -->
+      <Action ID="RELEASE" />
+    </Sequence>
+  </BehaviorTree>
+</root>

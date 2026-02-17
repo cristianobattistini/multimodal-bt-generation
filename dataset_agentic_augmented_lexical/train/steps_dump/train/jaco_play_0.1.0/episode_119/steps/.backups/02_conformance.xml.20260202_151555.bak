@@ -1,0 +1,30 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to apple_fruit -->
+      <Action ID="NAVIGATE_TO" obj="apple_fruit" />
+      <!-- Check apple_fruit is visible before GRASP -->
+      <Condition ID="IS_VISIBLE" obj="apple_fruit" />
+      <!-- Fallback: if GRASP apple_fruit fails, try alternative to reposition -->
+      <Fallback>
+        <!-- Retry GRASP apple_fruit up to 3 attempts -->
+        <RetryUntilSuccessful num_attempts="3">
+          <!-- Grasp apple_fruit -->
+          <Action ID="GRASP" obj="apple_fruit" />
+        </RetryUntilSuccessful>
+        <Sequence>
+          <!-- Push apple_fruit forward toward front edge of table -->
+          <Action ID="PUSH" obj="apple_fruit" />
+          <!-- Grasp apple_fruit -->
+          <Action ID="GRASP" obj="apple_fruit" />
+        </Sequence>
+      </Fallback>
+      <!-- Navigate to sink -->
+      <Action ID="NAVIGATE_TO" obj="sink" />
+      <!-- Place inside sink -->
+      <Action ID="PLACE_INSIDE" obj="sink" />
+      <!-- Release -->
+      <Action ID="RELEASE" />
+    </Sequence>
+  </BehaviorTree>
+</root>

@@ -1,0 +1,20 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to pink_towel -->
+      <Action ID="NAVIGATE_TO" obj="pink_towel" />
+      <!-- Grasp pink_towel -->
+      <Action ID="GRASP" obj="pink_towel" />
+      <!-- Unfold pink_towel -->
+      <Action ID="UNFOLD" obj="pink_towel" />
+      <!-- Navigate to table -->
+      <Action ID="NAVIGATE_TO" obj="table" />
+      <!-- Retry PLACE_ON_TOP table up to 3 attempts -->
+      <RetryUntilSuccessful num_attempts="3">
+        <!-- Place on table -->
+        <Action ID="PLACE_ON_TOP" obj="table" />
+      </RetryUntilSuccessful>
+      
+    </Sequence>
+  </BehaviorTree>
+</root>

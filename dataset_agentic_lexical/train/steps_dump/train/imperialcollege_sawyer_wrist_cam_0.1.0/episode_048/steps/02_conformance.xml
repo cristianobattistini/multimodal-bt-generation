@@ -1,0 +1,10 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to white_dot -->
+      <Action ID="NAVIGATE_TO" obj="white_dot"/>
+      <!-- Push white_dot toward translucent_bubble -->
+      <Action ID="PUSH" obj="white_dot"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

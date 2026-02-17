@@ -1,0 +1,28 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Approach white_item -->
+      <Action ID="APPROACH" obj="white_item" />
+      <!-- Clamp white_item -->
+      <Action ID="CLAMP" obj="white_item" />
+      <!-- Approach pan -->
+      <Action ID="APPROACH" obj="pan" />
+      <!-- Check pan is holding before PLACE_ON_TOP -->
+      <Condition ID="IS_HOLDING" obj="pan" />
+      <!-- Fallback: if PLACE_ON_TOP pan fails, try alternative to reposition -->
+      <Fallback>
+        <!-- Retry PLACE_ON_TOP pan up to 3 attempts -->
+        <RetryUntilSuccessful num_attempts="3">
+          <!-- Place on pan -->
+          <Action ID="PLACE_ON_TOP" obj="pan" />
+        </RetryUntilSuccessful>
+        <Sequence>
+          <!-- Push pan forward toward front edge of table -->
+          <Action ID="PUSH" obj="pan" />
+          <!-- Place on pan -->
+          <Action ID="PUT_ON" obj="pan" />
+        </Sequence>
+      </Fallback>
+    </Sequence>
+  </BehaviorTree>
+</root>

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "blue_bottle"
+  destination: "table"
+  expanded_instruction: "Check IS_VISIBLE on blue_bottle before grasping (retry visibility check up to 3 times within 10s if needed), then pick up the blue bottle from the table and place it down on the table."
+  scene_context: "Blue bottle sitting on the table among other objects; table is clear and no containers are closed."
+  expected_sequence: "Verify blue_bottle IS_VISIBLE (retry up to 3 times/10s), approach the blue bottle, grasp it, lift slightly, then set it down on the table; if grasp fails, push to reposition and retry."

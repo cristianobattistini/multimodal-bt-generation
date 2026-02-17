@@ -1,0 +1,19 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Timeout: NAVIGATE_TO bowl within 10s -->
+      <Timeout msec="10000">
+        <!-- Navigate to bowl -->
+        <Action ID="NAVIGATE_TO" obj="bowl" />
+      </Timeout>
+      <!-- Grasp bowl -->
+      <Action ID="GRASP" obj="bowl" />
+      <!-- Navigate to small4fbox -->
+      <Action ID="NAVIGATE_TO" obj="small4fbox" />
+      <!-- Place inside small4fbox -->
+      <Action ID="PLACE_INSIDE" obj="small4fbox" />
+      <!-- Release -->
+      <Action ID="RELEASE" />
+    </Sequence>
+  </BehaviorTree>
+</root>

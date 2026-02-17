@@ -1,0 +1,14 @@
+{
+  "decorator_type": "subtree",
+  "mixed_subtype": null,
+  "target_action_id": "NAVIGATE_TO",
+  "target_obj": "milk_dairy",
+  "parameters": {
+    "subtree_name": "ApproachMilkDairy",
+    "action_indices": [
+      0,
+      1
+    ]
+  },
+  "prompt_name": "subtree"
+}

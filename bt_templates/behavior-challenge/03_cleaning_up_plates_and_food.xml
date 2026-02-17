@@ -1,0 +1,31 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Open fridge -->
+      <Action ID="NAVIGATE_TO" obj="electric_refrigerator.n.01_1"/>
+      <Action ID="OPEN" obj="electric_refrigerator.n.01_1"/>
+      <!-- Store plate.n.04_1 with pizza -->
+      <Action ID="NAVIGATE_TO" obj="plate.n.04_1"/>
+      <Action ID="GRASP" obj="plate.n.04_1"/>
+      <Action ID="NAVIGATE_TO" obj="electric_refrigerator.n.01_1"/>
+      <Action ID="PLACE_INSIDE" obj="electric_refrigerator.n.01_1"/>
+      <!-- Store plate.n.04_2 with pizza -->
+      <Action ID="NAVIGATE_TO" obj="plate.n.04_2"/>
+      <Action ID="GRASP" obj="plate.n.04_2"/>
+      <Action ID="NAVIGATE_TO" obj="electric_refrigerator.n.01_1"/>
+      <Action ID="PLACE_INSIDE" obj="electric_refrigerator.n.01_1"/>
+      <!-- Close fridge -->
+      <Action ID="CLOSE" obj="electric_refrigerator.n.01_1"/>
+      <!-- Put bowl.n.01_1 in sink -->
+      <Action ID="NAVIGATE_TO" obj="bowl.n.01_1"/>
+      <Action ID="GRASP" obj="bowl.n.01_1"/>
+      <Action ID="NAVIGATE_TO" obj="sink.n.01_1"/>
+      <Action ID="PLACE_INSIDE" obj="sink.n.01_1"/>
+      <!-- Put bowl.n.01_2 in sink -->
+      <Action ID="NAVIGATE_TO" obj="bowl.n.01_2"/>
+      <Action ID="GRASP" obj="bowl.n.01_2"/>
+      <Action ID="NAVIGATE_TO" obj="sink.n.01_1"/>
+      <Action ID="PLACE_INSIDE" obj="sink.n.01_1"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

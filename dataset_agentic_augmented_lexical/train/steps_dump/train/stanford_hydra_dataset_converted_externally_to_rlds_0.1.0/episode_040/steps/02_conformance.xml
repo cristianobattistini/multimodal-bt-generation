@@ -1,0 +1,27 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to basin -->
+      <Action ID="NAVIGATE_TO" obj="basin" />
+      <!-- Grasp dishes -->
+      <Action ID="GRASP" obj="dishes" />
+      <!-- Navigate to dish_rack -->
+      <Action ID="NAVIGATE_TO" obj="dish_rack" />
+      <!-- Fallback: if PLACE_INSIDE dish_rack fails, try alternative to reposition -->
+      <Fallback>
+        <!-- Retry PLACE_INSIDE dish_rack up to 2 attempts -->
+        <RetryUntilSuccessful num_attempts="2">
+          <!-- Place inside dish_rack -->
+          <Action ID="PLACE_INSIDE" obj="dish_rack" />
+        </RetryUntilSuccessful>
+        <Sequence>
+          <!-- Push dish_rack forward toward front edge of table -->
+          <Action ID="PUSH" obj="dish_rack" />
+          <!-- Place inside dish_rack -->
+          <Action ID="PLACE_INSIDE" obj="dish_rack" />
+        </Sequence>
+      </Fallback>
+      
+    </Sequence>
+  </BehaviorTree>
+</root>

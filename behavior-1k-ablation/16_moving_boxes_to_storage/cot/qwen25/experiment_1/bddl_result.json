@@ -1,0 +1,20 @@
+{
+  "success": false,
+  "bt_success": true,
+  "bddl_goal": false,
+  "ticks": 1,
+  "duration": 52.5456109046936,
+  "inference_time": 33.296156883239746,
+  "satisfied": [],
+  "unsatisfied": [
+    "or(['and', ['ontop', '?storage_container.n.01_1', '?floor.n.01_2'], ['ontop', '?storage_container.n.01_2', '?storage_container.n.01_1']], ['and', ['ontop', '?storage_container.n.01_2', '?floor.n.01_2'], ['ontop', '?storage_container.n.01_1', '?storage_container.n.01_2']])"
+  ],
+  "task": "16_moving_boxes_to_storage",
+  "condition": "cot",
+  "model_dir": "qwen25",
+  "vlm_model": "qwen",
+  "inference_mode": "adapter",
+  "experiment": 1,
+  "timestamp": "20260213_230131",
+  "reason": "Wrong plan: placed both containers on garage_floor instead of stacking. Missing PLACE_ON_TOP(storage_container_1) for the second container."
+}

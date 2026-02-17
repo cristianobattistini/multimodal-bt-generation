@@ -1,0 +1,14 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Move to silver_vessel -->
+      <Action ID="MOVE_TO" obj="silver_vessel" />
+      <!-- Pick silver_vessel -->
+      <Action ID="PICK" obj="silver_vessel" />
+      <!-- Navigate to table (place beneath spoon at back_left) -->
+      <Action ID="NAVIGATE_TO" obj="table" />
+      <!-- Set on table -->
+      <Action ID="SET_ON" obj="table" />
+    </Sequence>
+  </BehaviorTree>
+</root>

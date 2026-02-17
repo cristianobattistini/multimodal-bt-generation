@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "butter_dairy"
+  destination: "black_bowl"
+  expanded_instruction: "Pick up the butter dairy from the white plate and place it into the black bowl."
+  scene_context: "Butter dairy on a white plate; black bowl is empty and on the table; nothing blocking path."
+  expected_sequence: "Reach to the butter dairy on the plate, grasp it, move to the black bowl, and place it inside."

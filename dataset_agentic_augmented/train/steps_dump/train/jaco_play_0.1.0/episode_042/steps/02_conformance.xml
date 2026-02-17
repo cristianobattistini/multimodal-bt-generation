@@ -1,0 +1,21 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to blue_tray -->
+      <Action ID="NAVIGATE_TO" obj="blue_tray" />
+      <!-- Navigate to apple_fruit -->
+      <Action ID="NAVIGATE_TO" obj="apple_fruit" />
+      <!-- Fallback: if GRASP apple_fruit fails, try PUSH, FLIP to reposition -->
+      <Fallback>
+        <!-- Grasp apple_fruit -->
+        <Action ID="GRASP" obj="apple_fruit" />
+        <Sequence>
+          <!-- Push apple_fruit forward toward front edge of table -->
+          <Action ID="PUSH" obj="apple_fruit" />
+          <!-- Grasp apple_fruit -->
+          <Action ID="GRASP" obj="apple_fruit" />
+        </Sequence>
+      </Fallback>
+    </Sequence>
+  </BehaviorTree>
+</root>

@@ -1,0 +1,1 @@
+Place the fish, sausage, and tomato into the frying pan. Only navigate to the frying pan if it is visible.

@@ -1,0 +1,12 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Move to pen_holder -->
+      <Action ID="MOVE_TO" obj="pen_holder" />
+      <!-- Approach scissors -->
+      <Action ID="APPROACH" obj="scissors" />
+      <!-- Grip scissors -->
+      <Action ID="GRIP" obj="scissors" />
+    </Sequence>
+  </BehaviorTree>
+</root>

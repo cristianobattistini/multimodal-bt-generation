@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "faucet"
+  destination: ""
+  expanded_instruction: "Turn on the sink faucet by operating the right (blue) knob next to the curved spout"
+  scene_context: "Sink with curved faucet and two knobs (red left, blue right); knobs reachable; nothing held."
+  expected_sequence: "Move the arm to the right blue knob, grasp and rotate or flip it to open the faucet until water flows."

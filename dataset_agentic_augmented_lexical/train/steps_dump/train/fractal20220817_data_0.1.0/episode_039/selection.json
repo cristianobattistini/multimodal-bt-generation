@@ -1,0 +1,14 @@
+{
+  "decorator_type": "fallback",
+  "mixed_subtype": null,
+  "target_action_id": "PLACE_ON_TOP",
+  "target_obj": "counter",
+  "parameters": {
+    "valid_fallbacks": [
+      "PUSH"
+    ],
+    "valid_fallbacks_str": "PUSH",
+    "fallback_hints": "PUSH clears obstacles from the destination"
+  },
+  "prompt_name": "fallback"
+}

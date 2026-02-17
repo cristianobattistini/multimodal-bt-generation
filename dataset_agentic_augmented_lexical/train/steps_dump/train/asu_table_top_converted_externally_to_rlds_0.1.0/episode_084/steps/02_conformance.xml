@@ -1,0 +1,21 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Execute subtree ApproachGreenGlassBottle -->
+      <SubTree ID="ApproachGreenGlassBottle" />
+      <!-- Go to table -->
+      <Action ID="GO_TO" obj="table" />
+      <!-- Lay on table -->
+      <Action ID="LAY_ON" obj="table" />
+    </Sequence>
+  </BehaviorTree>
+  <!-- Subtree definition ApproachGreenGlassBottle -->
+  <BehaviorTree ID="ApproachGreenGlassBottle">
+    <Sequence>
+      <!-- Go to green_glass_bottle -->
+      <Action ID="GO_TO" obj="green_glass_bottle" />
+      <!-- Grasp green_glass_bottle -->
+      <Action ID="GRASP" obj="green_glass_bottle" />
+    </Sequence>
+  </BehaviorTree>
+</root>

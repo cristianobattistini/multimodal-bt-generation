@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "eggplant"
+  destination: "yellow_cloth"
+  expanded_instruction: "Pick up the eggplant and place it on top of the yellow cloth on the table. Before placing, check IS_HOLDING on the yellow_cloth; if placing fails, retry the PLACE_ON_TOP action up to 3 times."
+  scene_context: "Eggplant sits near the left side of the table by a folded yellow_cloth; cloth is on the table and clear; nothing is held."
+  expected_sequence: "Reach the eggplant, grasp it, move over the yellow_cloth, check IS_HOLDING on yellow_cloth before PLACE_ON_TOP, and place the eggplant on top of the cloth (retry PLACE_ON_TOP up to 3 times if it fails)."

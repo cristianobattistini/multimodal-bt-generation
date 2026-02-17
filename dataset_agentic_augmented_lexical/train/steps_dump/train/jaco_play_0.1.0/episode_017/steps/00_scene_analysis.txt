@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "long_bread"
+  destination: ""
+  expanded_instruction: "Pick up the long bread from the blue tray on the table; if the grasp fails, retry up to 3 times."
+  scene_context: "Long bread resting on a blue tray on the table; tray reachable and not covered; bread not held."
+  expected_sequence: "Move to the tray, grasp the long bread (retry up to 3 times on failure), and lift it off the tray."

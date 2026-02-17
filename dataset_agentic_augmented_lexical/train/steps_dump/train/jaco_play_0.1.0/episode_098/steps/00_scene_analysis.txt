@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "green_cup"
+  destination: "dish_rack"
+  expanded_instruction: "Pick up the green cup and place it upright into the blue dish_rack on the right side of the table. Before placing, verify the dish_rack is empty (check IS_EMPTY); if not empty, retry the check up to 3 times within a 10s timeout or wait/clear before placing."
+  scene_context: "Green cup is held by the robot above the table; blue dish_rack is empty and reachable; other items on table do not block path."
+  expected_sequence: "Move the held green cup over the dish_rack and place it inside upright. Prior to PLACE_INSIDE, perform IS_EMPTY on the dish_rack and retry up to 3 times (10s) if it is not empty."

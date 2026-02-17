@@ -1,0 +1,18 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to brown_teapot -->
+      <Action ID="NAVIGATE_TO" obj="brown_teapot" />
+      <!-- Grasp brown_teapot -->
+      <Action ID="GRASP" obj="brown_teapot" />
+      <!-- Navigate to mug -->
+      <Action ID="NAVIGATE_TO" obj="mug" />
+      <!-- Pour into mug -->
+      <Action ID="POUR" obj="mug" />
+      <!-- Navigate to table -->
+      <Action ID="NAVIGATE_TO" obj="table" />
+      <!-- Put on table -->
+      <Action ID="PUT_ON" obj="table" />
+    </Sequence>
+  </BehaviorTree>
+</root>

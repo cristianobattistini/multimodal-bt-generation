@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "milk_dairy"
+  destination: ""
+  expanded_instruction: "Pick up the milk_dairy (small blue carton) from the floor next to the robot base, retrying the grasp up to 5 times if it fails"
+  scene_context: "Milk_dairy on floor beside robot base; blue tray with orange and yellow cup nearby; nothing is held."
+  expected_sequence: "Move to the milk_dairy, grasp the carton, and lift it clear of the floor; if a grasp attempt fails, retry up to 5 times."

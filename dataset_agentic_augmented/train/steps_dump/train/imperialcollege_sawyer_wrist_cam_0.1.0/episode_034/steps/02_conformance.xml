@@ -1,0 +1,13 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Timeout: NAVIGATE_TO apple within 20s -->
+      <Timeout msec="20000">
+        <!-- Navigate to apple -->
+        <Action ID="NAVIGATE_TO" obj="apple" />
+      </Timeout>
+      <!-- Grasp apple -->
+      <Action ID="GRASP" obj="apple" />
+    </Sequence>
+  </BehaviorTree>
+</root>

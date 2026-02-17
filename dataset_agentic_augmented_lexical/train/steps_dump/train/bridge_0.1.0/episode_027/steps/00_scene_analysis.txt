@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "yellow_towel"
+  destination: "table"
+  expanded_instruction: "Verify the table is visible (IS_VISIBLE) before navigating, then pick up the yellow towel and place it on the table to the left of the colander."
+  scene_context: "Yellow towel folded on table near colander; towel not held; table surface is reachable and not blocked."
+  expected_sequence: "Check table visibility (IS_VISIBLE) and retry up to 3 times within a 10s timeout before navigating; grasp the yellow towel, shift it slightly left of the colander on the table, and place it down (if grasp fails, push to reposition)."

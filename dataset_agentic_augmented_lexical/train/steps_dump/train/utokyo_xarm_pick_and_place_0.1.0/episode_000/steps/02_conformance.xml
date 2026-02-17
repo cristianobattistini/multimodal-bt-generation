@@ -1,0 +1,29 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to white_plate -->
+      <Action ID="NAVIGATE_TO" obj="white_plate" />
+      <!-- Fallback: if GRASP white_plate fails, try alternative to reposition -->
+      <Fallback>
+        <!-- Retry GRASP white_plate up to 2 attempts -->
+        <RetryUntilSuccessful num_attempts="2">
+          <!-- Timeout: GRASP white_plate within 15s -->
+          <Timeout msec="15000">
+            <!-- Grasp white_plate -->
+            <Action ID="GRASP" obj="white_plate" />
+          </Timeout>
+        </RetryUntilSuccessful>
+        <Sequence>
+          <!-- Push white_plate forward toward front edge of table -->
+          <Action ID="NUDGE" obj="white_plate" />
+          <!-- Grasp white_plate -->
+          <Action ID="GRAB" obj="white_plate" />
+        </Sequence>
+      </Fallback>
+      <!-- Navigate to red_plate -->
+      <Action ID="NAVIGATE_TO" obj="red_plate" />
+      <!-- Nudge white_plate -->
+      <Action ID="PLACE_ON_TOP" obj="red_plate" />
+    </Sequence>
+  </BehaviorTree>
+</root>

@@ -1,0 +1,19 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Execute subtree ApproachTouchscreen -->
+      <SubTree ID="ApproachTouchscreen" />
+      <!-- Wipe touchscreen -->
+      <Action ID="WIPE" obj="touchscreen" />
+    </Sequence>
+  </BehaviorTree>
+  <!-- Subtree definition ApproachTouchscreen -->
+  <BehaviorTree ID="ApproachTouchscreen">
+    <Sequence>
+      <!-- Navigate to touchscreen -->
+      <Action ID="NAVIGATE_TO" obj="touchscreen" />
+      <!-- Grasp touchscreen -->
+      <Action ID="GRASP" obj="touchscreen" />
+    </Sequence>
+  </BehaviorTree>
+</root>

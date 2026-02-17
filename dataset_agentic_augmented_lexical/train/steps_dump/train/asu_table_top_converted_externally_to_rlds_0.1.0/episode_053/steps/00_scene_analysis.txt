@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "coke_bottle"
+  destination: ""
+  expanded_instruction: "Check IS_REACHABLE on the coke bottle before grasping; if not reachable, reposition and retry up to 3 times, then pick up the coke bottle from the table and hold it in the robot hand."
+  scene_context: "Coke bottle sits on the table near the center, not held; table clear; no containers open."
+  expected_sequence: "Verify coke bottle is reachable (IS_REACHABLE); if unreachable, reposition and retry up to 3 times, then move to the coke bottle, grasp it, and lift it to a hold position in the robot hand."

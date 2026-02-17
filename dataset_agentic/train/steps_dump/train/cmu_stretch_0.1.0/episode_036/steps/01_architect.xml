@@ -1,0 +1,10 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to dishwasher_door -->
+      <Action ID="NAVIGATE_TO" obj="dishwasher_door"/>
+      <!-- Open dishwasher_door (pull handle to open until ajar) -->
+      <Action ID="OPEN" obj="dishwasher_door"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

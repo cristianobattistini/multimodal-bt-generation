@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "dishes"
+  destination: "dish_rack"
+  expanded_instruction: "Pick up the dishes (plate and cup) from the drying mat and place them into the dish_rack. Before each PLACE_INSIDE action, check that dish_rack IS_EMPTY; if not empty, wait up to 10s and retry the check up to 3 times before proceeding."
+  scene_context: "Dish_rack is empty and open; plate and cup sit on the drying mat to the right; nothing is held."
+  expected_sequence: "Check dish_rack IS_EMPTY, then pick up the plate and place it into the rack slots; check dish_rack IS_EMPTY again, then pick up the cup and place it upright in the rack (if a PLACE fails, retry up to 2 times)."

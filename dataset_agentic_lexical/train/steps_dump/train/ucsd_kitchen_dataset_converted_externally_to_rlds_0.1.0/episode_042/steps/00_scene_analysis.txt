@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "faucet"
+  destination: ""
+  expanded_instruction: "Turn on the faucet at the sink by operating its handle so water flows"
+  scene_context: "Faucet mounted on counter with red and blue handles present; faucet is off and not held."
+  expected_sequence: "Reach the faucet, operate the handle(s) to open the water flow, and stop when water is running."

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "blue_pen"
+  destination: ""
+  expanded_instruction: "Reach and grasp the blue pen on the table while avoiding the stack of books obstacle between the arm and the pen."
+  scene_context: "Robot arm not holding anything; blue pen upright in a small cup on the table; stack of books between arm and pen; table otherwise clear."
+  expected_sequence: "Move the arm around the book stack and reach into the cup to grasp the blue pen."

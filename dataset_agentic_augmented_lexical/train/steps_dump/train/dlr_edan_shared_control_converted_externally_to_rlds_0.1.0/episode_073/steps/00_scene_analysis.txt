@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "die"
+  destination: ""
+  expanded_instruction: "Pick up the die resting on top of the black shelving unit: verify it is reachable first, then reach, grasp, and lift it; if grasp fails, retry (up to 3 times, within a 10s timeout) and use a push or flip to reposition the object as a fallback."
+  scene_context: "Die on top surface of black shelf; shelf compartments open; robot not holding anything; top surface reachable."
+  expected_sequence: "Move to the shelf, check that the die is reachable, reach to the die on the top surface, grasp it, and lift it; if grasp fails, retry up to 3 times and use push or flip to reposition the die before attempting the grasp again."

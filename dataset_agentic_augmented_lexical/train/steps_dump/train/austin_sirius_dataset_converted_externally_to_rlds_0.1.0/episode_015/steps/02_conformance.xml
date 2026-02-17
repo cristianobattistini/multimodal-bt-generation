@@ -1,0 +1,31 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to kcup_holder -->
+      <Action ID="NAVIGATE_TO" obj="kcup_holder" />
+      <!-- Open kcup_holder -->
+      <Action ID="OPEN" obj="kcup_holder" />
+      <!-- Navigate to kcup -->
+      <Action ID="NAVIGATE_TO" obj="kcup" />
+      <!-- Check kcup is visible before GRASP -->
+      <Condition ID="IS_VISIBLE" obj="kcup" />
+      <!-- Fallback: if GRASP kcup fails, try alternative to reposition -->
+      <Fallback>
+        <!-- Grasp kcup -->
+        <Action ID="GRASP" obj="kcup" />
+        <Sequence>
+          <!-- Push kcup forward toward front edge of table -->
+          <Action ID="PUSH" obj="kcup" />
+          <!-- Grasp kcup -->
+          <Action ID="GRASP" obj="kcup" />
+        </Sequence>
+      </Fallback>
+      <!-- Navigate to kcup_holder -->
+      <Action ID="NAVIGATE_TO" obj="kcup_holder" />
+      <!-- Place inside kcup_holder -->
+      <Action ID="PLACE_INSIDE" obj="kcup_holder" />
+      <!-- Close kcup_holder -->
+      <Action ID="CLOSE" obj="kcup_holder" />
+    </Sequence>
+  </BehaviorTree>
+</root>

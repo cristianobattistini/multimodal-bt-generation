@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "banana"
+  destination: ""
+  expanded_instruction: "Pick the banana from the white bowl on the counter."
+  scene_context: "White bowl on counter contains several bananas; bowl is open and bananas are not held; gripper approaching."
+  expected_sequence: "Reach into the bowl, grasp a banana, and lift it out of the bowl."

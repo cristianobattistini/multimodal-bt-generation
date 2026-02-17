@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "blue_cup"
+  destination: "brown_cup"
+  expanded_instruction: "Pick up the blue cup from the table and place it into the brown cup on the table, retrying the place-inside action up to 4 times if it fails."
+  scene_context: "Blue cup left on table, brown cup right on table; both upright and reachable; no lids or obstacles."
+  expected_sequence: "Grasp the blue cup, lift and move it over the brown cup, lower it inside and release; if placing inside fails, retry the place-inside step up to 4 times."

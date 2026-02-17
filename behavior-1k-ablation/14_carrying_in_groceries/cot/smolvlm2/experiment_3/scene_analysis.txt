@@ -1,0 +1,7 @@
+scene_analysis:
+  target: "sack"
+  destination: "electric_refrigerator"
+  expanded_instruction: "Reach to the sack, grasp it, lift it, and place it beside the fridge."
+  scene_context: "Sack is open and on the floor near the car; fridge is closed and visible."
+  expected_sequence: "Reach to the sack, grasp it, lift it, and place it beside the fridge."
+Plan:

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "red_mug"
+  destination: ""
+  expanded_instruction: "Pick up the red mug from the front edge of the black cabinet top."
+  scene_context: "Red mug on front edge of cabinet top, not held; three white mugs nearby; cabinet clear and accessible."
+  expected_sequence: "Approach the cabinet, grasp the red mug from the front edge, and lift it clear of the surface."

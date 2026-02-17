@@ -1,0 +1,17 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Execute subtree ApproachTowel -->
+      <SubTree ID="ApproachTowel" />
+    </Sequence>
+  </BehaviorTree>
+  <!-- Subtree definition ApproachTowel -->
+  <BehaviorTree ID="ApproachTowel">
+    <Sequence>
+      <!-- Navigate to towel -->
+      <Action ID="NAVIGATE_TO" obj="towel" />
+      <!-- Grasp towel -->
+      <Action ID="GRASP" obj="towel" />
+    </Sequence>
+  </BehaviorTree>
+</root>

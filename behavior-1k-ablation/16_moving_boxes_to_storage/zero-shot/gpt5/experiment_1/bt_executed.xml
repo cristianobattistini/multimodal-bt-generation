@@ -1,0 +1,18 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence name="open_and_move_stack">
+      <NAVIGATE_TO obj="door"/>
+      <OPEN obj="door"/>
+
+      <NAVIGATE_TO obj="storage_container_1"/>
+      <GRASP obj="storage_container_1"/>
+      <NAVIGATE_TO obj="garage_floor"/>
+      <PLACE_ON_TOP obj="garage_floor"/>
+
+      <NAVIGATE_TO obj="storage_container_2"/>
+      <GRASP obj="storage_container_2"/>
+      <NAVIGATE_TO obj="storage_container_1"/>
+      <PLACE_ON_TOP obj="storage_container_1"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "maroon_object"
+  destination: "table"
+  expanded_instruction: "Using an ApproachTable subtree, place the maroon object currently held by the robot down onto the table; if the approach or placement fails, retry up to 3 times with a 10s timeout and if the grasp slips push to reposition before retrying."
+  scene_context: "Maroon object is held by the robot; table surface is clear on the right side."
+  expected_sequence: "ApproachTable subtree: Move the arm over a clear spot on the table and set the maroon object down; complete within a 10s timeout, retry up to 3 times on failure, and if grasp fails push to reposition before retry."

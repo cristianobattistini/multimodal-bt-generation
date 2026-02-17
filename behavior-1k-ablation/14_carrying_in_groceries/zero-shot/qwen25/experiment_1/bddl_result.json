@@ -1,0 +1,22 @@
+{
+  "success": true,
+  "bt_success": true,
+  "bddl_goal": true,
+  "ticks": 1,
+  "duration": 225.23858666419983,
+  "inference_time": 80.18297982215881,
+  "satisfied": [
+    "exists(['?electric_refrigerator.n.01', '-', 'electric_refrigerator.n.01'], ['and', ['inside', '?beefsteak_tomato.n.01_1', '?electric_refrigerator.n.01'], ['inside', '?carton__of__milk.n.01_1', '?electric_refrigerator.n.01']])",
+    "not(['open', 'car.n.01_1'])",
+    "not(['open', 'electric_refrigerator.n.01_1'])"
+  ],
+  "unsatisfied": [],
+  "task": "14_carrying_in_groceries",
+  "condition": "zero-shot",
+  "model_dir": "qwen25",
+  "vlm_model": "qwen",
+  "inference_mode": "adapter",
+  "experiment": 1,
+  "timestamp": "20260215_162104",
+  "reason": "Correct plan: OPEN fridge before PLACE_INSIDE, groceries stored inside, CLOSE fridge and car. Sack placed next to car instead of fridge (minor, does not affect BDDL). All 3 goals satisfied."
+}

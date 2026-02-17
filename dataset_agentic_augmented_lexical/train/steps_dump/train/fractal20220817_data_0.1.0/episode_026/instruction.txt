@@ -1,0 +1,1 @@
+move pepsi can near blue plastic bottle. Only navigate to the object if it is visible.

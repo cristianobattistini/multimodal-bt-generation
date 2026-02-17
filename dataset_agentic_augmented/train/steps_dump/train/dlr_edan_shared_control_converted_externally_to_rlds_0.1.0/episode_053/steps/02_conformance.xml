@@ -1,0 +1,17 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to small_shelf -->
+      <Action ID="NAVIGATE_TO" obj="small_shelf" />
+      <!-- Check green_apple is reachable before NAVIGATE_TO -->
+      <Condition ID="IS_REACHABLE" obj="green_apple" />
+      <!-- Timeout: NAVIGATE_TO green_apple within 15s -->
+      <Timeout msec="15000">
+        <!-- Navigate to green_apple -->
+        <Action ID="NAVIGATE_TO" obj="green_apple" />
+      </Timeout>
+      <!-- Grasp green_apple -->
+      <Action ID="GRASP" obj="green_apple" />
+    </Sequence>
+  </BehaviorTree>
+</root>

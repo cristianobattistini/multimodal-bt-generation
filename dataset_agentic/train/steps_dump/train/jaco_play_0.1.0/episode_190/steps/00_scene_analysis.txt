@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "long_bread"
+  destination: "sink"
+  expanded_instruction: "Pick up the long bread from the table near the robot and place it into the blue sink."
+  scene_context: "Long_bread on table near robot base, sink (blue) is empty and reachable, nothing is currently held."
+  expected_sequence: "Approach and grasp the long_bread, carry it over to the sink, and set it down inside the sink."

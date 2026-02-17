@@ -1,0 +1,18 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to eggplant -->
+      <Action ID="NAVIGATE_TO" obj="eggplant" />
+      <Sequence>
+        <!-- Check eggplant is visible before GRASP -->
+        <Condition ID="IS_VISIBLE" obj="eggplant" />
+        <!-- Grasp eggplant -->
+        <Action ID="GRASP" obj="eggplant" />
+      </Sequence>
+      <!-- Navigate to metal_pot -->
+      <Action ID="NAVIGATE_TO" obj="metal_pot" />
+      <!-- Place inside metal_pot -->
+      <Action ID="PLACE_INSIDE" obj="metal_pot" />
+    </Sequence>
+  </BehaviorTree>
+</root>

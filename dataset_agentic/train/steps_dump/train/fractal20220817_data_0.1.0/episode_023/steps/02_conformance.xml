@@ -1,0 +1,10 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to bottom_drawer -->
+      <Action ID="NAVIGATE_TO" obj="bottom_drawer"/>
+      <!-- Push bottom_drawer closed until flush -->
+      <Action ID="PUSH" obj="bottom_drawer"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

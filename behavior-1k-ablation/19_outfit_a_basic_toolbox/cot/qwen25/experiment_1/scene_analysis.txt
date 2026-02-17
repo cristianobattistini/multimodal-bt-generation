@@ -1,0 +1,7 @@
+scene_analysis:
+  target: "["drill", "pliers", "flashlight", "allen_wrench", "screwdriver"]"
+  destination: "toolbox"
+  expanded_instruction: "Pick up the drill, pliers, flashlight, allen_wrench, and screwdriver from the tabletop (each one separately) and place them into the open toolbox; once all items are placed, close the toolbox."
+  scene_context: "Toolbox is closed; drill, pliers, flashlight, allen_wrench, and screwdriver lie on the tabletop; toolbox reachable and clear."
+  expected_sequence: "Open the toolbox, then for each tool (drill, pliers, flashlight, allen_wrench, screwdriver) move to it on the table, pick it up, move to the toolbox, and place it inside (each placement), and after placing all tools close the toolbox."
+Plan:

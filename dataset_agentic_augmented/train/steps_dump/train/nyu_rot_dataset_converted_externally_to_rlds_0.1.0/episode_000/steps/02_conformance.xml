@@ -1,0 +1,13 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to board -->
+      <Action ID="NAVIGATE_TO" obj="board" />
+      <!-- Timeout: WIPE board within 15s -->
+      <Timeout msec="15000">
+        <!-- Wipe board -->
+        <Action ID="WIPE" obj="board" />
+      </Timeout>
+    </Sequence>
+  </BehaviorTree>
+</root>

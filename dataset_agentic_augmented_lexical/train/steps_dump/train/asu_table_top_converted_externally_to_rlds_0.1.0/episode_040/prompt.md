@@ -1,0 +1,2 @@
+Instruction: push white carton. Use a 15 second timeout for navigation.
+Allowed Actions: [NAVIGATE_TO(obj), PUSH(obj)]

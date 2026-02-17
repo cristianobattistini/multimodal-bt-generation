@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "coke_can"
+  destination: "bottom_drawer"
+  expanded_instruction: "Group actions into an ApproachCokeCan subtree: pick up the coke can from the table surface and place it into the bottom drawer, with a 10s timeout and retry up to 3 times; if grasp fails, push to reposition and retry."
+  scene_context: "Bottom drawer is open; coke_can on table near front; drawer interior clear; robot not holding the can."
+  expected_sequence: "Within an ApproachCokeCan subtree: approach and grasp the coke can (retry up to 3 times, 10s timeout; if grasp fails, push to reposition), move over the open bottom drawer, and place the can inside."

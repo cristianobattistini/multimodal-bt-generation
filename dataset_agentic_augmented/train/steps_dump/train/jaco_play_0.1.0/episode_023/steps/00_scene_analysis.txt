@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "square_bread"
+  destination: ""
+  expanded_instruction: "Pick up the square bread from the table next to the orange toy and blue bin. Verify the square_bread is visible before attempting to grasp it; if the grasp fails, retry up to 2 times."
+  scene_context: "Square_bread on table beside orange toy and blue bin; blue bin open; robot arm not holding anything."
+  expected_sequence: "Move the arm to the square_bread, verify it is visible before grasping, grasp it securely (retry up to 2 times on failure), and lift it clear of the table."

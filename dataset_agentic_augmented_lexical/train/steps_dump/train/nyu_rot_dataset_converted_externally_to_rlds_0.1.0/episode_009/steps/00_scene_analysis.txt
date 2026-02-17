@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "peg"
+  destination: "cup"
+  expanded_instruction: "Insert the peg held by the robot into the blue cup on the table, retrying the placement up to 3 times if it fails and, if still unsuccessful, use a push to reposition the peg and try placement again."
+  scene_context: "Peg attached to robot end-effector; blue cup on table, open and reachable; table clear."
+  expected_sequence: "Align the peg above the cup, lower it straight down, and insert it into the cup; retry the PLACE_INSIDE action up to 3 times on failure, and if PLACE_INSIDE fails use a PUSH to reposition the peg then attempt placement again."

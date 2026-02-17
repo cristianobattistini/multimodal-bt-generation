@@ -1,0 +1,37 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Execute subtree ApproachBread -->
+      <SubTree ID="ApproachBread" />
+      <!-- Navigate to serving_area -->
+      <Action ID="NAVIGATE_TO" obj="serving_area" />
+      <!-- Place on serving_area -->
+      <Action ID="PLACE_ON_TOP" obj="serving_area" />
+      <!-- Navigate to butter -->
+      <Action ID="NAVIGATE_TO" obj="butter" />
+      <!-- Grasp butter -->
+      <Action ID="GRASP" obj="butter" />
+      <!-- Navigate to serving_area -->
+      <Action ID="NAVIGATE_TO" obj="serving_area" />
+      <!-- Place on serving_area -->
+      <Action ID="PLACE_ON_TOP" obj="serving_area" />
+      <!-- Navigate to milk -->
+      <Action ID="NAVIGATE_TO" obj="milk" />
+      <!-- Grasp milk -->
+      <Action ID="GRASP" obj="milk" />
+      <!-- Navigate to serving_area -->
+      <Action ID="NAVIGATE_TO" obj="serving_area" />
+      <!-- Place on serving_area -->
+      <Action ID="PLACE_ON_TOP" obj="serving_area" />
+    </Sequence>
+  </BehaviorTree>
+  <!-- Subtree definition ApproachBread -->
+  <BehaviorTree ID="ApproachBread">
+    <Sequence>
+      <!-- Navigate to bread -->
+      <Action ID="NAVIGATE_TO" obj="bread" />
+      <!-- Grasp bread -->
+      <Action ID="GRASP" obj="bread" />
+    </Sequence>
+  </BehaviorTree>
+</root>

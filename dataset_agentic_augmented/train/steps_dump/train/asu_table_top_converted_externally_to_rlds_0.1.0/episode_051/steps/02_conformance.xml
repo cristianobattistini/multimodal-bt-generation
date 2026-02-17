@@ -1,0 +1,14 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to cocacola_can -->
+      <Action ID="NAVIGATE_TO" obj="cocacola_can" />
+      <Sequence>
+        <!-- Check cocacola_can is visible before GRASP -->
+        <Condition ID="IS_VISIBLE" obj="cocacola_can" />
+        <!-- Grasp cocacola_can -->
+        <Action ID="GRASP" obj="cocacola_can" />
+      </Sequence>
+    </Sequence>
+  </BehaviorTree>
+</root>

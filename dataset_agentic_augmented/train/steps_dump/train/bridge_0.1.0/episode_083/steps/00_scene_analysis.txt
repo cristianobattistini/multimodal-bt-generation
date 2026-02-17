@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "metal_pot"
+  destination: "blue_cloth"
+  expanded_instruction: "Use the ApproachMetalPot subtree to group approach actions: pick up the metal pot from the table (if grasp fails, retry up to 3 times and push to reposition) and place it on the blue cloth within a 10s timeout."
+  scene_context: "Metal pot on table, not held; blue cloth on table and clear; no containers closed."
+  expected_sequence: "Within the ApproachMetalPot subtree, lift the metal pot, move it over the blue cloth, and place it down on the cloth (retry grasp up to 3 times, timeout 10s; if grasp fails, push to reposition)."

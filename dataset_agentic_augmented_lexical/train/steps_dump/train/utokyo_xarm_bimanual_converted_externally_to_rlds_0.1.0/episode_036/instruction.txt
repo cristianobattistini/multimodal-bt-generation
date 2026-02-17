@@ -1,0 +1,1 @@
+Unfold a wrinkled towel. If placing on top fails, push to clear or reposition obstacles on the destination and retry placing.

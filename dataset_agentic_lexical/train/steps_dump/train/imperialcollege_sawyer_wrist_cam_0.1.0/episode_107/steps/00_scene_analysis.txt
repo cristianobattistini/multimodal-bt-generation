@@ -1,0 +1,6 @@
+scene_analysis:
+  target: ["bowl_1", "bowl_2"]
+  destination: "bowl_1"
+  expanded_instruction: "Pick up the smaller bowl and place it into the other bowl on the table to stack them."
+  scene_context: "Two bowls on the table, both upright and reachable; table surface is clear."
+  expected_sequence: "Lift one bowl, align it above the other, and lower it into the other bowl to stack them."

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "pot"
+  destination: "table"
+  expanded_instruction: "Pick up the metal pot from the right side of the table and place it on the left edge of the table, ensuring navigation uses NAVIGATE_TO with a 15s timeout."
+  scene_context: "Pot resting on right side of table; table surface mostly clear; pot not held."
+  expected_sequence: "Approach the pot, lift it, move to the table's left edge, and place the pot there, with each NAVIGATE_TO step completed within a 15s timeout."

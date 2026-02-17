@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "dishwasher_door"
+  destination: ""
+  expanded_instruction: "Grasp the dishwasher door handle and pull the dishwasher door open until it lowers fully."
+  scene_context: "Dishwasher door is closed and latched; handle visible; robot arm not holding the door."
+  expected_sequence: "Move to the dishwasher, grasp the handle, and pull the door down until it is open."

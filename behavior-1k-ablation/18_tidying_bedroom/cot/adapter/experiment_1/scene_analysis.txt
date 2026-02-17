@@ -1,0 +1,7 @@
+scene_analysis:
+  target: ["book", "sandals"]
+  destination: ["bed", "nightstand"]
+  expanded_instruction: "Pick up the book from the bed and place it on either nightstand, then place the two sandals on the bed so they are side by side."
+  scene_context: "Book on bed; nightstand clear and reachable; two sandals on floor next to bed; no containers open."
+  expected_sequence: "Pick up the book and place it on either nightstand, then pick up the first sandal and place it beside the bed so it is next to the bed, and then pick up the second sandal and place it beside the first sandal on the bed."
+Plan:

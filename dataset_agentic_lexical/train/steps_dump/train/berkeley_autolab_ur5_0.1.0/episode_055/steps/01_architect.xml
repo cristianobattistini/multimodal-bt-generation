@@ -1,0 +1,14 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to red_bowl -->
+      <Action ID="NAVIGATE_TO" obj="red_bowl" />
+      <!-- Pick tiger -->
+      <Action ID="PICK" obj="tiger" />
+      <!-- Move to grey_bowl -->
+      <Action ID="MOVE_TO" obj="grey_bowl" />
+      <!-- Put in grey_bowl -->
+      <Action ID="PUT_IN" obj="grey_bowl" />
+    </Sequence>
+  </BehaviorTree>
+</root>

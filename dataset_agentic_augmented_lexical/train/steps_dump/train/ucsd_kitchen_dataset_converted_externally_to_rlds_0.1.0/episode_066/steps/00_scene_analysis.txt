@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "white_box"
+  destination: "sink"
+  expanded_instruction: "Use an ApproachWhiteBox subtree to approach and pick up the white box from the counter next to the faucet (retry approach up to 3 times within 10s), then place it into the sink."
+  scene_context: "White_box on counter beside faucet; sink is open and clear; robot not holding the object."
+  expected_sequence: "Execute ApproachWhiteBox subtree: approach the white box (retry up to 3 times within 10s), grasp it (if grasp fails, push to reposition and retry), lift it over the sink, and place it into the sink."

@@ -1,0 +1,53 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence name="decorate_and_arrange">
+      <!-- Gift boxes to christmas_tree -->
+      <NAVIGATE_TO obj="gift_box_1"/>
+      <GRASP obj="gift_box_1"/>
+      <NAVIGATE_TO obj="christmas_tree"/>
+      <PLACE_NEXT_TO obj="christmas_tree"/>
+
+      <NAVIGATE_TO obj="gift_box_2"/>
+      <GRASP obj="gift_box_2"/>
+      <NAVIGATE_TO obj="christmas_tree"/>
+      <PLACE_NEXT_TO obj="christmas_tree"/>
+
+      <NAVIGATE_TO obj="gift_box_3"/>
+      <GRASP obj="gift_box_3"/>
+      <NAVIGATE_TO obj="christmas_tree"/>
+      <PLACE_NEXT_TO obj="christmas_tree"/>
+
+      <!-- Wreath and two candy canes to sofa (on top) -->
+      <NAVIGATE_TO obj="wreath"/>
+      <GRASP obj="wreath"/>
+      <NAVIGATE_TO obj="sofa"/>
+      <PLACE_ON_TOP obj="sofa"/>
+
+      <NAVIGATE_TO obj="candy_cane_1"/>
+      <GRASP obj="candy_cane_1"/>
+      <NAVIGATE_TO obj="sofa"/>
+      <PLACE_ON_TOP obj="sofa"/>
+
+      <NAVIGATE_TO obj="candy_cane_2"/>
+      <GRASP obj="candy_cane_2"/>
+      <NAVIGATE_TO obj="sofa"/>
+      <PLACE_ON_TOP obj="sofa"/>
+
+      <!-- Remaining items to table (on top) -->
+      <NAVIGATE_TO obj="candy_cane_3"/>
+      <GRASP obj="candy_cane_3"/>
+      <NAVIGATE_TO obj="table"/>
+      <PLACE_ON_TOP obj="table"/>
+
+      <NAVIGATE_TO obj="pillar_candle_1"/>
+      <GRASP obj="pillar_candle_1"/>
+      <NAVIGATE_TO obj="table"/>
+      <PLACE_ON_TOP obj="table"/>
+
+      <NAVIGATE_TO obj="pillar_candle_2"/>
+      <GRASP obj="pillar_candle_2"/>
+      <NAVIGATE_TO obj="table"/>
+      <PLACE_ON_TOP obj="table"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

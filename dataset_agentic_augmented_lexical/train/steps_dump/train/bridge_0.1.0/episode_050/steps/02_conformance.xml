@@ -1,0 +1,13 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Timeout: NAVIGATE_TO green_rag within 15s -->
+      <Timeout msec="15000">
+        <!-- Navigate to green_rag -->
+        <Action ID="NAVIGATE_TO" obj="green_rag" />
+      </Timeout>
+      <!-- Push green_rag forward toward front edge of table -->
+      <Action ID="SLIDE" obj="green_rag" />
+    </Sequence>
+  </BehaviorTree>
+</root>

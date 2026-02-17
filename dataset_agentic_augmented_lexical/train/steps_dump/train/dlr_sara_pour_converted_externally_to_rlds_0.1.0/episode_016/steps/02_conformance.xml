@@ -1,0 +1,19 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Timeout: NAVIGATE_TO source_container within 15s -->
+      <Timeout msec="15000">
+        <!-- Navigate to source_container -->
+        <Action ID="NAVIGATE_TO" obj="source_container" />
+      </Timeout>
+      <!-- Grasp source_container -->
+      <Action ID="GRASP" obj="source_container" />
+      <!-- Navigate to mug -->
+      <Action ID="NAVIGATE_TO" obj="mug" />
+      <!-- Pour into mug -->
+      <Action ID="POUR" obj="mug" />
+      <!-- Release -->
+      <Action ID="RELEASE" />
+    </Sequence>
+  </BehaviorTree>
+</root>

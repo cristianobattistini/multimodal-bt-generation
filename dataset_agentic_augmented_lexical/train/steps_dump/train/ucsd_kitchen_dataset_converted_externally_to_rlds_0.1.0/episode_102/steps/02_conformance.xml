@@ -1,0 +1,13 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to faucet -->
+      <Action ID="NAVIGATE_TO" obj="faucet" />
+      <!-- Retry TOGGLE_ON faucet up to 3 attempts -->
+      <RetryUntilSuccessful num_attempts="3">
+        <!-- Toggle on faucet -->
+        <Action ID="TOGGLE_ON" obj="faucet" />
+      </RetryUntilSuccessful>
+    </Sequence>
+  </BehaviorTree>
+</root>

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "lid"
+  destination: ""
+  expanded_instruction: "Navigate to the blue fabric surface within a 10s timeout, then open the white snap lid by unsnapping and lifting it."
+  scene_context: "White snap lid is closed on a blue fabric panel and not held."
+  expected_sequence: "Approach the snap (navigate within 10s), unsnap the lid, and lift it open."

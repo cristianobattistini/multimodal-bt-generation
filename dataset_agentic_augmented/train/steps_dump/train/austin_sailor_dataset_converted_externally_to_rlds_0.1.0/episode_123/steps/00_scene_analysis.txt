@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "["pan", "fish", "sausage"]"
+  destination: "stove"
+  expanded_instruction: "Pick up the frying pan from the counter next to the placemat, check IS_HOLDING on the stove burner before placing the pan (if the burner is occupied, retry or select a free burner), place it on the stove, then put the fish and the sausage into the pan."
+  scene_context: "Pan on counter near placemat; fish (white) and sausage (brown) on placemat; stove has two pots but a free burner; nothing held."
+  expected_sequence: "Pick up the pan and before setting it check IS_HOLDING on the chosen burner and ensure it is free (if occupied, retry up to 3 times or choose another burner), set it on the free stove burner, then pick up the fish and the sausage and place them into the pan."

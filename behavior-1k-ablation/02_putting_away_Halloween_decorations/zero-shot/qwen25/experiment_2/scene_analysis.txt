@@ -1,0 +1,7 @@
+scene_analysis:
+  target: "["pumpkin", "candle", "caldron"]"
+  destination: "cabinet.n.01_1"
+  expanded_instruction: "Open the cabinet door, pick up the two pumpkins, and place them into the open cabinet. Then pick up the three candles and place them into the cabinet, followed by the cauldron and place it beside the table on the floor. Finally, close the cabinet."
+  scene_context: "Cabinet door is closed and open; table on right has one candle; pumpkins on floor near cabinet; cauldron on floor left of table; floor mostly clear."
+  expected_sequence: "Open the cabinet, pick and place the pumpkins into the cabinet, then pick and place the candles into the cabinet, carry the cauldron to the table beside the table, and close the cabinet."
+Plan:

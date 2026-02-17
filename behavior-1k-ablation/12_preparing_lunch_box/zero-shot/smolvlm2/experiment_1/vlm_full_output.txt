@@ -1,0 +1,29 @@
+ scene_analysis:
+  target: half_apple_1
+  destination: packing_box
+  expanded_instruction: "Put the half_apple into the packing_box on the countertop."
+  scene_context: "Half_apple_1 is on the countertop near the chopping board; the packing_box is on the countertop and is open."
+  expected_sequence: "Pick up the half_apple and place it into the packing_box on the countertop."
+Plan:
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to half_apple_1 -->
+      <Action ID="NAVIGATE_TO" obj="half_apple_1" />
+      <!-- Grasp half_apple_1 -->
+      <Action ID="GRASP" obj="half_apple_1" />
+      <!-- Place inside packing_box -->
+      <Action ID="PLACE_INSIDE" obj="packing_box" />
+      <!-- Open refrigerator -->
+      <Action ID="OPEN" obj="refrigerator" />
+      <!-- Navigate to club_sandwich -->
+      <Action ID="NAVIGATE_TO" obj="club_sandwich" />
+      <!-- Grasp club_sandwich -->
+      <Action ID="GRASP" obj="club_sandwich" />
+      <!-- Place inside packing_box -->
+      <Action ID="PLACE_INSIDE" obj="packing_box" />
+      <!-- Close refrigerator -->
+      <Action ID="CLOSE" obj="refrigerator" />
+    </Sequence>
+  </BehaviorTree>
+</root>

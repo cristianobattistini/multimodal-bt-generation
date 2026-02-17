@@ -1,0 +1,21 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to cap -->
+      <Action ID="NAVIGATE_TO" obj="cap" />
+      <!-- Grasp cap -->
+      <Action ID="GRASP" obj="cap" />
+      <!-- Navigate to bottle -->
+      <Action ID="NAVIGATE_TO" obj="bottle" />
+      <!-- Check bottle is empty before PLACE_INSIDE -->
+      <Condition ID="IS_EMPTY" obj="bottle" />
+      <!-- Retry PLACE_INSIDE bottle up to 3 attempts -->
+      <RetryUntilSuccessful num_attempts="3">
+        <!-- Place inside bottle -->
+        <Action ID="PLACE_INSIDE" obj="bottle" />
+      </RetryUntilSuccessful>
+      <!-- Release -->
+      <Action ID="RELEASE" />
+    </Sequence>
+  </BehaviorTree>
+</root>

@@ -1,0 +1,1 @@
+Insert the blue gear onto the right peg, followed by the red gear. Only navigate to objects if they are visible.

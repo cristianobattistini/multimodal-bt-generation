@@ -1,0 +1,19 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to top_drawer -->
+      <Action ID="NAVIGATE_TO" obj="top_drawer" />
+      <!-- Check top_drawer is graspable before GRASP -->
+      <Condition ID="IS_GRASPABLE" obj="top_drawer" />
+      <!-- Retry GRASP top_drawer up to 2 attempts -->
+      <RetryUntilSuccessful num_attempts="2">
+        <!-- Grasp top_drawer -->
+        <Action ID="GRASP" obj="top_drawer" />
+      </RetryUntilSuccessful>
+      <!-- Open top_drawer -->
+      <Action ID="OPEN" obj="top_drawer" />
+      <!-- Release -->
+      <Action ID="RELEASE" />
+    </Sequence>
+  </BehaviorTree>
+</root>

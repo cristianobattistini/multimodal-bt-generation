@@ -1,0 +1,25 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Move to red_bowl -->
+      <Action ID="MOVE_TO" obj="red_bowl" />
+      <!-- Approach tiger -->
+      <Action ID="APPROACH" obj="tiger" />
+      <!-- Fallback: if GRASP tiger fails, try PUSH, FLIP to reposition -->
+      <Fallback>
+        <!-- Grasp tiger -->
+        <Action ID="GRASP" obj="tiger" />
+        <Sequence>
+          <!-- Push tiger forward toward front edge of table -->
+          <Action ID="PUSH" obj="tiger" />
+          <!-- Grasp tiger -->
+          <Action ID="GRIP" obj="tiger" />
+        </Sequence>
+      </Fallback>
+      <!-- Navigate to grey_bowl -->
+      <Action ID="GO_TO" obj="grey_bowl" />
+      <!-- Place inside grey_bowl -->
+      <Action ID="PLACE_INSIDE" obj="tiger" container="grey_bowl" />
+    </Sequence>
+  </BehaviorTree>
+</root>

@@ -1,0 +1,1 @@
+place the apple fruit in the sink. Check that the apple fruit is visible before grasping; retry grasping up to 3 times if it fails, and use pushing as a Plan B if unsuccessful.

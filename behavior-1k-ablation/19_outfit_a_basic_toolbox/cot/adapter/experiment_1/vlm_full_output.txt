@@ -1,0 +1,61 @@
+scene_analysis:
+  target: "tools"
+  destination: "toolbox"
+  expanded_instruction: "Pick up the drill, pliers, flashlight, allen_wrench, and screwdriver from the tabletop and place them into the closed toolbox; for each tool, navigate to it, pick it up, and place it into the toolbox. If a grasp fails, retry up to 3 times with a 10s timeout and then push or flip the tool to reposition before retrying."
+  scene_context: "Toolbox is closed on the table; drill, pliers, flashlight, allen_wrench, and screwdriver lie on the table; nothing is held."
+  expected_sequence: "Open the toolbox, then for each tool (drill, pliers, flashlight, allen_wrench, screwdriver) navigate to it, pick it up, and place it into the open toolbox. If a grasp fails, retry up to 3 times with a 10s timeout and then push or flip the tool to reposition before retrying; when all tools are inside, close the toolbox."
+Plan:
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to toolbox -->
+      <Action ID="NAVIGATE_TO" obj="toolbox" />
+      <!-- Open toolbox -->
+      <Action ID="OPEN" obj="toolbox" />
+      <!-- Navigate to drill -->
+      <Action ID="NAVIGATE_TO" obj="drill" />
+      <!-- Grasp drill -->
+      <Action ID="GRASP" obj="drill" />
+      <!-- Navigate to toolbox -->
+      <Action ID="NAVIGATE_TO" obj="toolbox" />
+      <!-- Place inside toolbox -->
+      <Action ID="PLACE_INSIDE" obj="toolbox" />
+      <!-- Navigate to pliers -->
+      <Action ID="NAVIGATE_TO" obj="pliers" />
+      <!-- Grasp pliers -->
+      <Action ID="GRASP" obj="pliers" />
+      <!-- Navigate to toolbox -->
+      <Action ID="NAVIGATE_TO" obj="toolbox" />
+      <!-- Place inside toolbox -->
+      <Action ID="PLACE_INSIDE" obj="toolbox" />
+      <!-- Navigate to flashlight -->
+      <Action ID="NAVIGATE_TO" obj="flashlight" />
+      <!-- Grasp flashlight -->
+      <Action ID="GRASP" obj="flashlight" />
+      <!-- Navigate to toolbox -->
+      <Action ID="NAVIGATE_TO" obj="toolbox" />
+      <!-- Place inside toolbox -->
+      <Action ID="PLACE_INSIDE" obj="toolbox" />
+      <!-- Navigate to allen_wrench -->
+      <Action ID="NAVIGATE_TO" obj="allen_wrench" />
+      <!-- Grasp allen_wrench -->
+      <Action ID="GRASP" obj="allen_wrench" />
+      <!-- Navigate to toolbox -->
+      <Action ID="NAVIGATE_TO" obj="toolbox" />
+      <!-- Place inside toolbox -->
+      <Action ID="PLACE_INSIDE" obj="toolbox" />
+      <!-- Navigate to screwdriver -->
+      <Action ID="NAVIGATE_TO" obj="screwdriver" />
+      <!-- Grasp screwdriver -->
+      <Action ID="GRASP" obj="screwdriver" />
+      <!-- Navigate to toolbox -->
+      <Action ID="NAVIGATE_TO" obj="toolbox" />
+      <!-- Place inside toolbox -->
+      <Action ID="PLACE_INSIDE" obj="toolbox" />
+      <!-- Navigate to toolbox -->
+      <Action ID="NAVIGATE_TO" obj="toolbox" />
+      <!-- Close toolbox -->
+      <Action ID="CLOSE" obj="toolbox" />
+    </Sequence>
+  </BehaviorTree>
+</root>

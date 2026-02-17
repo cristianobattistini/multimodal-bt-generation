@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "gray_bowl"
+  destination: "dish_rack"
+  expanded_instruction: "Pick up the gray bowl from the counter and place it inside the dish_rack, retrying the place action up to 5 times if it fails."
+  scene_context: "Gray bowl on counter near sink; dish_rack is open and empty; bowl not held; path clear."
+  expected_sequence: "Move to the bowl, pick it up, carry it to the dish_rack, and set it inside, retrying the place operation up to 5 times if necessary."

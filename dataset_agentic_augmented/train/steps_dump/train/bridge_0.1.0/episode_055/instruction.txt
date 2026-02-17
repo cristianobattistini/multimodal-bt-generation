@@ -1,0 +1,1 @@
+Move the sushi on the top left of the table. Use ApproachSushiTopLeft subtree for approach and grasp.

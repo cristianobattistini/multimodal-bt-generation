@@ -1,0 +1,14 @@
+{
+  "decorator_type": "subtree",
+  "mixed_subtype": null,
+  "target_action_id": "NAVIGATE_TO",
+  "target_obj": "bowl_1",
+  "parameters": {
+    "subtree_name": "ApproachBowl1",
+    "action_indices": [
+      0,
+      1
+    ]
+  },
+  "prompt_name": "subtree"
+}

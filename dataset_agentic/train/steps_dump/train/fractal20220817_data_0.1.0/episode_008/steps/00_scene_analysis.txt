@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "7up_can"
+  destination: ""
+  expanded_instruction: "Pick up the 7up can from the bottom shelf inside the open fridge"
+  scene_context: "Fridge door is open; 7up can on bottom shelf near front; can not held; shelf unobstructed."
+  expected_sequence: "Reach into the open fridge, grasp the 7up can on the bottom shelf, and lift it out."

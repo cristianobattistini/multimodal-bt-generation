@@ -1,0 +1,41 @@
+{
+  "decorator_type": "mixed",
+  "mixed_subtype": "condition_timeout_fallback",
+  "target_action_id": "GRASP",
+  "target_obj": "canned_spam",
+  "parameters": {
+    "augmentations": [
+      {
+        "type": "condition",
+        "action_id": "GRASP",
+        "obj": "canned_spam",
+        "params": {
+          "condition_id": "IS_GRASPABLE",
+          "condition_obj": "canned_spam"
+        }
+      },
+      {
+        "type": "timeout",
+        "action_id": "GRASP",
+        "obj": "canned_spam",
+        "params": {
+          "msec": 10000
+        }
+      },
+      {
+        "type": "fallback",
+        "action_id": "GRASP",
+        "obj": "canned_spam",
+        "params": {
+          "valid_fallbacks": [
+            "PUSH",
+            "FLIP"
+          ],
+          "valid_fallbacks_str": "PUSH, FLIP",
+          "hint": "PUSH/FLIP repositions the object into a better grasping position"
+        }
+      }
+    ]
+  },
+  "prompt_name": "mixed/condition_timeout_fallback"
+}

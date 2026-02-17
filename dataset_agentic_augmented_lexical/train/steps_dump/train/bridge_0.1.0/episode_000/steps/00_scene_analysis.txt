@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "can"
+  destination: "table"
+  expanded_instruction: "Group actions into an ApproachCan subtree: pick up the can (retry up to 3 times with a 10s timeout; if grasp fails, push to reposition) and place it on the table immediately to the left side of the pot."
+  scene_context: "Can on front edge of table; pot on blue mat toward back-center-right; nothing is held; table area near pot is clear."
+  expected_sequence: "Within the ApproachCan subtree: grasp the can (retry up to 3 times, 10s timeout; if grasp fails, push to reposition), move to the pot's left side on the table, and set the can down left of the pot."

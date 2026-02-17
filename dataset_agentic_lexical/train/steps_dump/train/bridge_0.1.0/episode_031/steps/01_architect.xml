@@ -1,0 +1,14 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Approach peeler -->
+      <Action ID="APPROACH" obj="peeler" />
+      <!-- Pick peeler -->
+      <Action ID="PICK" obj="peeler" />
+      <!-- Approach table -->
+      <Action ID="APPROACH" obj="table" />
+      <!-- Place on table (left edge) -->
+      <Action ID="PLACE_ON_TOP" obj="table" />
+    </Sequence>
+  </BehaviorTree>
+</root>

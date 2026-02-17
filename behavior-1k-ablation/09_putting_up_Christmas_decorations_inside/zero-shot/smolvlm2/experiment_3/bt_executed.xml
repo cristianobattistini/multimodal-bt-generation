@@ -1,0 +1,115 @@
+ scene_analysis:
+  target: ["gift_box_1", "gift_box_2", "gift_box_3", "wreath", "candy_cane_1", "candy_cane_2", "candy_cane_3", "pillar_candle_1", "pillar_candle_2"]
+  destination: "sofa"
+  expanded_instruction: "Pick up each gift box and place them on the sofa, then pick up the candy cane and place it on the sofa."
+  scene_context: "Gift boxes on the table are empty, candy canes on the table are empty, pillar candle on the table is empty, sofa is clear."
+  expected_sequence: "Pick up gift_box_1, then gift_box_2, then gift_box_3, then candy_cane_1, candy_cane_2, candy_cane_3, pillar_candle_1, pillar_candle_2, then pick up the candy cane and place it on the sofa."
+Plan:
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to gift_box_1 -->
+      <Action ID="NAVIGATE_TO" obj="gift_box_1" />
+      <!-- Grasp gift_box_1 -->
+      <Action ID="GRASP" obj="gift_box_1" />
+      <!-- Place on top of sofa -->
+      <Action ID="PLACE_ON_TOP" obj="sofa" />
+      <!-- Navigate to gift_box_2 -->
+      <Action ID="NAVIGATE_TO" obj="gift_box_2" />
+      <!-- Grasp gift_box_2 -->
+      <Action ID="GRASP" obj="gift_box_2" />
+      <!-- Place on top of christmas_tree -->
+      <Action ID="PLACE_ON_TOP" obj="christmas_tree" />
+      <!-- Navigate to gift_box_3 -->
+      <Action ID="NAVIGATE_TO" obj="gift_box_3" />
+      <!-- Grasp gift_box_3 -->
+      <Action ID="GRASP" obj="gift_box_3" />
+      <!-- Place on top of pillar_candle_1 -->
+      <Action ID="PLACE_ON_TOP" obj="pillar_candle_1" />
+      <!-- Navigate to candy_cane_1 -->
+      <Action ID="NAVIGATE_TO" obj="candy_cane_1" />
+      <!-- Grasp candy_cane_1 -->
+      <Action ID="GRASP" obj="candy_cane_1" />
+      <!-- Place on top of pillar_candle_2 -->
+      <Action ID="PLACE_ON_TOP" obj="pillar_candle_2" />
+      <!-- Navigate to candy_cane_2 -->
+      <Action ID="NAVIGATE_TO" obj="candy_cane_2" />
+      <!-- Grasp candy_cane_2 -->
+      <Action ID="GRASP" obj="candy_cane_2" />
+      <!-- Place on top of pillar_candle_2 -->
+      <Action ID="PLACE_ON_TOP" obj="pillar_candle_2" />
+      <!-- Navigate to candy_cane_3 -->
+      <Action ID="NAVIGATE_TO" obj="candy_cane_3" />
+      <!-- Grasp candy_cane_3 -->
+      <Action ID="GRASP" obj="candy_cane_3" />
+      <!-- Place on top of pillar_candle_3 -->
+      <Action ID="PLACE_ON_TOP" obj="pillar_candle_3" />
+      <!-- Navigate to pillar_candle_3 -->
+      <Action ID="NAVIGATE_TO" obj="pillar_candle_3" />
+      <!-- Grasp pillar_candle_3 -->
+      <Action ID="GRASP" obj="pillar_candle_3" />
+      <!-- Place on top of christmas_tree -->
+      <Action ID="PLACE_ON_TOP" obj="christmas_tree" />
+      <!-- Navigate to pillar_candle_3 -->
+      <Action ID="NAVIGATE_TO" obj="pillar_candle_3" />
+      <!-- Grasp pillar_candle_3 -->
+      <Action ID="GRASP" obj="pillar_candle_3" />
+      <!-- Place on top of pillar_candle_3 -->
+      <Action ID="PLACE_ON_TOP" obj="pillar_candle_3" />
+      <!-- Navigate to pillar_candle_3 -->
+      <Action ID="NAVIGATE_TO" obj="pillar_candle_3" />
+      <!-- Grasp pillar_candle_3 -->
+      <Action ID="GRASP" obj="pillar_candle_3" />
+      <!-- Place on top of christmas_tree -->
+      <Action ID="PLACE_ON_TOP" obj="christmas_tree" />
+      <!-- Navigate to pillar_candle_3 -->
+      <Action ID="NAVIGATE_TO" obj="pillar_candle_3" />
+      <!-- Grasp pillar_candle_3 -->
+      <Action ID="GRASP" obj="pillar_candle_3" />
+      <!-- Place on top of christmas_tree -->
+      <Action ID="PLACE_ON_TOP" obj="christmas_tree" />
+      <!-- Navigate to pillar_candle_3 -->
+      <Action ID="NAVIGATE_TO" obj="pillar_candle_3" />
+      <!-- Grasp pillar_candle_3 -->
+      <Action ID="GRASP" obj="pillar_candle_3" />
+      <!-- Place on top of christmas_tree -->
+      <Action ID="PLACE_ON_TOP" obj="christmas_tree" />
+      <!-- Navigate to pillar_candle_3 -->
+      <Action ID="NAVIGATE_TO" obj="pillar_candle_3" />
+      <!-- Grasp pillar_candle_3 -->
+      <Action ID="GRASP" obj="pillar_candle_3" />
+      <!-- Place on top of christmas_tree -->
+      <Action ID="PLACE_ON_TOP" obj="christmas_tree" />
+      <!-- Navigate to pillar_candle_3 -->
+      <Action ID="NAVIGATE_TO" obj="pillar_candle_3" />
+      <!-- Grasp pillar_candle_3 -->
+      <Action ID="GRASP" obj="pillar_candle_3" />
+      <!-- Place on top of christmas_tree -->
+      <Action ID="PLACE_ON_TOP" obj="christmas_tree" />
+      <!-- Navigate to pillar_candle_3 -->
+      <Action ID="NAVIGATE_TO" obj="pillar_candle_3" />
+      <!-- Grasp pillar_candle_3 -->
+      <Action ID="GRASP" obj="pillar_candle_3" />
+      <!-- Place on top of christmas_tree -->
+      <Action ID="PLACE_ON_TOP" obj="christmas_tree" />
+      <!-- Navigate to pillar_candle_3 -->
+      <Action ID="NAVIGATE_TO" obj="pillar_candle_3" />
+      <!-- Grasp pillar_candle_3 -->
+      <Action ID="GRASP" obj="pillar_candle_3" />
+      <!-- Place on top of christmas_tree -->
+      <Action ID="PLACE_ON_TOP" obj="christmas_tree" />
+      <!-- Navigate to pillar_candle_3 -->
+      <Action ID="NAVIGATE_TO" obj="pillar_candle_3" />
+      <!-- Grasp pillar_candle_3 -->
+      <Action ID="GRASP" obj="pillar_candle_3" />
+      <!-- Place on top of christmas_tree -->
+      <Action ID="PLACE_ON_TOP" obj="christmas_tree" />
+      <!-- Navigate to pillar_candle_3 -->
+      <Action ID="NAVIGATE_TO" obj="pillar_candle_3" />
+      <!-- Grasp pillar_candle_3 -->
+      <Action ID="GRASP" obj="pillar_candle_3" />
+      <!-- Place on top of christmas_tree -->
+      <Action ID="PLACE_ON_TOP" obj="christmas_tree" />
+      <!-- Navigate to pillar_candle_3 -->
+      <Action ID="NAVIGATE_TO" obj="pillar_candle_3" />
+      <

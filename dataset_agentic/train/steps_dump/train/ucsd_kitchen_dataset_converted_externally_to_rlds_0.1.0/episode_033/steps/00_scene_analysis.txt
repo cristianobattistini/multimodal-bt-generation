@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "oven_door"
+  destination: ""
+  expanded_instruction: "Open the oven door on the lower cabinet by grasping the handle and pulling it open."
+  scene_context: "Oven door is closed on the lower cabinet with handle visible and reachable; robot not holding anything."
+  expected_sequence: "Move to the oven, grasp the handle, and pull the door open until it is open."

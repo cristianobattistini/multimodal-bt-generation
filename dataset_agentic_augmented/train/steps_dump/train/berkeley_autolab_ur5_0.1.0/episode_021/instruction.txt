@@ -1,0 +1,1 @@
+Sweep the green cloth to the left side of the table. Use subtree with retry (up to 2 times) for approach and grasp.

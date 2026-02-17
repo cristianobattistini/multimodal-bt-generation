@@ -1,0 +1,14 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Approach green_bottle -->
+      <Action ID="APPROACH" obj="green_bottle" />
+      <!-- Grab green_bottle -->
+      <Action ID="GRAB" obj="green_bottle" />
+      <!-- Approach table -->
+      <Action ID="APPROACH" obj="table" />
+      <!-- Lay on table -->
+      <Action ID="LAY_ON" obj="table" />
+    </Sequence>
+  </BehaviorTree>
+</root>

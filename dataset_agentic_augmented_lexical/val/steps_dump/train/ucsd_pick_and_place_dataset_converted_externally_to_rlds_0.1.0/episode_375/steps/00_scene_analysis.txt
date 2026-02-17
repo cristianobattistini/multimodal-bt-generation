@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "red_object"
+  destination: ""
+  expanded_instruction: "Pick up the red object (small red cube) from the table in front of the robot; verify red_object IS_VISIBLE before attempting to grasp, retry visibility check up to 3 times within a 10s timeout."
+  scene_context: "Red cube on table front-right of the robot; not held; table reachable and not blocked."
+  expected_sequence: "Confirm red_object IS_VISIBLE, move the arm to the cube, grasp it securely (retry up to 3 times within 10s), and lift it off the table; if grasp fails, push to reposition and retry."

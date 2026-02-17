@@ -1,0 +1,20 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to rxbar_chocolate -->
+      <Action ID="NAVIGATE_TO" obj="rxbar_chocolate" />
+      <!-- Grasp rxbar_chocolate -->
+      <Action ID="GRASP" obj="rxbar_chocolate" />
+      <Sequence>
+        <!-- Check middle_drawer is reachable before NAVIGATE_TO -->
+        <Condition ID="IS_REACHABLE" obj="middle_drawer" />
+        <!-- Navigate to middle_drawer -->
+        <Action ID="NAVIGATE_TO" obj="middle_drawer" />
+      </Sequence>
+      <!-- Place inside middle_drawer -->
+      <Action ID="PLACE_INSIDE" obj="middle_drawer" />
+      <!-- Release -->
+      <Action ID="RELEASE" />
+    </Sequence>
+  </BehaviorTree>
+</root>

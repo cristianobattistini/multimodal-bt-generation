@@ -1,0 +1,23 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to eggplant -->
+      <Action ID="NAVIGATE_TO" obj="eggplant" />
+      <!-- Fallback: if GRASP eggplant fails, try PUSH, FLIP to reposition -->
+      <Fallback>
+        <!-- Grasp eggplant -->
+        <Action ID="GRASP" obj="eggplant" />
+        <Sequence>
+          <!-- Push eggplant forward toward front edge of table -->
+          <Action ID="PUSH" obj="eggplant" />
+          <!-- Grasp eggplant -->
+          <Action ID="GRASP" obj="eggplant" />
+        </Sequence>
+      </Fallback>
+      <!-- Navigate to frying_pan -->
+      <Action ID="NAVIGATE_TO" obj="frying_pan" />
+      <!-- Place inside frying_pan -->
+      <Action ID="PLACE_INSIDE" obj="frying_pan" />
+    </Sequence>
+  </BehaviorTree>
+</root>

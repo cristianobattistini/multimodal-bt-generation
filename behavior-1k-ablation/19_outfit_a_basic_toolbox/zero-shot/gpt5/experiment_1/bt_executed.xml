@@ -1,0 +1,36 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <NAVIGATE_TO obj="toolbox"/>
+      <OPEN obj="toolbox"/>
+
+      <NAVIGATE_TO obj="drill"/>
+      <GRASP obj="drill"/>
+      <NAVIGATE_TO obj="toolbox"/>
+      <PLACE_INSIDE obj="drill"/>
+
+      <NAVIGATE_TO obj="pliers"/>
+      <GRASP obj="pliers"/>
+      <NAVIGATE_TO obj="toolbox"/>
+      <PLACE_INSIDE obj="pliers"/>
+
+      <NAVIGATE_TO obj="flashlight"/>
+      <GRASP obj="flashlight"/>
+      <NAVIGATE_TO obj="toolbox"/>
+      <PLACE_INSIDE obj="flashlight"/>
+
+      <NAVIGATE_TO obj="allen_wrench"/>
+      <GRASP obj="allen_wrench"/>
+      <NAVIGATE_TO obj="toolbox"/>
+      <PLACE_INSIDE obj="allen_wrench"/>
+
+      <NAVIGATE_TO obj="screwdriver"/>
+      <GRASP obj="screwdriver"/>
+      <NAVIGATE_TO obj="toolbox"/>
+      <PLACE_INSIDE obj="screwdriver"/>
+
+      <NAVIGATE_TO obj="toolbox"/>
+      <CLOSE obj="toolbox"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

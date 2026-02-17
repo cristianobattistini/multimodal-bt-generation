@@ -1,0 +1,27 @@
+scene_analysis:
+  target: "book"
+  destination: "table"
+  expanded_instruction: "Pick up the book from the bed and place it on the nightstand (the available table). Then arrange the two sandals so they are side by side next to the bed: first place sandal_1 next to the bed, then place sandal_2 next to sandal_1."
+  scene_context: "Bedroom scene with a bed on the left, a table usable as a nightstand, and two sandals on the floor near the center. The book is on the bed."
+  expected_sequence: "Go to the book, grasp it, go to the table, and place it on top. Then go to sandal_1, grasp it, go to the bed and place it next to the bed. Next go to sandal_2, grasp it, go to sandal_1 and place it next to sandal_1 so they are side by side."
+Plan:
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence name="main_sequence">
+      <NAVIGATE_TO obj="book"/>
+      <GRASP obj="book"/>
+      <NAVIGATE_TO obj="table"/>
+      <PLACE_ON_TOP dest="table"/>
+
+      <NAVIGATE_TO obj="sandal_1"/>
+      <GRASP obj="sandal_1"/>
+      <NAVIGATE_TO obj="bed"/>
+      <PLACE_NEXT_TO dest="bed"/>
+
+      <NAVIGATE_TO obj="sandal_2"/>
+      <GRASP obj="sandal_2"/>
+      <NAVIGATE_TO obj="sandal_1"/>
+      <PLACE_NEXT_TO dest="sandal_1"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

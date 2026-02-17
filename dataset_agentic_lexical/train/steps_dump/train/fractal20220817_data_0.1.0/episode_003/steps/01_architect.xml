@@ -1,0 +1,14 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Approach coke_can -->
+      <Action ID="APPROACH" obj="coke_can" />
+      <!-- Clamp coke_can -->
+      <Action ID="CLAMP" obj="coke_can" />
+      <!-- Approach water -->
+      <Action ID="APPROACH" obj="water" />
+      <!-- Place next to water -->
+      <Action ID="PLACE_NEXT_TO" obj="water" />
+    </Sequence>
+  </BehaviorTree>
+</root>

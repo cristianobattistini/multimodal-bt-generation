@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "pot"
+  destination: "yellow_towel"
+  expanded_instruction: "Pick up the pot and place it on the yellow towel on the counter."
+  scene_context: "Pot on left side of counter, yellow towel on counter nearby, pot not held, counter otherwise clear."
+  expected_sequence: "Move to the pot, grasp and lift it, move over the yellow towel, and place the pot down on the towel."

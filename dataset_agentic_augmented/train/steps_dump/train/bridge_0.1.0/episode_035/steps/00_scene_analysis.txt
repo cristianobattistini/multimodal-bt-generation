@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "["strawberry", "stuffedduck"]"
+  destination: "pot_in_sink"
+  expanded_instruction: "Group actions into ApproachStrawberry subtree: Place the strawberry on the green plate and put the stuffedduck into the metal pot in the sink. For the strawberry approach retry up to 3 times with a 10s timeout; if grasp fails, push to reposition and try again."
+  scene_context: "Green plate on stove; strawberry on stovetop near plate; stuffedduck on counter edge by sink; metal pot visible in sink and empty."
+  expected_sequence: "ApproachStrawberry subtree: Pick up the strawberry (retry up to 3 times, 10s timeout; if grasp fails, push to reposition) and set it on the green plate; then pick up the stuffedduck and place it into the pot in the sink."

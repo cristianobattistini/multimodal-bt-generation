@@ -1,0 +1,1 @@
+Put sweet potato in pot. If grasping fails, push the sweet potato to reposition it and retry grasping.

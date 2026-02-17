@@ -1,0 +1,53 @@
+scene_analysis:
+  target: "mousetrap_*"
+  destination: "sink"
+  expanded_instruction: "Pick up each mousetrap one by one from the cabinet shelf in the bathroom and place it beside the sink, ensuring they all end up next to the sink."
+  scene_context: "Mousetraps on the cabinet shelf; sink is reachable and empty; nothing is held; floor clear."
+  expected_sequence: "For each mousetrap: approach the cabinet, pick up a mousetrap, move to the sink area, and set it down beside the sink; repeat this for all four mousetraps."
+Plan:
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to cabinet -->
+      <Action ID="NAVIGATE_TO" obj="cabinet" />
+      <!-- Navigate to mousetrap_1 -->
+      <Action ID="NAVIGATE_TO" obj="mousetrap_1" />
+      <!-- Grasp mousetrap_1 -->
+      <Action ID="GRASP" obj="mousetrap_1" />
+      <!-- Navigate to sink -->
+      <Action ID="NAVIGATE_TO" obj="sink" />
+      <!-- Place next to sink -->
+      <Action ID="PLACE_NEXT_TO" obj="sink" />
+      <!-- Navigate to cabinet -->
+      <Action ID="NAVIGATE_TO" obj="cabinet" />
+      <!-- Navigate to mousetrap_2 -->
+      <Action ID="NAVIGATE_TO" obj="mousetrap_2" />
+      <!-- Grasp mousetrap_2 -->
+      <Action ID="GRASP" obj="mousetrap_2" />
+      <!-- Navigate to sink -->
+      <Action ID="NAVIGATE_TO" obj="sink" />
+      <!-- Place next to sink -->
+      <Action ID="PLACE_NEXT_TO" obj="sink" />
+      <!-- Navigate to cabinet -->
+      <Action ID="NAVIGATE_TO" obj="cabinet" />
+      <!-- Navigate to mousetrap_3 -->
+      <Action ID="NAVIGATE_TO" obj="mousetrap_3" />
+      <!-- Grasp mousetrap_3 -->
+      <Action ID="GRASP" obj="mousetrap_3" />
+      <!-- Navigate to sink -->
+      <Action ID="NAVIGATE_TO" obj="sink" />
+      <!-- Place next to sink -->
+      <Action ID="PLACE_NEXT_TO" obj="sink" />
+      <!-- Navigate to cabinet -->
+      <Action ID="NAVIGATE_TO" obj="cabinet" />
+      <!-- Navigate to mousetrap_4 -->
+      <Action ID="NAVIGATE_TO" obj="mousetrap_4" />
+      <!-- Grasp mousetrap_4 -->
+      <Action ID="GRASP" obj="mousetrap_4" />
+      <!-- Navigate to sink -->
+      <Action ID="NAVIGATE_TO" obj="sink" />
+      <!-- Place next to sink -->
+      <Action ID="PLACE_NEXT_TO" obj="sink" />
+    </Sequence>
+  </BehaviorTree>
+</root>

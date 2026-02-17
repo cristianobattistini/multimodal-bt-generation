@@ -1,0 +1,2 @@
+Instruction: Place the fish, sausage, and tomato into the frying pan.
+Allowed Actions: [NAVIGATE_TO(obj), GRASP(obj), PLACE_INSIDE(obj), GO_TO(obj), GRIP(obj), PLACE_INSIDE(obj, container)]

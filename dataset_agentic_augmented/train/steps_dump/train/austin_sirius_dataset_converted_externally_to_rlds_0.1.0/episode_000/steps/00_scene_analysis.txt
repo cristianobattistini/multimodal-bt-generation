@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "["blue_gear", "red_gear"]"
+  destination: "right_peg"
+  expanded_instruction: "Pick up the blue gear and insert it onto the right peg, then pick up the red gear and insert it onto the right peg on top of the blue gear. Before placing the red gear, check that the right peg is holding the blue gear, and if the place-on-top fails, retry up to 2 times."
+  scene_context: "Blue and red gears are on the table; right peg is empty and reachable; no object is held."
+  expected_sequence: "Place the blue gear onto the right peg, then place the red gear onto the same right peg on top of the blue gear, checking the peg holds the blue gear before the top placement and retrying the top placement up to 2 times if it fails."

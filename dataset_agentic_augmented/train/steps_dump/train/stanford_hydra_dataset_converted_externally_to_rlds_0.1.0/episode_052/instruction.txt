@@ -1,0 +1,1 @@
+place dishes in the dish rack. Only navigate to objects if they are reachable.

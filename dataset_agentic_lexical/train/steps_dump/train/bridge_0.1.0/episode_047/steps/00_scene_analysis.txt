@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "corn"
+  destination: "bowl"
+  expanded_instruction: "Pick up the corn from the counter near the sink and place it into the blue bowl on the counter."
+  scene_context: "Corn on counter next to sink; blue bowl on counter and empty; corn not held; no blocking obstacles."
+  expected_sequence: "Reach to the corn, grasp it, move over the bowl, and place the corn into the bowl."

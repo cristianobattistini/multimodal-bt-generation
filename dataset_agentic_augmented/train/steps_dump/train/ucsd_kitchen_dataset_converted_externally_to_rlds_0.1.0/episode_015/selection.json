@@ -1,0 +1,36 @@
+{
+  "decorator_type": "mixed",
+  "mixed_subtype": "condition_timeout_retry",
+  "target_action_id": "GRASP",
+  "target_obj": "oven_door",
+  "parameters": {
+    "augmentations": [
+      {
+        "type": "condition",
+        "action_id": "GRASP",
+        "obj": "oven_door",
+        "params": {
+          "condition_id": "IS_REACHABLE",
+          "condition_obj": "oven_door"
+        }
+      },
+      {
+        "type": "timeout",
+        "action_id": "GRASP",
+        "obj": "oven_door",
+        "params": {
+          "msec": 10000
+        }
+      },
+      {
+        "type": "retry",
+        "action_id": "GRASP",
+        "obj": "oven_door",
+        "params": {
+          "num_attempts": 3
+        }
+      }
+    ]
+  },
+  "prompt_name": "mixed/condition_timeout_retry"
+}

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "black_bowl"
+  destination: "sink"
+  expanded_instruction: "Pick up the black bowl from the left platform and place it into the blue sink basin, retrying PLACE_INSIDE up to 5 times if it fails."
+  scene_context: "Black bowl on left platform, not held; blue sink basin visible and empty/clear."
+  expected_sequence: "Approach and grasp the black bowl, carry it to the sink, and place it inside the basin, retrying PLACE_INSIDE up to 5 times if necessary."

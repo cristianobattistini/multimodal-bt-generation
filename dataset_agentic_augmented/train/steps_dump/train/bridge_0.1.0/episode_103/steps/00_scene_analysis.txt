@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "red_spoon"
+  destination: "table"
+  expanded_instruction: "Pick up the red spoon and place it on the table between the metal pan and the green_cloth. If grasp fails, retry up to 3 times; if still unsuccessful, use push or flip as an alternative to reposition the spoon before placing."
+  scene_context: "red_spoon lies on table near front; metal pan on left, green_cloth on right; nothing is held; table gap between pan and cloth is clear."
+  expected_sequence: "Pick up the red_spoon (retry grasp up to 3x); if grasp fails, push or flip to reposition the object, then move to the gap between the metal pan and green_cloth on the table, and place it down between them."

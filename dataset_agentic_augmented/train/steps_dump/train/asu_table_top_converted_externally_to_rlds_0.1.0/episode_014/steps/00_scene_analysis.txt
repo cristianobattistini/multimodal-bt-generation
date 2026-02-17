@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "maroon_square"
+  destination: "table"
+  expanded_instruction: "Pick up the maroon square block from the table and place it on the table surface closer to the robot at the table edge; if placing fails, retry up to 3 times and if PLACE_ON_TOP still fails, use a push to reposition the object."
+  scene_context: "Maroon square on table near right side, not held; table surface otherwise clear and reachable; robot not gripping it."
+  expected_sequence: "Approach the maroon square, pick it up, move to the table edge near the robot, and place it down; if placing fails after up to 3 attempts, use a push to reposition the object."

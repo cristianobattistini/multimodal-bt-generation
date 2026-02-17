@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "box"
+  destination: ""
+  expanded_instruction: "Check that the box is reachable, then open the closed box sitting on the table next to the robot arm — if reachable, navigate to it (NAVIGATE_TO within a 20s timeout) and open the lid."
+  scene_context: "Box is closed on the table next to the robot arm; lid appears closed and not held."
+  expected_sequence: "Check IS_REACHABLE on the box; NAVIGATE_TO the box (20s timeout); move the arm to the box, then grasp and lift or flip the lid to open the box."

@@ -1,0 +1,28 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to metal_tray -->
+      <Action ID="NAVIGATE_TO" obj="metal_tray" />
+      <!-- Navigate to green_cup -->
+      <Action ID="NAVIGATE_TO" obj="green_cup" />
+      <Sequence>
+        <!-- Check green_cup is graspable before GRASP -->
+        <Condition ID="IS_GRASPABLE" obj="green_cup" />
+        <!-- Fallback: if GRASP green_cup fails, try alternative to reposition -->
+        <Fallback>
+          <!-- Retry GRASP green_cup up to 3 attempts -->
+          <RetryUntilSuccessful num_attempts="3">
+            <!-- Grasp green_cup -->
+            <Action ID="GRASP" obj="green_cup" />
+          </RetryUntilSuccessful>
+          <Sequence>
+            <!-- Push green_cup forward toward front edge of table -->
+            <Action ID="PUSH" obj="green_cup" />
+            <!-- Grasp green_cup -->
+            <Action ID="GRASP" obj="green_cup" />
+          </Sequence>
+        </Fallback>
+      </Sequence>
+    </Sequence>
+  </BehaviorTree>
+</root>

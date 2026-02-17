@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "glass_bottle"
+  destination: "table"
+  expanded_instruction: "Pick up the glass bottle from the table and place it down on the table, retry the PLACE_ON_TOP action up to 3 times if placing fails."
+  scene_context: "Glass bottle on table at left; table is clear and bottle not held."
+  expected_sequence: "Approach the bottle, grasp it, lift slightly, move over the table, and set it down, retrying the PLACE_ON_TOP step up to 3 times if it fails."

@@ -1,0 +1,7 @@
+scene_analysis:
+  target: ashcan
+  destination: kitchen
+  expanded_instruction: Put the three cans of soda from the living room into the trash can in the kitchen.
+  scene_context: Three cans of soda are on the floor in the living room; the kitchen counter is empty.
+  expected_sequence: Move to the living room and pick up the cans, then place them into the trash can on the kitchen counter.
+Plan:

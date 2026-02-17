@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "water_bottle"
+  destination: "table"
+  expanded_instruction: "Navigate to the water bottle (navigate_to within 10s timeout), pick up the bottle lying on its side near the back edge and place it upright on the table."
+  scene_context: "Water bottle is on its side near the back edge of the table; table is clear and bottle not held."
+  expected_sequence: "Navigate to the bottle (navigate_to within 10s timeout), reach the bottle, grasp it, rotate it upright, and set it down stably on the table."

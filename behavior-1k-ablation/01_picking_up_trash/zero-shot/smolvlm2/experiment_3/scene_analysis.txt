@@ -1,0 +1,7 @@
+scene_analysis:
+  target: "ashcan"
+  destination: "trash_can"
+  expanded_instruction: "Pick up the three cans of soda from the living room table and place them into the trash can in the kitchen."
+  scene_context: "Three cans of soda on the living room table are not held; the trash can is open and reachable."
+  expected_sequence: "Pick up the cans one by one, place them into the trash can, and then set the cans down on the table."
+Plan:

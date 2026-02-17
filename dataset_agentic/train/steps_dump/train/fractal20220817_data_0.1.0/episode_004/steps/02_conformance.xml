@@ -1,0 +1,16 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to top_drawer -->
+      <Action ID="NAVIGATE_TO" obj="top_drawer"/>
+      <!-- Navigate to brown_chip_bag -->
+      <Action ID="NAVIGATE_TO" obj="brown_chip_bag"/>
+      <!-- Grasp brown_chip_bag -->
+      <Action ID="GRASP" obj="brown_chip_bag"/>
+      <!-- Navigate to counter -->
+      <Action ID="NAVIGATE_TO" obj="counter"/>
+      <!-- Place on counter (place on top) -->
+      <Action ID="PLACE_ON_TOP" obj="counter"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

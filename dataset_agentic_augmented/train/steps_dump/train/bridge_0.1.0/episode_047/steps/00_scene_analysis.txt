@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "corn"
+  destination: "bowl"
+  expanded_instruction: "Pick up the corn from the counter near the sink and place it into the blue bowl on the counter. Group the approach and grasp into an 'ApproachCorn' subtree that retries up to 3 times with a 10s timeout, and if a grasp fails, push to reposition before retrying."
+  scene_context: "Corn on counter next to sink; blue bowl on counter and empty; corn not held; no blocking obstacles."
+  expected_sequence: "ApproachCorn subtree: reach to the corn and grasp it (retry up to 3 times with 10s timeout; if grasp fails, push to reposition), then move over the bowl and place the corn into the bowl."

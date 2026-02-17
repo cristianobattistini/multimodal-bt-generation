@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "cocacola_bottle"
+  destination: ""
+  expanded_instruction: "Pick up the cocacola bottle from the front-left area of the table"
+  scene_context: "Table visible and clear; cocacola bottle sitting front-left on table; no container, not held."
+  expected_sequence: "Move to the bottle, grasp it securely, and lift it off the table."

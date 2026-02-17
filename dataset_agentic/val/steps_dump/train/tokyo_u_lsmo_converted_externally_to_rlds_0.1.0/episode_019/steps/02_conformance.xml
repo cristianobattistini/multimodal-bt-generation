@@ -1,0 +1,12 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to table -->
+      <Action ID="NAVIGATE_TO" obj="table"/>
+      <!-- Navigate to cup while avoiding stack_of_books obstacle -->
+      <Action ID="NAVIGATE_TO" obj="cup"/>
+      <!-- Grasp blue_pen from the cup -->
+      <Action ID="GRASP" obj="blue_pen"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

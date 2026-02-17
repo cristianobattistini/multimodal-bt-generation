@@ -1,0 +1,21 @@
+{
+  "success": true,
+  "bt_success": true,
+  "bddl_goal": true,
+  "ticks": 1,
+  "duration": 86.97569251060486,
+  "inference_time": 62.21241760253906,
+  "satisfied": [
+    "nextto(?sandal.n.01_1, ?bed.n.01_1)",
+    "nextto(?sandal.n.01_2, ?sandal.n.01_1)",
+    "exists(['?table.n.02', '-', 'table.n.02'], ['ontop', '?book.n.02_1', '?table.n.02'])"
+  ],
+  "unsatisfied": [],
+  "task": "18_tidying_bedroom",
+  "condition": "cot",
+  "model_dir": "qwen25",
+  "vlm_model": "qwen",
+  "inference_mode": "adapter",
+  "experiment": 1,
+  "timestamp": "20260214_091600"
+}

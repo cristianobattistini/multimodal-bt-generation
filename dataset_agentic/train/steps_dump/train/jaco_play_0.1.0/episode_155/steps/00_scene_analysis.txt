@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "burger_meat"
+  destination: "black_bowl"
+  expanded_instruction: "Pick up the burger meat from the metal tray at the left and place it into the black bowl near the center."
+  scene_context: "Burger meat on metal tray at left; black bowl open on table near center and reachable; table clear."
+  expected_sequence: "Go to the tray, pick up the burger meat, carry it to the black bowl, and place it inside."

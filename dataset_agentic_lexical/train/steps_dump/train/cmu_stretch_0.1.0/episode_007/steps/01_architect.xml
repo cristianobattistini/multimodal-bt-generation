@@ -1,0 +1,14 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Locomote to green_garbage_can_lid -->
+      <Action ID="LOCOMOTE_TO" obj="green_garbage_can_lid" />
+      <!-- Grip green_garbage_can_lid -->
+      <Action ID="GRIP" obj="green_garbage_can_lid" />
+      <!-- Open up green_garbage_can_lid -->
+      <Action ID="OPEN_UP" obj="green_garbage_can_lid" />
+      <!-- Let go -->
+      <Action ID="LET_GO" />
+    </Sequence>
+  </BehaviorTree>
+</root>

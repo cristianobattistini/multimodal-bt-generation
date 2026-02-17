@@ -1,0 +1,10 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to red_milk_box -->
+      <Action ID="NAVIGATE_TO" obj="red_milk_box"/>
+      <!-- Push red_milk_box forward along tabletop -->
+      <Action ID="PUSH" obj="red_milk_box"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

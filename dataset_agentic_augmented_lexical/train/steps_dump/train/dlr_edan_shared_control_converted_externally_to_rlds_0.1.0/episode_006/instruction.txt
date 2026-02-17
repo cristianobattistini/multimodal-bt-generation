@@ -1,0 +1,1 @@
+Pick the mug. If grasping fails, push the mug to reposition it and retry grasping.

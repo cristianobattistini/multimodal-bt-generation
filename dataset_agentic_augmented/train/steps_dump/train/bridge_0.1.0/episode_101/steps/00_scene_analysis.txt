@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "orange_object"
+  destination: "table"
+  expanded_instruction: "Pick up the orange_object from the pot and place it on the table to the left of the pot. Before navigating, check IS_VISIBLE on metal_pot and retry up to 3 times within a 10s timeout; only NAVIGATE_TO once metal_pot is visible."
+  scene_context: "Orange_object is inside the metal pot on the table; pot and table surface are reachable and mostly clear."
+  expected_sequence: "Verify metal_pot is visible (IS_VISIBLE), retry up to 3 times within 10s; NAVIGATE_TO the pot, remove the orange_object from the pot, shift left across the table, and set it down immediately left of the pot."

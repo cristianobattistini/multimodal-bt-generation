@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "canned_spam"
+  destination: "sink"
+  expanded_instruction: "Within an ApproachCannedSpam subtree, pick up the canned_spam from the countertop (if grasp fails, retry up to 2 times), then place it into the sink basin beneath the faucet."
+  scene_context: "Canned_spam on countertop near faucet; sink basin clear and reachable; cabinet doors closed; robot not holding object."
+  expected_sequence: "ApproachCannedSpam: move to the can, grasp it (retry up to 2 times on failure), lift and carry it over the sink, then set it down inside the basin."

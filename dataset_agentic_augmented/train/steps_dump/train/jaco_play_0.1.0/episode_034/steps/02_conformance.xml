@@ -1,0 +1,15 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to grill_press -->
+      <Action ID="NAVIGATE_TO" obj="grill_press" />
+      <!-- Navigate to burger_meat -->
+      <Action ID="NAVIGATE_TO" obj="burger_meat" />
+      <!-- Retry GRASP burger_meat up to 3 attempts -->
+      <RetryUntilSuccessful num_attempts="3">
+        <!-- Grasp burger_meat -->
+        <Action ID="GRASP" obj="burger_meat" />
+      </RetryUntilSuccessful>
+    </Sequence>
+  </BehaviorTree>
+</root>

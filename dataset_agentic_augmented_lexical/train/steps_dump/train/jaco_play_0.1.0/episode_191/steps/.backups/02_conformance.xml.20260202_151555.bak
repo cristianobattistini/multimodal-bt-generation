@@ -1,0 +1,21 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to orange_fruit -->
+      <Action ID="NAVIGATE_TO" obj="orange_fruit" />
+      <!-- Grasp orange_fruit -->
+      <Action ID="GRASP" obj="orange_fruit" />
+      <!-- Navigate to sink -->
+      <Action ID="NAVIGATE_TO" obj="sink" />
+      <!-- Check sink is holding before PLACE_INSIDE -->
+      <Condition ID="IS_HOLDING" obj="sink" />
+      <!-- Retry PLACE_INSIDE sink up to 3 attempts -->
+      <RetryUntilSuccessful num_attempts="3">
+        <!-- Place inside sink -->
+        <Action ID="PLACE_INSIDE" obj="sink" />
+      </RetryUntilSuccessful>
+      <!-- Release -->
+      <Action ID="RELEASE" />
+    </Sequence>
+  </BehaviorTree>
+</root>

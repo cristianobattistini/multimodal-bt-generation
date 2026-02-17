@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "teapot"
+  destination: "stove"
+  expanded_instruction: "Pick up the teapot from the counter near the sink and place it on the stove."
+  scene_context: "Teapot on countertop near sink; stove surface visible and clear; robot arm not holding the teapot."
+  expected_sequence: "Approach and grasp the teapot, carry it to the stove, and set it down on the stove surface."

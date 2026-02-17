@@ -1,0 +1,4 @@
+Instruction: pull open a dishwasher. Check precondition and retry grasping up to 2 times if it fails.
+Allowed Actions: [GRASP(obj), RELEASE(), NAVIGATE_TO(obj), OPEN(obj)]
+Allowed Conditions: [IS_VISIBLE]
+* Constraints: Robustness: Check condition before GRASP, then RetryUntilSuccessful (num_attempts="2").

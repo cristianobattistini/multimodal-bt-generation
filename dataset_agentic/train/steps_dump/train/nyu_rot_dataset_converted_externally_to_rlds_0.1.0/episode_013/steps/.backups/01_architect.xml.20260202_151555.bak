@@ -1,0 +1,26 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to cups -->
+      <Action ID="NAVIGATE_TO" obj="cups"/>
+      <!-- Grasp cups -->
+      <Action ID="GRASP" obj="cups"/>
+      <!-- Navigate to table -->
+      <Action ID="NAVIGATE_TO" obj="table"/>
+      <!-- Place on table (start the stack) -->
+      <Action ID="PLACE_ON_TOP" obj="table"/>
+      <!-- Release -->
+      <Action ID="RELEASE"/>
+      <!-- Navigate to cups -->
+      <Action ID="NAVIGATE_TO" obj="cups"/>
+      <!-- Grasp cups -->
+      <Action ID="GRASP" obj="cups"/>
+      <!-- Navigate to table -->
+      <Action ID="NAVIGATE_TO" obj="table"/>
+      <!-- Place on table (stack onto existing cup) -->
+      <Action ID="PLACE_ON_TOP" obj="table"/>
+      <!-- Release -->
+      <Action ID="RELEASE"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

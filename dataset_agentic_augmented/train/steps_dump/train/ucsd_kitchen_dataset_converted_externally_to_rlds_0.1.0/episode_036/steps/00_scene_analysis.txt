@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "oven_door"
+  destination: ""
+  expanded_instruction: "Open the oven door on the lower front of the kitchen unit by pulling its handle down. If a secure grasp fails, retry up to 2 more times and, if still unsuccessful, use a push or flip maneuver to reposition the handle and then pull."
+  scene_context: "Oven door is closed on lower front; robot arm is free and approachably positioned."
+  expected_sequence: "Move the arm to the oven handle, grasp it securely, and pull the door open. If grasp fails, retry up to 2 times; if still unsuccessful, use a push or flip to reposition the handle, then grasp and pull."

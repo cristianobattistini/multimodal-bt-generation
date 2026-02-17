@@ -1,0 +1,18 @@
+{
+  "success": true,
+  "bt_success": true,
+  "bddl_goal": true,
+  "ticks": 1,
+  "duration": 114.08959722518921,
+  "inference_time": 43.032378911972046,
+  "satisfied": [
+    "nextto(?sandal.n.01_1, ?bed.n.01_1)",
+    "nextto(?sandal.n.01_2, ?sandal.n.01_1)",
+    "exists(['?table.n.02', '-', 'table.n.02'], ['ontop', '?book.n.02_1', '?table.n.02'])"
+  ],
+  "unsatisfied": [],
+  "task": "18_tidying_bedroom",
+  "model": "adapter",
+  "experiment": 2,
+  "timestamp": "20260206_153951"
+}

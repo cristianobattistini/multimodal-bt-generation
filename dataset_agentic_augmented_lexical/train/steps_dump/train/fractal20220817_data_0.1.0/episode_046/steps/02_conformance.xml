@@ -1,0 +1,20 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Execute subtree ApproachBluePlasticBottle -->
+      <SubTree ID="ApproachBluePlasticBottle" />
+    </Sequence>
+  </BehaviorTree>
+  <!-- Subtree definition ApproachBluePlasticBottle -->
+  <BehaviorTree ID="ApproachBluePlasticBottle">
+    <Sequence>
+      <!-- Timeout: NAVIGATE_TO blue_plastic_bottle within 15s -->
+      <Timeout msec="15000">
+        <!-- Navigate to blue_plastic_bottle -->
+        <Action ID="NAVIGATE_TO" obj="blue_plastic_bottle" />
+      </Timeout>
+      <!-- Grasp blue_plastic_bottle -->
+      <Action ID="GRASP" obj="blue_plastic_bottle" />
+    </Sequence>
+  </BehaviorTree>
+</root>

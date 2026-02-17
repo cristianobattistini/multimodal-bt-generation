@@ -1,0 +1,10 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Approach pot -->
+      <Action ID="APPROACH" obj="pot" />
+      <!-- Unseal pot_lid -->
+      <Action ID="UNSEAL" obj="pot_lid" />
+    </Sequence>
+  </BehaviorTree>
+</root>

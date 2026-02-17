@@ -1,0 +1,19 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Check drawer is visible before NAVIGATE_TO -->
+      <Condition ID="IS_VISIBLE" obj="drawer" />
+      <!-- Timeout: NAVIGATE_TO drawer within 10s -->
+      <Timeout msec="10000">
+        <!-- Navigate to drawer -->
+        <Action ID="GO_TO" obj="drawer" />
+      </Timeout>
+      <!-- Go to drawer -->
+      <Action ID="GRASP" obj="drawer" />
+      <!-- Open drawer -->
+      <Action ID="UNLOCK" obj="drawer" />
+      <!-- Unlock drawer -->
+      <Action ID="UNGRASP" />
+    </Sequence>
+  </BehaviorTree>
+</root>

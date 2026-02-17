@@ -1,0 +1,1 @@
+Place grid clamp. Use ApproachGridClamp subtree for approach and grasp.

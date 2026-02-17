@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "red_object"
+  destination: ""
+  expanded_instruction: "Pick up the red object from the table near the center, ensuring it is visible before grasping and retrying the grasp up to 2 times if needed."
+  scene_context: "Table is clear; red object on table near center; object not held; no closed containers."
+  expected_sequence: "Approach the red object, confirm it is visible, grasp it securely (retry up to 2 times on failure), and lift it off the table."

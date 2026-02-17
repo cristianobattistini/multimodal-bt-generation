@@ -1,0 +1,15 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to black_shelf -->
+      <Action ID="NAVIGATE_TO" obj="black_shelf" />
+      <!-- Navigate to cube -->
+      <Action ID="NAVIGATE_TO" obj="cube" />
+      <!-- Retry GRASP cube up to 2 attempts -->
+      <RetryUntilSuccessful num_attempts="2">
+        <!-- Grasp cube -->
+        <Action ID="GRASP" obj="cube" />
+      </RetryUntilSuccessful>
+    </Sequence>
+  </BehaviorTree>
+</root>

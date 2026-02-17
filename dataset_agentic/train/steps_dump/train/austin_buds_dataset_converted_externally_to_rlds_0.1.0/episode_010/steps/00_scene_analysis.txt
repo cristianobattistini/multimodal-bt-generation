@@ -1,0 +1,6 @@
+scene_analysis:
+  target: ["pot", "lid", "tool"]
+  destination: "plate"
+  expanded_instruction: "Lift the lid off the small pink pot, place the pot onto the white plate, then use the spatula to push the pot to the front edge of the table."
+  scene_context: "Lid is on the pink pot which sits on the stovetop; white plate is clear on the table; spatula nearby and not held."
+  expected_sequence: "Remove the lid and set it aside, lift and place the pot on the plate, then use the spatula to push the plate and pot toward the front edge of the table."

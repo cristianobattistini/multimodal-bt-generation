@@ -1,0 +1,1 @@
+place the gray bowl in the table. Check precondition, use a 10 second timeout, and retry placing up to 2 times if it fails.

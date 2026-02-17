@@ -1,0 +1,214 @@
+ scene_analysis:
+  target: "ashcan"
+  destination: "trash_can"
+  expanded_instruction: "Pick up the three cans of soda from the living room floor and place them into the trash_can in the kitchen."
+  scene_context: "Three cans of soda on the living room floor; trash_can is open and empty in the kitchen."
+  expected_sequence: "Pick up the cans from the living room floor, move to the trash_can, and place each can into the trash_can."
+Plan:
+<root main_tree_to_execute="MainTree">
+  <Sequence>
+    <!-- Navigate to ashcan -->
+    <Action>
+      <Target>ashcan</Target>
+      <Fallback>
+        <!-- Navigate to trash_can -->
+        <Action>
+          <Target>trash_can</Target>
+          <Fallback>
+            <!-- Navigate to can_of_soda_1 -->
+            <Action>
+              <Target>can_of_soda_1</Target>
+              <Fallback>
+                <!-- Navigate to can_of_soda_2 -->
+                <Action>
+                  <Target>can_of_soda_2</Target>
+                  <Fallback>
+                    <!-- Navigate to can_of_soda_3 -->
+                    <Action>
+                      <Target>can_of_soda_3</Target>
+                      <Fallback>
+                        <!-- Navigate to trash_can -->
+                        <Action>
+                          <Target>trash_can</Target>
+                          <Fallback>
+                            <!-- Navigate to can_of_soda_1 -->
+                            <Action>
+                              <Target>can_of_soda_1</Target>
+                              <Fallback>
+                                <!-- Navigate to can_of_soda_2 -->
+                                <Action>
+                                  <Target>can_of_soda_2</Target>
+                                  <Fallback>
+                                    <!-- Navigate to can_of_soda_3 -->
+                                    <Action>
+                                      <Target>can_of_soda_3</Target>
+                                      <Fallback>
+                                        <!-- Navigate to trash_can -->
+                                        <Action>
+                                            <Target>trash_can</Target>
+                                            <Fallback>
+                                                <!-- Navigate to can_of_soda_1 -->
+                                                <Action>
+                                                    <Target>can_of_soda_1</Target>
+                                                    <Fallback>
+                                                    <!-- Navigate to can_of_soda_2 -->
+                                                    <Action>
+                                                    <Target>can_of_soda_2</Target>
+                                                    <Fallback>
+                                                    <!-- Navigate to can_of_soda_3 -->
+                                                    <Action>
+                                                    <Target>can_of_soda_3</Target>
+                                                    <Fallback>
+                                                    <!-- Navigate to trash_can -->
+                                                    <Action>
+                                                    <Target>trash_can</Target>
+                                                    <Fallback>
+                                                    <!-- Navigate to can_of_soda_1 -->
+                                                    <Action>
+                                                    <Target>can_of_soda_1</Target>
+                                                    <Fallback>
+                                                    <!-- Navigate to can_of_soda_2 -->
+                                                    <Action>
+                                                    <Target>can_of_soda_2</Target>
+                                                    <Fallback>
+                                                    <!-- Navigate to can_of_soda_3 -->
+                                                    <Action>
+                                                    <Target>can_of_soda_3</Target>
+                                                    <Fallback>
+                                                    <!-- Navigate to trash_can -->
+                                                    <Action>
+                                                    <Target>trash_can</Target>
+                                                    <Fallback>
+                                                    <!-- Navigate to can_of_soda_1 -->
+                                                    <Action>
+                                                    <Target>can_of_soda_1</Target>
+                                                    <Fallback>
+                                                    <!-- Navigate to can_of_soda_2 -->
+                                                    <Action>
+                                                    <Target>can_of_soda_2</Target>
+                                                    <Fallback>
+                                                    <!-- Navigate to can_of_soda_3 -->
+                                                    <Action>
+                                                    <Target>can_of_soda_3</Target>
+                                                    <Fallback>
+                                                    <!-- Navigate to trash_can -->
+                                                    <Action>
+                                                    <Target>trash_can</Target>
+                                                    <Fallback>
+                                                    <!-- Navigate to can_of_soda_1 -->
+                                                    <Action>
+                                                    <Target>can_of_soda_1</Target>
+                                                    <Fallback>
+                                                    <!-- Navigate to can_of_soda_2 -->
+                                                    <Action>
+                                                    <Target>can_of_soda_2</Target>
+                                                    <Fallback>
+                                                    <!-- Navigate to can_of_soda_3 -->
+                                                    <Action>
+                                                    <Target>can_of_soda_3</Target>
+                                                    <Fallback>
+                                                    <!-- Navigate to trash_can -->
+                                                    <Action>
+                                                    <Target>trash_can</Target>
+                                                    <Fallback>
+                                                    <!-- Navigate to can_of_soda_1 -->
+                                                    <Action>
+                                                    <Target>can_of_soda_1</Target>
+                                                    <Fallback>
+                                                    <!-- Navigate to can_of_soda_2 -->
+                                                    <Action>
+                                                    <Target>can_of_soda_2</Target>
+                                                    <Fallback>
+                                                    <!-- Navigate to can_of_soda_3 -->
+                                                    <Action>
+                                                    <Target>can_of_soda_3</Target>
+                                                    <Fallback>
+                                                    <!-- Navigate to trash_can -->
+                                                    <Action>
+                                                    <Target>trash_can</Target>
+                                                    <Fallback>
+                                                    <!-- Navigate to can_of_soda_1 -->
+                                                    <Action>
+                                                    <Target>can_of_soda_1</Target>
+                                                    <Fallback>
+                                                    <!-- Navigate to can_of_soda_2 -->
+                                                    <Action>
+                                                    <Target>can_of_soda_2</Target>
+                                                    <Fallback>
+                                                    <!-- Navigate to can_of_soda_3 -->
+                                                    <Action>
+                                                    <Target>can_of_soda_3</Target>
+                                                    <Fallback>
+                                                    <!-- Navigate to trash_can -->
+                                                    <Action>
+                                                    <Target>trash_can</Target>
+                                                    <Fallback>
+                                                    <!-- Navigate to can_of_soda_1 -->
+                                                    <Action>
+                                                    <Target>can_of_soda_1</Target>
+                                                    <Fallback>
+                                                    <!-- Navigate to can_of_soda_2 -->
+                                                    <Action>
+                                                    <Target>can_of_soda_2</Target>
+                                                    <Fallback>
+                                                    <!-- Navigate to can_of_soda_3 -->
+                                                    <Action>
+                                                    <Target>can_of_soda_3</Target>
+                                                    <Fallback>
+                                                    <!-- Navigate to trash_can -->
+                                                    <Action>
+                                                    <Target>trash_can</Target>
+                                                    <Fallback>
+                                                    <!-- Navigate to can_of_soda_1 -->
+                                                    <Action>
+                                                    <Target>can_of_soda_1</Target>
+                                                    <Fallback>
+                                                    <!-- Navigate to can_of_soda_2 -->
+                                                    <Action>
+                                                    <Target>can_of_soda_2</Target>
+                                                    <Fallback>
+                                                    <!-- Navigate to can_of_soda_3 -->
+                                                    <Action>
+                                                    <Target>can_of_soda_3</Target>
+                                                    <Fallback>
+                                                    <!-- Navigate to trash_can -->
+                                                    <Action>
+                                                    <Target>trash_can</Target>
+                                                    <Fallback>
+                                                    <!-- Navigate to can_of_soda_1 -->
+                                                    <Action>
+                                                    <Target>can_of_soda_1</Target>
+                                                    <Fallback>
+                                                    <!-- Navigate to can_of_soda_2 -->
+                                                    <Action>
+                                                    <Target>can_of_soda_2</Target>
+                                                    <Fallback>
+                                                    <!-- Navigate to can_of_soda_3 -->
+                                                    <Action>
+                                                    <Target>can_of_soda_3</Target>
+                                                    <Fallback>
+                                                    <!-- Navigate to trash_can -->
+                                                    <Action>
+                                                    <Target>trash_can</Target>
+                                                    <Fallback>
+                                                    <!-- Navigate to can_of_soda_1 -->
+                                                    <Action>
+                                                    <Target>can_of_soda_1</Target>
+                                                    <Fallback>
+                                                    <!-- Navigate to can_of_soda_2 -->
+                                                    <Action>
+                                                    <Target>can_of_soda_2</Target>
+                                                    <Fallback>
+                                                    <!-- Navigate to can_of_soda_3 -->
+                                                    <Action>
+                                                    <Target>can_of_soda_3</Target>
+                                                    <Fallback>
+                                                    <!-- Navigate to trash_can -->
+                                                    <Action>
+                                                    <Target>trash_can</Target>
+                                                    <Fallback>
+                                                    <!-- Navigate to can_of_soda_1 -->
+                                                    <Action>
+                                                    <Target>can_of_soda_1</Target>
+                                                    <Fallback>
+                                                    <!-- Navigate

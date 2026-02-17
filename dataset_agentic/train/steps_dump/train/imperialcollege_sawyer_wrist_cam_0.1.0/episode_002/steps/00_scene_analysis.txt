@@ -1,0 +1,6 @@
+scene_analysis:
+  target: ["bowl_top","bowl_bottom"]
+  destination: "bowl_bottom"
+  expanded_instruction: "Pick up the upper bowl and place it into the lower bowl on the table to stack them."
+  scene_context: "Lower bowl resting on table; upper bowl directly above and not held; table clear."
+  expected_sequence: "Grasp the upper bowl, align it over the lower bowl, and lower it until they are nested."

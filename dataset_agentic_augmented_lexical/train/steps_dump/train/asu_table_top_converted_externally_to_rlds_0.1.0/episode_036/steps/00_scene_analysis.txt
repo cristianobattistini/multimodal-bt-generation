@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "blue_bottle"
+  destination: ""
+  expanded_instruction: "Pick up the blue bottle from the right side of the table; check that blue_bottle IS_VISIBLE before attempting to grasp, retry the grasp up to 2 times if it fails, and then hold it in the gripper."
+  scene_context: "Robot not holding anything; blue bottle on right side of table; table otherwise clear."
+  expected_sequence: "Move to the blue bottle, verify IS_VISIBLE on blue_bottle before GRASP, grasp it securely (retry up to 2 times if grasp fails), lift it and hold it in the gripper."

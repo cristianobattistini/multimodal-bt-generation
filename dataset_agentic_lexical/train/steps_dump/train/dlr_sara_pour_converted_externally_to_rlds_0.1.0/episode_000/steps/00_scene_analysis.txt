@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "brown_teapot"
+  destination: "mug"
+  expanded_instruction: "Pick up the brown teapot and pour its contents into the white mug on the table."
+  scene_context: "Brown teapot on the table and not held; white mug upright on table; table clear; no lids open/closed."
+  expected_sequence: "Reach for and lift the teapot, tilt it over the mug to pour, then set the teapot back down."

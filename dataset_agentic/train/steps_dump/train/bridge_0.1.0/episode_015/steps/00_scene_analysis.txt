@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "strawberry"
+  destination: "orange_towel"
+  expanded_instruction: "Pick up the strawberry and place it on the orange towel"
+  scene_context: "Strawberry on the orange towel near a metal bowl; strawberry not held; towel surface clear and reachable."
+  expected_sequence: "Reach the strawberry, pick it up, move over the orange towel, and place it down."

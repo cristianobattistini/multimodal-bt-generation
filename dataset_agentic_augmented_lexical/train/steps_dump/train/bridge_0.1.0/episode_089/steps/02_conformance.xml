@@ -1,0 +1,13 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to oven -->
+      <Action ID="NAVIGATE_TO" obj="oven" />
+      <!-- Retry OPEN oven up to 4 attempts -->
+      <RetryUntilSuccessful num_attempts="4">
+        <!-- Open oven -->
+        <Action ID="OPEN" obj="oven" />
+      </RetryUntilSuccessful>
+    </Sequence>
+  </BehaviorTree>
+</root>

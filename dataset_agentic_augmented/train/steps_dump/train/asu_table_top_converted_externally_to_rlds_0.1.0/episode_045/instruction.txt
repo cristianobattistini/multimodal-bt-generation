@@ -1,0 +1,1 @@
+Push red object. Use ApproachRedObject subtree for approach and grasp.

@@ -1,0 +1,40 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to car -->
+      <Action ID="NAVIGATE_TO" obj="car" />
+      <!-- Grasp tennis_racket -->
+      <Action ID="GRASP" obj="tennis_racket" />
+      <!-- Navigate to car -->
+      <Action ID="NAVIGATE_TO" obj="car" />
+      <!-- Open car -->
+      <Action ID="OPEN" obj="car" />
+      <!-- Navigate to car -->
+      <Action ID="NAVIGATE_TO" obj="car" />
+      <!-- Place inside car trunk -->
+      <Action ID="PLACE_INSIDE" obj="car" />
+      <!-- Navigate to car -->
+      <Action ID="NAVIGATE_TO" obj="car" />
+      <!-- Grasp container -->
+      <Action ID="GRASP" obj="container" />
+      <!-- Navigate to car -->
+      <Action ID="NAVIGATE_TO" obj="car" />
+      <!-- Open car -->
+      <Action ID="OPEN" obj="car" />
+      <!-- Navigate to car -->
+      <Action ID="NAVIGATE_TO" obj="car" />
+      <!-- Place inside car trunk -->
+      <Action ID="PLACE_INSIDE" obj="car" />
+      <!-- Navigate to car -->
+      <Action ID="NAVIGATE_TO" obj="car" />
+      <!-- Grasp digital_camera -->
+      <Action ID="GRASP" obj="digital_camera" />
+      <!-- Navigate to car -->
+      <Action ID="NAVIGATE_TO" obj="car" />
+      <!-- Close car trunk -->
+      <Action ID="CLOSE" obj="car" />
+      <!-- Place inside car trunk -->
+      <Action ID="PLACE_INSIDE" obj="car" />
+    </Sequence>
+  </BehaviorTree>
+</root>

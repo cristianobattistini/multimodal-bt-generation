@@ -1,0 +1,24 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to silver_vessel -->
+      <Action ID="NAVIGATE_TO" obj="silver_vessel" />
+      <!-- Grasp silver_vessel -->
+      <Action ID="GRASP" obj="silver_vessel" />
+      <!-- Navigate to purple_cloth -->
+      <Action ID="NAVIGATE_TO" obj="purple_cloth" />
+      <!-- Fallback: if PLACE_ON_TOP purple_cloth fails, try PUSH to reposition -->
+      <Fallback>
+        <!-- Place on purple_cloth -->
+        <Action ID="PLACE_ON_TOP" obj="purple_cloth" />
+        <Sequence>
+          <!-- Push purple_cloth forward toward front edge of table -->
+          <Action ID="PUSH" obj="purple_cloth" />
+          <!-- Place on purple_cloth -->
+          <Action ID="PLACE_ON_TOP" obj="purple_cloth" />
+        </Sequence>
+      </Fallback>
+      
+    </Sequence>
+  </BehaviorTree>
+</root>

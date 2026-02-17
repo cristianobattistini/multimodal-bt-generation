@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "apple"
+  destination: "pot"
+  expanded_instruction: "Pick up the apple from the blue surface and place it into the metal pot; if placing inside fails (retry up to 2 times or within 10s), use a push to reposition the apple as a fallback and then try placing again."
+  scene_context: "Apple on blue surface next to an open metal pot; pot is empty and reachable."
+  expected_sequence: "Reach to the apple, grasp it, lift and move it over the pot, then release it into the pot. If placing fails (retry up to 2 times or within 10s), use a push to reposition the apple and attempt placement again."

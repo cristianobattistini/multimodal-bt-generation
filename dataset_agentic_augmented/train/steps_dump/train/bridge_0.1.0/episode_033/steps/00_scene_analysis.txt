@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "cucumber"
+  destination: "counter"
+  expanded_instruction: "Pick up the cucumber from the cloth on the counter and place it at the upper-left area of the counter. If the grasp fails, retry up to 3 times."
+  scene_context: "Cucumber resting on a green cloth on the counter; robot gripper not holding anything; upper-left counter area is clear."
+  expected_sequence: "Approach and grasp the cucumber; if the grasp fails, retry up to 3 times, then lift it, move to the upper-left area of the counter, and set it down."

@@ -1,0 +1,1 @@
+Pick up pan. Check if visible, use a 10 second timeout for grasp, and try push if timeout occurs.

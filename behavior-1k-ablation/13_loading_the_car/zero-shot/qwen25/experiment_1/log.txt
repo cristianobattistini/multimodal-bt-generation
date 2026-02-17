@@ -1,0 +1,366 @@
+BTExecutor] Importing BehaviorTreeExecutor...
+[BTExecutor] Parsing BT XML...
+[BTExecutor] Creating PALPrimitiveBridge...
+[PALPrimitiveBridge.__init__] Starting (symbolic mode)
+[PALPrimitiveBridge] Importing SymbolicSemanticActionPrimitives...
+[PALPrimitiveBridge] Import successful
+[PALPrimitiveBridge] Creating PatchedSymbolicSemanticActionPrimitives...
+[00:20:36.230] [WARNING] [omnigibson.action_primitives.starter_semantic_action_primitives] The StarterSemanticActionPrimitive is a work-in-progress and is only provided as an example. It currently only works with Tiago and R1 with their HolonomicBaseJointController/JointControllers set to absolute position mode.
+[PALPrimitiveBridge] PatchedSymbolicSemanticActionPrimitives created!
+[PALPrimitiveBridge.__init__] Complete!
+[BTExecutor] PALPrimitiveBridge created successfully!
+[BTExecutor] Initialization complete, proceeding to execution...
+[BTExecutor] DEBUG: After first try block
+[BTExecutor] Building execution context...
+[BTExecutor] Loaded primitive config for task '13_loading_the_car'
+[BTExecutor] Starting BT execution loop (max_ticks=1000)...
+[BTExecutor] Executing first tick...
+[SEQUENCE] 'Sequence' starting (16 children)
+[SEQUENCE] 'Sequence' → child 1/16: NAVIGATE_TO
+  [ACTION] Ticking: NAVIGATE_TO(obj=car)
+  [CONFIG] task=13_loading_the_car, category=None
+  [PRIMITIVE] Executing: NAVIGATE_TO(obj=car)
+  [ORIENT] Orienting head to look at 'car'...
+    [OBJECT] Resolving: 'car'
+    [OBJECT] BDDL mapping: 'car' → 'car.n.01_1'
+    [OBJECT] ✓ BDDL→inst_to_name: 'car.n.01_1' → 'car_ssxsje_0'
+  [ORIENT] Robot at (-6.97, 5.20), object at (-4.43, 6.89, 0.67)
+  [ORIENT] Calculated pan=0.53 rad, tilt=-0.13 rad
+  [ORIENT] No head joints, rotating base to face target...
+  [ROTATE_BASE] Rotated to yaw=0.59 rad
+  [FRAME] Started: action_01_NAVIGATE_TO_car/ Mode: greedy (every 5 steps, will prune to 25%)
+    [OBJECT] Resolving: 'car'
+    [OBJECT] BDDL mapping: 'car' → 'car.n.01_1'
+    [OBJECT] ✓ BDDL→inst_to_name: 'car.n.01_1' → 'car_ssxsje_0'
+    [NAVIGATE] Config: use_waypoint_navigation=False
+  [FRAME] Updated: precise mode (interval=3, target=6)
+  [PRIMITIVE] Symbolic NAVIGATE_TO (straight-line) moved base near 'car_ssxsje_0' in 21 steps
+  [PRIMITIVE] Result: ✓ SUCCESS
+  [FRAME] Ended: action_01_NAVIGATE_TO_car/ (8 intermediate frames per view)
+  [ACTION] Result: ✓ SUCCESS
+[SEQUENCE] 'Sequence' → child 2/16: OPEN
+  [ACTION] Ticking: OPEN(obj=car)
+  [CONFIG] task=13_loading_the_car, category=None
+  [PRIMITIVE] Executing: OPEN(obj=car)
+  [ORIENT] Orienting head to look at 'car'...
+    [OBJECT] Resolving: 'car'
+    [OBJECT] BDDL mapping: 'car' → 'car.n.01_1'
+    [OBJECT] ✓ BDDL→inst_to_name: 'car.n.01_1' → 'car_ssxsje_0'
+  [ORIENT] Robot at (-5.30, 6.33), object at (-4.43, 6.89, 0.67)
+  [ORIENT] Calculated pan=0.05 rad, tilt=0.19 rad
+  [ORIENT] No head joints, rotating base to face target...
+  [ROTATE_BASE] Rotated to yaw=0.57 rad
+  [FRAME] Started: action_02_OPEN_car/ Mode: greedy (every 5 steps, will prune to 25%)
+    [OBJECT] Resolving: 'car'
+    [OBJECT] BDDL mapping: 'car' → 'car.n.01_1'
+    [OBJECT] ✓ BDDL→inst_to_name: 'car.n.01_1' → 'car_ssxsje_0'
+  [ORIENT] Orienting head to look at 'car'...
+    [OBJECT] Resolving: 'car'
+    [OBJECT] BDDL mapping: 'car' → 'car.n.01_1'
+    [OBJECT] ✓ BDDL→inst_to_name: 'car.n.01_1' → 'car_ssxsje_0'
+  [ORIENT] Robot at (-5.23, 6.31), object at (-4.43, 6.89, 0.67)
+  [ORIENT] Calculated pan=0.65 rad, tilt=0.23 rad
+  [ORIENT] No head joints, rotating base to face target...
+  [ROTATE_BASE] Rotated to yaw=0.62 rad
+  [ORIENT] Orienting head to look at 'car'...
+    [OBJECT] Resolving: 'car'
+    [OBJECT] BDDL mapping: 'car' → 'car.n.01_1'
+    [OBJECT] ✓ BDDL→inst_to_name: 'car.n.01_1' → 'car_ssxsje_0'
+  [ORIENT] Robot at (-5.21, 6.41), object at (-4.43, 6.89, 0.67)
+  [ORIENT] Calculated pan=-0.34 rad, tilt=0.28 rad
+  [ORIENT] No head joints, rotating base to face target...
+  [ROTATE_BASE] Rotated to yaw=0.55 rad
+  [ORIENT] Orienting head to look at 'car'...
+    [OBJECT] Resolving: 'car'
+    [OBJECT] BDDL mapping: 'car' → 'car.n.01_1'
+    [OBJECT] ✓ BDDL→inst_to_name: 'car.n.01_1' → 'car_ssxsje_0'
+  [ORIENT] Robot at (-5.23, 6.48), object at (-4.43, 6.89, 0.67)
+  [ORIENT] Calculated pan=-0.36 rad, tilt=0.30 rad
+  [ORIENT] No head joints, rotating base to face target...
+  [ROTATE_BASE] Rotated to yaw=0.47 rad
+  [ORIENT] Orienting head to look at 'car'...
+    [OBJECT] Resolving: 'car'
+    [OBJECT] BDDL mapping: 'car' → 'car.n.01_1'
+    [OBJECT] ✓ BDDL→inst_to_name: 'car.n.01_1' → 'car_ssxsje_0'
+  [ORIENT] Robot at (-5.29, 6.52), object at (-4.43, 6.89, 0.67)
+  [ORIENT] Calculated pan=-0.34 rad, tilt=0.28 rad
+  [ORIENT] No head joints, rotating base to face target...
+  [ROTATE_BASE] Rotated to yaw=0.41 rad
+  [ORIENT] Orienting head to look at 'car'...
+    [OBJECT] Resolving: 'car'
+    [OBJECT] BDDL mapping: 'car' → 'car.n.01_1'
+    [OBJECT] ✓ BDDL→inst_to_name: 'car.n.01_1' → 'car_ssxsje_0'
+  [ORIENT] Robot at (-5.34, 6.48), object at (-4.43, 6.89, 0.67)
+  [ORIENT] Calculated pan=0.31 rad, tilt=0.23 rad
+  [ORIENT] No head joints, rotating base to face target...
+  [ROTATE_BASE] Rotated to yaw=0.43 rad
+  [ORIENT] Orienting head to look at 'car'...
+    [OBJECT] Resolving: 'car'
+    [OBJECT] BDDL mapping: 'car' → 'car.n.01_1'
+    [OBJECT] ✓ BDDL→inst_to_name: 'car.n.01_1' → 'car_ssxsje_0'
+  [ORIENT] Robot at (-5.22, 6.48), object at (-4.43, 6.89, 0.67)
+  [ORIENT] Calculated pan=0.04 rad, tilt=0.30 rad
+  [ORIENT] No head joints, rotating base to face target...
+  [ROTATE_BASE] Rotated to yaw=0.48 rad
+  [ORIENT] Orienting head to look at 'car'...
+    [OBJECT] Resolving: 'car'
+    [OBJECT] BDDL mapping: 'car' → 'car.n.01_1'
+    [OBJECT] ✓ BDDL→inst_to_name: 'car.n.01_1' → 'car_ssxsje_0'
+  [ORIENT] Robot at (-5.29, 6.38), object at (-4.43, 6.89, 0.67)
+  [ORIENT] Calculated pan=0.55 rad, tilt=0.24 rad
+  [ORIENT] No head joints, rotating base to face target...
+  [ROTATE_BASE] Rotated to yaw=0.54 rad
+  [ORIENT] Orienting head to look at 'car'...
+    [OBJECT] Resolving: 'car'
+    [OBJECT] BDDL mapping: 'car' → 'car.n.01_1'
+    [OBJECT] ✓ BDDL→inst_to_name: 'car.n.01_1' → 'car_ssxsje_0'
+  [ORIENT] Robot at (-5.27, 6.32), object at (-4.43, 6.89, 0.67)
+  [ORIENT] Calculated pan=0.21 rad, tilt=0.23 rad
+  [ORIENT] No head joints, rotating base to face target...
+  [ROTATE_BASE] Rotated to yaw=0.60 rad
+  [ORIENT] Orienting head to look at 'car'...
+    [OBJECT] Resolving: 'car'
+    [OBJECT] BDDL mapping: 'car' → 'car.n.01_1'
+    [OBJECT] ✓ BDDL→inst_to_name: 'car.n.01_1' → 'car_ssxsje_0'
+  [ORIENT] Robot at (-5.28, 6.29), object at (-4.43, 6.89, 0.67)
+  [ORIENT] Calculated pan=0.36 rad, tilt=0.22 rad
+  [ORIENT] No head joints, rotating base to face target...
+  [ROTATE_BASE] Rotated to yaw=0.62 rad
+  [ORIENT] Orienting head to look at 'car'...
+    [OBJECT] Resolving: 'car'
+    [OBJECT] BDDL mapping: 'car' → 'car.n.01_1'
+    [OBJECT] ✓ BDDL→inst_to_name: 'car.n.01_1' → 'car_ssxsje_0'
+  [ORIENT] Robot at (-5.19, 6.30), object at (-4.43, 6.89, 0.67)
+  [ORIENT] Calculated pan=0.76 rad, tilt=0.27 rad
+  [ORIENT] No head joints, rotating base to face target...
+  [ROTATE_BASE] Rotated to yaw=0.66 rad
+  [ORIENT] Orienting head to look at 'car'...
+    [OBJECT] Resolving: 'car'
+    [OBJECT] BDDL mapping: 'car' → 'car.n.01_1'
+    [OBJECT] ✓ BDDL→inst_to_name: 'car.n.01_1' → 'car_ssxsje_0'
+  [ORIENT] Robot at (-5.24, 6.34), object at (-4.43, 6.89, 0.67)
+  [ORIENT] Calculated pan=-0.28 rad, tilt=0.26 rad
+  [ORIENT] No head joints, rotating base to face target...
+  [ROTATE_BASE] Rotated to yaw=0.60 rad
+  [ORIENT] Orienting head to look at 'car'...
+    [OBJECT] Resolving: 'car'
+    [OBJECT] BDDL mapping: 'car' → 'car.n.01_1'
+    [OBJECT] ✓ BDDL→inst_to_name: 'car.n.01_1' → 'car_ssxsje_0'
+  [ORIENT] Robot at (-5.27, 6.35), object at (-4.43, 6.89, 0.67)
+  [ORIENT] Calculated pan=-0.19 rad, tilt=0.24 rad
+  [ORIENT] No head joints, rotating base to face target...
+  [ROTATE_BASE] Rotated to yaw=0.57 rad
+  [ORIENT] Orienting head to look at 'car'...
+    [OBJECT] Resolving: 'car'
+    [OBJECT] BDDL mapping: 'car' → 'car.n.01_1'
+    [OBJECT] ✓ BDDL→inst_to_name: 'car.n.01_1' → 'car_ssxsje_0'
+  [ORIENT] Robot at (-5.18, 6.49), object at (-4.43, 6.89, 0.67)
+  [ORIENT] Calculated pan=-0.68 rad, tilt=0.30 rad
+  [ORIENT] No head joints, rotating base to face target...
+  [ROTATE_BASE] Rotated to yaw=0.49 rad
+  [ORIENT] Orienting head to look at 'car'...
+    [OBJECT] Resolving: 'car'
+    [OBJECT] BDDL mapping: 'car' → 'car.n.01_1'
+    [OBJECT] ✓ BDDL→inst_to_name: 'car.n.01_1' → 'car_ssxsje_0'
+  [ORIENT] Robot at (-5.13, 6.60), object at (-4.43, 6.89, 0.67)
+  [ORIENT] Calculated pan=-0.51 rad, tilt=0.30 rad
+  [ORIENT] No head joints, rotating base to face target...
+  [ROTATE_BASE] Rotated to yaw=0.39 rad
+  [ORIENT] Orienting head to look at 'car'...
+    [OBJECT] Resolving: 'car'
+    [OBJECT] BDDL mapping: 'car' → 'car.n.01_1'
+    [OBJECT] ✓ BDDL→inst_to_name: 'car.n.01_1' → 'car_ssxsje_0'
+  [ORIENT] Robot at (-4.97, 6.64), object at (-4.43, 6.89, 0.67)
+  [ORIENT] Calculated pan=0.02 rad, tilt=0.30 rad
+  [ORIENT] No head joints, rotating base to face target...
+  [ROTATE_BASE] Rotated to yaw=0.42 rad
+  [ORIENT] Orienting head to look at 'car'...
+    [OBJECT] Resolving: 'car'
+    [OBJECT] BDDL mapping: 'car' → 'car.n.01_1'
+    [OBJECT] ✓ BDDL→inst_to_name: 'car.n.01_1' → 'car_ssxsje_0'
+  [ORIENT] Robot at (-4.96, 6.52), object at (-4.43, 6.89, 0.67)
+  [ORIENT] Calculated pan=0.17 rad, tilt=0.30 rad
+  [ORIENT] No head joints, rotating base to face target...
+  [ROTATE_BASE] Rotated to yaw=0.61 rad
+  [ORIENT] Orienting head to look at 'car'...
+    [OBJECT] Resolving: 'car'
+    [OBJECT] BDDL mapping: 'car' → 'car.n.01_1'
+    [OBJECT] ✓ BDDL→inst_to_name: 'car.n.01_1' → 'car_ssxsje_0'
+  [ORIENT] Robot at (-5.02, 6.52), object at (-4.43, 6.89, 0.67)
+  [ORIENT] Calculated pan=-0.05 rad, tilt=0.30 rad
+  [ORIENT] No head joints, rotating base to face target...
+  [ROTATE_BASE] Rotated to yaw=0.56 rad
+  [ORIENT] Orienting head to look at 'car'...
+    [OBJECT] Resolving: 'car'
+    [OBJECT] BDDL mapping: 'car' → 'car.n.01_1'
+    [OBJECT] ✓ BDDL→inst_to_name: 'car.n.01_1' → 'car_ssxsje_0'
+  [ORIENT] Robot at (-5.10, 6.45), object at (-4.43, 6.89, 0.67)
+  [ORIENT] Calculated pan=0.18 rad, tilt=0.30 rad
+  [ORIENT] No head joints, rotating base to face target...
+  [ROTATE_BASE] Rotated to yaw=0.58 rad
+  [ORIENT] Orienting head to look at 'car'...
+    [OBJECT] Resolving: 'car'
+    [OBJECT] BDDL mapping: 'car' → 'car.n.01_1'
+    [OBJECT] ✓ BDDL→inst_to_name: 'car.n.01_1' → 'car_ssxsje_0'
+  [ORIENT] Robot at (-5.07, 6.57), object at (-4.43, 6.89, 0.67)
+  [ORIENT] Calculated pan=-0.50 rad, tilt=0.30 rad
+  [ORIENT] No head joints, rotating base to face target...
+  [ROTATE_BASE] Rotated to yaw=0.46 rad
+  [ORIENT] Orienting head to look at 'car'...
+    [OBJECT] Resolving: 'car'
+    [OBJECT] BDDL mapping: 'car' → 'car.n.01_1'
+    [OBJECT] ✓ BDDL→inst_to_name: 'car.n.01_1' → 'car_ssxsje_0'
+  [ORIENT] Robot at (-5.50, 6.28), object at (-4.43, 6.89, 0.67)
+  [ORIENT] Calculated pan=-0.17 rad, tilt=0.30 rad
+  [ORIENT] No head joints, rotating base to face target...
+  [ROTATE_BASE] Rotated to yaw=0.52 rad
+  [ORIENT] Orienting head to look at 'car'...
+    [OBJECT] Resolving: 'car'
+    [OBJECT] BDDL mapping: 'car' → 'car.n.01_1'
+    [OBJECT] ✓ BDDL→inst_to_name: 'car.n.01_1' → 'car_ssxsje_0'
+  [ORIENT] Robot at (-5.72, 6.11), object at (-4.43, 6.89, 0.67)
+  [ORIENT] Calculated pan=-0.13 rad, tilt=0.30 rad
+  [ORIENT] No head joints, rotating base to face target...
+  [ROTATE_BASE] Rotated to yaw=0.54 rad
+  [ORIENT] Orienting head to look at 'car'...
+    [OBJECT] Resolving: 'car'
+    [OBJECT] BDDL mapping: 'car' → 'car.n.01_1'
+    [OBJECT] ✓ BDDL→inst_to_name: 'car.n.01_1' → 'car_ssxsje_0'
+  [ORIENT] Robot at (-5.78, 6.09), object at (-4.43, 6.89, 0.67)
+  [ORIENT] Calculated pan=0.03 rad, tilt=0.30 rad
+  [ORIENT] No head joints, rotating base to face target...
+  [ROTATE_BASE] Rotated to yaw=0.53 rad
+  [ORIENT] Orienting head to look at 'car'...
+    [OBJECT] Resolving: 'car'
+    [OBJECT] BDDL mapping: 'car' → 'car.n.01_1'
+    [OBJECT] ✓ BDDL→inst_to_name: 'car.n.01_1' → 'car_ssxsje_0'
+  [ORIENT] Robot at (-5.77, 6.09), object at (-4.43, 6.89, 0.67)
+  [ORIENT] Calculated pan=-0.03 rad, tilt=0.30 rad
+  [ORIENT] No head joints, rotating base to face target...
+  [ROTATE_BASE] Rotated to yaw=0.54 rad
+  [ORIENT] Orienting head to look at 'car'...
+    [OBJECT] Resolving: 'car'
+    [OBJECT] BDDL mapping: 'car' → 'car.n.01_1'
+    [OBJECT] ✓ BDDL→inst_to_name: 'car.n.01_1' → 'car_ssxsje_0'
+  [ORIENT] Robot at (-5.79, 6.07), object at (-4.43, 6.89, 0.67)
+  [ORIENT] Calculated pan=0.00 rad, tilt=0.30 rad
+  [ORIENT] No head joints, rotating base to face target...
+  [ROTATE_BASE] Rotated to yaw=0.54 rad
+    [PRIMITIVE] OPEN settling for 20 steps (frame capture)...
+    [PRIMITIVE] OPEN completed in 755 sim steps
+  [PRIMITIVE] Result: ✓ SUCCESS
+  [FRAME] Pruned head: 154 -> 39 frames (2 passes)
+  [FRAME] Pruned wrist: 154 -> 39 frames (2 passes)
+  [FRAME] Ended: action_02_OPEN_car/ (39 intermediate frames per view)
+  [ACTION] Result: ✓ SUCCESS
+[SEQUENCE] 'Sequence' → child 3/16: GRASP
+  [ACTION] Ticking: GRASP(obj=tennis_racket)
+  [CONFIG] task=13_loading_the_car, category=None
+  [PRIMITIVE] Executing: GRASP(obj=tennis_racket)
+  [ORIENT] Orienting head to look at 'tennis_racket'...
+    [OBJECT] Resolving: 'tennis_racket'
+    [OBJECT] BDDL mapping: 'tennis_racket' → 'tennis_racket.n.01_1'
+    [OBJECT] ✓ BDDL→inst_to_name: 'tennis_racket.n.01_1' → 'tennis_racket_80'
+  [ORIENT] Robot at (-5.79, 6.07), object at (3.35, 5.02, 0.44)
+  [ORIENT] Calculated pan=-0.65 rad, tilt=0.06 rad
+  [ORIENT] No head joints, rotating base to face target...
+  [ROTATE_BASE] Rotated to yaw=-0.12 rad
+  [FRAME] Started: action_03_GRASP_tennis_racket/ Mode: greedy (every 5 steps, will prune to 25%)
+    [OBJECT] Resolving: 'tennis_racket'
+    [OBJECT] BDDL mapping: 'tennis_racket' → 'tennis_racket.n.01_1'
+    [OBJECT] ✓ BDDL→inst_to_name: 'tennis_racket.n.01_1' → 'tennis_racket_80'
+    [GRASP] Completed in 100 steps
+  [PRIMITIVE] Result: ✓ SUCCESS
+  [FRAME] Ended: action_03_GRASP_tennis_racket/ (0 intermediate frames per view)
+  [ACTION] Result: ✓ SUCCESS
+[SEQUENCE] 'Sequence' → child 4/16: NAVIGATE_TO
+  [ACTION] Ticking: NAVIGATE_TO(obj=trunk)
+  [CONFIG] task=13_loading_the_car, category=None
+  [PRIMITIVE] Executing: NAVIGATE_TO(obj=trunk)
+  [ORIENT] Orienting head to look at 'trunk'...
+    [OBJECT] Resolving: 'trunk'
+    [OBJECT] ✗ NOT FOUND: 'trunk' (category: trunk)
+    [OBJECT] Available categories: ['agent', 'bar', 'bottom_cabinet', 'breakfast_table', 'burner', 'bush', 'car', 'ceilings', 'charcoal_grill', 'coffee_table', 'countertop', 'decorative_sign', 'digital_camera', 'dishwasher', 'door', 'downlight', 'driveway', 'drop_in_sink', 'electric_switch', 'fixed_window']
+  [ORIENT] Could not resolve object 'trunk', skipping orientation
+  [FRAME] Started: action_04_NAVIGATE_TO_trunk/ Mode: greedy (every 5 steps, will prune to 25%)
+    [OBJECT] Resolving: 'trunk'
+    [OBJECT] ✗ NOT FOUND: 'trunk' (category: trunk)
+    [OBJECT] Available categories: ['agent', 'bar', 'bottom_cabinet', 'breakfast_table', 'burner', 'bush', 'car', 'ceilings', 'charcoal_grill', 'coffee_table', 'countertop', 'decorative_sign', 'digital_camera', 'dishwasher', 'door', 'downlight', 'driveway', 'drop_in_sink', 'electric_switch', 'fixed_window']
+  [FRAME] Ended: action_04_NAVIGATE_TO_trunk/ (0 intermediate frames per view)
+  [PRIMITIVE] ✗ EXCEPTION: Object 'trunk' not found in environment
+  [ACTION] Result: ✗ FAILURE
+[SEQUENCE] 'Sequence' ✗ FAILED at child 4
+  Tick 1: FAILURE
+[BTExecutor] Execution complete: success=False, ticks=1
+  FAILURE at tick 1
+  [VIDEO] Creating head video from 55 frames...
+  [VIDEO] Saved: bt_execution_head.mp4 (55 frames, 5 fps)
+  [VIDEO] Creating wrist video from 55 frames...
+  [VIDEO] Saved: bt_execution_wrist.mp4 (55 frames, 5 fps)
+  Video saved: bt_execution_head.mp4
+  Video saved: bt_execution_wrist.mp4
+[Camera] Looking for RGB in robot: robot_dviawr
+[Camera] Found RGB at obs[robot_dviawr]['robot_dviawr:left_eef_link:Camera:0']['rgb']
+[Camera] RGB shape: torch.Size([512, 512, 4]), dtype: torch.uint8
+  Screenshot saved: experiment_1/post_execution_20260215_115033_009.png
+
+  [DEBUG] Inside state analysis at BDDL check time:
+[00:21:30.073] [WARNING] [omnigibson.prims.xform_prim] get_position is deprecated and will be removed in a future release. Use get_position_orientation()[0] instead.
+    Container 'bottom_cabinet_qacthv_0':
+      Position: (-2.486, -0.742, 0.392)
+      AABB: min=(-3.061, -0.982, -0.009)
+            max=(-1.912, -0.487, 0.807)
+[00:21:30.075] [WARNING] [omnigibson.prims.xform_prim] get_position is deprecated and will be removed in a future release. Use get_position_orientation()[0] instead.
+    Container 'bottom_cabinet_rhdbzv_0':
+      Position: (6.260, 4.522, 0.214)
+      AABB: min=(6.015, 3.321, 0.000)
+            max=(6.420, 5.659, 0.413)
+[00:21:30.076] [WARNING] [omnigibson.prims.xform_prim] get_position is deprecated and will be removed in a future release. Use get_position_orientation()[0] instead.
+2026-02-15 10:36:20 [433,784ms] [Warning] [omnigibson.prims.xform_prim] get_position is deprecated and will be removed in a future release. Use get_position_orientation()[0] instead.
+2026-02-15 10:36:20 [433,784ms] [Warning] [omnigibson.prims.xform_prim] get_orientation is deprecated and will be removed in a future release. Use get_position_orientation()[1] instead
+2026-02-15 10:38:05 [538,898ms] [Warning] [omnigibson.action_primitives.starter_semantic_action_primitives] The StarterSemanticActionPrimitive is a work-in-progress and is only provided as an example. It currently only works with Tiago and R1 with their HolonomicBaseJointController/JointControllers set to absolute position mode.
+2026-02-15 10:38:34 [567,901ms] [Warning] [omnigibson.prims.xform_prim] get_position is deprecated and will be removed in a future release. Use get_position_orientation()[0] instead.
+2026-02-15 10:38:34 [567,903ms] [Warning] [omnigibson.prims.xform_prim] get_position is deprecated and will be removed in a future release. Use get_position_orientation()[0] instead.
+2026-02-15 10:38:34 [567,905ms] [Warning] [omnigibson.prims.xform_prim] get_position is deprecated and will be removed in a future release. Use get_position_orientation()[0] instead.
+2026-02-15 10:38:34 [567,906ms] [Warning] [omnigibson.prims.xform_prim] get_position is deprecated and will be removed in a future release. Use get_position_orientation()[0] instead.
+2026-02-15 10:38:34 [567,908ms] [Warning] [omnigibson.prims.xform_prim] get_position is deprecated and will be removed in a future release. Use get_position_orientation()[0] instead.
+2026-02-15 10:38:46 [579,873ms] [Warning] [omnigibson.prims.xform_prim] get_position is deprecated and will be removed in a future release. Use get_position_orientation()[0] instead.
+2026-02-15 10:38:46 [579,873ms] [Warning] [omnigibson.prims.xform_prim] get_orientation is deprecated and will be removed in a future release. Use get_position_orientation()[1] instead
+2026-02-15 10:38:50 [583,922ms] [Warning] [omnigibson.action_primitives.starter_semantic_action_primitives] The StarterSemanticActionPrimitive is a work-in-progress and is only provided as an example. It currently only works with Tiago and R1 with their HolonomicBaseJointController/JointControllers set to absolute position mode.
+2026-02-15 10:42:31 [805,243ms] [Warning] [omnigibson.prims.xform_prim] get_position is deprecated and will be removed in a future release. Use get_position_orientation()[0] instead.
+2026-02-15 10:42:31 [805,243ms] [Warning] [omnigibson.prims.xform_prim] get_orientation is deprecated and will be removed in a future release. Use get_position_orientation()[1] instead
+2026-02-15 10:44:03 [896,539ms] [Warning] [omnigibson.action_primitives.starter_semantic_action_primitives] The StarterSemanticActionPrimitive is a work-in-progress and is only provided as an example. It currently only works with Tiago and R1 with their HolonomicBaseJointController/JointControllers set to absolute position mode.
+2026-02-15 10:48:37 [1,170,905ms] [Warning] [omnigibson.prims.xform_prim] get_position is deprecated and will be removed in a future release. Use get_position_orientation()[0] instead.
+2026-02-15 10:48:37 [1,170,905ms] [Warning] [omnigibson.prims.xform_prim] get_orientation is deprecated and will be removed in a future release. Use get_position_orientation()[1] instead
+2026-02-15 10:49:39 [1,233,176ms] [Warning] [omnigibson.action_primitives.starter_semantic_action_primitives] The StarterSemanticActionPrimitive is a work-in-progress and is only provided as an example. It currently only works with Tiago and R1 with their HolonomicBaseJointController/JointControllers set to absolute position mode.
+2026-02-15 10:50:33 [1,287,018ms] [Warning] [omnigibson.prims.xform_prim] get_position is deprecated and will be removed in a future release. Use get_position_orientation()[0] instead.
+2026-02-15 10:50:33 [1,287,020ms] [Warning] [omnigibson.prims.xform_prim] get_position is deprecated and will be removed in a future release. Use get_position_orientation()[0] instead.
+2026-02-1    Container 'top_cabinet_tynnnw_0':
+      Position: (8.304, -0.373, 1.887)
+      AABB: min=(8.024, -0.975, 1.446)
+            max=(8.413, 0.229, 2.330)
+[00:21:30.078] [WARNING] [omnigibson.prims.xform_prim] get_position is deprecated and will be removed in a future release. Use get_position_orientation()[0] instead.
+    Container 'top_cabinet_tynnnw_1':
+      Position: (8.304, 0.830, 1.887)
+      AABB: min=(8.024, 0.228, 1.446)
+            max=(8.413, 1.432, 2.330)
+[00:21:30.079] [WARNING] [omnigibson.prims.xform_prim] get_position is deprecated and will be removed in a future release. Use get_position_orientation()[0] instead.
+    Container 'toy_box_81':
+      Position: (4.290, 7.313, 0.052)
+      AABB: min=(4.019, 7.057, -0.000)
+            max=(4.561, 7.569, 0.155)
+
+  [BDDL] Satisfied: 0
+  [BDDL] Unsatisfied: 3
+    X inside(?container.n.01_1, ?car.n.01_1)
+    X inside(?digital_camera.n.01_1, ?container.n.01_1)
+    X inside(?tennis_racket.n.01_1, ?car.n.01_1)
+  [BDDL] Goal NOT satisfied
+  Saved: experiment_1/bt_executed.xml
+  Saved: experiment_1/input_image.png
+  Saved: experiment_1/vlm_full_output.txt
+  Saved: experiment_1/scene_analysis.txt
+  Saved: experiment_1/mapping.json (8 entries)
+  Saved: experiment_1/bddl_result.json
+
+==============================================

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "red_object"
+  destination: ""
+  expanded_instruction: "First navigate to the red object (red cylinder) with a 15s navigate_to timeout, then pick it up from the table"
+  scene_context: "Red cylinder on table, robot not holding it, table surface clear."
+  expected_sequence: "Approach the red object (navigate_to completes within 15s), grasp it, and lift it off the table."

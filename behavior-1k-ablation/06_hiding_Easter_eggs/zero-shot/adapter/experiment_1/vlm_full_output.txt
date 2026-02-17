@@ -1,0 +1,37 @@
+scene_analysis:
+  target: "easter_egg_1,easter_egg_2,easter_egg_3"
+  destination: "tree_1"
+  expanded_instruction: "Pick up each of the three Easter eggs from the wicker basket on the lawn and place each next to the same tree at the front of the garden."
+  scene_context: "Three Easter eggs (1, 2, 3) lie inside the wicker basket on the lawn; tree_1 is a large green tree at the front; robot not holding eggs; baskets and bowls are open."
+  expected_sequence: "Pick each Easter egg from the basket and place it next to the tree at the garden front."
+Plan:
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to wicker_basket -->
+      <Action ID="NAVIGATE_TO" obj="wicker_basket" />
+      <!-- Grasp easter_egg_1 -->
+      <Action ID="GRASP" obj="easter_egg_1" />
+      <!-- Navigate to tree_1 -->
+      <Action ID="NAVIGATE_TO" obj="tree_1" />
+      <!-- Place next to tree_1 -->
+      <Action ID="PLACE_NEXT_TO" obj="tree_1" />
+      <!-- Navigate to wicker_basket -->
+      <Action ID="NAVIGATE_TO" obj="wicker_basket" />
+      <!-- Grasp easter_egg_2 -->
+      <Action ID="GRASP" obj="easter_egg_2" />
+      <!-- Navigate to tree_1 -->
+      <Action ID="NAVIGATE_TO" obj="tree_1" />
+      <!-- Place next to tree_1 -->
+      <Action ID="PLACE_NEXT_TO" obj="tree_1" />
+      <!-- Navigate to wicker_basket -->
+      <Action ID="NAVIGATE_TO" obj="wicker_basket" />
+      <!-- Grasp easter_egg_3 -->
+      <Action ID="GRASP" obj="easter_egg_3" />
+      <!-- Navigate to tree_1 -->
+      <Action ID="NAVIGATE_TO" obj="tree_1" />
+      <!-- Place next to tree_1 -->
+      <Action ID="PLACE_NEXT_TO" obj="tree_1" />
+    </Sequence>
+  </BehaviorTree>
+</root>

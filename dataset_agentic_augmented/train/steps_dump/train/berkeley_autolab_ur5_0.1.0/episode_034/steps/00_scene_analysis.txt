@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "blue_cup"
+  destination: "brown_cup"
+  expanded_instruction: "First check that the blue cup is reachable; if not, adjust position. Then pick up the blue cup from the table and place it into the brown cup, retrying the grasp up to 3 times if it fails; if grasping repeatedly fails, push or flip the blue cup to reposition it and try again."
+  scene_context: "Blue cup and brown cup upright on table, both empty and reachable; robot not holding anything."
+  expected_sequence: "Check IS_REACHABLE for the blue cup and adjust pose if needed; approach and attempt to grasp the blue cup (retry grasp up to 3 times on failure); if grasp still fails, use PUSH or FLIP to reposition the blue cup and attempt grasp again; once held, lift it, move over the brown cup, and release it inside."

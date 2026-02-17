@@ -1,0 +1,19 @@
+{
+  "success": true,
+  "bt_success": true,
+  "bddl_goal": true,
+  "ticks": 1,
+  "duration": 110.86541891098022,
+  "inference_time": 34.24273228645325,
+  "satisfied": [
+    "or(['and', ['ontop', '?storage_container.n.01_1', '?floor.n.01_2'], ['ontop', '?storage_container.n.01_2', '?storage_container.n.01_1']], ['and', ['ontop', '?storage_container.n.01_2', '?floor.n.01_2'], ['ontop', '?storage_container.n.01_1', '?storage_container.n.01_2']])"
+  ],
+  "unsatisfied": [],
+  "task": "16_moving_boxes_to_storage",
+  "condition": "zero-shot",
+  "model_dir": "qwen25",
+  "vlm_model": "qwen",
+  "inference_mode": "adapter",
+  "experiment": 3,
+  "timestamp": "20260213_225804"
+}

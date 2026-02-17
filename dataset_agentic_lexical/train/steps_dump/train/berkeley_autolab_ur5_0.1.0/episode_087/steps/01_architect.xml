@@ -1,0 +1,10 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Approach green_cloth -->
+      <Action ID="APPROACH" obj="green_cloth" />
+      <!-- Nudge green_cloth -->
+      <Action ID="NUDGE" obj="green_cloth" />
+    </Sequence>
+  </BehaviorTree>
+</root>

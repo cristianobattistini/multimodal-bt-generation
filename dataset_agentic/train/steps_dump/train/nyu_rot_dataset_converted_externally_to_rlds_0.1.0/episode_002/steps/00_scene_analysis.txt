@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "bag"
+  destination: "hook"
+  expanded_instruction: "Place the bag by its strap onto the metal hook mounted on the vertical pole so it hangs securely."
+  scene_context: "Robot is holding the bag near a vertical pole; the metal hook above is empty and reachable."
+  expected_sequence: "Position the strap over the hook, lower the bag onto the hook, and release so it hangs securely."

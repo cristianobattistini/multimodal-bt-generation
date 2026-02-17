@@ -1,0 +1,2 @@
+Instruction: Place the teapot on the stove
+Allowed Actions: [PLACE_ON_TOP(obj), GRASP(obj), NAVIGATE_TO(obj)]

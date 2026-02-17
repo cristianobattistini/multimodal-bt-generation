@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "green_cup"
+  destination: ""
+  expanded_instruction: "Pick up the green cup from the metal tray at the left side of the table."
+  scene_context: "Green cup on a metal tray on the left table area; tray is open and cup is not held; path clear."
+  expected_sequence: "Move to the tray, grasp the green cup, and lift it off the tray."

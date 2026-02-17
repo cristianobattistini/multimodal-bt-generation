@@ -1,0 +1,12 @@
+{
+  "decorator_type": "condition",
+  "mixed_subtype": null,
+  "target_action_id": "PLACE_INSIDE",
+  "target_obj": "dish_rack",
+  "parameters": {
+    "condition_id": "IS_EMPTY",
+    "condition_obj": "dish_rack",
+    "allowed_conditions": "IS_HOLDING, IS_OPEN, IS_EMPTY"
+  },
+  "prompt_name": "condition"
+}

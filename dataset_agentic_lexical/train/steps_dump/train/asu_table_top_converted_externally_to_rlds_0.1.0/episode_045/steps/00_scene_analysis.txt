@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "red_object"
+  destination: ""
+  expanded_instruction: "Push the red object (rectangular block) on the right-front of the table forward toward the table edge."
+  scene_context: "Red rectangular block on right-front of table, not held; table clear; robot arm nearby; no containers open."
+  expected_sequence: "Move the arm to the red block and push it forward toward the front edge of the table."

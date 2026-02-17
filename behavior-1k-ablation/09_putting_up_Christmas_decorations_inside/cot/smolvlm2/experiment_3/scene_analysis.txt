@@ -1,0 +1,7 @@
+scene_analysis:
+  target: "gift_box_1, gift_box_2, gift_box_3"
+  destination: "christmas_tree"
+  expanded_instruction: "Pick up gift_box_1 and gift_box_2 from the table and place them next to the christmas_tree. Then pick up gift_box_3 and place it on top of the christmas_tree."
+  scene_context: "Gift boxes on table are on the left, christmas_tree is on the right, wreath is on the table, candy_cane_1 and candy_cane_2 on the table, pillar_candle_1 and pillar_candle_2 on the table, sofa is on the left, table is on the right."
+  expected_sequence: "Move to gift_box_1 and grasp it, then move to gift_box_2 and grasp it, then move to gift_box_3 and grasp it, pick up gift_box_3 and place it on top of the christmas_tree, then pick up gift_box_1 and place it on the table, pick up gift_box_2 and place it on the christmas_tree, pick up gift_box_3 and place it on top of the christmas_tree."
+Plan:

@@ -1,0 +1,18 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to brown_object -->
+      <Action ID="NAVIGATE_TO" obj="brown_object" />
+      <!-- Grasp brown_object -->
+      <Action ID="GRASP" obj="brown_object" />
+      <!-- Navigate to table -->
+      <Action ID="NAVIGATE_TO" obj="table" />
+      <!-- Retry PLACE_ON_TOP table up to 5 attempts -->
+      <RetryUntilSuccessful num_attempts="5">
+        <!-- Place on table -->
+        <Action ID="PLACE_ON_TOP" obj="table" />
+      </RetryUntilSuccessful>
+      
+    </Sequence>
+  </BehaviorTree>
+</root>

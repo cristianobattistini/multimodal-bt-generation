@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "white_plate"
+  destination: "red_plate"
+  expanded_instruction: "Pick up the white plate from the table and place it centered on the red plate."
+  scene_context: "White and red plates are on the table; white plate is to the right of the red plate and not held; table clear."
+  expected_sequence: "Move to the white plate, grasp and lift it, move over the red plate, and lower it onto the red plate."

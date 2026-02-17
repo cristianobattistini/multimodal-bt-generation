@@ -1,0 +1,15 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Check box is reachable before NAVIGATE_TO -->
+      <Condition ID="IS_REACHABLE" obj="box" />
+      <!-- Timeout: NAVIGATE_TO box within 20s -->
+      <Timeout msec="20000">
+        <!-- Navigate to box -->
+        <Action ID="NAVIGATE_TO" obj="box" />
+      </Timeout>
+      <!-- Open box -->
+      <Action ID="OPEN" obj="box" />
+    </Sequence>
+  </BehaviorTree>
+</root>

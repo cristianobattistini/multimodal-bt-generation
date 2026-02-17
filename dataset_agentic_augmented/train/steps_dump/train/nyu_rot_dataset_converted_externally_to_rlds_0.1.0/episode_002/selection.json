@@ -1,0 +1,12 @@
+{
+  "decorator_type": "condition",
+  "mixed_subtype": null,
+  "target_action_id": "HANG",
+  "target_obj": "hook",
+  "parameters": {
+    "condition_id": "IS_HOLDING",
+    "condition_obj": "hook",
+    "allowed_conditions": "IS_HOLDING"
+  },
+  "prompt_name": "condition"
+}

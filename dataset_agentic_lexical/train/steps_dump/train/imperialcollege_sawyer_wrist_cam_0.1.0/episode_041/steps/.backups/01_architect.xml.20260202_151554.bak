@@ -1,0 +1,16 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to toast -->
+      <Action ID="NAVIGATE_TO" obj="toast"/>
+      <!-- Grasp toast -->
+      <Action ID="GRASP" obj="toast"/>
+      <!-- Navigate to toaster_slot -->
+      <Action ID="NAVIGATE_TO" obj="toaster_slot"/>
+      <!-- Place inside toaster_slot (insert toast fully into slot) -->
+      <Action ID="PLACE_INSIDE" obj="toaster_slot"/>
+      <!-- Release -->
+      <Action ID="RELEASE"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

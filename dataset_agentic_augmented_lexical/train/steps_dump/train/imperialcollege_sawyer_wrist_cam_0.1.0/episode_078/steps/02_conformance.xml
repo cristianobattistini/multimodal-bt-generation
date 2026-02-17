@@ -1,0 +1,24 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Move to bottle -->
+      <Action ID="MOVE_TO" obj="bottle" />
+      <!-- Check bottle is visible before GRASP -->
+      <Condition ID="IS_VISIBLE" obj="bottle" />
+      <!-- Fallback: if GRASP bottle fails, try alternative to reposition -->
+      <Fallback>
+        <!-- Retry GRASP bottle up to 3 attempts -->
+        <RetryUntilSuccessful num_attempts="3">
+          <!-- Grasp bottle -->
+          <Action ID="PICK" obj="bottle" />
+        </RetryUntilSuccessful>
+        <Sequence>
+          <!-- Push bottle forward toward front edge of table -->
+          <Action ID="PUSH" obj="bottle" />
+          <!-- Grasp bottle -->
+          <Action ID="GRASP" obj="bottle" />
+        </Sequence>
+      </Fallback>
+    </Sequence>
+  </BehaviorTree>
+</root>

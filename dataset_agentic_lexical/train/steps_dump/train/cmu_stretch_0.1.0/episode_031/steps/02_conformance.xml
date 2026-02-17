@@ -1,0 +1,12 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Approach green_garbage_can_lid -->
+      <Action ID="APPROACH" obj="green_garbage_can_lid" />
+      <!-- Pick green_garbage_can_lid -->
+      <Action ID="PICK" obj="green_garbage_can_lid" />
+      <!-- Open up green_garbage_can_lid -->
+      <Action ID="OPEN_UP" obj="green_garbage_can_lid" />
+    </Sequence>
+  </BehaviorTree>
+</root>

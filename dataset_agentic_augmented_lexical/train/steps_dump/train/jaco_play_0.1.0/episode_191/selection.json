@@ -1,0 +1,28 @@
+{
+  "decorator_type": "mixed",
+  "mixed_subtype": "condition_retry",
+  "target_action_id": "PLACE_INSIDE",
+  "target_obj": "sink",
+  "parameters": {
+    "augmentations": [
+      {
+        "type": "condition",
+        "action_id": "PLACE_INSIDE",
+        "obj": "sink",
+        "params": {
+          "condition_id": "IS_HOLDING",
+          "condition_obj": "sink"
+        }
+      },
+      {
+        "type": "retry",
+        "action_id": "PLACE_INSIDE",
+        "obj": "sink",
+        "params": {
+          "num_attempts": 3
+        }
+      }
+    ]
+  },
+  "prompt_name": "mixed/condition_retry"
+}

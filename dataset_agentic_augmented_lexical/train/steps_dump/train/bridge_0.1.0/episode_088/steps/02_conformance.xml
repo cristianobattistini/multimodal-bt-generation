@@ -1,0 +1,24 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to pear -->
+      <Action ID="NAVIGATE_TO" obj="pear" />
+      <Sequence>
+        <!-- Check pear is graspable before GRASP -->
+        <Condition ID="IS_GRASPABLE" obj="pear" />
+        <!-- Retry GRASP pear up to 2 attempts -->
+        <RetryUntilSuccessful num_attempts="2">
+          <!-- Timeout: GRASP pear within 10s -->
+          <Timeout msec="10000">
+            <!-- Grasp pear -->
+            <Action ID="GRASP" obj="pear" />
+          </Timeout>
+        </RetryUntilSuccessful>
+      </Sequence>
+      <!-- Navigate to bowl_cardboardfence -->
+      <Action ID="NAVIGATE_TO" obj="bowl_cardboardfence" />
+      <!-- Place inside bowl_cardboardfence -->
+      <Action ID="PLACE_INSIDE" obj="bowl_cardboardfence" />
+    </Sequence>
+  </BehaviorTree>
+</root>

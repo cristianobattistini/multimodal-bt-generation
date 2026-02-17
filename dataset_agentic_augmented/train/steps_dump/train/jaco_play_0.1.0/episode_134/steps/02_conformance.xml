@@ -1,0 +1,17 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to steak_meat -->
+      <Action ID="NAVIGATE_TO" obj="steak_meat" />
+      <!-- Retry GRASP steak_meat up to 2 attempts -->
+      <RetryUntilSuccessful num_attempts="2">
+        <!-- Grasp steak_meat -->
+        <Action ID="GRASP" obj="steak_meat" />
+      </RetryUntilSuccessful>
+      <!-- Navigate to oven -->
+      <Action ID="NAVIGATE_TO" obj="oven" />
+      <!-- Place inside oven -->
+      <Action ID="PLACE_INSIDE" obj="oven" />
+    </Sequence>
+  </BehaviorTree>
+</root>

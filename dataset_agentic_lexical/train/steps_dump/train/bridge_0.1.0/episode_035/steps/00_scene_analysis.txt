@@ -1,0 +1,6 @@
+scene_analysis:
+  target: ["strawberry", "stuffedduck"]
+  destination: "pot_in_sink"
+  expanded_instruction: "Place the strawberry on the green plate and put the stuffedduck into the metal pot in the sink."
+  scene_context: "Green plate on stove; strawberry on stovetop near plate; stuffedduck on counter edge by sink; metal pot visible in sink and empty."
+  expected_sequence: "Pick up the strawberry and set it on the green plate; then pick up the stuffedduck and place it into the pot in the sink."

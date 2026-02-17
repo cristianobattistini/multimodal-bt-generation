@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "orange_fruit"
+  destination: "sink"
+  expanded_instruction: "Check that orange_fruit is reachable (IS_REACHABLE check, retry up to 3 times with a 10s timeout); then pick up the orange fruit from the white plate and place it into the blue sink."
+  scene_context: "Orange on a white plate near the back; blue sink is empty and reachable; no containers are closed and orange is not held."
+  expected_sequence: "Check IS_REACHABLE on the orange; if reachable, approach the orange on the plate, pick it up (if grasp fails, retry up to 2 times or push to reposition), move to the sink, and place it inside."

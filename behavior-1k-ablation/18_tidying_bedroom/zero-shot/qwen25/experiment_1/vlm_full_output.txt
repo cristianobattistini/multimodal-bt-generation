@@ -1,0 +1,39 @@
+scene_analysis:
+  target: "["sandals", "book"]"
+  destination: "nightstand"
+  expanded_instruction: "Pick up the book from the bed and place it on the nightstand, then pick up both sandals one by one and place them next to the bed (front left area)."
+  scene_context: "Book on bed near front-left; nightstand clear and reachable; sandals on floor next to each other."
+  expected_sequence: "Pick up the book and place it on the nightstand, then pick up each sandal and place it next to the bed, one at a time."
+Plan:
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to bed -->
+      <Action ID="NAVIGATE_TO" obj="bed" />
+      <!-- Grasp book -->
+      <Action ID="GRASP" obj="book" />
+      <!-- Navigate to nightstand -->
+      <Action ID="NAVIGATE_TO" obj="nightstand" />
+      <!-- Place on nightstand -->
+      <Action ID="PLACE_ON_TOP" obj="nightstand" />
+      <!-- Navigate to sandal_1 -->
+      <Action ID="NAVIGATE_TO" obj="sandal_1" />
+      <!-- Navigate to bed -->
+      <Action ID="NAVIGATE_TO" obj="bed" />
+      <!-- Navigate to sandal_1 -->
+      <Action ID="NAVIGATE_TO" obj="sandal_1" />
+      <!-- Navigate to nightstand -->
+      <Action ID="NAVIGATE_TO" obj="nightstand" />
+      <!-- Place next to sandal_1 -->
+      <Action ID="PLACE_NEXT_TO" obj="nightstand" />
+      <!-- Navigate to sandal_2 -->
+      <Action ID="NAVIGATE_TO" obj="sandal_2" />
+      <!-- Navigate to bed -->
+      <Action ID="NAVIGATE_TO" obj="bed" />
+      <!-- Navigate to nightstand -->
+      <Action ID="NAVIGATE_TO" obj="nightstand" />
+      <!-- Place next to bed -->
+      <Action ID="PLACE_NEXT_TO" obj="nightstand" />
+    </Sequence>
+  </BehaviorTree>
+</root>

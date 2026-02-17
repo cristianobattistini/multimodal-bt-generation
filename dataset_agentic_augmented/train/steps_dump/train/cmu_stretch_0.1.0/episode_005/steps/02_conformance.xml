@@ -1,0 +1,17 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to green_garbage_can_lid -->
+      <Action ID="NAVIGATE_TO" obj="green_garbage_can_lid" />
+      <!-- Grasp green_garbage_can_lid -->
+      <Action ID="GRASP" obj="green_garbage_can_lid" />
+      <!-- Retry OPEN green_garbage_can_lid up to 4 attempts -->
+      <RetryUntilSuccessful num_attempts="4">
+        <!-- Open green_garbage_can_lid -->
+        <Action ID="OPEN" obj="green_garbage_can_lid" />
+      </RetryUntilSuccessful>
+      <!-- Release -->
+      <Action ID="RELEASE" />
+    </Sequence>
+  </BehaviorTree>
+</root>

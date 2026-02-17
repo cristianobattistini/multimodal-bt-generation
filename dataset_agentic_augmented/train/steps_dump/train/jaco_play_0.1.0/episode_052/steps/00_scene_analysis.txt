@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "gray_bowl"
+  destination: "table"
+  expanded_instruction: "Pick up the gray bowl held by the robot and place it on the table next to the blue bowl. Before moving, check IS_REACHABLE for the table, then NAVIGATE_TO with a 15s timeout."
+  scene_context: "Gray bowl is held by the robot arm above the work surface; table area is clear aside from a blue bowl."
+  expected_sequence: "Lower the gray bowl to the table and set it down next to the blue bowl, after verifying the table is reachable and navigating with a 15s timeout."

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "red_mug"
+  destination: ""
+  expanded_instruction: "Check that the red mug is IS_GRASPABLE, then pick up the red mug from the front edge of the black cabinet top; if not graspable, reposition or retry up to 3 times within a 10s window."
+  scene_context: "Red mug on front edge of cabinet top, not held; three white mugs nearby; cabinet clear and accessible."
+  expected_sequence: "Approach the cabinet, check IS_GRASPABLE on the red mug, if not graspable reposition or push and retry (up to 3 attempts within 10s), then grasp the red mug from the front edge and lift it clear of the surface."

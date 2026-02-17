@@ -1,0 +1,14 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Move to silver_vessel -->
+      <Action ID="MOVE_TO" obj="silver_vessel" />
+      <!-- Pick silver_vessel -->
+      <Action ID="PICK" obj="silver_vessel" />
+      <!-- Go to purple_cloth -->
+      <Action ID="GO_TO" obj="purple_cloth" />
+      <!-- Place silver_vessel on purple_cloth -->
+      <Action ID="PLACE_ON_TOP" obj="silver_vessel" surface="purple_cloth" />
+    </Sequence>
+  </BehaviorTree>
+</root>

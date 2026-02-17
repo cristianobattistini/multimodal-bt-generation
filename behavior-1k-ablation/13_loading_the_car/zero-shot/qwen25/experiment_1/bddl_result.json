@@ -1,0 +1,22 @@
+{
+  "success": false,
+  "bt_success": false,
+  "bddl_goal": false,
+  "ticks": 1,
+  "duration": 53.842278480529785,
+  "inference_time": 44.10192847251892,
+  "satisfied": [],
+  "unsatisfied": [
+    "inside(?container.n.01_1, ?car.n.01_1)",
+    "inside(?digital_camera.n.01_1, ?container.n.01_1)",
+    "inside(?tennis_racket.n.01_1, ?car.n.01_1)"
+  ],
+  "task": "13_loading_the_car",
+  "condition": "zero-shot",
+  "model_dir": "qwen25",
+  "vlm_model": "qwen",
+  "inference_mode": "adapter",
+  "experiment": 1,
+  "timestamp": "20260215_115033",
+  "reason": "Object grounding error: uses 'trunk' (5 times) instead of 'car' — prompt mentions trunk in instruction without clarifying trunk=car in Available Objects"
+}

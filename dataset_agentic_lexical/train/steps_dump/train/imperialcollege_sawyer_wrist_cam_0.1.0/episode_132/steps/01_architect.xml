@@ -1,0 +1,16 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to cup -->
+      <Action ID="NAVIGATE_TO" obj="cup" />
+      <!-- Grab cup -->
+      <Action ID="GRAB" obj="cup" />
+      <!-- Navigate to hook -->
+      <Action ID="NAVIGATE_TO" obj="hook" />
+      <!-- Suspend on hook -->
+      <Action ID="SUSPEND" obj="hook" />
+      <!-- Release -->
+      <Action ID="RELEASE" />
+    </Sequence>
+  </BehaviorTree>
+</root>

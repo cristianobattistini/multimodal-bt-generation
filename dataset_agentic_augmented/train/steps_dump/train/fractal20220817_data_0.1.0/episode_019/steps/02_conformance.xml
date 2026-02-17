@@ -1,0 +1,17 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Execute subtree ApproachWhiteBowl -->
+      <SubTree ID="ApproachWhiteBowl" />
+    </Sequence>
+  </BehaviorTree>
+  <!-- Subtree definition ApproachWhiteBowl -->
+  <BehaviorTree ID="ApproachWhiteBowl">
+    <Sequence>
+      <!-- Navigate to white_bowl -->
+      <Action ID="NAVIGATE_TO" obj="white_bowl" />
+      <!-- Grasp banana -->
+      <Action ID="GRASP" obj="banana" />
+    </Sequence>
+  </BehaviorTree>
+</root>

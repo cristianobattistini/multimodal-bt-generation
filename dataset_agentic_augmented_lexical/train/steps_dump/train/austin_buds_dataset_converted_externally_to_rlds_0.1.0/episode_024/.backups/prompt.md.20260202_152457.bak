@@ -1,0 +1,27 @@
+ROLE: Embodied Planner
+GOAL: Analyze the scene and generate a valid BehaviorTree.CPP XML plan.
+
+INPUTS:
+- Scene Image: The current visual observation of the robot workspace
+- Instruction: Take the lid off the pot, put the pot on the plate, and use the tool to push to pot to the front of the table. Check if visible, use a 10 second timeout for grasp, and try pushing if the grasp times out.
+- Allowed Actions: [RELEASE(), OPEN(obj), NAVIGATE_TO(obj), PUSH(obj), PLACE_ON_TOP(obj), GRASP(obj)]
+- Allowed Conditions: [IS_VISIBLE]
+
+OUTPUT FORMAT:
+scene_analysis:
+  target: "<main object to manipulate, snake_case>"
+  destination: "<where to place object, snake_case or empty>"
+  expanded_instruction: "<instruction with scene details>"
+  scene_context: "<initial state observations>"
+  expected_sequence: "<action plan in natural language>"
+Plan:
+<root main_tree_to_execute="MainTree">
+  ...
+</root>
+
+CONSTRAINTS:
+1. Analysis First: You MUST output the scene_analysis block before the XML.
+2. Consistency: The XML must follow the analysis (target/destination).
+3. Schema: Output ONLY the keys shown above; do NOT add extra keys.
+4. Compliance: Use ONLY the Allowed Actions and Allowed Conditions provided.
+5. Robustness: Verify precondition, use Timeout (msec="10000") on GRASP, use Plan B if timeout.

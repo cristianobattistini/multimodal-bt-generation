@@ -1,0 +1,21 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Execute subtree ApproachBlueCup -->
+      <SubTree ID="ApproachBlueCup" />
+      <!-- Move to brown_cup -->
+      <Action ID="MOVE_TO" obj="brown_cup" />
+      <!-- Put in brown_cup -->
+      <Action ID="PUT_IN" obj="brown_cup" />
+    </Sequence>
+  </BehaviorTree>
+  <!-- Subtree definition ApproachBlueCup -->
+  <BehaviorTree ID="ApproachBlueCup">
+    <Sequence>
+      <!-- Move to blue_cup -->
+      <Action ID="MOVE_TO" obj="blue_cup" />
+      <!-- Grasp blue_cup -->
+      <Action ID="GRASP" obj="blue_cup" />
+    </Sequence>
+  </BehaviorTree>
+</root>

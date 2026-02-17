@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "canned_spam"
+  destination: "sink"
+  expanded_instruction: "Begin an ApproachCannedSpam subtree: pick up the canned spam from the counter and put it into the sink; if the grasp fails, retry the grasp up to 2 times."
+  scene_context: "Canned_spam sitting on counter near the faucet; sink basin is empty and reachable; robot arm not holding anything."
+  expected_sequence: "ApproachCannedSpam subtree: Move to the can, grasp the canned_spam (retry up to 2 times on failure), lift it and position it over the sink, then release it into the sink."

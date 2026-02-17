@@ -1,0 +1,25 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to bowl -->
+      <Action ID="NAVIGATE_TO" obj="bowl" />
+      <!-- Fallback: if GRASP bowl fails, try PUSH, FLIP to reposition -->
+      <Fallback>
+        <!-- Grasp bowl -->
+        <Action ID="GRASP" obj="bowl" />
+        <Sequence>
+          <!-- Push bowl forward toward front edge of table -->
+          <Action ID="PUSH" obj="bowl" />
+          <!-- Grasp bowl -->
+          <Action ID="GRASP" obj="bowl" />
+        </Sequence>
+      </Fallback>
+      <!-- Navigate to table -->
+      <Action ID="NAVIGATE_TO" obj="table" />
+      <!-- Place on table -->
+      <Action ID="PLACE_ON_TOP" obj="table" />
+      <!-- Release -->
+      <Action ID="RELEASE" />
+    </Sequence>
+  </BehaviorTree>
+</root>

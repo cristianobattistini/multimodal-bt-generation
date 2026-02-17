@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "orange"
+  destination: ""
+  expanded_instruction: "Pick up the orange from the small white plate/stool next to the black shelf. Use a grouped ApproachOrange subtree for the approach and grasp; if approach or grasp fails retry up to 3 times with a 10s timeout, and if grasp fails attempt a gentle push to reposition before retrying."
+  scene_context: "Orange resting on a small white plate/stool beside a black shelf; no containers; orange not held; path clear."
+  expected_sequence: "Approach the orange (in an ApproachOrange subtree), grasp it from the plate/stool, and lift it up — retry up to 3 times with a 10s timeout; if grasp fails, push to reposition and retry."

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "apple"
+  destination: ""
+  expanded_instruction: "Pick up the red apple from the blue tray on the table, first confirm the apple is visible and, if a grasp fails, retry up to 3 times."
+  scene_context: "Red apple resting inside a blue rectangular tray on the table; no containers closed and nothing is held."
+  expected_sequence: "Approach the tray, confirm the apple is visible, grasp the apple (retry up to 3 times if grasp fails), and lift it clear of the tray."

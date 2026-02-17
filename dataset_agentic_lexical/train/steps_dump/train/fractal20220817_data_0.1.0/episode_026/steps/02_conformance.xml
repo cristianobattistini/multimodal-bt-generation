@@ -1,0 +1,14 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Go to pepsi_can -->
+      <Action ID="GO_TO" obj="pepsi_can" />
+      <!-- Clamp pepsi_can -->
+      <Action ID="CLAMP" obj="pepsi_can" />
+      <!-- Navigate to blue_plastic_bottle (place next to it on table) -->
+      <Action ID="NAVIGATE_TO" obj="blue_plastic_bottle" />
+      <!-- Place beside blue_plastic_bottle -->
+      <Action ID="PLACE_BESIDE" obj="blue_plastic_bottle" />
+    </Sequence>
+  </BehaviorTree>
+</root>

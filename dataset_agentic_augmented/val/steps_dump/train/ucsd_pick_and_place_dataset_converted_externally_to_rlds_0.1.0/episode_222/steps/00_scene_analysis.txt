@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "pot"
+  destination: "sink"
+  expanded_instruction: "Pick up the pot from the countertop next to the stove and place it into the sink, using NAVIGATE_TO with a 15s timeout when approaching."
+  scene_context: "Pot on countertop near stove; sink is empty and unobstructed; robot not holding the pot."
+  expected_sequence: "Navigate to the pot (NAVIGATE_TO within 15s timeout), reach and grasp the pot, navigate over the sink (NAVIGATE_TO within 15s timeout), and place the pot inside."

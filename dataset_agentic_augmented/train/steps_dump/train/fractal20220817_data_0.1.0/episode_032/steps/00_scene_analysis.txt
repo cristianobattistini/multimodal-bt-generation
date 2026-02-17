@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "green_rice_chip_bag"
+  destination: "table"
+  expanded_instruction: "Move the green rice chip bag and place it on the table next to the orange. If a grasp fails, retry up to 3 times."
+  scene_context: "Green chip bag on table left of center; orange on table near back; table clear; robot not holding anything."
+  expected_sequence: "Approach and grasp the green chip bag (if grasp fails, retry up to 3 times), bring it to the orange's side on the table, and set it down next to the orange."

@@ -1,0 +1,16 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Approach cup -->
+      <Action ID="APPROACH" obj="cup" />
+      <!-- Latch onto cup -->
+      <Action ID="LATCH_ONTO" obj="cup" />
+      <!-- Approach hook -->
+      <Action ID="APPROACH" obj="hook" />
+      <!-- Drape on hook -->
+      <Action ID="DRAPE" obj="hook" />
+      <!-- Ungrasp -->
+      <Action ID="UNGRASP" />
+    </Sequence>
+  </BehaviorTree>
+</root>

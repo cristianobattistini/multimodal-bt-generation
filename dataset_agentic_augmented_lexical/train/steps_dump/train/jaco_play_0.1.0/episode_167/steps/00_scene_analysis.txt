@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "butter_dairy"
+  destination: "table"
+  expanded_instruction: "Pick up the butter dairy from the workspace and place it on the table; before placing, check IS_HOLDING on the table to ensure it's ready, and if placement fails retry up to 3 times within a 10s timeout."
+  scene_context: "Butter dairy sitting on the work surface near the robot base; table surface clear and no containers closed."
+  expected_sequence: "Approach and grasp the butter dairy, carry it to the table, verify IS_HOLDING on the table before PLACE_ON_TOP, and set it down on the table (retry placement up to 3 times if needed)."

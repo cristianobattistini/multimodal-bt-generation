@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "orange_pot"
+  destination: "sink"
+  expanded_instruction: "Grasp the orange pot that is upside down in the sink and flip it upright in the sink."
+  scene_context: "Orange pot is upside down inside the sink; sink is accessible and not blocked; gripper not holding the pot."
+  expected_sequence: "Reach into the sink, grasp the upside-down orange pot, rotate it to upright, and place it back in the sink."

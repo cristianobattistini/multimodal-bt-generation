@@ -1,0 +1,53 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence name="decorate_holiday_items">
+      <!-- Place gift boxes next to the christmas tree -->
+      <NAVIGATE_TO obj="gift_box_1"/>
+      <GRASP obj="gift_box_1"/>
+      <NAVIGATE_TO obj="christmas_tree"/>
+      <PLACE_NEXT_TO obj="gift_box_1"/>
+
+      <NAVIGATE_TO obj="gift_box_2"/>
+      <GRASP obj="gift_box_2"/>
+      <NAVIGATE_TO obj="christmas_tree"/>
+      <PLACE_NEXT_TO obj="gift_box_2"/>
+
+      <NAVIGATE_TO obj="gift_box_3"/>
+      <GRASP obj="gift_box_3"/>
+      <NAVIGATE_TO obj="christmas_tree"/>
+      <PLACE_NEXT_TO obj="gift_box_3"/>
+
+      <!-- Place wreath and candy canes on top of the sofa -->
+      <NAVIGATE_TO obj="wreath"/>
+      <GRASP obj="wreath"/>
+      <NAVIGATE_TO obj="sofa"/>
+      <PLACE_ON_TOP obj="wreath"/>
+
+      <NAVIGATE_TO obj="candy_cane_1"/>
+      <GRASP obj="candy_cane_1"/>
+      <NAVIGATE_TO obj="sofa"/>
+      <PLACE_ON_TOP obj="candy_cane_1"/>
+
+      <NAVIGATE_TO obj="candy_cane_2"/>
+      <GRASP obj="candy_cane_2"/>
+      <NAVIGATE_TO obj="sofa"/>
+      <PLACE_ON_TOP obj="candy_cane_2"/>
+
+      <!-- Place remaining candy cane and pillar candles on top of the table -->
+      <NAVIGATE_TO obj="candy_cane_3"/>
+      <GRASP obj="candy_cane_3"/>
+      <NAVIGATE_TO obj="table"/>
+      <PLACE_ON_TOP obj="candy_cane_3"/>
+
+      <NAVIGATE_TO obj="pillar_candle_1"/>
+      <GRASP obj="pillar_candle_1"/>
+      <NAVIGATE_TO obj="table"/>
+      <PLACE_ON_TOP obj="pillar_candle_1"/>
+
+      <NAVIGATE_TO obj="pillar_candle_2"/>
+      <GRASP obj="pillar_candle_2"/>
+      <NAVIGATE_TO obj="table"/>
+      <PLACE_ON_TOP obj="pillar_candle_2"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

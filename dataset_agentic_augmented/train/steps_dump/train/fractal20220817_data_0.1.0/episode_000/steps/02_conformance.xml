@@ -1,0 +1,25 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to bottom_drawer -->
+      <Action ID="NAVIGATE_TO" obj="bottom_drawer" />
+      <!-- Navigate to rxbar_chocolate -->
+      <Action ID="NAVIGATE_TO" obj="rxbar_chocolate" />
+      <!-- Fallback: if GRASP rxbar_chocolate fails, try PUSH, FLIP to reposition -->
+      <Fallback>
+        <!-- Grasp rxbar_chocolate -->
+        <Action ID="GRASP" obj="rxbar_chocolate" />
+        <Sequence>
+          <!-- Push rxbar_chocolate forward toward front edge of table -->
+          <Action ID="PUSH" obj="rxbar_chocolate" />
+          <!-- Grasp rxbar_chocolate -->
+          <Action ID="GRASP" obj="rxbar_chocolate" />
+        </Sequence>
+      </Fallback>
+      <!-- Navigate to sponge -->
+      <Action ID="NAVIGATE_TO" obj="sponge" />
+      <!-- Place next to sponge -->
+      <Action ID="PLACE_NEXT_TO" obj="sponge" />
+    </Sequence>
+  </BehaviorTree>
+</root>

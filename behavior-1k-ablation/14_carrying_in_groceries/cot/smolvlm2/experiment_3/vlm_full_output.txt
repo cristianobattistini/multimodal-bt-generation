@@ -1,0 +1,29 @@
+ scene_analysis:
+  target: "sack"
+  destination: "electric_refrigerator"
+  expanded_instruction: "Reach to the sack, grasp it, lift it, and place it beside the fridge."
+  scene_context: "Sack is open and on the floor near the car; fridge is closed and visible."
+  expected_sequence: "Reach to the sack, grasp it, lift it, and place it beside the fridge."
+Plan:
+<root main_tree_to_execute="MainTree">
+  <Sequence>
+    <!-- Navigate to sack -->
+    <Action ID="NAVIGATE_TO" obj="sack" />
+    <!-- Grasp sack -->
+    <Action ID="GRASP" obj="sack" />
+  </Sequence>
+  <!-- Navigate to fridge -->
+  <Action ID="NAVIGATE_TO" obj="electric_refrigerator" />
+  <!-- Place sack beside fridge -->
+  <Action ID="PLACE_INSIDE" destination="electric_refrigerator" />
+  <!-- Open fridge -->
+  <Action ID="OPEN" obj="electric_refrigerator" />
+  <!-- Place next to carton_of_milk -->
+  <Action ID="PLACE_NEXT_TO" destination="carton_of_milk" />
+  <!-- Place tomato next to fridge -->
+  <Action ID="PLACE_INSIDE" destination="carton_of_milk" />
+  <!-- Close fridge -->
+  <Action ID="CLOSE" obj="electric_refrigerator" />
+  <!-- Close car -->
+  <Action ID="CLOSE" obj="car" />
+</root>

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "bag"
+  destination: "hook"
+  expanded_instruction: "Place the bag by its strap onto the metal hook mounted on the vertical pole so it hangs securely. Before hanging, check the hook's IS_HOLDING status and, if not ready, retry the check up to 3 times within a 10s timeout, then proceed to hang."
+  scene_context: "Robot is holding the bag near a vertical pole; the metal hook above is empty and reachable."
+  expected_sequence: "Verify hook IS_HOLDING is true (retry up to 3 times within 10s if needed); position the strap over the hook, lower the bag onto the hook, and release so it hangs securely."

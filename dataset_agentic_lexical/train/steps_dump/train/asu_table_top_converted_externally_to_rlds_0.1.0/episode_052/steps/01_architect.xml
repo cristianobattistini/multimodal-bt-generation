@@ -1,0 +1,10 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Move to maroon_cube -->
+      <Action ID="MOVE_TO" obj="maroon_cube" />
+      <!-- Pick maroon_cube -->
+      <Action ID="PICK" obj="maroon_cube" />
+    </Sequence>
+  </BehaviorTree>
+</root>

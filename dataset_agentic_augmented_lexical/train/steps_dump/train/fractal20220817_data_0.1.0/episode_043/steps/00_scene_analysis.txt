@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "green_rice_chip_bag"
+  destination: "table"
+  expanded_instruction: "First confirm the green rice chip bag is visible, then grasp it (within a 15s timeout); if grasp fails, retry or else push or flip the bag to reposition it and then place it near the apple on the table."
+  scene_context: "Green chip bag and apple are on the table; bag is to the right of apple; no containers closed; nothing held."
+  expected_sequence: "Check visibility of the bag, approach and attempt to grasp it (complete grasp within 15s, retry if needed); if grasp fails, use push or flip to reposition the bag, then move it to the table next to the apple and set it down."

@@ -1,0 +1,13 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Timeout: NAVIGATE_TO green_garbage_can_lid within 20s -->
+      <Timeout msec="20000">
+        <!-- Navigate to green_garbage_can_lid -->
+        <Action ID="MOVE_TO" obj="green_garbage_can_lid" />
+      </Timeout>
+      <!-- Move to green_garbage_can_lid -->
+      <Action ID="OPEN" obj="green_garbage_can_lid" />
+    </Sequence>
+  </BehaviorTree>
+</root>

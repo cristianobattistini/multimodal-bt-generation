@@ -1,0 +1,13 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Move to green_bottle -->
+      <Action ID="MOVE_TO" obj="green_bottle" />
+      <!-- Retry PUSH green_bottle up to 3 attempts -->
+      <RetryUntilSuccessful num_attempts="3">
+        <!-- Push green_bottle forward toward front edge of table -->
+        <Action ID="NUDGE" obj="green_bottle" />
+      </RetryUntilSuccessful>
+    </Sequence>
+  </BehaviorTree>
+</root>

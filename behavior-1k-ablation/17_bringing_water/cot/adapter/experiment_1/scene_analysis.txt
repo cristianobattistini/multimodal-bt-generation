@@ -1,0 +1,7 @@
+scene_analysis:
+  target: ["bottle_1", "bottle_2"]
+  destination: "coffee_table"
+  expanded_instruction: "Pick up the bottle from the electric_refrigerator (open if closed) and place both bottles on the coffee table; check the refrigerator is closed when finished."
+  scene_context: "Electric refrigerator is closed; two bottles (bottle_1, bottle_2) are inside the refrigerator and not held; coffee_table is clear and reachable."
+  expected_sequence: "Open the electric_refrigerator (if closed), pick up bottle_1 and place it on the coffee_table, then pick up bottle_2 and place it on the coffee_table; check the refrigerator is closed when finished."
+Plan:

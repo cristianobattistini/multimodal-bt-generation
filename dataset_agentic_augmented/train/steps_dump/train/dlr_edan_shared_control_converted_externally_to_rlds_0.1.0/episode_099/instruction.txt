@@ -1,0 +1,1 @@
+Pick the red apple. If grasping fails, push the red apple to reposition it and retry grasping.

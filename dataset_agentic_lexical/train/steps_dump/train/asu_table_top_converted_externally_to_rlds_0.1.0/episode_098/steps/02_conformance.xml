@@ -1,0 +1,14 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Approach white_box -->
+      <Action ID="APPROACH" obj="white_box" />
+      <!-- Grip white_box -->
+      <Action ID="GRIP" obj="white_box" />
+      <!-- Navigate to table -->
+      <Action ID="NAVIGATE_TO" obj="table" />
+      <!-- Put on table -->
+      <Action ID="PUT_ON" obj="table" />
+    </Sequence>
+  </BehaviorTree>
+</root>

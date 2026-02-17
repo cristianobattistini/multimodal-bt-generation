@@ -1,0 +1,29 @@
+{
+  "decorator_type": "mixed",
+  "mixed_subtype": "subtree_timeout",
+  "target_action_id": "NAVIGATE_TO",
+  "target_obj": "spoon",
+  "parameters": {
+    "augmentations": [
+      {
+        "type": "subtree",
+        "params": {
+          "subtree_name": "ApproachSpoon",
+          "action_indices": [
+            0,
+            1
+          ]
+        }
+      },
+      {
+        "type": "timeout",
+        "action_id": "NAVIGATE_TO",
+        "obj": "spoon",
+        "params": {
+          "msec": 20000
+        }
+      }
+    ]
+  },
+  "prompt_name": "mixed/subtree_timeout"
+}

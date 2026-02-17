@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "apple"
+  destination: ""
+  expanded_instruction: "Pick the apple from the white bowl on the counter. First verify the apple is visible, then move the arm over the bowl and reach in; grasp the apple (retry up to 3 times if needed, each grasp with a 15s timeout) and lift it out."
+  scene_context: "White bowl on counter is open; apple rests inside; apple not held; counter area clear."
+  expected_sequence: "Check that the apple is visible; move the arm over the bowl, reach in; attempt to grasp the apple (each grasp has a 15s timeout, retry up to 3 times on failure); once grasped, lift it out."

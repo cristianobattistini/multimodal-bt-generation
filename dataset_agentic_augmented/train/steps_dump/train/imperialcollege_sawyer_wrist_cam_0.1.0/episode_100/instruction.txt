@@ -1,0 +1,1 @@
+Insert cap in bottle. Retry placing inside up to 2 times if it fails.

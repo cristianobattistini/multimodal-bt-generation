@@ -1,0 +1,1 @@
+put apple in pot. Grasp the apple. If grasping fails, push the apple to reposition it and retry.

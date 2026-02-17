@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "apple"
+  destination: ""
+  expanded_instruction: "Pick an apple from the white bowl on the counter. Before grasping, check IS_REACHABLE on the chosen apple; if not reachable, reposition and retry up to 3 times."
+  scene_context: "White bowl on table contains multiple apples; bowl open; no object is held; counter reachable."
+  expected_sequence: "Move to the bowl, check IS_REACHABLE on an apple, grasp one apple (retry up to 3 times if grasp fails), and lift it out of the bowl."

@@ -1,0 +1,1 @@
+folding a cloth. Only wipe if holding is true.

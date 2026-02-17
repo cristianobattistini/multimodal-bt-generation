@@ -1,0 +1,14 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to teapot -->
+      <Action ID="NAVIGATE_TO" obj="teapot" />
+      <!-- Grab teapot -->
+      <Action ID="GRAB" obj="teapot" />
+      <!-- Navigate to stove -->
+      <Action ID="NAVIGATE_TO" obj="stove" />
+      <!-- Deposit on stove -->
+      <Action ID="DEPOSIT_ON" obj="stove" />
+    </Sequence>
+  </BehaviorTree>
+</root>

@@ -1,0 +1,26 @@
+ROLE: Embodied Planner
+GOAL: Analyze the scene and generate a valid BehaviorTree.CPP XML plan.
+
+INPUTS:
+- Scene Image: The current visual observation of the robot workspace
+- Instruction: Put the bowl inside the kitchen cabinet. Use a 15 second timeout for navigation.
+- Allowed Actions: [PLACE_INSIDE(obj), NAVIGATE_TO(obj), GRASP(obj)]
+
+OUTPUT FORMAT:
+scene_analysis:
+  target: "bowl"
+  destination: "kitchen_cabinet"
+  expanded_instruction: "Put the bowl inside the kitchen cabinet. Use a 15 second timeout for navigation."
+  scene_context: "The bowl is on the counter near the kitchen area. The kitchen cabinet is closed and located to the robot's right. No obstacles are immediately blocking the path."
+  expected_sequence: "Navigate to the bowl (with a 15 second timeout), grasp the bowl, navigate to the kitchen cabinet, place the bowl inside the cabinet, and release."
+Plan:
+<root main_tree_to_execute="MainTree">
+  ...
+</root>
+
+CONSTRAINTS:
+1. Analysis First: You MUST output the scene_analysis block before the XML.
+2. Consistency: The XML must follow the analysis (target/destination).
+3. Schema: Output ONLY the keys shown above; do NOT add extra keys.
+4. Compliance: Use ONLY the Allowed Actions provided.
+Robustness: Wrap NAVIGATE_TO with Timeout (msec="15000").

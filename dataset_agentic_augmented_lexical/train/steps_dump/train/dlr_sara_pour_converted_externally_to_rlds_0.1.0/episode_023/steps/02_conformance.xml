@@ -1,0 +1,30 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to brown_pitcher -->
+      <Action ID="NAVIGATE_TO" obj="brown_pitcher" />
+      <!-- Check brown_pitcher is reachable before GRASP -->
+      <Condition ID="IS_REACHABLE" obj="brown_pitcher" />
+      <!-- Fallback: if GRASP brown_pitcher fails, try alternative to reposition -->
+      <Fallback>
+        <!-- Retry GRASP brown_pitcher up to 3 attempts -->
+        <RetryUntilSuccessful num_attempts="3">
+          <!-- Grasp brown_pitcher -->
+          <Action ID="GRASP" obj="brown_pitcher" />
+        </RetryUntilSuccessful>
+        <Sequence>
+          <!-- Push brown_pitcher forward toward front edge of table -->
+          <Action ID="PUSH" obj="brown_pitcher" />
+          <!-- Grasp brown_pitcher -->
+          <Action ID="GRASP" obj="brown_pitcher" />
+        </Sequence>
+      </Fallback>
+      <!-- Navigate to mug -->
+      <Action ID="NAVIGATE_TO" obj="mug" />
+      <!-- Pour into mug -->
+      <Action ID="POUR" obj="mug" />
+      <!-- Release -->
+      <Action ID="RELEASE" />
+    </Sequence>
+  </BehaviorTree>
+</root>

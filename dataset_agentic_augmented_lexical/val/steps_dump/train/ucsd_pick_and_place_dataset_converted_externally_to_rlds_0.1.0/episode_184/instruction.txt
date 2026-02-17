@@ -1,0 +1,1 @@
+Pick up the red object from the table. Use ApproachRedObject subtree for approach and grasp.

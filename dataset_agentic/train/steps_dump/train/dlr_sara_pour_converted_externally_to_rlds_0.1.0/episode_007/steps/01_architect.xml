@@ -1,0 +1,10 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Pour into mug -->
+      <Action ID="POUR" obj="mug"/>
+      <!-- Flip blue_pitcher upright -->
+      <Action ID="FLIP" obj="blue_pitcher"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

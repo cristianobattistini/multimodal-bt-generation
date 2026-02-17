@@ -1,0 +1,6 @@
+scene_analysis:
+  target: ["blue_gear","red_gear"]
+  destination: "right_peg"
+  expanded_instruction: "Pick up the blue gear and place it onto the right peg, then pick up the red gear and place it on top of the blue gear on the right peg."
+  scene_context: "Blue and red gears on the table; right peg is empty and reachable; nothing is held."
+  expected_sequence: "Pick the blue gear and place it on the right peg, then pick the red gear and place it onto the blue gear on that peg."

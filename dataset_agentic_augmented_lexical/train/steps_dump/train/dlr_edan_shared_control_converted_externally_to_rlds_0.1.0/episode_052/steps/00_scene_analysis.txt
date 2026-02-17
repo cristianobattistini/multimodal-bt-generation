@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "orange"
+  destination: ""
+  expanded_instruction: "Pick up the orange from the chair seat near the counter; if the grasp fails, retry up to 2 times."
+  scene_context: "Orange on chair seat beside counter in a small bowl; not held; chair and counter clear."
+  expected_sequence: "Move to the chair, reach down to the orange, attempt to grasp it (retry up to 2 times on failure), and lift it free."

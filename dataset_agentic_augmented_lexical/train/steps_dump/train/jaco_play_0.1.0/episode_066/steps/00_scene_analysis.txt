@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "green_cup"
+  destination: ""
+  expanded_instruction: "Check IS_VISIBLE on the green_cup before navigating; if visible, navigate to the table near the robot base and pick up the green cup, retrying visibility up to 3 times with a 10s timeout if needed."
+  scene_context: "Green cup upright on the table near the robot arm, not held; table surfaces otherwise clear."
+  expected_sequence: "Check IS_VISIBLE on green_cup before NAVIGATE_TO; then approach the cup, grasp its rim or body, and lift it off the table. If not visible, retry up to 3 times within 10s; if grasp fails, push to reposition and retry."

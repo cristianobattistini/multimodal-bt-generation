@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "green_can"
+  destination: ""
+  expanded_instruction: "Check IS_VISIBLE on green_can before PUSH, then knock the green can over so it falls onto its side on the metal table"
+  scene_context: "Green can upright near front-left on metal table; table mostly clear; robot not holding anything; nearby bottle and wrapper present."
+  expected_sequence: "Check IS_VISIBLE on green_can (retry up to 3 times if not visible), move the arm to contact the can and push it so it topples onto its side."

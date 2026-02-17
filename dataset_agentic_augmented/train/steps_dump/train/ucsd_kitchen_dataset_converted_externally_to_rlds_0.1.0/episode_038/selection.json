@@ -1,0 +1,29 @@
+{
+  "decorator_type": "mixed",
+  "mixed_subtype": "subtree_retry",
+  "target_action_id": "GRASP",
+  "target_obj": "canned_spam",
+  "parameters": {
+    "augmentations": [
+      {
+        "type": "subtree",
+        "params": {
+          "subtree_name": "ApproachCannedSpam",
+          "action_indices": [
+            0,
+            1
+          ]
+        }
+      },
+      {
+        "type": "retry",
+        "action_id": "GRASP",
+        "obj": "canned_spam",
+        "params": {
+          "num_attempts": 2
+        }
+      }
+    ]
+  },
+  "prompt_name": "mixed/subtree_retry"
+}

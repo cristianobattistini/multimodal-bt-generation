@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "bottle"
+  destination: ""
+  expanded_instruction: "Pick up the green plastic bottle from the blue surface, retrying the grasp up to 3 times if it fails; if grasp still fails, push or flip the bottle to reposition and then attempt the grasp again."
+  scene_context: "Bottle on a blue surface, slightly tilted, not held, surface clear."
+  expected_sequence: "Move to the bottle, attempt to grasp it securely (retrying up to 3 times if needed), and lift it from the surface; if grasp fails, push or flip the bottle to reposition and then grasp."

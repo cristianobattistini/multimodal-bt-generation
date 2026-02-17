@@ -1,0 +1,23 @@
+{
+  "success": false,
+  "bt_success": false,
+  "bddl_goal": false,
+  "ticks": 1,
+  "duration": 81.187335729599,
+  "inference_time": 38.33915162086487,
+  "satisfied": [
+    "inside(?tennis_racket.n.01_1, ?car.n.01_1)"
+  ],
+  "unsatisfied": [
+    "inside(?container.n.01_1, ?car.n.01_1)",
+    "inside(?digital_camera.n.01_1, ?container.n.01_1)"
+  ],
+  "task": "13_loading_the_car",
+  "condition": "zero-shot",
+  "model_dir": "qwen25",
+  "vlm_model": "qwen",
+  "inference_mode": "adapter",
+  "experiment": 2,
+  "timestamp": "20260215_115556",
+  "reason": "Wrong task decomposition: camera placed directly in car (not in container first), container never placed in car, missing OPEN(car) before placements. Only tennis_racket satisfied"
+}

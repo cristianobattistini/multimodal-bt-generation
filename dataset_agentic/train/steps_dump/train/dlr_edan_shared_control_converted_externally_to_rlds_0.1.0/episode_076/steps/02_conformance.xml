@@ -1,0 +1,12 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to metal_wire_shelf -->
+      <Action ID="NAVIGATE_TO" obj="metal_wire_shelf"/>
+      <!-- Navigate to pear -->
+      <Action ID="NAVIGATE_TO" obj="pear"/>
+      <!-- Grasp pear -->
+      <Action ID="GRASP" obj="pear"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "can"
+  destination: ""
+  expanded_instruction: "Pick up the can resting on the blue cloth surface, navigating to it within a 10s timeout."
+  scene_context: "Can resting on blue cloth surface; no containers open; gripper not holding the object; surface otherwise clear."
+  expected_sequence: "Move to the can (navigate within a 10s timeout), close the gripper around it, and lift it off the cloth."

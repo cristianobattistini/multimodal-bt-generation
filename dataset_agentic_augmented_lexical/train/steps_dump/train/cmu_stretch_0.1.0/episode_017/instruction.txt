@@ -1,0 +1,1 @@
+open drawer. Check precondition and use a 10 second timeout for navigation.

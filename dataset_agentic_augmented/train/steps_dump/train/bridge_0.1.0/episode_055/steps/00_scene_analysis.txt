@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "sushi_top_left"
+  destination: "table"
+  expanded_instruction: "Group actions into ApproachSushiTopLeft subtree: pick up the sushi at the top-left of the table and place it on the table nearer the front-center. ApproachSushiTopLeft should include an approach with a 10s timeout and retry up to 3 times if positioning fails; if grasp fails, reposition and retry before reporting failure."
+  scene_context: "Sushi rests on a yellow cloth at the table's top-left; bowl present; nothing is held; table mostly clear."
+  expected_sequence: "ApproachSushiTopLeft subtree: reach toward the top-left sushi (within 10s, retry up to 3 times if alignment fails), adjust pose, then grasp it. If grasp fails, reposition and retry up to 3 times. Lift it off the cloth, move toward the front-center of the table, and set it down."

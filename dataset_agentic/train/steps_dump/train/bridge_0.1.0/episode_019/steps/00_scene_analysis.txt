@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "sushi"
+  destination: "green_plate"
+  expanded_instruction: "Pick up the sushi from the cutting board and place it on the green plate on the counter"
+  scene_context: "Sushi sits on the cutting board; green plate on counter is clear; no object is held."
+  expected_sequence: "Move to the sushi, pick it up, move to the green plate, and set the sushi onto the plate."

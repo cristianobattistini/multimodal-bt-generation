@@ -1,0 +1,26 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <Action ID="NAVIGATE_TO" obj="vidalia_onion.n.01_1"/>
+      <Action ID="GRASP" obj="vidalia_onion.n.01_1"/>
+      <Action ID="NAVIGATE_TO" obj="chopping_board.n.01_1"/>
+      <Action ID="PLACE_ON_TOP" obj="chopping_board.n.01_1"/>
+      <Action ID="NAVIGATE_TO" obj="parer.n.02_1"/>
+      <Action ID="GRASP" obj="parer.n.02_1"/>
+      <Action ID="NAVIGATE_TO" obj="vidalia_onion.n.01_1"/>
+      <Action ID="CUT" obj="vidalia_onion.n.01_1"/>
+      <Action ID="NAVIGATE_TO" obj="diced__vidalia_onion.n.01_1"/>
+      <Action ID="GRASP" obj="diced__vidalia_onion.n.01_1"/>
+      <Action ID="NAVIGATE_TO" obj="bowl.n.01_1"/>
+      <Action ID="PLACE_INSIDE" obj="bowl.n.01_1"/>
+      <Action ID="NAVIGATE_TO" obj="parer.n.02_1"/>
+      <Action ID="GRASP" obj="parer.n.02_1"/>
+      <Action ID="NAVIGATE_TO" obj="sink.n.01_1"/>
+      <Action ID="PLACE_INSIDE" obj="sink.n.01_1"/>
+      <Action ID="NAVIGATE_TO" obj="chopping_board.n.01_1"/>
+      <Action ID="GRASP" obj="chopping_board.n.01_1"/>
+      <Action ID="NAVIGATE_TO" obj="sink.n.01_1"/>
+      <Action ID="PLACE_INSIDE" obj="sink.n.01_1"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "disk"
+  destination: ""
+  expanded_instruction: "Check that the black_shelf is visible (IS_VISIBLE) before navigating—if not visible, retry up to 3 times—then navigate to the shelf, reach into the middle cubby, grasp the disk, and lift it out."
+  scene_context: "Black shelf is open; disk resting in the middle cubby and not held."
+  expected_sequence: "Verify black_shelf is visible before NAVIGATE_TO (if not, retry up to 3 times with short timeout), then move to the shelf, reach into the middle cubby, grasp the disk, and lift it out."

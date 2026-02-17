@@ -1,0 +1,14 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <Sequence>
+        <!-- Check white_mug is reachable before NAVIGATE_TO -->
+        <Condition ID="IS_REACHABLE" obj="white_mug" />
+        <!-- Navigate to white_mug -->
+        <Action ID="GO_TO" obj="white_mug" />
+      </Sequence>
+      <!-- Go to white_mug -->
+      <Action ID="GRASP" obj="white_mug" />
+    </Sequence>
+  </BehaviorTree>
+</root>

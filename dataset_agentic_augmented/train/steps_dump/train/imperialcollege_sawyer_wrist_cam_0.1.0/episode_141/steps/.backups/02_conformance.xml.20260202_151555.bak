@@ -1,0 +1,15 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to toaster_slot -->
+      <Action ID="NAVIGATE_TO" obj="toaster_slot" />
+      <!-- Retry PLACE_INSIDE toaster_slot up to 4 attempts -->
+      <RetryUntilSuccessful num_attempts="4">
+        <!-- Place inside toaster_slot -->
+        <Action ID="PLACE_INSIDE" obj="toaster_slot" />
+      </RetryUntilSuccessful>
+      <!-- Release -->
+      <Action ID="RELEASE" />
+    </Sequence>
+  </BehaviorTree>
+</root>

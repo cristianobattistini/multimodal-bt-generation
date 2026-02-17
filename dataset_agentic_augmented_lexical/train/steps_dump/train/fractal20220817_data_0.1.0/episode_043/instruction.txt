@@ -1,0 +1,1 @@
+move green rice chip bag near apple. Check if visible, use a 15 second timeout for grasp; if it times out, try pushing as an alternative.

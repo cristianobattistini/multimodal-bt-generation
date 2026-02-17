@@ -1,0 +1,10 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to touchscreen -->
+      <Action ID="NAVIGATE_TO" obj="touchscreen"/>
+      <!-- Wipe touchscreen -->
+      <Action ID="WIPE" obj="touchscreen"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

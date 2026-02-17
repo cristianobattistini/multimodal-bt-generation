@@ -1,0 +1,17 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to toast_slice -->
+      <Action ID="NAVIGATE_TO" obj="toast_slice" />
+      <!-- Grip toast_slice -->
+      <Action ID="GRIP" obj="toast_slice" />
+      <!-- Move to toaster_slot -->
+      <Action ID="MOVE_TO" obj="toaster_slot" />
+      <!-- Retry PLACE_INSIDE toaster_slot up to 3 attempts -->
+      <RetryUntilSuccessful num_attempts="3">
+        <!-- Place inside toaster_slot -->
+        <Action ID="SET_IN" obj="toaster_slot" />
+      </RetryUntilSuccessful>
+    </Sequence>
+  </BehaviorTree>
+</root>

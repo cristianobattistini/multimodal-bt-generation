@@ -1,0 +1,18 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Move to pink_cloth -->
+      <Action ID="MOVE_TO" obj="pink_cloth" />
+      <!-- Grasp pink_cloth -->
+      <Action ID="GRASP" obj="pink_cloth" />
+      <!-- Double over pink_cloth -->
+      <Action ID="DOUBLE_OVER" obj="pink_cloth" />
+      <!-- Fold pink_cloth (second edge-to-edge fold to form smaller square) -->
+      <Action ID="FOLD" obj="pink_cloth" />
+      <!-- Approach table -->
+      <Action ID="APPROACH" obj="table" />
+      <!-- Set on table -->
+      <Action ID="SET_ON" obj="table" />
+    </Sequence>
+  </BehaviorTree>
+</root>

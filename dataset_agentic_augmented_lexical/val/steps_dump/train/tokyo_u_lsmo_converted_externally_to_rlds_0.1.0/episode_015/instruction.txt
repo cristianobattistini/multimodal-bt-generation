@@ -1,0 +1,1 @@
+Avoid obstacle and reach the blue pen. If grasping fails, push the blue pen to reposition it and retry.

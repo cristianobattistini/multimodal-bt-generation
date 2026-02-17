@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "apple"
+  destination: "top_drawer"
+  expanded_instruction: "Pick up the apple from the countertop and place it into the top drawer."
+  scene_context: "Apple on countertop; top drawer is open and empty; apple not held; path into drawer clear."
+  expected_sequence: "Move to the apple, grasp it, move over the open top drawer, and set the apple inside."

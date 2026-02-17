@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "green_cloth"
+  destination: "table"
+  expanded_instruction: "Use an ApproachGreenCloth subtree: sweep the green cloth across the table toward the left side until it rests on the left area; if a push step fails, retry the push up to 2 times."
+  scene_context: "Green cloth on table near robot; cloth not held; table surface otherwise clear and reachable."
+  expected_sequence: "ApproachGreenCloth subtree: move the arm to contact the cloth and sweep it leftward across the table until it sits on the left side; retry any PUSH up to 2 times if it fails."

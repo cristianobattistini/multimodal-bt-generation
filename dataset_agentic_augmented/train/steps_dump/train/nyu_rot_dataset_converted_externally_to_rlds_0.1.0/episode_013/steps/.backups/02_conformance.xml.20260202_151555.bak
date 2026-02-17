@@ -1,0 +1,48 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to cups -->
+      <Action ID="NAVIGATE_TO" obj="cups" />
+      <!-- Check cups is visible before GRASP -->
+      <Condition ID="IS_VISIBLE" obj="cups" />
+      <!-- Fallback: if GRASP cups fails, try alternative to reposition -->
+      <Fallback>
+        <!-- Grasp cups -->
+        <Action ID="GRASP" obj="cups" />
+        <Sequence>
+          <!-- Push cups forward toward front edge of table -->
+          <Action ID="PUSH" obj="cups" />
+          <!-- Grasp cups -->
+          <Action ID="GRASP" obj="cups" />
+        </Sequence>
+      </Fallback>
+      <!-- Navigate to table -->
+      <Action ID="NAVIGATE_TO" obj="table" />
+      <!-- Place on table -->
+      <Action ID="PLACE_ON_TOP" obj="table" />
+      <!-- Release -->
+      <Action ID="RELEASE" />
+      <!-- Navigate to cups -->
+      <Action ID="NAVIGATE_TO" obj="cups" />
+      <!-- Check cups is visible before GRASP -->
+      <Condition ID="IS_VISIBLE" obj="cups" />
+      <!-- Fallback: if GRASP cups fails, try alternative to reposition -->
+      <Fallback>
+        <!-- Grasp cups -->
+        <Action ID="GRASP" obj="cups" />
+        <Sequence>
+          <!-- Push cups forward toward front edge of table -->
+          <Action ID="PUSH" obj="cups" />
+          <!-- Grasp cups -->
+          <Action ID="GRASP" obj="cups" />
+        </Sequence>
+      </Fallback>
+      <!-- Navigate to table -->
+      <Action ID="NAVIGATE_TO" obj="table" />
+      <!-- Place on table -->
+      <Action ID="PLACE_ON_TOP" obj="table" />
+      <!-- Release -->
+      <Action ID="RELEASE" />
+    </Sequence>
+  </BehaviorTree>
+</root>

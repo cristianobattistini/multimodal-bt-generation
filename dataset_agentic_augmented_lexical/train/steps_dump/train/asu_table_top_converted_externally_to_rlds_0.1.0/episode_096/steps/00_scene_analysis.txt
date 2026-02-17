@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "maroon_cube"
+  destination: "table"
+  expanded_instruction: "Navigate to the maroon cube within a 20s timeout, pick up the cube from the table, and place it back down on the table."
+  scene_context: "Maroon cube sits on the table near center front; not held; table surface is clear."
+  expected_sequence: "Approach the maroon cube (NAVIGATE_TO with a 20s timeout), grasp it, and place it down onto the table."

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "peeler"
+  destination: "table"
+  expanded_instruction: "Pick up the green peeler from the tabletop and place it at the left edge of the table."
+  scene_context: "Green peeler on right side of table beside bowl; table left edge clear; peeler not held."
+  expected_sequence: "Reach to the peeler, grasp it, move to the table's left edge, and place it down."

@@ -1,0 +1,14 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to grape -->
+      <Action ID="NAVIGATE_TO" obj="grape"/>
+      <!-- Grasp grape -->
+      <Action ID="GRASP" obj="grape"/>
+      <!-- Navigate to white_plate -->
+      <Action ID="NAVIGATE_TO" obj="white_plate"/>
+      <!-- Place on white_plate -->
+      <Action ID="PLACE_ON_TOP" obj="white_plate"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

@@ -1,0 +1,71 @@
+name: multimodal-bt-generation
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pip
+
+  # --- Base pipeline (Conda: binari stabili) ---
+  - lxml            # parsing/validazione XML low-level
+  - opencv          # I/O video/immagini, estrazione frame
+  - numpy           # operazioni numeriche
+  - rich            # logging formattato
+  - typer           # CLI
+  - pytest          # unit test
+
+  - pip:
+      # --- Base pipeline (Pip) ---
+      - pydantic==2.*      # modelli/validazione schema (Plan/Step)
+      - jsonschema         # validazione JSON contro schema
+
+      # --- OpenAI ---
+      - openai             # SDK ufficiale OpenAI
+      - python-dotenv      # carica .env per chiavi/endpoint
+
+      # --- Deep Learning / HF stack ---
+      # Scegli UNA delle opzioni torch sottostanti:
+      # 1) CPU-only (portabile):
+      - torch==2.3.* ; platform_system!="Linux" or platform_machine!="x86_64"
+      # 2) CUDA 12.1 (Linux/NVIDIA recenti):
+      # - torch==2.3.*+cu121 -f https://download.pytorch.org/whl/torch_stable.html
+      # 3) CUDA 11.8 (cluster più vecchi):
+      # - torch==2.3.*+cu118 -f https://download.pytorch.org/whl/torch_stable.html
+
+      - torchvision==0.18.*     # allinea alla versione di torch
+      - transformers            # modelli HF (LLM/VLM)
+      - sentencepiece           # tokenizer (LLaMA/Alpaca)
+      - datasets                # gestione dataset HF
+      - huggingface_hub         # download/upload modelli
+      - safetensors             # formato pesi efficiente
+      - accelerate              # orchestrazione training/inferenza
+      - peft                    # LoRA/PEFT
+      - protobuf                # richiesto da vari modelli HF
+
+      # --- Vision backbones / util ---
+      - timm                   # backbone vision (ViT, ecc.)
+      - einops                 # manipolazione tensori
+
+      # --- Detection ---
+      - ultralytics            # baseline YOLO (utile per smoke test)
+      # - groundingdino          # open-vocabulary detector
+      - pyyaml                 # richiesto da groundingdino
+      - shapely                # richiesto da groundingdino
+      # - pycocotools            # metriche COCO (Linux/macOS)
+      # - pycocotools-windows  # usa questo su Windows se la riga sopra fallisce
+
+      # --- Validazione extra ---
+      - xmlschema              # validazione XSD aggiuntiva
+
+      # --- Dev tools (opzionali ma consigliati) ---
+      - mypy                   # type checking
+      - black                  # formatter
+      - flake8                 # linting
+
+      # --- Evaluation helpers ---
+      - evaluate               # metriche su dataset
+
+      # to load OXE Datasets
+      - tensorflow
+      - tensorflow-datasets
+      - gcsfs

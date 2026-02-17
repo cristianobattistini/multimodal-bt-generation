@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "red_apple"
+  destination: ""
+  expanded_instruction: "Pick up the red apple from the bowl on the small chair beside the table. Use an ApproachBowl subtree to approach the bowl (retry up to 3 times, 10s timeout) before grasping the apple."
+  scene_context: "Bowl on chair contains red and green apples; bowl and chair reachable; nothing holding the apple."
+  expected_sequence: "ApproachBowl subtree: move to the bowl (retry up to 3×, within 10s), reach to the bowl, grasp the red apple (if grasp fails, push to reposition and retry), and lift it out."

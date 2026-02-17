@@ -1,0 +1,1 @@
+Pick up the blue cup and put it into the brown cup. Use ApproachBlueCup subtree for approach and grasp.

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "grid_clamp"
+  destination: "grid_surface"
+  expanded_instruction: "Pick up the grid clamp from the table and place it on the grid surface; before placing verify IS_HOLDING, retry the place action up to 3 times if it fails, and if it still fails use a push to reposition the clamp."
+  scene_context: "Several grid clamps resting on the table; grid surface visible and clear; robot not holding anything."
+  expected_sequence: "Move to a clamp, pick it up, move to the grid surface, verify IS_HOLDING, attempt PLACE_ON_TOP (retry up to 3 times) and if placing fails use PUSH to reposition."

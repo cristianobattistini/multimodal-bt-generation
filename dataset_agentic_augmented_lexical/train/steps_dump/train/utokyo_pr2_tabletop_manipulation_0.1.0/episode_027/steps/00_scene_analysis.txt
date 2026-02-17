@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "pink_cloth"
+  destination: "table"
+  expanded_instruction: "Pick up and fold the pink cloth on the table into a compact half-folded rectangle, ensuring NAVIGATE_TO completes within a 20s timeout."
+  scene_context: "Pink cloth flat on clear table; no containers open; cloth not held."
+  expected_sequence: "Reach to the cloth (use NAVIGATE_TO with a 20s timeout), grasp an edge or corner, fold it over the center to make a neat half, smooth and release on the table."

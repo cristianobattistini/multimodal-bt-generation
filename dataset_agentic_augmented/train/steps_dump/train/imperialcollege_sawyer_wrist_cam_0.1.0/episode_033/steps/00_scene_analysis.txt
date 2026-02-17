@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "apple"
+  destination: "pot"
+  expanded_instruction: "Pick up the apple from the table next to the pot and place it inside the pot. If grasp fails, retry up to 3 times (within 10s) and then use push or flip to reposition the apple before attempting grasp again."
+  scene_context: "Apple on the table beside an upright empty pot; pot is open and reachable."
+  expected_sequence: "Move to the apple, attempt to pick it up (retry up to 3 times within 10s); if grasp fails, push or flip to reposition then grasp; move to the pot, and place the apple inside."

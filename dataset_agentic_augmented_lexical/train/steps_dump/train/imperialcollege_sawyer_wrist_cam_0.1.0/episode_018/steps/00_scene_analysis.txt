@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "pitcher"
+  destination: "mug"
+  expanded_instruction: "Tilt the small blue pitcher and pour its contents into the red mug. If PLACE_ON_TOP fails when positioning the pitcher, retry using PUSH to reposition it."
+  scene_context: "Blue pitcher held above red mug; mug upright on table and unobstructed; no lid."
+  expected_sequence: "Move the pitcher over the mug, tilt to pour until contents are transferred, then set the pitcher down; if PLACE_ON_TOP fails to position, retry (up to 3 times) using PUSH to reposition the object."

@@ -1,0 +1,25 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Approach fridge_door -->
+      <Action ID="APPROACH" obj="fridge_door" />
+      <!-- Check fridge_door is graspable before GRASP -->
+      <Condition ID="IS_GRASPABLE" obj="fridge_door" />
+      <!-- Fallback: if GRASP fridge_door fails, try alternative to reposition -->
+      <Fallback>
+        <!-- Grasp fridge_door -->
+        <Action ID="GRAB" obj="fridge_door" />
+        <Sequence>
+          <!-- Push fridge_door forward toward front edge of table -->
+          <Action ID="SLIDE" obj="fridge_door" />
+          <!-- Grasp fridge_door -->
+          <Action ID="GRIP" obj="fridge_door" />
+        </Sequence>
+      </Fallback>
+      <!-- Grab fridge_door -->
+      <Action ID="UNLOCK" obj="fridge_door" />
+      <!-- Slide fridge_door -->
+      <Action ID="DROP" />
+    </Sequence>
+  </BehaviorTree>
+</root>

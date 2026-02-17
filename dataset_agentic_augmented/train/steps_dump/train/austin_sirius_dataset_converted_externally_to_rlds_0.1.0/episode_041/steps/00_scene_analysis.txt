@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "kcup"
+  destination: "kcup_holder"
+  expanded_instruction: "Open the kcup holder, check the green-topped kcup on the table is visible, then pick it up (retry grasp up to 3 times); if grasp fails, push or flip to reposition the kcup, insert it into the holder, and close the holder."
+  scene_context: "Green-topped kcup on table; kcup_holder is closed and empty; kcup not held."
+  expected_sequence: "Open the holder, verify the kcup is visible, pick up the kcup (retry grasp up to 3 times; if grasp fails, push or flip to reposition) and insert it into the holder, then close the holder."

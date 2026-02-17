@@ -1,0 +1,152 @@
+{
+  "smolvlm2_500m": {
+    "adapter": {
+      "inference_time_mean_s": 12.6852,
+      "inference_time_std_s": 24.3732,
+      "xml_valid_count": 202,
+      "xml_valid_pct": 88.6,
+      "btcpp_valid_count": 200,
+      "btcpp_valid_pct": 87.72,
+      "structural_match_count": 152,
+      "structural_match_pct": 66.67,
+      "structural_match_of_btcpp_pct": 76.0,
+      "structural_match_details": {
+        "linear_correct": 142,
+        "linear_total": 152,
+        "decorator_correct": 10,
+        "decorator_total": 76
+      },
+      "total_examples": 228,
+      "action_jaccard_mean": 0.8858,
+      "action_jaccard_std": 0.1966,
+      "action_jaccard_n": 200,
+      "node_count_ratio_mean": 0.9551,
+      "node_count_ratio_std": 0.2806,
+      "node_count_ratio_n": 200
+    },
+    "baseline": {
+      "inference_time_mean_s": 39.02,
+      "inference_time_std_s": 31.5616,
+      "xml_valid_count": 62,
+      "xml_valid_pct": 27.19,
+      "btcpp_valid_count": 0,
+      "btcpp_valid_pct": 0.0,
+      "structural_match_count": 44,
+      "structural_match_pct": 19.3,
+      "structural_match_of_btcpp_pct": 0.0,
+      "structural_match_details": {
+        "linear_correct": 44,
+        "linear_total": 152,
+        "decorator_correct": 0,
+        "decorator_total": 76
+      },
+      "total_examples": 228,
+      "action_jaccard_mean": 0.0,
+      "action_jaccard_std": 0.0,
+      "action_jaccard_n": 0,
+      "node_count_ratio_mean": 0.0,
+      "node_count_ratio_std": 0.0,
+      "node_count_ratio_n": 0
+    }
+  },
+  "gemma3_4b": {
+    "adapter": {
+      "inference_time_mean_s": 20.3707,
+      "inference_time_std_s": 5.4995,
+      "xml_valid_count": 228,
+      "xml_valid_pct": 100.0,
+      "btcpp_valid_count": 228,
+      "btcpp_valid_pct": 100.0,
+      "structural_match_count": 221,
+      "structural_match_pct": 96.93,
+      "structural_match_of_btcpp_pct": 96.93,
+      "structural_match_details": {
+        "linear_correct": 152,
+        "linear_total": 152,
+        "decorator_correct": 69,
+        "decorator_total": 76
+      },
+      "total_examples": 228,
+      "action_jaccard_mean": 0.9711,
+      "action_jaccard_std": 0.1287,
+      "action_jaccard_n": 228,
+      "node_count_ratio_mean": 0.9942,
+      "node_count_ratio_std": 0.1636,
+      "node_count_ratio_n": 228
+    },
+    "baseline": {
+      "inference_time_mean_s": 104.6326,
+      "inference_time_std_s": 114.2317,
+      "xml_valid_count": 40,
+      "xml_valid_pct": 17.54,
+      "btcpp_valid_count": 0,
+      "btcpp_valid_pct": 0.0,
+      "structural_match_count": 30,
+      "structural_match_pct": 13.16,
+      "structural_match_of_btcpp_pct": 0.0,
+      "structural_match_details": {
+        "linear_correct": 30,
+        "linear_total": 152,
+        "decorator_correct": 0,
+        "decorator_total": 76
+      },
+      "total_examples": 228,
+      "action_jaccard_mean": 0.0,
+      "action_jaccard_std": 0.0,
+      "action_jaccard_n": 0,
+      "node_count_ratio_mean": 0.0,
+      "node_count_ratio_std": 0.0,
+      "node_count_ratio_n": 0
+    }
+  },
+  "qwen2dot5_3b": {
+    "adapter": {
+      "inference_time_mean_s": 17.2445,
+      "inference_time_std_s": 4.896,
+      "xml_valid_count": 228,
+      "xml_valid_pct": 100.0,
+      "btcpp_valid_count": 228,
+      "btcpp_valid_pct": 100.0,
+      "structural_match_count": 216,
+      "structural_match_pct": 94.74,
+      "structural_match_of_btcpp_pct": 94.74,
+      "structural_match_details": {
+        "linear_correct": 146,
+        "linear_total": 152,
+        "decorator_correct": 70,
+        "decorator_total": 76
+      },
+      "total_examples": 228,
+      "action_jaccard_mean": 0.9836,
+      "action_jaccard_std": 0.0788,
+      "action_jaccard_n": 228,
+      "node_count_ratio_mean": 0.9994,
+      "node_count_ratio_std": 0.1253,
+      "node_count_ratio_n": 228
+    },
+    "baseline": {
+      "inference_time_mean_s": 13.9277,
+      "inference_time_std_s": 15.1024,
+      "xml_valid_count": 189,
+      "xml_valid_pct": 82.89,
+      "btcpp_valid_count": 0,
+      "btcpp_valid_pct": 0.0,
+      "structural_match_count": 122,
+      "structural_match_pct": 53.51,
+      "structural_match_of_btcpp_pct": 0.0,
+      "structural_match_details": {
+        "linear_correct": 122,
+        "linear_total": 152,
+        "decorator_correct": 0,
+        "decorator_total": 76
+      },
+      "total_examples": 228,
+      "action_jaccard_mean": 0.0,
+      "action_jaccard_std": 0.0,
+      "action_jaccard_n": 0,
+      "node_count_ratio_mean": 0.0,
+      "node_count_ratio_std": 0.0,
+      "node_count_ratio_n": 0
+    }
+  }
+}

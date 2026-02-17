@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "cup"
+  destination: "dishwasher"
+  expanded_instruction: "Pick up the pink cup from the counter and place it into the dishwasher rack."
+  scene_context: "Dishwasher door is open and rack visible; pink cup on nearby counter beside the rack; rack has space."
+  expected_sequence: "Reach the cup, pick it up, and place it into the dishwasher rack."

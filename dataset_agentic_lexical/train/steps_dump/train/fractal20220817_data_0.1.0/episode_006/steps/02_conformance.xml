@@ -1,0 +1,14 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Go to top_drawer -->
+      <Action ID="GO_TO" obj="top_drawer" />
+      <!-- Pick sponge -->
+      <Action ID="PICK" obj="sponge" />
+      <!-- Move to counter -->
+      <Action ID="MOVE_TO" obj="counter" />
+      <!-- Place on counter -->
+      <Action ID="PLACE_ON_TOP" obj="counter" />
+    </Sequence>
+  </BehaviorTree>
+</root>

@@ -1,0 +1,22 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Go to dishwasher -->
+      <Action ID="GO_TO" obj="dishwasher" />
+      <!-- Open up dishwasher -->
+      <Action ID="OPEN_UP" obj="dishwasher" />
+      <!-- Navigate to cup -->
+      <Action ID="NAVIGATE_TO" obj="cup" />
+      <!-- Grab cup -->
+      <Action ID="GRAB" obj="cup" />
+      <!-- Go to dishwasher_lower_rack -->
+      <Action ID="GO_TO" obj="dishwasher_lower_rack" />
+      <!-- Load into dishwasher_lower_rack -->
+      <Action ID="LOAD_INTO" obj="dishwasher_lower_rack" />
+      <!-- Move to dishwasher -->
+      <Action ID="MOVE_TO" obj="dishwasher" />
+      <!-- Shut dishwasher -->
+      <Action ID="SHUT" obj="dishwasher" />
+    </Sequence>
+  </BehaviorTree>
+</root>

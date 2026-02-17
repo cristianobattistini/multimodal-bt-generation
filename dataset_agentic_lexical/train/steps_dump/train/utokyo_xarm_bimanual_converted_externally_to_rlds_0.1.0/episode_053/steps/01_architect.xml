@@ -1,0 +1,20 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to wrinkled_towel -->
+      <Action ID="NAVIGATE_TO" obj="wrinkled_towel" />
+      <!-- Grip wrinkled_towel -->
+      <Action ID="GRIP" obj="wrinkled_towel" />
+      <!-- Unfold wrinkled_towel -->
+      <Action ID="UNFOLD" obj="wrinkled_towel" />
+      <!-- Approach green_mat -->
+      <Action ID="APPROACH" obj="green_mat" />
+      <!-- Lay on green_mat -->
+      <Action ID="LAY_ON" obj="green_mat" />
+      <!-- Smooth (wipe) wrinkled_towel on green_mat -->
+      <Action ID="WIPE" obj="wrinkled_towel" />
+      <!-- Release -->
+      <Action ID="RELEASE" />
+    </Sequence>
+  </BehaviorTree>
+</root>

@@ -1,0 +1,1 @@
+Pick sponge from top drawer and place on counter. Only navigate to the top drawer if it is reachable.

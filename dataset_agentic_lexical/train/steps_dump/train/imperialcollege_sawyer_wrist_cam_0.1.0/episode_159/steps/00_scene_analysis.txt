@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "apple"
+  destination: "pot"
+  expanded_instruction: "Pick up the apple from the blue surface and place it into the metal pot"
+  scene_context: "Apple on blue surface next to an open metal pot; pot is empty and reachable."
+  expected_sequence: "Reach to the apple, grasp it, lift and move it over the pot, then release it into the pot."

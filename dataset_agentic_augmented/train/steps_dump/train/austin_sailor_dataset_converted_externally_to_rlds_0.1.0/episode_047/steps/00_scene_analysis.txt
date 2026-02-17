@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "["fish", "sausage", "tomato"]"
+  destination: "frying_pan"
+  expanded_instruction: "Pick up the fish, sausage, and tomato and place each into the frying pan on the stove. If a grasp fails, retry up to 3 times (within 10s); if still unsuccessful, use push or flip to reposition the object and then grasp and place it."
+  scene_context: "Fish and sausage on placemat, tomato on counter; frying_pan on stove is empty and reachable; robot not holding anything."
+  expected_sequence: "For each item (fish, sausage, tomato): attempt to grasp and place it into the frying pan; if grasp fails, retry up to 3 times (10s), then use push or flip to reposition and try grasping again."

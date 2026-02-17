@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "wok"
+  destination: "purple_cloth"
+  expanded_instruction: "Pick up the wok and place it on top of the folded purple cloth on the counter."
+  scene_context: "Wok on the counter left of a folded purple cloth; purple cloth is clear and reachable; robot not holding anything."
+  expected_sequence: "Pick up the wok, move it over the purple cloth, and place it down centered on the cloth."

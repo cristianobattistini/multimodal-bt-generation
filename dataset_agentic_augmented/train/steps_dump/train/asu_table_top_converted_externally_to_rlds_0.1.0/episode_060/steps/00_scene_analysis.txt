@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "red_object"
+  destination: ""
+  expanded_instruction: "Pick up the red object (red can) from the table in front of the robot, using an ApproachRedObject subtree for the approach step and ensuring NAVIGATE_TO completes within a 20s timeout."
+  scene_context: "Red can on front-center of table, robot not holding anything, table surface reachable and unobstructed."
+  expected_sequence: "Approach the red can (in the ApproachRedObject subtree), perform NAVIGATE_TO within a 20s timeout, grasp it securely, and lift it off the table."

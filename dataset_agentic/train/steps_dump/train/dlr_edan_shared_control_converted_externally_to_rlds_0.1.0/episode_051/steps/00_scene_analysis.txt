@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "cube"
+  destination: ""
+  expanded_instruction: "Pick up the small white cube from the top of the black shelf"
+  scene_context: "White cube resting on top of a black shelf; shelf is accessible and nothing is blocking the cube."
+  expected_sequence: "Approach the shelf, grasp the cube on top, and lift it clear of the shelf."

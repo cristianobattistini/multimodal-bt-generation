@@ -1,0 +1,10 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Go to door -->
+      <Action ID="GO_TO" obj="door" />
+      <!-- Seal door -->
+      <Action ID="SEAL" obj="door" />
+    </Sequence>
+  </BehaviorTree>
+</root>

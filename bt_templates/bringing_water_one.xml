@@ -1,0 +1,22 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Open fridge -->
+      <Action ID="NAVIGATE_TO" obj="electric_refrigerator.n.01_1"/>
+      <Action ID="OPEN" obj="electric_refrigerator.n.01_1"/>
+      <!-- bottle.n.01_1 -->
+      <Action ID="NAVIGATE_TO" obj="bottle.n.01_1"/>
+      <Action ID="GRASP" obj="bottle.n.01_1"/>
+      <Action ID="NAVIGATE_TO" obj="coffee_table.n.01_1"/>
+      <Action ID="PLACE_ON_TOP" obj="coffee_table.n.01_1"/>
+      <!-- bottle.n.01_2 -->
+      <Action ID="NAVIGATE_TO" obj="bottle.n.01_2"/>
+      <Action ID="GRASP" obj="bottle.n.01_2"/>
+      <Action ID="NAVIGATE_TO" obj="coffee_table.n.01_1"/>
+      <Action ID="PLACE_ON_TOP" obj="coffee_table.n.01_1"/>
+      <!-- Close fridge -->
+      <Action ID="NAVIGATE_TO" obj="electric_refrigerator.n.01_1"/>
+      <Action ID="CLOSE" obj="electric_refrigerator.n.01_1"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

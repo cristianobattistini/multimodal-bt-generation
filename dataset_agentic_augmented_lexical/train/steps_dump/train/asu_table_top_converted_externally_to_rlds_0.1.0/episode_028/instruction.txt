@@ -1,0 +1,1 @@
+place down brown object. Use a 10 second timeout for navigation.

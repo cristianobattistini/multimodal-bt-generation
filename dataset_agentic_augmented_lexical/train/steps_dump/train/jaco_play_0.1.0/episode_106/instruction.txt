@@ -1,0 +1,1 @@
+Pick up the apple fruit. If grasping fails, push the apple closer and retry.

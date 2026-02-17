@@ -1,0 +1,13 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Timeout: NAVIGATE_TO lid within 10s -->
+      <Timeout msec="10000">
+        <!-- Navigate to lid -->
+        <Action ID="MOVE_TO" obj="lid" />
+      </Timeout>
+      <!-- Move to lid -->
+      <Action ID="UNSEAL" obj="lid" />
+    </Sequence>
+  </BehaviorTree>
+</root>

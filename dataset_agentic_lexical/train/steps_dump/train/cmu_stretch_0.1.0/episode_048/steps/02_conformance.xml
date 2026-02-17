@@ -1,0 +1,12 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Go to pot -->
+      <Action ID="GO_TO" obj="pot" />
+      <!-- Approach lid -->
+      <Action ID="APPROACH" obj="lid" />
+      <!-- Clamp lid -->
+      <Action ID="CLAMP" obj="lid" />
+    </Sequence>
+  </BehaviorTree>
+</root>

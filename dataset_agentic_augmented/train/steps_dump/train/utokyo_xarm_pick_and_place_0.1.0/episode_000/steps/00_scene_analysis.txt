@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "white_plate"
+  destination: "red_plate"
+  expanded_instruction: "Pick up the white plate from the table and place it on top of the red plate, attempting the grasp within a 15 second timeout and retrying the grasp up to 2 times; if grasp fails, use push or flip to reposition the plate before placing."
+  scene_context: "Table has a white plate right of a red plate; robot not holding anything; red_plate is clear and reachable."
+  expected_sequence: "Approach the white_plate, attempt to grasp and lift it (15s timeout, retry up to 2 times); if grasp fails, push or flip to reposition the plate, then move over the red_plate and set the white_plate down on top."

@@ -1,0 +1,16 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to grape -->
+      <Action ID="NAVIGATE_TO" obj="grape" />
+      <!-- Retry GRASP grape up to 2 attempts -->
+      <RetryUntilSuccessful num_attempts="2">
+        <!-- Timeout: GRASP grape within 15s -->
+        <Timeout msec="15000">
+          <!-- Grasp grape -->
+          <Action ID="GRASP" obj="grape" />
+        </Timeout>
+      </RetryUntilSuccessful>
+    </Sequence>
+  </BehaviorTree>
+</root>

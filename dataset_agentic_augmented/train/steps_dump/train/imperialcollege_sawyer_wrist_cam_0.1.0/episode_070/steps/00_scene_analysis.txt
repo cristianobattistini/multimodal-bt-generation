@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "mug"
+  destination: ""
+  expanded_instruction: "Pick up the white mug from the blue table using the ApproachMug subtree; if approach or grasp fails, retry up to 3 times with a 10s timeout and attempt repositioning (e.g., push) before retrying."
+  scene_context: "White mug resting on a blue table near the upper-left; mug not held and table surface clear."
+  expected_sequence: "Use the ApproachMug subtree: move to the mug, grasp it (handle or body), and lift it off the table; on failure retry up to 3 times, respect a 10s timeout, and try repositioning (push) before each retry."

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "kettle"
+  destination: ""
+  expanded_instruction: "Pick up the white kettle from the table by its handle; if a grasp fails, retry up to 3 times (within a 10s timeout) and, if still unsuccessful, push or flip the kettle to reposition before attempting the handle grasp again."
+  scene_context: "White kettle on table with upright handle at right; kettle not held; table clear."
+  expected_sequence: "Approach the kettle, grasp the handle, and lift it off the table; if a grasp fails, attempt a push then a flip to reposition and re-attempt the grasp (retry up to 3 times, 10s timeout)."

@@ -1,0 +1,1 @@
+Put the shaker into the pot. Use a 20 second timeout for grasping and retry up to 3 times if it fails.

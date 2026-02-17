@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "yellow_cup"
+  destination: ""
+  expanded_instruction: "Pick up the yellow cup from the blue tray on the table. Verify the yellow cup is visible before grasping; retry the grasp up to 2 times if it fails, and if still unsuccessful, push or flip the cup to reposition and then attempt the grasp."
+  scene_context: "Blue tray on table contains a yellow cup; cup is not held; table clear except an orange nearby."
+  expected_sequence: "Approach the blue tray, confirm the yellow cup is visible, grasp the yellow cup (retry up to 2 times on failure), and lift it out of the tray; if grasp repeatedly fails, push or flip the cup to reposition and then try grasping again."

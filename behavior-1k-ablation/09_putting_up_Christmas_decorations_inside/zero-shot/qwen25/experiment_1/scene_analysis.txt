@@ -1,0 +1,7 @@
+scene_analysis:
+  target: ["gift_box_1", "gift_box_2", "gift_box_3", "wreath", "candy_cane_1", "candy_cane_2", "candy_cane_3", "pillar_candle_1", "pillar_candle_2"]
+  destination: "sofa"
+  expanded_instruction: "Pick up gift_box_1, then gift_box_2, then gift_box_3, place each box next to the Christmas tree, pick up the wreath, then candy_cane_1, then candy_cane_2, then place both on the sofa, then pick up candy_cane_3, pillar_candle_1, and pillar_candle_2 and set them on the table."
+  scene_context: "Gift_boxes are on floor left of couch; Christmas tree stands near right side; wreath and two candy canes are on floor; sofa has an open wicker basket."
+  expected_sequence: "For each box, pick it up and move it next to the Christmas tree one at a time; then pick the wreath, then each candy cane, and place them on the sofa, followed by placing candy_cane_3 and both pillar candles on the table."
+Plan:

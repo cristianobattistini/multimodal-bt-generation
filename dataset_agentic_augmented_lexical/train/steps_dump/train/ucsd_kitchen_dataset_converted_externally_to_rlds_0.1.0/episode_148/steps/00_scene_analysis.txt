@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "bowl"
+  destination: "kitchen_cabinet"
+  expanded_instruction: "Pick up the bowl from the countertop and place it inside the kitchen cabinet. If a grasp attempt fails, retry up to 2 times; if grasp still fails, push or flip the bowl to reposition it before trying again."
+  scene_context: "Bowl sits on the countertop; kitchen cabinet door is open and interior shelf visible."
+  expected_sequence: "Reach to the bowl, attempt to grasp it (retry up to 2 times if it fails); if still unsuccessful, push or flip the bowl to reposition, then grasp it, move to the open cabinet, place the bowl on the interior shelf and release."

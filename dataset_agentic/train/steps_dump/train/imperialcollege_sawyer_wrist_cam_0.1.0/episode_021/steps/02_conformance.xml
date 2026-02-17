@@ -1,0 +1,10 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to dustpan -->
+      <Action ID="NAVIGATE_TO" obj="dustpan"/>
+      <!-- Push dustpan (sweep forward across blue_surface to push pellet) -->
+      <Action ID="PUSH" obj="dustpan"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

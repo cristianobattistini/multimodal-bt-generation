@@ -1,0 +1,10 @@
+{
+  "decorator_type": "retry",
+  "mixed_subtype": null,
+  "target_action_id": "GRASP",
+  "target_obj": "green_bottle",
+  "parameters": {
+    "num_attempts": 5
+  },
+  "prompt_name": "retry"
+}

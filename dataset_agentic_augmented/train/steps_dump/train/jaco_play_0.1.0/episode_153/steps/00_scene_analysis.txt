@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "butter_dairy"
+  destination: ""
+  expanded_instruction: "Pick up the yellow butter dairy pack from the table next to the orange and small yellow candy, using NAVIGATE_TO with a 15s timeout."
+  scene_context: "Butter dairy pack on table to the right of the orange; bowl and blue bin nearby; nothing blocking the pack."
+  expected_sequence: "Approach the butter dairy using NAVIGATE_TO within a 15 second timeout, grasp the pack, and lift it clear of the table."

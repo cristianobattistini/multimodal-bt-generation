@@ -1,0 +1,12 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to gray_plate -->
+      <Action ID="NAVIGATE_TO" obj="gray_plate"/>
+      <!-- Place inside gray_plate -->
+      <Action ID="PLACE_INSIDE" obj="gray_plate"/>
+      <!-- Release -->
+      <Action ID="RELEASE"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

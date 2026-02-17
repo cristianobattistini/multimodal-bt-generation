@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "green_cloth"
+  destination: "table"
+  expanded_instruction: "Sweep the green cloth across the table until it rests on the left side of the table"
+  scene_context: "Green cloth on table near center-right, not held; table surface otherwise clear; no containers open."
+  expected_sequence: "Approach the cloth, push it left across the tabletop until it lies on the table's left side."

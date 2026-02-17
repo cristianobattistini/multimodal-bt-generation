@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "peg"
+  destination: "hole"
+  expanded_instruction: "Align the peg held by the arm and insert it into the nearby hole on the pegboard; if PLACE_INSIDE fails, retry up to 2 times."
+  scene_context: "Peg is held by the robot arm above a pegboard hole; pegboard is exposed and unobstructed."
+  expected_sequence: "Move the peg to align with the hole and push it straight down until seated; if PLACE_INSIDE fails, retry up to 2 times."

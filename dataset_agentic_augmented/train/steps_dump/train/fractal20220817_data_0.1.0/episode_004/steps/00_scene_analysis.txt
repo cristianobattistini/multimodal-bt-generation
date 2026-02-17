@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "brown_chip_bag"
+  destination: "counter"
+  expanded_instruction: "Pick up the brown chip bag from the top drawer and place it on the counter above the drawer. For the grasp, use a 10s timeout and retry up to 2 times if the grasp fails."
+  scene_context: "Top drawer is open with the brown chip bag inside; counter above has a water bottle but space to place the bag."
+  expected_sequence: "Reach into the open top drawer, grasp the brown chip bag (grasp must complete within a 10s timeout; retry up to 2 times if it fails), lift it out, and set it down on the counter."

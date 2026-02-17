@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "green_cup"
+  destination: "oven"
+  expanded_instruction: "Check that the green cup is reachable, then pick it up from the front edge and place it inside the open oven; perform the grasp within a 10s timeout and retry up to 2 times if it fails."
+  scene_context: "Oven is open and empty; green_cup rests at the oven front edge and is not held."
+  expected_sequence: "Check IS_REACHABLE on green_cup, reach to the green_cup, grasp it (10s timeout, retry up to 2 times if grasp fails), move into the open oven, and place it inside."

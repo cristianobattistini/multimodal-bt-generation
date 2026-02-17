@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "green_bottle"
+  destination: ""
+  expanded_instruction: "Group actions into ApproachGreenBottle subtree: approach the green bottle on the table and push it forward along the tabletop, retry up to 3 times if initial contact fails."
+  scene_context: "Green bottle upright near left-front of table, not held, table surface clear."
+  expected_sequence: "In ApproachGreenBottle subtree, approach the bottle and push it forward along the table surface, retry up to 3 times or abort after a 10s timeout."

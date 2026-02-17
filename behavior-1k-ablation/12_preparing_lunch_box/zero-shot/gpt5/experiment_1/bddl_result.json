@@ -1,0 +1,23 @@
+{
+  "success": true,
+  "bt_success": true,
+  "bddl_goal": true,
+  "ticks": 1,
+  "duration": 273.74603962898254,
+  "inference_time": 22.869089365005493,
+  "satisfied": [
+    "forall(['?half__apple.n.01', '-', 'half__apple.n.01'], ['inside', '?half__apple.n.01', '?packing_box.n.02_1'])",
+    "inside(?club_sandwich.n.01_1, ?packing_box.n.02_1)",
+    "inside(?chocolate_chip_cookie.n.01_1, ?packing_box.n.02_1)",
+    "inside(?bottle__of__tea.n.01_1, ?packing_box.n.02_1)",
+    "not(['open', '?electric_refrigerator.n.01_1'])"
+  ],
+  "unsatisfied": [],
+  "task": "12_preparing_lunch_box",
+  "condition": "zero-shot",
+  "model_dir": "gpt5",
+  "vlm_model": null,
+  "inference_mode": "openai",
+  "experiment": 2,
+  "timestamp": "20260215_220333"
+}

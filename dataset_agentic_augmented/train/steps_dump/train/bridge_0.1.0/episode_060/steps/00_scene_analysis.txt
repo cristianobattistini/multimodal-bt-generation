@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "["pot", "corncob"]"
+  destination: "stove"
+  expanded_instruction: "Place the pot on a stove burner and then put the corncob into the pot; before placing the corncob, check IS_OPEN on the pot and open it if needed. Check IS_OPEN before PLACE_INSIDE and, if it remains closed, retry open up to 3 times with a 10s timeout."
+  scene_context: "Pot on right burner near back, corncob on counter left of stove, stove burners accessible and no lids closed."
+  expected_sequence: "Position the pot on a burner, check IS_OPEN on the pot and open if closed (ensure IS_OPEN before PLACE_INSIDE), then pick up the corncob and drop it into the pot; if open fails, retry open/check up to 3 times within 10s."

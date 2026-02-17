@@ -1,0 +1,7 @@
+scene_analysis:
+  target: drill
+  destination: toolbox
+  expanded_instruction: "Open the toolbox and put all five tools (drill, pliers, flashlight, allen_wrench, screwdriver) into the toolbox."
+  scene_context: "Toolbox is closed and open; tools are on the table and reachable."
+  expected_sequence: "Open the toolbox, pick up each tool, place them into the toolbox, and close the toolbox."
+Plan:

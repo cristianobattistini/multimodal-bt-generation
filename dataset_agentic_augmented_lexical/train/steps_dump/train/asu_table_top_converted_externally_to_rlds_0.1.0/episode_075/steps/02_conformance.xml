@@ -1,0 +1,25 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Approach maroon_square -->
+      <Action ID="APPROACH" obj="maroon_square" />
+      <!-- Check maroon_square is reachable before GRASP -->
+      <Condition ID="IS_REACHABLE" obj="maroon_square" />
+      <!-- Fallback: if GRASP maroon_square fails, try alternative to reposition -->
+      <Fallback>
+        <!-- Grasp maroon_square -->
+        <Action ID="PICK" obj="maroon_square" />
+        <Sequence>
+          <!-- Push maroon_square forward toward front edge of table -->
+          <Action ID="SHOVE" obj="maroon_square" />
+          <!-- Grasp maroon_square -->
+          <Action ID="GRAB" obj="maroon_square" />
+        </Sequence>
+      </Fallback>
+      <!-- Pick maroon_square -->
+      <Action ID="GO_TO" obj="table" />
+      <!-- Shove maroon_square -->
+      <Action ID="PLACE_ON_TOP" obj="maroon_square" surface="table" />
+    </Sequence>
+  </BehaviorTree>
+</root>

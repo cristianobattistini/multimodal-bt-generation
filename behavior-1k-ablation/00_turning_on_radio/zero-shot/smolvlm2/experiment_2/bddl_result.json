@@ -1,0 +1,20 @@
+{
+  "success": false,
+  "bt_success": false,
+  "bddl_goal": false,
+  "ticks": 0,
+  "duration": 0.13407588005065918,
+  "inference_time": 11.71809983253479,
+  "satisfied": [],
+  "unsatisfied": [
+    "toggled_on(?radio_receiver.n.01_1)"
+  ],
+  "task": "00_turning_on_radio",
+  "condition": "zero-shot",
+  "model_dir": "smolvlm2",
+  "vlm_model": "smol500",
+  "inference_mode": "adapter",
+  "experiment": 2,
+  "timestamp": "20260212_221000",
+  "reason": "XML parse error: </Root> (capital R) instead of </BehaviorTree> - mismatched tag"
+}

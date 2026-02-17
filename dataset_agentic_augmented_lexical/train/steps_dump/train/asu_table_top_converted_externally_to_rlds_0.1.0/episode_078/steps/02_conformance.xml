@@ -1,0 +1,14 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to milk_carton -->
+      <Action ID="NAVIGATE_TO" obj="milk_carton" />
+      <Sequence>
+        <!-- Check milk_carton is reachable before PUSH -->
+        <Condition ID="IS_REACHABLE" obj="milk_carton" />
+        <!-- Push milk_carton forward toward front edge of table -->
+        <Action ID="PUSH" obj="milk_carton" />
+      </Sequence>
+    </Sequence>
+  </BehaviorTree>
+</root>

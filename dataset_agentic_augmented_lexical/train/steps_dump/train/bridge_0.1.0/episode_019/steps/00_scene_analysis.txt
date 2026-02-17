@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "sushi"
+  destination: "green_plate"
+  expanded_instruction: "Check the sushi is visible, then pick up the sushi from the cutting board (if grasp fails, retry up to 3 times) and place it on the green plate on the counter"
+  scene_context: "Sushi sits on the cutting board; green plate on counter is clear; no object is held."
+  expected_sequence: "Verify sushi is visible, move to the sushi, attempt to pick it up (retry grasp up to 3 times if it fails), move to the green plate, and set the sushi onto the plate."

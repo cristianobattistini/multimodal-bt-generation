@@ -1,0 +1,1 @@
+Hold white box. If grasping fails, push the white box to reposition it and then retry grasping.

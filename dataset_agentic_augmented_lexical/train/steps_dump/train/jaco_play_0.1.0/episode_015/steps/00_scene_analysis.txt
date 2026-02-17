@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "burger_meat"
+  destination: ""
+  expanded_instruction: "Pick up the burger meat (brown patty) sitting on the table next to the black bowl. Group actions into ApproachBurgerMeat subtree: approach and grasp the patty, retry up to 3 times with a 10s timeout; if grasp fails, push to reposition and try again."
+  scene_context: "Griddle with raw meat present; brown patty on table beside black bowl; robot not holding anything."
+  expected_sequence: "Group actions into ApproachBurgerMeat subtree: approach the brown patty next to the black bowl, grasp and lift it. Retry up to 3 times within a 10s timeout; if grasp fails, push to reposition then retry."

@@ -1,0 +1,1 @@
+pick the red apple. Use a 10 second timeout for navigation.

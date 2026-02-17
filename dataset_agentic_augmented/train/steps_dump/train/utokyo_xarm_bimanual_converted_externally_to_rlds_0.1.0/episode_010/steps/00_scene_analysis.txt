@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "towel"
+  destination: ""
+  expanded_instruction: "Use the ApproachTowel subtree: Reach and grasp the pink towel lying on the table front-center, retry up to 3 times with a 10s timeout."
+  scene_context: "Pink towel flat on table front-center; robot arm not holding it; table unobstructed."
+  expected_sequence: "ApproachTowel subtree: Move the arm over the towel and grasp it; retry up to 3 times, and if grasp fails push to reposition."

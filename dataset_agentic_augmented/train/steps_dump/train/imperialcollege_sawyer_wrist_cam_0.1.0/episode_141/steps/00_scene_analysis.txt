@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "slice_of_toast"
+  destination: "toaster_slot"
+  expanded_instruction: "Pick up the slice of toast and insert it into the toaster slot until it is seated; if the PLACE_INSIDE action fails, retry it up to 4 times."
+  scene_context: "Toaster on blue surface with slot open, slice of toast held near the toaster, table clear."
+  expected_sequence: "Move the toast into the toaster slot and release it so it is seated inside; retry the PLACE_INSIDE step up to 4 times if it fails."

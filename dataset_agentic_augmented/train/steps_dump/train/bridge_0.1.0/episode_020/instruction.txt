@@ -1,0 +1,1 @@
+Flip cup upright. Only navigate to the cup if it is visible.

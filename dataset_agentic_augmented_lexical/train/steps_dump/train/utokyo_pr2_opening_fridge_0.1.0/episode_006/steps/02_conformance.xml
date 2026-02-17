@@ -1,0 +1,23 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Go to fridge -->
+      <Action ID="GO_TO" obj="fridge" />
+      <!-- Fallback: if GRASP fridge fails, try PUSH, FLIP to reposition -->
+      <Fallback>
+        <!-- Grasp fridge -->
+        <Action ID="LATCH_ONTO" obj="fridge" />
+        <Sequence>
+          <!-- Push fridge forward toward front edge of table -->
+          <Action ID="SLIDE" obj="fridge" />
+          <!-- Grasp fridge -->
+          <Action ID="GRIP" obj="fridge" />
+        </Sequence>
+      </Fallback>
+      <!-- Latch onto fridge -->
+      <Action ID="OPEN_UP" obj="fridge" />
+      <!-- Slide fridge -->
+      <Action ID="DROP" />
+    </Sequence>
+  </BehaviorTree>
+</root>

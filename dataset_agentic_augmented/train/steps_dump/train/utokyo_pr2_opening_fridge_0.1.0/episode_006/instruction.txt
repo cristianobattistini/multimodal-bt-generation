@@ -1,0 +1,1 @@
+Opening the fridge. If grasping fails, push the fridge (reposition handle/object) and retry grasping.

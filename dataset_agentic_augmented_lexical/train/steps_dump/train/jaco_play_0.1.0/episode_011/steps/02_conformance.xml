@@ -1,0 +1,22 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to black_bowl -->
+      <Action ID="NAVIGATE_TO" obj="black_bowl" />
+      <!-- Fallback: if GRASP black_bowl fails, try alternative to reposition -->
+      <Fallback>
+        <!-- Retry GRASP black_bowl up to 3 attempts -->
+        <RetryUntilSuccessful num_attempts="3">
+          <!-- Grasp black_bowl -->
+          <Action ID="GRASP" obj="black_bowl" />
+        </RetryUntilSuccessful>
+        <Sequence>
+          <!-- Push black_bowl forward toward front edge of table -->
+          <Action ID="PUSH" obj="black_bowl" />
+          <!-- Grasp black_bowl -->
+          <Action ID="GRASP" obj="black_bowl" />
+        </Sequence>
+      </Fallback>
+    </Sequence>
+  </BehaviorTree>
+</root>

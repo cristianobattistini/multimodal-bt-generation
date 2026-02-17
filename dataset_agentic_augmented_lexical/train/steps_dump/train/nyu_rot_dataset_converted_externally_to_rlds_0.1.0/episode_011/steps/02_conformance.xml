@@ -1,0 +1,17 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to green_knob -->
+      <Action ID="NAVIGATE_TO" obj="green_knob" />
+      <!-- Retry GRASP green_knob up to 3 attempts -->
+      <RetryUntilSuccessful num_attempts="3">
+        <!-- Grasp green_knob -->
+        <Action ID="GRASP" obj="green_knob" />
+      </RetryUntilSuccessful>
+      <!-- Toggle on green_knob -->
+      <Action ID="TOGGLE_ON" obj="green_knob" />
+      <!-- Release -->
+      <Action ID="RELEASE" />
+    </Sequence>
+  </BehaviorTree>
+</root>

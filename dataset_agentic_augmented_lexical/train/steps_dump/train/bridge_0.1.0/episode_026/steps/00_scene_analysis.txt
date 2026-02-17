@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "red_srewdriver"
+  destination: ""
+  expanded_instruction: "Pick up the red screwdriver from the open toolbox drawer; if grasp fails, retry up to 3 times and use push/flip to reposition the object."
+  scene_context: "Toolbox drawer is open; red screwdriver lies on top of mixed tools and is not held."
+  expected_sequence: "Reach into the open drawer, grasp the red screwdriver, and lift it out; if grasp fails, push or flip to reposition and retry (up to 3 attempts, 10s timeout)."

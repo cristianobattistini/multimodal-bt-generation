@@ -1,0 +1,44 @@
+ROLE: Embodied Planner
+GOAL: Analyze the scene and generate a valid BehaviorTree.CPP XML plan.
+
+INPUTS:
+- Scene Image: The current visual observation of the robot workspace
+- Instruction: Place the cheese wedge on the front right side of the table. Retry grasping up to 3 times; if all fail, use PUSH as Plan B.
+- Allowed Actions: [RELEASE(), PUSH(obj), PLACE_ON_TOP(obj), NAVIGATE_TO(obj), GRASP(obj)]
+
+OUTPUT FORMAT:
+scene_analysis:
+  target: "cheese_wedge"
+  destination: "table_front_right"
+  expanded_instruction: "Place the cheese wedge on the front right side of the table. Retry grasping up to 3 times; if all fail, use PUSH as Plan B."
+  scene_context: "The cheese wedge is in the metal bowl area; the robot should navigate to the bowl, pick up the cheese wedge, then navigate to the table and place it on the front-right side."
+  expected_sequence: "Navigate to metal_bowl, grasp the cheese_wedge (with retries and fallback), navigate to table, place on the front-right side of the table, release."
+Plan:
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to metal_bowl -->
+      <Action ID="NAVIGATE_TO" obj="metal_bowl"/>
+      <!-- Grasp cheese_wedge -->
+      <Fallback>
+        <!-- Primary: retry the action multiple times -->
+        <!-- Decorator RetryUntilSuccessful attempts the same GRASP up to num_attempts="3" to handle transient failures -->
+        <RetryUntilSuccessful num_attempts="3">
+          <Action ID="GRASP" obj="cheese_wedge"/>
+        </RetryUntilSuccessful>
+        <!-- Plan B: fallback action, then retry grasp -->
+        <!-- If all retries fail, attempt PUSH to reposition the object, then try grasping again -->
+        <Sequence>
+          <Action ID="PUSH" obj="cheese_wedge"/>
+          <Action ID="GRASP" obj="cheese_wedge"/>
+        </Sequence>
+      </Fallback>
+      <!-- Navigate to table -->
+      <Action ID="NAVIGATE_TO" obj="table"/>
+      <!-- Place on table (front-right side) -->
+      <Action ID="PLACE_ON_TOP" obj="table"/>
+      <!-- Release -->
+      <Action ID="RELEASE"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

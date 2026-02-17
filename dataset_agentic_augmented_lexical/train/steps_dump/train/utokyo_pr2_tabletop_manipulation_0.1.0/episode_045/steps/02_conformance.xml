@@ -1,0 +1,23 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Go to bread -->
+      <Action ID="GO_TO" obj="bread" />
+      <!-- Grab bread -->
+      <Action ID="GRAB" obj="bread" />
+      <!-- Approach plate -->
+      <Action ID="APPROACH" obj="plate" />
+      <!-- Fallback: if PLACE_ON_TOP plate fails, try PUSH to reposition -->
+      <Fallback>
+        <!-- Place on plate -->
+        <Action ID="PLACE_ON_TOP" obj="bread" surface="plate" />
+        <Sequence>
+          <!-- Push plate forward toward front edge of table -->
+          <Action ID="PUSH" obj="plate" />
+          <!-- Place on plate -->
+          <Action ID="STACK_ON" obj="plate" />
+        </Sequence>
+      </Fallback>
+    </Sequence>
+  </BehaviorTree>
+</root>

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "yellow_cup"
+  destination: "sink"
+  expanded_instruction: "Pick up the yellow cup and place it into the blue sink basin; retry placement up to 3 times (within a 10s timeout), and if PLACE_INSIDE fails use PUSH to reposition the cup before retrying."
+  scene_context: "Yellow cup is already held by the robot arm above the counter; sink basin is open and empty."
+  expected_sequence: "Lower the held yellow cup into the sink and release it so it rests inside the basin; if PLACE_INSIDE fails after retries, use PUSH to reposition the cup and then place it so it ends up inside the basin."

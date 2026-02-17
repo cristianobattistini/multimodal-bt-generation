@@ -1,0 +1,16 @@
+{
+  "success": true,
+  "bt_success": true,
+  "bddl_goal": true,
+  "ticks": 1,
+  "duration": 2.264641761779785,
+  "inference_time": 18.61586880683899,
+  "satisfied": [
+    "toggled_on(?radio_receiver.n.01_1)"
+  ],
+  "unsatisfied": [],
+  "task": "00_turning_on_radio",
+  "model": "adapter",
+  "experiment": 3,
+  "timestamp": "20260205_153252"
+}

@@ -1,0 +1,1 @@
+Place the bread, butter, and milk from the table onto the serving area. Only place on top if the robot is holding the object.

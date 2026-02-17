@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "faucet"
+  destination: ""
+  expanded_instruction: "Reach the sink faucet and turn it on so water flows from the spout."
+  scene_context: "Faucet upright above empty sink; sink and counter clear; robot arm not holding anything; faucet is off."
+  expected_sequence: "Move the arm to the faucet, grasp or press the handle, and rotate or lift it to start the water flow."

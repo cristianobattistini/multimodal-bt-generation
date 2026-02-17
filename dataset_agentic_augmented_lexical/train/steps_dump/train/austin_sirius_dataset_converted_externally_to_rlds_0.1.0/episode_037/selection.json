@@ -1,0 +1,31 @@
+{
+  "decorator_type": "mixed",
+  "mixed_subtype": "retry_fallback",
+  "target_action_id": "PLACE_INSIDE",
+  "target_obj": "kcup_holder",
+  "parameters": {
+    "augmentations": [
+      {
+        "type": "retry",
+        "action_id": "PLACE_INSIDE",
+        "obj": "kcup_holder",
+        "params": {
+          "num_attempts": 2
+        }
+      },
+      {
+        "type": "fallback",
+        "action_id": "PLACE_INSIDE",
+        "obj": "kcup_holder",
+        "params": {
+          "valid_fallbacks": [
+            "PUSH"
+          ],
+          "valid_fallbacks_str": "PUSH",
+          "hint": "PUSH clears obstacles from inside the container"
+        }
+      }
+    ]
+  },
+  "prompt_name": "mixed/retry_fallback"
+}

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "apple"
+  destination: "pot"
+  expanded_instruction: "Check that the red apple is visible, then navigate to the apple (navigate within a 20s timeout), pick up the apple from the surface, and place it into the metal pot."
+  scene_context: "Apple on the blue surface near lower area; metal pot is open and reachable; nothing is held."
+  expected_sequence: "Confirm the apple is visible, navigate to the apple within a 20s timeout, approach and pick it up, move to the pot, and place the apple inside."

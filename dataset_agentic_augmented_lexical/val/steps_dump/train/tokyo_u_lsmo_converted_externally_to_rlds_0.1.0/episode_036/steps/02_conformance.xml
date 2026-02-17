@@ -1,0 +1,23 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Approach table -->
+      <Action ID="APPROACH" obj="table" />
+      <!-- Go to scissors -->
+      <Action ID="GO_TO" obj="scissors" />
+      <!-- Fallback: if GRASP scissors fails, try PUSH, FLIP to reposition -->
+      <Fallback>
+        <!-- Grasp scissors -->
+        <Action ID="GRIP" obj="scissors" />
+        <Sequence>
+          <!-- Push scissors forward toward front edge of table -->
+          <Action ID="SHOVE" obj="scissors" />
+          <!-- Grasp scissors -->
+          <Action ID="GRIP" obj="scissors" />
+        </Sequence>
+      </Fallback>
+      <!-- Grip scissors -->
+      <Action ID="UNGRASP" />
+    </Sequence>
+  </BehaviorTree>
+</root>

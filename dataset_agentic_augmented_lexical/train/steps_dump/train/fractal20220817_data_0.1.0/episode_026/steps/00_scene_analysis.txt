@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "pepsi_can"
+  destination: "table"
+  expanded_instruction: "Before navigating, check IS_VISIBLE on the blue_plastic_bottle and, if not visible, retry up to 3 times with a 10s timeout; then move the pepsi can on the table so it is placed next to the blue plastic bottle on the same table."
+  scene_context: "Pepsi can on table near snack bag; blue plastic bottle upright at back-left on table; table reachable and unblocked."
+  expected_sequence: "Check IS_VISIBLE on the blue_plastic_bottle and retry up to 3 times (10s timeout) before NAVIGATE_TO; then pick up the pepsi can from the table, bring it near the blue plastic bottle, and set it down beside the bottle on the table."

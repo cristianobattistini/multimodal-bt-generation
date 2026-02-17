@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "mushroom"
+  destination: "pot"
+  expanded_instruction: "Pick up the mushroom from the stovetop and place it into the pot on the stove"
+  scene_context: "Mushroom on the left burner of the stove; pot is on the right burner and open; mushroom not held."
+  expected_sequence: "Reach the mushroom, grasp and lift it, move it over the pot, and place it inside."

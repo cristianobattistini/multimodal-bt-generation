@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "green_rice_chip_bag"
+  destination: "table"
+  expanded_instruction: "Use the ApproachGreenRiceChipBag subtree: pick up the green rice chip bag and place it next to the brown chip bag on the table; within the subtree approach with up to 3 retries and a 10s timeout, and if a grasp fails, push to reposition before retrying."
+  scene_context: "Green and brown chip bags on the table, both unheld and reachable; table surface clear."
+  expected_sequence: "ApproachGreenRiceChipBag subtree: approach and grasp the green bag (retry up to 3 times, 10s timeout; if grasp fails, push to reposition), move it beside the brown bag on the table, and set it down."

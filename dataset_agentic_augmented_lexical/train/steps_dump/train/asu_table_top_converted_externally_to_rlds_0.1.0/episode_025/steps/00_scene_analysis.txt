@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "red_can"
+  destination: "table"
+  expanded_instruction: "Pick up the red can from the table and put it down on the table. If a grasp fails, retry up to 2 times; if still unsuccessful, push or flip the can to reposition it and then grasp."
+  scene_context: "Red can upright near center-front of table, not held; table surface clear and reachable."
+  expected_sequence: "Approach the red can, pick it up (retry grasp up to 2 times if needed), move slightly and set it down on the table. If grasp repeatedly fails, push or flip to reposition and then grasp and set down."

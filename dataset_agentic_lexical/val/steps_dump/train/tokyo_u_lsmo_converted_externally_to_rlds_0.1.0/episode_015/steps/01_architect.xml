@@ -1,0 +1,16 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to table to approach from the side and avoid the stack_of_books -->
+      <Action ID="NAVIGATE_TO" obj="table"/>
+      <!-- Navigate to pen_holder at the table edge to reach around the obstacle -->
+      <Action ID="NAVIGATE_TO" obj="pen_holder"/>
+      <!-- Navigate to blue_pen to position end effector for grasping -->
+      <Action ID="NAVIGATE_TO" obj="blue_pen"/>
+      <!-- Grasp blue_pen -->
+      <Action ID="GRASP" obj="blue_pen"/>
+      <!-- Release -->
+      <Action ID="RELEASE"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

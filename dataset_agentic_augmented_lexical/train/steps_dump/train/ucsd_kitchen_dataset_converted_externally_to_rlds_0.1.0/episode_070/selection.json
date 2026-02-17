@@ -1,0 +1,31 @@
+{
+  "decorator_type": "mixed",
+  "mixed_subtype": "retry_fallback",
+  "target_action_id": "PLACE_INSIDE",
+  "target_obj": "sink",
+  "parameters": {
+    "augmentations": [
+      {
+        "type": "retry",
+        "action_id": "PLACE_INSIDE",
+        "obj": "sink",
+        "params": {
+          "num_attempts": 3
+        }
+      },
+      {
+        "type": "fallback",
+        "action_id": "PLACE_INSIDE",
+        "obj": "sink",
+        "params": {
+          "valid_fallbacks": [
+            "PUSH"
+          ],
+          "valid_fallbacks_str": "PUSH",
+          "hint": "PUSH clears obstacles from inside the container"
+        }
+      }
+    ]
+  },
+  "prompt_name": "mixed/retry_fallback"
+}

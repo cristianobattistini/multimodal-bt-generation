@@ -1,0 +1,23 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to pot -->
+      <Action ID="NAVIGATE_TO" obj="pot" />
+      <!-- Open pot -->
+      <Action ID="OPEN" obj="pot" />
+      <!-- Retry GRASP pot up to 3 attempts -->
+      <RetryUntilSuccessful num_attempts="3">
+        <!-- Grasp pot -->
+        <Action ID="GRASP" obj="pot" />
+      </RetryUntilSuccessful>
+      <!-- Navigate to plate -->
+      <Action ID="NAVIGATE_TO" obj="plate" />
+      <!-- Place on plate -->
+      <Action ID="PLACE_ON_TOP" obj="plate" />
+      <!-- Navigate to tool -->
+      <Action ID="NAVIGATE_TO" obj="tool" />
+      <!-- Push pot forward toward front edge of table -->
+      <Action ID="PUSH" obj="pot" />
+    </Sequence>
+  </BehaviorTree>
+</root>

@@ -1,0 +1,25 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to cup -->
+      <Action ID="NAVIGATE_TO" obj="cup" />
+      <!-- Fallback: if GRASP cup fails, try PUSH, FLIP to reposition -->
+      <Fallback>
+        <!-- Grasp cup -->
+        <Action ID="GRASP" obj="cup" />
+        <Sequence>
+          <!-- Push cup forward toward front edge of table -->
+          <Action ID="PUSH" obj="cup" />
+          <!-- Grasp cup -->
+          <Action ID="GRASP" obj="cup" />
+        </Sequence>
+      </Fallback>
+      <!-- Navigate to dish_rack -->
+      <Action ID="NAVIGATE_TO" obj="dish_rack" />
+      <!-- Place inside dish_rack -->
+      <Action ID="PLACE_INSIDE" obj="dish_rack" />
+      <!-- Release -->
+      <Action ID="RELEASE" />
+    </Sequence>
+  </BehaviorTree>
+</root>

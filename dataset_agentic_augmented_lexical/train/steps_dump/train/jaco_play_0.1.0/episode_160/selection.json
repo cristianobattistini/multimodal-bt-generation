@@ -1,0 +1,28 @@
+{
+  "decorator_type": "mixed",
+  "mixed_subtype": "condition_retry",
+  "target_action_id": "GRASP",
+  "target_obj": "apple",
+  "parameters": {
+    "augmentations": [
+      {
+        "type": "condition",
+        "action_id": "GRASP",
+        "obj": "apple",
+        "params": {
+          "condition_id": "IS_VISIBLE",
+          "condition_obj": "apple"
+        }
+      },
+      {
+        "type": "retry",
+        "action_id": "GRASP",
+        "obj": "apple",
+        "params": {
+          "num_attempts": 3
+        }
+      }
+    ]
+  },
+  "prompt_name": "mixed/condition_retry"
+}

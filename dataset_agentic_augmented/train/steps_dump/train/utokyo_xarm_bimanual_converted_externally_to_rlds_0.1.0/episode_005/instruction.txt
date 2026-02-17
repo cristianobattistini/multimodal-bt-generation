@@ -1,0 +1,1 @@
+Unfold a wrinkled towel. Only navigate to the object if it is visible.

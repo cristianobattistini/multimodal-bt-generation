@@ -1,0 +1,20 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence name="move_all_plywood">
+      <NAVIGATE_TO obj="plywood_1"/>
+      <GRASP obj="plywood_1"/>
+      <NAVIGATE_TO obj="corridor_floor"/>
+      <PLACE_ON_TOP obj="corridor_floor"/>
+
+      <NAVIGATE_TO obj="plywood_2"/>
+      <GRASP obj="plywood_2"/>
+      <NAVIGATE_TO obj="corridor_floor"/>
+      <PLACE_ON_TOP obj="corridor_floor"/>
+
+      <NAVIGATE_TO obj="plywood_3"/>
+      <GRASP obj="plywood_3"/>
+      <NAVIGATE_TO obj="corridor_floor"/>
+      <PLACE_ON_TOP obj="corridor_floor"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

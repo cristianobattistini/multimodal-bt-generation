@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "bowl"
+  destination: "table"
+  expanded_instruction: "Pick up the bowl and place it on the table immediately to the left of the blue towel; if grasp fails, retry up to 3 times, then use push or flip to reposition the bowl."
+  scene_context: "Bowl is on the table near the left side; blue towel on the table to its right; bowl not held; table clear."
+  expected_sequence: "Pick up the bowl, move to the table area left of the blue towel, and place the bowl down; if grasp fails, retry up to 3 times, then use push or flip to reposition before placing."

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "gray_bowl"
+  destination: ""
+  expanded_instruction: "Pick up the gray bowl from the table near the center of the workspace"
+  scene_context: "Gray bowl sits on the table center with a small beige item inside; bowl not held; robot arm nearby; table otherwise reachable."
+  expected_sequence: "Approach the gray bowl, grasp its rim, and lift it clear of the table."

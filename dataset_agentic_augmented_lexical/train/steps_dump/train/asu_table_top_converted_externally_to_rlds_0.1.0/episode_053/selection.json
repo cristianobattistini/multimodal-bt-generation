@@ -1,0 +1,12 @@
+{
+  "decorator_type": "condition",
+  "mixed_subtype": null,
+  "target_action_id": "GRASP",
+  "target_obj": "coke_bottle",
+  "parameters": {
+    "condition_id": "IS_REACHABLE",
+    "condition_obj": "coke_bottle",
+    "allowed_conditions": "IS_GRASPABLE, IS_REACHABLE, IS_VISIBLE"
+  },
+  "prompt_name": "condition"
+}

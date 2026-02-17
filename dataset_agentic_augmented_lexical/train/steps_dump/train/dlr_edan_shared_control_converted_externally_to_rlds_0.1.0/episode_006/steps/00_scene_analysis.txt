@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "mug"
+  destination: ""
+  expanded_instruction: "Pick up the red mug from the small metal stool next to the table; if grasp fails, retry up to 2 times, then push or flip the mug to reposition and try again."
+  scene_context: "Red mug resting on small metal stool, not held; nearby table clear and obstacle-free."
+  expected_sequence: "Move the arm to the mug, grasp it securely, and lift it off the stool; if a grasp fails, retry (up to 2 attempts, within a 10s timeout) then use a push or flip to reposition the mug and attempt the grasp again."

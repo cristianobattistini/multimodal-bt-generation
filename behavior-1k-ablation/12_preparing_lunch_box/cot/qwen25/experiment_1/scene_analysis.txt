@@ -1,0 +1,7 @@
+scene_analysis:
+  target: "["club_sandwich","half_apple_1","half_apple_2","chocolate_chip_cookie", "bottle_of_tea"]"
+  destination: "packing_box"
+  expanded_instruction: "Pick up the club_sandwich, half_apple_1, half_apple_2, and chocolate_chip_cookie from the counter and put them into the packing_box one at a time. Check that the electric_refrigerator is closed before closing; then go to the refrigerator, pick up the bottle_of_tea from the shelf, and place it inside the packing_box."
+  scene_context: "Club_sandwich, half_apple_1, half_apple_2, and chocolate_chip_cookie lie on the countertop; packing_box is open and reachable; bottle_of_tea not held; refrigerator is closed."
+  expected_sequence: "Pick and place the club_sandwich into the packing_box, then the half_apple_1, half_apple_2, and chocolate_chip_cookie, check that the fridge is closed before closing, reach into the fridge, remove the bottle_of_tea, carry it to the packing_box, and put it inside."
+Plan:

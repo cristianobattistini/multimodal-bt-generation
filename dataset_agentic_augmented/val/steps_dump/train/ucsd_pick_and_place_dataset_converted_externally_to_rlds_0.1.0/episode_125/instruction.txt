@@ -1,0 +1,1 @@
+Place the pot in the sink. If grasping fails, push the pot to reposition it and retry grasping.

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "butter_dairy"
+  destination: "sink"
+  expanded_instruction: "Pick up the butter dairy from the table and place it into the sink; use a grasp with a 10s timeout and retry the grasp up to 2 times if it fails."
+  scene_context: "Butter dairy on table, not held; metal sink open and clear; path to sink unobstructed."
+  expected_sequence: "Move to the butter dairy, attempt to pick it up (grasp has a 10s timeout and may be retried up to 2 times), carry it to the sink, and place it inside."

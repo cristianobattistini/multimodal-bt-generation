@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "cup"
+  destination: "black_hook"
+  expanded_instruction: "Hang the pink cup on the black hook attached to the blue board."
+  scene_context: "Pink cup near a black hook on a blue vertical surface; hook is free and cup not held."
+  expected_sequence: "Bring the cup to the hook and place its rim/handle onto the hook so it hangs securely."

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "blue_pen"
+  destination: ""
+  expanded_instruction: "Avoid the book obstacle and reach the blue pen standing in the pen holder on the table; if grasp fails, retry up to 3 times and use push or flip to reposition."
+  scene_context: "Robot arm free; stack_of_books between arm and pen; blue_pen upright in a holder on the table; table otherwise clear."
+  expected_sequence: "Navigate the arm around the book stack without colliding, extend to the pen holder, and grasp the blue_pen; if grasp fails, use push or flip to reposition and retry up to 3 times."

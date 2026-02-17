@@ -1,0 +1,7 @@
+scene_analysis:
+  target: "["half_apple_1", "half_apple_2", "club_sandwich", "chocolate_chip_cookie"]"
+  destination: "packing_box"
+  expanded_instruction: "Pick up the club_sandwich, half_apple_1, half_apple_2, and chocolate_chip_cookie from the chopping board and put them into the packing_box on the countertop; make sure the fridge is closed after placing the chocolate_chip_cookie."
+  scene_context: "Club_sandwich, half_apple_1, half_apple_2, and chocolate_chip_cookie on the countertop next to an open fridge; packing_box on counter is empty and reachable."
+  expected_sequence: "Pick each item from the chopping board one by one and place it into the packing_box, then close the fridge and check the packing_box is clear."
+Plan:

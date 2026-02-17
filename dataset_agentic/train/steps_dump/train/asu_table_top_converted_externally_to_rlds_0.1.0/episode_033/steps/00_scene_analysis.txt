@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "red_square"
+  destination: "table"
+  expanded_instruction: "Pick up the red square block and place it down on the table"
+  scene_context: "Red square on the right side of the table near the robot; table surface otherwise clear; no containers open."
+  expected_sequence: "Approach the red square, pick it up, move to the table area, and place it down."

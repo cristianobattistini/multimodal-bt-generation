@@ -1,0 +1,24 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to red_pitcher -->
+      <Action ID="NAVIGATE_TO" obj="red_pitcher" />
+      <!-- Check red_pitcher is reachable before GRASP -->
+      <Condition ID="IS_REACHABLE" obj="red_pitcher" />
+      <!-- Retry GRASP red_pitcher up to 2 attempts -->
+      <RetryUntilSuccessful num_attempts="2">
+        <!-- Timeout: GRASP red_pitcher within 15s -->
+        <Timeout msec="15000">
+          <!-- Grasp red_pitcher -->
+          <Action ID="GRASP" obj="red_pitcher" />
+        </Timeout>
+      </RetryUntilSuccessful>
+      <!-- Navigate to mug -->
+      <Action ID="NAVIGATE_TO" obj="mug" />
+      <!-- Pour into mug -->
+      <Action ID="POUR" obj="mug" />
+      <!-- Release -->
+      <Action ID="RELEASE" />
+    </Sequence>
+  </BehaviorTree>
+</root>

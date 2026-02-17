@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "bread"
+  destination: "table"
+  expanded_instruction: "Group actions into an ApproachBread subtree: pick up the red bread block from the table and place it on the table; retry approach/grasp up to 3 times with a 10s timeout, and if grasp fails push to reposition."
+  scene_context: "Red rectangular bread block on left of table; table surface largely clear; robot not holding the bread."
+  expected_sequence: "ApproachBread subtree: approach the bread, grasp it, then place it down on the table; on failure retry up to 3 times (10s timeout) and if grasp fails push to reposition."

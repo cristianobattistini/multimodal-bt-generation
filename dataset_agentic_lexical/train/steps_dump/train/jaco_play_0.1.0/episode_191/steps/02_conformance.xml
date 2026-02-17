@@ -1,0 +1,14 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Approach orange_fruit -->
+      <Action ID="APPROACH" obj="orange_fruit" />
+      <!-- Pick orange_fruit -->
+      <Action ID="PICK" obj="orange_fruit" />
+      <!-- Navigate to sink -->
+      <Action ID="NAVIGATE_TO" obj="sink" />
+      <!-- Place orange_fruit inside sink -->
+      <Action ID="PLACE_INSIDE" obj="orange_fruit" container="sink" />
+    </Sequence>
+  </BehaviorTree>
+</root>

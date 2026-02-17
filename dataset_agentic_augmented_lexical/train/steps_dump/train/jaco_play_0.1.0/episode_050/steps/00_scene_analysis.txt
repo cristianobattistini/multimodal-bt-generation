@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "butter_dairy"
+  destination: ""
+  expanded_instruction: "Check that the butter dairy (yellow butter stick) is reachable before navigating; then NAVIGATE_TO the table (complete within a 20s timeout) and pick up the butter dairy from the gray bowl."
+  scene_context: "Gray bowl on table contains a yellow butter stick; robot arm is above but not holding it; no containers are closed."
+  expected_sequence: "Verify IS_REACHABLE on butter_dairy, then NAVIGATE_TO the table (with a 20s timeout). Move the arm over the butter stick, grasp it from the bowl, and lift it clear of the bowl."

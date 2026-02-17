@@ -1,0 +1,33 @@
+{
+  "decorator_type": "mixed",
+  "mixed_subtype": "condition_fallback",
+  "target_action_id": "GRASP",
+  "target_obj": "yellow_object",
+  "parameters": {
+    "augmentations": [
+      {
+        "type": "condition",
+        "action_id": "GRASP",
+        "obj": "yellow_object",
+        "params": {
+          "condition_id": "IS_VISIBLE",
+          "condition_obj": "yellow_object"
+        }
+      },
+      {
+        "type": "fallback",
+        "action_id": "GRASP",
+        "obj": "yellow_object",
+        "params": {
+          "valid_fallbacks": [
+            "PUSH",
+            "FLIP"
+          ],
+          "valid_fallbacks_str": "PUSH, FLIP",
+          "hint": "PUSH/FLIP repositions the object into a better grasping position"
+        }
+      }
+    ]
+  },
+  "prompt_name": "mixed/condition_fallback"
+}

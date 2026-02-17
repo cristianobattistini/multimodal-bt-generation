@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "yellow_ball"
+  destination: ""
+  expanded_instruction: "Check that the yellow ball is graspable, then pick it up from the small round side table next to the black shelf; if the grasp fails, retry up to 2 times with a 15s timeout per grasp."
+  scene_context: "Yellow ball on small round side table, not held; side table clear and reachable; robot arm nearby."
+  expected_sequence: "Move the arm to the side table, verify IS_GRASPABLE on the yellow ball, then attempt to grasp it (15s timeout) and retry up to 2 times if needed, and lift it clear of the table."

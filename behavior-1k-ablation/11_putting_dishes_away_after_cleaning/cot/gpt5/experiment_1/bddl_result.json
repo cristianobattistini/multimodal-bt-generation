@@ -1,0 +1,17 @@
+{
+  "success": true,
+  "bt_success": true,
+  "bddl_goal": true,
+  "ticks": 1,
+  "duration": 420.5515785217285,
+  "inference_time": 28.94371509552002,
+  "satisfied": [
+    "exists(['?cabinet.n.01', '-', 'cabinet.n.01'], ['forall', ['?plate.n.04', '-', 'plate.n.04'], ['inside', '?plate.n.04', '?cabinet.n.01']])",
+    "forall(['?cabinet.n.01', '-', 'cabinet.n.01'], ['not', ['open', '?cabinet.n.01']])"
+  ],
+  "unsatisfied": [],
+  "task": "11_putting_dishes_away_after_cleaning",
+  "model": "gpt5",
+  "experiment": 5,
+  "timestamp": "20260211_160045"
+}

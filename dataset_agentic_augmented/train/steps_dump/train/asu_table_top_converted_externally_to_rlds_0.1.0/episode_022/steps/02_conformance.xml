@@ -1,0 +1,18 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to green_bottle -->
+      <Action ID="NAVIGATE_TO" obj="green_bottle" />
+      <!-- Check green_bottle is reachable before GRASP -->
+      <Condition ID="IS_REACHABLE" obj="green_bottle" />
+      <!-- Retry GRASP green_bottle up to 3 attempts -->
+      <RetryUntilSuccessful num_attempts="3">
+        <!-- Timeout: GRASP green_bottle within 15s -->
+        <Timeout msec="15000">
+          <!-- Grasp green_bottle -->
+          <Action ID="GRASP" obj="green_bottle" />
+        </Timeout>
+      </RetryUntilSuccessful>
+    </Sequence>
+  </BehaviorTree>
+</root>

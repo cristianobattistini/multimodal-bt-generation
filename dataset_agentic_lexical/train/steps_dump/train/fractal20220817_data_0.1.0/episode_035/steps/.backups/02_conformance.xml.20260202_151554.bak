@@ -1,0 +1,18 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to top_drawer -->
+      <Action ID="NAVIGATE_TO" obj="top_drawer"/>
+      <!-- Navigate to orange -->
+      <Action ID="NAVIGATE_TO" obj="orange"/>
+      <!-- Grasp orange -->
+      <Action ID="GRASP" obj="orange"/>
+      <!-- Navigate to counter -->
+      <Action ID="NAVIGATE_TO" obj="counter"/>
+      <!-- Place on counter (by the plate) -->
+      <Action ID="PLACE_ON_TOP" obj="counter"/>
+      <!-- Release -->
+      <Action ID="RELEASE"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

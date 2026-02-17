@@ -1,0 +1,13 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Go to zipper_bag -->
+      <Action ID="GO_TO" obj="zipper_bag" />
+      <!-- Retry OPEN zipper_bag up to 3 attempts -->
+      <RetryUntilSuccessful num_attempts="3">
+        <!-- Open zipper_bag -->
+        <Action ID="OPEN" obj="zipper_bag" />
+      </RetryUntilSuccessful>
+    </Sequence>
+  </BehaviorTree>
+</root>

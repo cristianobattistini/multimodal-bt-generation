@@ -1,0 +1,21 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to mug -->
+      <Action ID="NAVIGATE_TO" obj="mug" />
+      <!-- Pour into mug -->
+      <Action ID="POUR" obj="mug" />
+      <!-- Fallback: if FLIP brown_pitcher fails, try PUSH to reposition -->
+      <Fallback>
+        <!-- Return brown_pitcher upright (flip) -->
+        <Action ID="FLIP" obj="brown_pitcher" />
+        <Sequence>
+          <!-- Push brown_pitcher forward toward front edge of table -->
+          <Action ID="SLIDE" obj="brown_pitcher" />
+          <!-- Return brown_pitcher upright (flip) -->
+          <Action ID="FLIP" obj="brown_pitcher" />
+        </Sequence>
+      </Fallback>
+    </Sequence>
+  </BehaviorTree>
+</root>

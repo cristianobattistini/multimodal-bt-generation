@@ -1,0 +1,22 @@
+{
+  "success": false,
+  "bt_success": false,
+  "bddl_goal": false,
+  "ticks": 1,
+  "duration": 36.87516403198242,
+  "inference_time": 12.503488540649414,
+  "satisfied": [],
+  "unsatisfied": [
+    "nextto(?sandal.n.01_1, ?bed.n.01_1)",
+    "nextto(?sandal.n.01_2, ?sandal.n.01_1)",
+    "exists(['?table.n.02', '-', 'table.n.02'], ['ontop', '?book.n.02_1', '?table.n.02'])"
+  ],
+  "reason": "wrong_plan: places sandal_1 on nightstand instead of next to bed; attempts PLACE_ON_TOP sandal_2 without grasping it; then places object on bed; completely ignores book placement; all 3 BDDL goals unsatisfied",
+  "task": "18_tidying_bedroom",
+  "condition": "zero-shot",
+  "model_dir": "smolvlm2",
+  "vlm_model": "smol500",
+  "inference_mode": "adapter",
+  "experiment": 3,
+  "timestamp": "20260214_090635"
+}

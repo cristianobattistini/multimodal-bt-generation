@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "green_apple"
+  destination: ""
+  expanded_instruction: "Pick up the green apple from the small plate on the side table, first navigating to the plate within a 15s timeout."
+  scene_context: "Green apple sitting on a small plate on the side table; apple not held; table and plate reachable."
+  expected_sequence: "Move to the plate within a 15s navigate timeout, grasp the green apple, and lift it off the plate."

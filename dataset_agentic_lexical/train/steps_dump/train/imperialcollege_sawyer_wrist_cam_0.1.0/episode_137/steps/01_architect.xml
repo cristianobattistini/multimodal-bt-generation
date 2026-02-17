@@ -1,0 +1,10 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to white_dot -->
+      <Action ID="NAVIGATE_TO" obj="white_dot"/>
+      <!-- Swipe white_dot -->
+      <Action ID="WIPE" obj="white_dot"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

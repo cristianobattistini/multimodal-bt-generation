@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "green_garbage_can_lid"
+  destination: ""
+  expanded_instruction: "Group actions into ApproachGreenGarbageCanLid subtree: Lift and open the green garbage can lid on the green trash bin beside the table (retry up to 3 times, 10s timeout; if grasp fails, push to reposition)."
+  scene_context: "Trash bin lid is closed, not held, robot arm nearby, bin next to a table and reachable."
+  expected_sequence: "Approach the lid within the ApproachGreenGarbageCanLid subtree, grasp its front edge, lift the lid until it is open (retry grasp up to 3 times, 10s timeout; if grasp fails, push to reposition and retry), then hold or retract arm."

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "maroon_cube"
+  destination: ""
+  expanded_instruction: "Check that the maroon cube is visible (IS_VISIBLE) before navigating; if not visible, retry the check up to 3 times within 10s. Then pick up the maroon cube from the table front-center between the green bottle and blue can"
+  scene_context: "Table is clear otherwise; maroon cube sits front-center between a green bottle (left) and a blue can (right); no containers open."
+  expected_sequence: "Verify maroon cube visibility before approach (retry up to 3 times within 10s); navigate to the cube, grasp it, and lift it off the table."

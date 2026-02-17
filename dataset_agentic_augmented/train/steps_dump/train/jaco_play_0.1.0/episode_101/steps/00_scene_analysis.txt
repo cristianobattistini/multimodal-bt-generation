@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "gray_bowl"
+  destination: "table"
+  expanded_instruction: "Pick up the gray bowl from the robot gripper and place it on the table. Before placing, check IS_HOLDING on table; perform the place action within a 10s timeout and retry up to 2 times if it fails."
+  scene_context: "Gray bowl already held by robot above the table; table surface clear and reachable."
+  expected_sequence: "Check IS_HOLDING on table, then lower the gray bowl to the table and set it down gently within a 10s timeout; retry the place up to 2 times if it fails."

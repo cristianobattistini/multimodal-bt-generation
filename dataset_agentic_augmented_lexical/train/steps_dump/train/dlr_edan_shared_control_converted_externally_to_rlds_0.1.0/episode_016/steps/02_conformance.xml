@@ -1,0 +1,24 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Move to black_shelf_unit -->
+      <Action ID="MOVE_TO" obj="black_shelf_unit" />
+      <!-- Move to tube -->
+      <Action ID="MOVE_TO" obj="tube" />
+      <!-- Fallback: if GRASP tube fails, try alternative to reposition -->
+      <Fallback>
+        <!-- Retry GRASP tube up to 3 attempts -->
+        <RetryUntilSuccessful num_attempts="3">
+          <!-- Grasp tube -->
+          <Action ID="GRIP" obj="tube" />
+        </RetryUntilSuccessful>
+        <Sequence>
+          <!-- Push tube forward toward front edge of table -->
+          <Action ID="NUDGE" obj="tube" />
+          <!-- Grasp tube -->
+          <Action ID="GRIP" obj="tube" />
+        </Sequence>
+      </Fallback>
+    </Sequence>
+  </BehaviorTree>
+</root>

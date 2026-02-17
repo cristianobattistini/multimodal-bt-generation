@@ -1,0 +1,1 @@
+Place grid clamp. Check holding before placing on top, retry placing on top up to 2 times if it fails, use push as Plan B if unsuccessful.

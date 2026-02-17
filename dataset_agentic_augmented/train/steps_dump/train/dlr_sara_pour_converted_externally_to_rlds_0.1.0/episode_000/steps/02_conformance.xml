@@ -1,0 +1,25 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Execute subtree ApproachBrownTeapot -->
+      <SubTree ID="ApproachBrownTeapot" />
+      <!-- Navigate to mug -->
+      <Action ID="NAVIGATE_TO" obj="mug" />
+      <!-- Pour into mug -->
+      <Action ID="POUR" obj="mug" />
+      <!-- Navigate to table -->
+      <Action ID="NAVIGATE_TO" obj="table" />
+      <!-- Place on table -->
+      <Action ID="PLACE_ON_TOP" obj="table" />
+    </Sequence>
+  </BehaviorTree>
+  <!-- Subtree definition ApproachBrownTeapot -->
+  <BehaviorTree ID="ApproachBrownTeapot">
+    <Sequence>
+      <!-- Navigate to brown_teapot -->
+      <Action ID="NAVIGATE_TO" obj="brown_teapot" />
+      <!-- Grasp brown_teapot -->
+      <Action ID="GRASP" obj="brown_teapot" />
+    </Sequence>
+  </BehaviorTree>
+</root>

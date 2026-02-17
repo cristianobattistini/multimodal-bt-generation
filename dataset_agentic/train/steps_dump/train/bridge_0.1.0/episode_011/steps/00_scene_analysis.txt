@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "eggplant"
+  destination: "metal_pot"
+  expanded_instruction: "Pick up the eggplant from the counter and place it into the metal pot in the sink."
+  scene_context: "Eggplant on counter near sink, metal pot empty in sink, robot gripper nearby and not holding it."
+  expected_sequence: "Grasp the eggplant, lift it, move it over the metal pot, and place it inside."

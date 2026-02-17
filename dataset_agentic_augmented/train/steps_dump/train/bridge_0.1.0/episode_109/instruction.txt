@@ -1,0 +1,1 @@
+Move the mushroom and put it in the pot. Use a 15 second timeout and retry up to 3 times for grasping; if unsuccessful, use push as Plan B.

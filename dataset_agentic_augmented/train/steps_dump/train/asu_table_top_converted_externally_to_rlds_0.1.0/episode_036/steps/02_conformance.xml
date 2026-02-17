@@ -1,0 +1,15 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to blue_bottle -->
+      <Action ID="NAVIGATE_TO" obj="blue_bottle" />
+      <!-- Check blue_bottle is visible before GRASP -->
+      <Condition ID="IS_VISIBLE" obj="blue_bottle" />
+      <!-- Retry GRASP blue_bottle up to 2 attempts -->
+      <RetryUntilSuccessful num_attempts="2">
+        <!-- Grasp blue_bottle -->
+        <Action ID="GRASP" obj="blue_bottle" />
+      </RetryUntilSuccessful>
+    </Sequence>
+  </BehaviorTree>
+</root>

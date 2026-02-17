@@ -1,0 +1,16 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Move to cloth -->
+      <Action ID="MOVE_TO" obj="cloth" />
+      <!-- Grab cloth -->
+      <Action ID="GRAB" obj="cloth" />
+      <!-- Double over cloth -->
+      <Action ID="DOUBLE_OVER" obj="cloth" />
+      <!-- Go to table -->
+      <Action ID="GO_TO" obj="table" />
+      <!-- Put on table -->
+      <Action ID="PUT_ON" obj="table" />
+    </Sequence>
+  </BehaviorTree>
+</root>

@@ -1,0 +1,10 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Approach green_object -->
+      <Action ID="APPROACH" obj="green_object" />
+      <!-- Grip green_object -->
+      <Action ID="GRIP" obj="green_object" />
+    </Sequence>
+  </BehaviorTree>
+</root>

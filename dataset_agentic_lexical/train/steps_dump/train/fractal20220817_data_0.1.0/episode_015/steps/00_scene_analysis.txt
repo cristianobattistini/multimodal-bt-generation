@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "coke_can"
+  destination: "bottom_drawer"
+  expanded_instruction: "Pick up the coke can from the table surface and place it into the bottom drawer."
+  scene_context: "Bottom drawer is open; coke_can on table near front; drawer interior clear; robot not holding the can."
+  expected_sequence: "Approach and grasp the coke can, move over the open bottom drawer, and place the can inside."

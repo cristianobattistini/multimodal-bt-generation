@@ -1,0 +1,1 @@
+flip pot upright in sink distractors. Check precondition and use a 15 second timeout for navigation.

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "grid_clamp"
+  destination: "grid_board"
+  expanded_instruction: "Pick up the grid clamp from the table and place it onto the wooden grid board in its slot, attempting a GRASP with a 15 second timeout and retrying GRASP up to 2 times; if GRASP still fails, use PUSH or FLIP to reposition the object before placing."
+  scene_context: "Three grid_clamps resting on the table; wooden grid_board is clear and reachable; robot not holding anything."
+  expected_sequence: "Approach a clamp, attempt to pick it up with GRASP (15s timeout, retry up to 2 times), move to the grid board, and place it into a slot — if GRASP fails, reposition the clamp using PUSH or FLIP and then place."

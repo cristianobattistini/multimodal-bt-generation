@@ -1,0 +1,24 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to glass -->
+      <Action ID="NAVIGATE_TO" obj="glass" />
+      <!-- Check glass is reachable before GRASP -->
+      <Condition ID="IS_REACHABLE" obj="glass" />
+      <!-- Fallback: if GRASP glass fails, try alternative to reposition -->
+      <Fallback>
+        <!-- Timeout: GRASP glass within 15s -->
+        <Timeout msec="15000">
+          <!-- Grasp glass -->
+          <Action ID="GRASP" obj="glass" />
+        </Timeout>
+        <Sequence>
+          <!-- Push glass forward toward front edge of table -->
+          <Action ID="PUSH" obj="glass" />
+          <!-- Grasp glass -->
+          <Action ID="GRASP" obj="glass" />
+        </Sequence>
+      </Fallback>
+    </Sequence>
+  </BehaviorTree>
+</root>

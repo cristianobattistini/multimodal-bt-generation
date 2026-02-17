@@ -1,0 +1,14 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to red_fork -->
+      <Action ID="NAVIGATE_TO" obj="red_fork"/>
+      <!-- Grasp red_fork -->
+      <Action ID="GRASP" obj="red_fork"/>
+      <!-- Navigate to stovetop (place left of left burner) -->
+      <Action ID="NAVIGATE_TO" obj="stovetop"/>
+      <!-- Place on stovetop (immediately left of the left burner) -->
+      <Action ID="PLACE_ON_TOP" obj="stovetop"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

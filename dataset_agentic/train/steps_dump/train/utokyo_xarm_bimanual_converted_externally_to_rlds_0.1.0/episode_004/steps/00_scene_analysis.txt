@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "towel"
+  destination: "table"
+  expanded_instruction: "Pick up the wrinkled pink towel from the green mat and unfold it flat on the table."
+  scene_context: "Pink towel wrinkled on green mat on table, not held; table surface around mat is clear; robot arms present."
+  expected_sequence: "Reach to the towel, grasp and lift edges, stretch and smooth it out, then place it flat on the table."

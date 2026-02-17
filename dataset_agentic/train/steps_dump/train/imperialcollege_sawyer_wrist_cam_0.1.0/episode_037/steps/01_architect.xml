@@ -1,0 +1,10 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to small_blue_tile -->
+      <Action ID="NAVIGATE_TO" obj="small_blue_tile"/>
+      <!-- Push small_blue_tile (swipe right) -->
+      <Action ID="PUSH" obj="small_blue_tile"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

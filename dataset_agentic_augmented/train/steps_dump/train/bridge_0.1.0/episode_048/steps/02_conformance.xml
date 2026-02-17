@@ -1,0 +1,18 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to pot -->
+      <Action ID="NAVIGATE_TO" obj="pot" />
+      <!-- Grasp pot -->
+      <Action ID="GRASP" obj="pot" />
+      <Sequence>
+        <!-- Check orange_cloth is reachable before NAVIGATE_TO -->
+        <Condition ID="IS_REACHABLE" obj="orange_cloth" />
+        <!-- Navigate to orange_cloth -->
+        <Action ID="NAVIGATE_TO" obj="orange_cloth" />
+      </Sequence>
+      <!-- Place on orange_cloth -->
+      <Action ID="PLACE_ON_TOP" obj="orange_cloth" />
+    </Sequence>
+  </BehaviorTree>
+</root>

@@ -1,0 +1,14 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to cloth -->
+      <Action ID="NAVIGATE_TO" obj="cloth"/>
+      <!-- Grasp cloth -->
+      <Action ID="GRASP" obj="cloth"/>
+      <!-- Navigate to cucumber (place cloth next to cucumber on the cucumber) -->
+      <Action ID="NAVIGATE_TO" obj="cucumber"/>
+      <!-- Place next to cucumber -->
+      <Action ID="PLACE_NEXT_TO" obj="cucumber"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

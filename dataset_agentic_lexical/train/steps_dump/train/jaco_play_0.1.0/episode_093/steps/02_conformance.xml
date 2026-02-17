@@ -1,0 +1,14 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Approach butter_dairy -->
+      <Action ID="APPROACH" obj="butter_dairy" />
+      <!-- Grip butter_dairy -->
+      <Action ID="GRIP" obj="butter_dairy" />
+      <!-- Advance to black_bowl -->
+      <Action ID="ADVANCE_TO" obj="black_bowl" />
+      <!-- Insert into black_bowl -->
+      <Action ID="INSERT_INTO" obj="black_bowl" />
+    </Sequence>
+  </BehaviorTree>
+</root>

@@ -1,0 +1,28 @@
+<root main_tree_to_execute="MainTree">
+  <Sequence>
+    <!-- Navigate to gift_boxes -->
+    <Action ID="NAVIGATE_TO" obj="gift_boxes" />
+    <!-- Grasp gift_box_1 -->
+    <Action ID="GRASP" obj="gift_box_1" />
+    <!-- Navigate to gift_boxes -->
+    <Action ID="NAVIGATE_TO" obj="gift_boxes" />
+    <!-- Place gift_box_1 on sofa -->
+    <Action ID="PLACE_ON_TOP" obj="gift_boxes" />
+    <!-- Navigate to pillar_candle -->
+    <Action ID="NAVIGATE_TO" obj="pillar_candle" />
+    <!-- Grasp pillar_candle -->
+    <Action ID="GRASP" obj="pillar_candle" />
+    <!-- Navigate to pillar_candle -->
+    <Action ID="NAVIGATE_TO" obj="pillar_candle" />
+    <!-- Place pillar_candle on table -->
+    <Action ID="PLACE_ON_TOP" obj="pillar_candle" />
+    <!-- Navigate to christmas_tree -->
+    <Action ID="NAVIGATE_TO" obj="christmas_tree" />
+    <!-- Grasp christmas_tree -->
+    <Action ID="GRASP" obj="christmas_tree" />
+    <!-- Navigate to pillar_candle -->
+    <Action ID="NAVIGATE_TO" obj="pillar_candle" />
+    <!-- Place pillar_candle on table -->
+    <Action ID="PLACE_ON_TOP" obj="pillar_candle" />
+  </Sequence>
+</root>

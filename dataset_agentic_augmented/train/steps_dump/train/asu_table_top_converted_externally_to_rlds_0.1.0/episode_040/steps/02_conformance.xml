@@ -1,0 +1,13 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Timeout: NAVIGATE_TO white_carton within 15s -->
+      <Timeout msec="15000">
+        <!-- Navigate to white_carton -->
+        <Action ID="NAVIGATE_TO" obj="white_carton" />
+      </Timeout>
+      <!-- Push white_carton forward toward front edge of table -->
+      <Action ID="PUSH" obj="white_carton" />
+    </Sequence>
+  </BehaviorTree>
+</root>

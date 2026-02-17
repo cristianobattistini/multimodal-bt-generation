@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "blue_can"
+  destination: "table"
+  expanded_instruction: "Place the blue can down onto the table surface in front of the robot using the ApproachTable subtree (retry up to 3 times, 10s timeout; if grasp fails, reposition and try again)."
+  scene_context: "Robot is holding the blue can above a clear table; other cans lie on the table but not blocking."
+  expected_sequence: "Lower the blue can to the table and release it gently onto the surface via the ApproachTable subtree (retry up to 3 times within 10s; reposition if grasp fails)."

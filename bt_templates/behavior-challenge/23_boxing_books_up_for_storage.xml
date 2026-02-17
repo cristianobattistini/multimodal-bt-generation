@@ -1,0 +1,30 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <Action ID="NAVIGATE_TO" obj="book.n.02_1"/>
+      <Action ID="GRASP" obj="book.n.02_1"/>
+      <Action ID="NAVIGATE_TO" obj="box.n.01_1"/>
+      <Action ID="PLACE_INSIDE" obj="box.n.01_1"/>
+      <Action ID="NAVIGATE_TO" obj="book.n.02_2"/>
+      <Action ID="GRASP" obj="book.n.02_2"/>
+      <Action ID="NAVIGATE_TO" obj="box.n.01_1"/>
+      <Action ID="PLACE_INSIDE" obj="box.n.01_1"/>
+      <Action ID="NAVIGATE_TO" obj="book.n.02_3"/>
+      <Action ID="GRASP" obj="book.n.02_3"/>
+      <Action ID="NAVIGATE_TO" obj="box.n.01_1"/>
+      <Action ID="PLACE_INSIDE" obj="box.n.01_1"/>
+      <Action ID="NAVIGATE_TO" obj="book.n.02_4"/>
+      <Action ID="GRASP" obj="book.n.02_4"/>
+      <Action ID="NAVIGATE_TO" obj="box.n.01_1"/>
+      <Action ID="PLACE_INSIDE" obj="box.n.01_1"/>
+      <Action ID="NAVIGATE_TO" obj="book.n.02_5"/>
+      <Action ID="GRASP" obj="book.n.02_5"/>
+      <Action ID="NAVIGATE_TO" obj="box.n.01_1"/>
+      <Action ID="PLACE_INSIDE" obj="box.n.01_1"/>
+      <Action ID="NAVIGATE_TO" obj="book.n.02_6"/>
+      <Action ID="GRASP" obj="book.n.02_6"/>
+      <Action ID="NAVIGATE_TO" obj="box.n.01_1"/>
+      <Action ID="PLACE_INSIDE" obj="box.n.01_1"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

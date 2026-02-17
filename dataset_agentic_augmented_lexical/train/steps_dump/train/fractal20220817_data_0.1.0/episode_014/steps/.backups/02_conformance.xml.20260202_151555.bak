@@ -1,0 +1,22 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to middle_drawer -->
+      <Action ID="NAVIGATE_TO" obj="middle_drawer" />
+      <!-- Navigate to sponge -->
+      <Action ID="NAVIGATE_TO" obj="sponge" />
+      <Sequence>
+        <!-- Check sponge is graspable before GRASP -->
+        <Condition ID="IS_GRASPABLE" obj="sponge" />
+        <!-- Grasp sponge -->
+        <Action ID="GRASP" obj="sponge" />
+      </Sequence>
+      <!-- Navigate to counter -->
+      <Action ID="NAVIGATE_TO" obj="counter" />
+      <!-- Place on counter -->
+      <Action ID="PLACE_ON_TOP" obj="counter" />
+      <!-- Release -->
+      <Action ID="RELEASE" />
+    </Sequence>
+  </BehaviorTree>
+</root>

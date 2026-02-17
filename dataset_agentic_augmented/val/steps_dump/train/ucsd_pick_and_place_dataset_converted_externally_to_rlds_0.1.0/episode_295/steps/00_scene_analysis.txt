@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "pot"
+  destination: "sink"
+  expanded_instruction: "Pick up the pot from the countertop and place it into the sink, retrying the placement up to 3 times if it fails"
+  scene_context: "Pot on countertop left of sink, sink empty and open, pot not held, robot arm nearby."
+  expected_sequence: "Reach the pot, grasp and lift it, move over the sink, and set the pot down inside, retrying the place action up to 3 times if it fails"

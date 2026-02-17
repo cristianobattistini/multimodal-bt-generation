@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "grid_clamp"
+  destination: "grid"
+  expanded_instruction: "Pick up the grid clamp from the table and place it onto the wooden grid area on the table. Before navigating to the grid area, check that the wooden grid is visible (IS_VISIBLE); if not visible, retry the check up to 3 times within a 10s timeout."
+  scene_context: "Grid clamp on table near front; wooden grid board is clear and reachable; robot not holding the clamp."
+  expected_sequence: "Check that the grid is visible before moving; if not visible, retry up to 3 times within 10s. Approach the clamp, grasp it, move to the grid area, align it with a slot, and place it down."

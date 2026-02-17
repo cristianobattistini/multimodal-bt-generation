@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "orange_fruit"
+  destination: "sink"
+  expanded_instruction: "Pick up the orange fruit from the floor next to the robot, check that the blue sink basin is not already holding anything, and place the fruit into the basin (if placing fails, retry up to 3 times)."
+  scene_context: "Orange fruit on floor near robot base; blue sink basin is empty and reachable."
+  expected_sequence: "Reach the orange fruit, pick it up, verify the sink is not holding an object before PLACE_INSIDE, move over the sink, and place it inside — if PLACE_INSIDE fails, retry up to 3 times."

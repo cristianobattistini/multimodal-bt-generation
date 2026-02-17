@@ -1,0 +1,45 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence name="put_away_halloween_decorations">
+      <!-- Open cabinet first -->
+      <NAVIGATE_TO obj="cabinet.n.01_1"/>
+      <OPEN obj="cabinet.n.01_1"/>
+
+      <!-- Store pumpkins -->
+      <NAVIGATE_TO obj="pumpkin.n.02_1"/>
+      <GRASP obj="pumpkin.n.02_1"/>
+      <NAVIGATE_TO obj="cabinet.n.01_1"/>
+      <PLACE_INSIDE obj="pumpkin.n.02_1"/>
+
+      <NAVIGATE_TO obj="pumpkin.n.02_2"/>
+      <GRASP obj="pumpkin.n.02_2"/>
+      <NAVIGATE_TO obj="cabinet.n.01_1"/>
+      <PLACE_INSIDE obj="pumpkin.n.02_2"/>
+
+      <!-- Store candles -->
+      <NAVIGATE_TO obj="candle.n.01_1"/>
+      <GRASP obj="candle.n.01_1"/>
+      <NAVIGATE_TO obj="cabinet.n.01_1"/>
+      <PLACE_INSIDE obj="candle.n.01_1"/>
+
+      <NAVIGATE_TO obj="candle.n.01_2"/>
+      <GRASP obj="candle.n.01_2"/>
+      <NAVIGATE_TO obj="cabinet.n.01_1"/>
+      <PLACE_INSIDE obj="candle.n.01_2"/>
+
+      <NAVIGATE_TO obj="candle.n.01_3"/>
+      <GRASP obj="candle.n.01_3"/>
+      <NAVIGATE_TO obj="cabinet.n.01_1"/>
+      <PLACE_INSIDE obj="candle.n.01_3"/>
+
+      <!-- Close cabinet after storing -->
+      <CLOSE obj="cabinet.n.01_1"/>
+
+      <!-- Position the cauldron next to the table -->
+      <NAVIGATE_TO obj="caldron.n.01_1"/>
+      <GRASP obj="caldron.n.01_1"/>
+      <NAVIGATE_TO obj="table.n.02_1"/>
+      <PLACE_NEXT_TO obj="caldron.n.01_1"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

@@ -1,0 +1,24 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to pan -->
+      <Action ID="NAVIGATE_TO" obj="pan" />
+      <!-- Check pan is reachable before GRASP -->
+      <Condition ID="IS_REACHABLE" obj="pan" />
+      <!-- Fallback: if GRASP pan fails, try alternative to reposition -->
+      <Fallback>
+        <!-- Retry GRASP pan up to 3 attempts -->
+        <RetryUntilSuccessful num_attempts="3">
+          <!-- Grasp pan -->
+          <Action ID="GRASP" obj="pan" />
+        </RetryUntilSuccessful>
+        <Sequence>
+          <!-- Push pan forward toward front edge of table -->
+          <Action ID="PUSH" obj="pan" />
+          <!-- Grasp pan -->
+          <Action ID="GRASP" obj="pan" />
+        </Sequence>
+      </Fallback>
+    </Sequence>
+  </BehaviorTree>
+</root>

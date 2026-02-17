@@ -1,0 +1,18 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <Sequence>
+        <!-- Check metal_pot is visible before NAVIGATE_TO -->
+        <Condition ID="IS_VISIBLE" obj="metal_pot" />
+        <!-- Navigate to metal_pot -->
+        <Action ID="MOVE_TO" obj="metal_pot" />
+      </Sequence>
+      <!-- Move to metal_pot -->
+      <Action ID="LATCH_ONTO" obj="orange_object" />
+      <!-- Latch onto orange_object -->
+      <Action ID="MOVE_TO" obj="table" />
+      <!-- Move to table -->
+      <Action ID="PUT_ON" obj="table" />
+    </Sequence>
+  </BehaviorTree>
+</root>

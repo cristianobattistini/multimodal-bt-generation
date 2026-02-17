@@ -1,0 +1,21 @@
+{
+  "success": false,
+  "bt_success": false,
+  "bddl_goal": false,
+  "ticks": 0,
+  "duration": 0.10862064361572266,
+  "inference_time": 8.703327655792236,
+  "satisfied": [],
+  "unsatisfied": [
+    "exists(['?floor.n.01', '-', 'floor.n.01'], ['forall', ['?mousetrap.n.01', '-', 'mousetrap.n.01'], ['ontop', '?mousetrap.n.01', '?floor.n.01']])",
+    "exists(['?sink.n.01', '-', 'sink.n.01'], ['forn', ['2'], ['?mousetrap.n.01', '-', 'mousetrap.n.01'], ['or', ['under', '?mousetrap.n.01', '?sink.n.01'], ['nextto', '?mousetrap.n.01', '?sink.n.01']]])"
+  ],
+  "task": "05_setting_mousetraps",
+  "condition": "cot",
+  "model_dir": "smolvlm2",
+  "vlm_model": "smol500",
+  "inference_mode": "adapter",
+  "experiment": 2,
+  "timestamp": "20260213_102305",
+  "reason": "Wrong XML schema: <Action>NAVIGATE_TO mousetrap_1</Action> instead of <Action ID=\"NAVIGATE_TO\" obj=\"mousetrap_1\"/>. Also wrong logic: grasps all 4 mousetraps then places once. BT parse failed (ticks=0)."
+}

@@ -1,0 +1,16 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to blue_tray -->
+      <Action ID="NAVIGATE_TO" obj="blue_tray" />
+      <!-- Approach black_bowl -->
+      <Action ID="APPROACH" obj="black_bowl" />
+      <Sequence>
+        <!-- Check black_bowl is visible before GRASP -->
+        <Condition ID="IS_VISIBLE" obj="black_bowl" />
+        <!-- Grasp black_bowl -->
+        <Action ID="GRAB" obj="black_bowl" />
+      </Sequence>
+    </Sequence>
+  </BehaviorTree>
+</root>

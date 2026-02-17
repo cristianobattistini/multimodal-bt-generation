@@ -1,0 +1,1 @@
+Take cup off plate. If placing on top fails, push to clear obstacles at the destination and retry placing on top.

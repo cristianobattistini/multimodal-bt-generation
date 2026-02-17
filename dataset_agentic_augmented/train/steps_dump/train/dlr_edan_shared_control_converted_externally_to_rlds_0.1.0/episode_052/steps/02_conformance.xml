@@ -1,0 +1,15 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to chair -->
+      <Action ID="NAVIGATE_TO" obj="chair" />
+      <!-- Navigate to orange -->
+      <Action ID="NAVIGATE_TO" obj="orange" />
+      <!-- Retry GRASP orange up to 2 attempts -->
+      <RetryUntilSuccessful num_attempts="2">
+        <!-- Grasp orange -->
+        <Action ID="GRASP" obj="orange" />
+      </RetryUntilSuccessful>
+    </Sequence>
+  </BehaviorTree>
+</root>

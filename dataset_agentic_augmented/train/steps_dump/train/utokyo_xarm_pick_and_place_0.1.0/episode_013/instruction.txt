@@ -1,0 +1,1 @@
+Pick up a white plate, and then place it on the red plate. If placing on top fails, push obstacles off or reposition them on the red plate and then retry placing on top.

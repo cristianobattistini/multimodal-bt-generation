@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "die"
+  destination: ""
+  expanded_instruction: "Pick up the white die from the floor in front of the black shelf, check IS_GRASPABLE on the die before attempting the grasp, and retry the grasp up to 2 times if it fails."
+  scene_context: "Black shelf open; small white die on floor at front of bottom-middle cubby; robot not holding it."
+  expected_sequence: "Approach the die, check IS_GRASPABLE, grasp it from the floor (retry grasp up to 2 times on failure), and lift it clear of the shelf."

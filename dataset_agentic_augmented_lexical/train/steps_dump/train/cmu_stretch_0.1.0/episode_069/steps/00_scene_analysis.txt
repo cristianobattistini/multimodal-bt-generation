@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "drawer"
+  destination: ""
+  expanded_instruction: "Open the small wooden drawer in the cabinet by grasping and pulling its handle toward you; if the grasp fails, retry up to 2 times, and if still unsuccessful, push or flip the handle/drawer to reposition before pulling."
+  scene_context: "Small wooden drawer is closed with handle exposed; robot arm not holding it; countertop clear."
+  expected_sequence: "Approach the handle, grasp it and pull the drawer open; retry the grasp up to 2 times if it fails, and if grasping still fails use a push or flip to reposition the drawer, then pull."

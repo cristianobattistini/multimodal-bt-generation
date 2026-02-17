@@ -1,0 +1,32 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to kcup_holder -->
+      <Action ID="NAVIGATE_TO" obj="kcup_holder" />
+      <!-- Open kcup_holder -->
+      <Action ID="OPEN" obj="kcup_holder" />
+      <!-- Navigate to kcup -->
+      <Action ID="NAVIGATE_TO" obj="kcup" />
+      <!-- Check kcup is visible before GRASP -->
+      <Condition ID="IS_VISIBLE" obj="kcup" />
+      <!-- Retry GRASP kcup up to 2 attempts -->
+      <RetryUntilSuccessful num_attempts="2">
+        <!-- Timeout: GRASP kcup within 10s -->
+        <Timeout msec="10000">
+          <!-- Grasp kcup -->
+          <Action ID="GRASP" obj="kcup" />
+        </Timeout>
+      </RetryUntilSuccessful>
+      <!-- Navigate to kcup_holder -->
+      <Action ID="NAVIGATE_TO" obj="kcup_holder" />
+      <!-- Place inside kcup_holder -->
+      <Action ID="PLACE_INSIDE" obj="kcup_holder" />
+      <!-- Release -->
+      <Action ID="RELEASE" />
+      <!-- Navigate to kcup_holder -->
+      <Action ID="NAVIGATE_TO" obj="kcup_holder" />
+      <!-- Close kcup_holder -->
+      <Action ID="CLOSE" obj="kcup_holder" />
+    </Sequence>
+  </BehaviorTree>
+</root>

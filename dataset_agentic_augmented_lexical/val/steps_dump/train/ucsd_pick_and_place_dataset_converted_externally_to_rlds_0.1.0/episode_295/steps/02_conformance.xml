@@ -1,0 +1,17 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Move to pot -->
+      <Action ID="MOVE_TO" obj="pot" />
+      <!-- Grab pot -->
+      <Action ID="GRAB" obj="pot" />
+      <!-- Go to sink -->
+      <Action ID="GO_TO" obj="sink" />
+      <!-- Retry PLACE_INSIDE sink up to 3 attempts -->
+      <RetryUntilSuccessful num_attempts="3">
+        <!-- Place inside sink -->
+        <Action ID="PLACE_INSIDE" obj="pot" container="sink" />
+      </RetryUntilSuccessful>
+    </Sequence>
+  </BehaviorTree>
+</root>

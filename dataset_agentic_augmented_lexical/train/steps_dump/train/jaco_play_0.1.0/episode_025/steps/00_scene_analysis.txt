@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "milk_dairy"
+  destination: "table"
+  expanded_instruction: "Pick up the milk_dairy from the floor area near the yellow_cup and place it on the table. Before placing, check (IS_HOLDING) that the table is free; if placing fails, retry up to 3 times and if still failing, use a push to reposition the milk_dairy onto the table."
+  scene_context: "milk_dairy on floor next to yellow_cup and blue_basin, robot gripper empty, table surface clear"
+  expected_sequence: "Approach the milk_dairy, grasp it, carry it to the table, and place it down. Before PLACE_ON_TOP check IS_HOLDING on the table; if PLACE_ON_TOP fails, retry up to 3 times then use PUSH as an alternative to reposition the object."

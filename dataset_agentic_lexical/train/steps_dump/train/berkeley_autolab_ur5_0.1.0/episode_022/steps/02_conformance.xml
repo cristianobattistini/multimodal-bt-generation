@@ -1,0 +1,10 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Move to green_cloth -->
+      <Action ID="MOVE_TO" obj="green_cloth" />
+      <!-- Slide green_cloth -->
+      <Action ID="SLIDE" obj="green_cloth" />
+    </Sequence>
+  </BehaviorTree>
+</root>

@@ -1,0 +1,17 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Approach teapot -->
+      <Action ID="APPROACH" obj="teapot" />
+      <!-- Grasp teapot -->
+      <Action ID="GRASP" obj="teapot" />
+      <!-- Advance to stove -->
+      <Action ID="ADVANCE_TO" obj="stove" />
+      <!-- Retry PLACE_ON_TOP stove up to 3 attempts -->
+      <RetryUntilSuccessful num_attempts="3">
+        <!-- Place on stove -->
+        <Action ID="PLACE_ON_TOP" obj="teapot" surface="stove" />
+      </RetryUntilSuccessful>
+    </Sequence>
+  </BehaviorTree>
+</root>

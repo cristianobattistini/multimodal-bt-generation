@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "green_garbage_can_lid"
+  destination: ""
+  expanded_instruction: "Check that the green_garbage_can_lid is reachable (if not, reposition and retry up to 3 times), then lift and open the green garbage can lid on the green trash can beside the table."
+  scene_context: "Green trash can lid is closed; can upright beside table; lid not held and reachable."
+  expected_sequence: "Move to the trash can, verify IS_REACHABLE for green_garbage_can_lid (reposition and retry up to 3 times if needed), grasp the lid, and lift it to open the can."

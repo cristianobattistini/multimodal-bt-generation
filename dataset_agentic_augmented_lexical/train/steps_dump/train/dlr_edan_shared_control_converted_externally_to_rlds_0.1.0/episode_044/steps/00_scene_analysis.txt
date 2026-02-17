@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "cube"
+  destination: ""
+  expanded_instruction: "Pick up the cube from the middle shelf of the black shelving unit, retrying the grasp up to 3 times if it fails."
+  scene_context: "Black shelving unit is open; white cube sits on the middle shelf and is not held."
+  expected_sequence: "Move to the shelf, reach into the middle cubby, attempt to grasp and lift the cube, and if the grasp fails retry up to 3 times."

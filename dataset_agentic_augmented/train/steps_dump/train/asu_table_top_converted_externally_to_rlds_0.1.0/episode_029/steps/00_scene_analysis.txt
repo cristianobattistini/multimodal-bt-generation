@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "green_glass_bottle"
+  destination: "table"
+  expanded_instruction: "Place the green glass bottle down on the table, checking IS_HOLDING on the table before PLACE_ON_TOP; if PLACE_ON_TOP fails retry up to 2 times, each attempt with a 15s timeout."
+  scene_context: "Robot arm is holding the green glass bottle above a table with other small objects; table surface partially occupied but has clear space."
+  expected_sequence: "Move the arm down to a clear spot on the table and set the green glass bottle down, then release it. Before PLACE_ON_TOP check IS_HOLDING on the table; perform PLACE_ON_TOP with a 15 second timeout and retry up to 2 times if it fails."

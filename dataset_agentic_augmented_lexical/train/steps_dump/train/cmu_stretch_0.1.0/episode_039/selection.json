@@ -1,0 +1,10 @@
+{
+  "decorator_type": "retry",
+  "mixed_subtype": null,
+  "target_action_id": "OPEN",
+  "target_obj": "top_drawer",
+  "parameters": {
+    "num_attempts": 4
+  },
+  "prompt_name": "retry"
+}

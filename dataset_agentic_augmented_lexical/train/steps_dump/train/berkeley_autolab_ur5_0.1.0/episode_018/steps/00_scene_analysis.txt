@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "green_cloth"
+  destination: "table"
+  expanded_instruction: "Check that the green cloth is visible (retry up to 3 times within a 10s timeout); then sweep the green cloth across the table toward the left side of the table."
+  scene_context: "Green cloth on tabletop near robot arm; cloth not held; table surface otherwise clear."
+  expected_sequence: "Verify green_cloth is visible before acting (retry up to 3 times within 10s); approach the cloth, and if grasp fails push to reposition, then sweep it leftward across the table until it reaches the left side."

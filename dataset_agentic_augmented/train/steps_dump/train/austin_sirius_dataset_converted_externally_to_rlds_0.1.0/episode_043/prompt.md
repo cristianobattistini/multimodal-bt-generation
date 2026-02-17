@@ -1,0 +1,2 @@
+Instruction: Insert the blue gear onto the right peg, followed by the red gear. Use subtree with retry (up to 2 times) for approach and grasp.
+Allowed Actions: [NAVIGATE_TO(obj), PLACE_ON_TOP(obj), GRASP(obj)]

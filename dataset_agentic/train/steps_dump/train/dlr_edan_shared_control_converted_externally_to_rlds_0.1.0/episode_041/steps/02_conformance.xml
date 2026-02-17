@@ -1,0 +1,12 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to shelving_unit -->
+      <Action ID="NAVIGATE_TO" obj="shelving_unit"/>
+      <!-- Navigate to disk -->
+      <Action ID="NAVIGATE_TO" obj="disk"/>
+      <!-- Grasp disk -->
+      <Action ID="GRASP" obj="disk"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

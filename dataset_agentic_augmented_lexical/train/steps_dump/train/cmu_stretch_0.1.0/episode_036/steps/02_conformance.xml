@@ -1,0 +1,16 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to dishwasher_door -->
+      <Action ID="NAVIGATE_TO" obj="dishwasher_door" />
+      <!-- Retry OPEN dishwasher_door up to 3 attempts -->
+      <RetryUntilSuccessful num_attempts="3">
+        <!-- Timeout: OPEN dishwasher_door within 10s -->
+        <Timeout msec="10000">
+          <!-- Open dishwasher_door -->
+          <Action ID="OPEN" obj="dishwasher_door" />
+        </Timeout>
+      </RetryUntilSuccessful>
+    </Sequence>
+  </BehaviorTree>
+</root>

@@ -1,0 +1,23 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to glass_bottle -->
+      <Action ID="NAVIGATE_TO" obj="glass_bottle" />
+      <!-- Grab glass_bottle -->
+      <Action ID="GRAB" obj="glass_bottle" />
+      <!-- Go to table -->
+      <Action ID="GO_TO" obj="table" />
+      <!-- Fallback: if PLACE_ON_TOP table fails, try PUSH to reposition -->
+      <Fallback>
+        <!-- Place on table -->
+        <Action ID="PLACE_ON_TOP" obj="glass_bottle" surface="table" />
+        <Sequence>
+          <!-- Push table forward toward front edge of table -->
+          <Action ID="PUSH" obj="table" />
+          <!-- Place on table -->
+          <Action ID="SET_ON" obj="table" />
+        </Sequence>
+      </Fallback>
+    </Sequence>
+  </BehaviorTree>
+</root>

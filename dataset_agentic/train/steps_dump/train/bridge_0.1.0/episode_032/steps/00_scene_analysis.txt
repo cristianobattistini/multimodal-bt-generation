@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "spoon"
+  destination: "vessel"
+  expanded_instruction: "Pick up the spoon from the table and place it near the metal vessel on the table"
+  scene_context: "Spoon lies on the table next to a metal vessel; vessel is open and table is mostly clear; nothing is held."
+  expected_sequence: "Approach the spoon, grasp and lift it, move to the vessel, and set the spoon down beside the vessel on the table."

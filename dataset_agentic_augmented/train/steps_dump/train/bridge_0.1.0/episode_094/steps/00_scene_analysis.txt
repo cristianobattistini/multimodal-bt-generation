@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "bowl"
+  destination: ""
+  expanded_instruction: "Within the ApproachDrawer subtree, lift the light blue bowl out of the open drawer; retry up to 3 times with a 10s timeout, and if grasp fails, push to reposition."
+  scene_context: "Drawer is open; light blue bowl sits inside drawer and is not held; surrounding table area reachable."
+  expected_sequence: "Using the ApproachDrawer subtree: reach into the drawer, grasp the bowl securely, and lift it upward; retry up to 3 times within a 10s timeout, and if grasp fails, push to reposition and try again."

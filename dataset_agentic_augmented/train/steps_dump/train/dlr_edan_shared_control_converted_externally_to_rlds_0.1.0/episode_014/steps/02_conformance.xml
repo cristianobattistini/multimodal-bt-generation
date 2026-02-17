@@ -1,0 +1,25 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to pear -->
+      <Action ID="NAVIGATE_TO" obj="pear" />
+      <!-- Fallback: if GRASP pear fails, try alternative to reposition -->
+      <Fallback>
+        <!-- Retry GRASP pear up to 3 attempts -->
+        <RetryUntilSuccessful num_attempts="3">
+          <!-- Timeout: GRASP pear within 10s -->
+          <Timeout msec="10000">
+            <!-- Grasp pear -->
+            <Action ID="GRASP" obj="pear" />
+          </Timeout>
+        </RetryUntilSuccessful>
+        <Sequence>
+          <!-- Push pear forward toward front edge of table -->
+          <Action ID="PUSH" obj="pear" />
+          <!-- Grasp pear -->
+          <Action ID="GRASP" obj="pear" />
+        </Sequence>
+      </Fallback>
+    </Sequence>
+  </BehaviorTree>
+</root>

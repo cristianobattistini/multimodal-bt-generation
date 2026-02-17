@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "silver_vessel"
+  destination: "table"
+  expanded_instruction: "Check IS_REACHABLE on the silver vessel first; if reachable, navigate to it (navigate within a 15s timeout), pick up the silver vessel and place it on the table directly beneath the spoon at the back left."
+  scene_context: "Silver vessel on table near right; spoon resting on back-left edge of table; table is clear and nothing is held."
+  expected_sequence: "Check reachability of the silver vessel; if reachable, NAVIGATE_TO the vessel (within a 15s timeout), approach and grasp the silver vessel, lift it, move it to the spot under the spoon at the back-left of the table, and set it down."

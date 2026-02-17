@@ -1,0 +1,16 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Go to brown_object -->
+      <Action ID="GO_TO" obj="brown_object" />
+      <!-- Retry GRASP brown_object up to 3 attempts -->
+      <RetryUntilSuccessful num_attempts="3">
+        <!-- Timeout: GRASP brown_object within 15s -->
+        <Timeout msec="15000">
+          <!-- Grasp brown_object -->
+          <Action ID="GRAB" obj="brown_object" />
+        </Timeout>
+      </RetryUntilSuccessful>
+    </Sequence>
+  </BehaviorTree>
+</root>

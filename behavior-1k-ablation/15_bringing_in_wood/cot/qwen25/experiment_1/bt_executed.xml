@@ -1,0 +1,30 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to plywood_1 -->
+      <Action ID="NAVIGATE_TO" obj="plywood_1" />
+      <!-- Grasp plywood_1 -->
+      <Action ID="GRASP" obj="plywood_1" />
+      <!-- Navigate to corridor_floor -->
+      <Action ID="NAVIGATE_TO" obj="corridor_floor" />
+      <!-- Place on corridor_floor -->
+      <Action ID="PLACE_ON_TOP" obj="corridor_floor" />
+      <!-- Navigate to plywood_2 -->
+      <Action ID="NAVIGATE_TO" obj="plywood_2" />
+      <!-- Grasp plywood_2 -->
+      <Action ID="GRASP" obj="plywood_2" />
+      <!-- Navigate to corridor_floor -->
+      <Action ID="NAVIGATE_TO" obj="corridor_floor" />
+      <!-- Place on corridor_floor -->
+      <Action ID="PLACE_ON_TOP" obj="corridor_floor" />
+      <!-- Navigate to plywood_3 -->
+      <Action ID="NAVIGATE_TO" obj="plywood_3" />
+      <!-- Grasp plywood_3 -->
+      <Action ID="GRASP" obj="plywood_3" />
+      <!-- Navigate to corridor_floor -->
+      <Action ID="NAVIGATE_TO" obj="corridor_floor" />
+      <!-- Place on corridor_floor -->
+      <Action ID="PLACE_ON_TOP" obj="corridor_floor" />
+    </Sequence>
+  </BehaviorTree>
+</root>

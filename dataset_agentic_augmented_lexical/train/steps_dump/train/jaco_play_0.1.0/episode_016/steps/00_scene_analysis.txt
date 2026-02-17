@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "long_bread"
+  destination: "sink"
+  expanded_instruction: "Pick up the long bread from the counter next to the orange and place it into the blue sink basin, using grasp with a 15s timeout (retry up to 3 times); if grasp fails, push or flip to reposition and then place it."
+  scene_context: "Blue sink basin on counter is open and clear; long bread lies on the counter near the orange and toaster, not held."
+  expected_sequence: "Move to the long bread, attempt to grasp it (15s timeout, retry up to 3 times); if grasp fails, push or flip to reposition the bread, then carry it over the sink basin and set it inside."

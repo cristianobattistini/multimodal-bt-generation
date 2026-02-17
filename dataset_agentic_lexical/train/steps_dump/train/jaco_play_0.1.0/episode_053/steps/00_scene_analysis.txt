@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "gray_bowl"
+  destination: "sink"
+  expanded_instruction: "Pick up the gray bowl from the rack/platform near the sink and place it into the sink basin"
+  scene_context: "Gray bowl resting on a rack/platform to the right of the sink; sink basin (blue) is open and clear; bowl is not held."
+  expected_sequence: "Move to the gray bowl, grasp it, carry it over the sink, and set it down inside the sink."

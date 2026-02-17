@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "cocacola_can"
+  destination: ""
+  expanded_instruction: "Pick up the cocacola can (red) from the table; first check IS_VISIBLE on the cocacola_can and retry visibility check up to 3 times (within 10s) before attempting the grasp."
+  scene_context: "Cocacola can on table front-left, robot arm not holding anything, table surface clear."
+  expected_sequence: "Check IS_VISIBLE on the cocacola_can, approach the can with the arm, grasp the cocacola can, and lift it off the table; if visibility or grasp fails, retry up to 3 times and attempt a small push/reposition before retrying."

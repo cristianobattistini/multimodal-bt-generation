@@ -1,0 +1,14 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to red_towel -->
+      <Action ID="NAVIGATE_TO" obj="red_towel"/>
+      <!-- Grasp red_towel -->
+      <Action ID="GRASP" obj="red_towel"/>
+      <!-- Navigate to yellow (place just left of yellow_knife on yellow) -->
+      <Action ID="NAVIGATE_TO" obj="yellow"/>
+      <!-- Place next to yellow -->
+      <Action ID="PLACE_NEXT_TO" obj="yellow"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

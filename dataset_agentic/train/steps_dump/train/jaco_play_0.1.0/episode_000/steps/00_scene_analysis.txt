@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "butter_dairy"
+  destination: ""
+  expanded_instruction: "Pick up the butter_dairy (yellow butter package) from the table near the robot base"
+  scene_context: "Butter_dairy on table front, not held; bowl and orange nearby; robot arm free and reachable; table clear."
+  expected_sequence: "Move the arm to the butter_dairy, grasp it, and lift it clear of the table."

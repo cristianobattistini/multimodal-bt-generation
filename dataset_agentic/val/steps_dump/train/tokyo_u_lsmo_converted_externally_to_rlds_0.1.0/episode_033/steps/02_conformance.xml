@@ -1,0 +1,14 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to table avoiding obstructing box -->
+      <Action ID="NAVIGATE_TO" obj="table"/>
+      <!-- Navigate to brown_holder on right side of table -->
+      <Action ID="NAVIGATE_TO" obj="brown_holder"/>
+      <!-- Grasp scissors -->
+      <Action ID="GRASP" obj="scissors"/>
+      <!-- Release -->
+      <Action ID="RELEASE"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

@@ -1,0 +1,19 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Go to wrinkled_towel -->
+      <Action ID="GO_TO" obj="wrinkled_towel" />
+      <!-- Grip wrinkled_towel -->
+      <Action ID="GRIP" obj="wrinkled_towel" />
+      <!-- Open flat wrinkled_towel -->
+      <Action ID="OPEN_FLAT" obj="wrinkled_towel" />
+      <!-- Move to green_mat -->
+      <Action ID="MOVE_TO" obj="green_mat" />
+      <!-- Retry PLACE_ON_TOP green_mat up to 3 attempts -->
+      <RetryUntilSuccessful num_attempts="3">
+        <!-- Place on green_mat -->
+        <Action ID="PLACE_ON_TOP" obj="green_mat" />
+      </RetryUntilSuccessful>
+    </Sequence>
+  </BehaviorTree>
+</root>

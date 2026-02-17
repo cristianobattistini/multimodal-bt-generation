@@ -1,0 +1,10 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to coke_can -->
+      <Action ID="NAVIGATE_TO" obj="coke_can"/>
+      <!-- Grasp coke_can -->
+      <Action ID="GRASP" obj="coke_can"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

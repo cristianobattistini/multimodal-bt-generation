@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "tube"
+  destination: ""
+  expanded_instruction: "Pick up the tube from the right middle cubby of the shelf; if a grasp fails, try pushing or flipping to reposition and retry (up to 3 attempts within 10s)."
+  scene_context: "Shelf is open; tube sits in the right middle cubby and is not held; approach path clear."
+  expected_sequence: "Move close, reach into the right middle cubby, grasp the tube, and lift it out; if grasp fails, push or flip to reposition and retry (up to 3 attempts within 10s)."

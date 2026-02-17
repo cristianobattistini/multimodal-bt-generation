@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "red_square"
+  destination: "table"
+  expanded_instruction: "Check that the red square is visible, then pick up the red square from the right side of the table and place it down on the table; when navigating use a 10s timeout for NAVIGATE_TO."
+  scene_context: "Red square on the right side of the table; robot not holding it; front-right table area is clear."
+  expected_sequence: "Check IS_VISIBLE on the red square, then move to the red square, pick it up, navigate to the front-right of the table (NAVIGATE_TO within 10s timeout), and place it down."

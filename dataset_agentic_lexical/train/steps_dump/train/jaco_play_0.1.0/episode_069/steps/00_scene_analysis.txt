@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "black_bowl"
+  destination: "oven"
+  expanded_instruction: "Pick up the black bowl from the counter and place it inside the oven"
+  scene_context: "Black bowl on counter near robot; oven door is open and oven is reachable; bowl not held."
+  expected_sequence: "Approach and grasp the black bowl, move to the open oven, and place the bowl inside."

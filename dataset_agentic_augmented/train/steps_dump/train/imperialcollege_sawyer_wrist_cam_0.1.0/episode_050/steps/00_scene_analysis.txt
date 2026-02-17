@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "apple"
+  destination: "pot"
+  expanded_instruction: "Pick up the apple from the surface and place it into the pot. Before navigating to the pot, check IS_REACHABLE on the pot; if unreachable, retry the check up to 3 times within a 10s timeout and abort or reposition if still unreachable."
+  scene_context: "Pot is open and empty on the table; apple is on the table nearby and not held."
+  expected_sequence: "Check IS_REACHABLE on pot (retry up to 3 times, 10s timeout); if reachable, reach the apple, pick it up, move over the pot, and place the apple inside; if grasp fails retry pick up once or reposition."

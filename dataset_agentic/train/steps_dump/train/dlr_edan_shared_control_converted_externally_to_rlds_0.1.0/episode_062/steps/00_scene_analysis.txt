@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "cube"
+  destination: ""
+  expanded_instruction: "Pick up the cube from the black shelf cubby in front of the robot"
+  scene_context: "Cube is inside a front cubby of the black shelf; shelf is open and cube is not held."
+  expected_sequence: "Approach the shelf, reach into the cubby, grasp the cube, and lift it out."

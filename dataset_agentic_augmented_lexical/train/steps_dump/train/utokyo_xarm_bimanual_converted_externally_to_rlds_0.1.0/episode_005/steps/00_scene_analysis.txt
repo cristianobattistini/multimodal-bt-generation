@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "towel"
+  destination: "table"
+  expanded_instruction: "Check IS_VISIBLE on the table before navigating; if not visible, retry up to 3 times within a 10s timeout. Then pick up the wrinkled pink towel from the table and unfold it flat on the table."
+  scene_context: "Pink towel crumpled on green mat on table, not held, table surface otherwise clear."
+  expected_sequence: "Verify towel IS_VISIBLE on table, retry up to 3 times if needed, then NAVIGATE_TO table, reach the towel, grasp and lift parts, spread and smooth it flat on the table (if grasp fails, reposition and retry)."

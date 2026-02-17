@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "gray_bowl"
+  destination: "oven"
+  expanded_instruction: "Verify the oven is empty, then pick up the gray bowl from the counter and place it inside the oven; if placing fails, retry up to 3 times."
+  scene_context: "Gray bowl on counter near robot arm; oven door is open and tray is reachable; path clear."
+  expected_sequence: "Check the oven is empty, grasp the gray bowl, move it into the open oven, and set it down on the oven tray; if PLACE_INSIDE fails, retry the placement up to 3 times."

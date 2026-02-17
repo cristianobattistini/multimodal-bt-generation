@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "orange_cloth"
+  destination: "table"
+  expanded_instruction: "Pick up the orange cloth and place it toward the top edge of the table."
+  scene_context: "Orange cloth lying on the table near center-back; table surface clear; cloth not held."
+  expected_sequence: "Approach the cloth, grasp it, move it toward the top edge of the table, and set it down."

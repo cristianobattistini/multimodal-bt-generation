@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "orange"
+  destination: ""
+  expanded_instruction: "Check that the orange is reachable, then navigate to the small side shelf (NAVIGATE_TO within a 10s timeout) and pick up the orange from the fruit bowl."
+  scene_context: "Fruit bowl on small open shelf contains orange and apple; orange not held; shelf reachable."
+  expected_sequence: "Check IS_REACHABLE on the orange; navigate to the shelf (NAVIGATE_TO with a 10s timeout); reach into the fruit bowl, grasp the orange, and lift it clear."

@@ -1,0 +1,19 @@
+{
+  "success": true,
+  "bt_success": true,
+  "bddl_goal": true,
+  "ticks": 1,
+  "duration": 1.564854621887207,
+  "inference_time": 8.606343269348145,
+  "satisfied": [
+    "toggled_on(?radio_receiver.n.01_1)"
+  ],
+  "unsatisfied": [],
+  "task": "00_turning_on_radio",
+  "condition": "zero-shot",
+  "model_dir": "gpt5",
+  "vlm_model": null,
+  "inference_mode": "openai",
+  "experiment": 2,
+  "timestamp": "20260212_214920"
+}

@@ -1,0 +1,8 @@
+scene_analysis:
+  target: "bottles"
+  destination: "coffee_table"
+  expanded_instruction: "Go to the kitchen refrigerator, open it, take out bottle_1 and bottle_2 one at a time, bring each to the living room, and place both on top of the coffee_table. Ensure the refrigerator is closed at the end."
+  scene_context: "The scene shows a kitchen opening to a living room. The electric_refrigerator is in the kitchen and appears closed. The living room with a sofa and a coffee_table is visible ahead."
+  expected_sequence: "Navigate to the electric_refrigerator and open it. Go to bottle_1, grasp it, navigate to the coffee_table, and place it on top. Return to bottle_2 at the refrigerator, grasp it, navigate to the coffee_table, and place it on top. Finally, navigate back to the electric_refrigerator and close it."
+
+Plan:

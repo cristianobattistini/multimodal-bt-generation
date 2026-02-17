@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "yellow_flower"
+  destination: "pot"
+  expanded_instruction: "Pick up the yellow flower from the countertop and place it behind the pot on the countertop."
+  scene_context: "Yellow_flower on countertop near back edge; metal pot (bowl) left on countertop; gripper not holding anything; space behind pot is clear."
+  expected_sequence: "Move to the flower, pick it up, move behind the pot, and set the flower on the countertop behind the pot."

@@ -1,0 +1,22 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to cup -->
+      <Action ID="NAVIGATE_TO" obj="cup" />
+      <!-- Fallback: if PLACE_INSIDE cup fails, try alternative to reposition -->
+      <Fallback>
+        <!-- Retry PLACE_INSIDE cup up to 3 attempts -->
+        <RetryUntilSuccessful num_attempts="3">
+          <!-- Place inside cup -->
+          <Action ID="PLACE_INSIDE" obj="cup" />
+        </RetryUntilSuccessful>
+        <Sequence>
+          <!-- Push cup forward toward front edge of table -->
+          <Action ID="PUSH" obj="cup" />
+          <!-- Place inside cup -->
+          <Action ID="PLACE_INSIDE" obj="cup" />
+        </Sequence>
+      </Fallback>
+    </Sequence>
+  </BehaviorTree>
+</root>

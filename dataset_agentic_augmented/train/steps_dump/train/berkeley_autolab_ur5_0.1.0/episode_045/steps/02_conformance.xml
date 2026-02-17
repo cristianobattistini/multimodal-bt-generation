@@ -1,0 +1,21 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Execute subtree ApproachRanchBottle -->
+      <SubTree ID="ApproachRanchBottle" />
+      <!-- Navigate to pot -->
+      <Action ID="NAVIGATE_TO" obj="pot" />
+      <!-- Place inside pot -->
+      <Action ID="PLACE_INSIDE" obj="pot" />
+    </Sequence>
+  </BehaviorTree>
+  <!-- Subtree definition ApproachRanchBottle -->
+  <BehaviorTree ID="ApproachRanchBottle">
+    <Sequence>
+      <!-- Navigate to ranch_bottle -->
+      <Action ID="NAVIGATE_TO" obj="ranch_bottle" />
+      <!-- Grasp ranch_bottle -->
+      <Action ID="GRASP" obj="ranch_bottle" />
+    </Sequence>
+  </BehaviorTree>
+</root>

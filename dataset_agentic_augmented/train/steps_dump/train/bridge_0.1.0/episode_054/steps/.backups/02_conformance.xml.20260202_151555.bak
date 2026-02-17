@@ -1,0 +1,30 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to red_fork -->
+      <Action ID="NAVIGATE_TO" obj="red_fork" />
+      <!-- Grasp red_fork -->
+      <Action ID="GRASP" obj="red_fork" />
+      <!-- Navigate to green_cloth -->
+      <Action ID="NAVIGATE_TO" obj="green_cloth" />
+      <!-- Check green_cloth is holding before PLACE_ON_TOP -->
+      <Condition ID="IS_HOLDING" obj="green_cloth" />
+      <!-- Fallback: if PLACE_ON_TOP green_cloth fails, try alternative to reposition -->
+      <Fallback>
+        <!-- Retry PLACE_ON_TOP green_cloth up to 2 attempts -->
+        <RetryUntilSuccessful num_attempts="2">
+          <!-- Place on green_cloth -->
+          <Action ID="PLACE_ON_TOP" obj="green_cloth" />
+        </RetryUntilSuccessful>
+        <Sequence>
+          <!-- Push green_cloth forward toward front edge of table -->
+          <Action ID="PUSH" obj="green_cloth" />
+          <!-- Place on green_cloth -->
+          <Action ID="PLACE_ON_TOP" obj="green_cloth" />
+        </Sequence>
+      </Fallback>
+      <!-- Release -->
+      <Action ID="RELEASE" />
+    </Sequence>
+  </BehaviorTree>
+</root>

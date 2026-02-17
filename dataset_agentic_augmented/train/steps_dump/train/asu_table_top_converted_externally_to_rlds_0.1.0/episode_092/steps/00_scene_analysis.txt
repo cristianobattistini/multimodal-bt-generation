@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "pepsi_can"
+  destination: ""
+  expanded_instruction: "Group actions into ApproachPepsiCan subtree: pick up and lift the pepsi can from the table a short distance — approach the can, attempt grasp (retry up to 3 times, within a 10s timeout); if grasp fails, push to reposition, then lift a short distance."
+  scene_context: "Pepsi can sits on table front-left, not held; table clear; robot arm positioned above and reachable."
+  expected_sequence: "ApproachPepsiCan subtree: move the arm to the can, grasp it securely (retry up to 3 times; if grasp fails, push to reposition), and lift it upward a short distance (within a 10s timeout)."

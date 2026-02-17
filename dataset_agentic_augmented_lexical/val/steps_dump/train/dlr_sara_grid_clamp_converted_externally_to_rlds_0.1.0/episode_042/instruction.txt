@@ -1,0 +1,1 @@
+Place grid clamp. Only navigate to the object if it is visible.

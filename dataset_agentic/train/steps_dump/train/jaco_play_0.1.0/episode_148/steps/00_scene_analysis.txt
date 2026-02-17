@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "butter_dairy"
+  destination: ""
+  expanded_instruction: "Pick up the butter dairy (yellow butter pack) from the white bowl on the table"
+  scene_context: "Yellow butter pack is in a white bowl on the table; bowl is open and not held; gripper is above bowl."
+  expected_sequence: "Approach the bowl, grasp the butter pack, and lift it out of the bowl."

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "brown_carton"
+  destination: "mug"
+  expanded_instruction: "Pick up the brown carton held by the robot arm and pour its contents into the white mug on the table."
+  scene_context: "Brown carton is grasped by the robot arm above the table; white mug is upright on the table and reachable; table clear."
+  expected_sequence: "Position the carton over the mug, tilt to pour contents into the mug, then return the carton upright and away."

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "black_bowl"
+  destination: "dish_rack"
+  expanded_instruction: "Pick up the black bowl from the table and place it into the dish rack"
+  scene_context: "Black bowl on table near a blue dish rack; bowl is not held and rack is accessible."
+  expected_sequence: "Move to the black bowl, pick it up, carry it to the dish rack, and set it into the rack."

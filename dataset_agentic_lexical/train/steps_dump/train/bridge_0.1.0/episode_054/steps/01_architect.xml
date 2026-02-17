@@ -1,0 +1,14 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to red_fork -->
+      <Action ID="NAVIGATE_TO" obj="red_fork" />
+      <!-- Grasp red_fork -->
+      <Action ID="GRASP" obj="red_fork" />
+      <!-- Approach green_cloth -->
+      <Action ID="APPROACH" obj="green_cloth" />
+      <!-- Place red_fork on green_cloth -->
+      <Action ID="PLACE_ON_TOP" obj="red_fork" surface="green_cloth" />
+    </Sequence>
+  </BehaviorTree>
+</root>

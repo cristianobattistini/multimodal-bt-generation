@@ -1,0 +1,16 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Go to hook -->
+      <Action ID="GO_TO" obj="hook" />
+      <Sequence>
+        <!-- Check hook is holding before HANG -->
+        <Condition ID="IS_HOLDING" obj="hook" />
+        <!-- Hang bag on hook -->
+        <Action ID="HANG" obj="hook" />
+      </Sequence>
+      <!-- Release -->
+      <Action ID="RELEASE" />
+    </Sequence>
+  </BehaviorTree>
+</root>

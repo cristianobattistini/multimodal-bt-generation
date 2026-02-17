@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "pink_cloth"
+  destination: "table"
+  expanded_instruction: "Pick up the pink cloth from the table and fold it neatly on the table."
+  scene_context: "Pink cloth lies on the table near the top edge; robot not holding it; table surface clear."
+  expected_sequence: "Move to the cloth, grasp an edge or corner, fold it over toward the center, smooth and set the folded cloth back on the table."

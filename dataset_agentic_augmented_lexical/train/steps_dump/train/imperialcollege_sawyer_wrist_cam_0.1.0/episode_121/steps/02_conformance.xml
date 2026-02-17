@@ -1,0 +1,19 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Go to cup -->
+      <Action ID="GO_TO" obj="cup" />
+      <!-- Retry GRASP cup up to 5 attempts -->
+      <RetryUntilSuccessful num_attempts="5">
+        <!-- Grasp cup -->
+        <Action ID="PICK" obj="cup" />
+      </RetryUntilSuccessful>
+      <!-- Pick cup -->
+      <Action ID="APPROACH" obj="hook" />
+      <!-- Approach hook -->
+      <Action ID="DANGLE" obj="hook" />
+      <!-- Dangle from hook -->
+      <Action ID="LET_GO" />
+    </Sequence>
+  </BehaviorTree>
+</root>

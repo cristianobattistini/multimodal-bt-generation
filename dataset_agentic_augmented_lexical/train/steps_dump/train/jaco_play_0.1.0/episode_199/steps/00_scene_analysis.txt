@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "butter_dairy"
+  destination: "white_plate"
+  expanded_instruction: "Pick up the butter dairy from the blue bowl; if the grasp fails, retry up to 3 times, then place it on the white plate."
+  scene_context: "Butter dairy sits inside a blue bowl; white plate is empty and reachable; gripper not holding anything."
+  expected_sequence: "Approach the blue bowl, attempt to pick the butter dairy from it (if grasp fails, retry up to 3 times), move to the white plate, and place the butter dairy on the plate."

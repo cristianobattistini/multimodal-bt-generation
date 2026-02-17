@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "green_garbage_can_lid"
+  destination: ""
+  expanded_instruction: "Navigate to the green garbage can within a 20s timeout, then lift and open the green lid to expose the inside of the bin."
+  scene_context: "Garbage can present with green lid closed and not held; lid reachable from the right; surrounding area clear."
+  expected_sequence: "Move to the bin (navigate_to within 20s), grasp the green lid, and lift it up to open the garbage can."

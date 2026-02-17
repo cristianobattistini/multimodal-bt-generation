@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "lid"
+  destination: ""
+  expanded_instruction: "Lift the lid off the stainless pot sitting on the counter and hold it up. If a grasp fails, retry up to 2 times; if still unsuccessful, push or flip the lid to reposition it before trying again."
+  scene_context: "Stainless pot with lid is on the countertop; lid is closed; robot arm is not holding the lid."
+  expected_sequence: "Approach the pot, grasp the lid (retry grasp up to 2 times if it fails), and lift it off the pot and hold it up; if grasp fails repeatedly, push or flip the lid to reposition it, then grasp and lift."

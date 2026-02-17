@@ -1,0 +1,13 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Advance to dishwasher -->
+      <Action ID="ADVANCE_TO" obj="dishwasher" />
+      <!-- Retry OPEN dishwasher up to 2 attempts -->
+      <RetryUntilSuccessful num_attempts="2">
+        <!-- Open dishwasher -->
+        <Action ID="UNLOCK" obj="dishwasher" />
+      </RetryUntilSuccessful>
+    </Sequence>
+  </BehaviorTree>
+</root>

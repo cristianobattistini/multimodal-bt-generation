@@ -1,0 +1,1 @@
+Open door. Use ApproachDoor subtree for approach and grasp.

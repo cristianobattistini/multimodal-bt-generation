@@ -1,0 +1,7 @@
+scene_analysis:
+  target: ["beefsteak_tomato", "carton_of_milk"]
+  destination: "refrigerator"
+  expanded_instruction: "Pick up the beefsteak_tomato and the carton_of_milk from the open trunk and place the beefsteak_tomato on the floor next to the refrigerator (left side of the interior) and place the carton_of_milk into the refrigerator compartment, then close the refrigerator and the car trunk."
+  scene_context: "Trunk is open with a brown sack and small carton; refrigerator door is closed and interior is empty; robot not holding objects."
+  expected_sequence: "Pick up the beefsteak_tomato and carton_of_milk, place the tomato next to the refrigerator on the left interior floor, place the milk into the refrigerator, then close both the trunk and the refrigerator."
+Plan:

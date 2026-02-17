@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "long_bread"
+  destination: ""
+  expanded_instruction: "Pick up the long bread lying on the floor next to the red ball and blue bin, retrying the grasp up to 3 times with a 10s timeout per attempt; if grasp fails, push or flip the bread to reposition and try again."
+  scene_context: "Long_bread on floor to the right of red_ball; not held; blue_bin nearby and open; floor clear."
+  expected_sequence: "Approach the long_bread, grasp it (10s timeout per attempt; retry up to 3 times), and lift it straight up; if grasp repeatedly fails, push or flip to reposition the bread then grasp and lift."

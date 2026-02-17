@@ -1,0 +1,14 @@
+{
+  "decorator_type": "subtree",
+  "mixed_subtype": null,
+  "target_action_id": "NAVIGATE_TO",
+  "target_obj": "door",
+  "parameters": {
+    "subtree_name": "ApproachDoor",
+    "action_indices": [
+      0,
+      1
+    ]
+  },
+  "prompt_name": "subtree"
+}

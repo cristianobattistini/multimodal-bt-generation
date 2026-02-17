@@ -1,0 +1,18 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Go to green_garbage_can_lid -->
+      <Action ID="GO_TO" obj="green_garbage_can_lid" />
+      <!-- Pick green_garbage_can_lid -->
+      <Action ID="PICK" obj="green_garbage_can_lid" />
+      <Sequence>
+        <!-- Check green_garbage_can_lid is reachable before OPEN -->
+        <Condition ID="IS_REACHABLE" obj="green_garbage_can_lid" />
+        <!-- Open green_garbage_can_lid -->
+        <Action ID="OPEN_UP" obj="green_garbage_can_lid" />
+      </Sequence>
+      <!-- Open up green_garbage_can_lid -->
+      <Action ID="LET_GO" />
+    </Sequence>
+  </BehaviorTree>
+</root>

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "["blue_gear", "red_gear"]"
+  destination: "right_peg"
+  expanded_instruction: "Pick up the blue gear and insert it onto the right peg, then pick up the red gear and insert it onto the right peg on top of the blue gear. Ensure any NAVIGATE_TO action completes within a 20s timeout."
+  scene_context: "Blue and red gears on table; right peg on base is empty and reachable; no containers; nothing held."
+  expected_sequence: "Pick the blue gear and place it onto the right peg, then pick the red gear and place it onto the same right peg above the blue gear; ensure any NAVIGATE_TO completes within a 20s timeout."

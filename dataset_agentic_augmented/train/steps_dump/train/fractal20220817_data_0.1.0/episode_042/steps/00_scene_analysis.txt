@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "rxbar_chocolate"
+  destination: "middle_drawer"
+  expanded_instruction: "Check that the rxbar_chocolate is visible, then pick up the rxbar chocolate from the table (grasp within a 10s timeout, retry up to 2 times if grasp fails) and place it into the middle drawer."
+  scene_context: "Middle drawer is open; rxbar chocolate on tabletop near back; not held; drawer interior appears clear."
+  expected_sequence: "Check IS_VISIBLE on the rxbar, reach to the rxbar, grasp it (grasp action within a 10s timeout, retry up to 2 times on failure), move over the open middle drawer, and place it inside."

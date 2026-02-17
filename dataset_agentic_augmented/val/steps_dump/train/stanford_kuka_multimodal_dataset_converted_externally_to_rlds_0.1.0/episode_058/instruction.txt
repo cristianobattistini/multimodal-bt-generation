@@ -1,0 +1,1 @@
+Insert the peg into the hole. Only navigate to the hole if it is visible.

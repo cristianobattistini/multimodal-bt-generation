@@ -1,0 +1,10 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to coke_bottle -->
+      <Action ID="NAVIGATE_TO" obj="coke_bottle"/>
+      <!-- Push coke_bottle forward toward front edge of table -->
+      <Action ID="PUSH" obj="coke_bottle"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

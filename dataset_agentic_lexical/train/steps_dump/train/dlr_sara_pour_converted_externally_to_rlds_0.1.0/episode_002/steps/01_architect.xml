@@ -1,0 +1,12 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Move to mug -->
+      <Action ID="MOVE_TO" obj="mug" />
+      <!-- Transfer liquid to mug -->
+      <Action ID="TRANSFER_LIQUID" obj="mug" />
+      <!-- Turn over brown_pitcher -->
+      <Action ID="TURN_OVER" obj="brown_pitcher" />
+    </Sequence>
+  </BehaviorTree>
+</root>

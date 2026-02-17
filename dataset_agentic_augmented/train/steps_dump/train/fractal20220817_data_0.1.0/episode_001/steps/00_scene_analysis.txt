@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "middle_drawer"
+  destination: ""
+  expanded_instruction: "Navigate to the gray cabinet (navigate_to within 10s timeout) and close the middle_drawer by pushing it fully shut"
+  scene_context: "Middle_drawer is open while top and bottom drawers are closed; drawer not held and path unobstructed."
+  expected_sequence: "Move to the middle_drawer (navigate_to within 10s timeout) and push it until the drawer is fully closed."

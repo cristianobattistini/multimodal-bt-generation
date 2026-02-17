@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "milk_box"
+  destination: "table"
+  expanded_instruction: "Pick up the milk box from the table and place it down on the table surface. If grasp fails, push or flip the box to reposition it and retry (up to 3 attempts or within a 10s timeout)."
+  scene_context: "Milk box is on the left side of the table, not held, and table surface is reachable and mostly clear."
+  expected_sequence: "Approach the milk box, grasp it, then place it down on the table. If grasp fails, push or flip to reposition the box and retry the grasp (up to 3 attempts)."

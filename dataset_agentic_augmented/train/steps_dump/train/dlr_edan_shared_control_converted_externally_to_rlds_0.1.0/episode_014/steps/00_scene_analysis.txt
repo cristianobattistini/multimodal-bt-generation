@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "pear"
+  destination: ""
+  expanded_instruction: "Pick up the green pear from the small plate on the side shelf next to a red apple, using a grasp with a 10s timeout (retry up to 3 times); if grasp fails, push or flip the pear to reposition and try again."
+  scene_context: "Pear on small plate on side shelf next to a red apple; nothing is held; no containers open."
+  expected_sequence: "Move to the pear, grasp it from the plate (grasp has a 10s timeout; retry up to 3 times), and lift it up; if grasp fails, push or flip to reposition and retry the grasp."

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "bread"
+  destination: ""
+  expanded_instruction: "Pick up the bread from the table in front of the robot; if the grasp fails, retry up to 3 times."
+  scene_context: "Bread is on the table near center; table is clear otherwise and no object is held."
+  expected_sequence: "Move to the bread, grasp it securely (retry up to 3 times if grasp fails), and lift it from the table."

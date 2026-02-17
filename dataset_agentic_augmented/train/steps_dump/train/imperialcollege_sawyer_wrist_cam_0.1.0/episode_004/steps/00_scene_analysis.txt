@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "cap"
+  destination: "bottle"
+  expanded_instruction: "Pick up the cap and insert it into the bottle opening on the blue surface. Check that the cap is visible before grasping; attempt the grasp within a 10s timeout, and if the grasp fails use a push then flip to reposition and retry."
+  scene_context: "Bottle is upright and open on a blue surface; cap is nearby on the surface; surface otherwise clear."
+  expected_sequence: "Move to the cap, check it is visible, pick it up (grasp within 10s timeout), align it with the bottle mouth, and insert it into the bottle; if grasp fails, push and flip the cap to reposition and retry."

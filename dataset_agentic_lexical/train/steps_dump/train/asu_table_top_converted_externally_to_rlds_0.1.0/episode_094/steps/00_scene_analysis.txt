@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "white_box"
+  destination: ""
+  expanded_instruction: "Pick up the white box from the table"
+  scene_context: "White box on the right side of the table, not held; table surface reachable and no container present."
+  expected_sequence: "Approach the white box, grasp it securely, and lift it off the table."

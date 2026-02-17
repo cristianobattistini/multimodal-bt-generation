@@ -1,0 +1,1 @@
+Put down glass bottle. Use ApproachGlassBottle subtree for approach and grasp.

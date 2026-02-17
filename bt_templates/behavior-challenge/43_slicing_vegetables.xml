@@ -1,0 +1,42 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <Action ID="NAVIGATE_TO" obj="electric_refrigerator.n.01_1"/>
+      <Action ID="OPEN" obj="electric_refrigerator.n.01_1"/>
+      <Action ID="NAVIGATE_TO" obj="bell_pepper.n.02_1"/>
+      <Action ID="GRASP" obj="bell_pepper.n.02_1"/>
+      <Action ID="NAVIGATE_TO" obj="chopping_board.n.01_1"/>
+      <Action ID="PLACE_ON_TOP" obj="chopping_board.n.01_1"/>
+      <Action ID="NAVIGATE_TO" obj="bell_pepper.n.02_2"/>
+      <Action ID="GRASP" obj="bell_pepper.n.02_2"/>
+      <Action ID="NAVIGATE_TO" obj="chopping_board.n.01_1"/>
+      <Action ID="PLACE_ON_TOP" obj="chopping_board.n.01_1"/>
+      <Action ID="NAVIGATE_TO" obj="beet.n.02_1"/>
+      <Action ID="GRASP" obj="beet.n.02_1"/>
+      <Action ID="NAVIGATE_TO" obj="chopping_board.n.01_1"/>
+      <Action ID="PLACE_ON_TOP" obj="chopping_board.n.01_1"/>
+      <Action ID="NAVIGATE_TO" obj="beet.n.02_2"/>
+      <Action ID="GRASP" obj="beet.n.02_2"/>
+      <Action ID="NAVIGATE_TO" obj="chopping_board.n.01_1"/>
+      <Action ID="PLACE_ON_TOP" obj="chopping_board.n.01_1"/>
+      <Action ID="NAVIGATE_TO" obj="zucchini.n.02_1"/>
+      <Action ID="GRASP" obj="zucchini.n.02_1"/>
+      <Action ID="NAVIGATE_TO" obj="chopping_board.n.01_1"/>
+      <Action ID="PLACE_ON_TOP" obj="chopping_board.n.01_1"/>
+      <Action ID="NAVIGATE_TO" obj="parer.n.02_1"/>
+      <Action ID="GRASP" obj="parer.n.02_1"/>
+      <Action ID="NAVIGATE_TO" obj="bell_pepper.n.02_1"/>
+      <Action ID="CUT" obj="bell_pepper.n.02_1"/>
+      <Action ID="NAVIGATE_TO" obj="bell_pepper.n.02_2"/>
+      <Action ID="CUT" obj="bell_pepper.n.02_2"/>
+      <Action ID="NAVIGATE_TO" obj="beet.n.02_1"/>
+      <Action ID="CUT" obj="beet.n.02_1"/>
+      <Action ID="NAVIGATE_TO" obj="beet.n.02_2"/>
+      <Action ID="CUT" obj="beet.n.02_2"/>
+      <Action ID="NAVIGATE_TO" obj="zucchini.n.02_1"/>
+      <Action ID="CUT" obj="zucchini.n.02_1"/>
+      <Action ID="NAVIGATE_TO" obj="electric_refrigerator.n.01_1"/>
+      <Action ID="CLOSE" obj="electric_refrigerator.n.01_1"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

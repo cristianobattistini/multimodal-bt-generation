@@ -1,0 +1,1 @@
+folding a cloth. Check if unfolded before folding, retry folding up to 3 times if it fails, use unfold as a plan B if unsuccessful.

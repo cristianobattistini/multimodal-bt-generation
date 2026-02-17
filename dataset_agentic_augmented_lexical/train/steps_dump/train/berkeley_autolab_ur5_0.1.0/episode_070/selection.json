@@ -1,0 +1,10 @@
+{
+  "decorator_type": "retry",
+  "mixed_subtype": null,
+  "target_action_id": "PLACE_INSIDE",
+  "target_obj": "grey_bowl",
+  "parameters": {
+    "num_attempts": 2
+  },
+  "prompt_name": "retry"
+}

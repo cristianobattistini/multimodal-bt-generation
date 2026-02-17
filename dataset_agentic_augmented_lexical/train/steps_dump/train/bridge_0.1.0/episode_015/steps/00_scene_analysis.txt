@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "strawberry"
+  destination: "orange_towel"
+  expanded_instruction: "Use the ApproachStrawberry subtree: approach and grasp the strawberry (retry up to 3 times with a 10s timeout), then place it on the orange towel."
+  scene_context: "Strawberry on the orange towel near a metal bowl; strawberry not held; towel surface clear and reachable."
+  expected_sequence: "ApproachStrawberry subtree: reach and pick up the strawberry (retry up to 3 times, within 10s timeout; if grasp fails, push to reposition), then move over the orange towel and place it down."

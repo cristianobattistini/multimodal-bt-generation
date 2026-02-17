@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "green_box"
+  destination: "sink"
+  expanded_instruction: "Pick up the green box from the counter and place it into the sink, retrying the place operation up to 5 times if it fails."
+  scene_context: "Green box on right side of countertop; sink basin visible and clear; no containers closed; robot not holding the box."
+  expected_sequence: "Approach the green box, pick it up, move over the sink, and place the box into the sink; if placing fails, retry the place operation up to 5 times."

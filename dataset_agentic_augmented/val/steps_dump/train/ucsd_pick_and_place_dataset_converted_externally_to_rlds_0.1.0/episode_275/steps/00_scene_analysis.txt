@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "pot"
+  destination: "sink"
+  expanded_instruction: "Check IS_REACHABLE on the pot before navigating. If unreachable, retry the check up to 3 times within a 10s timeout, then abort or report. If reachable, pick up the pot from the countertop next to the stove and place it into the sink."
+  scene_context: "Pot on countertop beside the sink; sink is empty and reachable; robot not holding the pot."
+  expected_sequence: "Check IS_REACHABLE on the pot before navigating; if unreachable, retry up to 3 times within 10s, then abort/report. If reachable: Move to the pot, grasp and lift it, move over the sink, and set the pot down inside."

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "spoon"
+  destination: "vessel"
+  expanded_instruction: "Group actions into an ApproachSpoon subtree: approach the spoon on the table, pick it up, and place it near the metal vessel on the table. If the grasp fails, retry up to 3 times (reposition slightly between attempts) with a 10s timeout for the subtree."
+  scene_context: "Spoon lies on the table next to a metal vessel; vessel is open and table is mostly clear; nothing is held."
+  expected_sequence: "ApproachSpoon subtree: approach the spoon, grasp and lift it (if grasp fails, retry up to 3 times with small repositioning), move to the vessel, and set the spoon down beside the vessel on the table (subtree has 10s timeout)."

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "utensil"
+  destination: "table"
+  expanded_instruction: "Pick up the red-handled utensil from the left side of the wooden counter and place it on the table edge near the wall."
+  scene_context: "Utensil lies on the wooden counter left of a cloth and metal bowl; not held; table edge near wall is clear."
+  expected_sequence: "Reach to the red-handled utensil, pick it up, move to the table edge by the wall, and place it down."

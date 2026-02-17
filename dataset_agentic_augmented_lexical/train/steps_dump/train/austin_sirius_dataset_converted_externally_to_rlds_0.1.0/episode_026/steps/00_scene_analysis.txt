@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "kcup"
+  destination: "kcup_holder"
+  expanded_instruction: "First verify IS_REACHABLE on the kcup_holder (retry up to 3 times within a 10s timeout); then open the kcup_holder flap, pick up the green kcup from the table, insert it into the holder, and close the flap."
+  scene_context: "Kcup on table; kcup_holder closed; kcup not held; table clear."
+  expected_sequence: "Check IS_REACHABLE on kcup_holder before OPEN (retry up to 3 times within 10s); open the kcup_holder, grasp the kcup from the table, place it into the holder, and close the holder."

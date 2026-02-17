@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "["lid", "pot", "tool"]"
+  destination: "plate"
+  expanded_instruction: "First execute an ApproachPot subtree: approach and align to the small pot (retry up to 3 times, 10s timeout; if approach or grasp fails, push to reposition and retry). Then remove the lid from the small pot on the stovetop, set the lid aside, pick up the pot and place it onto the round plate at the top-left, and finally use the spatula to push the pot to the front edge of the table."
+  scene_context: "Lid is on the small pot on the stove; round plate is empty top-left; spatula lies left of the pot; front table edge is clear."
+  expected_sequence: "ApproachPot subtree: approach and align to pot (retry up to 3 times, 10s timeout; if grasp fails, push to reposition and retry), then lift and remove the lid and set it aside, pick up the pot and place it on the plate, then use the spatula to push the pot toward the front edge of the table."

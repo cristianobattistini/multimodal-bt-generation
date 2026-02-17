@@ -1,0 +1,22 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to pepsi_bottle -->
+      <Action ID="NAVIGATE_TO" obj="pepsi_bottle" />
+      <!-- Fallback: if GRASP pepsi_bottle fails, try alternative to reposition -->
+      <Fallback>
+        <!-- Retry GRASP pepsi_bottle up to 3 attempts -->
+        <RetryUntilSuccessful num_attempts="3">
+          <!-- Grasp pepsi_bottle -->
+          <Action ID="GRASP" obj="pepsi_bottle" />
+        </RetryUntilSuccessful>
+        <Sequence>
+          <!-- Push pepsi_bottle forward toward front edge of table -->
+          <Action ID="PUSH" obj="pepsi_bottle" />
+          <!-- Grasp pepsi_bottle -->
+          <Action ID="GRASP" obj="pepsi_bottle" />
+        </Sequence>
+      </Fallback>
+    </Sequence>
+  </BehaviorTree>
+</root>

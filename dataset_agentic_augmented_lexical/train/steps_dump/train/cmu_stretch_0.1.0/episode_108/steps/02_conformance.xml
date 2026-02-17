@@ -1,0 +1,18 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to pot_lid -->
+      <Action ID="NAVIGATE_TO" obj="pot_lid" />
+      <!-- Retry GRASP pot_lid up to 2 attempts -->
+      <RetryUntilSuccessful num_attempts="2">
+        <!-- Timeout: GRASP pot_lid within 20s -->
+        <Timeout msec="20000">
+          <!-- Grasp pot_lid -->
+          <Action ID="GRASP" obj="pot_lid" />
+        </Timeout>
+      </RetryUntilSuccessful>
+      <!-- Release -->
+      <Action ID="RELEASE" />
+    </Sequence>
+  </BehaviorTree>
+</root>

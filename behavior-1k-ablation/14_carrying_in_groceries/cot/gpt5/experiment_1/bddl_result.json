@@ -1,0 +1,22 @@
+{
+  "success": true,
+  "bt_success": true,
+  "bddl_goal": true,
+  "ticks": 1,
+  "duration": 126.80547094345093,
+  "inference_time": 18.707172393798828,
+  "satisfied": [
+    "exists(['?electric_refrigerator.n.01', '-', 'electric_refrigerator.n.01'], ['and', ['inside', '?beefsteak_tomato.n.01_1', '?electric_refrigerator.n.01'], ['inside', '?carton__of__milk.n.01_1', '?electric_refrigerator.n.01']])",
+    "not(['open', 'car.n.01_1'])",
+    "not(['open', 'electric_refrigerator.n.01_1'])"
+  ],
+  "unsatisfied": [],
+  "task": "14_carrying_in_groceries",
+  "condition": "cot",
+  "model_dir": "gpt5",
+  "vlm_model": null,
+  "inference_mode": "openai",
+  "experiment": 3,
+  "timestamp": "20260215_165021",
+  "reason": "Correct plan following CoT workflow: sack NEXT_TO fridge, OPEN fridge, tomato and milk INSIDE, CLOSE fridge, CLOSE car. All 3 BDDL goals satisfied."
+}

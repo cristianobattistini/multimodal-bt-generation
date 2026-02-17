@@ -1,0 +1,25 @@
+{
+  "success": true,
+  "bt_success": true,
+  "bddl_goal": true,
+  "ticks": 1,
+  "duration": 139.52506613731384,
+  "inference_time": 88.87838506698608,
+  "satisfied": [
+    "inside(?drill.n.01_1, ?toolbox.n.01_1)",
+    "inside(?pliers.n.01_1, ?toolbox.n.01_1)",
+    "inside(?flashlight.n.01_1, ?toolbox.n.01_1)",
+    "inside(?allen_wrench.n.01_1, ?toolbox.n.01_1)",
+    "inside(?screwdriver.n.01_1, ?toolbox.n.01_1)",
+    "ontop(?toolbox.n.01_1, ?tabletop.n.01_1)",
+    "not(['open', '?toolbox.n.01_1'])"
+  ],
+  "unsatisfied": [],
+  "task": "19_outfit_a_basic_toolbox",
+  "condition": "zero-shot",
+  "model_dir": "adapter",
+  "vlm_model": "gemma",
+  "inference_mode": "adapter",
+  "experiment": 1,
+  "timestamp": "20260214_004401"
+}

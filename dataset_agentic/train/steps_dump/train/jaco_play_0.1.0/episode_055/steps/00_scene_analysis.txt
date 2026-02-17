@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "yellow_cup"
+  destination: ""
+  expanded_instruction: "Pick up the yellow cup resting on the scale platform at the left side of the table."
+  scene_context: "Yellow cup on left scale platform, not held; table surface clear and reachable."
+  expected_sequence: "Move to the scale, grasp the yellow cup, and lift it off the platform."

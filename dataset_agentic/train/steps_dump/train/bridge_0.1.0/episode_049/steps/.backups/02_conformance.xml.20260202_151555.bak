@@ -1,0 +1,18 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to cucumber -->
+      <Action ID="NAVIGATE_TO" obj="cucumber"/>
+      <!-- Grasp cucumber -->
+      <Action ID="GRASP" obj="cucumber"/>
+      <!-- Flip cucumber to lay on its side (orient horizontally) -->
+      <Action ID="FLIP" obj="cucumber"/>
+      <!-- Navigate to orange_bowl -->
+      <Action ID="NAVIGATE_TO" obj="orange_bowl"/>
+      <!-- Place inside orange_bowl -->
+      <Action ID="PLACE_INSIDE" obj="orange_bowl"/>
+      <!-- Release -->
+      <Action ID="RELEASE"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

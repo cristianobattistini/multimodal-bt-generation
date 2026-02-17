@@ -1,0 +1,30 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to bowl_1 -->
+      <Action ID="NAVIGATE_TO" obj="bowl_1"/>
+      <!-- Grasp bowl_1 -->
+      <Action ID="GRASP" obj="bowl_1"/>
+      <!-- Navigate to table -->
+      <Action ID="NAVIGATE_TO" obj="table"/>
+      <!-- Place on table -->
+      <Action ID="PLACE_ON_TOP" obj="table"/>
+      <!-- Navigate to bowl_2 -->
+      <Action ID="NAVIGATE_TO" obj="bowl_2"/>
+      <!-- Grasp bowl_2 -->
+      <Action ID="GRASP" obj="bowl_2"/>
+      <!-- Navigate to bowl_1 (place bowl_2 into bowl_1 to stack) -->
+      <Action ID="NAVIGATE_TO" obj="bowl_1"/>
+      <!-- Place bowl_2 inside bowl_1 -->
+      <Action ID="PLACE_INSIDE" obj="bowl_1"/>
+      <!-- Navigate to bowl_3 -->
+      <Action ID="NAVIGATE_TO" obj="bowl_3"/>
+      <!-- Grasp bowl_3 -->
+      <Action ID="GRASP" obj="bowl_3"/>
+      <!-- Navigate to bowl_2 (place bowl_3 into previous nested bowl) -->
+      <Action ID="NAVIGATE_TO" obj="bowl_2"/>
+      <!-- Place bowl_3 inside bowl_2 -->
+      <Action ID="PLACE_INSIDE" obj="bowl_2"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

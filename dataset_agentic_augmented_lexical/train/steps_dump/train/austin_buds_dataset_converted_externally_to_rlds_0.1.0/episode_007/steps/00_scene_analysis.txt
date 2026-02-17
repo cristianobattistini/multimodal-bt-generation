@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "["lid", "pot", "tool"]"
+  destination: "plate"
+  expanded_instruction: "Remove the lid from the pot, place the pot onto the plate, then use the tool to push the pot to the front edge of the table. When grasping the pot allow a 15s timeout and retry the grasp up to 2 times; if grasping still fails, use a push or flip to reposition the pot."
+  scene_context: "Lid covers pot on stovetop area; plate is empty and reachable; tool (spatula) lies on the table; front edge clear."
+  expected_sequence: "Take off the lid and set it aside, put the pot on the plate, then use the tool to push the pot to the table's front edge. For grasps allow a 15s timeout and retry up to 2 times; if grasp fails, fall back to pushing or flipping to reposition the pot."

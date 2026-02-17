@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "tube"
+  destination: ""
+  expanded_instruction: "Pick up the white tube from the lower middle cubby of the shelf"
+  scene_context: "Shelf with cubbies upright; white tube lying in lower middle cubby; tube not held; path clear."
+  expected_sequence: "Approach the shelf, reach into the lower middle cubby, grasp the tube, and lift it out."

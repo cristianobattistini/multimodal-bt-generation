@@ -1,0 +1,10 @@
+{
+  "decorator_type": "retry",
+  "mixed_subtype": null,
+  "target_action_id": "TOGGLE_ON",
+  "target_obj": "faucet",
+  "parameters": {
+    "num_attempts": 3
+  },
+  "prompt_name": "retry"
+}

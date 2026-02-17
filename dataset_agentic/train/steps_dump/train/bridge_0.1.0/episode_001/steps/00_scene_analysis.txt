@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "silver_pot"
+  destination: "table"
+  expanded_instruction: "Pick up the silver pot sitting in front of the red can and place it on the table next to the blue towel at the front edge."
+  scene_context: "Silver pot on table in front of red can; blue towel folded at front-left table edge; no containers open; pot not held."
+  expected_sequence: "Approach and grasp the silver pot, lift it clear of the red can, move to the towel area, and set the pot down next to the blue towel at the front edge."

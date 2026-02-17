@@ -1,0 +1,18 @@
+<root main_tree_to_execute="MainTree">
+  <Sequence>
+    <Action>
+      <Action ID="NAVIGATE_TO" obj="mousetraps" />
+      <Action ID="GRASP" obj="mousetraps" />
+    </Action>
+    <Action ID="PLACE_NEXT_TO" obj="sink" />
+  </Sequence>
+  <Root>
+    <MainTree>
+      <Sequence>
+        <Action ID="NAVIGATE_TO" obj="sink" />
+        <Action ID="GRASP" obj="sink" />
+        <Action ID="PLACE_NEXT_TO" obj="sink" />
+      </Sequence>
+    </Root>
+  </Sequence>
+</root>

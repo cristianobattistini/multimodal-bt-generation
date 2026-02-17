@@ -1,0 +1,28 @@
+{
+  "decorator_type": "mixed",
+  "mixed_subtype": "condition_retry",
+  "target_action_id": "CLOSE",
+  "target_obj": "fridge",
+  "parameters": {
+    "augmentations": [
+      {
+        "type": "condition",
+        "action_id": "CLOSE",
+        "obj": "fridge",
+        "params": {
+          "condition_id": "IS_OPEN",
+          "condition_obj": "fridge"
+        }
+      },
+      {
+        "type": "retry",
+        "action_id": "CLOSE",
+        "obj": "fridge",
+        "params": {
+          "num_attempts": 2
+        }
+      }
+    ]
+  },
+  "prompt_name": "mixed/condition_retry"
+}

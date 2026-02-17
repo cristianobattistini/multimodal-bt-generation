@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "["blue_gear", "red_gear"]"
+  destination: "right_peg"
+  expanded_instruction: "Pick up the blue gear from the table and insert it onto the right peg, then check that the red gear is reachable before attempting to grasp it; if the grasp fails, retry up to 3 times and then place the red gear onto the right peg on top of the blue gear."
+  scene_context: "Blue and red gears on the table; right peg empty and reachable; no gripper hold; table clear."
+  expected_sequence: "Pick and place the blue gear onto the right peg, then check red_gear is reachable and pick and place the red gear on top of the blue gear, retrying the grasp up to 3 times if it fails."

@@ -1,0 +1,21 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to fridge -->
+      <Action ID="NAVIGATE_TO" obj="fridge" />
+      <!-- Navigate to 7up_can -->
+      <Action ID="NAVIGATE_TO" obj="7up_can" />
+      <!-- Fallback: if GRASP 7up_can fails, try PUSH, FLIP to reposition -->
+      <Fallback>
+        <!-- Grasp 7up_can -->
+        <Action ID="GRASP" obj="7up_can" />
+        <Sequence>
+          <!-- Push 7up_can forward toward front edge of table -->
+          <Action ID="PUSH" obj="7up_can" />
+          <!-- Grasp 7up_can -->
+          <Action ID="GRASP" obj="7up_can" />
+        </Sequence>
+      </Fallback>
+    </Sequence>
+  </BehaviorTree>
+</root>

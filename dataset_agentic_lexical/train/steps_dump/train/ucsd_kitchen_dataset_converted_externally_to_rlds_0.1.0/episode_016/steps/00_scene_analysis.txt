@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "carbinet_door"
+  destination: ""
+  expanded_instruction: "Open the lower-right carbinet door on the cabinet by pulling the handle"
+  scene_context: "Lower-right cabinet door is closed and reachable; robot not holding it; handle accessible."
+  expected_sequence: "Move the arm to the lower-right handle, grasp it, and pull the door open."

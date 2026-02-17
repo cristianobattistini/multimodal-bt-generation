@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "white_plate"
+  destination: "red_plate"
+  expanded_instruction: "Pick up the white plate from the table and place it on top of the red plate on the table. If placing on top fails, retry up to 3 times and, within a 10s timeout, use a PUSH action to reposition the white plate onto the red plate as a fallback."
+  scene_context: "White plate on table and not held; red plate on table reachable; no containers; workspace clear."
+  expected_sequence: "Approach and grasp the white plate, lift it, move over the red plate, lower it onto the red plate, and release. If PLACE_ON_TOP fails (after up to 3 retries or 10s), use a PUSH maneuver to reposition the white plate onto the red plate as an alternative."

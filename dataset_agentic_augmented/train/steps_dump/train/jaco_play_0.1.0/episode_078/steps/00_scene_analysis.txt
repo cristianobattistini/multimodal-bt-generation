@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "gray_bowl"
+  destination: ""
+  expanded_instruction: "Pick up the gray bowl sitting inside the blue tray on the table. Group actions into ApproachBlueTray subtree: approach the blue tray (retry up to 3 times with a 10s timeout) then pick up the gray bowl."
+  scene_context: "Gray bowl rests in blue tray on table, not held; table clear; yellow cup on scale; no closed containers."
+  expected_sequence: "Move to the blue tray, grasp the gray bowl, and lift it clear of the tray. Group actions into ApproachBlueTray subtree: move to the blue tray (retry up to 3 times, 10s timeout), grasp the gray bowl (if grasp fails, push to reposition and retry up to 2 times), and lift it clear of the tray."

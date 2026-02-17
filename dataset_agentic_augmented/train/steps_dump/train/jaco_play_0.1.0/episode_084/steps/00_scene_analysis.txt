@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "butter_dairy"
+  destination: "gray_bowl"
+  expanded_instruction: "Pick up the yellow butter_dairy from the table and place it into the gray_bowl on the table. Before placing, check that the gray_bowl is open and open it if needed; if PLACE_INSIDE fails, retry up to 3 times."
+  scene_context: "Gray bowl is empty on the table; butter_dairy (yellow block) sits on the table; robot not holding anything; destination accessible."
+  expected_sequence: "Check IS_OPEN on gray_bowl (open if needed), move to the butter_dairy, grasp it, move to the gray_bowl, and place it inside, retrying PLACE_INSIDE up to 3 times if it fails."

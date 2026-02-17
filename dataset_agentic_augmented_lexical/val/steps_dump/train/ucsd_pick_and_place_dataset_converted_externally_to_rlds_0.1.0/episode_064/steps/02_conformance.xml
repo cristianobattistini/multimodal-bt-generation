@@ -1,0 +1,25 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to red_object -->
+      <Action ID="NAVIGATE_TO" obj="red_object" />
+      <!-- Fallback: if GRASP red_object fails, try alternative to reposition -->
+      <Fallback>
+        <!-- Retry GRASP red_object up to 2 attempts -->
+        <RetryUntilSuccessful num_attempts="2">
+          <!-- Timeout: GRASP red_object within 10s -->
+          <Timeout msec="10000">
+            <!-- Grasp red_object -->
+            <Action ID="GRASP" obj="red_object" />
+          </Timeout>
+        </RetryUntilSuccessful>
+        <Sequence>
+          <!-- Push red_object forward toward front edge of table -->
+          <Action ID="PUSH" obj="red_object" />
+          <!-- Grasp red_object -->
+          <Action ID="GRASP" obj="red_object" />
+        </Sequence>
+      </Fallback>
+    </Sequence>
+  </BehaviorTree>
+</root>

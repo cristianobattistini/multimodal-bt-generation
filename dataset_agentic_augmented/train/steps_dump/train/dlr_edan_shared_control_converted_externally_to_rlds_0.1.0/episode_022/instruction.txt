@@ -1,0 +1,1 @@
+pick the orange. Use a 10 second timeout for navigation.

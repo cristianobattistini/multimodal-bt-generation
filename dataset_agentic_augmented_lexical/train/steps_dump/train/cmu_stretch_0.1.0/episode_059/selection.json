@@ -1,0 +1,36 @@
+{
+  "decorator_type": "mixed",
+  "mixed_subtype": "condition_timeout_retry",
+  "target_action_id": "GRASP",
+  "target_obj": "dishwasher_handle",
+  "parameters": {
+    "augmentations": [
+      {
+        "type": "condition",
+        "action_id": "GRASP",
+        "obj": "dishwasher_handle",
+        "params": {
+          "condition_id": "IS_VISIBLE",
+          "condition_obj": "dishwasher_handle"
+        }
+      },
+      {
+        "type": "timeout",
+        "action_id": "GRASP",
+        "obj": "dishwasher_handle",
+        "params": {
+          "msec": 15000
+        }
+      },
+      {
+        "type": "retry",
+        "action_id": "GRASP",
+        "obj": "dishwasher_handle",
+        "params": {
+          "num_attempts": 3
+        }
+      }
+    ]
+  },
+  "prompt_name": "mixed/condition_timeout_retry"
+}

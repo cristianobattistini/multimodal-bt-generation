@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "cup"
+  destination: "wall_hook"
+  expanded_instruction: "Hang the cup by its handle onto the wall hook"
+  scene_context: "Cup held near a free wall hook, hook unobstructed and reachable."
+  expected_sequence: "Bring the cup handle to the hook and set it onto the hook so the cup hangs."

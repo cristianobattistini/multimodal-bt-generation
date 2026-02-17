@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "maroon_square"
+  destination: ""
+  expanded_instruction: "Check IS_REACHABLE on the maroon_square before navigating, retrying the check up to 3 times if needed; then push the maroon square forward across the table toward the front edge."
+  scene_context: "Maroon square on table near center front, not held; table surface clear and reachable."
+  expected_sequence: "Check IS_REACHABLE on maroon_square before moving (retry up to 3 times); if reachable, move to the square, contact it, and push it forward toward the front edge of the table."

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "pot"
+  destination: "table"
+  expanded_instruction: "Pick up the pot (orange bowl) and place it on the table to the right of the spoon."
+  scene_context: "Table clear; spoon at left edge, pot near center, towel with strawberry at right; no object is held."
+  expected_sequence: "Approach the pot, lift it, move slightly right of the spoon, and set the pot down on the table."

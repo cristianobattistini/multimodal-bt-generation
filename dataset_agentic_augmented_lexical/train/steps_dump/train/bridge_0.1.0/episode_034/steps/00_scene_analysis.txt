@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "red_pepper"
+  destination: "table"
+  expanded_instruction: "Pick up the red pepper and place it on the bottom-right corner of the table. Check IS_REACHABLE on the table before NAVIGATE_TO, then NAVIGATE_TO to the table within a 10s timeout and perform the pickup and placement."
+  scene_context: "Red pepper on the left-back area of the table; table surface mostly clear; robot not holding anything."
+  expected_sequence: "Verify IS_REACHABLE on the table before NAVIGATE_TO; NAVIGATE_TO to the table (within a 10s timeout), approach the red pepper and grasp it, carry it to the table's bottom-right corner, and set it down."

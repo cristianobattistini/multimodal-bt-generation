@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "butter_dairy"
+  destination: "gray_bowl"
+  expanded_instruction: "Pick up the butter dairy from the table near the red ball and place it into the gray bowl; before placing, check that the gray bowl is empty, and if placing fails, retry up to 3 times."
+  scene_context: "Butter dairy on table near red ball and toast slice; gray bowl is open and empty; gripper not holding anything."
+  expected_sequence: "Reach to the butter dairy, grasp it, move to the gray bowl, check IS_EMPTY on the gray bowl, place it inside, and if PLACE_INSIDE fails retry up to 3 times."

@@ -1,0 +1,21 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Execute subtree ApproachCan -->
+      <SubTree ID="ApproachCan" />
+      <!-- Navigate to pot -->
+      <Action ID="NAVIGATE_TO" obj="pot" />
+      <!-- Place next to pot -->
+      <Action ID="PLACE_NEXT_TO" obj="pot" />
+    </Sequence>
+  </BehaviorTree>
+  <!-- Subtree definition ApproachCan -->
+  <BehaviorTree ID="ApproachCan">
+    <Sequence>
+      <!-- Navigate to can -->
+      <Action ID="NAVIGATE_TO" obj="can" />
+      <!-- Grasp can -->
+      <Action ID="GRASP" obj="can" />
+    </Sequence>
+  </BehaviorTree>
+</root>

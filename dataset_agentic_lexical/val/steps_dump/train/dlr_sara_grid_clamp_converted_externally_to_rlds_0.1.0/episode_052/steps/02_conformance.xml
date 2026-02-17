@@ -1,0 +1,14 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Approach grid_clamp -->
+      <Action ID="APPROACH" obj="grid_clamp" />
+      <!-- Clamp grid_clamp -->
+      <Action ID="CLAMP" obj="grid_clamp" />
+      <!-- Go to grid -->
+      <Action ID="GO_TO" obj="grid" />
+      <!-- Lay on grid -->
+      <Action ID="LAY_ON" obj="grid" />
+    </Sequence>
+  </BehaviorTree>
+</root>

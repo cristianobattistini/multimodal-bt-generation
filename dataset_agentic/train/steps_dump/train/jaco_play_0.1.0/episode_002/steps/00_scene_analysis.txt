@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "square_bread"
+  destination: ""
+  expanded_instruction: "Pick up the square bread from the table next to the orange"
+  scene_context: "Table surface clear; square_bread on table not held; small orange and toy nearby; no containers closed."
+  expected_sequence: "Approach the square_bread, grasp it securely, and lift it from the table."

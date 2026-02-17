@@ -1,0 +1,12 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Approach open_shelf -->
+      <Action ID="APPROACH" obj="open_shelf" />
+      <!-- Move to cube -->
+      <Action ID="MOVE_TO" obj="cube" />
+      <!-- Grab cube -->
+      <Action ID="GRAB" obj="cube" />
+    </Sequence>
+  </BehaviorTree>
+</root>

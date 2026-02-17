@@ -1,0 +1,1 @@
+Reach a towel. Retry grasping up to 5 times if it fails.

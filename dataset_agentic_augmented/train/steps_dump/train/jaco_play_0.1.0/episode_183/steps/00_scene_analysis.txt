@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "steak_meat"
+  destination: ""
+  expanded_instruction: "Check that the steak meat is visible (IS_VISIBLE) — retry up to 3 times within a 10s timeout if needed. Then navigate to the blue tray on the table, grasp the steak meat, and lift it from the tray."
+  scene_context: "Steak meat on a blue tray on the table; tray reachable; no containers closed; object not held."
+  expected_sequence: "Verify IS_VISIBLE on steak_meat (retry up to 3 times within 10s); move to the blue tray, grasp the steak meat, and lift it from the tray. If grasp fails, retry once or push to reposition before lifting."

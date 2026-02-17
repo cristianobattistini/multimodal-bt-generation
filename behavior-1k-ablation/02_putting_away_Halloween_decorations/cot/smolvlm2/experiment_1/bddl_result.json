@@ -1,0 +1,24 @@
+{
+  "success": false,
+  "bt_success": false,
+  "bddl_goal": false,
+  "ticks": 0,
+  "duration": 0.16924238204956055,
+  "inference_time": 8.406847953796387,
+  "satisfied": [
+    "forall(['?cabinet.n.01', '-', 'cabinet.n.01'], ['not', ['open', '?cabinet.n.01']])"
+  ],
+  "unsatisfied": [
+    "forall(['?pumpkin.n.02', '-', 'pumpkin.n.02'], ['exists', ['?cabinet.n.01', '-', 'cabinet.n.01'], ['inside', '?pumpkin.n.02', '?cabinet.n.01']])",
+    "forall(['?candle.n.01', '-', 'candle.n.01'], ['exists', ['?cabinet.n.01', '-', 'cabinet.n.01'], ['inside', '?candle.n.01', '?cabinet.n.01']])",
+    "exists(['?table.n.02', '-', 'table.n.02'], ['nextto', '?caldron.n.01_1', '?table.n.02'])"
+  ],
+  "task": "02_putting_away_Halloween_decorations",
+  "condition": "cot",
+  "model_dir": "smolvlm2",
+  "vlm_model": "smol500",
+  "inference_mode": "adapter",
+  "experiment": 1,
+  "timestamp": "20260213_155359",
+  "reason": "BT structural error: missing BehaviorTree XML wrapper, generic object names without instance suffixes ('pumpkin' instead of 'pumpkin.n.02_1'), only 1 pumpkin handled, 0 candles, no cauldron GRASP."
+}

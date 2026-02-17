@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "blue_plastic_bottle"
+  destination: ""
+  expanded_instruction: "Pick up the blue plastic bottle from the table, performing the steps as the ApproachBluePlasticBottle subtree and navigating to the bottle (NAVIGATE_TO within a 15s timeout) before grasping and lifting."
+  scene_context: "Blue bottle upright on table front-left, robot gripper not holding anything, table surface clear."
+  expected_sequence: "ApproachBluePlasticBottle subtree: navigate to the bottle (NAVIGATE_TO must complete within 15s), move the arm to the bottle, grasp it securely, and lift it clear off the table."

@@ -1,0 +1,22 @@
+{
+  "success": false,
+  "bt_success": false,
+  "bddl_goal": false,
+  "ticks": 1,
+  "duration": 63.59236001968384,
+  "inference_time": 53.455835580825806,
+  "satisfied": [
+    "not(['open', '?electric_refrigerator.n.01_1'])"
+  ],
+  "unsatisfied": [
+    "forall(['?bottle.n.01', '-', 'bottle.n.01'], ['ontop', '?bottle.n.01', '?coffee_table.n.01_1'])"
+  ],
+  "task": "17_bringing_water",
+  "condition": "zero-shot",
+  "model_dir": "qwen25",
+  "vlm_model": "qwen",
+  "inference_mode": "adapter",
+  "experiment": 1,
+  "timestamp": "20260214_190032",
+  "reason": "Wrong action ordering: GRASP bottle_1 before OPEN refrigerator. Hallucinated objects (living_room). Duplicate GRASP of same bottles without logical placement in between. No CLOSE at end."
+}

@@ -1,0 +1,28 @@
+{
+  "decorator_type": "mixed",
+  "mixed_subtype": "condition_retry",
+  "target_action_id": "GRASP",
+  "target_obj": "square_bread",
+  "parameters": {
+    "augmentations": [
+      {
+        "type": "condition",
+        "action_id": "GRASP",
+        "obj": "square_bread",
+        "params": {
+          "condition_id": "IS_VISIBLE",
+          "condition_obj": "square_bread"
+        }
+      },
+      {
+        "type": "retry",
+        "action_id": "GRASP",
+        "obj": "square_bread",
+        "params": {
+          "num_attempts": 2
+        }
+      }
+    ]
+  },
+  "prompt_name": "mixed/condition_retry"
+}

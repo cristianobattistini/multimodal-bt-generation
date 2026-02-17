@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "square_bread"
+  destination: ""
+  expanded_instruction: "Pick up the square bread from the table next to the orange toy and blue bin."
+  scene_context: "Square_bread on table beside orange toy and blue bin; blue bin open; robot arm not holding anything."
+  expected_sequence: "Move the arm to the square_bread, grasp it securely, and lift it clear of the table."

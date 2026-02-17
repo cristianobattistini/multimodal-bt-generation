@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "metal_pot"
+  destination: "cardboard_fence"
+  expanded_instruction: "Pick up the metal_pot and set it upright inside the cardboard_fence on the wooden board."
+  scene_context: "Metal_pot lying on its side inside cardboard_fence on wooden board; fence open at top; pot not held; board otherwise clear."
+  expected_sequence: "Reach the pot, lift and rotate it to upright orientation, and place it centered inside the cardboard_fence."

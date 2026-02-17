@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "door"
+  destination: ""
+  expanded_instruction: "Check the door's IS_OPEN status before attempting to close; then close the small gray door on the side of the device until it is fully shut, retrying up to 3 times with a 10s timeout and, if a grasp fails, using a push to reposition."
+  scene_context: "Side gray door is open on the device; door not held and area in front is clear."
+  expected_sequence: "Approach the device, verify IS_OPEN on the door before attempting to close, then grasp or, if grasp fails, push the small gray door to reposition it and close it until it is fully latched, retrying up to 3 times or within a 10s timeout."

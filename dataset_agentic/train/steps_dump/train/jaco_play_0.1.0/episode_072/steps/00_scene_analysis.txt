@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "butter_dairy"
+  destination: "sink"
+  expanded_instruction: "Pick up the butter dairy (yellow tub) from the table next to the robot and place it into the blue sink basin."
+  scene_context: "Butter dairy (yellow tub) on table near robot arm; blue sink basin open and clear; no object currently held."
+  expected_sequence: "Reach to the butter dairy, grasp it, move to the sink, and place it inside."

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "pepsi_bottle"
+  destination: "table"
+  expanded_instruction: "Pick up the blue Pepsi bottle on the table and place it down on the table surface. If the PLACE_ON_TOP step fails, retry that placement up to 3 times."
+  scene_context: "Pepsi bottle is on the table to the right of center; robot not holding it; table is clear."
+  expected_sequence: "Move to the Pepsi bottle, grasp it, then place it down on the table; if the PLACE_ON_TOP action fails, retry up to 3 times."

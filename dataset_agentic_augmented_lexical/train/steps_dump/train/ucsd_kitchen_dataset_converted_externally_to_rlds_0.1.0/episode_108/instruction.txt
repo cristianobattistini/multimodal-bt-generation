@@ -1,0 +1,1 @@
+Open the carbinet door. If grasping fails, push the carbinet door to reposition it and retry grasping.

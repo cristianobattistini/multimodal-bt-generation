@@ -1,0 +1,16 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <Sequence>
+        <!-- Check hole is visible before NAVIGATE_TO -->
+        <Condition ID="IS_VISIBLE" obj="hole" />
+        <!-- Navigate to hole -->
+        <Action ID="NAVIGATE_TO" obj="hole" />
+      </Sequence>
+      <!-- Place inside hole -->
+      <Action ID="PLACE_INSIDE" obj="hole" />
+      <!-- Release -->
+      <Action ID="RELEASE" />
+    </Sequence>
+  </BehaviorTree>
+</root>

@@ -1,0 +1,19 @@
+scene_analysis:
+  target: "radio_receiver"
+  destination: ""
+  expanded_instruction: "Pick up the radio receiver from the table and turn it on by connecting it to a power source (if it doesn't turn on, retry up to 3 times with a 10s timeout)."
+  scene_context: "Radio receiver on table near front edge; not held; table surface clear; light on."
+  expected_sequence: "Move to the radio, pick it up, and place it on the table (if it doesn't connect, retry up to 3 times with a 10s timeout); then connect it to the power source and turn it on."
+Plan:
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to radio_receiver -->
+      <Action ID="NAVIGATE_TO" obj="radio_receiver" />
+      <!-- Navigate to table -->
+      <Action ID="NAVIGATE_TO" obj="table" />
+      <!-- Toggle on radio_receiver -->
+      <Action ID="TOGGLE_ON" obj="radio_receiver" />
+    </Sequence>
+  </BehaviorTree>
+</root>

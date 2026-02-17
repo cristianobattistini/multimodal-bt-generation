@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "middle_drawer"
+  destination: ""
+  expanded_instruction: "Use the ApproachMiddleDrawer subtree to open the middle_drawer of the three-drawer cabinet beneath the table (retry up to 3 times, 10s timeout)."
+  scene_context: "Cabinet with three drawers under table; middle drawer is closed and reachable; robot not holding anything."
+  expected_sequence: "Within the ApproachMiddleDrawer subtree, move arm to the middle drawer handle, grasp it firmly, and pull the drawer open until extended; if grasp fails, push to reposition and retry up to 3 times within a 10s timeout."

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "white_mug"
+  destination: ""
+  expanded_instruction: "First check IS_REACHABLE on the white_mug; if reachable (retry check up to 3 times within 10s), navigate to the mug on the blue cloth and pick up the white mug by its handle."
+  scene_context: "White mug on blue cloth, handle visible, mug not held, cloth surface clear."
+  expected_sequence: "Check IS_REACHABLE on white_mug before navigating; if reachable, approach the mug, grasp it by the handle, and lift it off the cloth (if grasp fails, retry or push to reposition)."

@@ -1,0 +1,1 @@
+Close fridge. Check precondition and retry closing up to 2 times if it fails.

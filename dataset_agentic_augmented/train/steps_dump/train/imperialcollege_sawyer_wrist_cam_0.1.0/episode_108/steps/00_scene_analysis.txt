@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "mug"
+  destination: ""
+  expanded_instruction: "Pick up the white mug resting on the blue cloth surface by its handle. Check that the mug is visible (IS_VISIBLE) before attempting the grasp; retry up to 3 times with a 10s timeout. If grasp fails, use a push or flip to reposition the mug and try grasping again."
+  scene_context: "White mug on blue cloth, handle oriented toward upper-right; mug not held and surface clear."
+  expected_sequence: "Move to the mug, verify IS_VISIBLE, approach the handle, and grasp it (retry up to 3 times within 10s). If grasp fails, push or flip the mug to reposition, then grasp the handle and lift it up vertically."

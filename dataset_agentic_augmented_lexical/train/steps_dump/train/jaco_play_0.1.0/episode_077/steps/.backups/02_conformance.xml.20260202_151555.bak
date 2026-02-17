@@ -1,0 +1,23 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Execute subtree ApproachMilkDairy -->
+      <SubTree ID="ApproachMilkDairy" />
+      <!-- Navigate to black_bowl -->
+      <Action ID="NAVIGATE_TO" obj="black_bowl" />
+      <!-- Place inside black_bowl -->
+      <Action ID="PLACE_INSIDE" obj="black_bowl" />
+      <!-- Release -->
+      <Action ID="RELEASE" />
+    </Sequence>
+  </BehaviorTree>
+  <!-- Subtree definition ApproachMilkDairy -->
+  <BehaviorTree ID="ApproachMilkDairy">
+    <Sequence>
+      <!-- Navigate to milk_dairy -->
+      <Action ID="NAVIGATE_TO" obj="milk_dairy" />
+      <!-- Grasp milk_dairy -->
+      <Action ID="GRASP" obj="milk_dairy" />
+    </Sequence>
+  </BehaviorTree>
+</root>

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "orange_fruit"
+  destination: "sink"
+  expanded_instruction: "Pick up the orange fruit from the white plate and place it into the blue sink."
+  scene_context: "Orange on a white plate near the back; blue sink is empty and reachable; no containers are closed and orange is not held."
+  expected_sequence: "Approach the orange on the plate, pick it up, move to the sink, and place it inside."

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "pan"
+  destination: ""
+  expanded_instruction: "Pick up the white pan with the black handle from the blue surface, first checking the pan is reachable; retry the grasp up to 3 times if needed, and if grasping fails use push or flip to reposition before retrying."
+  scene_context: "White circular pan on blue surface with handle exposed and reachable; nothing blocking it; pan not held."
+  expected_sequence: "Approach the pan and verify it is reachable, grasp the handle securely (retry up to 3 times if it fails), if grasp fails push or flip to reposition and retry, then lift it up."

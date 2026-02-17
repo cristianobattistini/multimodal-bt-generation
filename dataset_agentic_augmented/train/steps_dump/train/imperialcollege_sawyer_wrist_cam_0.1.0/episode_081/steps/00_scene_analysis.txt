@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "toast"
+  destination: "toaster_slot"
+  expanded_instruction: "Check that the toast is graspable, then pick up the toast slice (GRASP with a 10s timeout, retry up to 2 times if it fails) and insert it into the slot of the red toaster"
+  scene_context: "Toast slice on counter near a red toaster; toaster upright with empty slots; nothing is held."
+  expected_sequence: "Verify IS_GRASPABLE on the toast, reach and pick it up (GRASP within a 10s timeout, retry up to 2 times if it fails), then place it into the toaster slot."

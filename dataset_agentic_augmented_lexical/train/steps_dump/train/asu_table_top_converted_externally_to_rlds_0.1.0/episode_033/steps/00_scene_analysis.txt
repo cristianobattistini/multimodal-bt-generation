@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "red_square"
+  destination: "table"
+  expanded_instruction: "Pick up the red square block and place it down on the table; if a grasp attempt fails, retry up to 3 times, with each GRASP limited to a 20 second timeout."
+  scene_context: "Red square on the right side of the table near the robot; table surface otherwise clear; no containers open."
+  expected_sequence: "Approach the red square, pick it up (retry grasp up to 3 times, 20s timeout per attempt), move to the table area, and place it down."

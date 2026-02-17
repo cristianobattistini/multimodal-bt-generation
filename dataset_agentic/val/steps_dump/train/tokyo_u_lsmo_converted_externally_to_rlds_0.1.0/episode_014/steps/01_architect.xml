@@ -1,0 +1,12 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to table, approach from a path that avoids the black_organizer -->
+      <Action ID="NAVIGATE_TO" obj="table"/>
+      <!-- Navigate to scissors, approaching around the black_organizer to reach the item -->
+      <Action ID="NAVIGATE_TO" obj="scissors"/>
+      <!-- Grasp scissors -->
+      <Action ID="GRASP" obj="scissors"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

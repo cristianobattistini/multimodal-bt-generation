@@ -1,0 +1,12 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to pink_towel -->
+      <Action ID="NAVIGATE_TO" obj="pink_towel"/>
+      <!-- Grasp pink_towel -->
+      <Action ID="GRASP" obj="pink_towel"/>
+      <!-- Release -->
+      <Action ID="RELEASE"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

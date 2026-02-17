@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "apple"
+  destination: "pot"
+  expanded_instruction: "Pick up the apple from the surface and place it into the pot, with the grasp operation limited to a 15s timeout and retried up to 2 times if it fails."
+  scene_context: "Apple on the table beside an open empty pot; pot is reachable and unblocked."
+  expected_sequence: "Reach the apple, grasp it (15s timeout, retry up to 2 times on failure), move over the pot, and place the apple inside."

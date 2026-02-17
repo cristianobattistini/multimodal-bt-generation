@@ -1,0 +1,41 @@
+scene_analysis:
+  target: "["car", "digital_camera", "container", "tennis_racket"]"
+  destination: ""
+  expanded_instruction: "Pick up the tennis racket, digital camera, and container from the living room table, place them into the red car, and then close the car trunk."
+  scene_context: "Car is parked in the garage with closed trunk; tennis_racket, digital_camera, and container on the living room table are reachable and unheld."
+  expected_sequence: "Pick up the tennis racket, then the digital camera, then the container, and place them into the open car trunk, then close the trunk."
+Plan:
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to tennis_racket -->
+      <Action ID="NAVIGATE_TO" obj="tennis_racket" />
+      <!-- Grasp tennis_racket -->
+      <Action ID="GRASP" obj="tennis_racket" />
+      <!-- Navigate to car -->
+      <Action ID="NAVIGATE_TO" obj="car" />
+      <!-- Place inside car -->
+      <Action ID="PLACE_INSIDE" obj="car" />
+      <!-- Open car -->
+      <Action ID="OPEN" obj="car" />
+      <!-- Navigate to digital_camera -->
+      <Action ID="NAVIGATE_TO" obj="digital_camera" />
+      <!-- Grasp digital_camera -->
+      <Action ID="GRASP" obj="digital_camera" />
+      <!-- Navigate to car -->
+      <Action ID="NAVIGATE_TO" obj="car" />
+      <!-- Place inside car -->
+      <Action ID="PLACE_INSIDE" obj="car" />
+      <!-- Close car -->
+      <Action ID="CLOSE" obj="car" />
+      <!-- Navigate to container -->
+      <Action ID="NAVIGATE_TO" obj="container" />
+      <!-- Grasp container -->
+      <Action ID="GRASP" obj="container" />
+      <!-- Navigate to car -->
+      <Action ID="NAVIGATE_TO" obj="car" />
+      <!-- Place inside car -->
+      <Action ID="PLACE_INSIDE" obj="car" />
+    </Sequence>
+  </BehaviorTree>
+</root>

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "blue_rag"
+  destination: "table"
+  expanded_instruction: "Slide the blue rag forward so it rests at the front edge of the table"
+  scene_context: "Blue rag on table near center; bowl and spatula present; table surface clear otherwise; no containers open."
+  expected_sequence: "Reach the blue rag and push it forward along the table until it rests at the front edge."

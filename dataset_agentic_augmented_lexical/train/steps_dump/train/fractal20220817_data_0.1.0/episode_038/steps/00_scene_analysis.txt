@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "coke_can"
+  destination: "middle_drawer"
+  expanded_instruction: "Check IS_REACHABLE on the coke can, then pick up the coke can from the tabletop and place it inside the open middle drawer. If grasp fails, retry up to 3 times with each GRASP having a 10s timeout and reposition/push the can as needed."
+  scene_context: "Coke can on tabletop; middle drawer is open and appears clear; robot not holding the can."
+  expected_sequence: "Verify coke_can is reachable, move to the can, grasp it (each GRASP has a 10s timeout and should be retried up to 3 times; if a grasp fails reposition/push and retry), insert it into the open middle drawer, and release it."

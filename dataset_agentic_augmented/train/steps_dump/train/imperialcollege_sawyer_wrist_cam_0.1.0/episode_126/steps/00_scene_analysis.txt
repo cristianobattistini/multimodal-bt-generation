@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "bowls"
+  destination: "table"
+  expanded_instruction: "Group actions into an ApproachBowl1 subtree: for each bowl, execute ApproachBowl1 (retry up to 3 times, 10s timeout; if grasp fails, push to reposition) then pick up the bowls from the cloth-covered table and stack them into a single nested pile on the table."
+  scene_context: "Several bowls lie scattered on a blue cloth-covered table, none are held and the table area is clear."
+  expected_sequence: "For each bowl: run ApproachBowl1 subtree (retry up to 3×, 10s), collect the bowl (if grasp fails, push to reposition), and place it into the previous bowl to form a single stacked nest on the table."

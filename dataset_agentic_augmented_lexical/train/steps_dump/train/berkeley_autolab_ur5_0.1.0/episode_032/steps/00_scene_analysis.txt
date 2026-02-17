@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "tiger"
+  destination: "grey_bowl"
+  expanded_instruction: "Remove the tiger from the red bowl and place it into the grey bowl on the table. When grasping, use a 20s timeout and retry the grasp up to 2 times if it fails."
+  scene_context: "Red bowl contains the tiger; grey bowl is empty and reachable; no object is held."
+  expected_sequence: "Reach into the red bowl, pick up the tiger (grasp with a 20s timeout, retry up to 2 times on failure), carry it to the grey bowl, and place it inside."

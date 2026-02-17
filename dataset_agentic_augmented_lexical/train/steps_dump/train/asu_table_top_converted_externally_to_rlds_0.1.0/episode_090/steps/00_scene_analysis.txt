@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "red_can"
+  destination: ""
+  expanded_instruction: "Check that the red can is visible before navigating, navigate to it within a 10s timeout, then pick up the red can from the table and lift it upward."
+  scene_context: "Red can upright near front center of table, not held; table mostly clear; no containers open."
+  expected_sequence: "Verify the red can is visible before approaching, navigate to it within a 10s timeout, then approach the red can, grasp it firmly, and lift it upward."

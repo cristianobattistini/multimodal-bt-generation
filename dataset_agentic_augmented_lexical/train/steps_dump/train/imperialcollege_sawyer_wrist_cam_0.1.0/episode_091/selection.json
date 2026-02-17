@@ -1,0 +1,28 @@
+{
+  "decorator_type": "mixed",
+  "mixed_subtype": "condition_timeout",
+  "target_action_id": "NAVIGATE_TO",
+  "target_obj": "toaster_slot",
+  "parameters": {
+    "augmentations": [
+      {
+        "type": "condition",
+        "action_id": "NAVIGATE_TO",
+        "obj": "toaster_slot",
+        "params": {
+          "condition_id": "IS_VISIBLE",
+          "condition_obj": "toaster_slot"
+        }
+      },
+      {
+        "type": "timeout",
+        "action_id": "NAVIGATE_TO",
+        "obj": "toaster_slot",
+        "params": {
+          "msec": 10000
+        }
+      }
+    ]
+  },
+  "prompt_name": "mixed/condition_timeout"
+}

@@ -1,0 +1,12 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to hook -->
+      <Action ID="NAVIGATE_TO" obj="hook"/>
+      <!-- Hang mug on hook -->
+      <Action ID="HANG" obj="hook"/>
+      <!-- Release -->
+      <Action ID="RELEASE"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

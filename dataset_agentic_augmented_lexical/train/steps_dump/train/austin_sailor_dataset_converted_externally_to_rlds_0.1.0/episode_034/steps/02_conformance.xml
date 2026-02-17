@@ -1,0 +1,33 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Move to pan -->
+      <Action ID="MOVE_TO" obj="pan" />
+      <!-- Grab pan -->
+      <Action ID="GRAB" obj="pan" />
+      <!-- Approach stove -->
+      <Action ID="APPROACH" obj="stove" />
+      <!-- Retry PLACE_ON_TOP stove up to 5 attempts -->
+      <RetryUntilSuccessful num_attempts="5">
+        <!-- Place on stove -->
+        <Action ID="PLACE_ON_TOP" obj="pan" surface="stove" />
+      </RetryUntilSuccessful>
+      <!-- Place pan on stove -->
+      <Action ID="MOVE_TO" obj="fish" />
+      <!-- Move to fish -->
+      <Action ID="GRIP" obj="fish" />
+      <!-- Grip fish -->
+      <Action ID="APPROACH" obj="pan" />
+      <!-- Approach pan -->
+      <Action ID="PLACE_INSIDE" obj="fish" container="pan" />
+      <!-- Place fish inside pan -->
+      <Action ID="MOVE_TO" obj="sausage" />
+      <!-- Move to sausage -->
+      <Action ID="PICK" obj="sausage" />
+      <!-- Pick sausage -->
+      <Action ID="LOCOMOTE_TO" obj="pan" />
+      <!-- Locomote to pan -->
+      <Action ID="INSERT_INTO" obj="pan" />
+    </Sequence>
+  </BehaviorTree>
+</root>

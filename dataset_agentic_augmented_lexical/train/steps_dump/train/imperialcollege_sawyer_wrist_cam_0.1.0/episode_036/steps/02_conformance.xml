@@ -1,0 +1,13 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Go to apple -->
+      <Action ID="GO_TO" obj="apple" />
+      <!-- Retry GRASP apple up to 2 attempts -->
+      <RetryUntilSuccessful num_attempts="2">
+        <!-- Grasp apple -->
+        <Action ID="GRASP" obj="apple" />
+      </RetryUntilSuccessful>
+    </Sequence>
+  </BehaviorTree>
+</root>

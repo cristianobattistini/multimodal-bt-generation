@@ -1,0 +1,20 @@
+{
+  "success": true,
+  "bt_success": true,
+  "bddl_goal": true,
+  "ticks": 1,
+  "duration": 138.06238174438477,
+  "inference_time": 41.05740237236023,
+  "satisfied": [
+    "forall(['?bottle.n.01', '-', 'bottle.n.01'], ['ontop', '?bottle.n.01', '?coffee_table.n.01_1'])",
+    "not(['open', '?electric_refrigerator.n.01_1'])"
+  ],
+  "unsatisfied": [],
+  "task": "17_bringing_water",
+  "condition": "zero-shot",
+  "model_dir": "qwen25",
+  "vlm_model": "qwen",
+  "inference_mode": "adapter",
+  "experiment": 2,
+  "timestamp": "20260214_190917"
+}

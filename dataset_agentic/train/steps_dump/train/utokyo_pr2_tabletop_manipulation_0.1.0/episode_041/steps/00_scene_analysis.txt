@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "grape"
+  destination: ""
+  expanded_instruction: "Pick a single dark grape from the small bunch on the table near the white plate."
+  scene_context: "Dark grape bunch on table near an empty white plate; table clear; robot arm not holding anything."
+  expected_sequence: "Move the arm to the bunch, pluck one grape from the cluster, and lift it away."

@@ -1,0 +1,29 @@
+{
+  "decorator_type": "mixed",
+  "mixed_subtype": "subtree_retry",
+  "target_action_id": "PUSH",
+  "target_obj": "green_cloth",
+  "parameters": {
+    "augmentations": [
+      {
+        "type": "subtree",
+        "params": {
+          "subtree_name": "ApproachGreenCloth",
+          "action_indices": [
+            0,
+            1
+          ]
+        }
+      },
+      {
+        "type": "retry",
+        "action_id": "PUSH",
+        "obj": "green_cloth",
+        "params": {
+          "num_attempts": 2
+        }
+      }
+    ]
+  },
+  "prompt_name": "mixed/subtree_retry"
+}

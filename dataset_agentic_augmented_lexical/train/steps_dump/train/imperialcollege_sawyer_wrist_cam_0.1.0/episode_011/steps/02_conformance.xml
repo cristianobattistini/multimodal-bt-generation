@@ -1,0 +1,14 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <Sequence>
+        <!-- Check lid is reachable before NAVIGATE_TO -->
+        <Condition ID="IS_REACHABLE" obj="lid" />
+        <!-- Navigate to lid -->
+        <Action ID="GO_TO" obj="lid" />
+      </Sequence>
+      <!-- Go to lid -->
+      <Action ID="UNLOCK" obj="lid" />
+    </Sequence>
+  </BehaviorTree>
+</root>

@@ -1,0 +1,20 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Approach rxbar_chocolate -->
+      <Action ID="APPROACH" obj="rxbar_chocolate" />
+      <!-- Retry GRASP rxbar_chocolate up to 2 attempts -->
+      <RetryUntilSuccessful num_attempts="2">
+        <!-- Timeout: GRASP rxbar_chocolate within 10s -->
+        <Timeout msec="10000">
+          <!-- Grasp rxbar_chocolate -->
+          <Action ID="PICK" obj="rxbar_chocolate" />
+        </Timeout>
+      </RetryUntilSuccessful>
+      <!-- Pick rxbar_chocolate -->
+      <Action ID="GO_TO" obj="middle_drawer" />
+      <!-- Go to middle_drawer -->
+      <Action ID="PUT_IN" obj="middle_drawer" />
+    </Sequence>
+  </BehaviorTree>
+</root>

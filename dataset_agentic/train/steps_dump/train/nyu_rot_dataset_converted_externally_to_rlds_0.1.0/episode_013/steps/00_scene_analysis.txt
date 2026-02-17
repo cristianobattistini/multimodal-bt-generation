@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "cups"
+  destination: "table"
+  expanded_instruction: "Pick up the cups on the table and stack them into a single vertical pile on the table."
+  scene_context: "Blue cup(s) on table; table clear; robot not holding any cup at start."
+  expected_sequence: "Approach the cups, pick them up one by one, and place each onto the other to form a stacked pile on the table."

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "knife"
+  destination: "cutting_board"
+  expanded_instruction: "Pick up the yellow-handled knife from the sink edge and place it on the green cutting board, navigating between locations with a 15s timeout."
+  scene_context: "Knife hanging over the sink edge; green cutting_board on counter and unobstructed."
+  expected_sequence: "Reach to the knife, lift it from the sink edge, move to the cutting_board within a 15s navigation timeout, and set it down."

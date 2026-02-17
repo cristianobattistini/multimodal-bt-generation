@@ -1,0 +1,14 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to water_bottle -->
+      <Action ID="NAVIGATE_TO" obj="water_bottle"/>
+      <!-- Grasp water_bottle -->
+      <Action ID="GRASP" obj="water_bottle"/>
+      <!-- Navigate to rxbar (place next to rxbar_chocolate) -->
+      <Action ID="NAVIGATE_TO" obj="rxbar"/>
+      <!-- Place next to rxbar -->
+      <Action ID="PLACE_NEXT_TO" obj="rxbar"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

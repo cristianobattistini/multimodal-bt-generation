@@ -1,0 +1,10 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Approach black_bowl -->
+      <Action ID="APPROACH" obj="black_bowl" />
+      <!-- Place apple inside black_bowl -->
+      <Action ID="PLACE_INSIDE" obj="black_bowl" />
+    </Sequence>
+  </BehaviorTree>
+</root>

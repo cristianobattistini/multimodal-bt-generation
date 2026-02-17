@@ -1,0 +1,15 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to dish_rack -->
+      <Action ID="NAVIGATE_TO" obj="dish_rack" />
+      <Sequence>
+        <!-- Check dish_rack is empty before PLACE_INSIDE -->
+        <Condition ID="IS_EMPTY" obj="dish_rack" />
+        <!-- Place inside dish_rack -->
+        <Action ID="PLACE_INSIDE" obj="dish_rack" />
+      </Sequence>
+      
+    </Sequence>
+  </BehaviorTree>
+</root>

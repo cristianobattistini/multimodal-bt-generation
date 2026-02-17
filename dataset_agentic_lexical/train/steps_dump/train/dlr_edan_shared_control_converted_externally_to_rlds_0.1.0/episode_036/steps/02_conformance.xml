@@ -1,0 +1,14 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to small_shelf -->
+      <Action ID="NAVIGATE_TO" obj="small_shelf" />
+      <!-- Approach glass_container -->
+      <Action ID="APPROACH" obj="glass_container" />
+      <!-- Approach green_apple -->
+      <Action ID="APPROACH" obj="green_apple" />
+      <!-- Grasp green_apple -->
+      <Action ID="GRASP" obj="green_apple" />
+    </Sequence>
+  </BehaviorTree>
+</root>

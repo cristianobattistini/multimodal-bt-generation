@@ -1,0 +1,19 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to slice_of_toast -->
+      <Action ID="NAVIGATE_TO" obj="slice_of_toast" />
+      <!-- Grasp slice_of_toast -->
+      <Action ID="GRASP" obj="slice_of_toast" />
+      <!-- Check toaster_slot is visible before NAVIGATE_TO -->
+      <Condition ID="IS_VISIBLE" obj="toaster_slot" />
+      <!-- Timeout: NAVIGATE_TO toaster_slot within 10s -->
+      <Timeout msec="10000">
+        <!-- Navigate to toaster_slot -->
+        <Action ID="NAVIGATE_TO" obj="toaster_slot" />
+      </Timeout>
+      <!-- Place inside toaster_slot -->
+      <Action ID="PLACE_INSIDE" obj="toaster_slot" />
+    </Sequence>
+  </BehaviorTree>
+</root>

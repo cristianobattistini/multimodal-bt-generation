@@ -1,0 +1,1 @@
+Put the metal pot on the blue cloth. Use ApproachMetalPot subtree for approach and grasp.

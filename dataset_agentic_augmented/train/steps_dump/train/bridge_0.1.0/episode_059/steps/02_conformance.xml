@@ -1,0 +1,17 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to broccoli -->
+      <Action ID="NAVIGATE_TO" obj="broccoli" />
+      <!-- Grasp broccoli -->
+      <Action ID="GRASP" obj="broccoli" />
+      <!-- Timeout: NAVIGATE_TO metal_pot within 20s -->
+      <Timeout msec="20000">
+        <!-- Navigate to metal_pot -->
+        <Action ID="NAVIGATE_TO" obj="metal_pot" />
+      </Timeout>
+      <!-- Place inside metal_pot -->
+      <Action ID="PLACE_INSIDE" obj="metal_pot" />
+    </Sequence>
+  </BehaviorTree>
+</root>

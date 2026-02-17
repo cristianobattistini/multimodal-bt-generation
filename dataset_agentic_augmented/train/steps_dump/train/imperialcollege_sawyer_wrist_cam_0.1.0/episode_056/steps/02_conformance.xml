@@ -1,0 +1,17 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Check work_surface is reachable before NAVIGATE_TO -->
+      <Condition ID="IS_REACHABLE" obj="work_surface" />
+      <!-- Timeout: NAVIGATE_TO work_surface within 10s -->
+      <Timeout msec="10000">
+        <!-- Navigate to work_surface -->
+        <Action ID="NAVIGATE_TO" obj="work_surface" />
+      </Timeout>
+      <!-- Navigate to can -->
+      <Action ID="NAVIGATE_TO" obj="can" />
+      <!-- Grasp can -->
+      <Action ID="GRASP" obj="can" />
+    </Sequence>
+  </BehaviorTree>
+</root>

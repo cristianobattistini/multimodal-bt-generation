@@ -1,0 +1,1 @@
+Move the Orange cloth towards the top of the table. If grasping fails, push the orange cloth to reposition it and retry grasping.

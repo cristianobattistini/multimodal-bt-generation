@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "square_bread"
+  destination: ""
+  expanded_instruction: "Pick up the square bread from the tabletop near the center-left area, grasping it with a 10s timeout and retrying the grasp up to 3 times if it fails."
+  scene_context: "square_bread on table, not held; blue tray is open and reachable; tabletop otherwise clear."
+  expected_sequence: "Approach the square_bread, grasp it with the gripper (grasp has a 10s timeout and may be retried up to 3 times if it fails), and lift it clear off the table."

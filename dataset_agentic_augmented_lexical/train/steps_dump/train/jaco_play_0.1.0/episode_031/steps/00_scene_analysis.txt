@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "black_bowl"
+  destination: "dish_rack"
+  expanded_instruction: "Check the black bowl is visible, then pick it up from the table (grasp with a 10s timeout, retry up to 2 times if it fails) and place it into the dish rack."
+  scene_context: "Black bowl on table near a blue dish rack; bowl is not held and rack is accessible."
+  expected_sequence: "Move to the black bowl, confirm it is visible, pick it up (grasp with a 10s timeout, retry up to 2 times on failure), carry it to the dish rack, and set it into the rack."

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "blue_napkin"
+  destination: "table"
+  expanded_instruction: "Pick up the blue napkin and place it on the table in the empty space directly in front of the cans; if the place-on-top action fails, retry up to 3 times."
+  scene_context: "Blue napkin on table behind bowl; cans on back edge of table; destination space in front of cans is clear."
+  expected_sequence: "Lift the blue napkin, carry it forward, and set it down on the table in front of the cans; if setting down fails, retry the place-on-top action up to 3 times."

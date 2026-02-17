@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "yellow_cup"
+  destination: ""
+  expanded_instruction: "Before navigating, check IS_REACHABLE on the yellow_cup; if reachable, pick up the yellow cup from the table next to the blue tray (if unreachable retry check up to 2 times then report failure)."
+  scene_context: "Yellow cup on table next to blue tray; cup not held; table surface reachable and mostly clear."
+  expected_sequence: "Verify IS_REACHABLE for the yellow_cup, then navigate to the cup, move the arm to the cup, grasp the yellow cup securely and lift it off the table (if grasp fails retry up to 2 times or adjust pose within a 10s timeout)."

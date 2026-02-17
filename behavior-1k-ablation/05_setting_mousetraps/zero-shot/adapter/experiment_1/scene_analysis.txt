@@ -1,0 +1,7 @@
+scene_analysis:
+  target: "mousetrap_1"
+  destination: "sink"
+  expanded_instruction: "Pick up each mousetrap from the cabinet shelf and set it down next to the bathroom sink; for each mousetrap, pick it up, move to the sink, and place it beside the sink so all four end up next to the sink."
+  scene_context: "Mousetraps visible on cabinet shelf; bathroom sink is empty and clear; robot not holding anything."
+  expected_sequence: "Pick up each mousetrap from the shelf one by one and move it to the sink; at the sink, place each mousetrap next to the sink so all four are set down beside the sink."
+Plan:

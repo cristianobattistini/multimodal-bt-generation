@@ -1,0 +1,25 @@
+{
+  "success": false,
+  "bt_success": false,
+  "bddl_goal": false,
+  "ticks": 0,
+  "duration": 0.14343667030334473,
+  "inference_time": 48.55240726470947,
+  "satisfied": [
+    "not(['open', '?electric_refrigerator.n.01_1'])"
+  ],
+  "unsatisfied": [
+    "forall(['?half__apple.n.01', '-', 'half__apple.n.01'], ['inside', '?half__apple.n.01', '?packing_box.n.02_1'])",
+    "inside(?club_sandwich.n.01_1, ?packing_box.n.02_1)",
+    "inside(?chocolate_chip_cookie.n.01_1, ?packing_box.n.02_1)",
+    "inside(?bottle__of__tea.n.01_1, ?packing_box.n.02_1)"
+  ],
+  "task": "12_preparing_lunch_box",
+  "condition": "cot",
+  "model_dir": "smolvlm2",
+  "vlm_model": "smol500",
+  "inference_mode": "adapter",
+  "experiment": 1,
+  "timestamp": "20260215_213024",
+  "reason": "Model generated invalid BT XML. Output contains raw reasoning text (scene_analysis, expanded_instruction) and multiple incomplete Plan blocks instead of a single valid BehaviorTree. BT parser could not extract executable actions (0 ticks, 0.14s duration). No objects were placed."
+}

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "green_bottle"
+  destination: ""
+  expanded_instruction: "Pick up the green bottle from the table in front of the robot; if the grasp fails, retry up to 5 times."
+  scene_context: "Robot not holding anything; green bottle on table near front-center; table clear of obstacles."
+  expected_sequence: "Move to the green bottle, grasp it securely (retry up to 5 times on failure), and lift it off the table."

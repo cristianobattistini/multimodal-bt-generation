@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "long_bread"
+  destination: "sink"
+  expanded_instruction: "Pick up the long bread from the table and place it into the blue sink, retrying the grasp up to 2 times if it fails, with each grasp attempt having a 15s timeout."
+  scene_context: "Blue sink is open and clear; long bread on table near the right side, not held; robot arm nearby."
+  expected_sequence: "Approach and grasp the long bread (each grasp attempt within a 15s timeout, retry up to 2 times if it fails), lift it, move over the sink, and place it inside."

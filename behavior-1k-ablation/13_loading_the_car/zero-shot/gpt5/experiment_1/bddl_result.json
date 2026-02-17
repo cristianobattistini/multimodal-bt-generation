@@ -1,0 +1,21 @@
+{
+  "success": true,
+  "bt_success": true,
+  "bddl_goal": true,
+  "ticks": 1,
+  "duration": 207.4175157546997,
+  "inference_time": 23.32085156440735,
+  "satisfied": [
+    "inside(?container.n.01_1, ?car.n.01_1)",
+    "inside(?digital_camera.n.01_1, ?container.n.01_1)",
+    "inside(?tennis_racket.n.01_1, ?car.n.01_1)"
+  ],
+  "unsatisfied": [],
+  "task": "13_loading_the_car",
+  "condition": "zero-shot",
+  "model_dir": "gpt5",
+  "vlm_model": null,
+  "inference_mode": "openai",
+  "experiment": 4,
+  "timestamp": "20260215_112841"
+}

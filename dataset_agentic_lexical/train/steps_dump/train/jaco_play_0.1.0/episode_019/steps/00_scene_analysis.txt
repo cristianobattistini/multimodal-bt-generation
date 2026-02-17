@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "burger_meat"
+  destination: "oven"
+  expanded_instruction: "Pick up the burger meat patty from the floor and place it inside the open oven."
+  scene_context: "Burger patty on floor near blue seat; oven door open and rack empty and reachable."
+  expected_sequence: "Approach the patty, pick it up, move to the oven, and place it on the oven rack."

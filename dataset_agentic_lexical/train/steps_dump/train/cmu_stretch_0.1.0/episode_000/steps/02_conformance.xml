@@ -1,0 +1,14 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Approach green_garbage_can -->
+      <Action ID="APPROACH" obj="green_garbage_can" />
+      <!-- Navigate to green_garbage_can_lid -->
+      <Action ID="NAVIGATE_TO" obj="green_garbage_can_lid" />
+      <!-- Clamp green_garbage_can_lid -->
+      <Action ID="CLAMP" obj="green_garbage_can_lid" />
+      <!-- Unlock green_garbage_can_lid -->
+      <Action ID="UNLOCK" obj="green_garbage_can_lid" />
+    </Sequence>
+  </BehaviorTree>
+</root>

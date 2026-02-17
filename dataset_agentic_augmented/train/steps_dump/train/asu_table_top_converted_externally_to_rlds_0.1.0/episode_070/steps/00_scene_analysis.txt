@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "blue_bottle"
+  destination: ""
+  expanded_instruction: "Pick up the blue bottle from the table and hold it in the robot gripper; if a grasp fails, retry up to 3 times (within a 10s timeout) and if still unsuccessful, use a push or flip to reposition the bottle before grasping."
+  scene_context: "Blue bottle is on the table near the right side; robot gripper is empty and reachable; table clear."
+  expected_sequence: "Approach the blue bottle, grasp it, lift it, and hold it in the gripper; if grasp fails, retry up to 3 times and then use a push or flip to reposition the object and repeat the grasp."

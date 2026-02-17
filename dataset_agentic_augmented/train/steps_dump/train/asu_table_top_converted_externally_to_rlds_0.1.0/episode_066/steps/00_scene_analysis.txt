@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "green_bottle"
+  destination: "table"
+  expanded_instruction: "Pick up the green bottle from the table and place it closer to the front-left edge of the table; if the place-on-top action fails, retry up to 3 times with a 10s timeout, then use a push to reposition the bottle as a fallback."
+  scene_context: "Green bottle on the table left side, not held; table reachable and no closed containers; robot arm free."
+  expected_sequence: "Move to the green bottle, grasp it, bring it to the front-left area of the table, and place it down; if PLACE_ON_TOP fails after up to 3 retries (10s timeout), use PUSH as the alternative strategy to reposition the object."

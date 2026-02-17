@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "peg"
+  destination: "hole"
+  expanded_instruction: "Navigate to the table (NAVIGATE_TO within a 20s timeout), then insert the peg into the hole on the small white plate on the table."
+  scene_context: "Peg is already held by the robot above a small white plate with a central hole; table is clear."
+  expected_sequence: "After reaching the table (NAVIGATE_TO within a 20s timeout), lower and align the held peg with the hole, then push it down until seated."

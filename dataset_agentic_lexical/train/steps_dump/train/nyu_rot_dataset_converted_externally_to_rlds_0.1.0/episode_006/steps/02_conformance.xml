@@ -1,0 +1,16 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to hanger -->
+      <Action ID="NAVIGATE_TO" obj="hanger"/>
+      <!-- Grasp hanger -->
+      <Action ID="GRASP" obj="hanger"/>
+      <!-- Navigate to rod -->
+      <Action ID="NAVIGATE_TO" obj="rod"/>
+      <!-- Hang hanger on rod -->
+      <Action ID="HANG" obj="rod"/>
+      <!-- Release -->
+      <Action ID="RELEASE"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

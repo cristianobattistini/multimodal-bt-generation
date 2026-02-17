@@ -1,0 +1,138 @@
+ scene_analysis:
+  target: sandal_1
+  destination: nightstand
+  expanded_instruction: Move the blue sandal from the bed onto the white nightstand next to the white chair, then place the first sandal next to the bed and the second sandal next to the white chair.
+Plan:
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to sandal_1 -->
+      <Action ID="NAVIGATE_TO" obj="sandal_1" />
+      <!-- Grasp sandal_1 -->
+      <Action ID="GRASP" obj="sandal_1" />
+      <!-- Place on top of nightstand -->
+      <Action ID="PLACE_ON_TOP" obj="nightstand" />
+      <!-- Navigate to sandal_2 -->
+      <Action ID="NAVIGATE_TO" obj="sandal_2" />
+      <!-- Grasp sandal_2 -->
+      <Action ID="GRASP" obj="sandal_2" />
+      <!-- Place on top of nightstand -->
+      <Action ID="PLACE_ON_TOP" obj="nightstand" />
+      <!-- Navigate to sandal_3 -->
+      <Action ID="NAVIGATE_TO" obj="sandal_3" />
+      <!-- Grasp sandal_3 -->
+      <Action ID="GRASP" obj="sandal_3" />
+      <!-- Place on top of nightstand -->
+      <Action ID="PLACE_ON_TOP" obj="nightstand" />
+      <!-- Navigate to sandal_4 -->
+      <Action ID="NAVIGATE_TO" obj="sandal_4" />
+      <!-- Grasp sandal_4 -->
+      <Action ID="GRASP" obj="sandal_4" />
+      <!-- Place on top of nightstand -->
+      <Action ID="PLACE_ON_TOP" obj="nightstand" />
+      <!-- Navigate to sandal_5 -->
+      <Action ID="NAVIGATE_TO" obj="sandal_5" />
+      <!-- Grasp sandal_5 -->
+      <Action ID="GRASP" obj="sandal_5" />
+      <!-- Place on top of nightstand -->
+      <Action ID="PLACE_ON_TOP" obj="nightstand" />
+      <!-- Navigate to sandal_6 -->
+      <Action ID="NAVIGATE_TO" obj="sandal_6" />
+      <!-- Grasp sandal_6 -->
+      <Action ID="GRASP" obj="sandal_6" />
+      <!-- Place on top of nightstand -->
+      <Action ID="PLACE_ON_TOP" obj="nightstand" />
+      <!-- Navigate to sandal_7 -->
+      <Action ID="NAVIGATE_TO" obj="sandal_7" />
+      <!-- Grasp sandal_7 -->
+      <Action ID="GRASP" obj="sandal_7" />
+      <!-- Place on top of nightstand -->
+      <Action ID="PLACE_ON_TOP" obj="nightstand" />
+      <!-- Navigate to sandal_8 -->
+      <Action ID="NAVIGATE_TO" obj="sandal_8" />
+      <!-- Grasp sandal_8 -->
+      <Action ID="GRASP" obj="sandal_8" />
+      <!-- Place on top of nightstand -->
+      <Action ID="PLACE_ON_TOP" obj="nightstand" />
+      <!-- Navigate to sandal_9 -->
+      <Action ID="NAVIGATE_TO" obj="sandal_9" />
+      <!-- Grasp sandal_9 -->
+      <Action ID="GRASP" obj="sandal_9" />
+      <!-- Place on top of nightstand -->
+      <Action ID="PLACE_ON_TOP" obj="nightstand" />
+      <!-- Navigate to sandal_10 -->
+      <Action ID="NAVIGATE_TO" obj="sandal_10" />
+      <!-- Grasp sandal_10 -->
+      <Action ID="GRASP" obj="sandal_10" />
+      <!-- Place on top of nightstand -->
+      <Action ID="PLACE_ON_TOP" obj="nightstand" />
+      <!-- Navigate to sandal_11 -->
+      <Action ID="NAVIGATE_TO" obj="sandal_11" />
+      <!-- Grasp sandal_11 -->
+      <Action ID="GRASP" obj="sandal_11" />
+      <!-- Place on top of nightstand -->
+      <Action ID="PLACE_ON_TOP" obj="nightstand" />
+      <!-- Navigate to sandal_12 -->
+      <Action ID="NAVIGATE_TO" obj="sandal_12" />
+      <!-- Grasp sandal_12 -->
+      <Action ID="GRASP" obj="sandal_12" />
+      <!-- Place on top of nightstand -->
+      <Action ID="PLACE_ON_TOP" obj="nightstand" />
+      <!-- Navigate to sandal_13 -->
+      <Action ID="NAVIGATE_TO" obj="sandal_13" />
+      <!-- Grasp sandal_13 -->
+      <Action ID="GRASP" obj="sandal_13" />
+      <!-- Place on top of nightstand -->
+      <Action ID="PLACE_ON_TOP" obj="nightstand" />
+      <!-- Navigate to sandal_14 -->
+      <Action ID="NAVIGATE_TO" obj="sandal_14" />
+      <!-- Grasp sandal_14 -->
+      <Action ID="GRASP" obj="sandal_14" />
+      <!-- Place on top of nightstand -->
+      <Action ID="PLACE_ON_TOP" obj="nightstand" />
+      <!-- Navigate to sandal_15 -->
+      <Action ID="NAVIGATE_TO" obj="sandal_15" />
+      <!-- Grasp sandal_15 -->
+      <Action ID="GRASP" obj="sandal_15" />
+      <!-- Place on top of nightstand -->
+      <Action ID="PLACE_ON_TOP" obj="nightstand" />
+      <!-- Navigate to sandal_16 -->
+      <Action ID="NAVIGATE_TO" obj="sandal_16" />
+      <!-- Grasp sandal_16 -->
+      <Action ID="GRASP" obj="sandal_16" />
+      <!-- Place on top of nightstand -->
+      <Action ID="PLACE_ON_TOP" obj="nightstand" />
+      <!-- Navigate to sandal_17 -->
+      <Action ID="NAVIGATE_TO" obj="sandal_17" />
+      <!-- Grasp sandal_17 -->
+      <Action ID="GRASP" obj="sandal_17" />
+      <!-- Place on top of nightstand -->
+      <Action ID="PLACE_ON_TOP" obj="nightstand" />
+      <!-- Navigate to sandal_18 -->
+      <Action ID="NAVIGATE_TO" obj="sandal_18" />
+      <!-- Grasp sandal_18 -->
+      <Action ID="GRASP" obj="sandal_18" />
+      <!-- Place on top of nightstand -->
+      <Action ID="PLACE_ON_TOP" obj="nightstand" />
+      <!-- Navigate to sandal_19 -->
+      <Action ID="NAVIGATE_TO" obj="sandal_19" />
+      <!-- Grasp sandal_19 -->
+      <Action ID="GRASP" obj="sandal_19" />
+      <!-- Place on top of nightstand -->
+      <Action ID="PLACE_ON_TOP" obj="nightstand" />
+      <!-- Navigate to sandal_20 -->
+      <Action ID="NAVIGATE_TO" obj="sandal_20" />
+      <!-- Grasp sandal_20 -->
+      <Action ID="GRASP" obj="sandal_20" />
+      <!-- Place on top of nightstand -->
+      <Action ID="PLACE_ON_TOP" obj="nightstand" />
+      <!-- Navigate to sandal_21 -->
+      <Action ID="NAVIGATE_TO" obj="sandal_21" />
+      <!-- Grasp sandal_21 -->
+      <Action ID="GRASP" obj="sandal_21" />
+      <!-- Place on top of nightstand -->
+      <Action ID="PLACE_ON_TOP" obj="nightstand" />
+      <!-- Navigate to sandal_22 -->
+      <Action ID="NAVIGATE_TO" obj="sandal_22" />
+      <!-- Grasp sandal_22 -->
+      <Action ID="GRASP" obj="sandal_22

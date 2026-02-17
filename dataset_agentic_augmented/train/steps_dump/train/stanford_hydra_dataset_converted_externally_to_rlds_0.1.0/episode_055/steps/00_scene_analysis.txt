@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "dishes"
+  destination: "dish_rack"
+  expanded_instruction: "Pick up the dishes (yellow plate) from the counter and place them into the dish rack, retrying the place action up to 3 times if it fails."
+  scene_context: "Yellow plate on counter and grasped by robot; dish_rack is open and mostly empty; cup on towel beside rack."
+  expected_sequence: "Carry the plate to the dish_rack and insert it into an upright slot (if placing inside fails, retry up to 3 times); leave the cup on the towel."

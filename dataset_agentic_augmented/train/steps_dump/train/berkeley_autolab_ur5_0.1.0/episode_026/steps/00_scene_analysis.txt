@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "ranch_bottle"
+  destination: "pot"
+  expanded_instruction: "Use an ApproachRanchBottle subtree to approach and pick up the ranch bottle from the table, then place it into the metal pot on the table. If the grasp fails, retry up to 2 times."
+  scene_context: "Ranch bottle on table near a metal pot; pot is open and reachable; bottle not held."
+  expected_sequence: "ApproachRanchBottle subtree: reach to the ranch bottle, grasp it (retry up to 2 times on failure), lift it, move over the pot, and place it into the pot."

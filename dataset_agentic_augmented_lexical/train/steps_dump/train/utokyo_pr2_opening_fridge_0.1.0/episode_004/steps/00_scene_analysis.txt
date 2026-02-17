@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "fridge_door"
+  destination: ""
+  expanded_instruction: "Open the white fridge door on the cabinet by pulling the door handle until the door is open. Before grasping, check that fridge_door is IS_GRASPABLE (retry up to 3 times within a 10s timeout); if grasp fails, use a push or flip maneuver to reposition the door and try again."
+  scene_context: "Fridge is closed; robot arm positioned in front with gripper near the right-side door handle."
+  expected_sequence: "Move the arm to the handle, check IS_GRASPABLE on fridge_door, then grasp and pull the door outward until the fridge is open. If grasp fails (retry up to 3 times), use PUSH or FLIP to reposition the door and retry."

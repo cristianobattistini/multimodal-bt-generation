@@ -1,0 +1,1 @@
+move green rice chip bag near rxbar blueberry. Check if reachable and use a 20 second timeout for navigation.

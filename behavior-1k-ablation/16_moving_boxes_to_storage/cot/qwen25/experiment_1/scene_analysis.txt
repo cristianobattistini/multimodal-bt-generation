@@ -1,0 +1,7 @@
+scene_analysis:
+  target: "["door", "storage_container_1", "storage_container_2"]"
+  destination: "garage_floor"
+  expanded_instruction: "Open the door (if closed, reach to its handle and pull it open); then navigate to each storage container (reach to the handles or latches, and attempt to grasp and lift the containers), move to the garage floor, and set the containers down."
+  scene_context: "Door is closed with visible handle; both storage containers reachable; garage_floor area clear; no containers held."
+  expected_sequence: "Open the door (reach to the door handle and pull it open) and reach to each storage container (reach to the handles/latches) one by one, attempt to grasp and lift each container, move over the garage floor, and set the containers down."
+Plan:

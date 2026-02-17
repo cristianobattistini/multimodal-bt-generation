@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "tennis_ball"
+  destination: ""
+  expanded_instruction: "First check that the small_bowl is reachable; then navigate to the side table next to the black shelf (NAVIGATE_TO within a 10s timeout) and pick up the yellow tennis ball from the small bowl."
+  scene_context: "Bowl on side table contains tennis balls and is open; ball is not held and table area is reachable."
+  expected_sequence: "Check IS_REACHABLE on small_bowl; NAVIGATE_TO the side table next to the black shelf (within 10s timeout); move the arm to the bowl, grasp a tennis ball, and lift it clear from the bowl."

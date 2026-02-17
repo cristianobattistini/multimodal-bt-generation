@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "sponge"
+  destination: "counter"
+  expanded_instruction: "Check IS_GRASPABLE on the sponge before grasping; if graspable, pick the sponge from the middle_drawer and place it on the counter. If not graspable or grasp fails, retry up to 3 times (within 10s) or push to reposition and then grasp."
+  scene_context: "Middle drawer is open with the sponge inside; counter is reachable and mostly clear."
+  expected_sequence: "Verify IS_GRASPABLE on sponge; if true, reach into the middle drawer, grasp and lift the sponge, move to the counter, and set it down. If grasp fails, retry up to 3 times (within 10s) or push to reposition and then grasp."

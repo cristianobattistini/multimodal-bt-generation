@@ -1,0 +1,8 @@
+scene_analysis:
+  target: "sack"
+  destination: "electric_refrigerator"
+  expanded_instruction: "Pick up the sack seen in the open trunk of the red car, take it to the electric_refrigerator and place it beside the fridge. Immediately open the electric_refrigerator with empty hands. Then pick up the beefsteak_tomato and place it inside the electric_refrigerator. Next, pick up the carton_of_milk and place it inside the electric_refrigerator. Finally, close the electric_refrigerator and then go to the car and close it."
+  scene_context: "The car trunk is open with a sack inside. The robot's hands are empty. The electric_refrigerator is closed."
+  expected_sequence: "Navigate to the sack, grasp it, navigate to the electric_refrigerator, place the sack next to the fridge, immediately open the fridge, navigate to the beefsteak_tomato, grasp it, navigate to the fridge, place it inside, navigate to the carton_of_milk, grasp it, navigate to the fridge, place it inside, close the fridge, navigate to the car, close the car."
+
+Plan:

@@ -1,0 +1,8 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <Action ID="NAVIGATE_TO" obj="hardback"/>
+      <Action ID="GRASP" obj="hardback"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

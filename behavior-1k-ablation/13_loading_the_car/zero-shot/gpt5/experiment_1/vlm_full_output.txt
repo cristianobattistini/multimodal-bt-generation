@@ -1,0 +1,27 @@
+scene_analysis:
+  target: "car"
+  destination: "car_trunk"
+  expanded_instruction: "The car is in the garage and its trunk is visibly closed. First, go to the car and open the trunk. Then, from the living room, put the digital_camera inside the container, and load both the container and the tennis_racket into the car trunk. Finally, close the car."
+  scene_context: "Car parked in the garage with trunk closed (seen). Tennis_racket and digital_camera are on a living room table; container is on the living room floor."
+  expected_sequence: "Navigate to the car and open the trunk. Go to the digital_camera, pick it up, go to the container, and place the camera inside the container. Pick up the container, go to the car, and place it in the trunk. Then pick up the tennis_racket, go to the car, and place it in the trunk. Close the car."
+Plan:
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence name="load_items_into_car">
+      <NAVIGATE_TO obj="car"/>
+      <OPEN obj="car"/>
+      <NAVIGATE_TO obj="digital_camera"/>
+      <GRASP obj="digital_camera"/>
+      <NAVIGATE_TO obj="container"/>
+      <PLACE_INSIDE obj="digital_camera"/>
+      <GRASP obj="container"/>
+      <NAVIGATE_TO obj="car"/>
+      <PLACE_INSIDE obj="container"/>
+      <NAVIGATE_TO obj="tennis_racket"/>
+      <GRASP obj="tennis_racket"/>
+      <NAVIGATE_TO obj="car"/>
+      <PLACE_INSIDE obj="tennis_racket"/>
+      <CLOSE obj="car"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

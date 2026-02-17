@@ -1,0 +1,10 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to cloth -->
+      <Action ID="NAVIGATE_TO" obj="cloth"/>
+      <!-- Push cloth diagonally forward to rest on the table in front of the spoon -->
+      <Action ID="PUSH" obj="cloth"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "white_box"
+  destination: "sink"
+  expanded_instruction: "Pick up the white_box from the upper back shelf and place it into the sink on the counter."
+  scene_context: "White_box on upper back shelf; sink open and empty on counter; robot arm not holding anything."
+  expected_sequence: "Move to the white_box, grasp it, carry it over the sink, and set it down inside."

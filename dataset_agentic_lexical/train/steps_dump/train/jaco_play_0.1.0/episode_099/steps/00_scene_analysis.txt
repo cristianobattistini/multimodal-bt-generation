@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "gray_bowl"
+  destination: "sink"
+  expanded_instruction: "Pick up the gray bowl with the robot arm and place it inside the sink"
+  scene_context: "Gray bowl is held by the robot arm above the workspace; sink is open and clear."
+  expected_sequence: "Move the bowl over the sink and lower it into the sink."

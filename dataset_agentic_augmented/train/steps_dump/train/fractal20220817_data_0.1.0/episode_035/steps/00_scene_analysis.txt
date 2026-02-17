@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "orange"
+  destination: "counter"
+  expanded_instruction: "Pick the orange from the open top drawer and place it on the counter next to the plate, first checking IS_HOLDING on the counter to ensure the spot is free and retrying the placement up to 3 times if PLACE_ON_TOP fails."
+  scene_context: "Top drawer is open with an orange inside; counter with plate is clear and reachable; orange not held."
+  expected_sequence: "Reach into the open top drawer, grasp and lift the orange out, then check IS_HOLDING on the counter and attempt PLACE_ON_TOP to put the orange down by the plate; if PLACE_ON_TOP fails, retry up to 3 times."

@@ -1,0 +1,23 @@
+{
+  "success": false,
+  "bt_success": true,
+  "bddl_goal": false,
+  "ticks": 1,
+  "duration": 208.75485801696777,
+  "inference_time": 90.78037786483765,
+  "satisfied": [
+    "not(['open', 'car.n.01_1'])",
+    "not(['open', 'electric_refrigerator.n.01_1'])"
+  ],
+  "unsatisfied": [
+    "exists(['?electric_refrigerator.n.01', '-', 'electric_refrigerator.n.01'], ['and', ['inside', '?beefsteak_tomato.n.01_1', '?electric_refrigerator.n.01'], ['inside', '?carton__of__milk.n.01_1', '?electric_refrigerator.n.01']])"
+  ],
+  "task": "14_carrying_in_groceries",
+  "condition": "zero-shot",
+  "model_dir": "adapter",
+  "vlm_model": "gemma",
+  "inference_mode": "adapter",
+  "experiment": 1,
+  "timestamp": "20260215_155022",
+  "reason": "Tomato placed NEXT_TO car instead of INSIDE fridge. OPEN fridge after PLACE_INSIDE (wrong order). Uses non-existent milk object. Sack placed INSIDE fridge instead of NEXT_TO."
+}

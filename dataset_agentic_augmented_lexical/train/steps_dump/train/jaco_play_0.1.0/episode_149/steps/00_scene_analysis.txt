@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "milk_dairy"
+  destination: "sink"
+  expanded_instruction: "Pick up the milk dairy carton from the floor near the blue basin and place it inside the sink; retry actions up to 3 times within a 10s timeout, and if PLACE_INSIDE fails use a PUSH maneuver to reposition the carton as an alternative."
+  scene_context: "Milk dairy carton upright near the blue sink; sink is empty and reachable; milk not held."
+  expected_sequence: "Approach the milk dairy, pick it up, carry it to the sink, and place it inside; if placement fails retry (up to 3 times, 10s timeout) and use PUSH to reposition the object as a fallback."

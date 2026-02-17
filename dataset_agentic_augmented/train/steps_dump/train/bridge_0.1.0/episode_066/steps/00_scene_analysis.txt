@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "pot"
+  destination: "yellow_cloth"
+  expanded_instruction: "Pick up the pot from the table and place it on the yellow cloth on the table, using a grasp with a 10s timeout that will be retried up to 3 times if it fails (reposition the pot between attempts if needed)."
+  scene_context: "Pot resting on table to the right of a folded yellow cloth; pot not held; table surface mostly clear."
+  expected_sequence: "Reach the pot, attempt a grasp (within a 10s timeout; retry up to 3 times, repositioning if grasp fails), lift it, move it over the yellow cloth, and set it down on the cloth."

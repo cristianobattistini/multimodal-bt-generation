@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "cloth"
+  destination: "cucumber"
+  expanded_instruction: "Pick up the cloth from the table edge and place it next to the cucumber on the table; if a grasp fails, retry up to 3 times and then use a push or flip to reposition the cloth beside the cucumber."
+  scene_context: "Cloth on table edge, cucumber on same table, metal bowl nearby, nothing is held, table surface reachable."
+  expected_sequence: "Reach the cloth at the table edge, lift it, move to the cucumber, and set the cloth down beside the cucumber; if grasping fails, retry up to 3 times, then use push or flip to reposition the cloth before placing it."

@@ -1,0 +1,14 @@
+{
+  "decorator_type": "subtree",
+  "mixed_subtype": null,
+  "target_action_id": "NAVIGATE_TO",
+  "target_obj": "green_garbage_can_lid",
+  "parameters": {
+    "subtree_name": "ApproachGreenGarbageCanLid",
+    "action_indices": [
+      0,
+      1
+    ]
+  },
+  "prompt_name": "subtree"
+}

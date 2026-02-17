@@ -1,0 +1,1 @@
+Pick the disk. Only navigate to black_shelf if it is visible.

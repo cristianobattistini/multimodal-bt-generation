@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "milk_dairy"
+  destination: ""
+  expanded_instruction: "Check that the milk dairy carton on the white plate is visible, then pick it up from the plate; attempt the grasp (retry up to 3 times or within a 10s timeout), and if grasp fails, push or flip the carton to reposition before trying again."
+  scene_context: "Milk dairy carton on a white plate on the table; plate reachable; robot not holding it; no closed containers."
+  expected_sequence: "Move to the plate, verify milk_dairy IS_VISIBLE, attempt to grasp the milk dairy carton (retry up to 3 times or within 10s); if grasp fails, use PUSH and FLIP to reposition the carton, then grasp and lift it clear of the plate."

@@ -1,0 +1,22 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Move to pepsi_can -->
+      <Action ID="MOVE_TO" obj="pepsi_can" />
+      <!-- Check pepsi_can is visible before GRASP -->
+      <Condition ID="IS_VISIBLE" obj="pepsi_can" />
+      <!-- Retry GRASP pepsi_can up to 2 attempts -->
+      <RetryUntilSuccessful num_attempts="2">
+        <!-- Timeout: GRASP pepsi_can within 10s -->
+        <Timeout msec="10000">
+          <!-- Grasp pepsi_can -->
+          <Action ID="PICK" obj="pepsi_can" />
+        </Timeout>
+      </RetryUntilSuccessful>
+      <!-- Pick pepsi_can -->
+      <Action ID="APPROACH" obj="7up_can" />
+      <!-- Approach 7up_can -->
+      <Action ID="PLACE_NEXT_TO" obj="7up_can" />
+    </Sequence>
+  </BehaviorTree>
+</root>

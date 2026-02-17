@@ -1,0 +1,1 @@
+Put apple in pot. Retry placing inside up to 5 times if it fails.

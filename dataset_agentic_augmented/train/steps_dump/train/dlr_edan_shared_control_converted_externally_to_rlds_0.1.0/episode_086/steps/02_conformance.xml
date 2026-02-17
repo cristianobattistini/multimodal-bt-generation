@@ -1,0 +1,16 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to black_cabinet_top -->
+      <Action ID="NAVIGATE_TO" obj="black_cabinet_top" />
+      <!-- Navigate to red_mug -->
+      <Action ID="NAVIGATE_TO" obj="red_mug" />
+      <Sequence>
+        <!-- Check red_mug is graspable before GRASP -->
+        <Condition ID="IS_GRASPABLE" obj="red_mug" />
+        <!-- Grasp red_mug -->
+        <Action ID="GRASP" obj="red_mug" />
+      </Sequence>
+    </Sequence>
+  </BehaviorTree>
+</root>

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "pear"
+  destination: "bowl_cardboardfence"
+  expanded_instruction: "Check that the pear is graspable, then pick it up (grasp with a 10s timeout, retry up to 2 times if it fails) and place it into the blue bowl on the cardboardfence"
+  scene_context: "Pear on tray near back edge; blue bowl on left is empty; cardboard fence upright and reachable."
+  expected_sequence: "Reach to the pear, check it's graspable, pick it up (grasp within a 10s timeout, retry up to 2 times on failure), carry it to the blue bowl at the cardboardfence, and set it inside."

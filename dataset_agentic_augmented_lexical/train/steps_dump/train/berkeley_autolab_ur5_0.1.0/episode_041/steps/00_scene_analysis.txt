@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "ranch_bottle"
+  destination: "pot"
+  expanded_instruction: "Pick up the ranch bottle from the table and place it into the pot. Before navigating to the pot, check that the pot is visible (retry up to 3 times within a 10s timeout); if not visible, reposition and retry."
+  scene_context: "Ranch bottle lying on table left of an open metal pot; pot empty, reachable, and unobstructed; bottle not held."
+  expected_sequence: "Move to the ranch bottle, grasp and lift it, check IS_VISIBLE on the pot before navigating (retry up to 3 times within a 10s timeout and reposition if needed), move over the pot, and place the bottle into the pot."

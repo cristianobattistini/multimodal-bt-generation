@@ -1,0 +1,25 @@
+{
+  "success": false,
+  "bt_success": true,
+  "bddl_goal": false,
+  "ticks": 1,
+  "duration": 80.08450031280518,
+  "inference_time": 60.663813829422,
+  "satisfied": [
+    "forall(['?half__apple.n.01', '-', 'half__apple.n.01'], ['inside', '?half__apple.n.01', '?packing_box.n.02_1'])",
+    "inside(?bottle__of__tea.n.01_1, ?packing_box.n.02_1)",
+    "not(['open', '?electric_refrigerator.n.01_1'])"
+  ],
+  "unsatisfied": [
+    "inside(?club_sandwich.n.01_1, ?packing_box.n.02_1)",
+    "inside(?chocolate_chip_cookie.n.01_1, ?packing_box.n.02_1)"
+  ],
+  "task": "12_preparing_lunch_box",
+  "condition": "zero-shot",
+  "model_dir": "qwen25",
+  "vlm_model": "qwen",
+  "inference_mode": "adapter",
+  "experiment": 3,
+  "timestamp": "20260215_222425",
+  "reason": "BT is structurally correct — places all 5 objects in packing_box and opens/closes refrigerator. However, club_sandwich and chocolate_chip_cookie were displaced by physics during execution (objects did not retain Inside predicate at evaluation time). Execution failure, not planning failure."
+}

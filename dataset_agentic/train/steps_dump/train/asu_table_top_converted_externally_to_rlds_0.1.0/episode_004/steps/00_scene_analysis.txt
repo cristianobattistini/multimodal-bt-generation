@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "brown_object"
+  destination: "table"
+  expanded_instruction: "Pick up the brown object from the left side of the table and place it down on the table surface."
+  scene_context: "Brown object on left side of table, not held; table holds other bottles and is otherwise clear; no closed containers."
+  expected_sequence: "Approach the brown object, grasp it, move slightly and set it down on the table surface."

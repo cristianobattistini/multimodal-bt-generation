@@ -1,0 +1,23 @@
+{
+  "success": false,
+  "bt_success": false,
+  "bddl_goal": false,
+  "ticks": 1,
+  "duration": 173.51319456100464,
+  "inference_time": 59.70149612426758,
+  "satisfied": [
+    "not(['open', 'car.n.01_1'])"
+  ],
+  "unsatisfied": [
+    "exists(['?electric_refrigerator.n.01', '-', 'electric_refrigerator.n.01'], ['and', ['inside', '?beefsteak_tomato.n.01_1', '?electric_refrigerator.n.01'], ['inside', '?carton__of__milk.n.01_1', '?electric_refrigerator.n.01']])",
+    "not(['open', 'electric_refrigerator.n.01_1'])"
+  ],
+  "task": "14_carrying_in_groceries",
+  "condition": "cot",
+  "model_dir": "qwen25",
+  "vlm_model": "qwen",
+  "inference_mode": "adapter",
+  "experiment": 3,
+  "timestamp": "20260215_163709",
+  "reason": "Overly complex plan with redundant navigations. Uses non-existent milk object. Sack placed inside fridge (wrong). CoT degraded performance vs zero-shot."
+}

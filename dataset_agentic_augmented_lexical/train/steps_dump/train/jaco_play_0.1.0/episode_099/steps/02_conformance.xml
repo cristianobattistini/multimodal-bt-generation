@@ -1,0 +1,13 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to sink -->
+      <Action ID="NAVIGATE_TO" obj="sink" />
+      <!-- Retry PLACE_INSIDE sink up to 4 attempts -->
+      <RetryUntilSuccessful num_attempts="4">
+        <!-- Place inside sink -->
+        <Action ID="PUT_IN" obj="sink" />
+      </RetryUntilSuccessful>
+    </Sequence>
+  </BehaviorTree>
+</root>

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "blue_pen"
+  destination: ""
+  expanded_instruction: "Avoid the book_stack obstacle and reach into the black pen_holder to pick up the blue pen on the table; if grasp fails, retry up to 3 times and then push or flip the pen to reposition before trying again."
+  scene_context: "Blue pen upright in a black holder on the table; a vertical book_stack blocks a straight approach; nothing is held; table clear otherwise."
+  expected_sequence: "Move around the book_stack to the side and reach into the pen_holder to grasp the blue_pen; if grasp fails, retry then use PUSH or FLIP to reposition the pen and grasp it."

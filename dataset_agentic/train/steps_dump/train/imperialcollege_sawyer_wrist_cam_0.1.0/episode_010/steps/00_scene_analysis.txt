@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "bottle"
+  destination: ""
+  expanded_instruction: "Find the bottle, grasp it, and remove or twist off the cap to open it"
+  scene_context: "No bottle is visible in the frames; no containers are open and nothing is held."
+  expected_sequence: "Locate the bottle, pick it up, then twist and remove the cap to open it."

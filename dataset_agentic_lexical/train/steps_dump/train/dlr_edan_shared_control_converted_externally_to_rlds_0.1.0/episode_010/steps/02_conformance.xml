@@ -1,0 +1,10 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to tube -->
+      <Action ID="NAVIGATE_TO" obj="tube" />
+      <!-- Grip tube -->
+      <Action ID="GRIP" obj="tube" />
+    </Sequence>
+  </BehaviorTree>
+</root>

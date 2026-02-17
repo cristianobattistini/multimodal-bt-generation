@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "can"
+  destination: ""
+  expanded_instruction: "Grasp the can resting on the blue surface; if grasp fails, retry up to 3 times (within 10s), then use push or flip to reposition and attempt the grasp again."
+  scene_context: "Several round cans on a blue panel; none are held and the surface is clear."
+  expected_sequence: "Move to the can on the blue surface and grasp it; if grasp fails after up to 3 retries (within 10s), push or flip to reposition and then grasp."

@@ -1,0 +1,23 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Execute subtree ApproachWhiteBox -->
+      <SubTree ID="ApproachWhiteBox" />
+      <!-- Navigate to sink -->
+      <Action ID="NAVIGATE_TO" obj="sink" />
+      <!-- Place inside sink -->
+      <Action ID="PLACE_INSIDE" obj="sink" />
+      <!-- Release -->
+      <Action ID="RELEASE" />
+    </Sequence>
+  </BehaviorTree>
+  <!-- Subtree definition ApproachWhiteBox -->
+  <BehaviorTree ID="ApproachWhiteBox">
+    <Sequence>
+      <!-- Navigate to white_box -->
+      <Action ID="NAVIGATE_TO" obj="white_box" />
+      <!-- Grasp white_box -->
+      <Action ID="GRASP" obj="white_box" />
+    </Sequence>
+  </BehaviorTree>
+</root>

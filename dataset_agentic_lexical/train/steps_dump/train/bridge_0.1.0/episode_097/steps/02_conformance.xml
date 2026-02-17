@@ -1,0 +1,16 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Go to metal_pot -->
+      <Action ID="GO_TO" obj="metal_pot" />
+      <!-- Grip metal_pot -->
+      <Action ID="GRIP" obj="metal_pot" />
+      <!-- Rotate flip metal_pot -->
+      <Action ID="ROTATE_FLIP" obj="metal_pot" />
+      <!-- Move to cardboard_fence -->
+      <Action ID="MOVE_TO" obj="cardboard_fence" />
+      <!-- Place metal_pot inside cardboard_fence -->
+      <Action ID="PLACE_INSIDE" obj="metal_pot" container="cardboard_fence" />
+    </Sequence>
+  </BehaviorTree>
+</root>

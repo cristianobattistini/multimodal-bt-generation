@@ -1,0 +1,51 @@
+ scene_analysis:
+  target: drill
+  destination: toolbox
+  expanded_instruction: "Open the toolbox and put all five tools (drill, pliers, flashlight, allen_wrench, screwdriver) into the toolbox."
+  scene_context: "Toolbox is closed and on the table; tools are visible and not held."
+  expected_sequence: "Open the toolbox, pick up each tool, place them into the toolbox, and close the toolbox."
+Plan:
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to toolbox -->
+      <Action ID="NAVIGATE_TO" obj="toolbox" />
+      <!-- Open toolbox -->
+      <Action ID="OPEN" obj="toolbox" />
+      <!-- Place tools into toolbox -->
+      <Action ID="PLACE_INSIDE" obj="tools" />
+      <!-- Close toolbox -->
+      <Action ID="CLOSE" obj="toolbox" />
+    </Sequence>
+  </Root>
+  <!-- Navigate to table -->
+  <Action ID="NAVIGATE_TO" obj="table" />
+  <!-- Open table -->
+  <Action ID="OPEN" obj="table" />
+  <!-- Navigate to drill -->
+  <Action ID="NAVIGATE_TO" obj="drill" />
+  <!-- Open drill -->
+  <Action ID="OPEN" obj="drill" />
+  <!-- Navigate to pliers -->
+  <Action ID="NAVIGATE_TO" obj="pliers" />
+  <!-- Open pliers -->
+  <Action ID="OPEN" obj="pliers" />
+  <!-- Navigate to flashlight -->
+  <Action ID="NAVIGATE_TO" obj="flashlight" />
+  <!-- Open flashlight -->
+  <Action ID="OPEN" obj="flashlight" />
+  <!-- Navigate to allen_wrench -->
+  <Action ID="NAVIGATE_TO" obj="allen_wrench" />
+  <!-- Open allen_wrench -->
+  <Action ID="OPEN" obj="allen_wrench" />
+  <!-- Navigate to screwdriver -->
+  <Action ID="NAVIGATE_TO" obj="screwdriver" />
+  <!-- Open screwdriver -->
+  <Action ID="OPEN" obj="screwdriver" />
+  <!-- Navigate to toolbox -->
+  <Action ID="NAVIGATE_TO" obj="toolbox" />
+  <!-- Place tools into toolbox -->
+  <Action ID="PLACE_INSIDE" obj="tools" />
+  <!-- Close toolbox -->
+  <Action ID="CLOSE" obj="toolbox" />
+</Root>

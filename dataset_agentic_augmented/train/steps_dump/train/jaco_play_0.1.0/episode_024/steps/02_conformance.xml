@@ -1,0 +1,22 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to milk_dairy -->
+      <Action ID="NAVIGATE_TO" obj="milk_dairy" />
+      <!-- Fallback: if GRASP milk_dairy fails, try alternative to reposition -->
+      <Fallback>
+        <!-- Retry GRASP milk_dairy up to 3 attempts -->
+        <RetryUntilSuccessful num_attempts="3">
+          <!-- Grasp milk_dairy -->
+          <Action ID="GRASP" obj="milk_dairy" />
+        </RetryUntilSuccessful>
+        <Sequence>
+          <!-- Push milk_dairy forward toward front edge of table -->
+          <Action ID="PUSH" obj="milk_dairy" />
+          <!-- Grasp milk_dairy -->
+          <Action ID="GRASP" obj="milk_dairy" />
+        </Sequence>
+      </Fallback>
+    </Sequence>
+  </BehaviorTree>
+</root>

@@ -1,0 +1,18 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to pan -->
+      <Action ID="NAVIGATE_TO" obj="pan" />
+      <Sequence>
+        <!-- Check pan is reachable before GRASP -->
+        <Condition ID="IS_REACHABLE" obj="pan" />
+        <!-- Grasp pan -->
+        <Action ID="GRASP" obj="pan" />
+      </Sequence>
+      <!-- Navigate to bottle -->
+      <Action ID="NAVIGATE_TO" obj="bottle" />
+      <!-- Place next to bottle -->
+      <Action ID="PLACE_NEXT_TO" obj="bottle" />
+    </Sequence>
+  </BehaviorTree>
+</root>

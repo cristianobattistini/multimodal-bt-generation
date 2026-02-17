@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "lid"
+  destination: ""
+  expanded_instruction: "Lift up the lid from the pot on the counter"
+  scene_context: "Pot with lid sits on a cooker on the table; lid closed; robot arm not holding anything."
+  expected_sequence: "Move the arm to the pot, grasp the lid handle, and lift the lid off the pot."

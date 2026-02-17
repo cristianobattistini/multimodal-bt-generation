@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "cocacola_bottle"
+  destination: ""
+  expanded_instruction: "Push the cocacola bottle on the front-center of the table a short distance forward toward the table edge."
+  scene_context: "Table clear aside from several bottles/cans; cocacola_bottle upright near front-center and not held; robot arm above table."
+  expected_sequence: "Move the arm to contact the cocacola_bottle and push it forward toward the table edge."

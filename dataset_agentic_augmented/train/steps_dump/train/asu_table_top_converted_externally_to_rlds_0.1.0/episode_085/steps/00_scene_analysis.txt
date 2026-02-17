@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "yellow_object"
+  destination: "table"
+  expanded_instruction: "Check that the yellow object in the front row is visible, then pick it up and place it at the table center. Retry the grasp up to 3 times (10s timeout each); if a grasp fails, use a push or flip to reposition the object and try again before placing it."
+  scene_context: "Yellow object on front row of table, table clear, object not held, no containers open."
+  expected_sequence: "Approach the yellow object, verify IS_VISIBLE, attempt to pick it up (retry up to 3 times with 10s timeout); if grasp fails, use PUSH or FLIP to reposition the object and then pick it up, move to the table center, and place it down."

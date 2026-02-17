@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "white_box"
+  destination: "table"
+  expanded_instruction: "Confirm the robot is holding the white box (check IS_HOLDING) and place the box down onto the table surface, retrying the place action up to 3 times if it fails."
+  scene_context: "White_box held by robot near right table edge; table surface clear and reachable."
+  expected_sequence: "Verify IS_HOLDING is true, then lower the white box onto the table and release it so it rests on the surface; if PLACE_ON_TOP fails, retry up to 3 times."

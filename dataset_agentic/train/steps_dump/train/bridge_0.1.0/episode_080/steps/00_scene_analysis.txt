@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "carrot"
+  destination: "plate"
+  expanded_instruction: "Pick up the orange carrot from the counter and place it on the green plate on the counter."
+  scene_context: "Carrot on counter beside a clear green plate; plate is empty and reachable; no containers closed; carrot not held."
+  expected_sequence: "Approach the carrot, grasp it, move to the plate, and set the carrot on the plate."

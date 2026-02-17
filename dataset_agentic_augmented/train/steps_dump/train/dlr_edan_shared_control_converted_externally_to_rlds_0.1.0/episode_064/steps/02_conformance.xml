@@ -1,0 +1,17 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Execute subtree ApproachOrange -->
+      <SubTree ID="ApproachOrange" />
+    </Sequence>
+  </BehaviorTree>
+  <!-- Subtree definition ApproachOrange -->
+  <BehaviorTree ID="ApproachOrange">
+    <Sequence>
+      <!-- Navigate to orange -->
+      <Action ID="NAVIGATE_TO" obj="orange" />
+      <!-- Grasp orange -->
+      <Action ID="GRASP" obj="orange" />
+    </Sequence>
+  </BehaviorTree>
+</root>

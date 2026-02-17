@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "yellow_ball"
+  destination: ""
+  expanded_instruction: "Pick up the yellow ball from the small round stool next to the table, navigating to the stool within a 20s timeout."
+  scene_context: "Yellow ball resting on small round stool beside the table; robot hand is empty and reachable; no obstacles blocking access."
+  expected_sequence: "Navigate to the stool within a 20s timeout, approach the stool, grasp the yellow ball, and lift it clear of the stool."

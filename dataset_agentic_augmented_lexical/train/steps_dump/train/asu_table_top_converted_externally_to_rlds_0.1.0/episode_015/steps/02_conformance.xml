@@ -1,0 +1,17 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Go to green_bottle -->
+      <Action ID="GO_TO" obj="green_bottle" />
+      <!-- Grip green_bottle -->
+      <Action ID="GRIP" obj="green_bottle" />
+      <!-- Timeout: NAVIGATE_TO table within 15s -->
+      <Timeout msec="15000">
+        <!-- Navigate to table -->
+        <Action ID="MOVE_TO" obj="table" />
+      </Timeout>
+      <!-- Move to table -->
+      <Action ID="PLACE_ON_TOP" obj="table" />
+    </Sequence>
+  </BehaviorTree>
+</root>

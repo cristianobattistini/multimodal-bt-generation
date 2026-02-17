@@ -1,0 +1,36 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to pot -->
+      <Action ID="NAVIGATE_TO" obj="pot" />
+      <!-- Open up pot -->
+      <Action ID="OPEN_UP" obj="pot" />
+      <!-- Move to lid -->
+      <Action ID="MOVE_TO" obj="lid" />
+      <!-- Pick lid -->
+      <Action ID="PICK" obj="lid" />
+      <!-- Go to table -->
+      <Action ID="GO_TO" obj="table" />
+      <!-- Place lid on table -->
+      <Action ID="PLACE_ON_TOP" obj="lid" surface="table" />
+      <!-- Go to pot -->
+      <Action ID="GO_TO" obj="pot" />
+      <!-- Grasp pot -->
+      <Action ID="GRASP" obj="pot" />
+      <!-- Go to plate -->
+      <Action ID="GO_TO" obj="plate" />
+      <!-- Lay on plate -->
+      <Action ID="LAY_ON" obj="plate" />
+      <!-- Move to tool -->
+      <Action ID="MOVE_TO" obj="tool" />
+      <!-- Grasp tool -->
+      <Action ID="GRASP" obj="tool" />
+      <!-- Go to pot -->
+      <Action ID="GO_TO" obj="pot" />
+      <!-- Push pot (use tool to push pot toward front edge of table) -->
+      <Action ID="PUSH" obj="pot" />
+      <!-- Release -->
+      <Action ID="RELEASE" />
+    </Sequence>
+  </BehaviorTree>
+</root>

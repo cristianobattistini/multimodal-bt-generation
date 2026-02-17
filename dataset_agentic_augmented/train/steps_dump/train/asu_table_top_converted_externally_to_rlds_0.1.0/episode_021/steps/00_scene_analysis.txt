@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "coke_bottle"
+  destination: ""
+  expanded_instruction: "Reach to the coke bottle on the table, grasp it (retry up to 3 times if the grasp fails), and hold it upright in the robot hand"
+  scene_context: "Coke bottle upright on table near front; robot arm not holding it and table is clear."
+  expected_sequence: "Approach the coke bottle, grasp it securely (retry up to 3 times if the grasp fails), lift slightly, and hold it upright."

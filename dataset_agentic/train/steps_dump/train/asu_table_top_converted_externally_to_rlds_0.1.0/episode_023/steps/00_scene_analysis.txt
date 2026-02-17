@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "maroon_cube"
+  destination: ""
+  expanded_instruction: "Pick up the maroon cube from the table front-center between the green bottle and blue can"
+  scene_context: "Table is clear otherwise; maroon cube sits front-center between a green bottle (left) and a blue can (right); no containers open."
+  expected_sequence: "Approach the maroon cube, grasp it, and lift it off the table."

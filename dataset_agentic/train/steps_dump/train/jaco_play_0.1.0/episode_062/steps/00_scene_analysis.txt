@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "yellow_cup"
+  destination: "dish_rack"
+  expanded_instruction: "Pick up the yellow cup and place it into the blue dish rack"
+  scene_context: "Yellow cup near the top center reachable; blue dish_rack is open and empty on the table; no container closed."
+  expected_sequence: "Grasp the yellow cup, move it over the dish rack, and place it inside."

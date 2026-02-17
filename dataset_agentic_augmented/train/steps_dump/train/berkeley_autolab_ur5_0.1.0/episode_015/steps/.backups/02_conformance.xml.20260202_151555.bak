@@ -1,0 +1,24 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to red_bowl -->
+      <Action ID="NAVIGATE_TO" obj="red_bowl" />
+      <!-- Check tiger is visible before GRASP -->
+      <Condition ID="IS_VISIBLE" obj="tiger" />
+      <!-- Retry GRASP tiger up to 2 attempts -->
+      <RetryUntilSuccessful num_attempts="2">
+        <!-- Timeout: GRASP tiger within 10s -->
+        <Timeout msec="10000">
+          <!-- Grasp tiger -->
+          <Action ID="GRASP" obj="tiger" />
+        </Timeout>
+      </RetryUntilSuccessful>
+      <!-- Navigate to grey_bowl -->
+      <Action ID="NAVIGATE_TO" obj="grey_bowl" />
+      <!-- Place inside grey_bowl -->
+      <Action ID="PLACE_INSIDE" obj="grey_bowl" />
+      <!-- Release -->
+      <Action ID="RELEASE" />
+    </Sequence>
+  </BehaviorTree>
+</root>

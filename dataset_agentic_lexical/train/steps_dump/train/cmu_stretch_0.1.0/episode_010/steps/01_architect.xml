@@ -1,0 +1,14 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to dishwasher_handle -->
+      <Action ID="NAVIGATE_TO" obj="dishwasher_handle" />
+      <!-- Grasp dishwasher_handle -->
+      <Action ID="GRASP" obj="dishwasher_handle" />
+      <!-- Open dishwasher -->
+      <Action ID="OPEN" obj="dishwasher" />
+      <!-- Ungrasp -->
+      <Action ID="UNGRASP" />
+    </Sequence>
+  </BehaviorTree>
+</root>

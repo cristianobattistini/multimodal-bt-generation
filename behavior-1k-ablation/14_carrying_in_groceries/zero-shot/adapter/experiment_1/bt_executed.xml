@@ -1,0 +1,48 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to beefsteak_tomato -->
+      <Action ID="NAVIGATE_TO" obj="beefsteak_tomato" />
+      <!-- Grasp beefsteak_tomato -->
+      <Action ID="GRASP" obj="beefsteak_tomato" />
+      <!-- Navigate to car -->
+      <Action ID="NAVIGATE_TO" obj="car" />
+      <!-- Place next to car -->
+      <Action ID="PLACE_NEXT_TO" obj="car" />
+      <!-- Navigate to carton_of_milk -->
+      <Action ID="NAVIGATE_TO" obj="carton_of_milk" />
+      <!-- Grasp carton_of_milk -->
+      <Action ID="GRASP" obj="carton_of_milk" />
+      <!-- Navigate to electric_refrigerator -->
+      <Action ID="NAVIGATE_TO" obj="electric_refrigerator" />
+      <!-- Place inside electric_refrigerator -->
+      <Action ID="PLACE_INSIDE" obj="electric_refrigerator" />
+      <!-- Open electric_refrigerator -->
+      <Action ID="OPEN" obj="electric_refrigerator" />
+      <!-- Navigate to milk -->
+      <Action ID="NAVIGATE_TO" obj="milk" />
+      <!-- Grasp milk -->
+      <Action ID="GRASP" obj="milk" />
+      <!-- Navigate to electric_refrigerator -->
+      <Action ID="NAVIGATE_TO" obj="electric_refrigerator" />
+      <!-- Place inside electric_refrigerator -->
+      <Action ID="PLACE_INSIDE" obj="electric_refrigerator" />
+      <!-- Navigate to refrigerator -->
+      <Action ID="NAVIGATE_TO" obj="refrigerator" />
+      <!-- Open refrigerator -->
+      <Action ID="OPEN" obj="refrigerator" />
+      <!-- Navigate to sack -->
+      <Action ID="NAVIGATE_TO" obj="sack" />
+      <!-- Grasp sack -->
+      <Action ID="GRASP" obj="sack" />
+      <!-- Navigate to refrigerator -->
+      <Action ID="NAVIGATE_TO" obj="refrigerator" />
+      <!-- Place inside refrigerator -->
+      <Action ID="PLACE_INSIDE" obj="refrigerator" />
+      <!-- Close refrigerator -->
+      <Action ID="CLOSE" obj="refrigerator" />
+      <!-- Close car -->
+      <Action ID="CLOSE" obj="car" />
+    </Sequence>
+  </BehaviorTree>
+</root>

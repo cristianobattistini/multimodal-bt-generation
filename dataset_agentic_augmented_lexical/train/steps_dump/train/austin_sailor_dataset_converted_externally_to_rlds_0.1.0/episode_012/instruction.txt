@@ -1,0 +1,1 @@
+Place the fish, sausage, and tomato into the frying pan. Check visibility, use a 15 second timeout for grasp, try pushing the object if timeout occurs.

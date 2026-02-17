@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "bread"
+  destination: "plate"
+  expanded_instruction: "Pick up the bread (croissant) from the cloth and place it on the plate"
+  scene_context: "Bread on green cloth to the right of an empty plate; plate is empty and reachable; gripper not holding anything."
+  expected_sequence: "Move to the bread, grasp and lift it, then place it onto the plate."

@@ -1,0 +1,8 @@
+scene_analysis:
+  target: "plywood_sheets"
+  destination: "corridor_floor"
+  expanded_instruction: "Go to the garden, where three plywood sheets (plywood_1, plywood_2, plywood_3) are on the garden floor. Move them one at a time to the corridor and place each on the corridor floor."
+  scene_context: "The image shows a garden area with plants and a paved path; the task specifies three plywood sheets are on the garden floor and must be transported to the corridor floor. The robot can carry only one sheet at a time."
+  expected_sequence: "For each plywood sheet: navigate to the plywood_i in the garden, grasp it, navigate to the corridor_floor, and place it on top of the corridor_floor. Repeat for plywood_1, then plywood_2, then plywood_3."
+
+Plan:

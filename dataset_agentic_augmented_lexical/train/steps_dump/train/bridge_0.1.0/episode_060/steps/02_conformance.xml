@@ -1,0 +1,26 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Go to pot -->
+      <Action ID="GO_TO" obj="pot" />
+      <!-- Grasp pot -->
+      <Action ID="GRASP" obj="pot" />
+      <!-- Move to stove -->
+      <Action ID="MOVE_TO" obj="stove" />
+      <!-- Set on stove -->
+      <Action ID="SET_ON" obj="stove" />
+      <!-- Navigate to corncob -->
+      <Action ID="NAVIGATE_TO" obj="corncob" />
+      <!-- Grip corncob -->
+      <Action ID="GRIP" obj="corncob" />
+      <!-- Go to pot -->
+      <Action ID="GO_TO" obj="pot" />
+      <Sequence>
+        <!-- Check pot is open before PLACE_INSIDE -->
+        <Condition ID="IS_OPEN" obj="pot" />
+        <!-- Place inside pot -->
+        <Action ID="PLACE_INSIDE" obj="pot" />
+      </Sequence>
+    </Sequence>
+  </BehaviorTree>
+</root>

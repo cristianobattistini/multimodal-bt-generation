@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "tiger"
+  destination: "grey_bowl"
+  expanded_instruction: "Take the tiger out of the red bowl and place it into the grey bowl on the table; if the grasp fails, retry up to 5 times."
+  scene_context: "Red bowl contains the tiger; grey bowl is empty on the table; bowls are open and reachable; robot not holding anything."
+  expected_sequence: "Reach into the red bowl, grasp the tiger (retry up to 5 times if grasp fails), lift it out, move over the grey bowl, and place the tiger inside."

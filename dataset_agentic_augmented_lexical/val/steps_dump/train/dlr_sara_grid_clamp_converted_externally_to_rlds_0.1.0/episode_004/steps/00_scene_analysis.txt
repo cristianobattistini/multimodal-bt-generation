@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "grid_clamp"
+  destination: "grid"
+  expanded_instruction: "Pick up the grid clamp from the table and place it onto the grid surface near the front. If the grasp fails, retry up to 2 times."
+  scene_context: "Several grid_clamps lie on the table front; grid surface is clear and reachable; no container is open."
+  expected_sequence: "Reach to the clamp, grasp it (retry up to 2 times if the grasp fails), move to the grid surface, and place the clamp onto the grid."

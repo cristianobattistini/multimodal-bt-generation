@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "yellow_cup"
+  destination: ""
+  expanded_instruction: "Pick up the yellow cup from the white plate on the table and lift it clear."
+  scene_context: "Yellow cup resting on a white plate on the table; plate and table are clear and nothing is holding the cup."
+  expected_sequence: "Approach the cup, grasp its rim, and lift it off the plate."

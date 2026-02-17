@@ -1,0 +1,24 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to shoe -->
+      <Action ID="NAVIGATE_TO" obj="shoe" />
+      <!-- Check shoe is visible before GRASP -->
+      <Condition ID="IS_VISIBLE" obj="shoe" />
+      <!-- Fallback: if GRASP shoe fails, try alternative to reposition -->
+      <Fallback>
+        <!-- Retry GRASP shoe up to 2 attempts -->
+        <RetryUntilSuccessful num_attempts="2">
+          <!-- Grasp shoe -->
+          <Action ID="GRASP" obj="shoe" />
+        </RetryUntilSuccessful>
+        <Sequence>
+          <!-- Push shoe forward toward front edge of table -->
+          <Action ID="PUSH" obj="shoe" />
+          <!-- Grasp shoe -->
+          <Action ID="GRASP" obj="shoe" />
+        </Sequence>
+      </Fallback>
+    </Sequence>
+  </BehaviorTree>
+</root>

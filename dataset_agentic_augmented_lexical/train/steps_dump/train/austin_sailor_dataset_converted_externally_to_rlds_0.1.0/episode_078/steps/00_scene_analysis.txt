@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "["bread", "butter", "milk"]"
+  destination: "serving_area"
+  expanded_instruction: "Check that butter is visible before navigating; then pick up the bread, butter, and milk from the table placemat and place them onto the serving area (yellow mat). If a grasp fails, retry up to 3 times or push to reposition within a 10s timeout."
+  scene_context: "Bread and butter on the woven placemat near a plate, milk carton on the table edge, serving_area (yellow mat) is clear, no containers closed."
+  expected_sequence: "Verify butter is visible before NAVIGATE_TO; then pick each item from the placemat/table and place them onto the yellow serving_area one by one, retrying grasps up to 3 times or pushing to reposition if needed."

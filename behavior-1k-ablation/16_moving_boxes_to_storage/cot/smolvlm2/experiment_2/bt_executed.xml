@@ -1,0 +1,24 @@
+<root main_tree_to_execute="MainTree">
+  <Sequence>
+    <!-- Navigate to door -->
+    <Action ID="NAVIGATE_TO" obj="door" />
+    <!-- Open door -->
+    <Action ID="OPEN" />
+  </Sequence>
+  <!-- Navigate to storage_container_1 -->
+  <Action ID="NAVIGATE_TO" obj="storage_container_1" />
+  <!-- Pick up storage_container_1 -->
+  <Action ID="GRASP" obj="storage_container_1" />
+  <!-- Place on garage_floor -->
+  <Action ID="PLACE_ON_TOP" obj="garage_floor" />
+  <!-- Open storage_container_2 -->
+  <Action ID="OPEN" />
+  <!-- Go to garage_floor -->
+  <Action ID="GO_TO" obj="garage_floor" />
+  <!-- Place on garage_floor -->
+  <Action ID="PLACE_ON_TOP" obj="garage_floor" />
+  <!-- Go to storage_container_2 -->
+  <Action ID="GO_TO" obj="storage_container_2" />
+  <!-- Place on storage_container_2 -->
+  <Action ID="PLACE_ON_TOP" obj="storage_container_2" />
+</root>

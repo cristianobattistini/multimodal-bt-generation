@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "yellow_object"
+  destination: ""
+  expanded_instruction: "Pick up the yellow object from the table in front of the robot."
+  scene_context: "Table clear, yellow object on table among other cans/bottles, no containers open, object not held."
+  expected_sequence: "Approach the yellow object, grasp it, and lift it from the table."

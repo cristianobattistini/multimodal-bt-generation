@@ -1,0 +1,7 @@
+scene_analysis:
+  target: "toys"
+  destination: "toy_box"
+  expanded_instruction: "Collect the six toys — board_game_1, board_game_2, board_game_3, jigsaw_puzzle_1, jigsaw_puzzle_2, and tennis_ball — and place each of them inside the toy_box."
+  scene_context: "A toy_box is on the desk. Visible on the desk are a tennis_ball and two flat boxed items that could be a board_game and a jigsaw_puzzle; the remaining toys may be elsewhere in the room but are assumed accessible for navigation."
+  expected_sequence: "For each toy: navigate to the toy, grasp it, navigate to the toy_box, and place it inside. Repeat for all six toys until the toy_box contains board_game_1, board_game_2, board_game_3, jigsaw_puzzle_1, jigsaw_puzzle_2, and the tennis_ball."
+Plan:

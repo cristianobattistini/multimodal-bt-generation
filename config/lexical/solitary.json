@@ -1,0 +1,29 @@
+{
+  "version": "1.0",
+  "description": "Varianti solitarie per ogni primitiva (5% probabilita, dalla tabella utente)",
+  "note": "Queste azioni appaiono raramente nel dataset per insegnare al modello variabilita",
+  "primitives": {
+    "GRASP": ["CLAMP", "LATCH_ONTO"],
+    "NAVIGATE_TO": ["ADVANCE_TO", "LOCOMOTE_TO"],
+    "RELEASE": ["DETACH", "UNCLAMP"],
+    "PLACE_ON_TOP": ["STACK_ON", "DEPOSIT_ON"],
+    "PLACE_INSIDE": ["LOAD_INTO", "DEPOSIT_IN"],
+    "PLACE_NEXT_TO": ["PLACE_BESIDE", "POSITION_ADJACENT"],
+    "PUSH": ["NUDGE_TOWARD", "DISPLACE"],
+    "OPEN": ["PRY_OPEN", "UNLATCH"],
+    "CLOSE": ["LATCH", "FASTEN"],
+    "TOGGLE_ON": ["POWER_ON", "ENERGIZE"],
+    "TOGGLE_OFF": ["POWER_OFF", "DEENERGIZE"],
+    "POUR": ["DECANT", "DISPENSE"],
+    "FOLD": ["COLLAPSE", "DOUBLE"],
+    "UNFOLD": ["UNFURL", "EXPAND"],
+    "FLIP": ["OVERTURN", "CAPSIZE"],
+    "HANG": ["DANGLE", "HOIST"],
+    "WIPE": ["SWAB", "POLISH"],
+    "CUT": ["INCISE", "CARVE"],
+    "SCREW": ["TORQUE", "FASTEN_SCREW"],
+    "SOAK_UNDER": ["DRENCH_UNDER", "SATURATE_UNDER"],
+    "SOAK_INSIDE": ["STEEP", "SATURATE_IN"],
+    "PLACE_NEAR_HEATING_ELEMENT": ["WARM_NEAR", "HEAT_BESIDE"]
+  }
+}

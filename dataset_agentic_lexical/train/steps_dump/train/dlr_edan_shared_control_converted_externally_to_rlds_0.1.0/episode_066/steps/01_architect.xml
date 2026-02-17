@@ -1,0 +1,10 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Approach disk -->
+      <Action ID="APPROACH" obj="disk" />
+      <!-- Grab disk -->
+      <Action ID="GRAB" obj="disk" />
+    </Sequence>
+  </BehaviorTree>
+</root>

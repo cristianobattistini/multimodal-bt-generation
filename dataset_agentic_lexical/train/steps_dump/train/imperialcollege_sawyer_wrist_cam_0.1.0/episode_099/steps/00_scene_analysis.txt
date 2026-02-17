@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "spoon"
+  destination: ""
+  expanded_instruction: "Swipe the spoon across the surface in a straight motion"
+  scene_context: "Spoon lies on a clear blue surface, handle oriented upward; no containers open."
+  expected_sequence: "Approach the spoon and push its bowl forward to slide it across the surface."

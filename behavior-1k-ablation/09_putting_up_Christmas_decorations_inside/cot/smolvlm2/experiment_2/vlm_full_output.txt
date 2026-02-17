@@ -1,0 +1,196 @@
+ scene_analysis:
+  target: "gift_box_1, gift_box_2, gift_box_3"
+  destination: "christmas_tree"
+  expanded_instruction: "Pick up gift_box_1 and gift_box_2 from the table and place them next to the christmas_tree."
+  scene_context: "Gift boxes on table are on the left, christmas_tree is on the right, wreath is on the table, candy_cane_1 and candy_cane_2 on the table, pillar_candle_1 and pillar_candle_2 on the table."
+  expected_sequence: "Pick gift_box_1 and gift_box_2 from the table and place them next to the christmas_tree."
+  expected_sequence_with_place(obj): "Pick gift_box_1 and gift_box_2 from the table and place them next to the christmas_tree."
+  expected_sequence_with_place_next_to(obj): "Pick gift_box_1 and gift_box_2 from the table and place them next to the christmas_tree."
+Plan:
+<root main_tree_to_execute="MainTree">
+  <Sequence>
+    <!-- Navigate to gift_box_1 -->
+    <Action>
+      <Sequence>
+        <!-- Navigate to gift_box_1 -->
+        <Target>gift_box_1</Target>
+        <Fallback>
+        </Fallback>
+      </Sequence>
+    </Action>
+    <!-- Navigate to gift_box_2 -->
+    <Action>
+      <Sequence>
+        <!-- Navigate to gift_box_2 -->
+        <Target>gift_box_2</Target>
+        <Fallback>
+          <!-- Place gift_box_1 on gift_box_2 -->
+          <Action>
+            <Sequence>
+              <!-- Place gift_box_1 on gift_box_2 -->
+              <Target>gift_box_1</Target>
+              <Fallback>
+                <!-- Place gift_box_2 on gift_box_1 -->
+                <Action>
+                  <Sequence>
+                    <!-- Place gift_box_2 on gift_box_1 -->
+                    <Target>gift_box_2</Target>
+                    <Fallback>
+                      <!-- Place gift_box_1 on gift_box_2 -->
+                      <Action>
+                        <Sequence>
+                          <!-- Place gift_box_1 on gift_box_2 -->
+                          <Target>gift_box_1</Target>
+                        </Sequence>
+                      </Fallback>
+                    </Action>
+                  </Fallback>
+                  <!-- Place gift_box_1 on gift_box_2 -->
+                  <Action>
+                    <Sequence>
+                      <!-- Place gift_box_1 on gift_box_2 -->
+                      <Target>gift_box_1</Target>
+                      <Fallback>
+                        <!-- Place gift_box_2 on gift_box_1 -->
+                        <Action>
+                          <Sequence>
+                            <!-- Place gift_box_2 on gift_box_1 -->
+                            <Target>gift_box_2</Target>
+                            <Fallback>
+                              <!-- Place gift_box_1 on gift_box_2 -->
+                              <Action>
+                                <Sequence>
+                                  <!-- Place gift_box_1 on gift_box_2 -->
+                                  <Target>gift_box_1</Target>
+                                </Sequence>
+                                <Fallback>
+                                  <!-- Place gift_box_2 on gift_box_1 -->
+                                  <Action>
+                                    <Sequence>
+                                      <!-- Place gift_box_2 on gift_box_1 -->
+                                      <Target>gift_box_2</Target>
+                                    </Sequence>
+                                    <Fallback>
+                                      <!-- Place gift_box_1 on gift_box_2 -->
+                                      <Action>
+                                        <Sequence>
+                                          <!-- Place gift_box_1 on gift_box_2 -->
+                                          <Target>gift_box_1</Target>
+                                        <Fallback>
+                                          <!-- Place gift_box_2 on gift_box_1 -->
+                                          <Action>
+                                            <Sequence>
+                                            <!-- Place gift_box_2 on gift_box_1 -->
+                                            <Target>gift_box_2</Target>
+                                            <Fallback>
+                                                <!-- Place gift_box_1 on gift_box_2 -->
+                                                <Action>
+                                                    <Sequence>
+                                                    <!-- Place gift_box_1 on gift_box_2 -->
+                                                    <Target>gift_box_1</Target>
+                                                    <Fallback>
+                                                    <!-- Place gift_box_2 on gift_box_1 -->
+                                                    <Action>
+                                                    <Sequence>
+                                                    <!-- Place gift_box_2 on gift_box_1 -->
+                                                    <Target>gift_box_2</Target>
+                                                    <Fallback>
+                                                    <!-- Place gift_box_1 on gift_box_2 -->
+                                                    <Action>
+                                                    <Sequence>
+                                                    <!-- Place gift_box_1 on gift_box_2 -->
+                                                    <Target>gift_box_1</Target>
+                                                    <Fallback>
+                                                    <!-- Place gift_box_2 on gift_box_1 -->
+                                                    <Action>
+                                                    <Sequence>
+                                                    <!-- Place gift_box_2 on gift_box_1 -->
+                                                    <Target>gift_box_2</Target>
+                                                    <Fallback>
+                                                    <!-- Place gift_box_1 on gift_box_2 -->
+                                                    <Action>
+                                                    <Sequence>
+                                                    <!-- Place gift_box_1 on gift_box_2 -->
+                                                    <Target>gift_box_1</Target>
+                                                    <Fallback>
+                                                    <!-- Place gift_box_2 on gift_box_1 -->
+                                                    <Action>
+                                                    <Sequence>
+                                                    <!-- Place gift_box_2 on gift_box_1 -->
+                                                    <Target>gift_box_2</Target>
+                                                    <Fallback>
+                                                    <!-- Place gift_box_1 on gift_box_2 -->
+                                                    <Action>
+                                                    <Sequence>
+                                                    <!-- Place gift_box_1 on gift_box_2 -->
+                                                    <Target>gift_box_1</Target>
+                                                    <Fallback>
+                                                    <!-- Place gift_box_2 on gift_box_1 -->
+                                                    <Action>
+                                                    <Sequence>
+                                                    <!-- Place gift_box_2 on gift_box_1 -->
+                                                    <Target>gift_box_2</Target>
+                                                    <Fallback>
+                                                    <!-- Place gift_box_1 on gift_box_2 -->
+                                                    <Action>
+                                                    <Sequence>
+                                                    <!-- Place gift_box_1 on gift_box_2 -->
+                                                    <Target>gift_box_1</Target>
+                                                    <Fallback>
+                                                    <!-- Place gift_box_2 on gift_box_1 -->
+                                                    <Action>
+                                                    <Sequence>
+                                                    <!-- Place gift_box_2 on gift_box_1 -->
+                                                    <Target>gift_box_2</Target>
+                                                    <Fallback>
+                                                    <!-- Place gift_box_1 on gift_box_2 -->
+                                                    <Action>
+                                                    <Sequence>
+                                                    <!-- Place gift_box_1 on gift_box_2 -->
+                                                    <Target>gift_box_1</Target>
+                                                    <Fallback>
+                                                    <!-- Place gift_box_2 on gift_box_1 -->
+                                                    <Action>
+                                                    <Sequence>
+                                                    <!-- Place gift_box_2 on gift_box_1 -->
+                                                    <Target>gift_box_2</Target>
+                                                    <Fallback>
+                                                    <!-- Place gift_box_1 on gift_box_2 -->
+                                                    <Action>
+                                                    <Sequence>
+                                                    <!-- Place gift_box_1 on gift_box_2 -->
+                                                    <Target>gift_box_1</Target>
+                                                    <Fallback>
+                                                    <!-- Place gift_box_2 on gift_box_1 -->
+                                                    <Action>
+                                                    <Sequence>
+                                                    <!-- Place gift_box_2 on gift_box_1 -->
+                                                    <Target>gift_box_2</Target>
+                                                    <Fallback>
+                                                    <!-- Place gift_box_1 on gift_box_2 -->
+                                                    <Action>
+                                                    <Sequence>
+                                                    <!-- Place gift_box_1 on gift_box_2 -->
+                                                    <Target>gift_box_1</Target>
+                                                    <Fallback>
+                                                    <!-- Place gift_box_2 on gift_box_1 -->
+                                                    <Action>
+                                                    <Sequence>
+                                                    <!-- Place gift_box_2 on gift_box_1 -->
+                                                    <Target>gift_box_2</Target>
+                                                    <Fallback>
+                                                    <!-- Place gift_box_1 on gift_box_2 -->
+                                                    <Action>
+                                                    <Sequence>
+                                                    <!-- Place gift_box_1 on gift_box_2 -->
+                                                    <Target>gift_box_1</Target>
+                                                    <Fallback>
+                                                    <!-- Place gift_box_2 on gift_box_1 -->
+                                                    <Action>
+                                                    <Sequence>
+                                                    <!-- Place gift_box_2 on gift_box_1 -->
+                                                    <Target>gift_box_2</Target>
+                                                    <Fallback>
+                                                    <!-- Place gift_box_1 on gift_box_2 -->
+                                                    <Action>
+                                                   

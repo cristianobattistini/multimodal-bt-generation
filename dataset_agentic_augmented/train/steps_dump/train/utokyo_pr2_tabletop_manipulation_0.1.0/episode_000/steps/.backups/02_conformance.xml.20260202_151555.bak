@@ -1,0 +1,32 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Execute subtree ApproachTable -->
+      <SubTree ID="ApproachTable" />
+      <!-- Navigate to pink_cloth -->
+      <Action ID="NAVIGATE_TO" obj="pink_cloth" />
+      <!-- Grasp pink_cloth -->
+      <Action ID="GRASP" obj="pink_cloth" />
+      <!-- Fold pink_cloth -->
+      <Action ID="FOLD" obj="pink_cloth" />
+      <!-- Navigate to table -->
+      <Action ID="NAVIGATE_TO" obj="table" />
+      <!-- Place on table -->
+      <Action ID="PLACE_ON_TOP" obj="table" />
+      <!-- Release -->
+      <Action ID="RELEASE" />
+    </Sequence>
+  </BehaviorTree>
+  <!-- Subtree definition ApproachTable -->
+  <BehaviorTree ID="ApproachTable">
+    <Sequence>
+      <!-- Timeout: NAVIGATE_TO table within 15s -->
+      <Timeout msec="15000">
+        <!-- Navigate to table -->
+        <Action ID="NAVIGATE_TO" obj="table" />
+      </Timeout>
+      <!-- Grasp table -->
+      <Action ID="GRASP" obj="table" />
+    </Sequence>
+  </BehaviorTree>
+</root>

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "oven_door"
+  destination: ""
+  expanded_instruction: "Open the oven door on the white kitchen unit, navigating to the unit within a 10s timeout."
+  scene_context: "Oven door is closed and latched on the lower left of the unit; robot not holding it; front area clear."
+  expected_sequence: "Move the arm to the oven handle (use NAVIGATE_TO with a 10s timeout), grasp it, and pull the door open until ajar."

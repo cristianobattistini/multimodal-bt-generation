@@ -1,0 +1,40 @@
+__RAW__
+ROLE: Embodied Planner
+GOAL: Analyze the scene and generate a valid BehaviorTree.CPP XML plan.
+INPUTS:
+- Scene Image: The current visual observation of the robot workspace
+- Instruction: plain text description of the task to perform
+- Allowed Actions: the ONLY actions you can use. Do NOT invent or use actions outside this list.
+- Allowed Conditions (optional): list of conditions for precondition checks, if provided.
+OUTPUT FORMAT:
+scene_analysis:
+  target: "<main object to manipulate, snake_case>"
+  destination: "<where to place object, snake_case or empty>"
+  expanded_instruction: "<instruction with scene details>"
+  scene_context: "<initial state observations>"
+  expected_sequence: "<action plan in natural language>"
+Plan:
+<root main_tree_to_execute="MainTree">
+  ...
+</root>
+CONSTRAINTS:
+1. Analysis First: You MUST output the scene_analysis block before the XML.
+2. Consistency: The XML must follow the analysis (target/destination).
+3. Schema: Output ONLY the keys shown above; do NOT add extra keys.
+4. Strict Compliance: Use ONLY actions from Allowed Actions. Never hallucinate or invent actions not in the list.
+5. Multiple Instances: When manipulating multiple objects of the same type, use numbered suffixes (e.g., object_1, object_2, object_3) to distinguish each instance in the XML plan.
+
+The robot is in a scene with these rooms: kitchen.
+
+Instruction: Prepare the lunch box by putting all the food into the packing_box, then get the bottle_of_tea from the refrigerator and put it in the box too. Make sure the refrigerator is closed when you finish.
+
+Objects to handle:
+- club_sandwich, half_apple_1, half_apple_2, chocolate_chip_cookie (on chopping board) → place inside packing_box
+- bottle_of_tea (inside refrigerator) → place inside packing_box
+
+Workflow: Go to club_sandwich, pick it up, go to packing_box, place it inside (large flat item goes first on bottom). Go to half_apple_1, pick it up, go to packing_box, place it inside. Go to half_apple_2, pick it up, go to packing_box, place it inside. Go to chocolate_chip_cookie, pick it up, go to packing_box, place it inside. Then open the electric_refrigerator, go to bottle_of_tea, pick it up, go to packing_box, place it inside, then go back to electric_refrigerator and close it.
+
+Allowed Actions: [NAVIGATE_TO(obj), GRASP(obj), PLACE_INSIDE(obj), OPEN(obj), CLOSE(obj)]
+Available Objects: half_apple_1, half_apple_2, club_sandwich, chocolate_chip_cookie, bottle_of_tea, packing_box, electric_refrigerator, chopping_board, countertop, floor
+
+Generate the simplest Sequence plan without Fallback nodes.

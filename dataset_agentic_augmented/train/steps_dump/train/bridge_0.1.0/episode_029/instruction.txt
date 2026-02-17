@@ -1,0 +1,1 @@
+Place the mushroom into the pot. Use subtree with retry (up to 3 times) for approach and grasp.

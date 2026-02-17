@@ -1,0 +1,17 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Approach green_rice_chip_bag -->
+      <Action ID="APPROACH" obj="green_rice_chip_bag" />
+      <!-- Retry GRASP green_rice_chip_bag up to 3 attempts -->
+      <RetryUntilSuccessful num_attempts="3">
+        <!-- Grasp green_rice_chip_bag -->
+        <Action ID="PICK" obj="green_rice_chip_bag" />
+      </RetryUntilSuccessful>
+      <!-- Pick green_rice_chip_bag -->
+      <Action ID="APPROACH" obj="orange" />
+      <!-- Approach orange -->
+      <Action ID="PLACE_NEXT_TO" obj="green_rice_chip_bag" reference="orange" />
+    </Sequence>
+  </BehaviorTree>
+</root>

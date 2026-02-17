@@ -1,0 +1,59 @@
+scene_analysis:
+  target: "food_items"
+  destination: "packing_box"
+  expanded_instruction: "Pick up the club_sandwich, the two halves of half_apple, and the chocolate_chip_cookie from the chopping board, then place them one by one into the packing_box, and place the bottle_of_tea from the floor into the packing_box; ensure the refrigerator (electric_refrigerator) is closed after placing the bottle."
+  scene_context: "Packing_box is open and empty on the counter; club_sandwich, two half_apples, and chocolate_chip_cookie lie on the nearby wooden_chopping_board; bottle_on_floor near the fridge but not held; refrigerator door is open."
+  expected_sequence: "Pick up each item from the board and place it into the packing_box one at a time, then pick up the bottle_of_tea from the floor and place it into the packing_box; verify the refrigerator is closed before closing."
+Plan:
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to chopping_board -->
+      <Action ID="NAVIGATE_TO" obj="chopping_board"/>
+      <!-- Grasp club_sandwich -->
+      <Action ID="GRASP" obj="club_sandwich"/>
+      <!-- Navigate to packing_box -->
+      <Action ID="NAVIGATE_TO" obj="packing_box"/>
+      <!-- Place inside packing_box -->
+      <Action ID="PLACE_INSIDE" obj="packing_box"/>
+      <!-- Navigate to chopping_board -->
+      <Action ID="NAVIGATE_TO" obj="chopping_board"/>
+      <!-- Grasp chocolate_chip_cookie -->
+      <Action ID="GRASP" obj="chocolate_chip_cookie"/>
+      <!-- Navigate to packing_box -->
+      <Action ID="NAVIGATE_TO" obj="packing_box"/>
+      <!-- Place inside packing_box -->
+      <Action ID="PLACE_INSIDE" obj="packing_box"/>
+      <!-- Navigate to chopping_board -->
+      <Action ID="NAVIGATE_TO" obj="chopping_board"/>
+      <!-- Grasp half_apple_1 -->
+      <Action ID="GRASP" obj="half_apple_1"/>
+      <!-- Navigate to packing_box -->
+      <Action ID="NAVIGATE_TO" obj="packing_box"/>
+      <!-- Place inside packing_box -->
+      <Action ID="PLACE_INSIDE" obj="packing_box"/>
+      <!-- Navigate to chopping_board -->
+      <Action ID="NAVIGATE_TO" obj="chopping_board"/>
+      <!-- Grasp chocolate_chip_cookie -->
+      <Action ID="GRASP" obj="chocolate_chip_cookie"/>
+      <!-- Navigate to packing_box -->
+      <Action ID="NAVIGATE_TO" obj="packing_box"/>
+      <!-- Place inside packing_box -->
+      <Action ID="PLACE_INSIDE" obj="packing_box"/>
+      <!-- Navigate to floor -->
+      <Action ID="NAVIGATE_TO" obj="floor"/>
+      <!-- Grasp bottle_of_tea -->
+      <Action ID="GRASP" obj="bottle_of_tea"/>
+      <!-- Navigate to packing_box -->
+      <Action ID="NAVIGATE_TO" obj="packing_box"/>
+      <!-- Place inside packing_box -->
+      <Action ID="PLACE_INSIDE" obj="packing_box"/>
+      <!-- Navigate to electric_refrigerator -->
+      <Action ID="NAVIGATE_TO" obj="electric_refrigerator"/>
+      <!-- Open electric_refrigerator -->
+      <Action ID="OPEN" obj="electric_refrigerator"/>
+      <!-- Close electric_refrigerator -->
+      <Action ID="CLOSE" obj="electric_refrigerator"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

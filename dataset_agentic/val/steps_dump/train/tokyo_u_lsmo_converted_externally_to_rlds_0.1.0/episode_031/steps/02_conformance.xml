@@ -1,0 +1,14 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to table around box_stack to approach from side -->
+      <Action ID="NAVIGATE_TO" obj="table"/>
+      <!-- Navigate to black_holder positioning arm to reach into holder -->
+      <Action ID="NAVIGATE_TO" obj="black_holder"/>
+      <!-- Navigate to blue_pen avoiding the box_stack -->
+      <Action ID="NAVIGATE_TO" obj="blue_pen"/>
+      <!-- Grasp blue_pen -->
+      <Action ID="GRASP" obj="blue_pen"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

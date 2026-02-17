@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "drawer"
+  destination: ""
+  expanded_instruction: "Check that the drawer is closed (IS_CLOSED); if so, open the lower drawer of the wooden cabinet by grasping its handle and pulling it outward. If the grasp fails, reposition and retry up to 3 times."
+  scene_context: "Wooden cabinet drawer is closed with visible handle; handle not held and space in front is clear."
+  expected_sequence: "Approach the cabinet, verify IS_CLOSED on the drawer, then grasp the drawer handle and pull outward until the drawer is open. If grasp fails, reposition and retry (up to 3 attempts)."

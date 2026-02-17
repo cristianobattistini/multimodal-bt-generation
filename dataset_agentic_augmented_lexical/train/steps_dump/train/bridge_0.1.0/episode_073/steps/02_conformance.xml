@@ -1,0 +1,21 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Execute subtree ApproachMetalBowl -->
+      <SubTree ID="ApproachMetalBowl" />
+      <!-- Move to table -->
+      <Action ID="MOVE_TO" obj="table" />
+      <!-- Put on table -->
+      <Action ID="PUT_ON" obj="table" />
+    </Sequence>
+  </BehaviorTree>
+  <!-- Subtree definition ApproachMetalBowl -->
+  <BehaviorTree ID="ApproachMetalBowl">
+    <Sequence>
+      <!-- Move to metal_bowl -->
+      <Action ID="MOVE_TO" obj="metal_bowl" />
+      <!-- Grasp metal_bowl -->
+      <Action ID="GRASP" obj="metal_bowl" />
+    </Sequence>
+  </BehaviorTree>
+</root>

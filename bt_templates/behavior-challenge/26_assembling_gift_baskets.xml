@@ -1,0 +1,74 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Basket 1 -->
+      <Action ID="NAVIGATE_TO" obj="candle.n.01_1"/>
+      <Action ID="GRASP" obj="candle.n.01_1"/>
+      <Action ID="NAVIGATE_TO" obj="wicker_basket.n.01_1"/>
+      <Action ID="PLACE_INSIDE" obj="wicker_basket.n.01_1"/>
+      <Action ID="NAVIGATE_TO" obj="butter_cookie.n.01_1"/>
+      <Action ID="GRASP" obj="butter_cookie.n.01_1"/>
+      <Action ID="NAVIGATE_TO" obj="wicker_basket.n.01_1"/>
+      <Action ID="PLACE_INSIDE" obj="wicker_basket.n.01_1"/>
+      <Action ID="NAVIGATE_TO" obj="swiss_cheese.n.01_1"/>
+      <Action ID="GRASP" obj="swiss_cheese.n.01_1"/>
+      <Action ID="NAVIGATE_TO" obj="wicker_basket.n.01_1"/>
+      <Action ID="PLACE_INSIDE" obj="wicker_basket.n.01_1"/>
+      <Action ID="NAVIGATE_TO" obj="bow.n.08_1"/>
+      <Action ID="GRASP" obj="bow.n.08_1"/>
+      <Action ID="NAVIGATE_TO" obj="wicker_basket.n.01_1"/>
+      <Action ID="PLACE_INSIDE" obj="wicker_basket.n.01_1"/>
+      <!-- Basket 2 -->
+      <Action ID="NAVIGATE_TO" obj="candle.n.01_2"/>
+      <Action ID="GRASP" obj="candle.n.01_2"/>
+      <Action ID="NAVIGATE_TO" obj="wicker_basket.n.01_2"/>
+      <Action ID="PLACE_INSIDE" obj="wicker_basket.n.01_2"/>
+      <Action ID="NAVIGATE_TO" obj="butter_cookie.n.01_2"/>
+      <Action ID="GRASP" obj="butter_cookie.n.01_2"/>
+      <Action ID="NAVIGATE_TO" obj="wicker_basket.n.01_2"/>
+      <Action ID="PLACE_INSIDE" obj="wicker_basket.n.01_2"/>
+      <Action ID="NAVIGATE_TO" obj="swiss_cheese.n.01_2"/>
+      <Action ID="GRASP" obj="swiss_cheese.n.01_2"/>
+      <Action ID="NAVIGATE_TO" obj="wicker_basket.n.01_2"/>
+      <Action ID="PLACE_INSIDE" obj="wicker_basket.n.01_2"/>
+      <Action ID="NAVIGATE_TO" obj="bow.n.08_2"/>
+      <Action ID="GRASP" obj="bow.n.08_2"/>
+      <Action ID="NAVIGATE_TO" obj="wicker_basket.n.01_2"/>
+      <Action ID="PLACE_INSIDE" obj="wicker_basket.n.01_2"/>
+      <!-- Basket 3 -->
+      <Action ID="NAVIGATE_TO" obj="candle.n.01_3"/>
+      <Action ID="GRASP" obj="candle.n.01_3"/>
+      <Action ID="NAVIGATE_TO" obj="wicker_basket.n.01_3"/>
+      <Action ID="PLACE_INSIDE" obj="wicker_basket.n.01_3"/>
+      <Action ID="NAVIGATE_TO" obj="butter_cookie.n.01_3"/>
+      <Action ID="GRASP" obj="butter_cookie.n.01_3"/>
+      <Action ID="NAVIGATE_TO" obj="wicker_basket.n.01_3"/>
+      <Action ID="PLACE_INSIDE" obj="wicker_basket.n.01_3"/>
+      <Action ID="NAVIGATE_TO" obj="swiss_cheese.n.01_3"/>
+      <Action ID="GRASP" obj="swiss_cheese.n.01_3"/>
+      <Action ID="NAVIGATE_TO" obj="wicker_basket.n.01_3"/>
+      <Action ID="PLACE_INSIDE" obj="wicker_basket.n.01_3"/>
+      <Action ID="NAVIGATE_TO" obj="bow.n.08_3"/>
+      <Action ID="GRASP" obj="bow.n.08_3"/>
+      <Action ID="NAVIGATE_TO" obj="wicker_basket.n.01_3"/>
+      <Action ID="PLACE_INSIDE" obj="wicker_basket.n.01_3"/>
+      <!-- Basket 4 -->
+      <Action ID="NAVIGATE_TO" obj="candle.n.01_4"/>
+      <Action ID="GRASP" obj="candle.n.01_4"/>
+      <Action ID="NAVIGATE_TO" obj="wicker_basket.n.01_4"/>
+      <Action ID="PLACE_INSIDE" obj="wicker_basket.n.01_4"/>
+      <Action ID="NAVIGATE_TO" obj="butter_cookie.n.01_4"/>
+      <Action ID="GRASP" obj="butter_cookie.n.01_4"/>
+      <Action ID="NAVIGATE_TO" obj="wicker_basket.n.01_4"/>
+      <Action ID="PLACE_INSIDE" obj="wicker_basket.n.01_4"/>
+      <Action ID="NAVIGATE_TO" obj="swiss_cheese.n.01_4"/>
+      <Action ID="GRASP" obj="swiss_cheese.n.01_4"/>
+      <Action ID="NAVIGATE_TO" obj="wicker_basket.n.01_4"/>
+      <Action ID="PLACE_INSIDE" obj="wicker_basket.n.01_4"/>
+      <Action ID="NAVIGATE_TO" obj="bow.n.08_4"/>
+      <Action ID="GRASP" obj="bow.n.08_4"/>
+      <Action ID="NAVIGATE_TO" obj="wicker_basket.n.01_4"/>
+      <Action ID="PLACE_INSIDE" obj="wicker_basket.n.01_4"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

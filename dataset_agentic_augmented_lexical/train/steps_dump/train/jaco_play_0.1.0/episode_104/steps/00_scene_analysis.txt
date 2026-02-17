@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "apple"
+  destination: "black_bowl"
+  expanded_instruction: "Check that the black bowl is visible (IS_VISIBLE) before navigating; if not visible, retry the visibility check up to 3 times within 10s. Then navigate to the table and place the red apple held by the robot into the black bowl on the table."
+  scene_context: "Robot arm is holding a red apple above the table; black bowl (pan) is open and empty and reachable."
+  expected_sequence: "Verify black bowl is visible (IS_VISIBLE) before NAVIGATE_TO, retry up to 3 times if needed. Then bring the held apple over the black bowl and release it gently into the bowl."

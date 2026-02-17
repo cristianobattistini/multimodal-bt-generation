@@ -1,0 +1,7 @@
+scene_analysis:
+  target: ["storage_container_1", "storage_container_2"]
+  destination: "garage_floor"
+  expanded_instruction: "Open the door (if it is closed; if already open, proceed to steps 2 and 3). Then go to the storage_container_1 (pick up a small item from the floor), carry it to the garage_floor, and place it on the floor. Next, pick up storage_container_2 (from the floor) and place it on top of the previous item on the same garage_floor."
+  scene_context: "Door is closed and reachable; storage_container_1 and container_2 on the floor; garage_floor is clear."
+  expected_sequence: "Open the door (if closed) and leave it ajar; go to storage_container_1, pick up the small item, move to the garage_floor, and place it down. Next, pick up storage_container_2, move to the same garage_floor, and place it on top of the previous item."
+Plan:

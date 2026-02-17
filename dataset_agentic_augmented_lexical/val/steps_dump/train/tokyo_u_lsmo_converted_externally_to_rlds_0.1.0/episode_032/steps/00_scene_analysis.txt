@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "blue_pen"
+  destination: ""
+  expanded_instruction: "Move the arm around the obstacle and reach the blue pen standing in the pen holder on the table. Check that the blue pen is reachable before attempting to grasp; if grasp fails retry (up to 3 times) within a 10s timeout, otherwise push or flip the pen to reposition and try again."
+  scene_context: "Robot arm not holding anything; blue_pen upright in a small holder on the table; stack_of_books between arm and pen; table otherwise clear."
+  expected_sequence: "Curve the arm around the stack_of_books to the pen_holder, then check IS_REACHABLE on blue_pen, GRASP blue_pen (within 10s timeout; retry up to 3 times); if GRASP fails, use PUSH or FLIP to reposition and retry GRASP."

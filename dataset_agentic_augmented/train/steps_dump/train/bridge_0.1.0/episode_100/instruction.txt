@@ -1,0 +1,1 @@
+Place the vessel over the violet cloth. Only place on top if the robot is holding the object.

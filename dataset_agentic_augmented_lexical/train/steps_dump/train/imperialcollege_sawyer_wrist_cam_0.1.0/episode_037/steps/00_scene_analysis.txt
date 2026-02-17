@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "small_blue_tile"
+  destination: ""
+  expanded_instruction: "Check the small rounded blue tile is reachable, then swipe it across the screen to the right, retrying the push up to 2 times if it fails."
+  scene_context: "Small rounded blue tile on clear blue screen, not held, screen unobstructed."
+  expected_sequence: "Check IS_REACHABLE on the small blue tile, then tap it and swipe right until it moves across the screen or reveals content, retrying the push up to 2 times if a swipe/push fails."

@@ -1,0 +1,12 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Move to metal_tray -->
+      <Action ID="MOVE_TO" obj="metal_tray" />
+      <!-- Approach green_cup -->
+      <Action ID="APPROACH" obj="green_cup" />
+      <!-- Grasp green_cup -->
+      <Action ID="GRASP" obj="green_cup" />
+    </Sequence>
+  </BehaviorTree>
+</root>

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "fridge"
+  destination: ""
+  expanded_instruction: "Check IS_OPEN; if the fridge is open, close the fridge door until it is fully shut, retrying the close up to 2 times if it fails."
+  scene_context: "Fridge door is open; handle visible; robot arm near door and not holding it."
+  expected_sequence: "Check IS_OPEN, then reach to the handle and pull/push the door closed until it latches; if it does not latch, retry the close up to 2 times."

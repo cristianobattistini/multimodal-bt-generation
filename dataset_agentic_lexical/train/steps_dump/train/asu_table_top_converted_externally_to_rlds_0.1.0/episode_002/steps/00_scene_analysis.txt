@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "white_carton"
+  destination: "table"
+  expanded_instruction: "Place the white carton currently held by the robot down onto the table."
+  scene_context: "White carton is held by the robot above a clear table surface in front center."
+  expected_sequence: "Lower the white carton to the table and release it so it rests on the surface."

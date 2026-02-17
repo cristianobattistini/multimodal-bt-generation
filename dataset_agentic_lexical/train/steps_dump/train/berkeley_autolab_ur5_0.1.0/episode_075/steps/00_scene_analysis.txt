@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "tiger"
+  destination: "grey_bowl"
+  expanded_instruction: "Take the tiger out of the red_bowl and place it into the grey_bowl."
+  scene_context: "Tiger is inside the red_bowl on the table; grey_bowl is on the table and empty; no containers are closed."
+  expected_sequence: "Reach into the red_bowl to pick up the tiger, carry it over, and place it into the grey_bowl."

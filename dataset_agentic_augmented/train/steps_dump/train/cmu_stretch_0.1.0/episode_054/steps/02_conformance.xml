@@ -1,0 +1,22 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to pot -->
+      <Action ID="NAVIGATE_TO" obj="pot" />
+      <!-- Fallback: if GRASP pot_lid fails, try alternative to reposition -->
+      <Fallback>
+        <!-- Retry GRASP pot_lid up to 2 attempts -->
+        <RetryUntilSuccessful num_attempts="2">
+          <!-- Grasp pot_lid -->
+          <Action ID="GRASP" obj="pot_lid" />
+        </RetryUntilSuccessful>
+        <Sequence>
+          <!-- Push pot_lid forward toward front edge of table -->
+          <Action ID="PUSH" obj="pot_lid" />
+          <!-- Grasp pot_lid -->
+          <Action ID="GRASP" obj="pot_lid" />
+        </Sequence>
+      </Fallback>
+    </Sequence>
+  </BehaviorTree>
+</root>

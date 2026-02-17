@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "milk_carton"
+  destination: ""
+  expanded_instruction: "Check that the red milk carton on the right side of the table is reachable (check IS_REACHABLE) before attempting to push it; if not reachable, retry the reachability check up to 3 times within a 10s timeout, then push it forward across the table."
+  scene_context: "Milk carton upright on right side of table; table surface clear; robot not holding anything."
+  expected_sequence: "Check IS_REACHABLE on the milk_carton before PUSH; if reachable, move the arm to the milk carton, make contact with its side, and push it forward across the table. If IS_REACHABLE initially fails, retry up to 3 times (10s timeout) before aborting."

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "cup"
+  destination: "hook"
+  expanded_instruction: "Pick up the pink cup and hang it on the black hook attached to the blue wall; if the grasp fails, retry the grasp up to 5 times."
+  scene_context: "Pink cup is near a black wall-mounted hook; cup is not hanging and hook is free."
+  expected_sequence: "Reach to the cup, grasp it (retry the grasp up to 5 times if it fails), align the handle with the hook, and place it onto the hook so it hangs."

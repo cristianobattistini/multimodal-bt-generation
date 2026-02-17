@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "["pan", "fish", "sausage"]"
+  destination: "stove"
+  expanded_instruction: "Pick up the pan from the table, place the pan on the stove, then place the fish and sausage into the pan, retrying the place-inside action up to 3 times if it fails."
+  scene_context: "Pan on the table, fish and sausage on the table nearby; stove surface with empty burners is reachable."
+  expected_sequence: "Pick up the pan and set it on the stove, then pick up the fish and place it in the pan, and place the sausage in the pan; if a PLACE_INSIDE fails, retry up to 3 times."

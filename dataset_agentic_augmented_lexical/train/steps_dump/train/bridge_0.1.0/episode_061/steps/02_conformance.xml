@@ -1,0 +1,19 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to pot -->
+      <Action ID="NAVIGATE_TO" obj="pot" />
+      <!-- Grasp pot -->
+      <Action ID="GRASP" obj="pot" />
+      <!-- Navigate to spoon -->
+      <Action ID="NAVIGATE_TO" obj="spoon" />
+      <Sequence>
+        <!-- Check table is holding before PLACE_ON_TOP -->
+        <Condition ID="IS_HOLDING" obj="table" />
+        <!-- Place next to spoon -->
+        <Action ID="PLACE_NEXT_TO" obj="spoon" />
+      </Sequence>
+      
+    </Sequence>
+  </BehaviorTree>
+</root>

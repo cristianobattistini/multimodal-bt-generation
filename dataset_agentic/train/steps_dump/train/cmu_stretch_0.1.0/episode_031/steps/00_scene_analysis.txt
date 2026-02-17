@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "green_garbage_can_lid"
+  destination: ""
+  expanded_instruction: "Approach the green garbage can and lift its lid open and hold it up."
+  scene_context: "Green trash can lid closed on bin next to table, lid not held, area in front reachable."
+  expected_sequence: "Move to the bin, grasp the lid, and lift it open and hold it up."

@@ -1,0 +1,22 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <Sequence>
+        <!-- Check cup is visible before NAVIGATE_TO -->
+        <Condition ID="IS_VISIBLE" obj="cup" />
+        <!-- Navigate to cup -->
+        <Action ID="NAVIGATE_TO" obj="cup" />
+      </Sequence>
+      <!-- Grasp cup -->
+      <Action ID="GRASP" obj="cup" />
+      <!-- Return cup upright (flip) -->
+      <Action ID="FLIP" obj="cup" />
+      <!-- Navigate to light_blue_basin -->
+      <Action ID="NAVIGATE_TO" obj="light_blue_basin" />
+      <!-- Place inside light_blue_basin -->
+      <Action ID="PLACE_INSIDE" obj="light_blue_basin" />
+      <!-- Release -->
+      <Action ID="RELEASE" />
+    </Sequence>
+  </BehaviorTree>
+</root>

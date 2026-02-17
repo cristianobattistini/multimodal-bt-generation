@@ -1,0 +1,1 @@
+Pick the die. Check if reachable before grasping; if it fails, use push as Plan B.

@@ -1,0 +1,1 @@
+Place the green cup in the dish rack. Retry placing inside up to 3 times if it fails.

@@ -1,0 +1,17 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Execute subtree ApproachRedObject -->
+      <SubTree ID="ApproachRedObject" />
+    </Sequence>
+  </BehaviorTree>
+  <!-- Subtree definition ApproachRedObject -->
+  <BehaviorTree ID="ApproachRedObject">
+    <Sequence>
+      <!-- Navigate to red_object -->
+      <Action ID="NAVIGATE_TO" obj="red_object" />
+      <!-- Push red_object forward toward front edge of table -->
+      <Action ID="PUSH" obj="red_object" />
+    </Sequence>
+  </BehaviorTree>
+</root>

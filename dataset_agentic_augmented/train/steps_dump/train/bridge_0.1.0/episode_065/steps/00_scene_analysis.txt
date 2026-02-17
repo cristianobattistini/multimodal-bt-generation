@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "sweet_potato"
+  destination: "pot_in_sink"
+  expanded_instruction: "Navigate to the counter (NAVIGATE_TO with a 15s timeout), pick up the sweet potato from the counter and place it into the pot that is in the sink."
+  scene_context: "Sweet_potato on counter to the right of sink; pot sitting inside sink and appears empty; nothing is held."
+  expected_sequence: "NAVIGATE_TO counter (within 15s timeout), reach the sweet_potato, grasp it, move over the pot in the sink, and drop the sweet_potato into the pot."

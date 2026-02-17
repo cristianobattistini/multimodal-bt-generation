@@ -1,0 +1,49 @@
+# Simplest BEHAVIOR Tasks Batch File
+#
+# Format: instruction | task_name | retries
+#
+# These are the 10 simplest tasks sorted by complexity.
+# All use only basic primitives: NAVIGATE_TO, GRASP, RELEASE, PLACE_ON_TOP, PLACE_INSIDE, OPEN, CLOSE
+#
+# Run with:
+#   ./run_continuous_pipeline.sh --batch behavior_integration/tasks_simplest_10.txt --colab-url "http://..." --symbolic
+#
+# ============================================================================
+
+# TIER 1: TRIVIAL (1 object, ~4 steps) ----------------------------------------
+
+# 1. Hang picture - simplest possible task
+hang the picture on the wall | hanging_pictures | 2
+
+# 2. Camera on tripod - simple placement
+attach the camera to the tripod | attach_a_camera_to_a_tripod | 2
+
+
+# TIER 2: SIMPLE (2-3 objects, ~8 steps) --------------------------------------
+
+# 3. Tidying bedroom - most tested task
+put the book on the nightstand and place the sandals next to the bed | tidying_bedroom | 3
+
+# 4. Shoes on rack - simple pick-place
+put the shoes on the shoe rack | putting_shoes_on_rack | 2
+
+# 5. Picking up trash - forall but repetitive action
+pick up the soda cans and put them in the trash can | picking_up_trash | 3
+
+# 6. Bringing water - requires OPEN/CLOSE for fridge
+get the water bottles from the fridge and put them on the coffee table, then close the fridge | bringing_water | 3
+
+
+# TIER 3: MEDIUM (3-4 objects, ~12-16 steps) ----------------------------------
+
+# 7. Storing food - multiple objects, one container
+put the oatmeal, chips, olive oil, and sugar in the cabinet | storing_food | 2
+
+# 8. Picking up toys - collect items into box
+pick up the puzzles, board games, and tennis ball and put them in the toy box | picking_up_toys | 2
+
+# 9. Preparing lunch - pack items into container
+put the apple halves, sandwich, cookie, and tea bottle into the packing box | preparing_lunch_box | 2
+
+# 10. Dishes away - multiple plates into cabinet
+put all the plates in the cabinet and close it | putting_dishes_away_after_cleaning | 2

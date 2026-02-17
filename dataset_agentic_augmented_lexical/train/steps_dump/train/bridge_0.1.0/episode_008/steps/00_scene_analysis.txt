@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "eggplant"
+  destination: "metal_pot"
+  expanded_instruction: "Check IS_VISIBLE on the eggplant and retry up to 3 times within 10s if needed, then pick up the eggplant from the sink and place it into the metal pot at the sink's left."
+  scene_context: "Eggplant lying in sink, metal pot on left of sink is empty and reachable, robot gripper not holding anything."
+  expected_sequence: "Check IS_VISIBLE on the eggplant before reaching; reach to the eggplant, grasp it (if grasp fails, push to reposition and retry up to 3 times), lift and move it over the metal pot, and drop it inside."

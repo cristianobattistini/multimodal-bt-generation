@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "apple"
+  destination: ""
+  expanded_instruction: "Pick up the small red apple resting on the blue cloth surface"
+  scene_context: "Red apple sits on a blue tablecloth, not held; surface is clear and reachable."
+  expected_sequence: "Move to the apple, grasp it securely, and lift it off the cloth."

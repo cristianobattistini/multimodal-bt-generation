@@ -1,0 +1,10 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to white_carton -->
+      <Action ID="NAVIGATE_TO" obj="white_carton"/>
+      <!-- Push white_carton to move it rightward across the table -->
+      <Action ID="PUSH" obj="white_carton"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

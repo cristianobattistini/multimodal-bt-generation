@@ -1,0 +1,19 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to fridge -->
+      <Action ID="NAVIGATE_TO" obj="fridge" />
+      <!-- Grasp fridge -->
+      <Action ID="GRASP" obj="fridge" />
+      <!-- Check fridge is open before CLOSE -->
+      <Condition ID="IS_OPEN" obj="fridge" />
+      <!-- Retry CLOSE fridge up to 2 attempts -->
+      <RetryUntilSuccessful num_attempts="2">
+        <!-- Close fridge -->
+        <Action ID="CLOSE" obj="fridge" />
+      </RetryUntilSuccessful>
+      <!-- Release -->
+      <Action ID="RELEASE" />
+    </Sequence>
+  </BehaviorTree>
+</root>

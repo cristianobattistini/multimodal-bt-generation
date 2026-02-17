@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "orange_fruit"
+  destination: "gray_plate"
+  expanded_instruction: "Place the orange fruit into the gray plate on the table, retrying the place action up to 2 times if it fails; if placing still fails, push to reposition the orange and try again."
+  scene_context: "Orange fruit is held by the robot above the table; gray plate is on the table and clear."
+  expected_sequence: "Move the orange over the gray plate and place it into the plate, retrying the place up to 2 times on failure; if placing fails repeatedly, push to reposition the orange and attempt placing again."

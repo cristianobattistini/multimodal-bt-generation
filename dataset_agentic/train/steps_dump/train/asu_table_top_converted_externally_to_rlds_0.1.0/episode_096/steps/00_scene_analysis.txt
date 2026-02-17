@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "maroon_cube"
+  destination: "table"
+  expanded_instruction: "Pick up the maroon cube from the table and place it down on the table."
+  scene_context: "Maroon cube sits on the table near center front; not held; table surface is clear."
+  expected_sequence: "Approach the maroon cube, grasp it, and place it down onto the table."

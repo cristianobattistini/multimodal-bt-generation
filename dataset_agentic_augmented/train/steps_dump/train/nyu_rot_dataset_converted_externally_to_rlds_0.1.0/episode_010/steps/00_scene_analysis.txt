@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "peg"
+  destination: "blue_cup"
+  expanded_instruction: "Take the peg currently held by the robot and insert it into the blue cup on the table. Group actions into an ApproachBlueCup subtree: approach and align to the cup, retry up to 3 times if alignment or grasp fails, with a 10s timeout."
+  scene_context: "Robot arm is holding the peg above a clear, open blue cup on the table."
+  expected_sequence: "Lower the held peg into the blue cup and release it so the peg is fully inserted, using the ApproachBlueCup subtree; retry insertion up to 3 times if alignment fails, abort after 10s."

@@ -1,0 +1,49 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Open the cabinet first -->
+      <Action ID="NAVIGATE_TO" obj="cabinet.n.01_1"/>
+      <Action ID="OPEN" obj="cabinet.n.01_1"/>
+      <!-- Store box of oatmeal 1 -->
+      <Action ID="NAVIGATE_TO" obj="box__of__oatmeal.n.01_1"/>
+      <Action ID="GRASP" obj="box__of__oatmeal.n.01_1"/>
+      <Action ID="NAVIGATE_TO" obj="cabinet.n.01_1"/>
+      <Action ID="PLACE_INSIDE" obj="cabinet.n.01_1"/>
+      <!-- Store box of oatmeal 2 -->
+      <Action ID="NAVIGATE_TO" obj="box__of__oatmeal.n.01_2"/>
+      <Action ID="GRASP" obj="box__of__oatmeal.n.01_2"/>
+      <Action ID="NAVIGATE_TO" obj="cabinet.n.01_1"/>
+      <Action ID="PLACE_INSIDE" obj="cabinet.n.01_1"/>
+      <!-- Store bag of chips 1 -->
+      <Action ID="NAVIGATE_TO" obj="bag__of__chips.n.01_1"/>
+      <Action ID="GRASP" obj="bag__of__chips.n.01_1"/>
+      <Action ID="NAVIGATE_TO" obj="cabinet.n.01_1"/>
+      <Action ID="PLACE_INSIDE" obj="cabinet.n.01_1"/>
+      <!-- Store bag of chips 2 -->
+      <Action ID="NAVIGATE_TO" obj="bag__of__chips.n.01_2"/>
+      <Action ID="GRASP" obj="bag__of__chips.n.01_2"/>
+      <Action ID="NAVIGATE_TO" obj="cabinet.n.01_1"/>
+      <Action ID="PLACE_INSIDE" obj="cabinet.n.01_1"/>
+      <!-- Store bottle of olive oil 1 -->
+      <Action ID="NAVIGATE_TO" obj="bottle__of__olive_oil.n.01_1"/>
+      <Action ID="GRASP" obj="bottle__of__olive_oil.n.01_1"/>
+      <Action ID="NAVIGATE_TO" obj="cabinet.n.01_1"/>
+      <Action ID="PLACE_INSIDE" obj="cabinet.n.01_1"/>
+      <!-- Store bottle of olive oil 2 -->
+      <Action ID="NAVIGATE_TO" obj="bottle__of__olive_oil.n.01_2"/>
+      <Action ID="GRASP" obj="bottle__of__olive_oil.n.01_2"/>
+      <Action ID="NAVIGATE_TO" obj="cabinet.n.01_1"/>
+      <Action ID="PLACE_INSIDE" obj="cabinet.n.01_1"/>
+      <!-- Store jar of sugar 1 -->
+      <Action ID="NAVIGATE_TO" obj="jar__of__sugar.n.01_1"/>
+      <Action ID="GRASP" obj="jar__of__sugar.n.01_1"/>
+      <Action ID="NAVIGATE_TO" obj="cabinet.n.01_1"/>
+      <Action ID="PLACE_INSIDE" obj="cabinet.n.01_1"/>
+      <!-- Store jar of sugar 2 -->
+      <Action ID="NAVIGATE_TO" obj="jar__of__sugar.n.01_2"/>
+      <Action ID="GRASP" obj="jar__of__sugar.n.01_2"/>
+      <Action ID="NAVIGATE_TO" obj="cabinet.n.01_1"/>
+      <Action ID="PLACE_INSIDE" obj="cabinet.n.01_1"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

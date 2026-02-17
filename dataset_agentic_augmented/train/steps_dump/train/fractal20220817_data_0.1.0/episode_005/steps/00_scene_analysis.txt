@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "green_jalapeno_chip_bag"
+  destination: "counter"
+  expanded_instruction: "Using the ApproachBottomDrawer subtree, pick up the green jalapeno chip bag from the open bottom drawer and place it on the counter next to the bowl; retry approach/grasp up to 3 times with a 10s timeout and, if grasp fails, push to reposition before retrying."
+  scene_context: "Bottom drawer is open with the green jalapeno chip bag inside; bag is not held; counter has a bowl but is reachable."
+  expected_sequence: "ApproachBottomDrawer subtree: approach the open bottom drawer, reach into the drawer, grasp the bag, lift it out, move to the counter, and place it down; allow up to 3 retries with a 10s timeout for approach/grasp, and if grasp fails push to reposition then retry."

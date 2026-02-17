@@ -1,0 +1,21 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Execute subtree ApproachGreenBox -->
+      <SubTree ID="ApproachGreenBox" />
+      <!-- Navigate to sink -->
+      <Action ID="NAVIGATE_TO" obj="sink" />
+      <!-- Place inside sink -->
+      <Action ID="PLACE_INSIDE" obj="sink" />
+    </Sequence>
+  </BehaviorTree>
+  <!-- Subtree definition ApproachGreenBox -->
+  <BehaviorTree ID="ApproachGreenBox">
+    <Sequence>
+      <!-- Navigate to green_box -->
+      <Action ID="NAVIGATE_TO" obj="green_box" />
+      <!-- Grasp green_box -->
+      <Action ID="GRASP" obj="green_box" />
+    </Sequence>
+  </BehaviorTree>
+</root>

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "mug"
+  destination: ""
+  expanded_instruction: "Pick up the white mug from the blue tablecloth surface, retrying the grasp up to 3 times if it fails."
+  scene_context: "White mug on blue tablecloth, handle visible and not held, table surface clear."
+  expected_sequence: "Approach the mug, grasp the handle or rim, and lift it off the table; if a grasp fails, retry up to 3 times."

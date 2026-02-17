@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "green_rice_chip_bag"
+  destination: "table"
+  expanded_instruction: "Pick up the green rice chip bag and place it near the apple on the table."
+  scene_context: "Green chip bag and apple are on the table; bag is to the right of apple; no containers closed; nothing held."
+  expected_sequence: "Approach the bag, grasp it, move it to the table next to the apple, and set it down."

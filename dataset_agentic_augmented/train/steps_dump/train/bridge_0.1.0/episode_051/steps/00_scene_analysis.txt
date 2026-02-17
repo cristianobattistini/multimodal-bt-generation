@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "pan"
+  destination: "table"
+  expanded_instruction: "Check IS_REACHABLE on the pan before attempting to grasp it; if reachable, pick up the pan (retry grasp up to 3 times within a 10s timeout, and if grasp repeatedly fails, push to reposition and try again) and carry it to the table to the right of the bottle and banana, then set it down there."
+  scene_context: "Pan on left table edge, bottle near back center, banana near center; nothing held and table area clear."
+  expected_sequence: "Check IS_REACHABLE(pan); if reachable, attempt GRASP (retry up to 3 times within 10s); if grasp fails repeatedly, push pan to reposition and retry; once grasped, pick up the pan, carry it to the table area right of the bottle and banana, and set it down there."

@@ -1,0 +1,23 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Execute subtree ApproachWhitePlate -->
+      <SubTree ID="ApproachWhitePlate" />
+      <!-- Navigate to red_plate -->
+      <Action ID="NAVIGATE_TO" obj="red_plate" />
+      <!-- Place on red_plate -->
+      <Action ID="PLACE_ON_TOP" obj="red_plate" />
+      <!-- Release -->
+      <Action ID="RELEASE" />
+    </Sequence>
+  </BehaviorTree>
+  <!-- Subtree definition ApproachWhitePlate -->
+  <BehaviorTree ID="ApproachWhitePlate">
+    <Sequence>
+      <!-- Navigate to white_plate -->
+      <Action ID="NAVIGATE_TO" obj="white_plate" />
+      <!-- Grasp white_plate -->
+      <Action ID="GRASP" obj="white_plate" />
+    </Sequence>
+  </BehaviorTree>
+</root>

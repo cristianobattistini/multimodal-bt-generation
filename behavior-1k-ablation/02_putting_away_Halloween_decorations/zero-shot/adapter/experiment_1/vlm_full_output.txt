@@ -1,0 +1,59 @@
+scene_analysis:
+  target: ["pumpkin.n.02_1", "pumpkin.n.02_2", "candle.n.01_1", "candle.n.01_2", "candle.n.01_3", "caldron.n.01_1"]
+  destination: "cabinet.n.01_1"
+  expanded_instruction: "Open the cabinet, place the 2 pumpkins and 3 candles inside the cabinet, then place the cauldron next to the table, and close the cabinet."
+  scene_context: "Cabinet doors are closed; interior shelf is empty and reachable; no objects are held; table has a clear spot beside the cabinet."
+  expected_sequence: "Open the cabinet, place each pumpkin and candle into the cabinet, then place the cauldron beside the table, and close the cabinet."
+Plan:
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to cabinet.n.01_1 -->
+      <Action ID="NAVIGATE_TO" obj="cabinet.n.01_1" />
+      <!-- Open cabinet.n.01_1 -->
+      <Action ID="OPEN" obj="cabinet.n.01_1" />
+      <!-- Navigate to pumpkin.n.02_1 -->
+      <Action ID="NAVIGATE_TO" obj="pumpkin.n.02_1" />
+      <!-- Grasp pumpkin.n.02_1 -->
+      <Action ID="GRASP" obj="pumpkin.n.02_1" />
+      <!-- Navigate to cabinet.n.01_1 -->
+      <Action ID="NAVIGATE_TO" obj="cabinet.n.01_1" />
+      <!-- Place inside cabinet.n.01_1 -->
+      <Action ID="PLACE_INSIDE" obj="cabinet.n.01_1" />
+      <!-- Navigate to candle.n.01_1 -->
+      <Action ID="NAVIGATE_TO" obj="candle.n.01_1" />
+      <!-- Grasp candle.n.01_1 -->
+      <Action ID="GRASP" obj="candle.n.01_1" />
+      <!-- Navigate to cabinet.n.01_1 -->
+      <Action ID="NAVIGATE_TO" obj="cabinet.n.01_1" />
+      <!-- Place inside cabinet.n.01_1 -->
+      <Action ID="PLACE_INSIDE" obj="cabinet.n.01_1" />
+      <!-- Navigate to candle.n.01_2 -->
+      <Action ID="NAVIGATE_TO" obj="candle.n.01_2" />
+      <!-- Grasp candle.n.01_2 -->
+      <Action ID="GRASP" obj="candle.n.01_2" />
+      <!-- Navigate to cabinet.n.01_1 -->
+      <Action ID="NAVIGATE_TO" obj="cabinet.n.01_1" />
+      <!-- Place inside cabinet.n.01_1 -->
+      <Action ID="PLACE_INSIDE" obj="cabinet.n.01_1" />
+      <!-- Navigate to candle.n.01_3 -->
+      <Action ID="NAVIGATE_TO" obj="candle.n.01_3" />
+      <!-- Grasp candle.n.01_3 -->
+      <Action ID="GRASP" obj="candle.n.01_3" />
+      <!-- Navigate to cabinet.n.01_1 -->
+      <Action ID="NAVIGATE_TO" obj="cabinet.n.01_1" />
+      <!-- Place inside cabinet.n.01_1 -->
+      <Action ID="PLACE_INSIDE" obj="cabinet.n.01_1" />
+      <!-- Navigate to cauldron.n.01_1 -->
+      <Action ID="NAVIGATE_TO" obj="caldron.n.01_1" />
+      <!-- Navigate to table.n.02_1 -->
+      <Action ID="NAVIGATE_TO" obj="table.n.02_1" />
+      <!-- Place next to table.n.02_1 -->
+      <Action ID="PLACE_NEXT_TO" obj="table.n.02_1" />
+      <!-- Navigate to cabinet.n.01_1 -->
+      <Action ID="NAVIGATE_TO" obj="cabinet.n.01_1" />
+      <!-- Open cabinet.n.01_1 -->
+      <Action ID="CLOSE" obj="cabinet.n.01_1" />
+    </Sequence>
+  </BehaviorTree>
+</root>

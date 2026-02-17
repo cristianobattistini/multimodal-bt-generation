@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "mug"
+  destination: "mug"
+  expanded_instruction: "Pour liquid into the blue mug sitting above the red object, grouping approach-and-pour steps into an ApproachPitcher subtree."
+  scene_context: "Blue mug upright above a red object; mug initially empty and reachable; no visible lid."
+  expected_sequence: "Use an ApproachPitcher subtree: bring a filled container over the mug and pour until it contains liquid; allow up to 3 retries, 10s timeout per step, and if grasp fails, push to reposition."

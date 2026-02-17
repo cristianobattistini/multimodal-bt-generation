@@ -1,0 +1,1 @@
+take the tiger out of the red bowl and put it in the grey bowl. If grasping the tiger fails, push it to reposition it and retry grasping.

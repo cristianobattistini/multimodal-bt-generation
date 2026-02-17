@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "apple"
+  destination: ""
+  expanded_instruction: "Pick up the apple from the table near the right side; if the grasp fails, retry up to 2 times."
+  scene_context: "Apple on table near right edge; gripper not holding it; table surface mostly clear; bag and can nearby."
+  expected_sequence: "Move the arm to the apple, close the gripper to grasp it (retry up to 2 times if needed), and lift the apple."

@@ -1,0 +1,7 @@
+scene_analysis:
+  target: ["club_sandwich", "half_apple_1", "half_apple_2", "chocolate_chip_cookie"]
+  destination: "packing_box"
+  expanded_instruction: "Pick up the club_sandwich, the two half_apples, and the chocolate_chip_cookie from the chopping_board and place them into the packing_box. Before placing inside, check that the refrigerator is closed; if not, close it and retry the check up to 3 times within a 10s timeout."
+  scene_context: "Chopping_board has the club_sandwich, the two half_apples, and the chocolate_chip_cookie; packing_box is open and empty; bottle_of_tea inside refrigerator; refrigerator door closed."
+  expected_sequence: "Pick each item from the chopping_board and place them into the packing_box. Before placing inside, check that the refrigerator is closed; if not, close it and retry the check up to 3 times within a 10s timeout. If placing inside fails, push to reposition and retry."
+Plan:

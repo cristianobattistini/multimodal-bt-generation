@@ -1,0 +1,20 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Execute subtree ApproachTouchscreen -->
+      <SubTree ID="ApproachTouchscreen" />
+    </Sequence>
+  </BehaviorTree>
+  <!-- Subtree definition ApproachTouchscreen -->
+  <BehaviorTree ID="ApproachTouchscreen">
+    <Sequence>
+      <!-- Timeout: NAVIGATE_TO touchscreen within 15s -->
+      <Timeout msec="15000">
+        <!-- Navigate to touchscreen -->
+        <Action ID="NAVIGATE_TO" obj="touchscreen" />
+      </Timeout>
+      <!-- Wipe touchscreen -->
+      <Action ID="WIPE" obj="touchscreen" />
+    </Sequence>
+  </BehaviorTree>
+</root>

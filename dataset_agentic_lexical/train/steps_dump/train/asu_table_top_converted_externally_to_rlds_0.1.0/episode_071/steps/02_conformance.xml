@@ -1,0 +1,14 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Move to pepsi_can -->
+      <Action ID="MOVE_TO" obj="pepsi_can" />
+      <!-- Grip pepsi_can -->
+      <Action ID="GRIP" obj="pepsi_can" />
+      <!-- Approach table -->
+      <Action ID="APPROACH" obj="table" />
+      <!-- Place on table (near robot) -->
+      <Action ID="PLACE_ON_TOP" obj="table" />
+    </Sequence>
+  </BehaviorTree>
+</root>

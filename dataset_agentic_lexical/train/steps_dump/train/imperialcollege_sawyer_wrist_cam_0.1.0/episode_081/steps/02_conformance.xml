@@ -1,0 +1,14 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Move to toast -->
+      <Action ID="MOVE_TO" obj="toast" />
+      <!-- Pick toast -->
+      <Action ID="PICK" obj="toast" />
+      <!-- Approach toaster_slot -->
+      <Action ID="APPROACH" obj="toaster_slot" />
+      <!-- Place toast inside toaster_slot -->
+      <Action ID="PLACE_INSIDE" obj="toast" container="toaster_slot" />
+    </Sequence>
+  </BehaviorTree>
+</root>

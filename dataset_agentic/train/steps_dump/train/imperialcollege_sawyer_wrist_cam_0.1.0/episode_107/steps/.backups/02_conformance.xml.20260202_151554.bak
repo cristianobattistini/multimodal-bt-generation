@@ -1,0 +1,16 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to bowl_2 -->
+      <Action ID="NAVIGATE_TO" obj="bowl_2"/>
+      <!-- Grasp bowl_2 -->
+      <Action ID="GRASP" obj="bowl_2"/>
+      <!-- Navigate to bowl_1 -->
+      <Action ID="NAVIGATE_TO" obj="bowl_1"/>
+      <!-- Place inside bowl_1 -->
+      <Action ID="PLACE_INSIDE" obj="bowl_1"/>
+      <!-- Release -->
+      <Action ID="RELEASE"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

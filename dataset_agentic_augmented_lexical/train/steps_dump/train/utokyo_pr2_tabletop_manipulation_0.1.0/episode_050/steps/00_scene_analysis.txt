@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "pink_cloth"
+  destination: "table"
+  expanded_instruction: "Pick up the pink cloth from the table, fold it into a neat rectangle, and place it back on the table. Before any wipe/smoothing step, check IS_HOLDING on pink_cloth; if not holding, retry the grasp up to 3 times with a 10s timeout (if grasp fails, push to reposition) and then continue."
+  scene_context: "Pink cloth lies flat on a clear table; robot arm not holding anything and no containers open."
+  expected_sequence: "Approach the cloth, grasp an edge or corner, fold it over to form a smaller rectangle, smooth and release it on the table. Prior to smoothing/wipe, verify IS_HOLDING on pink_cloth; if the grasp fails, retry up to 3 times within 10s or push to reposition, then smooth and release."

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "white_box"
+  destination: "table"
+  expanded_instruction: "Pick up the white box from the table and place it on the table (relocate it to a clear spot)"
+  scene_context: "White box on table between orange blocks and green bottle; table is open and arm is not holding anything."
+  expected_sequence: "Move to the white box, grasp it, lift and relocate it to a clear spot on the table, then set it down."

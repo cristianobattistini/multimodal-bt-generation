@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "mug"
+  destination: ""
+  expanded_instruction: "Pour liquid from the nearby small pitcher into the white mug on the blue cloth."
+  scene_context: "White mug upright and mostly empty on blue cloth; small pouring container nearby; nothing held; table clear."
+  expected_sequence: "Grasp the small pitcher, bring it over the mug, tilt to pour liquid into the mug, then set the pitcher down."

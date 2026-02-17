@@ -1,0 +1,1 @@
+Flip cup upright. Only navigate to the object if it is visible.

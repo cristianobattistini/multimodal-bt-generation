@@ -1,0 +1,7 @@
+scene_analysis:
+  target: "easter_egg_1, easter_egg_2, easter_egg_3"
+  destination: "tree_1"
+  expanded_instruction: "Pick up each of the three Easter eggs from the wicker basket on the lawn and place them next to the tree."
+  scene_context: "Wicker basket with eggs on the lawn, tree nearby but not held; grass clear; robot not holding any objects."
+  expected_sequence: "Reach into the wicker basket and pick up each Easter egg, move to the tree, and set it down beside the tree on the lawn."
+Plan:

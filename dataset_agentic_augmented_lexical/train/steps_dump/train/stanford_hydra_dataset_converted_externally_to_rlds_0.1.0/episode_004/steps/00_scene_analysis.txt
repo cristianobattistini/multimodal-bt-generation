@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "["dishes"]"
+  destination: "dish_rack"
+  expanded_instruction: "Pick up the dishes (plate and cup) and place them into the dish_rack; if PLACE_INSIDE fails, retry up to 3 times (within 10s total) and if still failing, use a PUSH to reposition the object and try placement again."
+  scene_context: "Plate near the rack edge on the counter; dish_rack empty and open; cloth with cup on the right; robot not holding anything."
+  expected_sequence: "Pick up each dish (plate then cup) and place them into the dish_rack until both are seated; if PLACE_INSIDE fails, retry up to 3 times (within 10s), then PUSH to reposition and attempt placement again."

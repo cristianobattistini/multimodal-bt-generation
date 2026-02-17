@@ -1,0 +1,7 @@
+scene_analysis:
+  target: "storage_container_1"
+  destination: "garage_floor"
+  expanded_instruction: "First, navigate to the closed door and open it with empty hands. Next, go to storage_container_1, pick it up, navigate to the garage_floor, and place it there. Then go to storage_container_2, pick it up, navigate to storage_container_1, and place it on top of the first container."
+  scene_context: "A closed wooden door is visible ahead; the robot starts with empty hands in a garage-like room."
+  expected_sequence: "Navigate to door, open door. Navigate to storage_container_1, grasp it, navigate to garage_floor, place it on the floor. Navigate to storage_container_2, grasp it, navigate to storage_container_1, place it on top of the first container."
+Plan:

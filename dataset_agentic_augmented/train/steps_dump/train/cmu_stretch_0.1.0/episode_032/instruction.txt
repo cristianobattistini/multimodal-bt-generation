@@ -1,0 +1,1 @@
+lift up a lid from the pot. If grasping fails, push the lid to reposition it and retry grasping.

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: ["bowl_small", "bowl_large"]
+  destination: "bowl_large"
+  expanded_instruction: "Pick up the smaller bowl and place it inside the larger bowl to stack them."
+  scene_context: "Small bowl is above and separate from large bowl which sits on a clear surface; no items are held."
+  expected_sequence: "Pick up the small bowl, align it over the large bowl, and lower it into the large bowl to stack."

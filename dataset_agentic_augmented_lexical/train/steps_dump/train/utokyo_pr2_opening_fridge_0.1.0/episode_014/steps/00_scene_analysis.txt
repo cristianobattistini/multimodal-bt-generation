@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "fridge_door"
+  destination: ""
+  expanded_instruction: "Check the fridge door is visible, then open the white fridge door by pulling its handle; grasp within a 15s timeout and retry the grasp up to 2 times if it fails, until the interior is accessible."
+  scene_context: "Fridge is closed; white door with handle on the right; robot arm nearby and not holding anything."
+  expected_sequence: "Move to the fridge, confirm the door is visible, grasp the handle (15s timeout; retry up to 2 times on failure), and pull the door open until the fridge is open."

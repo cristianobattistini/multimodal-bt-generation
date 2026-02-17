@@ -1,0 +1,158 @@
+{
+  "total_augmentations": 811,
+  "decorator_totals": {
+    "mixed": 263,
+    "retry": 147,
+    "subtree": 113,
+    "fallback": 104,
+    "timeout": 80,
+    "condition": 104
+  },
+  "action_totals": {
+    "GRASP": 337,
+    "PLACE_ON_TOP": 60,
+    "NAVIGATE_TO": 276,
+    "OPEN": 26,
+    "FLIP": 5,
+    "PUSH": 18,
+    "WIPE": 2,
+    "PLACE_INSIDE": 73,
+    "POUR": 2,
+    "UNFOLD": 1,
+    "TOGGLE_ON": 3,
+    "HANG": 2,
+    "CLOSE": 4,
+    "FOLD": 2
+  },
+  "action_decorator_matrix": {
+    "GRASP": {
+      "mixed": 178,
+      "retry": 62,
+      "condition": 25,
+      "fallback": 72
+    },
+    "PLACE_ON_TOP": {
+      "mixed": 17,
+      "fallback": 18,
+      "retry": 18,
+      "condition": 7
+    },
+    "NAVIGATE_TO": {
+      "subtree": 113,
+      "condition": 48,
+      "mixed": 37,
+      "timeout": 78
+    },
+    "OPEN": {
+      "retry": 19,
+      "condition": 6,
+      "mixed": 1
+    },
+    "FLIP": {
+      "fallback": 2,
+      "condition": 1,
+      "retry": 1,
+      "timeout": 1
+    },
+    "PUSH": {
+      "retry": 11,
+      "mixed": 3,
+      "condition": 4
+    },
+    "WIPE": {
+      "timeout": 1,
+      "condition": 1
+    },
+    "PLACE_INSIDE": {
+      "condition": 8,
+      "fallback": 11,
+      "mixed": 22,
+      "retry": 32
+    },
+    "POUR": {
+      "mixed": 1,
+      "condition": 1
+    },
+    "UNFOLD": {
+      "fallback": 1
+    },
+    "TOGGLE_ON": {
+      "retry": 2,
+      "condition": 1
+    },
+    "HANG": {
+      "condition": 1,
+      "mixed": 1
+    },
+    "CLOSE": {
+      "mixed": 1,
+      "condition": 1,
+      "retry": 2
+    },
+    "FOLD": {
+      "mixed": 2
+    }
+  },
+  "decorator_balance": {
+    "mixed": 0.3242909987669544,
+    "retry": 0.1812577065351418,
+    "subtree": 0.13933415536374846,
+    "fallback": 0.1282367447595561,
+    "timeout": 0.09864364981504316,
+    "condition": 0.1282367447595561
+  },
+  "most_common": [
+    {
+      "action": "GRASP",
+      "decorator": "mixed",
+      "count": 164
+    },
+    {
+      "action": "NAVIGATE_TO",
+      "decorator": "subtree",
+      "count": 112
+    },
+    {
+      "action": "NAVIGATE_TO",
+      "decorator": "timeout",
+      "count": 78
+    },
+    {
+      "action": "GRASP",
+      "decorator": "fallback",
+      "count": 72
+    },
+    {
+      "action": "GRASP",
+      "decorator": "retry",
+      "count": 62
+    }
+  ],
+  "least_common": [
+    {
+      "action": "TOGGLE_ON",
+      "decorator": "condition",
+      "count": 1
+    },
+    {
+      "action": "HANG",
+      "decorator": "condition",
+      "count": 1
+    },
+    {
+      "action": "HANG",
+      "decorator": "mixed",
+      "count": 1
+    },
+    {
+      "action": "CLOSE",
+      "decorator": "mixed",
+      "count": 1
+    },
+    {
+      "action": "CLOSE",
+      "decorator": "condition",
+      "count": 1
+    }
+  ]
+}

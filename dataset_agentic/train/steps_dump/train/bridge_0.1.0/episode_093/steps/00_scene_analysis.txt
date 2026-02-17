@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "yellow_brush"
+  destination: "table"
+  expanded_instruction: "Move the yellow_brush to the left side of the metal bowl on the table."
+  scene_context: "Yellow_brush is on the right of the metal bowl on the table; bowl on blue cloth; nothing is held and left side of bowl is clear."
+  expected_sequence: "Pick up the yellow_brush, move to the table left of the bowl, and place the brush down there."

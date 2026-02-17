@@ -1,0 +1,16 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to salt -->
+      <Action ID="NAVIGATE_TO" obj="salt"/>
+      <!-- Grasp salt -->
+      <Action ID="GRASP" obj="salt"/>
+      <!-- Navigate to yellow_brush (place next to brush above the napkin) -->
+      <Action ID="NAVIGATE_TO" obj="yellow_brush"/>
+      <!-- Place on table (beside the yellow_brush above the napkin) -->
+      <Action ID="PLACE_ON_TOP" obj="table"/>
+      <!-- Release -->
+      <Action ID="RELEASE"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

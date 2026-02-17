@@ -1,0 +1,12 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Check maroon_cube is visible before NAVIGATE_TO -->
+      <Condition ID="IS_VISIBLE" obj="maroon_cube" />
+      <!-- Go to maroon_cube -->
+      <Action ID="GO_TO" obj="maroon_cube" />
+      <!-- Grasp maroon_cube -->
+      <Action ID="GRASP" obj="maroon_cube" />
+    </Sequence>
+  </BehaviorTree>
+</root>

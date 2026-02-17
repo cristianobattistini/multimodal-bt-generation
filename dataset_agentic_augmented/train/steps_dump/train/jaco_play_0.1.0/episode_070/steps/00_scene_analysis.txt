@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "steak_meat"
+  destination: ""
+  expanded_instruction: "Check that the steak_meat is reachable (IS_REACHABLE) before navigating — retry the reachability check up to 3 times with a 10s timeout; if reachable, pick up the steak meat from the white plate on the table near the robot arm. If reachability fails, report and abort or reposition and try again."
+  scene_context: "Steak on a white plate on the table; plate reachable; nothing is held; nearby grill and blue container present."
+  expected_sequence: "Check IS_REACHABLE on steak_meat (retry up to 3 times, 10s timeout); if reachable, navigate to the plate, approach the plate, grasp the steak meat, and lift it clear of the plate. If grasp fails, retry grasp or push to reposition and attempt grasp again."

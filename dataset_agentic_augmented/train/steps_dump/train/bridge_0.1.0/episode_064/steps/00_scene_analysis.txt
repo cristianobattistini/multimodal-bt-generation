@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "red_fork"
+  destination: "stovetop"
+  expanded_instruction: "Pick up the red fork and place it on the stovetop immediately to the left of the left burner. If the grasp fails, retry the grasp up to 3 times."
+  scene_context: "Red_fork on stove right of burners; broccoli sits left of left burner; pan on right burner; stovetop otherwise reachable."
+  expected_sequence: "Pick up the red fork, move it to the stovetop left of the left burner, and place it down; if the initial grasp fails, retry the grasp up to 3 times."

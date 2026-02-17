@@ -1,0 +1,1 @@
+Sweep the green cloth to the left side of the table. Use ApproachGreenCloth subtree for approach and grasp.

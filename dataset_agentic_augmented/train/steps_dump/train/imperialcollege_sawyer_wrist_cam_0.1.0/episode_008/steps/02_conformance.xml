@@ -1,0 +1,22 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to pink_cup -->
+      <Action ID="NAVIGATE_TO" obj="pink_cup" />
+      <!-- Retry GRASP pink_cup up to 2 attempts -->
+      <RetryUntilSuccessful num_attempts="2">
+        <!-- Timeout: GRASP pink_cup within 15s -->
+        <Timeout msec="15000">
+          <!-- Grasp pink_cup -->
+          <Action ID="GRASP" obj="pink_cup" />
+        </Timeout>
+      </RetryUntilSuccessful>
+      <!-- Navigate to black_hook -->
+      <Action ID="NAVIGATE_TO" obj="black_hook" />
+      <!-- Hang bag on black_hook -->
+      <Action ID="HANG" obj="black_hook" />
+      <!-- Release -->
+      <Action ID="RELEASE" />
+    </Sequence>
+  </BehaviorTree>
+</root>

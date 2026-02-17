@@ -1,0 +1,20 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to black_shelf -->
+      <Action ID="NAVIGATE_TO" obj="black_shelf" />
+      <!-- Navigate to die -->
+      <Action ID="NAVIGATE_TO" obj="die" />
+      <!-- Check die is visible before GRASP -->
+      <Condition ID="IS_VISIBLE" obj="die" />
+      <!-- Retry GRASP die up to 3 attempts -->
+      <RetryUntilSuccessful num_attempts="3">
+        <!-- Timeout: GRASP die within 10s -->
+        <Timeout msec="10000">
+          <!-- Grasp die -->
+          <Action ID="GRASP" obj="die" />
+        </Timeout>
+      </RetryUntilSuccessful>
+    </Sequence>
+  </BehaviorTree>
+</root>

@@ -1,0 +1,59 @@
+# --- CORE ML STACK ---
+tensorflow
+tensorflow-datasets
+tensorflow-io-gcs-filesystem==0.31.0
+
+# --- NUMERICS & UTILS ---
+numpy==1.26.4
+pillow==10.3.0
+gcsfs==2023.6.0
+
+# --- VISUALIZATION & TOOLS ---
+matplotlib>=3.8.0
+tqdm>=4.66.0
+
+# --- RLDS + OXE ---
+rlds>=0.1.8
+
+# --- CORE TORCH STACK ---
+torch==2.3.1
+torchvision==0.18.1
+timm
+einops
+
+# --- HUGGINGFACE / VLM FINE-TUNING ---
+transformers>=4.41
+accelerate
+peft>=0.10
+bitsandbytes==0.43.1
+sentencepiece
+safetensors
+
+# --- DATASET / IMAGE / IO ---
+datasets
+mediapy
+imageio
+imageio-ffmpeg
+opencv-python
+jsonlines
+pyyaml
+
+# --- UTILITIES / LOGGING ---
+click
+pytest
+omegaconf
+tensorboard
+
+# --- MULTIMODAL / VIDEO DECODING ---
+decord
+openai
+
+# --- XML / JSON SPEED ---
+lxml
+orjson
+
+# --- HUGGING FACE UTILITY ---
+huggingface_hub
+
+# --- DATASET BACKEND ---
+pyarrow

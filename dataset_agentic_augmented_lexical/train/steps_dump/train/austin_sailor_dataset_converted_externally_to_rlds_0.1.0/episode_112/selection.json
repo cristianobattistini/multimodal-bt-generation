@@ -1,0 +1,12 @@
+{
+  "decorator_type": "condition",
+  "mixed_subtype": null,
+  "target_action_id": "PLACE_ON_TOP",
+  "target_obj": "serving_area",
+  "parameters": {
+    "condition_id": "IS_HOLDING",
+    "condition_obj": "serving_area",
+    "allowed_conditions": "IS_HOLDING"
+  },
+  "prompt_name": "condition"
+}

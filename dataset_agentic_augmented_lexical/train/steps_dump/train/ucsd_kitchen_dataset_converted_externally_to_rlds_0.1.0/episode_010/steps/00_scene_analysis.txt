@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "carbinet_door"
+  destination: ""
+  expanded_instruction: "Open the carbinet door by grasping its handle and pulling it until the door is open; if opening fails, retry opening up to 5 times."
+  scene_context: "Carbinet door is closed with an exposed handle on the right; arm not holding anything."
+  expected_sequence: "Move the arm to the handle, grasp it securely, and pull the door open until it is fully open; if opening fails, retry opening up to 5 times."

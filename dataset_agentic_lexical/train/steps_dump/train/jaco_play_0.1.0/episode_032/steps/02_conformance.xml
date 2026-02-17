@@ -1,0 +1,14 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Go to black_bowl -->
+      <Action ID="GO_TO" obj="black_bowl" />
+      <!-- Grasp black_bowl -->
+      <Action ID="GRASP" obj="black_bowl" />
+      <!-- Approach gray_plate -->
+      <Action ID="APPROACH" obj="gray_plate" />
+      <!-- Place inside gray_plate -->
+      <Action ID="PLACE_INSIDE" obj="gray_plate" />
+    </Sequence>
+  </BehaviorTree>
+</root>

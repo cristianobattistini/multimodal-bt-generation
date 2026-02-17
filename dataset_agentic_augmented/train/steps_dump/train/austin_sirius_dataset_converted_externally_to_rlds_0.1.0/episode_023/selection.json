@@ -1,0 +1,29 @@
+{
+  "decorator_type": "mixed",
+  "mixed_subtype": "subtree_retry",
+  "target_action_id": "GRASP",
+  "target_obj": "blue_gear",
+  "parameters": {
+    "augmentations": [
+      {
+        "type": "subtree",
+        "params": {
+          "subtree_name": "ApproachBlueGear",
+          "action_indices": [
+            0,
+            1
+          ]
+        }
+      },
+      {
+        "type": "retry",
+        "action_id": "GRASP",
+        "obj": "blue_gear",
+        "params": {
+          "num_attempts": 2
+        }
+      }
+    ]
+  },
+  "prompt_name": "mixed/subtree_retry"
+}

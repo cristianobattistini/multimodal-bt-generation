@@ -1,0 +1,13 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Timeout: NAVIGATE_TO can within 10s -->
+      <Timeout msec="10000">
+        <!-- Navigate to can -->
+        <Action ID="NAVIGATE_TO" obj="can" />
+      </Timeout>
+      <!-- Grasp can -->
+      <Action ID="GRASP" obj="can" />
+    </Sequence>
+  </BehaviorTree>
+</root>

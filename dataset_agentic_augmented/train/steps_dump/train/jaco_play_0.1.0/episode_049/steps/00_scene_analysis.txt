@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "green_cup"
+  destination: "dish_rack"
+  expanded_instruction: "Place the green cup, currently held by the robot, into the blue dish rack to the right, retrying the place-inside action up to 3 times if it fails."
+  scene_context: "Green cup is held by the robot arm; blue dish_rack is open and has empty slots."
+  expected_sequence: "Move the held green cup over the dish rack and set it into an empty slot in the rack, retrying the place-inside action up to 3 times on failure."

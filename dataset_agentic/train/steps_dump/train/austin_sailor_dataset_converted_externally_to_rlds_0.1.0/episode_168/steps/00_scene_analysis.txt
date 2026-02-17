@@ -1,0 +1,6 @@
+scene_analysis:
+  target: ["bread", "butter", "milk"]
+  destination: "serving_area"
+  expanded_instruction: "Pick up the bread, butter, and milk from the table and place them onto the serving_area."
+  scene_context: "Table has bread on a plate, butter package visible, milk on table; no containers are closed and serving_area is clear."
+  expected_sequence: "For each item, pick it up from the table and place it onto the serving_area."

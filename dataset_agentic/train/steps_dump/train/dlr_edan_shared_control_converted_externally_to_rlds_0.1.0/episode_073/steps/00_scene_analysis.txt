@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "die"
+  destination: ""
+  expanded_instruction: "Pick up the die resting on top of the black shelving unit"
+  scene_context: "Die on top surface of black shelf; shelf compartments open; robot not holding anything; top surface reachable."
+  expected_sequence: "Move to the shelf, reach to the die on the top surface, grasp it, and lift it."

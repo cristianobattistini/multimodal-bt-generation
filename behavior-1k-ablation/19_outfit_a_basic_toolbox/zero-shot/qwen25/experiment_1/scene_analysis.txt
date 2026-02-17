@@ -1,0 +1,7 @@
+scene_analysis:
+  target: "drill"
+  destination: "toolbox"
+  expanded_instruction: "Pick up the drill from the countertop and place it inside the open toolbox; then pick up the pliers, flashlight, allen wrench, and screwdriver one by one from the countertop and place them into the toolbox, and finally close the toolbox."
+  scene_context: "Toolbox is closed on the shelf; drill and other tools lie on the countertop; no objects are held and nothing is obstructing the toolbox."
+  expected_sequence: "Open the toolbox, pick up the drill and place it inside the open toolbox, then pick up and place each tool one at a time into the toolbox (pliers, flashlight, allen wrench, screwdriver), and close the toolbox afterward."
+Plan:

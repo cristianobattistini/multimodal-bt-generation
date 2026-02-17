@@ -1,0 +1,23 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to black_shelf -->
+      <Action ID="NAVIGATE_TO" obj="black_shelf" />
+      <!-- Navigate to die -->
+      <Action ID="NAVIGATE_TO" obj="die" />
+      <!-- Check die is reachable before GRASP -->
+      <Condition ID="IS_REACHABLE" obj="die" />
+      <!-- Fallback: if GRASP die fails, try alternative to reposition -->
+      <Fallback>
+        <!-- Grasp die -->
+        <Action ID="GRASP" obj="die" />
+        <Sequence>
+          <!-- Push die forward toward front edge of table -->
+          <Action ID="SLIDE" obj="die" />
+          <!-- Grasp die -->
+          <Action ID="PICK" obj="die" />
+        </Sequence>
+      </Fallback>
+    </Sequence>
+  </BehaviorTree>
+</root>

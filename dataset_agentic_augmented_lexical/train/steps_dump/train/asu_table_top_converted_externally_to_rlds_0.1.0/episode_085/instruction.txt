@@ -1,0 +1,1 @@
+Move the yellow object. Check if visible before grasping; if it fails, use push as Plan B.

@@ -1,0 +1,7 @@
+scene_analysis:
+  target: "storage_container_1"
+  destination: "storage_container_1"
+  expanded_instruction: "Open the door (with your hands being empty), then go to storage_container_1 (pick up the small orange container), move to the garage floor, and place it down."
+  scene_context: "Door is closed on the wall; small orange container is on the floor near the wall; nearby storage_container_2 is open and empty; robot is free and reachable."
+  expected_sequence: "Open the door (make sure hands are empty before opening), reach to the container, grasp it (pick it up), carry it to the garage floor, then set it down."
+Plan:

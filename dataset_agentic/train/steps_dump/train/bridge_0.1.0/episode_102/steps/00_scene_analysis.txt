@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "cup"
+  destination: "basin"
+  expanded_instruction: "Flip the blue cup from its upside-down position to upright in the basin"
+  scene_context: "Cup is upside-down inside a clear basin; basin is reachable and cup is not held."
+  expected_sequence: "Approach and grasp the cup, rotate it upright, and place it back in the basin upright."

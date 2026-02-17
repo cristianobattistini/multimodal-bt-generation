@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "metal_pot"
+  destination: "cardboard_fence"
+  expanded_instruction: "Pick up the metal_pot and set it upright inside the cardboard_fence on the wooden board. Before placing, confirm IS_HOLDING on the cardboard_fence; attempt placement with up to 3 retries (within a 10s timeout) and if PLACE_INSIDE fails, use a PUSH to reposition the pot into the fence."
+  scene_context: "Metal_pot lying on its side inside cardboard_fence on wooden board; fence open at top; pot not held; board otherwise clear."
+  expected_sequence: "Reach the pot, lift and rotate it to upright orientation, confirm IS_HOLDING on the cardboard_fence before PLACE_INSIDE, attempt placing centered inside the fence (retry up to 3 times, 10s timeout), and if placement fails use PUSH as an alternative to reposition the pot inside."

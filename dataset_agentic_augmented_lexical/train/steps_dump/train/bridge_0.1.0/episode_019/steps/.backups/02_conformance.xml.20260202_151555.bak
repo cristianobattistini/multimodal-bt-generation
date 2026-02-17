@@ -1,0 +1,21 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to sushi -->
+      <Action ID="NAVIGATE_TO" obj="sushi" />
+      <!-- Check sushi is visible before GRASP -->
+      <Condition ID="IS_VISIBLE" obj="sushi" />
+      <!-- Retry GRASP sushi up to 3 attempts -->
+      <RetryUntilSuccessful num_attempts="3">
+        <!-- Grasp sushi -->
+        <Action ID="GRASP" obj="sushi" />
+      </RetryUntilSuccessful>
+      <!-- Navigate to green_plate -->
+      <Action ID="NAVIGATE_TO" obj="green_plate" />
+      <!-- Place on green_plate -->
+      <Action ID="PLACE_ON_TOP" obj="green_plate" />
+      <!-- Release -->
+      <Action ID="RELEASE" />
+    </Sequence>
+  </BehaviorTree>
+</root>

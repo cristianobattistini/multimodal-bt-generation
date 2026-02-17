@@ -1,0 +1,12 @@
+{
+  "decorator_type": "condition",
+  "mixed_subtype": null,
+  "target_action_id": "POUR",
+  "target_obj": "mug",
+  "parameters": {
+    "condition_id": "IS_HOLDING",
+    "condition_obj": "mug",
+    "allowed_conditions": "IS_HOLDING, IS_EMPTY"
+  },
+  "prompt_name": "condition"
+}

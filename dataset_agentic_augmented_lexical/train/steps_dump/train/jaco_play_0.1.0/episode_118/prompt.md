@@ -1,0 +1,2 @@
+Instruction: Pick up the steak meat. Check if graspable, use a 10 second timeout and retry grasping up to 3 times.
+Allowed Actions: [NAVIGATE_TO(obj), GRIP(obj)]

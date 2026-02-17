@@ -1,0 +1,16 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Approach wrinkled_towel -->
+      <Action ID="APPROACH" obj="wrinkled_towel" />
+      <!-- Grab wrinkled_towel -->
+      <Action ID="GRAB" obj="wrinkled_towel" />
+      <!-- Unfold wrinkled_towel -->
+      <Action ID="UNFOLD" obj="wrinkled_towel" />
+      <!-- Move to table -->
+      <Action ID="MOVE_TO" obj="table" />
+      <!-- Place on table -->
+      <Action ID="PLACE_ON_TOP" obj="table" />
+    </Sequence>
+  </BehaviorTree>
+</root>

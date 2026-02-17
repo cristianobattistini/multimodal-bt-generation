@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "red_fork"
+  destination: "green_cloth"
+  expanded_instruction: "Pick up the red fork from the countertop and place it onto the green cloth."
+  scene_context: "Red fork lies on the table near a bowl; green cloth on the table is clear and reachable; no objects held."
+  expected_sequence: "Approach the red fork, grasp it, carry it to the green cloth, and set it down on the cloth."

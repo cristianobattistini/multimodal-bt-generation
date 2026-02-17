@@ -1,0 +1,22 @@
+ scene_analysis:
+  target: "mousetraps"
+  destination: "sink"
+  expanded_instruction: "Pick up each mousetrap one by one from the cabinet shelf and place them next to the sink on the countertop."
+  scene_context: "Each mousetrap is visible on the cabinet shelf and reachable; no containers are blocked."
+  expected_sequence: "Pick up each mousetrap one by one from the cabinet shelf and place them next to the sink on the countertop."
+Plan:
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to mousetraps -->
+      <Action ID="NAVIGATE_TO" obj="mousetraps" />
+      <!-- Grasp mousetraps -->
+      <Action ID="GRASP" obj="mousetraps" />
+      <!-- Place next to sink -->
+      <Action ID="PLACE_NEXT_TO" obj="sink" />
+    </Sequence>
+  </Root>
+</root>
+<!-- Fixup -->
+<!-- Fixup -->
+<!-- End Scene -->

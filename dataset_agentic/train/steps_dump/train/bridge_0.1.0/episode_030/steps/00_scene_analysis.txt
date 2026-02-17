@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "blue_fork"
+  destination: "table"
+  expanded_instruction: "Pick up the blue fork and place it on the table on the opposite side of the yellow rag"
+  scene_context: "Yellow rag folded on table near rear; blue fork lying on table next to rag; no containers; table clear."
+  expected_sequence: "Grasp the blue fork, move it to the far side of the yellow rag, and set it down on the table."

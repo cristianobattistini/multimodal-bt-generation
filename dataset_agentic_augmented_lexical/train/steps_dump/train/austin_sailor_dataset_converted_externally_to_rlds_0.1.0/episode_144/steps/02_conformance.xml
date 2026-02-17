@@ -1,0 +1,35 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to pan -->
+      <Action ID="NAVIGATE_TO" obj="pan" />
+      <!-- Pick pan -->
+      <Action ID="PICK" obj="pan" />
+      <!-- Navigate to stove -->
+      <Action ID="NAVIGATE_TO" obj="stove" />
+      <!-- Put on stove -->
+      <Action ID="PUT_ON" obj="stove" />
+      <!-- Check fish is reachable before NAVIGATE_TO -->
+      <Condition ID="IS_REACHABLE" obj="fish" />
+      <!-- Timeout: NAVIGATE_TO fish within 15s -->
+      <Timeout msec="15000">
+        <!-- Navigate to fish -->
+        <Action ID="NAVIGATE_TO" obj="fish" />
+      </Timeout>
+      <!-- Grasp fish -->
+      <Action ID="GRAB" obj="fish" />
+      <!-- Grab fish -->
+      <Action ID="GO_TO" obj="pan" />
+      <!-- Go to pan -->
+      <Action ID="SET_IN" obj="pan" />
+      <!-- Set in pan -->
+      <Action ID="APPROACH" obj="sausage" />
+      <!-- Approach sausage -->
+      <Action ID="GRAB" obj="sausage" />
+      <!-- Grab sausage -->
+      <Action ID="NAVIGATE_TO" obj="pan" />
+      <!-- Place inside pan -->
+      <Action ID="PLACE_INSIDE" obj="pan" />
+    </Sequence>
+  </BehaviorTree>
+</root>

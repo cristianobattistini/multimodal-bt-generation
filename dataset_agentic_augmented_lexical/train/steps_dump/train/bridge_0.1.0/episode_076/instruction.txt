@@ -1,0 +1,1 @@
+Take sushi off plate. Check precondition and retry placing on top up to 2 times if it fails.

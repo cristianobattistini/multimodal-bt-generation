@@ -1,0 +1,16 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Approach blue_container -->
+      <Action ID="APPROACH" obj="blue_container" />
+      <!-- Move to lid -->
+      <Action ID="MOVE_TO" obj="lid" />
+      <!-- Grip lid -->
+      <Action ID="GRIP" obj="lid" />
+      <!-- Unlatch lid -->
+      <Action ID="UNLATCH" obj="lid" />
+      <!-- Let go -->
+      <Action ID="LET_GO" />
+    </Sequence>
+  </BehaviorTree>
+</root>

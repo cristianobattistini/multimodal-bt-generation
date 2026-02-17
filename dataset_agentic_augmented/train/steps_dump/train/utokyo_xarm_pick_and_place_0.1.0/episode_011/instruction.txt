@@ -1,0 +1,1 @@
+Pick up a white plate, and then place it on the red plate. Retry placing on top up to 2 times; if all fail, use PUSH as Plan B.

@@ -1,0 +1,12 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to table via route avoiding books -->
+      <Action ID="NAVIGATE_TO" obj="table" />
+      <!-- Navigate to blue_pen (approach holder while avoiding the book obstacle) -->
+      <Action ID="NAVIGATE_TO" obj="blue_pen" />
+      <!-- Grab blue_pen -->
+      <Action ID="GRAB" obj="blue_pen" />
+    </Sequence>
+  </BehaviorTree>
+</root>

@@ -1,0 +1,19 @@
+{
+  "success": true,
+  "bt_success": true,
+  "bddl_goal": true,
+  "ticks": 1,
+  "duration": 139.23721551895142,
+  "inference_time": 19.807893753051758,
+  "satisfied": [
+    "forall(['?plywood.n.01', '-', 'plywood.n.01'], ['ontop', '?plywood.n.01', '?floor.n.01_2'])"
+  ],
+  "unsatisfied": [],
+  "task": "15_bringing_in_wood",
+  "condition": "zero-shot",
+  "model_dir": "gpt5",
+  "vlm_model": null,
+  "inference_mode": "openai",
+  "experiment": 2,
+  "timestamp": "20260213_180503"
+}

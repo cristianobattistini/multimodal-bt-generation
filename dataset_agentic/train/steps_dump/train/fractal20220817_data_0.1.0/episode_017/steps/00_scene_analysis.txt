@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "green_jalapeno_chip_bag"
+  destination: "top_drawer"
+  expanded_instruction: "Pick up the green jalapeno chip bag from the table and place it into the top drawer."
+  scene_context: "Top drawer is open; green jalapeno chip bag on table near front-left; drawer interior clear."
+  expected_sequence: "Reach to the bag, grasp it, lift and move it over the open top drawer, and place it inside."

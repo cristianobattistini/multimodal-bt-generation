@@ -1,0 +1,25 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to pot -->
+      <Action ID="NAVIGATE_TO" obj="pot" />
+      <!-- Navigate to spoon -->
+      <Action ID="NAVIGATE_TO" obj="spoon" />
+      <!-- Fallback: if GRASP spoon fails, try PUSH, FLIP to reposition -->
+      <Fallback>
+        <!-- Grasp spoon -->
+        <Action ID="GRASP" obj="spoon" />
+        <Sequence>
+          <!-- Push spoon forward toward front edge of table -->
+          <Action ID="PUSH" obj="spoon" />
+          <!-- Grasp spoon -->
+          <Action ID="GRASP" obj="spoon" />
+        </Sequence>
+      </Fallback>
+      <!-- Navigate to table -->
+      <Action ID="NAVIGATE_TO" obj="table" />
+      <!-- Place on table -->
+      <Action ID="PLACE_ON_TOP" obj="table" />
+    </Sequence>
+  </BehaviorTree>
+</root>

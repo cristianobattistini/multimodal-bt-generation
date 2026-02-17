@@ -1,0 +1,27 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Go to metal_pot -->
+      <Action ID="GO_TO" obj="metal_pot" />
+      <!-- Grab metal_pot -->
+      <Action ID="GRAB" obj="metal_pot" />
+      <!-- Return metal_pot upright (flip) -->
+      <Action ID="FLIP" obj="metal_pot" />
+      <!-- Navigate to cardboard_fence -->
+      <Action ID="NAVIGATE_TO" obj="cardboard_fence" />
+      <!-- Check cardboard_fence is holding before PLACE_INSIDE -->
+      <Condition ID="IS_HOLDING" obj="cardboard_fence" />
+      <!-- Fallback: if PLACE_INSIDE cardboard_fence fails, try alternative to reposition -->
+      <Fallback>
+        <!-- Place inside cardboard_fence -->
+        <Action ID="PLACE_INSIDE" obj="metal_pot" container="cardboard_fence" />
+        <Sequence>
+          <!-- Push cardboard_fence forward toward front edge of table -->
+          <Action ID="SLIDE" obj="cardboard_fence" />
+          <!-- Place inside cardboard_fence -->
+          <Action ID="INSERT_INTO" obj="cardboard_fence" />
+        </Sequence>
+      </Fallback>
+    </Sequence>
+  </BehaviorTree>
+</root>

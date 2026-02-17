@@ -1,0 +1,10 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Check hole is empty before PLACE_INSIDE -->
+      <Condition ID="IS_EMPTY" obj="hole" />
+      <!-- Place inside hole -->
+      <Action ID="PLACE_INSIDE" obj="hole" />
+    </Sequence>
+  </BehaviorTree>
+</root>

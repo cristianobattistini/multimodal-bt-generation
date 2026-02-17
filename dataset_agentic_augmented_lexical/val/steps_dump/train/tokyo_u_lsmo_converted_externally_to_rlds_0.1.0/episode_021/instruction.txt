@@ -1,0 +1,1 @@
+avoid obstacle and reach the scissors. Use ApproachWorkSurface subtree for approach and grasp.

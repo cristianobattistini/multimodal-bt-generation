@@ -1,0 +1,14 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to books to approach around obstacle -->
+      <Action ID="NAVIGATE_TO" obj="books"/>
+      <!-- Navigate to pen_holder (approach pen around books) -->
+      <Action ID="NAVIGATE_TO" obj="pen_holder"/>
+      <!-- Grasp blue_pen -->
+      <Action ID="GRASP" obj="blue_pen"/>
+      <!-- Release -->
+      <Action ID="RELEASE"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

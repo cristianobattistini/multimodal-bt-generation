@@ -1,0 +1,30 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Go to pink_cloth -->
+      <Action ID="GO_TO" obj="pink_cloth" />
+      <!-- Grasp pink_cloth -->
+      <Action ID="GRASP" obj="pink_cloth" />
+      <!-- Check pink_cloth is unfolded before FOLD -->
+      <Condition ID="IS_UNFOLDED" obj="pink_cloth" />
+      <!-- Fallback: if FOLD pink_cloth fails, try alternative to reposition -->
+      <Fallback>
+        <!-- Retry FOLD pink_cloth up to 3 attempts -->
+        <RetryUntilSuccessful num_attempts="3">
+          <!-- Fold pink_cloth -->
+          <Action ID="BEND" obj="pink_cloth" />
+        </RetryUntilSuccessful>
+        <Sequence>
+          <!-- Unfold pink_cloth -->
+          <Action ID="EXTEND" obj="pink_cloth" />
+          <!-- Fold pink_cloth -->
+          <Action ID="BEND" obj="pink_cloth" />
+        </Sequence>
+      </Fallback>
+      <!-- Bend pink_cloth -->
+      <Action ID="MOVE_TO" obj="table" />
+      <!-- Extend pink_cloth -->
+      <Action ID="PLACE_ON_TOP" obj="pink_cloth" surface="table" />
+    </Sequence>
+  </BehaviorTree>
+</root>

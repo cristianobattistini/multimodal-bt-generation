@@ -1,0 +1,14 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to dishes -->
+      <Action ID="NAVIGATE_TO" obj="dishes"/>
+      <!-- Grasp dishes -->
+      <Action ID="GRASP" obj="dishes"/>
+      <!-- Navigate to dish_rack -->
+      <Action ID="NAVIGATE_TO" obj="dish_rack"/>
+      <!-- Place on dish_rack (upright) -->
+      <Action ID="PLACE_ON_TOP" obj="dish_rack"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "["yellow_plate", "white_cup"]"
+  destination: "dish_rack"
+  expanded_instruction: "Pick up the yellow plate and the white cup and place them into the dish_rack. Before navigating to the white cup, perform IS_REACHABLE on the white_cup (retry up to 3 times with 10s timeout)."
+  scene_context: "Dish_rack is open and empty; yellow plate near left edge; white cup on the drying_mat; nothing is currently held."
+  expected_sequence: "Pick up the yellow plate and place it in the dish_rack, then before navigating to the white cup, check IS_REACHABLE on the white_cup (retry up to 3 times with 10s timeout), then pick up the white cup and place it in the dish_rack."

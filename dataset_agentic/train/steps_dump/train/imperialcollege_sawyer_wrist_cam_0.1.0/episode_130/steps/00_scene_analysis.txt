@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "touchscreen"
+  destination: ""
+  expanded_instruction: "Perform a horizontal swipe gesture on the touchscreen to move the visible items"
+  scene_context: "Multiple glass-like items on a blue screen; nothing held; touch surface unobstructed."
+  expected_sequence: "Place finger on the screen and swipe horizontally to shift the items."

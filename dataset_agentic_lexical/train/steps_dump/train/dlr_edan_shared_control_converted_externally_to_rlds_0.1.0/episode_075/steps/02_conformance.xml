@@ -1,0 +1,12 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to black_shelf -->
+      <Action ID="NAVIGATE_TO" obj="black_shelf" />
+      <!-- Go to cube -->
+      <Action ID="GO_TO" obj="cube" />
+      <!-- Grasp cube -->
+      <Action ID="GRASP" obj="cube" />
+    </Sequence>
+  </BehaviorTree>
+</root>

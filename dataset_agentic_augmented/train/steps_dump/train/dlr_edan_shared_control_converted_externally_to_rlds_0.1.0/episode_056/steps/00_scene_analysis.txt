@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "tennis_ball"
+  destination: ""
+  expanded_instruction: "Check the tennis ball is graspable, then pick it up from the small round side table next to the black shelving unit, retrying the grasp up to 2 times if it fails."
+  scene_context: "Tennis ball on small round side table near robot arm, table clear, ball not held."
+  expected_sequence: "Move the arm to the ball, verify it is graspable, grasp it securely (retry the grasp up to 2 times on failure), and lift it from the side table."

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "["fish", "sausage", "tomato"]"
+  destination: "frying_pan"
+  expanded_instruction: "Pick up the fish, sausage, and tomato from the placemat and place each into the frying pan; for the sausage first check it is visible before grasping, use a 15s timeout for each grasp, and if a grasp fails retry (up to 3 times) using push or flip to reposition as a fallback."
+  scene_context: "Fish (white) and sausage on the placemat, tomato nearby on mat; frying_pan empty and reachable; no containers closed."
+  expected_sequence: "For each item, pick it up from the placemat and place it into the frying pan: for the sausage check IS_VISIBLE before grasp, perform GRASP within a 15s timeout, and if GRASP fails retry (up to 3 times) using PUSH or FLIP to reposition as a fallback."

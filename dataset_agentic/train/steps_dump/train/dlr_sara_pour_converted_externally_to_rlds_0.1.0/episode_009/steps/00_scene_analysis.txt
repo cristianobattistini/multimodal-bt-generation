@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "brown_cup"
+  destination: "white_mug"
+  expanded_instruction: "Pick up the brown cup and pour its contents into the white mug on the table."
+  scene_context: "White mug upright on table; brown cup on table not held; table clear; robot arm initially away."
+  expected_sequence: "Grasp the brown cup, bring it over the white mug and tilt to pour, then place the cup back down."

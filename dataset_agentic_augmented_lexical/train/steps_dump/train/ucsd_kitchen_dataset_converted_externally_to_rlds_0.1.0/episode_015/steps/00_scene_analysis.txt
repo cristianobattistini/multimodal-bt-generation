@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "oven_door"
+  destination: ""
+  expanded_instruction: "Open the oven door on the lower-left appliance by checking the oven_door is reachable, then pulling the handle down; if a grasp fails, retry up to 3 times within a 10s timeout and push to reposition if needed."
+  scene_context: "Oven door is closed on the lower-left; handle visible; robot not holding the door."
+  expected_sequence: "Check IS_REACHABLE on the oven_door, move to the oven, grasp the handle (grasp has a 10s timeout, retry up to 3 times and push to reposition if grasp fails), and pull down until the door is open."

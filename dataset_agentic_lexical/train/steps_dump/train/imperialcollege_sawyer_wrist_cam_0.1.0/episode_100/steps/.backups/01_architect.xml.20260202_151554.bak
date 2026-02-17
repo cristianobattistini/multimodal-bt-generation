@@ -1,0 +1,16 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to cap -->
+      <Action ID="NAVIGATE_TO" obj="cap"/>
+      <!-- Grasp cap -->
+      <Action ID="GRASP" obj="cap"/>
+      <!-- Navigate to bottle -->
+      <Action ID="NAVIGATE_TO" obj="bottle"/>
+      <!-- Place inside bottle (insert cap into bottle opening) -->
+      <Action ID="PLACE_INSIDE" obj="bottle"/>
+      <!-- Release -->
+      <Action ID="RELEASE"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

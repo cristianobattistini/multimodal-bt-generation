@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "cup"
+  destination: ""
+  expanded_instruction: "Check the cup is visible (retry up to 3 times within 10s); then flip the cup upright so it rests right-side-up inside the basin"
+  scene_context: "Pink cup is upside-down inside a light_blue_basin; basin is clear and accessible."
+  expected_sequence: "Check IS_VISIBLE on the cup (if not visible, retry up to 3 times/10s), then move to the cup, grasp and rotate it from upside-down to upright, then release it in the basin."

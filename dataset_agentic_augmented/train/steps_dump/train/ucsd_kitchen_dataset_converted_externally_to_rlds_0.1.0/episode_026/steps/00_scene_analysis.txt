@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "carbinet_door"
+  destination: ""
+  expanded_instruction: "Open the carbinet door on the lower cabinet using the handle; if grasping fails, retry up to 2 times and, as a fallback, use push or flip to reposition the handle."
+  scene_context: "Lower cabinet door is closed and handle is visible and unobstructed."
+  expected_sequence: "Move to the handle, grasp it and pull the door open until it stays ajar; retry grasp up to 2 times if it fails, and if still unsuccessful, push or flip to reposition then pull until ajar."

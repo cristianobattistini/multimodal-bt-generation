@@ -1,0 +1,15 @@
+{
+  "decorator_type": "fallback",
+  "mixed_subtype": null,
+  "target_action_id": "GRASP",
+  "target_obj": "cloth",
+  "parameters": {
+    "valid_fallbacks": [
+      "PUSH",
+      "FLIP"
+    ],
+    "valid_fallbacks_str": "PUSH, FLIP",
+    "fallback_hints": "PUSH/FLIP repositions the object into a better grasping position"
+  },
+  "prompt_name": "fallback"
+}

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "ranch_bottle"
+  destination: "pot"
+  expanded_instruction: "Pick up the ranch bottle from the table and place it into the pot. Before placing, check IS_HOLDING on the pot; if the PLACE_INSIDE action fails, retry up to 3 times."
+  scene_context: "Ranch bottle sitting on the table next to a stainless pot; pot open and reachable; bottle not held."
+  expected_sequence: "Approach the ranch bottle, grasp it, lift and move it over the pot, then confirm IS_HOLDING on the pot and lower and release it into the pot; if PLACE_INSIDE fails, retry the place action up to 3 times."

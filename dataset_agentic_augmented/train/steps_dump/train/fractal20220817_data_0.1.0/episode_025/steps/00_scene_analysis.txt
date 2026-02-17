@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "water_bottle"
+  destination: "rxbar_chocolate"
+  expanded_instruction: "Move the water bottle and place it next to the RXBAR chocolate on the table. Verify the water bottle is visible before attempting to grasp, attempt grasp within a 10s timeout (retry up to 3 times), and if grasp fails use push or flip to reposition the bottle before placing it beside the RXBAR."
+  scene_context: "Water bottle upright near table center, rxbar chocolate pack on left of table, no containers open, robot not holding anything."
+  expected_sequence: "Check that the water bottle is visible, pick up the water bottle (grasp within a 10s timeout, retry up to 3 times), bring it to the RXBAR chocolate, and set it down beside the chocolate; if grasp fails, use push or flip to reposition the bottle and then place it beside the RXBAR."

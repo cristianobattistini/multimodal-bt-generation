@@ -1,0 +1,1 @@
+Pick up yellow object. Only grasp if the object is reachable.

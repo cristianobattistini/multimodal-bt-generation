@@ -1,0 +1,13 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to shoe -->
+      <Action ID="NAVIGATE_TO" obj="shoe" />
+      <!-- Retry GRASP shoe up to 2 attempts -->
+      <RetryUntilSuccessful num_attempts="2">
+        <!-- Grasp shoe -->
+        <Action ID="GRASP" obj="shoe" />
+      </RetryUntilSuccessful>
+    </Sequence>
+  </BehaviorTree>
+</root>

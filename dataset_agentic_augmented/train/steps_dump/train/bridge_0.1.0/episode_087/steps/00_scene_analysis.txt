@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "pot"
+  destination: "sink"
+  expanded_instruction: "Flip the metal pot lying on its side in the sink so it sits upright with the opening facing up. If you must navigate to the pot first, use NAVIGATE_TO with a 20s timeout."
+  scene_context: "Pot is lying on its side inside the sink; sink is open and not blocked; pot not held."
+  expected_sequence: "If needed, NAVIGATE_TO to the pot using a 20s timeout; then reach to the pot, grasp and rotate it upright, and set it down in the sink with the opening facing up."

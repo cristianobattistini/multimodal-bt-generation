@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "lid"
+  destination: ""
+  expanded_instruction: "Open the white snap lid on the blue fabric surface by unsnapping and lifting it"
+  scene_context: "White snap lid is closed on a blue fabric panel and not held."
+  expected_sequence: "Approach the snap, unsnap the lid, and lift it open."

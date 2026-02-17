@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "["fish", "sausage", "tomato"]"
+  destination: "frying_pan"
+  expanded_instruction: "Pick up the fish from the left, the sausage from the plate, and the tomato from the table edge, and place them into the frying pan. Before each PLACE_INSIDE, check IS_EMPTY on the frying_pan and if not empty wait and retry up to 3 times."
+  scene_context: "Fish on left of placemat, sausage on plate center, tomato near top edge; frying pan on counter is open and reachable."
+  expected_sequence: "Before each place action check IS_EMPTY on the frying_pan and retry up to 3 times if needed; pick each item in turn and place it into the frying pan until all three are in the pan."

@@ -1,0 +1,13 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Go to drawer -->
+      <Action ID="GO_TO" obj="drawer" />
+      <!-- Retry OPEN drawer up to 3 attempts -->
+      <RetryUntilSuccessful num_attempts="3">
+        <!-- Open drawer -->
+        <Action ID="UNSEAL" obj="drawer" />
+      </RetryUntilSuccessful>
+    </Sequence>
+  </BehaviorTree>
+</root>

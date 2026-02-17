@@ -1,0 +1,22 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to red_pitcher -->
+      <Action ID="NAVIGATE_TO" obj="red_pitcher" />
+      <!-- Grasp red_pitcher -->
+      <Action ID="GRASP" obj="red_pitcher" />
+      <!-- Navigate to mug -->
+      <Action ID="NAVIGATE_TO" obj="mug" />
+      <!-- Pour into mug -->
+      <Action ID="POUR" obj="mug" />
+      <Sequence>
+        <!-- Check red_pitcher is holding before FLIP -->
+        <Condition ID="IS_HOLDING" obj="red_pitcher" />
+        <!-- Return red_pitcher upright (flip) -->
+        <Action ID="FLIP" obj="red_pitcher" />
+      </Sequence>
+      <!-- Release -->
+      <Action ID="RELEASE" />
+    </Sequence>
+  </BehaviorTree>
+</root>

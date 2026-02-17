@@ -1,0 +1,6 @@
+scene_analysis:
+  target: ["pot", "corncob"]
+  destination: "stove"
+  expanded_instruction: "Place the pot on a stove burner and then put the corncob into the pot."
+  scene_context: "Pot on right burner near back, corncob on counter left of stove, stove burners accessible and no lids closed."
+  expected_sequence: "Position the pot on a burner, then pick up the corncob and drop it into the pot."

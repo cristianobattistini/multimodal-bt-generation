@@ -1,0 +1,18 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to drawer -->
+      <Action ID="NAVIGATE_TO" obj="drawer" />
+      <!-- Grasp drawer -->
+      <Action ID="GRASP" obj="drawer" />
+      <Sequence>
+        <!-- Check drawer is closed before OPEN -->
+        <Condition ID="IS_CLOSED" obj="drawer" />
+        <!-- Open drawer -->
+        <Action ID="OPEN" obj="drawer" />
+      </Sequence>
+      <!-- Release -->
+      <Action ID="RELEASE" />
+    </Sequence>
+  </BehaviorTree>
+</root>

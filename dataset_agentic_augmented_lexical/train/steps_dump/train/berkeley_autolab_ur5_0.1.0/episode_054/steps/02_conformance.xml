@@ -1,0 +1,16 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Approach green_cloth -->
+      <Action ID="APPROACH" obj="green_cloth" />
+      <!-- Retry PUSH green_cloth up to 3 attempts -->
+      <RetryUntilSuccessful num_attempts="3">
+        <!-- Timeout: PUSH green_cloth within 20s -->
+        <Timeout msec="20000">
+          <!-- Push green_cloth forward toward front edge of table -->
+          <Action ID="PUSH" obj="green_cloth" />
+        </Timeout>
+      </RetryUntilSuccessful>
+    </Sequence>
+  </BehaviorTree>
+</root>

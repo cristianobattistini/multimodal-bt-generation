@@ -1,0 +1,1 @@
+Pick up kettle. If grasping fails, push the kettle to reposition it and retry.

@@ -1,0 +1,1 @@
+Open the oven door. If grasping fails, push the oven door to reposition it and retry grasping.

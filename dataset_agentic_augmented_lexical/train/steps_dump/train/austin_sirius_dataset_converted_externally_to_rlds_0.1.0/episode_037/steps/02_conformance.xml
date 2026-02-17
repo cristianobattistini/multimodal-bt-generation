@@ -1,0 +1,32 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Go to kcup_holder -->
+      <Action ID="GO_TO" obj="kcup_holder" />
+      <!-- Unseal kcup_holder -->
+      <Action ID="UNSEAL" obj="kcup_holder" />
+      <!-- Navigate to kcup -->
+      <Action ID="NAVIGATE_TO" obj="kcup" />
+      <!-- Pick kcup -->
+      <Action ID="PICK" obj="kcup" />
+      <!-- Approach kcup_holder -->
+      <Action ID="APPROACH" obj="kcup_holder" />
+      <!-- Fallback: if PLACE_INSIDE kcup_holder fails, try alternative to reposition -->
+      <Fallback>
+        <!-- Retry PLACE_INSIDE kcup_holder up to 2 attempts -->
+        <RetryUntilSuccessful num_attempts="2">
+          <!-- Place inside kcup_holder -->
+          <Action ID="SET_IN" obj="kcup_holder" />
+        </RetryUntilSuccessful>
+        <Sequence>
+          <!-- Push kcup_holder forward toward front edge of table -->
+          <Action ID="PUSH" obj="kcup_holder" />
+          <!-- Place inside kcup_holder -->
+          <Action ID="SET_IN" obj="kcup_holder" />
+        </Sequence>
+      </Fallback>
+      <!-- Set in kcup_holder -->
+      <Action ID="CLOSE" obj="kcup_holder" />
+    </Sequence>
+  </BehaviorTree>
+</root>

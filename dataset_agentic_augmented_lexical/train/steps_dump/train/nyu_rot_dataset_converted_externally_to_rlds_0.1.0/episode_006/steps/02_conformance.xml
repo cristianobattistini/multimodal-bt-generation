@@ -1,0 +1,28 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to hanger -->
+      <Action ID="NAVIGATE_TO" obj="hanger" />
+      <!-- Fallback: if GRASP hanger fails, try alternative to reposition -->
+      <Fallback>
+        <!-- Retry GRASP hanger up to 2 attempts -->
+        <RetryUntilSuccessful num_attempts="2">
+          <!-- Grasp hanger -->
+          <Action ID="GRASP" obj="hanger" />
+        </RetryUntilSuccessful>
+        <Sequence>
+          <!-- Push hanger forward toward front edge of table -->
+          <Action ID="PUSH" obj="hanger" />
+          <!-- Grasp hanger -->
+          <Action ID="GRASP" obj="hanger" />
+        </Sequence>
+      </Fallback>
+      <!-- Navigate to rod -->
+      <Action ID="NAVIGATE_TO" obj="rod" />
+      <!-- Hang bag on rod -->
+      <Action ID="HANG" obj="rod" />
+      <!-- Release -->
+      <Action ID="RELEASE" />
+    </Sequence>
+  </BehaviorTree>
+</root>

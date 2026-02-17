@@ -1,0 +1,15 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Approach small_blue_tile -->
+      <Action ID="APPROACH" obj="small_blue_tile" />
+      <!-- Check small_blue_tile is reachable before PUSH -->
+      <Condition ID="IS_REACHABLE" obj="small_blue_tile" />
+      <!-- Retry PUSH small_blue_tile up to 2 attempts -->
+      <RetryUntilSuccessful num_attempts="2">
+        <!-- Push small_blue_tile forward toward front edge of table -->
+        <Action ID="PUSH" obj="small_blue_tile" />
+      </RetryUntilSuccessful>
+    </Sequence>
+  </BehaviorTree>
+</root>

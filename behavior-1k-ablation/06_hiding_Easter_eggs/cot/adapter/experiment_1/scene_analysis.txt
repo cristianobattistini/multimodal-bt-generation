@@ -1,0 +1,7 @@
+scene_analysis:
+  target: "easter_egg_1, easter_egg_2, easter_egg_3"
+  destination: "tree_1"
+  expanded_instruction: "Pick up the three Easter eggs from the wicker basket on the lawn and place each egg next to the tree; if a grasp fails, retry up to 3 times with a 10s timeout and, if unsuccessful, push to reposition before retrying."
+  scene_context: "Easter eggs are inside the wicker basket on the lawn; tree_1 is nearby and reachable; no containers are closed."
+  expected_sequence: "For each egg, reach into the basket, pick it up, move to the tree, and place it next to the tree; if grasp fails, retry up to 3 times (10s timeout) and push to reposition before retrying."
+Plan:

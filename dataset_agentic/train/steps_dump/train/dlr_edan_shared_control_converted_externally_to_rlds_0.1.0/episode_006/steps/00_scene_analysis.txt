@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "mug"
+  destination: ""
+  expanded_instruction: "Pick up the red mug from the small metal stool next to the table"
+  scene_context: "Red mug resting on small metal stool, not held; nearby table clear and obstacle-free."
+  expected_sequence: "Move the arm to the mug, grasp it securely, and lift it off the stool."

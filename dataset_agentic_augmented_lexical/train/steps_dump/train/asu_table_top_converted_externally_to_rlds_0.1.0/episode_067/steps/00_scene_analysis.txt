@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "red_object"
+  destination: ""
+  expanded_instruction: "Pick up the red object (red rectangular block) from the right side of the table, check IS_GRASPABLE first, then grasp with a 10s timeout and retry up to 2 times if needed."
+  scene_context: "Table clear, red object at right edge, robot arm free and not holding anything, no containers closed."
+  expected_sequence: "Move the arm to the red object at the right edge, check it's graspable, attempt to grasp (within a 10s timeout) retrying up to 2 times on failure, then lift it clear of the table."

@@ -1,0 +1,10 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Approach white_carton -->
+      <Action ID="APPROACH" obj="white_carton" />
+      <!-- Shove white_carton -->
+      <Action ID="SHOVE" obj="white_carton" />
+    </Sequence>
+  </BehaviorTree>
+</root>

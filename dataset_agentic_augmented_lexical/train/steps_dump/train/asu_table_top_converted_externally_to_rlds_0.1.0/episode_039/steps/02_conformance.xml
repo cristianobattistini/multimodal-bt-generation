@@ -1,0 +1,13 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to maroon_object -->
+      <Action ID="NAVIGATE_TO" obj="maroon_object" />
+      <!-- Retry PUSH maroon_object up to 2 attempts -->
+      <RetryUntilSuccessful num_attempts="2">
+        <!-- Push maroon_object forward toward front edge of table -->
+        <Action ID="PUSH" obj="maroon_object" />
+      </RetryUntilSuccessful>
+    </Sequence>
+  </BehaviorTree>
+</root>

@@ -1,0 +1,16 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to mushroom -->
+      <Action ID="NAVIGATE_TO" obj="mushroom"/>
+      <!-- Grasp mushroom -->
+      <Action ID="GRASP" obj="mushroom"/>
+      <!-- Navigate to tiffin_box (position near right edge of table to drop underneath) -->
+      <Action ID="NAVIGATE_TO" obj="tiffin_box"/>
+      <!-- Place under tiffin_box on table -->
+      <Action ID="PLACE_ON_TOP" obj="table"/>
+      <!-- Release -->
+      <Action ID="RELEASE"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

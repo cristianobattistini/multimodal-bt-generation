@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "mushroom"
+  destination: "tiffin_box"
+  expanded_instruction: "Pick up the mushroom in front of the oven — attempt the grasp with a 15 second timeout and retry up to 3 times if it fails — and drop it underneath the tiffin box on the right edge of the table."
+  scene_context: "Mushroom on table in front of oven; tiffin_box at right table edge; table surface clear; mushroom not held."
+  expected_sequence: "Approach and grasp the mushroom (grasp attempt has a 15s timeout and should be retried up to 3 times on failure), lift it, move to the tiffin_box at the right edge, and drop it under the tiffin_box."

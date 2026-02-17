@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "orange"
+  destination: "counter"
+  expanded_instruction: "Pick the orange from the open top drawer and place it on the counter next to the plate."
+  scene_context: "Top drawer is open with an orange inside; counter with plate is clear and reachable; orange not held."
+  expected_sequence: "Reach into the open top drawer, grasp and lift the orange out, then place it down on the counter by the plate."

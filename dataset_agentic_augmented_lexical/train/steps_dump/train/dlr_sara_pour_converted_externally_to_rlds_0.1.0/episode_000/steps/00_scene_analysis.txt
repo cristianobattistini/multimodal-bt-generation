@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "brown_teapot"
+  destination: "mug"
+  expanded_instruction: "Using an ApproachBrownTeapot subtree, pick up the brown teapot and pour its contents into the white mug on the table; within the subtree attempt the grasp with up to 3 retries and a 10s timeout, and if grasp fails push to reposition before retrying."
+  scene_context: "Brown teapot on the table and not held; white mug upright on table; table clear; no lids open/closed."
+  expected_sequence: "Within the ApproachBrownTeapot subtree: reach for and lift the teapot (retry up to 3 times, 10s timeout, if grasp fails push to reposition), tilt it over the mug to pour, then set the teapot back down."

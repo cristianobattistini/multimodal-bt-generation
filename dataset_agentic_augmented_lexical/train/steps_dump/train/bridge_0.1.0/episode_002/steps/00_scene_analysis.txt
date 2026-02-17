@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "cloth"
+  destination: "table"
+  expanded_instruction: "Slide the light blue cloth diagonally so it rests on the table in front of the spoon; if a push fails, retry up to 3 times."
+  scene_context: "Folded light blue cloth on the table left of a metal spoon; spoon on table near back; nothing held; table clear."
+  expected_sequence: "Push the cloth diagonally forward across the table until it lies directly in front of the spoon, retrying the push up to 3 times if it fails."

@@ -1,0 +1,14 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Approach carbinet_door -->
+      <Action ID="APPROACH" obj="carbinet_door" />
+      <!-- Grip carbinet_door -->
+      <Action ID="GRIP" obj="carbinet_door" />
+      <!-- Open up carbinet_door -->
+      <Action ID="OPEN_UP" obj="carbinet_door" />
+      <!-- Ungrasp -->
+      <Action ID="UNGRASP" />
+    </Sequence>
+  </BehaviorTree>
+</root>

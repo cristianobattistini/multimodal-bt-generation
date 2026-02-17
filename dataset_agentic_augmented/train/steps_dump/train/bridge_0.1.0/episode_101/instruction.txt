@@ -1,0 +1,1 @@
+Move the orange object to the left of the pot. Only navigate to the object if it is visible.

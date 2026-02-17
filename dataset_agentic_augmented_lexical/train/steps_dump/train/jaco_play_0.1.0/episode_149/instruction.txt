@@ -1,0 +1,1 @@
+place the milk dairy in the sink. If placing inside fails, push the inside of the sink to clear obstacles or reposition contents, then retry placing inside.

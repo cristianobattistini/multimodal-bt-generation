@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "shaker"
+  destination: "pot"
+  expanded_instruction: "Pick up the shaker (orange body green lid) from the counter and place it into the metal pot on the counter."
+  scene_context: "Shaker on counter right of pot; metal pot is open on counter; shaker not held; counter otherwise clear."
+  expected_sequence: "Reach to the shaker, grasp and lift it, move over the pot, and place the shaker into the pot."

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "tiffin_box"
+  destination: "table"
+  expanded_instruction: "Pick up the stainless tiffin box from the center of the table and place it on the right edge of the table."
+  scene_context: "Tiffin box on center of wooden table, table surface clear, tiffin not held."
+  expected_sequence: "Approach and grasp the tiffin box at the table center, carry it to the table's right edge, and set it down."

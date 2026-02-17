@@ -1,0 +1,14 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Go to peg -->
+      <Action ID="GO_TO" obj="peg" />
+      <!-- Pick peg -->
+      <Action ID="PICK" obj="peg" />
+      <!-- Move to hole -->
+      <Action ID="MOVE_TO" obj="hole" />
+      <!-- Place peg inside hole -->
+      <Action ID="PLACE_INSIDE" obj="peg" container="hole" />
+    </Sequence>
+  </BehaviorTree>
+</root>

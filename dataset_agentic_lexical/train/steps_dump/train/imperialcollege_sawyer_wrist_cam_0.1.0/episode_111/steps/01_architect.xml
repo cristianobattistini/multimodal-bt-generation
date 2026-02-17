@@ -1,0 +1,10 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Go to pan -->
+      <Action ID="GO_TO" obj="pan" />
+      <!-- Grip pan -->
+      <Action ID="GRIP" obj="pan" />
+    </Sequence>
+  </BehaviorTree>
+</root>

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "gray_bowl"
+  destination: ""
+  expanded_instruction: "Pick up the gray bowl from the table next to the red ball and robot base, first check that the gray bowl is reachable; if a grasp fails, retry up to 2 times, and if still unsuccessful, push or flip the bowl to reposition before attempting the grasp."
+  scene_context: "Gray bowl on table near robot base and red ball; bowl initially not held; table clear; robot reachable."
+  expected_sequence: "Approach the gray bowl, verify it is reachable, attempt to grasp and lift it off the table, retrying the grasp up to 2 times on failure; if grasping still fails, push or flip the bowl to reposition and then grasp."

@@ -1,0 +1,41 @@
+scene_analysis:
+  target: "["half_apple_1", "half_apple_2", "club_sandwich", "chocolate_chip_cookie"]"
+  destination: "packing_box"
+  expanded_instruction: "Pick up the club_sandwich, half_apple_1, half_apple_2, and chocolate_chip_cookie from the chopping board and put them into the packing_box on the countertop; make sure the fridge is closed after placing the chocolate_chip_cookie."
+  scene_context: "Club_sandwich, half_apple_1, half_apple_2, and chocolate_chip_cookie on the countertop next to an open fridge; packing_box on counter is empty and reachable."
+  expected_sequence: "Pick each item from the chopping board one by one and place it into the packing_box, then close the fridge and check the packing_box is clear."
+Plan:
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to club_sandwich -->
+      <Action ID="NAVIGATE_TO" obj="club_sandwich"/>
+      <!-- Grasp club_sandwich -->
+      <Action ID="GRASP" obj="club_sandwich"/>
+      <!-- Navigate to packing_box -->
+      <Action ID="NAVIGATE_TO" obj="packing_box"/>
+      <!-- Place inside packing_box -->
+      <Action ID="PLACE_INSIDE" obj="packing_box"/>
+      <!-- Navigate to half_apple_1 -->
+      <Action ID="NAVIGATE_TO" obj="half_apple_1"/>
+      <!-- Grasp half_apple_1 -->
+      <Action ID="GRASP" obj="half_apple_1"/>
+      <!-- Navigate to packing_box -->
+      <Action ID="NAVIGATE_TO" obj="packing_box"/>
+      <!-- Place inside packing_box -->
+      <Action ID="PLACE_INSIDE" obj="packing_box"/>
+      <!-- Open electric_refrigerator -->
+      <Action ID="OPEN" obj="electric_refrigerator"/>
+      <!-- Navigate to chocolate_chip_cookie -->
+      <Action ID="NAVIGATE_TO" obj="chocolate_chip_cookie"/>
+      <!-- Grasp chocolate_chip_cookie -->
+      <Action ID="GRASP" obj="chocolate_chip_cookie"/>
+      <!-- Navigate to packing_box -->
+      <Action ID="NAVIGATE_TO" obj="packing_box"/>
+      <!-- Place inside packing_box -->
+      <Action ID="PLACE_INSIDE" obj="packing_box"/>
+      <!-- Close electric_refrigerator -->
+      <Action ID="CLOSE" obj="electric_refrigerator"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

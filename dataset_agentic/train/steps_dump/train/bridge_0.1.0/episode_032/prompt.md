@@ -1,0 +1,2 @@
+Instruction: PICK UP THE SPOON AND PUT NEAR THE VESSEL
+Allowed Actions: [GRASP(obj), NAVIGATE_TO(obj), PLACE_NEXT_TO(obj)]

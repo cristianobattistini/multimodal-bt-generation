@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "brown_object"
+  destination: ""
+  expanded_instruction: "Push the brown object on the table toward the front edge"
+  scene_context: "Brown object on table near center-left, not held; table surface clear and reachable."
+  expected_sequence: "Move to the brown_object and push it forward across the table toward the front edge."

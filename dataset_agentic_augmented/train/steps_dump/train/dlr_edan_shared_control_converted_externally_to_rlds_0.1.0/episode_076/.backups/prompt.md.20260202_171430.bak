@@ -1,0 +1,57 @@
+ROLE: Embodied Planner
+GOAL: Analyze the scene and generate a valid BehaviorTree.CPP XML plan.
+
+INPUTS:
+- Scene Image: The current visual observation of the robot workspace
+- Instruction: Pick the pear. Use ApproachMetalWireShelf subtree for approach and grasp.
+- Allowed Actions: [GRASP(obj), NAVIGATE_TO(obj)]
+
+OUTPUT FORMAT:
+scene_analysis:
+  target: "<main object to manipulate, snake_case>"
+  destination: "<where to place object, snake_case or empty>"
+  expanded_instruction: "<instruction with scene details>"
+  scene_context: "<initial state observations>"
+  expected_sequence: "<action plan in natural language>"
+Plan:
+<root main_tree_to_execute="MainTree">
+  ...
+</root>
+
+CONSTRAINTS:
+1. Analysis First: You MUST output the scene_analysis block before the XML.
+2. Consistency: The XML must follow the analysis (target/destination).
+3. Schema: Output ONLY the keys shown above; do NOT add extra keys.
+4. Compliance: Use ONLY the Allowed Actions provided.
+5. Modularity: Group navigation and grasp actions into ApproachMetalWireShelf subtree.
+
+INSTRUCTION STYLE (CRITICAL):
+- Ensure proper punctuation: If the original instruction doesn't end with a period, add one before appending.
+- Sentence case: Start each appended sentence with a capital letter.
+- Natural flow: The modified instruction should read as a single coherent paragraph.
+- Example: "pick up apple" → "Pick up apple. Use ApproachApple subtree for navigation and grasping."
+
+XML COMMENTS (CRITICAL):
+- PRESERVE all original XML comments exactly as they appear
+- ADD comments explaining the decorators you add
+- Every action should keep its original descriptive comment
+
+Expected BT structure:
+```xml
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <SubTree ID="ApproachMetalWireShelf"/>
+      <!-- remaining actions -->
+    </Sequence>
+  </BehaviorTree>
+  <BehaviorTree ID="ApproachMetalWireShelf">
+    <Sequence>
+      <Action ID="NAVIGATE_TO" obj="..."/>
+      <Action ID="GRASP" obj="..."/>
+    </Sequence>
+  </BehaviorTree>
+</root>
+```
+
+Note: SubTree creates a reusable behavior that can be referenced multiple times. The subtree definition is placed after the main tree.

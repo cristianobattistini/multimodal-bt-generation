@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "water_bottle"
+  destination: ""
+  expanded_instruction: "Push the clear water bottle on the table so it topples over and lies on its side; if the push fails, retry up to 5 times."
+  scene_context: "Water bottle upright near the back-right edge of a clear table; bottle not held and no containers open."
+  expected_sequence: "Reach to the bottle and apply a lateral tap to knock it over so it falls and lies on its side, retrying the push up to 5 times if necessary."

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "milk_dairy"
+  destination: "table"
+  expanded_instruction: "Pick up the milk dairy (small light-blue carton by the robot) and place it on the table surface; if PLACE_ON_TOP fails, retry up to 5 times."
+  scene_context: "Milk dairy upright next to robot base on the tabletop area; table surface clear; no containers open; object not held."
+  expected_sequence: "Approach and grasp the milk dairy, lift it, move to the table surface, and set it down; if PLACE_ON_TOP fails, retry up to 5 times."

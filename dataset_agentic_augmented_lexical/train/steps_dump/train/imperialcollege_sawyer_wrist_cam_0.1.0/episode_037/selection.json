@@ -1,0 +1,28 @@
+{
+  "decorator_type": "mixed",
+  "mixed_subtype": "condition_retry",
+  "target_action_id": "PUSH",
+  "target_obj": "small_blue_tile",
+  "parameters": {
+    "augmentations": [
+      {
+        "type": "condition",
+        "action_id": "PUSH",
+        "obj": "small_blue_tile",
+        "params": {
+          "condition_id": "IS_REACHABLE",
+          "condition_obj": "small_blue_tile"
+        }
+      },
+      {
+        "type": "retry",
+        "action_id": "PUSH",
+        "obj": "small_blue_tile",
+        "params": {
+          "num_attempts": 2
+        }
+      }
+    ]
+  },
+  "prompt_name": "mixed/condition_retry"
+}

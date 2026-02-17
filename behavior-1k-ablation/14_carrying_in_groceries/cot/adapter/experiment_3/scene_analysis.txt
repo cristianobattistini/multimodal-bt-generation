@@ -1,0 +1,7 @@
+scene_analysis:
+  target: ["beefsteak_tomato", "car", "carton_of_milk"]
+  destination: "electric_refrigerator"
+  expanded_instruction: "Pick up the beefsteak_tomato from the trunk, place it beside the electric_refrigerator, then open the fridge (if it is closed), pick up the beefsteak_tomato from the trunk, place it inside, close the fridge, then pick up the carton_of_milk from the trunk and place it inside."
+  scene_context: "Trunk open with beefsteak_tomato inside; electric_refrigerator door closed and reachable; carton_of_milk on trunk floor; nothing is held."
+  expected_sequence: "Pick up the tomato from the trunk and place it beside the electric_refrigerator (if closed, open it), then pick up the tomato and place it inside the fridge (close if open), then pick up the carton_of_milk from the trunk and place it inside the fridge."
+Plan:

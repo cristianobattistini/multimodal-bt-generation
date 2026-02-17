@@ -1,0 +1,1 @@
+avoid obstacle and reach the scissors. Check if graspable before grasping; if grasping fails, push it as Plan B.

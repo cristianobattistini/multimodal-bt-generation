@@ -1,0 +1,19 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Execute subtree ApproachDoor -->
+      <SubTree ID="ApproachDoor" />
+      <!-- Open door -->
+      <Action ID="OPEN" obj="door" />
+    </Sequence>
+  </BehaviorTree>
+  <!-- Subtree definition ApproachDoor -->
+  <BehaviorTree ID="ApproachDoor">
+    <Sequence>
+      <!-- Navigate to door -->
+      <Action ID="NAVIGATE_TO" obj="door" />
+      <!-- Open door -->
+      <Action ID="OPEN" obj="door" />
+    </Sequence>
+  </BehaviorTree>
+</root>

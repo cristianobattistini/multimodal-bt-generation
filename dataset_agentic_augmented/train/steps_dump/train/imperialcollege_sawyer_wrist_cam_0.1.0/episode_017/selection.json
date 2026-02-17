@@ -1,0 +1,12 @@
+{
+  "decorator_type": "condition",
+  "mixed_subtype": null,
+  "target_action_id": "PUSH",
+  "target_obj": "wine_glass",
+  "parameters": {
+    "condition_id": "IS_REACHABLE",
+    "condition_obj": "wine_glass",
+    "allowed_conditions": "IS_REACHABLE, IS_VISIBLE"
+  },
+  "prompt_name": "condition"
+}

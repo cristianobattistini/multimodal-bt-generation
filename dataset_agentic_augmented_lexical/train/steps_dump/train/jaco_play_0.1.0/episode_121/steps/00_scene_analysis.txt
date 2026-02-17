@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "apple"
+  destination: "table"
+  expanded_instruction: "Pick up the red apple from the surface near the lamp and place it on the table surface; if PLACE_ON_TOP fails, retry placement up to 2 more times and then use a PUSH motion to reposition the apple onto the table."
+  scene_context: "Red apple resting near lamp on tabletop, not held; table surface nearby is clear and reachable."
+  expected_sequence: "Approach the apple, pick it up, move to the clear table area, and set the apple down; if placing fails after retries, use a push to reposition the apple onto the table."

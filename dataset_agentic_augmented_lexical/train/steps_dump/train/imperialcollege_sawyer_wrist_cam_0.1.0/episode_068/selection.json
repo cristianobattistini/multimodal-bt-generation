@@ -1,0 +1,27 @@
+{
+  "decorator_type": "mixed",
+  "mixed_subtype": "timeout_retry",
+  "target_action_id": "GRASP",
+  "target_obj": "can",
+  "parameters": {
+    "augmentations": [
+      {
+        "type": "timeout",
+        "action_id": "GRASP",
+        "obj": "can",
+        "params": {
+          "msec": 20000
+        }
+      },
+      {
+        "type": "retry",
+        "action_id": "GRASP",
+        "obj": "can",
+        "params": {
+          "num_attempts": 2
+        }
+      }
+    ]
+  },
+  "prompt_name": "mixed/timeout_retry"
+}

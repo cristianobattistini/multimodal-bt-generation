@@ -1,0 +1,1 @@
+move pepsi can near 7up can. Check precondition, use a 10 second timeout, and retry grasping up to 2 times if it fails.

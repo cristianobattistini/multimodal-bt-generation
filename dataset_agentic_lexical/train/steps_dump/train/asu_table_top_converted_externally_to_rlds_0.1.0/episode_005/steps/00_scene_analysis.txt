@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "red_bottle"
+  destination: "table"
+  expanded_instruction: "Pick up the red bottle from the table and place it down on the table."
+  scene_context: "Red bottle upright on table and not held; table is reachable and mostly clear; nearby green bottle and cans present."
+  expected_sequence: "Move to the red bottle, grasp it, lift it slightly, then place it down on the table."

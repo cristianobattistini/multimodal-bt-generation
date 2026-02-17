@@ -1,0 +1,14 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to blue_cup -->
+      <Action ID="NAVIGATE_TO" obj="blue_cup" />
+      <!-- Grip blue_cup -->
+      <Action ID="GRIP" obj="blue_cup" />
+      <!-- Move to brown_cup -->
+      <Action ID="MOVE_TO" obj="brown_cup" />
+      <!-- Set in brown_cup -->
+      <Action ID="SET_IN" obj="brown_cup" />
+    </Sequence>
+  </BehaviorTree>
+</root>

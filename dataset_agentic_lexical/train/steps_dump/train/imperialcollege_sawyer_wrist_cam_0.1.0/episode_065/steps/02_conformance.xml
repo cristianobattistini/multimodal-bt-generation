@@ -1,0 +1,10 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to spoon -->
+      <Action ID="NAVIGATE_TO" obj="spoon"/>
+      <!-- Push spoon to the right/down-right with a single swipe on the blue cloth -->
+      <Action ID="PUSH" obj="spoon"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

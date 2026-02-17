@@ -1,0 +1,15 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Check butter_dairy is reachable before NAVIGATE_TO -->
+      <Condition ID="IS_REACHABLE" obj="butter_dairy" />
+      <!-- Timeout: NAVIGATE_TO butter_dairy within 20s -->
+      <Timeout msec="20000">
+        <!-- Navigate to butter_dairy -->
+        <Action ID="NAVIGATE_TO" obj="butter_dairy" />
+      </Timeout>
+      <!-- Grasp butter_dairy -->
+      <Action ID="GRASP" obj="butter_dairy" />
+    </Sequence>
+  </BehaviorTree>
+</root>

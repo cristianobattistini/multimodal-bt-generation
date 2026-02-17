@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "utensil"
+  destination: "table"
+  expanded_instruction: "Check that the red-handled utensil on the left side of the wooden counter is reachable, then pick it up and place it on the table edge near the wall. If not reachable, adjust position; attempt the grasp with up to 3 retries (within a 10s timeout). If the grasp fails, use a push or flip to reposition the utensil and then grasp and place it as instructed."
+  scene_context: "Utensil lies on the wooden counter left of a cloth and metal bowl; not held; table edge near wall is clear."
+  expected_sequence: "Check IS_REACHABLE for the red-handled utensil, reach to the utensil, attempt to pick it up (retry up to 3 times within 10s); if grasp fails, push or flip to reposition the utensil and then grasp it, move to the table edge by the wall, and place it down."

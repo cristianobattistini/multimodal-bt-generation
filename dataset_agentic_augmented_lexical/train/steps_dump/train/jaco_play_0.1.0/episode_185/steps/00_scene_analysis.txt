@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "gray_bowl"
+  destination: "white_plate"
+  expanded_instruction: "Pick up the gray bowl from the table and place it inside the white plate on the table. Before grasping, check that the gray bowl is graspable; retry the grasp up to 2 times on failure, and if still unsuccessful, push or flip the bowl to reposition it before placing it in the plate."
+  scene_context: "Gray bowl on table; white plate on table and empty; no containers closed and nothing currently held."
+  expected_sequence: "Approach the gray bowl, check IS_GRASPABLE, attempt to grasp (retry up to 2 times if it fails); if grasp fails, push or flip to reposition, then lift the bowl, move over the white plate, and set the bowl into the plate."

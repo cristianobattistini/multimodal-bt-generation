@@ -1,0 +1,17 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to wok -->
+      <Action ID="NAVIGATE_TO" obj="wok" />
+      <!-- Pick wok -->
+      <Action ID="PICK" obj="wok" />
+      <!-- Move to purple_cloth -->
+      <Action ID="MOVE_TO" obj="purple_cloth" />
+      <!-- Retry PLACE_ON_TOP purple_cloth up to 5 attempts -->
+      <RetryUntilSuccessful num_attempts="5">
+        <!-- Place on purple_cloth -->
+        <Action ID="PLACE_ON_TOP" obj="purple_cloth" />
+      </RetryUntilSuccessful>
+    </Sequence>
+  </BehaviorTree>
+</root>

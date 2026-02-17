@@ -1,0 +1,10 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Approach fridge -->
+      <Action ID="APPROACH" obj="fridge" />
+      <!-- Open fridge -->
+      <Action ID="OPEN" obj="fridge" />
+    </Sequence>
+  </BehaviorTree>
+</root>

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "tiger"
+  destination: "grey_bowl"
+  expanded_instruction: "Verify the tiger is visible, then take the tiger from the red bowl and place it into the grey bowl on the table; when grasping, check visibility first, use a 10s timeout, and retry the grasp up to 2 times if needed."
+  scene_context: "Tiger is inside the red bowl; grey bowl is empty and open on the table; robot not holding anything."
+  expected_sequence: "Check the tiger is visible, reach into the red bowl, pick up the tiger (grasp with a 10s timeout, retry up to 2 times if it fails), move to the grey bowl, and place the tiger inside."

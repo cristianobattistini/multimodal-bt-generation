@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "lid"
+  destination: ""
+  expanded_instruction: "Check IS_VISIBLE on the lid (retry up to 3 times within a 10s timeout); then navigate to the pot, grasp the lid, lift it off the pot, and hold it up."
+  scene_context: "Pot with lid on sits on the counter; lid is not held and counter is clear."
+  expected_sequence: "Verify lid is visible before navigating; approach the pot, grasp the lid (if grasp fails, reposition and retry up to 2 more times), lift the lid off the pot and hold it up."

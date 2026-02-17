@@ -1,0 +1,45 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Execute subtree ApproachPot -->
+      <SubTree ID="ApproachPot" />
+      <!-- Unlock pot -->
+      <Action ID="UNLOCK" obj="pot" />
+      <!-- Approach lid -->
+      <Action ID="APPROACH" obj="lid" />
+      <!-- Pick lid -->
+      <Action ID="PICK" obj="lid" />
+      <!-- Approach table -->
+      <Action ID="APPROACH" obj="table" />
+      <!-- Set on table -->
+      <Action ID="SET_ON" obj="table" />
+      <!-- Approach to pot -->
+      <Action ID="APPROACH" obj="pot" />
+      <!-- Pick pot -->
+      <Action ID="PICK" obj="pot" />
+      <!-- Approach to plate -->
+      <Action ID="APPROACH" obj="plate" />
+      <!-- Place pot on plate -->
+      <Action ID="PLACE_ON_TOP" obj="pot" surface="plate" />
+      <!-- Approach to tool -->
+      <Action ID="APPROACH" obj="tool" />
+      <!-- Pick tool -->
+      <Action ID="PICK" obj="tool" />
+      <!-- Move to pot -->
+      <Action ID="MOVE_TO" obj="pot" />
+      <!-- Shove pot -->
+      <Action ID="SHOVE" obj="pot" />
+      <!-- Drop -->
+      <Action ID="DROP" />
+    </Sequence>
+  </BehaviorTree>
+  <!-- Subtree definition ApproachPot -->
+  <BehaviorTree ID="ApproachPot">
+    <Sequence>
+      <!-- Approach to pot -->
+      <Action ID="APPROACH" obj="pot" />
+      <!-- Pick pot -->
+      <Action ID="PICK" obj="pot" />
+    </Sequence>
+  </BehaviorTree>
+</root>

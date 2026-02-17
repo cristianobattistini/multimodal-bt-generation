@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "burger_meat"
+  destination: "oven"
+  expanded_instruction: "Check that the burger meat patty is visible, then navigate to the patty (navigate within a 20s timeout), pick it up, move to the open oven, and place it on the oven rack."
+  scene_context: "Burger patty on floor near blue seat; oven door open and rack empty and reachable."
+  expected_sequence: "Confirm burger_meat is visible, approach the patty (NAVIGATE_TO within 20s), pick it up, move to the oven, and place it on the oven rack."

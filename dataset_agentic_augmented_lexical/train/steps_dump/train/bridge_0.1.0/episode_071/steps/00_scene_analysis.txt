@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "broccoli"
+  destination: "pot"
+  expanded_instruction: "Pick up the broccoli from the cardboard fence area and place it into the metal pot on the stove; when grasping the broccoli allow a 20s timeout and retry up to 2 times if the grasp fails."
+  scene_context: "Broccoli on the cardboard fence edge, not held; metal pot on stove is open and reachable; cardboard fence present."
+  expected_sequence: "Approach the broccoli, attempt to grasp it (20s timeout, retry up to 2 times if needed), move to the metal pot, and place the broccoli inside."

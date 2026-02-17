@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "teapot"
+  destination: "stove"
+  expanded_instruction: "Check that the stove is reachable (IS_REACHABLE) before navigating; if reachable, pick up the teapot from the counter near the sink and place it on the stove burner. If not reachable, retry the reachability check up to 3 times with a 10s timeout and abort if still unreachable."
+  scene_context: "Teapot on countertop near sink, stove burners clear, robot hand not holding the teapot."
+  expected_sequence: "Check IS_REACHABLE for the stove, then approach and grasp the teapot, carry it over to the stove, and place it on a burner. If IS_REACHABLE fails, retry up to 3 times (10s each) before aborting."

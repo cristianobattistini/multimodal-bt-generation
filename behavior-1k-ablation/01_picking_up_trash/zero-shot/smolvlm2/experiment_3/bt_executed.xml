@@ -1,0 +1,15 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to ashcan -->
+      <Action ID="NAVIGATE_TO" obj="ashcan" />
+      <!-- Grasp ashcan -->
+      <Action ID="GRASP" obj="ashcan" />
+      <!-- Navigate to trash_can -->
+      <Action ID="NAVIGATE_TO" obj="trash_can" />
+      <!-- Place inside trash_can -->
+      <Action ID="PLACE_INSIDE" obj="trash_can" />
+    </Sequence>
+  </Root>
+  <!-- End -->
+</root>

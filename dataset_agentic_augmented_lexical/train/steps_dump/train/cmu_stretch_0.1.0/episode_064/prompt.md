@@ -1,0 +1,3 @@
+Instruction: Lift up a lid from the pot. Retry grasping up to 3 times if it fails.
+Allowed Actions: [NAVIGATE_TO(obj), GRASP(obj), OPEN(obj), RELEASE()]
+* Constraints: Robustness: Wrap GRASP with RetryUntilSuccessful (num_attempts="3").

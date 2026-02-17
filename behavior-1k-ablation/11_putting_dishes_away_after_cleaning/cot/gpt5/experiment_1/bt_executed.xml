@@ -1,0 +1,60 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence name="store_all_plates_in_one_cabinet">
+      <!-- Open cabinet first (required) -->
+      <Action ID="NAVIGATE_TO" obj="cabinet"/>
+      <Action ID="OPEN" obj="cabinet"/>
+
+      <!-- plate_1 -->
+      <Action ID="NAVIGATE_TO" obj="plate_1"/>
+      <Action ID="GRASP" obj="plate_1"/>
+      <Action ID="NAVIGATE_TO" obj="cabinet"/>
+      <Action ID="PLACE_INSIDE" obj="cabinet"/>
+
+      <!-- plate_2 -->
+      <Action ID="NAVIGATE_TO" obj="plate_2"/>
+      <Action ID="GRASP" obj="plate_2"/>
+      <Action ID="NAVIGATE_TO" obj="cabinet"/>
+      <Action ID="PLACE_INSIDE" obj="cabinet"/>
+
+      <!-- plate_3 -->
+      <Action ID="NAVIGATE_TO" obj="plate_3"/>
+      <Action ID="GRASP" obj="plate_3"/>
+      <Action ID="NAVIGATE_TO" obj="cabinet"/>
+      <Action ID="PLACE_INSIDE" obj="cabinet"/>
+
+      <!-- plate_4 -->
+      <Action ID="NAVIGATE_TO" obj="plate_4"/>
+      <Action ID="GRASP" obj="plate_4"/>
+      <Action ID="NAVIGATE_TO" obj="cabinet"/>
+      <Action ID="PLACE_INSIDE" obj="cabinet"/>
+
+      <!-- plate_5 -->
+      <Action ID="NAVIGATE_TO" obj="plate_5"/>
+      <Action ID="GRASP" obj="plate_5"/>
+      <Action ID="NAVIGATE_TO" obj="cabinet"/>
+      <Action ID="PLACE_INSIDE" obj="cabinet"/>
+
+      <!-- plate_6 -->
+      <Action ID="NAVIGATE_TO" obj="plate_6"/>
+      <Action ID="GRASP" obj="plate_6"/>
+      <Action ID="NAVIGATE_TO" obj="cabinet"/>
+      <Action ID="PLACE_INSIDE" obj="cabinet"/>
+
+      <!-- plate_7 -->
+      <Action ID="NAVIGATE_TO" obj="plate_7"/>
+      <Action ID="GRASP" obj="plate_7"/>
+      <Action ID="NAVIGATE_TO" obj="cabinet"/>
+      <Action ID="PLACE_INSIDE" obj="cabinet"/>
+
+      <!-- plate_8 -->
+      <Action ID="NAVIGATE_TO" obj="plate_8"/>
+      <Action ID="GRASP" obj="plate_8"/>
+      <Action ID="NAVIGATE_TO" obj="cabinet"/>
+      <Action ID="PLACE_INSIDE" obj="cabinet"/>
+
+      <!-- Close cabinet when done -->
+      <Action ID="CLOSE" obj="cabinet"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

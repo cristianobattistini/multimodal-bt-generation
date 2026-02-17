@@ -1,0 +1,21 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence name="dispose_three_cans">
+      <!-- Can 1 -->
+      <NAVIGATE_TO obj="can_of_soda_1"/>
+      <GRASP obj="can_of_soda_1"/>
+      <NAVIGATE_TO obj="ashcan"/>
+      <PLACE_INSIDE obj="ashcan"/>
+      <!-- Can 2 -->
+      <NAVIGATE_TO obj="can_of_soda_2"/>
+      <GRASP obj="can_of_soda_2"/>
+      <NAVIGATE_TO obj="ashcan"/>
+      <PLACE_INSIDE obj="ashcan"/>
+      <!-- Can 3 -->
+      <NAVIGATE_TO obj="can_of_soda_3"/>
+      <GRASP obj="can_of_soda_3"/>
+      <NAVIGATE_TO obj="ashcan"/>
+      <PLACE_INSIDE obj="ashcan"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

@@ -1,0 +1,13 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Approach dustpan -->
+      <Action ID="APPROACH" obj="dustpan" />
+      <!-- Retry PUSH dustpan up to 3 attempts -->
+      <RetryUntilSuccessful num_attempts="3">
+        <!-- Push dustpan forward toward front edge of table -->
+        <Action ID="PUSH" obj="dustpan" />
+      </RetryUntilSuccessful>
+    </Sequence>
+  </BehaviorTree>
+</root>

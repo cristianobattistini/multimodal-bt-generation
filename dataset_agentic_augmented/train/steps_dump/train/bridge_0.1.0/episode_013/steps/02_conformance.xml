@@ -1,0 +1,19 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Timeout: NAVIGATE_TO orange_pot within 15s -->
+      <Timeout msec="15000">
+        <!-- Navigate to orange_pot -->
+        <Action ID="NAVIGATE_TO" obj="orange_pot" />
+      </Timeout>
+      <!-- Grasp orange_pot -->
+      <Action ID="GRASP" obj="orange_pot" />
+      <!-- Return orange_pot upright (flip) -->
+      <Action ID="FLIP" obj="orange_pot" />
+      <!-- Navigate to sink -->
+      <Action ID="NAVIGATE_TO" obj="sink" />
+      <!-- Place inside sink -->
+      <Action ID="PLACE_INSIDE" obj="sink" />
+    </Sequence>
+  </BehaviorTree>
+</root>

@@ -1,0 +1,46 @@
+ROLE: Embodied Planner
+GOAL: Analyze the scene and generate a valid BehaviorTree.CPP XML plan.
+
+INPUTS:
+- Scene Image: The current visual observation of the robot workspace
+- Instruction: Put the bowl inside the kitchen cabinet. Retry grasping up to 2 times; if all fail, push it as Plan B.
+- Allowed Actions: [PLACE_INSIDE(obj), GRASP(obj), PUSH(obj), NAVIGATE_TO(obj)]
+
+OUTPUT FORMAT:
+scene_analysis:
+  target: "bowl"
+  destination: "kitchen_cabinet"
+  expanded_instruction: "Put the bowl inside the kitchen cabinet. Retry grasping up to 2 times; if all fail, push it as Plan B."
+  scene_context: "Bowl is on the counter within reachable distance. Cabinet is open and reachable. No immediate obstacles observed, but bowl orientation may make grasping difficult."
+  expected_sequence: "Navigate to the bowl, attempt grasping (retry up to 2 times). If grasping repeatedly fails, push the bowl to reposition it, then attempt grasping again. Navigate to the cabinet, place the bowl inside, and release."
+Plan:
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to bowl -->
+      <Action ID="NAVIGATE_TO" obj="bowl"/>
+      <!-- Grasp bowl -->
+      <!-- Primary recovery: Retry until successful for transient issues -->
+      <Fallback>
+        <!-- Primary: retry the action multiple times -->
+        <RetryUntilSuccessful num_attempts="2">
+          <!-- Grasp bowl -->
+          <Action ID="GRASP" obj="bowl"/>
+        </RetryUntilSuccessful>
+        <!-- Plan B: fallback action (push) to reposition the object, then retry grasp -->
+        <Sequence>
+          <!-- Push bowl to reposition as Plan B -->
+          <Action ID="PUSH" obj="bowl"/>
+          <!-- After repositioning, attempt grasp again -->
+          <Action ID="GRASP" obj="bowl"/>
+        </Sequence>
+      </Fallback>
+      <!-- Navigate to kitchen_cabinet -->
+      <Action ID="NAVIGATE_TO" obj="kitchen_cabinet"/>
+      <!-- Place inside kitchen_cabinet -->
+      <Action ID="PLACE_INSIDE" obj="kitchen_cabinet"/>
+      <!-- Release -->
+      <Action ID="RELEASE"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

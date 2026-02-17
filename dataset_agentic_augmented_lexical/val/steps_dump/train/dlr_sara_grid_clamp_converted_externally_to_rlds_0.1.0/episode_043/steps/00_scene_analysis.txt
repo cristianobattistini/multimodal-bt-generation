@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "grid_clamp"
+  destination: "grid_board"
+  expanded_instruction: "Pick up the grid clamp from the group on the table and place it onto the grid board; before placing, check IS_HOLDING on the grid_board and only PLACE_ON_TOP if that check passes (if not, retry grasp up to 3 times)."
+  scene_context: "Grid clamp among a small group on the table; grid board surface is clear and reachable; robot not holding anything."
+  expected_sequence: "Reach to the clamp, grasp it, move over the grid board, verify IS_HOLDING on the grid_board before placing, and if check passes PLACE_ON_TOP; if not holding, retry grasp up to 3 times and then place."

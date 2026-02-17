@@ -1,0 +1,10 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to orange_can -->
+      <Action ID="NAVIGATE_TO" obj="orange_can"/>
+      <!-- Push orange_can (strike so it tips onto its side on the table) -->
+      <Action ID="PUSH" obj="orange_can"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

@@ -1,0 +1,42 @@
+scene_analysis:
+  target: "all_food_items"
+  destination: "packing_box"
+  expanded_instruction: "Collect the club_sandwich, half_apple_1, half_apple_2, chocolate_chip_cookie from the chopping_board and the bottle_of_tea from inside the electric_refrigerator, and place them all into the packing_box. Ensure the electric_refrigerator is closed at the end."
+  scene_context: "The kitchen has a chopping_board on the countertop with the club_sandwich, two half_apples, and a chocolate_chip_cookie. The bottle_of_tea is inside the electric_refrigerator. The packing_box is available for packing."
+  expected_sequence: "Pack the items from the chopping_board into the packing_box one by one. Then go to the electric_refrigerator, open it, retrieve the bottle_of_tea, place it into the packing_box, and finally return to the electric_refrigerator to close it."
+Plan:
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Pack items from the chopping board -->
+      <NAVIGATE_TO obj="chopping_board"/>
+      <GRASP obj="club_sandwich"/>
+      <NAVIGATE_TO obj="packing_box"/>
+      <PLACE_INSIDE obj="club_sandwich"/>
+
+      <NAVIGATE_TO obj="chopping_board"/>
+      <GRASP obj="half_apple_1"/>
+      <NAVIGATE_TO obj="packing_box"/>
+      <PLACE_INSIDE obj="half_apple_1"/>
+
+      <NAVIGATE_TO obj="chopping_board"/>
+      <GRASP obj="half_apple_2"/>
+      <NAVIGATE_TO obj="packing_box"/>
+      <PLACE_INSIDE obj="half_apple_2"/>
+
+      <NAVIGATE_TO obj="chopping_board"/>
+      <GRASP obj="chocolate_chip_cookie"/>
+      <NAVIGATE_TO obj="packing_box"/>
+      <PLACE_INSIDE obj="chocolate_chip_cookie"/>
+
+      <!-- Retrieve drink from refrigerator and ensure it's closed -->
+      <NAVIGATE_TO obj="electric_refrigerator"/>
+      <OPEN obj="electric_refrigerator"/>
+      <GRASP obj="bottle_of_tea"/>
+      <NAVIGATE_TO obj="packing_box"/>
+      <PLACE_INSIDE obj="bottle_of_tea"/>
+      <NAVIGATE_TO obj="electric_refrigerator"/>
+      <CLOSE obj="electric_refrigerator"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

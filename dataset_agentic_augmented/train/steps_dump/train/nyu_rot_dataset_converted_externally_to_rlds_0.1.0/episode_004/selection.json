@@ -1,0 +1,27 @@
+{
+  "decorator_type": "mixed",
+  "mixed_subtype": "timeout_retry",
+  "target_action_id": "HANG",
+  "target_obj": "hook",
+  "parameters": {
+    "augmentations": [
+      {
+        "type": "timeout",
+        "action_id": "HANG",
+        "obj": "hook",
+        "params": {
+          "msec": 20000
+        }
+      },
+      {
+        "type": "retry",
+        "action_id": "HANG",
+        "obj": "hook",
+        "params": {
+          "num_attempts": 2
+        }
+      }
+    ]
+  },
+  "prompt_name": "mixed/timeout_retry"
+}

@@ -1,0 +1,18 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Approach white_box -->
+      <Action ID="APPROACH" obj="white_box" />
+      <Sequence>
+        <!-- Check white_box is visible before GRASP -->
+        <Condition ID="IS_VISIBLE" obj="white_box" />
+        <!-- Grasp white_box -->
+        <Action ID="GRAB" obj="white_box" />
+      </Sequence>
+      <!-- Grab white_box -->
+      <Action ID="GO_TO" obj="table" />
+      <!-- Go to table -->
+      <Action ID="SET_ON" obj="table" />
+    </Sequence>
+  </BehaviorTree>
+</root>

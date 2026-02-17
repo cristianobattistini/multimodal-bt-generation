@@ -1,0 +1,43 @@
+scene_analysis:
+  target: "toys"
+  destination: "toy_box"
+  expanded_instruction: "Collect board_game_1, board_game_2, board_game_3, jigsaw_puzzle_1, jigsaw_puzzle_2, and tennis_ball, and place each inside the toy_box. Several toys and the toy_box are visible on the desk; gather each toy one by one and insert into the toy_box until all six are inside."
+  scene_context: "The toy_box is on the desk. At least three toys (a tennis ball and two boxed items/puzzles) are on the desk near the chair; remaining toys may be elsewhere in the room. The robot must visit each toy, pick it up, go to the toy_box, and place it inside."
+  expected_sequence: "For each toy: navigate to the toy, grasp it, navigate to the toy_box, and place it inside. Repeat for board_game_1, board_game_2, board_game_3, jigsaw_puzzle_1, jigsaw_puzzle_2, and tennis_ball."
+
+Plan:
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence name="collect_all_toys_into_toy_box">
+      <NAVIGATE_TO obj="board_game_1"/>
+      <GRASP obj="board_game_1"/>
+      <NAVIGATE_TO obj="toy_box"/>
+      <PLACE_INSIDE obj="board_game_1"/>
+
+      <NAVIGATE_TO obj="board_game_2"/>
+      <GRASP obj="board_game_2"/>
+      <NAVIGATE_TO obj="toy_box"/>
+      <PLACE_INSIDE obj="board_game_2"/>
+
+      <NAVIGATE_TO obj="board_game_3"/>
+      <GRASP obj="board_game_3"/>
+      <NAVIGATE_TO obj="toy_box"/>
+      <PLACE_INSIDE obj="board_game_3"/>
+
+      <NAVIGATE_TO obj="jigsaw_puzzle_1"/>
+      <GRASP obj="jigsaw_puzzle_1"/>
+      <NAVIGATE_TO obj="toy_box"/>
+      <PLACE_INSIDE obj="jigsaw_puzzle_1"/>
+
+      <NAVIGATE_TO obj="jigsaw_puzzle_2"/>
+      <GRASP obj="jigsaw_puzzle_2"/>
+      <NAVIGATE_TO obj="toy_box"/>
+      <PLACE_INSIDE obj="jigsaw_puzzle_2"/>
+
+      <NAVIGATE_TO obj="tennis_ball"/>
+      <GRASP obj="tennis_ball"/>
+      <NAVIGATE_TO obj="toy_box"/>
+      <PLACE_INSIDE obj="tennis_ball"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

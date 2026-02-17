@@ -1,0 +1,26 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Go to kcup_holder -->
+      <Action ID="GO_TO" obj="kcup_holder" />
+      <Sequence>
+        <!-- Check kcup_holder is reachable before OPEN -->
+        <Condition ID="IS_REACHABLE" obj="kcup_holder" />
+        <!-- Open kcup_holder -->
+        <Action ID="OPEN" obj="kcup_holder" />
+      </Sequence>
+      <!-- Navigate to kcup -->
+      <Action ID="NAVIGATE_TO" obj="kcup" />
+      <!-- Grasp kcup -->
+      <Action ID="GRIP" obj="kcup" />
+      <!-- Grip kcup -->
+      <Action ID="NAVIGATE_TO" obj="kcup_holder" />
+      <!-- Place inside kcup_holder -->
+      <Action ID="PLACE_INSIDE" obj="kcup_holder" />
+      <!-- Close kcup_holder -->
+      <Action ID="SHUT" obj="kcup_holder" />
+      <!-- Shut kcup_holder -->
+      <Action ID="RELEASE" />
+    </Sequence>
+  </BehaviorTree>
+</root>

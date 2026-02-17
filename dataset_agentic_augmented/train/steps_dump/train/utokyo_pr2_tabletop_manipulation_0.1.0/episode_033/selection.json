@@ -1,0 +1,41 @@
+{
+  "decorator_type": "mixed",
+  "mixed_subtype": "condition_retry_fallback",
+  "target_action_id": "FOLD",
+  "target_obj": "pink_cloth",
+  "parameters": {
+    "augmentations": [
+      {
+        "type": "condition",
+        "action_id": "FOLD",
+        "obj": "pink_cloth",
+        "params": {
+          "condition_id": "IS_UNFOLDED",
+          "condition_obj": "pink_cloth"
+        }
+      },
+      {
+        "type": "retry",
+        "action_id": "FOLD",
+        "obj": "pink_cloth",
+        "params": {
+          "num_attempts": 3
+        }
+      },
+      {
+        "type": "fallback",
+        "action_id": "FOLD",
+        "obj": "pink_cloth",
+        "params": {
+          "valid_fallbacks": [
+            "UNFOLD",
+            "FLIP"
+          ],
+          "valid_fallbacks_str": "UNFOLD, FLIP",
+          "hint": "UNFOLD resets a tangled state, FLIP repositions the cloth"
+        }
+      }
+    ]
+  },
+  "prompt_name": "mixed/condition_retry_fallback"
+}

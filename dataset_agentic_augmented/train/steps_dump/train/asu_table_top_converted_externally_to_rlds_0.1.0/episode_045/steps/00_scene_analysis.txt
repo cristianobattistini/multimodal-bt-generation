@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "red_object"
+  destination: ""
+  expanded_instruction: "Using an ApproachRedObject subtree, push the red rectangular block on the right-front of the table forward toward the table edge (retry up to 3 times, 10s timeout)."
+  scene_context: "Red rectangular block on right-front of table, not held; table clear; robot arm nearby; no containers open."
+  expected_sequence: "ApproachRedObject subtree: move the arm to the red block (retry up to 3 times, 10s timeout), then push it forward toward the front edge of the table, repositioning if contact fails."

@@ -1,0 +1,13 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Timeout: NAVIGATE_TO middle_drawer within 10s -->
+      <Timeout msec="10000">
+        <!-- Navigate to middle_drawer -->
+        <Action ID="APPROACH" obj="middle_drawer" />
+      </Timeout>
+      <!-- Approach middle_drawer -->
+      <Action ID="SLIDE" obj="middle_drawer" />
+    </Sequence>
+  </BehaviorTree>
+</root>

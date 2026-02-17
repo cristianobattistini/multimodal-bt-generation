@@ -1,0 +1,21 @@
+{
+  "success": false,
+  "bt_success": false,
+  "bddl_goal": false,
+  "ticks": 0,
+  "duration": 0.10632872581481934,
+  "inference_time": 7.101433277130127,
+  "satisfied": [],
+  "unsatisfied": [
+    "exists(['?floor.n.01', '-', 'floor.n.01'], ['forall', ['?mousetrap.n.01', '-', 'mousetrap.n.01'], ['ontop', '?mousetrap.n.01', '?floor.n.01']])",
+    "exists(['?sink.n.01', '-', 'sink.n.01'], ['forn', ['2'], ['?mousetrap.n.01', '-', 'mousetrap.n.01'], ['or', ['under', '?mousetrap.n.01', '?sink.n.01'], ['nextto', '?mousetrap.n.01', '?sink.n.01']]])"
+  ],
+  "task": "05_setting_mousetraps",
+  "condition": "cot",
+  "model_dir": "smolvlm2",
+  "vlm_model": "smol500",
+  "inference_mode": "adapter",
+  "experiment": 1,
+  "timestamp": "20260213_102245",
+  "reason": "Malformed XML: nested <Action> tags, generic 'mousetraps' object, GRASP(sink). Invalid BT structure with duplicate <Root> nesting. BT parse failed (ticks=0)."
+}

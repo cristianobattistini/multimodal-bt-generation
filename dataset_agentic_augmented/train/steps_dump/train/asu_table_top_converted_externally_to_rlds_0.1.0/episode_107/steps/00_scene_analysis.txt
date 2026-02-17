@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "green_glass_bottle"
+  destination: "table"
+  expanded_instruction: "Before grasping, verify that the green glass bottle on the left side of the table is reachable (IS_REACHABLE); if not, retry the reachability check up to 3 times with a 10s timeout or reposition as needed. Then pick up the bottle and place it down on the table."
+  scene_context: "Green glass bottle on left edge of table, robot not holding it, table surface otherwise clear."
+  expected_sequence: "Approach the bottle, check IS_REACHABLE (retry up to 3 times within 10s and reposition if needed), grasp it (if grasp fails, attempt a single push to reposition and retry), move to a nearby clear spot on the table, and set the bottle down."

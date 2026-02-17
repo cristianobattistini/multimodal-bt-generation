@@ -1,0 +1,1 @@
+pour in mug. If placing on top fails, push the destination (table) to clear obstacles and retry placing on top.

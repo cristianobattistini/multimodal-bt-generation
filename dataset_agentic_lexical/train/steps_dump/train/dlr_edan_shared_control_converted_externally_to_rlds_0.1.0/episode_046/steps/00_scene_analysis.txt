@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "yellow_ball"
+  destination: ""
+  expanded_instruction: "Pick up the yellow ball from the transparent box on the small stool"
+  scene_context: "Yellow ball inside an open transparent box on a small stool; ball is not held; nearby table clear."
+  expected_sequence: "Reach into the transparent box, grasp the yellow ball, and lift it out."

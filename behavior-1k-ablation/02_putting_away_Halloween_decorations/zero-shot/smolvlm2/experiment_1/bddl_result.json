@@ -1,0 +1,23 @@
+{
+  "success": false,
+  "bt_success": false,
+  "bddl_goal": false,
+  "ticks": 1,
+  "duration": 11.041908502578735,
+  "inference_time": 8.081293821334839,
+  "satisfied": [],
+  "unsatisfied": [
+    "forall(['?pumpkin.n.02', '-', 'pumpkin.n.02'], ['exists', ['?cabinet.n.01', '-', 'cabinet.n.01'], ['inside', '?pumpkin.n.02', '?cabinet.n.01']])",
+    "forall(['?candle.n.01', '-', 'candle.n.01'], ['exists', ['?cabinet.n.01', '-', 'cabinet.n.01'], ['inside', '?candle.n.01', '?cabinet.n.01']])",
+    "exists(['?table.n.02', '-', 'table.n.02'], ['nextto', '?caldron.n.01_1', '?table.n.02'])",
+    "forall(['?cabinet.n.01', '-', 'cabinet.n.01'], ['not', ['open', '?cabinet.n.01']])"
+  ],
+  "task": "02_putting_away_Halloween_decorations",
+  "condition": "zero-shot",
+  "model_dir": "smolvlm2",
+  "vlm_model": "smol500",
+  "inference_mode": "adapter",
+  "experiment": 1,
+  "timestamp": "20260213_155133",
+  "reason": "BT structural error: generic object names without instance suffixes, OPEN/CLOSE missing obj attribute, only 1 pumpkin handled, 0 candles, no cauldron actions. Plan fundamentally incomplete."
+}

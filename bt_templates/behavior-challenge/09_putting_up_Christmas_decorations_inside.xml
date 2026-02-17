@@ -1,0 +1,49 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Place wreath on sofa -->
+      <Action ID="NAVIGATE_TO" obj="wreath.n.01_1"/>
+      <Action ID="GRASP" obj="wreath.n.01_1"/>
+      <Action ID="NAVIGATE_TO" obj="sofa.n.01_1"/>
+      <Action ID="PLACE_ON_TOP" obj="sofa.n.01_1"/>
+      <!-- Place candy cane 1 on sofa -->
+      <Action ID="NAVIGATE_TO" obj="candy_cane.n.01_1"/>
+      <Action ID="GRASP" obj="candy_cane.n.01_1"/>
+      <Action ID="NAVIGATE_TO" obj="sofa.n.01_1"/>
+      <Action ID="PLACE_ON_TOP" obj="sofa.n.01_1"/>
+      <!-- Place candy cane 2 on sofa -->
+      <Action ID="NAVIGATE_TO" obj="candy_cane.n.01_2"/>
+      <Action ID="GRASP" obj="candy_cane.n.01_2"/>
+      <Action ID="NAVIGATE_TO" obj="sofa.n.01_1"/>
+      <Action ID="PLACE_ON_TOP" obj="sofa.n.01_1"/>
+      <!-- Place candy cane 3 on table -->
+      <Action ID="NAVIGATE_TO" obj="candy_cane.n.01_3"/>
+      <Action ID="GRASP" obj="candy_cane.n.01_3"/>
+      <Action ID="NAVIGATE_TO" obj="table.n.02_1"/>
+      <Action ID="PLACE_ON_TOP" obj="table.n.02_1"/>
+      <!-- Place pillar candle 1 on table -->
+      <Action ID="NAVIGATE_TO" obj="pillar_candle.n.01_1"/>
+      <Action ID="GRASP" obj="pillar_candle.n.01_1"/>
+      <Action ID="NAVIGATE_TO" obj="table.n.02_1"/>
+      <Action ID="PLACE_ON_TOP" obj="table.n.02_1"/>
+      <!-- Place pillar candle 2 on table -->
+      <Action ID="NAVIGATE_TO" obj="pillar_candle.n.01_2"/>
+      <Action ID="GRASP" obj="pillar_candle.n.01_2"/>
+      <Action ID="NAVIGATE_TO" obj="table.n.02_1"/>
+      <Action ID="PLACE_ON_TOP" obj="table.n.02_1"/>
+      <!-- Place gift boxes next to Christmas tree -->
+      <Action ID="NAVIGATE_TO" obj="gift_box.n.01_1"/>
+      <Action ID="GRASP" obj="gift_box.n.01_1"/>
+      <Action ID="NAVIGATE_TO" obj="christmas_tree.n.05_1"/>
+      <Action ID="PLACE_NEXT_TO" obj="christmas_tree.n.05_1"/>
+      <Action ID="NAVIGATE_TO" obj="gift_box.n.01_2"/>
+      <Action ID="GRASP" obj="gift_box.n.01_2"/>
+      <Action ID="NAVIGATE_TO" obj="christmas_tree.n.05_1"/>
+      <Action ID="PLACE_NEXT_TO" obj="christmas_tree.n.05_1"/>
+      <Action ID="NAVIGATE_TO" obj="gift_box.n.01_3"/>
+      <Action ID="GRASP" obj="gift_box.n.01_3"/>
+      <Action ID="NAVIGATE_TO" obj="christmas_tree.n.05_1"/>
+      <Action ID="PLACE_NEXT_TO" obj="christmas_tree.n.05_1"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

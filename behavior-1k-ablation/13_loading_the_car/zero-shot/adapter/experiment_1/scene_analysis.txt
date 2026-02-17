@@ -1,0 +1,7 @@
+scene_analysis:
+  target: "tennis_racket, container, digital_camera"
+  destination: "car"
+  expanded_instruction: "Check the car trunk (if closed, open it) and confirm it is open; pick up the tennis_racket from the table, place it in the trunk (if grasp fails, retry up to 3 times, within a 10s timeout; if still unsuccessful, use push or flip to reposition before grasp), then pick up the container and place it in the car (if grasp fails, retry up to 3 times, within a 10s timeout; if still unsuccessful, use push or flip to reposition before grasp), next pick up the digital_camera from the living room floor and place it inside the container (if grasp fails, retry up to 3 times, within a 10s timeout; if still unsuccessful, use push or flip to reposition before grasp), and then close the car trunk."
+  scene_context: "Car in garage with trunk closed; tennis_racket on table, container on living_room_floor, digital_camera on floor near car; interior clear."
+  expected_sequence: "Check car trunk and open it if closed, then pick up the tennis_racket from the table and place it into the trunk (retry grasp up to 3 times within 10s if needed; push or flip to reposition if grasp fails); pick up the container and place it in the car (retry grasp up to 3 times within 10s if needed; push or flip to reposition if grasp fails); pick up the digital_camera and place it inside the container (retry grasp up to 3 times within 10s if needed; push or flip to reposition if grasp fails), and then close the car trunk."
+Plan:

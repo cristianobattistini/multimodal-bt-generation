@@ -1,0 +1,22 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to fridge_door -->
+      <Action ID="NAVIGATE_TO" obj="fridge_door" />
+      <!-- Check fridge_door is visible before GRASP -->
+      <Condition ID="IS_VISIBLE" obj="fridge_door" />
+      <!-- Retry GRASP fridge_door up to 2 attempts -->
+      <RetryUntilSuccessful num_attempts="2">
+        <!-- Timeout: GRASP fridge_door within 15s -->
+        <Timeout msec="15000">
+          <!-- Grasp fridge_door -->
+          <Action ID="GRASP" obj="fridge_door" />
+        </Timeout>
+      </RetryUntilSuccessful>
+      <!-- Open fridge_door -->
+      <Action ID="OPEN" obj="fridge_door" />
+      <!-- Release -->
+      <Action ID="RELEASE" />
+    </Sequence>
+  </BehaviorTree>
+</root>

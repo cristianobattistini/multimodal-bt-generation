@@ -1,0 +1,22 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Move to yellow_plate -->
+      <Action ID="MOVE_TO" obj="yellow_plate" />
+      <!-- Grip yellow_plate -->
+      <Action ID="GRIP" obj="yellow_plate" />
+      <!-- Go to dish_rack -->
+      <Action ID="GO_TO" obj="dish_rack" />
+      <!-- Insert into dish_rack -->
+      <Action ID="INSERT_INTO" obj="dish_rack" />
+      <!-- Go to white_cup -->
+      <Action ID="GO_TO" obj="white_cup" />
+      <!-- Grip white_cup -->
+      <Action ID="GRIP" obj="white_cup" />
+      <!-- Approach dish_rack -->
+      <Action ID="APPROACH" obj="dish_rack" />
+      <!-- Set in dish_rack -->
+      <Action ID="SET_IN" obj="dish_rack" />
+    </Sequence>
+  </BehaviorTree>
+</root>

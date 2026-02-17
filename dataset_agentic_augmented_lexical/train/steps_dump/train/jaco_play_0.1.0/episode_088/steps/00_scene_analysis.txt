@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "steak_meat"
+  destination: "black_bowl"
+  expanded_instruction: "Use ApproachSteakMeat subtree: approach the steak meat on the table, pick it up (retry up to 3 times, 10s timeout, if grasp fails push to reposition), and place it into the black bowl."
+  scene_context: "Steak meat on table in front of robot; black bowl on table to the left and empty; robot not holding anything."
+  expected_sequence: "ApproachSteakMeat subtree: reach to the steak meat, pick it up (retry up to 3 times, if grasp fails push to reposition), move over the black bowl, and place the steak inside (10s timeout)."

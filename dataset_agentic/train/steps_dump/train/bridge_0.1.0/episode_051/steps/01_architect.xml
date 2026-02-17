@@ -1,0 +1,14 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to pan -->
+      <Action ID="NAVIGATE_TO" obj="pan"/>
+      <!-- Grasp pan -->
+      <Action ID="GRASP" obj="pan"/>
+      <!-- Navigate to bottle (place to the right of bottle and banana) -->
+      <Action ID="NAVIGATE_TO" obj="bottle"/>
+      <!-- Place next to bottle -->
+      <Action ID="PLACE_NEXT_TO" obj="bottle"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

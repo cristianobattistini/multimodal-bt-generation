@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "red_square"
+  destination: ""
+  expanded_instruction: "Check that the red square on the right side of the table is graspable, then pick it up and hold it; if the grasp fails, retry up to 3 times."
+  scene_context: "Table with multiple objects; red square sits on the right edge; robot not holding anything; no containers to open."
+  expected_sequence: "Verify IS_GRASPABLE on the red square, approach it, attempt to grasp it (retrying the grasp up to 3 times if it fails), and lift to hold it above the table."

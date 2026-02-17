@@ -1,0 +1,10 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Go to hole -->
+      <Action ID="GO_TO" obj="hole" />
+      <!-- Set in hole -->
+      <Action ID="SET_IN" obj="hole" />
+    </Sequence>
+  </BehaviorTree>
+</root>

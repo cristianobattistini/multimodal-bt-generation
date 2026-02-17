@@ -1,0 +1,24 @@
+{
+  "success": false,
+  "bt_success": true,
+  "bddl_goal": false,
+  "ticks": 1,
+  "duration": 157.71396684646606,
+  "inference_time": 92.13043469324995,
+  "satisfied": [
+    "exists(['?table.n.02', '-', 'table.n.02'], ['nextto', '?caldron.n.01_1', '?table.n.02'])",
+    "forall(['?cabinet.n.01', '-', 'cabinet.n.01'], ['not', ['open', '?cabinet.n.01']])"
+  ],
+  "unsatisfied": [
+    "forall(['?pumpkin.n.02', '-', 'pumpkin.n.02'], ['exists', ['?cabinet.n.01', '-', 'cabinet.n.01'], ['inside', '?pumpkin.n.02', '?cabinet.n.01']])",
+    "forall(['?candle.n.01', '-', 'candle.n.01'], ['exists', ['?cabinet.n.01', '-', 'cabinet.n.01'], ['inside', '?candle.n.01', '?cabinet.n.01']])"
+  ],
+  "task": "02_putting_away_Halloween_decorations",
+  "condition": "cot",
+  "model_dir": "qwen25",
+  "vlm_model": "qwen",
+  "inference_mode": "adapter",
+  "experiment": 3,
+  "timestamp": "20260213_172942",
+  "reason": "BT structural issue + physical failure: the BT redundantly re-opens the cabinet and re-grasps already-placed objects (pumpkin_1, candle_2, candle_3) for a second placement pass. This retry removes objects from the cabinet and re-places them, disrupting previously successful placements. Combined with physics drift, pumpkins and candles were not retained inside the cabinet."
+}

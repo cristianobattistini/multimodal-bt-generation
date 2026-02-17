@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "tube"
+  destination: ""
+  expanded_instruction: "Pick up the tube from the top of the black cubby shelf"
+  scene_context: "Tube is on top surface of a black cubby shelf; shelf open; robot not holding anything; top surface clear."
+  expected_sequence: "Approach the shelf, reach to the top surface, grasp the tube, and lift it free."

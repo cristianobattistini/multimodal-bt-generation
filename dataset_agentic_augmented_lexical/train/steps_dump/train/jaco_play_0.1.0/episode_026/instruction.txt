@@ -1,0 +1,1 @@
+Pick up the gray bowl. If grasping fails, push it to reposition it and retry grasping.

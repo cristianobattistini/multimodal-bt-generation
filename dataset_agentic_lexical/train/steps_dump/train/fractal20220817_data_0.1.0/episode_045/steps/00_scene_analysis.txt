@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "redbull_can"
+  destination: "table"
+  expanded_instruction: "Pick up the redbull can and place it on the table next to the 7up can"
+  scene_context: "Table is clear; redbull can on rear table surface, 7up can on front-left of same table; no containers open."
+  expected_sequence: "Pick up the redbull can, move it to the table beside the 7up can, and set it down."

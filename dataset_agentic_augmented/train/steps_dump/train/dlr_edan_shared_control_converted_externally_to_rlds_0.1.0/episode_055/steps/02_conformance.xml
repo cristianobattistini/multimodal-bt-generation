@@ -1,0 +1,16 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to black_shelving_unit -->
+      <Action ID="NAVIGATE_TO" obj="black_shelving_unit" />
+      <Sequence>
+        <!-- Check die is visible before NAVIGATE_TO -->
+        <Condition ID="IS_VISIBLE" obj="die" />
+        <!-- Navigate to die -->
+        <Action ID="NAVIGATE_TO" obj="die" />
+      </Sequence>
+      <!-- Grasp die -->
+      <Action ID="GRASP" obj="die" />
+    </Sequence>
+  </BehaviorTree>
+</root>

@@ -1,0 +1,23 @@
+{
+  "success": true,
+  "bt_success": true,
+  "bddl_goal": true,
+  "ticks": 1,
+  "duration": 159.99576902389526,
+  "inference_time": 25.83318328857422,
+  "satisfied": [
+    "forall(['?gift_box.n.01', '-', 'gift_box.n.01'], ['or', ['nextto', '?gift_box.n.01', '?christmas_tree.n.05_1'], ['under', '?gift_box.n.01', '?christmas_tree.n.05_1'], ['touching', '?gift_box.n.01', '?christmas_tree.n.05_1']])",
+    "exists(['?table.n.02', '-', 'table.n.02'], ['forall', ['?pillar_candle.n.01', '-', 'pillar_candle.n.01'], ['ontop', '?pillar_candle.n.01', '?table.n.02']])",
+    "exists(['?table.n.02', '-', 'table.n.02'], ['forn', ['1'], ['?candy_cane.n.01', '-', 'candy_cane.n.01'], ['ontop', '?candy_cane.n.01', '?table.n.02']])",
+    "exists(['?sofa.n.01', '-', 'sofa.n.01'], ['forall', ['?wreath.n.01', '-', 'wreath.n.01'], ['ontop', '?wreath.n.01', '?sofa.n.01']])",
+    "exists(['?sofa.n.01', '-', 'sofa.n.01'], ['forn', ['2'], ['?candy_cane.n.01', '-', 'candy_cane.n.01'], ['ontop', '?candy_cane.n.01', '?sofa.n.01']])"
+  ],
+  "unsatisfied": [],
+  "task": "09_putting_up_Christmas_decorations_inside",
+  "condition": "cot",
+  "model_dir": "gpt5",
+  "vlm_model": null,
+  "inference_mode": "openai",
+  "experiment": 1,
+  "timestamp": "20260212_195552"
+}

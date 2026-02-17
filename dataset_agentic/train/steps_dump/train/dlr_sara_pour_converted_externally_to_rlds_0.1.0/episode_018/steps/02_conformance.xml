@@ -1,0 +1,10 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to mug -->
+      <Action ID="NAVIGATE_TO" obj="mug"/>
+      <!-- Pour into mug -->
+      <Action ID="POUR" obj="mug"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

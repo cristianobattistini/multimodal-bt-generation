@@ -1,0 +1,16 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to table (approach from a safe side to avoid book_stack) -->
+      <Action ID="NAVIGATE_TO" obj="table"/>
+      <!-- Navigate to blue_pen (move around the upright book_stack obstacle) -->
+      <Action ID="NAVIGATE_TO" obj="blue_pen"/>
+      <!-- Grasp blue_pen -->
+      <Action ID="GRASP" obj="blue_pen"/>
+      <!-- Navigate to table (retract to safe position) -->
+      <Action ID="NAVIGATE_TO" obj="table"/>
+      <!-- Release -->
+      <Action ID="RELEASE"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

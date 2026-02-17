@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "tiger"
+  destination: "grey_bowl"
+  expanded_instruction: "Pick the tiger out of the red bowl and place it into the grey bowl on the table; if placing inside fails, retry up to 3 times (or within 10s) and then use a push to reposition the tiger into the grey bowl."
+  scene_context: "Red bowl on table contains the tiger; grey bowl on table is empty; robot not holding anything."
+  expected_sequence: "Reach into the red bowl, grasp the tiger, move to the grey bowl, and set the tiger inside; if PLACE_INSIDE fails, retry placement (up to 3 attempts/10s) then use PUSH to reposition it into the bowl."

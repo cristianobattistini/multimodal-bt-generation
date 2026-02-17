@@ -1,0 +1,23 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Execute subtree ApproachStrawberry -->
+      <SubTree ID="ApproachStrawberry" />
+      <!-- Navigate to orange_towel -->
+      <Action ID="NAVIGATE_TO" obj="orange_towel" />
+      <!-- Place on orange_towel -->
+      <Action ID="PLACE_ON_TOP" obj="orange_towel" />
+      <!-- Release -->
+      <Action ID="RELEASE" />
+    </Sequence>
+  </BehaviorTree>
+  <!-- Subtree definition ApproachStrawberry -->
+  <BehaviorTree ID="ApproachStrawberry">
+    <Sequence>
+      <!-- Navigate to strawberry -->
+      <Action ID="NAVIGATE_TO" obj="strawberry" />
+      <!-- Grasp strawberry -->
+      <Action ID="GRASP" obj="strawberry" />
+    </Sequence>
+  </BehaviorTree>
+</root>

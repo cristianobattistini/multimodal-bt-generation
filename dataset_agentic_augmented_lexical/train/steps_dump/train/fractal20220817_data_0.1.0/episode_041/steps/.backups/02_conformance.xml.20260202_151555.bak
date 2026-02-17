@@ -1,0 +1,23 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to green_rice_chip_bag -->
+      <Action ID="NAVIGATE_TO" obj="green_rice_chip_bag" />
+      <!-- Grasp green_rice_chip_bag -->
+      <Action ID="GRASP" obj="green_rice_chip_bag" />
+      <Sequence>
+        <!-- Check rxbar_blueberry is reachable before NAVIGATE_TO -->
+        <Condition ID="IS_REACHABLE" obj="rxbar_blueberry" />
+        <!-- Timeout: NAVIGATE_TO rxbar_blueberry within 20s -->
+        <Timeout msec="20000">
+          <!-- Navigate to rxbar_blueberry -->
+          <Action ID="NAVIGATE_TO" obj="rxbar_blueberry" />
+        </Timeout>
+      </Sequence>
+      <!-- Place on table -->
+      <Action ID="PLACE_ON_TOP" obj="table" />
+      <!-- Release -->
+      <Action ID="RELEASE" />
+    </Sequence>
+  </BehaviorTree>
+</root>

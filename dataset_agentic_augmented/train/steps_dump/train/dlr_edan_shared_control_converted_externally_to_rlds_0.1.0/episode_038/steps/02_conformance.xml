@@ -1,0 +1,21 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to shelf -->
+      <Action ID="NAVIGATE_TO" obj="shelf" />
+      <!-- Navigate to tube -->
+      <Action ID="NAVIGATE_TO" obj="tube" />
+      <!-- Fallback: if GRASP tube fails, try PUSH, FLIP to reposition -->
+      <Fallback>
+        <!-- Grasp tube -->
+        <Action ID="GRASP" obj="tube" />
+        <Sequence>
+          <!-- Push tube forward toward front edge of table -->
+          <Action ID="PUSH" obj="tube" />
+          <!-- Grasp tube -->
+          <Action ID="GRASP" obj="tube" />
+        </Sequence>
+      </Fallback>
+    </Sequence>
+  </BehaviorTree>
+</root>

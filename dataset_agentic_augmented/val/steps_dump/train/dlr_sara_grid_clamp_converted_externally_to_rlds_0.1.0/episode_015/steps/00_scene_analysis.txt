@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "grid_clamp"
+  destination: "grid_board"
+  expanded_instruction: "Check that the wooden grid board is visible, then pick up the grid clamp from the table and, within a NAVIGATE_TO 10s timeout, place it into an open slot on the wooden grid board."
+  scene_context: "Grid clamp on table near robot base; wooden grid board visible with open slots; nothing currently held."
+  expected_sequence: "Verify grid_board is visible, reach to the clamp, grasp it, navigate to the grid board (within 10s timeout), and set it into an open slot."

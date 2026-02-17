@@ -1,0 +1,14 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Move to apple -->
+      <Action ID="MOVE_TO" obj="apple" />
+      <!-- Grip apple -->
+      <Action ID="GRIP" obj="apple" />
+      <!-- Navigate to pot -->
+      <Action ID="NAVIGATE_TO" obj="pot" />
+      <!-- Insert into pot -->
+      <Action ID="INSERT_INTO" obj="pot" />
+    </Sequence>
+  </BehaviorTree>
+</root>

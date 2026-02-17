@@ -1,0 +1,36 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- board_game.n.01_1 -->
+      <Action ID="NAVIGATE_TO" obj="board_game.n.01_1"/>
+      <Action ID="GRASP" obj="board_game.n.01_1"/>
+      <Action ID="NAVIGATE_TO" obj="toy_box.n.01_1"/>
+      <Action ID="PLACE_INSIDE" obj="toy_box.n.01_1"/>
+      <!-- board_game.n.01_2 -->
+      <Action ID="NAVIGATE_TO" obj="board_game.n.01_2"/>
+      <Action ID="GRASP" obj="board_game.n.01_2"/>
+      <Action ID="NAVIGATE_TO" obj="toy_box.n.01_1"/>
+      <Action ID="PLACE_INSIDE" obj="toy_box.n.01_1"/>
+      <!-- board_game.n.01_3 -->
+      <Action ID="NAVIGATE_TO" obj="board_game.n.01_3"/>
+      <Action ID="GRASP" obj="board_game.n.01_3"/>
+      <Action ID="NAVIGATE_TO" obj="toy_box.n.01_1"/>
+      <Action ID="PLACE_INSIDE" obj="toy_box.n.01_1"/>
+      <!-- jigsaw_puzzle.n.01_1 -->
+      <Action ID="NAVIGATE_TO" obj="jigsaw_puzzle.n.01_1"/>
+      <Action ID="GRASP" obj="jigsaw_puzzle.n.01_1"/>
+      <Action ID="NAVIGATE_TO" obj="toy_box.n.01_1"/>
+      <Action ID="PLACE_INSIDE" obj="toy_box.n.01_1"/>
+      <!-- jigsaw_puzzle.n.01_2 -->
+      <Action ID="NAVIGATE_TO" obj="jigsaw_puzzle.n.01_2"/>
+      <Action ID="GRASP" obj="jigsaw_puzzle.n.01_2"/>
+      <Action ID="NAVIGATE_TO" obj="toy_box.n.01_1"/>
+      <Action ID="PLACE_INSIDE" obj="toy_box.n.01_1"/>
+      <!-- tennis_ball.n.01_1 -->
+      <Action ID="NAVIGATE_TO" obj="tennis_ball.n.01_1"/>
+      <Action ID="GRASP" obj="tennis_ball.n.01_1"/>
+      <Action ID="NAVIGATE_TO" obj="toy_box.n.01_1"/>
+      <Action ID="PLACE_INSIDE" obj="toy_box.n.01_1"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

@@ -1,0 +1,30 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to butter_dairy -->
+      <Action ID="NAVIGATE_TO" obj="butter_dairy" />
+      <!-- Check butter_dairy is visible before GRASP -->
+      <Condition ID="IS_VISIBLE" obj="butter_dairy" />
+      <!-- Fallback: if GRASP butter_dairy fails, try alternative to reposition -->
+      <Fallback>
+        <!-- Retry GRASP butter_dairy up to 3 attempts -->
+        <RetryUntilSuccessful num_attempts="3">
+          <!-- Grasp butter_dairy -->
+          <Action ID="GRASP" obj="butter_dairy" />
+        </RetryUntilSuccessful>
+        <Sequence>
+          <!-- Push butter_dairy forward toward front edge of table -->
+          <Action ID="PUSH" obj="butter_dairy" />
+          <!-- Grasp butter_dairy -->
+          <Action ID="GRASP" obj="butter_dairy" />
+        </Sequence>
+      </Fallback>
+      <!-- Navigate to black_bowl -->
+      <Action ID="NAVIGATE_TO" obj="black_bowl" />
+      <!-- Place inside black_bowl -->
+      <Action ID="PLACE_INSIDE" obj="black_bowl" />
+      <!-- Release -->
+      <Action ID="RELEASE" />
+    </Sequence>
+  </BehaviorTree>
+</root>

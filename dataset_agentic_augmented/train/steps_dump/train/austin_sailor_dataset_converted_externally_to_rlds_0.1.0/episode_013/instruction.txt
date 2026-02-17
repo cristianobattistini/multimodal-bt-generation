@@ -1,0 +1,1 @@
+Place the bread, butter, and milk from the table onto the serving area. Check precondition, use a 10 second timeout, and retry grasping up to 2 times if it fails.

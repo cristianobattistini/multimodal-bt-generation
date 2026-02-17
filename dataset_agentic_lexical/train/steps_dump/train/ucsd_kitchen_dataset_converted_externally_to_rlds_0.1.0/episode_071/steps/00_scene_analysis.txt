@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "carbinet_door"
+  destination: ""
+  expanded_instruction: "Open the carbinet door on the upper cabinet"
+  scene_context: "Upper cabinet door is closed and mounted above the counter; nothing held and path is clear."
+  expected_sequence: "Move the arm to the carbinet door, grasp the handle, and pull the door open."

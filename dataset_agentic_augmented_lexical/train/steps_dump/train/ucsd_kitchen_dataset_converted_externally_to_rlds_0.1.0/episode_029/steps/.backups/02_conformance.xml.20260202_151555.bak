@@ -1,0 +1,20 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to white_box -->
+      <Action ID="NAVIGATE_TO" obj="white_box" />
+      <!-- Grasp white_box -->
+      <Action ID="GRASP" obj="white_box" />
+      <Sequence>
+        <!-- Check sink is reachable before NAVIGATE_TO -->
+        <Condition ID="IS_REACHABLE" obj="sink" />
+        <!-- Navigate to sink -->
+        <Action ID="NAVIGATE_TO" obj="sink" />
+      </Sequence>
+      <!-- Place inside sink -->
+      <Action ID="PLACE_INSIDE" obj="sink" />
+      <!-- Release -->
+      <Action ID="RELEASE" />
+    </Sequence>
+  </BehaviorTree>
+</root>

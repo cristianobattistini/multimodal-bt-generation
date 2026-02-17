@@ -1,0 +1,16 @@
+scene_analysis:
+  target: [beefsteak_tomato, carton_of_milk]
+  destination: "electric_refrigerator"
+  expanded_instruction: Bring the beefsteak_tomato and carton_of_milk into the red car, then place them next to the refrigerator.
+scene_context:
+  destination: "sack" is on the floor next to the red car, not held.
+  refrigerator: is open and visible on the right.
+  groceries: are inside the red car, not held.
+  car: is open and visible on the right.
+  sack: is on the floor next to the red car.
+expected_sequence:
+  Navigate to beefsteak_tomato and place it inside the red car.
+  Navigate to carton_of_milk and place it next to the red car.
+  Open the red car and the refrigerator.
+  Open the red car and the sack.
+  Close the red car and the refrigerator.

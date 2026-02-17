@@ -1,0 +1,1 @@
+place the milk dairy in the white plate. If placing inside fails, push inside the plate to clear obstacles and retry placing inside.

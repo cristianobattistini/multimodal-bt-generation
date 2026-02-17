@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "orange_can"
+  destination: ""
+  expanded_instruction: "Knock the orange can over so it tips and rests on its side on the table. Use the ApproachOrangeCan subtree to group approach actions; retry the approach up to 3 times with a 10s timeout if needed."
+  scene_context: "Orange can upright near rear-left edge of table, not held; table surface mostly clear; no containers open."
+  expected_sequence: "Bring the arm to the can and push or strike it so it tips and falls onto its side on the table. Use the ApproachOrangeCan subtree to approach the can; if approach or grasp fails, retry up to 3 times or push to reposition within a 10s timeout."

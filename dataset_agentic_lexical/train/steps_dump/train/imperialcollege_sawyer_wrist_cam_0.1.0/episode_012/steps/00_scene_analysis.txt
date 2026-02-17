@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "kettle"
+  destination: ""
+  expanded_instruction: "Pick up the white kettle hanging on the blue wall by its handle"
+  scene_context: "Kettle is hanging on a wall hook, handle accessible, not held, wall hooks visible."
+  expected_sequence: "Move to the kettle, grasp the handle, and lift it off the hook."

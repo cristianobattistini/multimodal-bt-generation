@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "blue_topped_bottle"
+  destination: "mug"
+  expanded_instruction: "Tilt the blue-topped bottle held by the robot and pour its contents into the white mug on the table."
+  scene_context: "Bottle is held by the robot arm upright above the table; white mug sits on the table within reach; table is clear."
+  expected_sequence: "Move the bottle over the mug, tilt to pour into the mug, then return the bottle upright."

@@ -1,0 +1,12 @@
+{
+  "decorator_type": "condition",
+  "mixed_subtype": null,
+  "target_action_id": "GRASP",
+  "target_obj": "yellow_object",
+  "parameters": {
+    "condition_id": "IS_REACHABLE",
+    "condition_obj": "yellow_object",
+    "allowed_conditions": "IS_GRASPABLE, IS_REACHABLE, IS_VISIBLE"
+  },
+  "prompt_name": "condition"
+}

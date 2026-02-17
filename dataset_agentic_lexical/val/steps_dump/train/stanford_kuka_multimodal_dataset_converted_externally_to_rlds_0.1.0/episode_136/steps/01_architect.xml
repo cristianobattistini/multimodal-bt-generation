@@ -1,0 +1,8 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Place peg into hole (align and insert until seated) -->
+      <Action ID="PLACE_INSIDE" obj="hole"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

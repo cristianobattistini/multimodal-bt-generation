@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "peg"
+  destination: "hole"
+  expanded_instruction: "Grasp the peg held by the robot, check that the target hole is empty (check IS_EMPTY) and then insert the peg into the hole on the perforated board; if the hole is not empty, retry up to 3 times or clear obstruction before placing."
+  scene_context: "Peg is held by the robot above an open hole on a perforated table; table clear around hole."
+  expected_sequence: "Align the peg with the hole, confirm IS_EMPTY on the hole, lower it straight down, and insert until seated; if the hole is occupied, clear or retry (within a 10s timeout)."

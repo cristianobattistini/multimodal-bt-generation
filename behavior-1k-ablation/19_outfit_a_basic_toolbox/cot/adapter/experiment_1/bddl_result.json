@@ -1,0 +1,22 @@
+{
+  "success": true,
+  "bt_success": true,
+  "bddl_goal": true,
+  "ticks": 1,
+  "duration": 141.11256790161133,
+  "inference_time": 85.59076738357544,
+  "satisfied": [
+    "inside(?drill.n.01_1, ?toolbox.n.01_1)",
+    "inside(?pliers.n.01_1, ?toolbox.n.01_1)",
+    "inside(?flashlight.n.01_1, ?toolbox.n.01_1)",
+    "inside(?allen_wrench.n.01_1, ?toolbox.n.01_1)",
+    "inside(?screwdriver.n.01_1, ?toolbox.n.01_1)",
+    "ontop(?toolbox.n.01_1, ?tabletop.n.01_1)",
+    "not(['open', '?toolbox.n.01_1'])"
+  ],
+  "unsatisfied": [],
+  "task": "19_outfit_a_basic_toolbox",
+  "model": "adapter",
+  "experiment": 3,
+  "timestamp": "20260211_222342"
+}

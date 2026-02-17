@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "black_bowl"
+  destination: ""
+  expanded_instruction: "Use the ApproachBlueTray subtree to approach the blue tray on the table and pick up the black bowl; retry approach up to 3 times with a 10s timeout if needed."
+  scene_context: "Black bowl sits on a blue tray on the table, bowl not held, tray and table reachable and unobstructed."
+  expected_sequence: "Use the ApproachBlueTray subtree to move to the tray, grasp the black bowl, and lift it clear of the tray; if grasp fails, push to reposition and retry up to 2 more times."

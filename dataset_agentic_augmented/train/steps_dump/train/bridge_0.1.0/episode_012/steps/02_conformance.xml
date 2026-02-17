@@ -1,0 +1,18 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to bell_pepper -->
+      <Action ID="NAVIGATE_TO" obj="bell_pepper" />
+      <!-- Grasp bell_pepper -->
+      <Action ID="GRASP" obj="bell_pepper" />
+      <Sequence>
+        <!-- Check table is reachable before NAVIGATE_TO -->
+        <Condition ID="IS_REACHABLE" obj="table" />
+        <!-- Navigate to metal -->
+        <Action ID="NAVIGATE_TO" obj="metal" />
+      </Sequence>
+      <!-- Place next to metal -->
+      <Action ID="PLACE_NEXT_TO" obj="metal" />
+    </Sequence>
+  </BehaviorTree>
+</root>

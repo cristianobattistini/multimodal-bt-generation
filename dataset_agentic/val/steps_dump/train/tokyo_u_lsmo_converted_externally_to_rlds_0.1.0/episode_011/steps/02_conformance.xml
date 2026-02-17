@@ -1,0 +1,12 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to table to reposition around obstacle -->
+      <Action ID="NAVIGATE_TO" obj="table"/>
+      <!-- Navigate to brown_holder approaching from the unobstructed side to avoid black_object -->
+      <Action ID="NAVIGATE_TO" obj="brown_holder"/>
+      <!-- Grasp scissors -->
+      <Action ID="GRASP" obj="scissors"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

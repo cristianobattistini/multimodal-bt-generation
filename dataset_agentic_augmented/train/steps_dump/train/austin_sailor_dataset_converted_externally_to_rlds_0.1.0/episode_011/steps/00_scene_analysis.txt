@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "["bread", "butter", "milk"]"
+  destination: "serving_area"
+  expanded_instruction: "Pick up the bread, the yellow butter stick, and the small blue milk carton from the table and place them on the serving area (placemat), retrying a failed grasp up to 3 times."
+  scene_context: "Bread on a plate on the placemat, butter stick and milk carton on the table; milk closed and nothing is held; serving_area reachable."
+  expected_sequence: "Pick up the milk, butter, and bread from the table and place each item onto the serving_area near the plate; if a grasp fails, retry up to 3 times."

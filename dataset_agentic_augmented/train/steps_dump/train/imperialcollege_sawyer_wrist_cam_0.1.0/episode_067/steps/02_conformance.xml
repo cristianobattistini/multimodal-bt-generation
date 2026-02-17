@@ -1,0 +1,19 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to bottle -->
+      <Action ID="NAVIGATE_TO" obj="bottle" />
+      <!-- Fallback: if GRASP bottle fails, try PUSH, FLIP to reposition -->
+      <Fallback>
+        <!-- Grasp bottle -->
+        <Action ID="GRASP" obj="bottle" />
+        <Sequence>
+          <!-- Push bottle forward toward front edge of table -->
+          <Action ID="PUSH" obj="bottle" />
+          <!-- Grasp bottle -->
+          <Action ID="GRASP" obj="bottle" />
+        </Sequence>
+      </Fallback>
+    </Sequence>
+  </BehaviorTree>
+</root>

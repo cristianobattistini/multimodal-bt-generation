@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "mug"
+  destination: ""
+  expanded_instruction: "Pick up the white mug resting on the blue cloth surface by its handle."
+  scene_context: "White mug on blue cloth, handle oriented toward upper-right; mug not held and surface clear."
+  expected_sequence: "Move to the mug, grasp the handle, and lift it up vertically."

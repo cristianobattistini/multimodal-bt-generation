@@ -1,0 +1,12 @@
+{
+  "decorator_type": "condition",
+  "mixed_subtype": null,
+  "target_action_id": "PLACE_INSIDE",
+  "target_obj": "frying_pan",
+  "parameters": {
+    "condition_id": "IS_HOLDING",
+    "condition_obj": "frying_pan",
+    "allowed_conditions": "IS_HOLDING, IS_OPEN, IS_EMPTY"
+  },
+  "prompt_name": "condition"
+}

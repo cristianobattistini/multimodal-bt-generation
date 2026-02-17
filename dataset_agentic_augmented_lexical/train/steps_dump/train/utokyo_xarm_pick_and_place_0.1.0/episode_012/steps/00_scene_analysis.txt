@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "white_plate"
+  destination: "red_plate"
+  expanded_instruction: "Pick up the white plate from the table (if a grasp fails, retry up to 2 times) and place it on top of the red plate on the same table."
+  scene_context: "White plate on table; red plate on table left of white; neither plate is held; table surface reachable and unobstructed."
+  expected_sequence: "Reach to the white plate, lift it (if grasp fails, retry up to 2 times), move over to the red plate, and set the white plate down on top of the red plate."

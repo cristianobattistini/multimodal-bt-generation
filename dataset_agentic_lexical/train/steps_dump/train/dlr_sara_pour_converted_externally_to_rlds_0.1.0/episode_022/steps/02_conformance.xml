@@ -1,0 +1,12 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to mug -->
+      <Action ID="NAVIGATE_TO" obj="mug" />
+      <!-- Empty into mug -->
+      <Action ID="EMPTY_INTO" obj="mug" />
+      <!-- Flip brown_pitcher upright -->
+      <Action ID="FLIP" obj="brown_pitcher" />
+    </Sequence>
+  </BehaviorTree>
+</root>

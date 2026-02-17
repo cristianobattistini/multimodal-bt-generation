@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "white_box"
+  destination: "table"
+  expanded_instruction: "Pick up the white box and place it down on the table"
+  scene_context: "White box on near-right edge of table, other cans and bottle present, robot not holding it, table clear enough to place."
+  expected_sequence: "Approach and grasp the white box, move above the table surface, and set it down."

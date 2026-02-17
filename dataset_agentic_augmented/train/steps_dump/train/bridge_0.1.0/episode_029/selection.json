@@ -1,0 +1,29 @@
+{
+  "decorator_type": "mixed",
+  "mixed_subtype": "subtree_retry",
+  "target_action_id": "GRASP",
+  "target_obj": "mushroom",
+  "parameters": {
+    "augmentations": [
+      {
+        "type": "subtree",
+        "params": {
+          "subtree_name": "ApproachMushroom",
+          "action_indices": [
+            0,
+            1
+          ]
+        }
+      },
+      {
+        "type": "retry",
+        "action_id": "GRASP",
+        "obj": "mushroom",
+        "params": {
+          "num_attempts": 3
+        }
+      }
+    ]
+  },
+  "prompt_name": "mixed/subtree_retry"
+}

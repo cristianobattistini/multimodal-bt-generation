@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "orange"
+  destination: ""
+  expanded_instruction: "Pick up the orange from the small white plate/stool next to the black shelf"
+  scene_context: "Orange resting on a small white plate/stool beside a black shelf; no containers; orange not held; path clear."
+  expected_sequence: "Approach the orange, grasp it from the plate/stool, and lift it up."

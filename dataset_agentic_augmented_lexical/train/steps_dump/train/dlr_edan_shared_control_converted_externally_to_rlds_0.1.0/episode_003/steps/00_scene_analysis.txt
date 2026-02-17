@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "green_apple"
+  destination: ""
+  expanded_instruction: "Check that the small round side table is visible, then navigate to the small round side table next to the black cabinet (navigate within a 10s timeout) and pick up the green apple from it."
+  scene_context: "No containers open; green apple resting on small round side table beside the black cabinet; not held."
+  expected_sequence: "Verify IS_VISIBLE for the small round side table, NAVIGATE_TO the table within a 10s timeout, approach the side table, grasp the green apple securely, and lift it clear of the table."

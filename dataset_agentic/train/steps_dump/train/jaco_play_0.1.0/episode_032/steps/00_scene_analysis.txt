@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "black_bowl"
+  destination: "gray_plate"
+  expanded_instruction: "Pick up the black bowl from the table and place it into the gray plate"
+  scene_context: "Black bowl on table left of the gray plate; gray plate is empty and reachable; no objects held."
+  expected_sequence: "Lift the black bowl, move it over the gray plate, and set it inside."

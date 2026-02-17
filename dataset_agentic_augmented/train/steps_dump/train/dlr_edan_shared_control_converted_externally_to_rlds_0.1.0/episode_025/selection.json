@@ -1,0 +1,28 @@
+{
+  "decorator_type": "mixed",
+  "mixed_subtype": "condition_timeout",
+  "target_action_id": "NAVIGATE_TO",
+  "target_obj": "orange",
+  "parameters": {
+    "augmentations": [
+      {
+        "type": "condition",
+        "action_id": "NAVIGATE_TO",
+        "obj": "orange",
+        "params": {
+          "condition_id": "IS_REACHABLE",
+          "condition_obj": "orange"
+        }
+      },
+      {
+        "type": "timeout",
+        "action_id": "NAVIGATE_TO",
+        "obj": "orange",
+        "params": {
+          "msec": 10000
+        }
+      }
+    ]
+  },
+  "prompt_name": "mixed/condition_timeout"
+}

@@ -1,0 +1,26 @@
+ scene_analysis:
+  target: "plywood_1"
+  destination: "corridor_floor"
+  expanded_instruction: "Bring the three plywood sheets from the garden into the corridor. Pick up plywood_1 from the garden floor and place it on the corridor floor."
+  scene_context: "Plywood_1 is on the garden floor, not held; plywood_2 and plywood_3 are on the corridor floor; no object is held."
+  expected_sequence: "Reach to plywood_1, grasp it, lift and move to the corridor_floor, then place it down on the floor."
+Plan:
+<root main_tree_to_execute="MainTree">
+  <Sequence>
+    <Sequence>
+      <Action>NAVIGATE_TO plywood_1</Action>
+      <Action>GRASP plywood_1</Action>
+      <Action>PLACE_ON_TOP plywood_1</Action>
+    </Sequence>
+    <Sequence>
+      <Action>NAVIGATE_TO plywood_2</Action>
+      <Action>GRASP plywood_2</Action>
+      <Action>PLACE_ON_TOP plywood_2</Action>
+    </Sequence>
+    <Sequence>
+      <Action>NAVIGATE_TO plywood_3</Action>
+      <Action>GRASP plywood_3</Action>
+      <Action>PLACE_ON_TOP plywood_3</Action>
+    </Sequence>
+  </Sequence>
+</root>

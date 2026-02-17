@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "bowl"
+  destination: "kitchen_cabinet"
+  expanded_instruction: "Pick up the bowl from the countertop and place it inside the kitchen cabinet, ensuring navigation to the cabinet completes within a 15s timeout."
+  scene_context: "Bowl on countertop not held; kitchen cabinet below counter is open and reachable; countertop clear near bowl."
+  expected_sequence: "Approach the bowl, grasp and lift it, move to the open cabinet (navigation must complete within a 15s timeout), and place the bowl inside."

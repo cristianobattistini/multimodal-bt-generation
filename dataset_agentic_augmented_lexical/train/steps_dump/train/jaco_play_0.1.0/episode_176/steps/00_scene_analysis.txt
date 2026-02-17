@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "square_bread"
+  destination: ""
+  expanded_instruction: "Pick up the square bread (white square slice) from the table next to the red ball; navigate to it within a 10s timeout."
+  scene_context: "Square bread on table next to a red ball and yellow loaf; robot arm is not holding anything; table clear."
+  expected_sequence: "Navigate to the square bread within a 10s timeout, move the arm to it, grasp it securely, and lift it from the table."

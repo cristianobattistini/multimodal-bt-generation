@@ -1,0 +1,1 @@
+place the apple fruit in the gray plate. Retry placing up to 4 times if it fails.

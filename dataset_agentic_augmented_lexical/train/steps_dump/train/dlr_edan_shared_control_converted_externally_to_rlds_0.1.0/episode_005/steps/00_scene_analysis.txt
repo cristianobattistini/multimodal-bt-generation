@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "tube"
+  destination: ""
+  expanded_instruction: "Check that the tube is visible before approaching the shelf; if not, scan or rotate and retry up to 3 times within a 10s timeout. Then pick up the tube from the top surface of the black shelving unit."
+  scene_context: "Tube resting on top of black shelving unit; shelving compartments open; tube not held; area unobstructed."
+  expected_sequence: "Verify IS_VISIBLE for the tube (if not visible, scan/rotate and retry up to 3 times within 10s), navigate to the shelving unit, reach to the top surface, grasp the tube, and lift it."

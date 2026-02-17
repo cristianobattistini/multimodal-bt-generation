@@ -1,0 +1,23 @@
+{
+  "success": false,
+  "bt_success": true,
+  "bddl_goal": false,
+  "ticks": 1,
+  "duration": 198.6932966709137,
+  "inference_time": 64.22188115119934,
+  "satisfied": [
+    "exists(['?electric_refrigerator.n.01', '-', 'electric_refrigerator.n.01'], ['and', ['inside', '?beefsteak_tomato.n.01_1', '?electric_refrigerator.n.01'], ['inside', '?carton__of__milk.n.01_1', '?electric_refrigerator.n.01']])",
+    "not(['open', 'car.n.01_1'])"
+  ],
+  "unsatisfied": [
+    "not(['open', 'electric_refrigerator.n.01_1'])"
+  ],
+  "task": "14_carrying_in_groceries",
+  "condition": "cot",
+  "model_dir": "adapter",
+  "vlm_model": "gemma",
+  "inference_mode": "adapter",
+  "experiment": 3,
+  "timestamp": "20260216_145422",
+  "reason": "Second PLACE_INSIDE (milk) after CLOSE without re-OPEN fridge. No final CLOSE after second placement — fridge left open at end."
+}

@@ -1,0 +1,14 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Move to green_box -->
+      <Action ID="MOVE_TO" obj="green_box" />
+      <!-- Grip green_box -->
+      <Action ID="GRIP" obj="green_box" />
+      <!-- Navigate to sink -->
+      <Action ID="NAVIGATE_TO" obj="sink" />
+      <!-- Place green_box inside sink -->
+      <Action ID="PLACE_INSIDE" obj="green_box" container="sink" />
+    </Sequence>
+  </BehaviorTree>
+</root>

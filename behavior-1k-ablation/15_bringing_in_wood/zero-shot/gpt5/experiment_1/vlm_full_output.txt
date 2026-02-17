@@ -1,0 +1,28 @@
+scene_analysis:
+  target: "plywood_sheets (plywood_1, plywood_2, plywood_3)"
+  destination: "corridor_floor"
+  expanded_instruction: "Go to the garden floor where three plywood sheets lie, pick up each sheet one by one, navigate to the corridor, and place each sheet onto the corridor floor so all three end up there."
+  scene_context: "The view shows an outdoor garden path with plants; plywood sheets are on the garden floor. The corridor itself is not in view but the corridor_floor location is available to navigate to."
+  expected_sequence: "For each plywood sheet: navigate to the sheet, grasp it, navigate to the corridor_floor, and place it on top of the corridor_floor. Repeat for plywood_1, then plywood_2, then plywood_3."
+
+Plan:
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence name="bring_all_plywood_to_corridor">
+      <NAVIGATE_TO obj="plywood_1"/>
+      <GRASP obj="plywood_1"/>
+      <NAVIGATE_TO obj="corridor_floor"/>
+      <PLACE_ON_TOP obj="corridor_floor"/>
+
+      <NAVIGATE_TO obj="plywood_2"/>
+      <GRASP obj="plywood_2"/>
+      <NAVIGATE_TO obj="corridor_floor"/>
+      <PLACE_ON_TOP obj="corridor_floor"/>
+
+      <NAVIGATE_TO obj="plywood_3"/>
+      <GRASP obj="plywood_3"/>
+      <NAVIGATE_TO obj="corridor_floor"/>
+      <PLACE_ON_TOP obj="corridor_floor"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

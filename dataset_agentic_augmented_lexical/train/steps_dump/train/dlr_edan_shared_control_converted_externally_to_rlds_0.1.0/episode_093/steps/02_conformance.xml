@@ -1,0 +1,20 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to side_table -->
+      <Action ID="NAVIGATE_TO" obj="side_table" />
+      <!-- Approach yellow_ball -->
+      <Action ID="APPROACH" obj="yellow_ball" />
+      <!-- Check yellow_ball is graspable before GRASP -->
+      <Condition ID="IS_GRASPABLE" obj="yellow_ball" />
+      <!-- Retry GRASP yellow_ball up to 2 attempts -->
+      <RetryUntilSuccessful num_attempts="2">
+        <!-- Timeout: GRASP yellow_ball within 15s -->
+        <Timeout msec="15000">
+          <!-- Grasp yellow_ball -->
+          <Action ID="GRASP" obj="yellow_ball" />
+        </Timeout>
+      </RetryUntilSuccessful>
+    </Sequence>
+  </BehaviorTree>
+</root>

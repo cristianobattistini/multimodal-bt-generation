@@ -1,0 +1,1 @@
+Open lid. Retry opening up to 4 times if it fails.

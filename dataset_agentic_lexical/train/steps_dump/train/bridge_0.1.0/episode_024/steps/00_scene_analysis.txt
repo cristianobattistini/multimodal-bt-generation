@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "potato"
+  destination: "plate"
+  expanded_instruction: "Pick up the potato from the wooden counter and place it on the pink plate"
+  scene_context: "Potato on wooden counter/cutting board; pink plate on left; drawer open; gripper not holding anything."
+  expected_sequence: "Reach to the potato, grasp it, move to the plate, and set the potato onto the plate."

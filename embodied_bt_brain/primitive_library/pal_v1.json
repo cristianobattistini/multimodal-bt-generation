@@ -1,0 +1,96 @@
+{
+  "name": "pal_v1_symbolic_15",
+  "version": "1.5",
+  "description": "PAL v1 Extended with Ghost Primitives and PLACE_NEXT_TO for nextto predicate",
+  "primitives": {
+    "GRASP": {
+      "params": {"obj": "string"},
+      "required": ["obj"]
+    },
+    "PLACE_ON_TOP": {
+      "params": {"obj": "string"},
+      "required": ["obj"]
+    },
+    "PLACE_INSIDE": {
+      "params": {"obj": "string"},
+      "required": ["obj"]
+    },
+    "PLACE_NEXT_TO": {
+      "params": {"obj": "string"},
+      "required": ["obj"],
+      "description": "Place held object next to target object (satisfies nextto predicate)"
+    },
+    "OPEN": {
+      "params": {"obj": "string"},
+      "required": ["obj"]
+    },
+    "CLOSE": {
+      "params": {"obj": "string"},
+      "required": ["obj"]
+    },
+    "NAVIGATE_TO": {
+      "params": {"obj": "string"},
+      "required": ["obj"]
+    },
+    "RELEASE": {
+      "params": {},
+      "required": []
+    },
+    "TOGGLE_ON": {
+      "params": {"obj": "string"},
+      "required": ["obj"]
+    },
+    "TOGGLE_OFF": {
+      "params": {"obj": "string"},
+      "required": ["obj"]
+    },
+    "SOAK_UNDER": {
+      "params": {"obj": "string"},
+      "required": ["obj"]
+    },
+    "SOAK_INSIDE": {
+      "params": {"obj": "string"},
+      "required": ["obj"]
+    },
+    "WIPE": {
+      "params": {"obj": "string"},
+      "required": ["obj"]
+    },
+    "CUT": {
+      "params": {"obj": "string"},
+      "required": ["obj"]
+    },
+    "PLACE_NEAR_HEATING_ELEMENT": {
+      "params": {"obj": "string"},
+      "required": ["obj"]
+    },
+    "PUSH": {
+      "params": {"obj": "string"},
+      "required": ["obj"]
+    },
+    "POUR": {
+      "params": {"obj": "string"},
+      "required": ["obj"]
+    },
+    "FOLD": {
+      "params": {"obj": "string"},
+      "required": ["obj"]
+    },
+    "UNFOLD": {
+      "params": {"obj": "string"},
+      "required": ["obj"]
+    },
+    "SCREW": {
+      "params": {"obj": "string"},
+      "required": ["obj"]
+    },
+    "HANG": {
+      "params": {"obj": "string"},
+      "required": ["obj"]
+    },
+    "FLIP": {
+      "params": {"obj": "string"},
+      "required": ["obj"]
+    }
+  }
+}

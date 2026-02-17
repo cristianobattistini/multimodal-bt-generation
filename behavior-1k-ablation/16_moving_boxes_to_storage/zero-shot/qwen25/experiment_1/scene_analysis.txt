@@ -1,0 +1,7 @@
+scene_analysis:
+  target: "["storage_container_1", "storage_container_2"]"
+  destination: "garage_floor"
+  expanded_instruction: "Open the wooden door, then pick up storage_container_1 and place it on the garage floor, then lift up storage_container_2 and place it on top of storage_container_1."
+  scene_context: "Door is closed; storage containers (1 and 2) are on the floor; garage_floor area is clear; containers not held."
+  expected_sequence: "Open the door, then reach and open storage_container_1 and set it down on the garage floor; reach and grasp storage_container_2, lift it, move over storage_container_1, and place storage_container_2 upright on top of storage_container_1."
+Plan:

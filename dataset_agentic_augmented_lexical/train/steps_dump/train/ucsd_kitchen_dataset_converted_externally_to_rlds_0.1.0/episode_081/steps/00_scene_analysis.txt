@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "faucet_handle"
+  destination: ""
+  expanded_instruction: "Reach the faucet handle at the sink and rotate it to turn on the water; if the TOGGLE_ON action fails, retry up to 3 times."
+  scene_context: "Sink with faucet present; handle is in off/closed position and reachable; no object is held."
+  expected_sequence: "Approach the sink, grasp the faucet handle, and rotate it to open the water flow; if TOGGLE_ON fails, retry the toggle up to 3 times."

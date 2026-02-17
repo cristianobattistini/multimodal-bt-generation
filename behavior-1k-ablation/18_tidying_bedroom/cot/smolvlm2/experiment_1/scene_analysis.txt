@@ -1,0 +1,7 @@
+scene_analysis:
+  target: "sandal_1"
+  destination: "bed"
+  expanded_instruction: "Move the sandal from the bed onto the nightstand and place the two sandals side by side on the bed."
+  scene_context: "Sandal on the bed, two sandals on the floor next to the bed; no object is held."
+  expected_sequence: "Move the sandal from the bed to the nightstand, then pick up the sandal and place it on the nightstand, then pick up the second sandal and place it on the bed."
+Plan:

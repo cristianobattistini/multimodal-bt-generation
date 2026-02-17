@@ -1,0 +1,1 @@
+put the ranch bottle into the pot. Check precondition and retry placing inside up to 3 times if it fails.

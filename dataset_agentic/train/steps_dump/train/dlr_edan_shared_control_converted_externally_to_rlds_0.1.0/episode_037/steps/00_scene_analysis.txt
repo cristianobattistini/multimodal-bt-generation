@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "die"
+  destination: ""
+  expanded_instruction: "Pick up the white die (small cube) from the top surface of the black shelving unit."
+  scene_context: "Black shelf upright; white die resting on top near front edge; shelf compartments open and reachable; nothing held."
+  expected_sequence: "Approach the shelf, reach to the top front edge, grasp the die, and lift it clear of the surface."

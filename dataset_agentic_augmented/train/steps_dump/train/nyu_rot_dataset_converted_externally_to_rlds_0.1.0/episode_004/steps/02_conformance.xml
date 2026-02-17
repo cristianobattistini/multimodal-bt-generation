@@ -1,0 +1,18 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to hook -->
+      <Action ID="NAVIGATE_TO" obj="hook" />
+      <!-- Retry HANG hook up to 2 attempts -->
+      <RetryUntilSuccessful num_attempts="2">
+        <!-- Timeout: HANG hook within 20s -->
+        <Timeout msec="20000">
+          <!-- Hang bag on hook -->
+          <Action ID="HANG" obj="hook" />
+        </Timeout>
+      </RetryUntilSuccessful>
+      <!-- Release -->
+      <Action ID="RELEASE" />
+    </Sequence>
+  </BehaviorTree>
+</root>

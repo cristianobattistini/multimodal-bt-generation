@@ -1,0 +1,14 @@
+{
+  "decorator_type": "fallback",
+  "mixed_subtype": null,
+  "target_action_id": "PLACE_INSIDE",
+  "target_obj": "dish_rack",
+  "parameters": {
+    "valid_fallbacks": [
+      "PUSH"
+    ],
+    "valid_fallbacks_str": "PUSH",
+    "fallback_hints": "PUSH clears obstacles from inside the container"
+  },
+  "prompt_name": "fallback"
+}

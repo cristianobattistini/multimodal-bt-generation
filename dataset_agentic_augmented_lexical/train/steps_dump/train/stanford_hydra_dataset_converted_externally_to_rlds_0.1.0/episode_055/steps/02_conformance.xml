@@ -1,0 +1,14 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to dish_rack -->
+      <Action ID="NAVIGATE_TO" obj="dish_rack" />
+      <!-- Retry PLACE_INSIDE dish_rack up to 3 attempts -->
+      <RetryUntilSuccessful num_attempts="3">
+        <!-- Place inside dish_rack -->
+        <Action ID="PLACE_INSIDE" obj="dish_rack" />
+      </RetryUntilSuccessful>
+      
+    </Sequence>
+  </BehaviorTree>
+</root>

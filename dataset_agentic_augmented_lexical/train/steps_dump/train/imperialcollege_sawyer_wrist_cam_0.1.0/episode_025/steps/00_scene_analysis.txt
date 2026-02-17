@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "cap"
+  destination: "bottle"
+  expanded_instruction: "Using an ApproachCap subtree, pick up the bottle cap and insert it into the bottle's open mouth on the blue surface; if grasp fails, retry up to 3 times (10s timeout) and push to reposition before retrying."
+  scene_context: "Bottle upright with open mouth on blue surface; cap is nearby on the surface and not held."
+  expected_sequence: "Group steps in the ApproachCap subtree: reach for the cap, bring it to the bottle opening, align and insert it until seated; on grasp failure retry up to 3 times, and if alignment fails adjust orientation/push and continue."

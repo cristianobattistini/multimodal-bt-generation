@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "mushroom"
+  destination: "blue_cloth"
+  expanded_instruction: "Pick up the mushroom from the table and place it on top of the blue cloth."
+  scene_context: "Mushroom on wooden table near stove; blue cloth folded on table and clear; gripper not holding anything; no containers open."
+  expected_sequence: "Move to the mushroom, grasp and lift it, carry it to the blue cloth, and set it down on top."

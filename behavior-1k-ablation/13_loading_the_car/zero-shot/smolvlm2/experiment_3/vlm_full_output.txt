@@ -1,0 +1,151 @@
+ scene_analysis:
+  target: car
+  destination: garage
+  expanded_instruction: "Open the car trunk if it is closed, then place the tennis_racket and container into the car, and close the car when the car is closed."
+  scene_context: "Car is in the garage with its trunk closed; tennis_racket and digital_camera on the table in the living room; container on the living room floor."
+  expected_sequence: "Open the car trunk if it is closed; then pick up the tennis_racket and place it into the car; then pick up the container and place it into the car; close the car when the car is closed."
+Plan:
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to car -->
+      <Action ID="NAVIGATE_TO" obj="car" />
+      <!-- Grasp car -->
+      <Action ID="GRASP" obj="car" />
+      <!-- Open car -->
+      <Action ID="OPEN" obj="car" />
+      <!-- Place inside car -->
+      <Action ID="PLACE_INSIDE" obj="car" />
+      <!-- Navigate to tennis_racket -->
+      <Action ID="NAVIGATE_TO" obj="tennis_racket" />
+      <!-- Grasp tennis_racket -->
+      <Action ID="GRASP" obj="tennis_racket" />
+      <!-- Place tennis_racket into car -->
+      <Action ID="PLACE_INSIDE" obj="tennis_racket" />
+      <!-- Navigate to container -->
+      <Action ID="NAVIGATE_TO" obj="container" />
+      <!-- Grasp container -->
+      <Action ID="GRASP" obj="container" />
+      <!-- Place container into car -->
+      <Action ID="PLACE_INSIDE" obj="container" />
+      <!-- Navigate to digital_camera -->
+      <Action ID="NAVIGATE_TO" obj="digital_camera" />
+      <!-- Grasp digital_camera -->
+      <Action ID="GRASP" obj="digital_camera" />
+      <!-- Place digital_camera into car -->
+      <Action ID="PLACE_INSIDE" obj="digital_camera" />
+      <!-- Open car -->
+      <Action ID="OPEN" obj="car" />
+      <!-- Place tennis_racket into car -->
+      <Action ID="PLACE_INSIDE" obj="tennis_racket" />
+      <!-- Navigate to garage -->
+      <Action ID="NAVIGATE_TO" obj="garage" />
+      <!-- Grasp car -->
+      <Action ID="GRASP" obj="car" />
+      <!-- Place tennis_racket into car -->
+      <Action ID="PLACE_INSIDE" obj="tennis_racket" />
+      <!-- Navigate to living_room -->
+      <Action ID="NAVIGATE_TO" obj="living_room" />
+      <!-- Grasp container -->
+      <Action ID="GRASP" obj="container" />
+      <!-- Place container into car -->
+      <Action ID="PLACE_INSIDE" obj="container" />
+      <!-- Navigate to living_room -->
+      <Action ID="NAVIGATE_TO" obj="living_room" />
+      <!-- Open car -->
+      <Action ID="OPEN" obj="car" />
+      <!-- Place tennis_racket into car -->
+      <Action ID="PLACE_INSIDE" obj="tennis_racket" />
+      <!-- Navigate to garage -->
+      <Action ID="NAVIGATE_TO" obj="garage" />
+      <!-- Grasp tennis_racket -->
+      <Action ID="GRASP" obj="tennis_racket" />
+      <!-- Place tennis_racket into car -->
+      <Action ID="PLACE_INSIDE" obj="tennis_racket" />
+      <!-- Navigate to living_room -->
+      <Action ID="NAVIGATE_TO" obj="living_room" />
+      <!-- Open car -->
+      <Action ID="OPEN" obj="car" />
+      <!-- Place tennis_racket into car -->
+      <Action ID="PLACE_INSIDE" obj="tennis_racket" />
+      <!-- Navigate to garage -->
+      <Action ID="NAVIGATE_TO" obj="garage" />
+      <!-- Open car -->
+      <Action ID="OPEN" obj="car" />
+      <!-- Place tennis_racket into car -->
+      <Action ID="PLACE_INSIDE" obj="tennis_racket" />
+      <!-- Navigate to living_room -->
+      <Action ID="NAVIGATE_TO" obj="living_room" />
+      <!-- Open car -->
+      <Action ID="OPEN" obj="car" />
+      <!-- Place tennis_racket into car -->
+      <Action ID="PLACE_INSIDE" obj="tennis_racket" />
+      <!-- Navigate to garage -->
+      <Action ID="NAVIGATE_TO" obj="garage" />
+      <!-- Open car -->
+      <Action ID="OPEN" obj="car" />
+      <!-- Place tennis_racket into car -->
+      <Action ID="PLACE_INSIDE" obj="tennis_racket" />
+      <!-- Navigate to living_room -->
+      <Action ID="NAVIGATE_TO" obj="living_room" />
+      <!-- Open car -->
+      <Action ID="OPEN" obj="car" />
+      <!-- Place tennis_racket into car -->
+      <Action ID="PLACE_INSIDE" obj="tennis_racket" />
+      <!-- Navigate to garage -->
+      <Action ID="NAVIGATE_TO" obj="garage" />
+      <!-- Open car -->
+      <Action ID="OPEN" obj="car" />
+      <!-- Place tennis_racket into car -->
+      <Action ID="PLACE_INSIDE" obj="tennis_racket" />
+      <!-- Navigate to living_room -->
+      <Action ID="NAVIGATE_TO" obj="living_room" />
+      <!-- Open car -->
+      <Action ID="OPEN" obj="car" />
+      <!-- Place tennis_racket into car -->
+      <Action ID="PLACE_INSIDE" obj="tennis_racket" />
+      <!-- Navigate to garage -->
+      <Action ID="NAVIGATE_TO" obj="garage" />
+      <!-- Open car -->
+      <Action ID="OPEN" obj="car" />
+      <!-- Place tennis_racket into car -->
+      <Action ID="PLACE_INSIDE" obj="tennis_racket" />
+      <!-- Navigate to living_room -->
+      <Action ID="NAVIGATE_TO" obj="living_room" />
+      <!-- Open car -->
+      <Action ID="OPEN" obj="car" />
+      <!-- Place tennis_racket into car -->
+      <Action ID="PLACE_INSIDE" obj="tennis_racket" />
+      <!-- Navigate to garage -->
+      <Action ID="NAVIGATE_TO" obj="garage" />
+      <!-- Open car -->
+      <Action ID="OPEN" obj="car" />
+      <!-- Place tennis_racket into car -->
+      <Action ID="PLACE_INSIDE" obj="tennis_racket" />
+      <!-- Navigate to living_room -->
+      <Action ID="NAVIGATE_TO" obj="living_room" />
+      <!-- Open car -->
+      <Action ID="OPEN" obj="car" />
+      <!-- Place tennis_racket into car -->
+      <Action ID="PLACE_INSIDE" obj="tennis_racket" />
+      <!-- Navigate to garage -->
+      <Action ID="NAVIGATE_TO" obj="garage" />
+      <!-- Open car -->
+      <Action ID="OPEN" obj="car" />
+      <!-- Place tennis_racket into car -->
+      <Action ID="PLACE_INSIDE" obj="tennis_racket" />
+      <!-- Navigate to living_room -->
+      <Action ID="NAVIGATE_TO" obj="living_room" />
+      <!-- Open car -->
+      <Action ID="OPEN" obj="car" />
+      <!-- Place tennis_racket into car -->
+      <Action ID="PLACE_INSIDE" obj="tennis_racket" />
+      <!-- Navigate to garage -->
+      <Action ID="NAVIGATE_TO" obj="garage" />
+      <!-- Open car -->
+      <Action ID="OPEN" obj="car" />
+      <!-- Place tennis_racket into car -->
+      <Action ID="PLACE_INSIDE" obj="tennis_racket" />
+      <!-- Navigate to living_room -->
+      <Action ID="NAVIGATE_TO" obj="living_room" />
+      <!--

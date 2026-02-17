@@ -1,0 +1,33 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to bread -->
+      <Action ID="NAVIGATE_TO" obj="bread" />
+      <!-- Grasp bread -->
+      <Action ID="GRASP" obj="bread" />
+      <!-- Navigate to serving_area -->
+      <Action ID="NAVIGATE_TO" obj="serving_area" />
+      <!-- Place on serving_area -->
+      <Action ID="PLACE_ON_TOP" obj="serving_area" />
+      <!-- Navigate to milk -->
+      <Action ID="NAVIGATE_TO" obj="milk" />
+      <!-- Grasp milk -->
+      <Action ID="GRASP" obj="milk" />
+      <!-- Navigate to serving_area -->
+      <Action ID="NAVIGATE_TO" obj="serving_area" />
+      <!-- Place on serving_area -->
+      <Action ID="PLACE_ON_TOP" obj="serving_area" />
+      <!-- Navigate to butter -->
+      <Action ID="NAVIGATE_TO" obj="butter" />
+      <!-- Retry GRASP butter up to 3 attempts -->
+      <RetryUntilSuccessful num_attempts="3">
+        <!-- Grasp butter -->
+        <Action ID="GRASP" obj="butter" />
+      </RetryUntilSuccessful>
+      <!-- Navigate to serving_area -->
+      <Action ID="NAVIGATE_TO" obj="serving_area" />
+      <!-- Place on serving_area -->
+      <Action ID="SET_ON" obj="serving_area" />
+    </Sequence>
+  </BehaviorTree>
+</root>

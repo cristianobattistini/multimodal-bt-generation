@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "white_box"
+  destination: "sink"
+  expanded_instruction: "First check that the sink is reachable (IS_REACHABLE) and retry the check up to 3 times within a 10s timeout if needed; then pick up the white box from the upper shelf and place it into the sink on the counter."
+  scene_context: "White box sits on the upper shelf; sink basin is open and clear; drawers closed; box not held."
+  expected_sequence: "Verify IS_REACHABLE for the sink before navigating (retry up to 3 times within 10s); reach to the upper shelf, grasp and lift the white box (if grasp fails, retry or push to reposition), move over the sink, and set the box into the sink."

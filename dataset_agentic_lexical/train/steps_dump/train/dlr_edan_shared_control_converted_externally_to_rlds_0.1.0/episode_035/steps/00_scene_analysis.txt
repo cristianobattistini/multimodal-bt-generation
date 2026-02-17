@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "die"
+  destination: ""
+  expanded_instruction: "Pick up the die from inside the open cubby of the black shelf"
+  scene_context: "Die located inside open cubby of a black shelf; shelf accessible and robot not holding it."
+  expected_sequence: "Reach into the cubby, grasp the die, and lift it out."

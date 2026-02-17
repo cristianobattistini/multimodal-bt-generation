@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "blue_bottle"
+  destination: ""
+  expanded_instruction: "Reach to the blue bottle on the table and lift it upward; if grasp fails, retry up to 3 times and then push or flip the bottle to reposition before trying again."
+  scene_context: "Blue bottle upright on table near center-right; not held; robot arm over table; table surface clear."
+  expected_sequence: "Move the arm to the blue bottle, grasp it securely, and raise it upward; if grasp fails after up to 3 attempts (within 10s), use a push or flip to reposition the bottle and retry."

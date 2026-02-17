@@ -1,0 +1,14 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <Sequence>
+        <!-- Check yellow_cup is visible before NAVIGATE_TO -->
+        <Condition ID="IS_VISIBLE" obj="yellow_cup" />
+        <!-- Navigate to yellow_cup -->
+        <Action ID="NAVIGATE_TO" obj="yellow_cup" />
+      </Sequence>
+      <!-- Grasp yellow_cup -->
+      <Action ID="GRASP" obj="yellow_cup" />
+    </Sequence>
+  </BehaviorTree>
+</root>

@@ -1,0 +1,1 @@
+place dishes in the dish rack. If grasping the cup fails, push it to reposition and retry grasping.

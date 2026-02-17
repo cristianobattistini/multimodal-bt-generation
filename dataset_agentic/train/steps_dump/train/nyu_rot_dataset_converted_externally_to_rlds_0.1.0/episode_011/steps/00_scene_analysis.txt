@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "green_knob"
+  destination: ""
+  expanded_instruction: "Reach the green knob on the work surface near the robot base and turn it"
+  scene_context: "Green knob on front edge of tabletop near robot base; knob not held; tabletop clear."
+  expected_sequence: "Move to the knob, grasp it, and rotate the knob until it is turned."

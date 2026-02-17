@@ -1,0 +1,26 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to carbinet_door -->
+      <Action ID="NAVIGATE_TO" obj="carbinet_door" />
+      <!-- Fallback: if GRASP carbinet_door fails, try alternative to reposition -->
+      <Fallback>
+        <!-- Retry GRASP carbinet_door up to 2 attempts -->
+        <RetryUntilSuccessful num_attempts="2">
+          <!-- Grasp carbinet_door -->
+          <Action ID="GRAB" obj="carbinet_door" />
+        </RetryUntilSuccessful>
+        <Sequence>
+          <!-- Push carbinet_door forward toward front edge of table -->
+          <Action ID="PUSH" obj="carbinet_door" />
+          <!-- Grasp carbinet_door -->
+          <Action ID="GRASP" obj="carbinet_door" />
+        </Sequence>
+      </Fallback>
+      <!-- Grab carbinet_door -->
+      <Action ID="UNSEAL" obj="carbinet_door" />
+      <!-- Release -->
+      <Action ID="UNGRASP" />
+    </Sequence>
+  </BehaviorTree>
+</root>

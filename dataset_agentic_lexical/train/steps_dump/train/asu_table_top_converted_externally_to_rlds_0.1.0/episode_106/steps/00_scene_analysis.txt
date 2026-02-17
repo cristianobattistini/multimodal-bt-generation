@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "white_carton"
+  destination: ""
+  expanded_instruction: "Reach to the white carton on the right side of the table and lift it upward."
+  scene_context: "Robot arm above table; white carton sits on right-side tabletop, not held, table otherwise clear."
+  expected_sequence: "Approach the white carton, grasp it securely, and lift it upward."

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "burger_meat"
+  destination: ""
+  expanded_instruction: "Pick up the burger meat (brown patty) from the grill/press at the left side of the table; if a grasp fails, retry up to 3 times."
+  scene_context: "Burger patty rests on the grill/press at left, not held; table and surrounding surfaces are clear."
+  expected_sequence: "Reach to the grill, grasp the patty (retry grasp up to 3 times if it fails), and lift it off the press into your hand."

@@ -1,0 +1,30 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Move to fish -->
+      <Action ID="MOVE_TO" obj="fish" />
+      <!-- Pick fish -->
+      <Action ID="PICK" obj="fish" />
+      <!-- Go to frying_pan -->
+      <Action ID="GO_TO" obj="frying_pan" />
+      <!-- Put in frying_pan -->
+      <Action ID="PUT_IN" obj="frying_pan" />
+      <!-- Move to sausage -->
+      <Action ID="MOVE_TO" obj="sausage" />
+      <!-- Grip sausage -->
+      <Action ID="GRIP" obj="sausage" />
+      <!-- Navigate to frying_pan -->
+      <Action ID="NAVIGATE_TO" obj="frying_pan" />
+      <!-- Place sausage inside frying_pan -->
+      <Action ID="PLACE_INSIDE" obj="sausage" container="frying_pan" />
+      <!-- Approach tomato -->
+      <Action ID="APPROACH" obj="tomato" />
+      <!-- Grab tomato -->
+      <Action ID="GRAB" obj="tomato" />
+      <!-- Go to frying_pan -->
+      <Action ID="GO_TO" obj="frying_pan" />
+      <!-- Place tomato inside frying_pan -->
+      <Action ID="PLACE_INSIDE" obj="tomato" container="frying_pan" />
+    </Sequence>
+  </BehaviorTree>
+</root>

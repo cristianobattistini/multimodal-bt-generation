@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "croissant"
+  destination: "table"
+  expanded_instruction: "Push the croissant across the tabletop toward the right side of the table"
+  scene_context: "Croissant resting on table; table surface clear to the right; robot not holding the croissant."
+  expected_sequence: "Move to the croissant and push it along the table until it reaches the right side."

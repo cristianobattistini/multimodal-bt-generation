@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "green_rice_chip_bag"
+  destination: "rxbar_blueberry"
+  expanded_instruction: "Pick up the green rice chip bag and place it next to the RXBAR blueberry bar on the table."
+  scene_context: "Table surface clear; green rice chip bag lies near the top edge; rxbar_blueberry lies on lower table; no containers open."
+  expected_sequence: "Approach the green rice chip bag, pick it up, move over to the RXBAR blueberry, and set the bag down adjacent to it."

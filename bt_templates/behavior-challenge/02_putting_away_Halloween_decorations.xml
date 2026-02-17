@@ -1,0 +1,41 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Open cabinet -->
+      <Action ID="NAVIGATE_TO" obj="cabinet.n.01_1"/>
+      <Action ID="OPEN" obj="cabinet.n.01_1"/>
+      <!-- Store pumpkin.n.02_1 -->
+      <Action ID="NAVIGATE_TO" obj="pumpkin.n.02_1"/>
+      <Action ID="GRASP" obj="pumpkin.n.02_1"/>
+      <Action ID="NAVIGATE_TO" obj="cabinet.n.01_1"/>
+      <Action ID="PLACE_INSIDE" obj="cabinet.n.01_1"/>
+      <!-- Store pumpkin.n.02_2 -->
+      <Action ID="NAVIGATE_TO" obj="pumpkin.n.02_2"/>
+      <Action ID="GRASP" obj="pumpkin.n.02_2"/>
+      <Action ID="NAVIGATE_TO" obj="cabinet.n.01_1"/>
+      <Action ID="PLACE_INSIDE" obj="cabinet.n.01_1"/>
+      <!-- Store candle.n.01_1 -->
+      <Action ID="NAVIGATE_TO" obj="candle.n.01_1"/>
+      <Action ID="GRASP" obj="candle.n.01_1"/>
+      <Action ID="NAVIGATE_TO" obj="cabinet.n.01_1"/>
+      <Action ID="PLACE_INSIDE" obj="cabinet.n.01_1"/>
+      <!-- Store candle.n.01_2 -->
+      <Action ID="NAVIGATE_TO" obj="candle.n.01_2"/>
+      <Action ID="GRASP" obj="candle.n.01_2"/>
+      <Action ID="NAVIGATE_TO" obj="cabinet.n.01_1"/>
+      <Action ID="PLACE_INSIDE" obj="cabinet.n.01_1"/>
+      <!-- Store candle.n.01_3 -->
+      <Action ID="NAVIGATE_TO" obj="candle.n.01_3"/>
+      <Action ID="GRASP" obj="candle.n.01_3"/>
+      <Action ID="NAVIGATE_TO" obj="cabinet.n.01_1"/>
+      <Action ID="PLACE_INSIDE" obj="cabinet.n.01_1"/>
+      <!-- Close cabinet -->
+      <Action ID="CLOSE" obj="cabinet.n.01_1"/>
+      <!-- Move cauldron next to table -->
+      <Action ID="NAVIGATE_TO" obj="caldron.n.01_1"/>
+      <Action ID="GRASP" obj="caldron.n.01_1"/>
+      <Action ID="NAVIGATE_TO" obj="table.n.02_1"/>
+      <Action ID="PLACE_NEXT_TO" obj="table.n.02_1"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

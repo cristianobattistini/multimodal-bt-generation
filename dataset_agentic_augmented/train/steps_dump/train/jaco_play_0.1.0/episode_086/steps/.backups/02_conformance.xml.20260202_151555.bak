@@ -1,0 +1,21 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to apple -->
+      <Action ID="NAVIGATE_TO" obj="apple" />
+      <!-- Grasp apple -->
+      <Action ID="GRASP" obj="apple" />
+      <!-- Navigate to white_plate -->
+      <Action ID="NAVIGATE_TO" obj="white_plate" />
+      <!-- Check white_plate is holding before PLACE_INSIDE -->
+      <Condition ID="IS_HOLDING" obj="white_plate" />
+      <!-- Retry PLACE_INSIDE white_plate up to 2 attempts -->
+      <RetryUntilSuccessful num_attempts="2">
+        <!-- Place inside white_plate -->
+        <Action ID="PLACE_INSIDE" obj="white_plate" />
+      </RetryUntilSuccessful>
+      <!-- Release -->
+      <Action ID="RELEASE" />
+    </Sequence>
+  </BehaviorTree>
+</root>

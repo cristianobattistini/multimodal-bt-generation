@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "fridge_door"
+  destination: ""
+  expanded_instruction: "Within the ApproachFridgeDoor subtree, open the fridge door on the white refrigerator by approaching the handle, grasping it (retry up to 3 times with a 10s timeout), and pulling it outward until open; if grasp fails, push to reposition and retry."
+  scene_context: "Fridge is closed; robot arm near the handle and door is reachable."
+  expected_sequence: "Group actions into ApproachFridgeDoor subtree: Move the arm to the handle, grasp it (retry up to 3 times; if grasp fails, push to reposition), and pull the door outward until it is open within a 10s timeout."

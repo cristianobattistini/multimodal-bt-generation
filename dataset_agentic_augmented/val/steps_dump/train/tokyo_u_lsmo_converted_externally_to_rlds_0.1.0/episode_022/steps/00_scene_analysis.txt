@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "scissors"
+  destination: ""
+  expanded_instruction: "Move the white robot arm across the table to reach the scissors while avoiding the black pen_holder obstacle; check that the scissors are graspable (IS_GRASPABLE) before attempting to grasp."
+  scene_context: "White arm starting left of table; scissors located near the right front area; black pen_holder between arm and scissors; table otherwise clear."
+  expected_sequence: "Navigate the arm around the pen_holder, verify IS_GRASPABLE on the scissors, then extend to grasp; if not graspable, retry up to 3 times or reposition before attempting the grasp."

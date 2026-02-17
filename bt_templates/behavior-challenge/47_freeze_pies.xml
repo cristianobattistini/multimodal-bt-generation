@@ -1,0 +1,35 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <Action ID="NAVIGATE_TO" obj="cabinet.n.01_1"/>
+      <Action ID="OPEN" obj="cabinet.n.01_1"/>
+      <Action ID="NAVIGATE_TO" obj="tupperware.n.01_1"/>
+      <Action ID="GRASP" obj="tupperware.n.01_1"/>
+      <Action ID="NAVIGATE_TO" obj="countertop.n.01_1"/>
+      <Action ID="PLACE_ON_TOP" obj="countertop.n.01_1"/>
+      <Action ID="NAVIGATE_TO" obj="tupperware.n.01_2"/>
+      <Action ID="GRASP" obj="tupperware.n.01_2"/>
+      <Action ID="NAVIGATE_TO" obj="countertop.n.01_1"/>
+      <Action ID="PLACE_ON_TOP" obj="countertop.n.01_1"/>
+      <Action ID="NAVIGATE_TO" obj="electric_refrigerator.n.01_1"/>
+      <Action ID="OPEN" obj="electric_refrigerator.n.01_1"/>
+      <Action ID="NAVIGATE_TO" obj="apple_pie.n.01_1"/>
+      <Action ID="GRASP" obj="apple_pie.n.01_1"/>
+      <Action ID="NAVIGATE_TO" obj="tupperware.n.01_1"/>
+      <Action ID="PLACE_INSIDE" obj="tupperware.n.01_1"/>
+      <Action ID="NAVIGATE_TO" obj="tupperware.n.01_1"/>
+      <Action ID="GRASP" obj="tupperware.n.01_1"/>
+      <Action ID="NAVIGATE_TO" obj="electric_refrigerator.n.01_1"/>
+      <Action ID="PLACE_INSIDE" obj="electric_refrigerator.n.01_1"/>
+      <Action ID="NAVIGATE_TO" obj="apple_pie.n.01_2"/>
+      <Action ID="GRASP" obj="apple_pie.n.01_2"/>
+      <Action ID="NAVIGATE_TO" obj="tupperware.n.01_2"/>
+      <Action ID="PLACE_INSIDE" obj="tupperware.n.01_2"/>
+      <Action ID="NAVIGATE_TO" obj="tupperware.n.01_2"/>
+      <Action ID="GRASP" obj="tupperware.n.01_2"/>
+      <Action ID="NAVIGATE_TO" obj="electric_refrigerator.n.01_1"/>
+      <Action ID="PLACE_INSIDE" obj="electric_refrigerator.n.01_1"/>
+      <Action ID="CLOSE" obj="electric_refrigerator.n.01_1"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

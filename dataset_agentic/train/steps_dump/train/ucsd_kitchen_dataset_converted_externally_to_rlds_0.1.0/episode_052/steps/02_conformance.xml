@@ -1,0 +1,14 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to white_box -->
+      <Action ID="NAVIGATE_TO" obj="white_box"/>
+      <!-- Grasp white_box -->
+      <Action ID="GRASP" obj="white_box"/>
+      <!-- Navigate to sink -->
+      <Action ID="NAVIGATE_TO" obj="sink"/>
+      <!-- Place inside sink -->
+      <Action ID="PLACE_INSIDE" obj="sink"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

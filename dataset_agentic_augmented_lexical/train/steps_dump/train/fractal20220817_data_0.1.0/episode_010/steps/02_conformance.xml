@@ -1,0 +1,13 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to rxbar_chocolate -->
+      <Action ID="NAVIGATE_TO" obj="rxbar_chocolate" />
+      <!-- Retry GRASP rxbar_chocolate up to 3 attempts -->
+      <RetryUntilSuccessful num_attempts="3">
+        <!-- Grasp rxbar_chocolate -->
+        <Action ID="GRASP" obj="rxbar_chocolate" />
+      </RetryUntilSuccessful>
+    </Sequence>
+  </BehaviorTree>
+</root>

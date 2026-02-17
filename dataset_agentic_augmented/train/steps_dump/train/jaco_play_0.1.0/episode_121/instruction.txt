@@ -1,0 +1,1 @@
+Place the apple fruit in the table. If placing on top fails, push to clear obstacles on the table and retry placing.

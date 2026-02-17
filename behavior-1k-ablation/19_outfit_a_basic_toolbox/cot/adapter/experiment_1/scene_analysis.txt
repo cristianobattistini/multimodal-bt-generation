@@ -1,0 +1,7 @@
+scene_analysis:
+  target: "tools"
+  destination: "toolbox"
+  expanded_instruction: "Pick up the drill, pliers, flashlight, allen_wrench, and screwdriver from the tabletop and place them into the closed toolbox; for each tool, navigate to it, pick it up, and place it into the toolbox. If a grasp fails, retry up to 3 times with a 10s timeout and then push or flip the tool to reposition before retrying."
+  scene_context: "Toolbox is closed on the table; drill, pliers, flashlight, allen_wrench, and screwdriver lie on the table; nothing is held."
+  expected_sequence: "Open the toolbox, then for each tool (drill, pliers, flashlight, allen_wrench, screwdriver) navigate to it, pick it up, and place it into the open toolbox. When all tools are inside, close the toolbox."
+Plan:

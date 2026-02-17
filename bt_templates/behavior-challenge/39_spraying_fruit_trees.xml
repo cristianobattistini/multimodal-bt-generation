@@ -1,0 +1,12 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <Action ID="NAVIGATE_TO" obj="pesticide__atomizer.n.01_1"/>
+      <Action ID="GRASP" obj="pesticide__atomizer.n.01_1"/>
+      <Action ID="NAVIGATE_TO" obj="tree.n.01_1"/>
+      <Action ID="TOGGLE_ON" obj="pesticide__atomizer.n.01_1"/>
+      <Action ID="NAVIGATE_TO" obj="tree.n.01_2"/>
+      <Action ID="TOGGLE_ON" obj="pesticide__atomizer.n.01_1"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

@@ -1,0 +1,2 @@
+Instruction: place the green cup in the oven. Check precondition, use a 10 second timeout, and retry grasping up to 2 times if it fails.
+Allowed Actions: [MOVE_TO(obj), GRIP(obj), NAVIGATE_TO(obj), SET_IN(obj)]

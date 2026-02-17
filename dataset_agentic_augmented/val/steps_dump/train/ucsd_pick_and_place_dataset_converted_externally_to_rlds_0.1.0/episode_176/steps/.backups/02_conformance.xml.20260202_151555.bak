@@ -1,0 +1,24 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to pot -->
+      <Action ID="NAVIGATE_TO" obj="pot" />
+      <!-- Check pot is graspable before GRASP -->
+      <Condition ID="IS_GRASPABLE" obj="pot" />
+      <!-- Retry GRASP pot up to 2 attempts -->
+      <RetryUntilSuccessful num_attempts="2">
+        <!-- Timeout: GRASP pot within 10s -->
+        <Timeout msec="10000">
+          <!-- Grasp pot -->
+          <Action ID="GRASP" obj="pot" />
+        </Timeout>
+      </RetryUntilSuccessful>
+      <!-- Navigate to sink -->
+      <Action ID="NAVIGATE_TO" obj="sink" />
+      <!-- Place inside sink -->
+      <Action ID="PLACE_INSIDE" obj="sink" />
+      <!-- Release -->
+      <Action ID="RELEASE" />
+    </Sequence>
+  </BehaviorTree>
+</root>

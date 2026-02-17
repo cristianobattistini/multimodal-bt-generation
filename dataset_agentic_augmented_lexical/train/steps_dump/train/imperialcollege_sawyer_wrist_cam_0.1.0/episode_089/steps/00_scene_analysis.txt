@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "pan"
+  destination: ""
+  expanded_instruction: "Pick up the white pan with the black handle from the blue surface, confirming the pan is visible before attempting to grasp; grasp the handle within a 10s timeout and, if grasp fails, push or flip the pan to reposition and retry."
+  scene_context: "Pan lies on a blue surface, handle exposed and not held; surface appears clear."
+  expected_sequence: "Approach the pan, confirm it is visible, grasp the handle within a 10s timeout and lift the pan off the surface; if grasp fails, push or flip the pan to reposition and retry."

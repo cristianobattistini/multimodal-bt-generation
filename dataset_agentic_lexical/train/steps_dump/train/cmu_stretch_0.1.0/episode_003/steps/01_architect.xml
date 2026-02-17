@@ -1,0 +1,12 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to pot_lid -->
+      <Action ID="NAVIGATE_TO" obj="pot_lid"/>
+      <!-- Grasp pot_lid -->
+      <Action ID="GRASP" obj="pot_lid"/>
+      <!-- Open pot_lid (lift the lid off the pot) -->
+      <Action ID="OPEN" obj="pot_lid"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

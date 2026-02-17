@@ -1,0 +1,40 @@
+{
+  "decorator_type": "mixed",
+  "mixed_subtype": "timeout_retry_fallback",
+  "target_action_id": "GRASP",
+  "target_obj": "red_object",
+  "parameters": {
+    "augmentations": [
+      {
+        "type": "timeout",
+        "action_id": "GRASP",
+        "obj": "red_object",
+        "params": {
+          "msec": 10000
+        }
+      },
+      {
+        "type": "retry",
+        "action_id": "GRASP",
+        "obj": "red_object",
+        "params": {
+          "num_attempts": 2
+        }
+      },
+      {
+        "type": "fallback",
+        "action_id": "GRASP",
+        "obj": "red_object",
+        "params": {
+          "valid_fallbacks": [
+            "PUSH",
+            "FLIP"
+          ],
+          "valid_fallbacks_str": "PUSH, FLIP",
+          "hint": "PUSH/FLIP repositions the object into a better grasping position"
+        }
+      }
+    ]
+  },
+  "prompt_name": "mixed/timeout_retry_fallback"
+}

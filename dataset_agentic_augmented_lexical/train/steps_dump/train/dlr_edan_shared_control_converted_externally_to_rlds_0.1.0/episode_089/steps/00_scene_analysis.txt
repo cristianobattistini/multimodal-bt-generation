@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "green_apple"
+  destination: ""
+  expanded_instruction: "Navigate to the shelf (NAVIGATE_TO has a 20s timeout), pick up the green apple from the shelf compartment and hold it."
+  scene_context: "Green apple is inside an open shelf compartment at reachable height; surfaces nearby are unblocked."
+  expected_sequence: "Move to the shelf (NAVIGATE_TO has a 20s timeout), reach into the compartment, grasp the green apple, and lift it out."

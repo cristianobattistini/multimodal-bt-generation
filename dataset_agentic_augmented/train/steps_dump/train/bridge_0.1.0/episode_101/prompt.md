@@ -1,0 +1,4 @@
+Instruction: Move the orange object to the left of the pot. Only navigate to the object if it is visible.
+Allowed Actions: [PLACE_ON_TOP(obj), NAVIGATE_TO(obj), GRASP(obj)]
+Allowed Conditions: [IS_VISIBLE]
+* Constraints: Robustness: Check IS_VISIBLE condition before NAVIGATE_TO.

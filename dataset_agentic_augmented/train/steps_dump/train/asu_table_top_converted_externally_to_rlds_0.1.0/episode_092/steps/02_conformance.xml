@@ -1,0 +1,17 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Execute subtree ApproachPepsiCan -->
+      <SubTree ID="ApproachPepsiCan" />
+    </Sequence>
+  </BehaviorTree>
+  <!-- Subtree definition ApproachPepsiCan -->
+  <BehaviorTree ID="ApproachPepsiCan">
+    <Sequence>
+      <!-- Navigate to pepsi_can -->
+      <Action ID="NAVIGATE_TO" obj="pepsi_can" />
+      <!-- Grasp pepsi_can -->
+      <Action ID="GRASP" obj="pepsi_can" />
+    </Sequence>
+  </BehaviorTree>
+</root>

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "rxbar_chocolate"
+  destination: "middle_drawer"
+  expanded_instruction: "Pick up the rxbar chocolate from the table and place it into the middle drawer."
+  scene_context: "Middle drawer is open; rxbar chocolate on tabletop near back; not held; drawer interior appears clear."
+  expected_sequence: "Reach to the rxbar, grasp it, move over the open middle drawer, and place it inside."

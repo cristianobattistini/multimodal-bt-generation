@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "spoon"
+  destination: "towel"
+  expanded_instruction: "Pick up the spoon from the left side of the counter and place it on the yellow towel."
+  scene_context: "Yellow towel lies on the countertop; spoon with red handle is on the left counter surface; robot not holding anything."
+  expected_sequence: "Reach to the spoon, grasp it, move over the towel, and place the spoon on the towel."

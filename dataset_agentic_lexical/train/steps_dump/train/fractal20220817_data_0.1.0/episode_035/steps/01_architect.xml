@@ -1,0 +1,16 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to top_drawer -->
+      <Action ID="NAVIGATE_TO" obj="top_drawer" />
+      <!-- Navigate to orange -->
+      <Action ID="NAVIGATE_TO" obj="orange" />
+      <!-- Grasp orange -->
+      <Action ID="GRASP" obj="orange" />
+      <!-- Navigate to counter -->
+      <Action ID="NAVIGATE_TO" obj="counter" />
+      <!-- Lay on counter -->
+      <Action ID="LAY_ON" obj="counter" />
+    </Sequence>
+  </BehaviorTree>
+</root>

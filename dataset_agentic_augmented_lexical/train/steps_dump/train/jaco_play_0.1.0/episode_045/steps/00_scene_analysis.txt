@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "butter_dairy"
+  destination: ""
+  expanded_instruction: "Pick up the butter dairy (yellow butter pack) from the table in front of the robot; if the initial grasp fails, retry up to 3 times."
+  scene_context: "Yellow butter pack on the table front-center, not held; table surface clear; robot arm free."
+  expected_sequence: "Move the arm to the butter_dairy, grasp the pack (retry up to 3 times on failure), and lift it clear of the table."

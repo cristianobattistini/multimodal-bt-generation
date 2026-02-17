@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "teapot"
+  destination: "stove"
+  expanded_instruction: "Pick up the teapot from the countertop and place it on the stove's burner area; if placing on the burner fails, retry the place action up to 3 times."
+  scene_context: "Teapot on front countertop directly in front of stove; stove surface clear; robot not holding the teapot."
+  expected_sequence: "Reach to the teapot, grasp and lift it, move over the stove, and set it down on the burner area; if the PLACE_ON_TOP step fails, retry it up to 3 times."

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "bell_pepper"
+  destination: "table"
+  expanded_instruction: "Check IS_REACHABLE on the table before navigating; if unreachable retry up to 3 times (within a 10s timeout) then navigate. Pick up the red bell pepper next to the metal pot and place it on the table toward the bottom, to the right of the yellow towel (if grasp fails, retry or push to reposition)."
+  scene_context: "Red bell pepper partially outside a metal pot on the table; yellow towel left of center; nothing is held."
+  expected_sequence: "Check IS_REACHABLE on the table before NAVIGATE_TO; if unreachable retry up to 3 times within 10s, then NAVIGATE_TO. Reach to the bell pepper beside the pot and pick it up (if grasp fails retry or push to reposition), then move to the table bottom-right and place it to the right of the yellow towel."

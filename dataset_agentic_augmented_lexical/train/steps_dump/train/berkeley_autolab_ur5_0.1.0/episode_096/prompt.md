@@ -1,0 +1,3 @@
+Instruction: Take the tiger out of the red bowl and put it in the grey bowl. If placing the tiger inside the grey bowl fails, push inside the grey bowl to clear or reposition obstacles and retry placing.
+Allowed Actions: [PUSH(obj), GRASP(obj), PLACE_INSIDE(obj), NAVIGATE_TO(obj)]
+* Constraints: Robustness strategy: The plan uses a fallback decorator around the placing action. If placing inside the grey bowl fails due to interior clutter or misalignment, the robot will perform a push inside the grey bowl to clear or reposition obstacles, then retry placing. This alternative strategy is a different action (not a retry of the same primitive) intended to change the scene to make placement succeed.

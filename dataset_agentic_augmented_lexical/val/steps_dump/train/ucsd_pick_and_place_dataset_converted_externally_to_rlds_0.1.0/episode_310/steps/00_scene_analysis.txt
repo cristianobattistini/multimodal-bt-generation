@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "pot"
+  destination: "sink"
+  expanded_instruction: "Pick up the pot from the countertop/stovetop left of the sink and place it into the sink. If the grasp fails, retry the grasp up to 2 times."
+  scene_context: "Pot on countertop/stovetop left of sink; sink is empty and reachable; no obstructions."
+  expected_sequence: "Approach the pot, grasp and lift it (if grasp fails, retry up to 2 times), move to the sink, and place the pot inside."

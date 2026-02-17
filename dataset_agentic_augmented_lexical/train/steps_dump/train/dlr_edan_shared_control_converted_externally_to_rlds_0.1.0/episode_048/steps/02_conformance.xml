@@ -1,0 +1,21 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to black_shelf -->
+      <Action ID="NAVIGATE_TO" obj="black_shelf" />
+      <!-- Move to cube -->
+      <Action ID="MOVE_TO" obj="cube" />
+      <!-- Fallback: if GRASP cube fails, try PUSH, FLIP to reposition -->
+      <Fallback>
+        <!-- Grasp cube -->
+        <Action ID="GRIP" obj="cube" />
+        <Sequence>
+          <!-- Push cube forward toward front edge of table -->
+          <Action ID="PUSH" obj="cube" />
+          <!-- Grasp cube -->
+          <Action ID="PICK" obj="cube" />
+        </Sequence>
+      </Fallback>
+    </Sequence>
+  </BehaviorTree>
+</root>

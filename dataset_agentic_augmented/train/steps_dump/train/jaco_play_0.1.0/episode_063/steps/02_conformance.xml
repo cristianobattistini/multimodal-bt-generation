@@ -1,0 +1,15 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to milk_dairy -->
+      <Action ID="NAVIGATE_TO" obj="milk_dairy" />
+      <!-- Check milk_dairy is visible before GRASP -->
+      <Condition ID="IS_VISIBLE" obj="milk_dairy" />
+      <!-- Retry GRASP milk_dairy up to 2 attempts -->
+      <RetryUntilSuccessful num_attempts="2">
+        <!-- Grasp milk_dairy -->
+        <Action ID="GRASP" obj="milk_dairy" />
+      </RetryUntilSuccessful>
+    </Sequence>
+  </BehaviorTree>
+</root>

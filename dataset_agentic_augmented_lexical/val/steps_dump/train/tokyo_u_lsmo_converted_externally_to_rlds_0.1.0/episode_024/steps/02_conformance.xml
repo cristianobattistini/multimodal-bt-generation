@@ -1,0 +1,26 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to table -->
+      <Action ID="NAVIGATE_TO" obj="table" />
+      <!-- Move to blue_pen -->
+      <Action ID="MOVE_TO" obj="blue_pen" />
+      <Sequence>
+        <!-- Check blue_pen is visible before GRASP -->
+        <Condition ID="IS_VISIBLE" obj="blue_pen" />
+        <!-- Retry GRASP blue_pen up to 3 attempts -->
+        <RetryUntilSuccessful num_attempts="3">
+          <!-- Timeout: GRASP blue_pen within 10s -->
+          <Timeout msec="10000">
+            <!-- Grasp blue_pen -->
+            <Action ID="GRASP" obj="blue_pen" />
+          </Timeout>
+        </RetryUntilSuccessful>
+      </Sequence>
+      <!-- Navigate to table -->
+      <Action ID="NAVIGATE_TO" obj="table" />
+      <!-- Release -->
+      <Action ID="UNGRASP" />
+    </Sequence>
+  </BehaviorTree>
+</root>

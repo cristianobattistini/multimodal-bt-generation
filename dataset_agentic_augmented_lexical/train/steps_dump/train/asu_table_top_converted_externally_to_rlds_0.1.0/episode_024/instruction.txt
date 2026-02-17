@@ -1,0 +1,1 @@
+Push cocacola bottle. Check if visible and use a 15 second timeout for navigation.

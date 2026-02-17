@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "green_can"
+  destination: "top_drawer"
+  expanded_instruction: "Pick up the green can from the countertop and place it into the open top drawer; if grasping fails, retry up to 3 times, and if still unsuccessful, use push or flip to reposition the can before attempting again."
+  scene_context: "Top drawer is open and empty; green can on the countertop near the drawer, nothing blocking drawer."
+  expected_sequence: "Reach to the green can and grasp it, move over the open top drawer, and place the can inside; if grasp fails, retry (up to 3 attempts) or push/flip to reposition the can, then grasp and place."

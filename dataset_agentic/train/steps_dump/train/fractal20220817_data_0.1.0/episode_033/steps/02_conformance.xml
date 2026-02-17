@@ -1,0 +1,14 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to green_can -->
+      <Action ID="NAVIGATE_TO" obj="green_can"/>
+      <!-- Grasp green_can -->
+      <Action ID="GRASP" obj="green_can"/>
+      <!-- Navigate to top_drawer -->
+      <Action ID="NAVIGATE_TO" obj="top_drawer"/>
+      <!-- Place inside top_drawer -->
+      <Action ID="PLACE_INSIDE" obj="top_drawer"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

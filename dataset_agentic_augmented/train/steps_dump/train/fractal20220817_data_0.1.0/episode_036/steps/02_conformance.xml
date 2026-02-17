@@ -1,0 +1,20 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to green_jalapeno_chip_bag -->
+      <Action ID="NAVIGATE_TO" obj="green_jalapeno_chip_bag" />
+      <!-- Retry GRASP green_jalapeno_chip_bag up to 3 attempts -->
+      <RetryUntilSuccessful num_attempts="3">
+        <!-- Timeout: GRASP green_jalapeno_chip_bag within 20s -->
+        <Timeout msec="20000">
+          <!-- Grasp green_jalapeno_chip_bag -->
+          <Action ID="GRASP" obj="green_jalapeno_chip_bag" />
+        </Timeout>
+      </RetryUntilSuccessful>
+      <!-- Navigate to middle_drawer -->
+      <Action ID="NAVIGATE_TO" obj="middle_drawer" />
+      <!-- Place inside middle_drawer -->
+      <Action ID="PLACE_INSIDE" obj="middle_drawer" />
+    </Sequence>
+  </BehaviorTree>
+</root>

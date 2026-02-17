@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "bowls"
+  destination: "table"
+  expanded_instruction: "Gather the loose bowls and stack them into a single pile on the table. For each bowl, check that it is graspable before attempting a grasp; use a 15s timeout on each grasp and retry up to 3 times, and if a grasp fails, push or flip the bowl to reposition it and then continue."
+  scene_context: "Several bowls scattered on the table; some are partially nested; none are held and table is clear."
+  expected_sequence: "For each bowl: check IS_GRASPABLE, attempt GRASP with a 15s timeout (retry up to 3 times); if GRASP fails, use PUSH or FLIP to reposition the bowl, then place it into the single stacked pile on the table."

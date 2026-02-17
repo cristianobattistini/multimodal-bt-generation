@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "middle_drawer"
+  destination: ""
+  expanded_instruction: "Open the middle_drawer of the three-drawer cabinet beneath the table"
+  scene_context: "Cabinet with three drawers under table; middle drawer is closed and reachable; robot not holding anything."
+  expected_sequence: "Move arm to the middle drawer handle, grasp it firmly, and pull the drawer open until extended."

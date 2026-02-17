@@ -1,0 +1,23 @@
+{
+  "success": false,
+  "bt_success": true,
+  "bddl_goal": false,
+  "ticks": 1,
+  "duration": 86.64177560806274,
+  "inference_time": 38.9844696521759,
+  "satisfied": [
+    "exists(['?table.n.02', '-', 'table.n.02'], ['ontop', '?book.n.02_1', '?table.n.02'])"
+  ],
+  "unsatisfied": [
+    "nextto(?sandal.n.01_1, ?bed.n.01_1)",
+    "nextto(?sandal.n.01_2, ?sandal.n.01_1)"
+  ],
+  "reason": "wrong_plan: places both sandals next to nightstand (PLACE_NEXT_TO nightstand) instead of sandal_1 next to bed and sandal_2 next to sandal_1; book correctly placed but sandal destination is wrong",
+  "task": "18_tidying_bedroom",
+  "condition": "zero-shot",
+  "model_dir": "qwen25",
+  "vlm_model": "qwen",
+  "inference_mode": "adapter",
+  "experiment": 2,
+  "timestamp": "20260214_093323"
+}

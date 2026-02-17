@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "lid"
+  destination: ""
+  expanded_instruction: "Check IS_REACHABLE on the lower-right white round lid; if reachable, navigate to the lower-right lid on the blue panel and open it by lifting the lid. If not reachable, retry the check up to 3 times."
+  scene_context: "Multiple white round lids on blue surface; lower-right lid is closed and accessible."
+  expected_sequence: "Check IS_REACHABLE on the lower-right lid; if reachable, move to the lower-right lid and open it by lifting the lid. If not reachable, retry the reachability check up to 3 times before aborting."

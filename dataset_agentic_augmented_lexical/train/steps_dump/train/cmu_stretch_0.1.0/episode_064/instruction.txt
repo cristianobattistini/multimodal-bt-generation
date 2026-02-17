@@ -1,0 +1,1 @@
+Lift up a lid from the pot. Retry grasping up to 3 times if it fails.

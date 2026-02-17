@@ -1,0 +1,1 @@
+Insert the blue gear onto the right peg, followed by the red gear. Check the precondition and retry placing on top up to 2 times if it fails.

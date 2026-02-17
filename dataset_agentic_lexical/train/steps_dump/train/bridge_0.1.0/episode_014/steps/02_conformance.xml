@@ -1,0 +1,14 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Approach orange_cloth -->
+      <Action ID="APPROACH" obj="orange_cloth" />
+      <!-- Pick orange_cloth -->
+      <Action ID="PICK" obj="orange_cloth" />
+      <!-- Navigate to table (place toward top edge of table) -->
+      <Action ID="NAVIGATE_TO" obj="table" />
+      <!-- Place on table -->
+      <Action ID="PLACE_ON_TOP" obj="table" />
+    </Sequence>
+  </BehaviorTree>
+</root>

@@ -1,0 +1,27 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Move to scissors -->
+      <Action ID="MOVE_TO" obj="scissors" />
+      <!-- Fallback: if GRASP scissors fails, try alternative to reposition -->
+      <Fallback>
+        <!-- Retry GRASP scissors up to 2 attempts -->
+        <RetryUntilSuccessful num_attempts="2">
+          <!-- Timeout: GRASP scissors within 10s -->
+          <Timeout msec="10000">
+            <!-- Grasp scissors -->
+            <Action ID="GRIP" obj="scissors" />
+          </Timeout>
+        </RetryUntilSuccessful>
+        <Sequence>
+          <!-- Push scissors forward toward front edge of table -->
+          <Action ID="PUSH" obj="scissors" />
+          <!-- Grasp scissors -->
+          <Action ID="GRIP" obj="scissors" />
+        </Sequence>
+      </Fallback>
+      <!-- Grip scissors -->
+      <Action ID="RELEASE" />
+    </Sequence>
+  </BehaviorTree>
+</root>

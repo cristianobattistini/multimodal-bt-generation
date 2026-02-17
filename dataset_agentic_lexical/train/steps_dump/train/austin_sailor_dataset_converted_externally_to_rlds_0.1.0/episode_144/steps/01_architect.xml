@@ -1,0 +1,30 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to pan -->
+      <Action ID="NAVIGATE_TO" obj="pan" />
+      <!-- Grip pan -->
+      <Action ID="GRIP" obj="pan" />
+      <!-- Locomote to stove -->
+      <Action ID="LOCOMOTE_TO" obj="stove" />
+      <!-- Place on stove -->
+      <Action ID="PLACE_ON_TOP" obj="stove" />
+      <!-- Navigate to fish -->
+      <Action ID="NAVIGATE_TO" obj="fish" />
+      <!-- Grasp fish -->
+      <Action ID="GRASP" obj="fish" />
+      <!-- Navigate to pan -->
+      <Action ID="NAVIGATE_TO" obj="pan" />
+      <!-- Place inside pan -->
+      <Action ID="PLACE_INSIDE" obj="pan" />
+      <!-- Navigate to sausage -->
+      <Action ID="NAVIGATE_TO" obj="sausage" />
+      <!-- Grasp sausage -->
+      <Action ID="GRASP" obj="sausage" />
+      <!-- Locomote to pan -->
+      <Action ID="LOCOMOTE_TO" obj="pan" />
+      <!-- Place sausage inside pan -->
+      <Action ID="PLACE_INSIDE" obj="sausage" container="pan" />
+    </Sequence>
+  </BehaviorTree>
+</root>

@@ -1,0 +1,84 @@
+# BEHAVIOR B50 2025 - Low Complexity Tasks (20 task)
+# Format: instruction | task_name | retries
+#
+# NOTE: 2 task richiedono --symbolic (CUT, WIPE non implementati in realistic mode):
+#   - chop_an_onion (CUT)
+#   - clean_a_trumpet (WIPE)
+# Eseguirli separatamente con: --symbolic --allowed-actions "...,CUT" o "...,WIPE"
+#
+# Tutte le scene: house_single_floor (default)
+# -------------------------------------------------------------------------
+
+# === TASK SEMPLICI (Toggle/Basic) ===
+
+# 1. turning_on_radio (~1m) - Living Room
+turn on the radio | turning_on_radio | 2
+
+# 2. hanging_pictures (~1m) - Kitchen
+hang the picture on the wall | hanging_pictures | 2
+
+# 3. make_microwave_popcorn (~2m) - Kitchen
+put the popcorn bag in the microwave and turn it on | make_microwave_popcorn | 2
+
+# 4. attach_a_camera_to_a_tripod (~2m) - Bedroom
+attach the camera to the tripod | attach_a_camera_to_a_tripod | 2
+
+# === PICK AND PLACE ===
+
+# 5. picking_up_trash (~3m) - Kitchen/Living Room
+pick up the trash and put it in the bin | picking_up_trash | 2
+
+# 6. hiding_Easter_eggs (~4m) - Garden
+hide the Easter eggs near the tree | hiding_Easter_eggs | 2
+
+# 7. putting_shoes_on_rack (~4m) - Corridor
+put the shoes on the rack | putting_shoes_on_rack | 2
+
+# 8. bringing_water (~5m) - Kitchen/Living Room [GIA TESTATO]
+bring water to the counter | bringing_water | 3
+
+# === ORGANIZING/REARRANGING ===
+
+# 9. set_up_a_coffee_station_in_your_kitchen (~3-4m) - Kitchen
+set up the coffee station on the counter | set_up_a_coffee_station_in_your_kitchen | 2
+
+# 10. rearranging_kitchen_furniture (~5m) - Kitchen
+put the appliances in the cabinet and close it | rearranging_kitchen_furniture | 2
+
+# 11. preparing_lunch_box (~4-5m) - Kitchen
+prepare the lunch box with food from the counter | preparing_lunch_box | 2
+
+# 12. putting_dishes_away_after_cleaning (~6m) - Kitchen
+put the dishes in the cabinet | putting_dishes_away_after_cleaning | 2
+
+# 13. outfit_a_basic_toolbox (~6m) - Utility Room
+put the tools in the toolbox | outfit_a_basic_toolbox | 2
+
+# 14. sorting_vegetables (~6-7m) - Kitchen
+sort the vegetables into the bowls | sorting_vegetables | 2
+
+# === WASHING (con TOGGLE_ON) ===
+
+# 17. clean_boxing_gloves (~4-5m) - Utility Room
+wash the boxing gloves in the washer | clean_boxing_gloves | 2
+
+# 18. wash_a_baseball_cap (~4-5m) - Utility Room
+wash the baseball cap in the washer | wash_a_baseball_cap | 2
+
+# 19. wash_dog_toys (~6m) - Utility Room
+wash the dog toys in the washer | wash_dog_toys | 2
+
+# === FRIDGE TASKS ===
+
+# 20. clearing_food_from_table_into_fridge (~7m) - Kitchen
+put the food in containers and store in the fridge | clearing_food_from_table_into_fridge | 2
+
+# =========================================================================
+# TASK CHE RICHIEDONO --symbolic (eseguire separatamente)
+# =========================================================================
+
+# 15. chop_an_onion (~3-4m) - Kitchen [RICHIEDE CUT - solo symbolic]
+# Comando: ./run_continuous_pipeline.sh --instruction "chop the onion" --task chop_an_onion --symbolic --allowed-actions "NAVIGATE_TO,GRASP,RELEASE,PLACE_ON_TOP,PLACE_INSIDE,OPEN,CLOSE,CUT" --colab-url "..."
+
+# 16. clean_a_trumpet (~3m) - Bedroom [RICHIEDE WIPE - solo symbolic]
+# Comando: ./run_continuous_pipeline.sh --instruction "clean the trumpet with the brush" --task clean_a_trumpet --symbolic --allowed-actions "NAVIGATE_TO,GRASP,RELEASE,PLACE_ON_TOP,PLACE_INSIDE,OPEN,CLOSE,WIPE" --colab-url "..."

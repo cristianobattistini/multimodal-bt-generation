@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "white_box"
+  destination: ""
+  expanded_instruction: "Pick up the white box from the table and hold it in the robot gripper"
+  scene_context: "Robot not holding object; white box on table among other cans and bottles; table is clear enough to reach."
+  expected_sequence: "Approach the white box, grasp it, lift it into the gripper, and hold it steady."

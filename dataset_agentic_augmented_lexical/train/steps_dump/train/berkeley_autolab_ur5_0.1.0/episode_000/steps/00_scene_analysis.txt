@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "green_cloth"
+  destination: "table"
+  expanded_instruction: "Sweep the green cloth across the tabletop to the left side of the table, retrying the push up to 4 times if it fails."
+  scene_context: "Green cloth lying on the right/center of a clear table; no containers open and cloth not held."
+  expected_sequence: "Approach the cloth, push/sweep it across the tabletop toward the table's left edge, retrying a failed push up to 4 times until it rests at the left side."

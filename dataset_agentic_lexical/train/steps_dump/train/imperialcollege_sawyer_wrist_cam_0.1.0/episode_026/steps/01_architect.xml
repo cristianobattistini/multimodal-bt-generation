@@ -1,0 +1,14 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Approach lid -->
+      <Action ID="APPROACH" obj="lid" />
+      <!-- Grasp lid -->
+      <Action ID="GRASP" obj="lid" />
+      <!-- Unlock lid -->
+      <Action ID="UNLOCK" obj="lid" />
+      <!-- Release -->
+      <Action ID="RELEASE" />
+    </Sequence>
+  </BehaviorTree>
+</root>

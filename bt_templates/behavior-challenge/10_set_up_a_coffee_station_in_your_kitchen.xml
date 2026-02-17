@@ -1,0 +1,31 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Move bottle of coffee next to coffee maker -->
+      <Action ID="NAVIGATE_TO" obj="bottle__of__coffee.n.01_1"/>
+      <Action ID="GRASP" obj="bottle__of__coffee.n.01_1"/>
+      <Action ID="NAVIGATE_TO" obj="coffee_maker.n.01_1"/>
+      <Action ID="PLACE_NEXT_TO" obj="coffee_maker.n.01_1"/>
+      <!-- Place paper filter on top of coffee maker -->
+      <Action ID="NAVIGATE_TO" obj="paper_coffee_filter.n.01_1"/>
+      <Action ID="GRASP" obj="paper_coffee_filter.n.01_1"/>
+      <Action ID="NAVIGATE_TO" obj="coffee_maker.n.01_1"/>
+      <Action ID="PLACE_ON_TOP" obj="coffee_maker.n.01_1"/>
+      <!-- Place saucer next to coffee maker -->
+      <Action ID="NAVIGATE_TO" obj="saucer.n.02_1"/>
+      <Action ID="GRASP" obj="saucer.n.02_1"/>
+      <Action ID="NAVIGATE_TO" obj="coffee_maker.n.01_1"/>
+      <Action ID="PLACE_NEXT_TO" obj="coffee_maker.n.01_1"/>
+      <!-- Place coffee cup on saucer -->
+      <Action ID="NAVIGATE_TO" obj="coffee_cup.n.01_1"/>
+      <Action ID="GRASP" obj="coffee_cup.n.01_1"/>
+      <Action ID="NAVIGATE_TO" obj="saucer.n.02_1"/>
+      <Action ID="PLACE_ON_TOP" obj="saucer.n.02_1"/>
+      <!-- Place electric kettle next to coffee maker -->
+      <Action ID="NAVIGATE_TO" obj="electric_kettle.n.01_1"/>
+      <Action ID="GRASP" obj="electric_kettle.n.01_1"/>
+      <Action ID="NAVIGATE_TO" obj="coffee_maker.n.01_1"/>
+      <Action ID="PLACE_NEXT_TO" obj="coffee_maker.n.01_1"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

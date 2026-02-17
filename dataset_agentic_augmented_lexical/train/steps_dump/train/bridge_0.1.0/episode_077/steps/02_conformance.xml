@@ -1,0 +1,23 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Go to metal_pot -->
+      <Action ID="GO_TO" obj="metal_pot" />
+      <!-- Fallback: if GRASP metal_pot fails, try PUSH, FLIP to reposition -->
+      <Fallback>
+        <!-- Grasp metal_pot -->
+        <Action ID="PICK" obj="metal_pot" />
+        <Sequence>
+          <!-- Push metal_pot forward toward front edge of table -->
+          <Action ID="NUDGE" obj="metal_pot" />
+          <!-- Grasp metal_pot -->
+          <Action ID="GRIP" obj="metal_pot" />
+        </Sequence>
+      </Fallback>
+      <!-- Pick metal_pot -->
+      <Action ID="NAVIGATE_TO" obj="table" />
+      <!-- Nudge metal_pot -->
+      <Action ID="PLACE_ON_TOP" obj="metal_pot" surface="table" />
+    </Sequence>
+  </BehaviorTree>
+</root>

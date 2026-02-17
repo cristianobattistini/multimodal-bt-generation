@@ -1,0 +1,22 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Move to green_cup -->
+      <Action ID="MOVE_TO" obj="green_cup" />
+      <!-- Check green_cup is reachable before GRASP -->
+      <Condition ID="IS_REACHABLE" obj="green_cup" />
+      <!-- Retry GRASP green_cup up to 2 attempts -->
+      <RetryUntilSuccessful num_attempts="2">
+        <!-- Timeout: GRASP green_cup within 10s -->
+        <Timeout msec="10000">
+          <!-- Grasp green_cup -->
+          <Action ID="GRIP" obj="green_cup" />
+        </Timeout>
+      </RetryUntilSuccessful>
+      <!-- Grip green_cup -->
+      <Action ID="NAVIGATE_TO" obj="oven" />
+      <!-- Place inside oven -->
+      <Action ID="SET_IN" obj="oven" />
+    </Sequence>
+  </BehaviorTree>
+</root>

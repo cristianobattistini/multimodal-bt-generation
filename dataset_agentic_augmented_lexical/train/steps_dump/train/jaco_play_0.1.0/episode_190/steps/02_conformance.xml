@@ -1,0 +1,17 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Timeout: NAVIGATE_TO long_bread within 20s -->
+      <Timeout msec="20000">
+        <!-- Navigate to long_bread -->
+        <Action ID="NAVIGATE_TO" obj="long_bread" />
+      </Timeout>
+      <!-- Grasp long_bread -->
+      <Action ID="GRIP" obj="long_bread" />
+      <!-- Grip long_bread -->
+      <Action ID="GO_TO" obj="sink" />
+      <!-- Go to sink -->
+      <Action ID="PUT_IN" obj="sink" />
+    </Sequence>
+  </BehaviorTree>
+</root>

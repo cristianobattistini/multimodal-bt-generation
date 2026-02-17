@@ -1,0 +1,16 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to blue_fork -->
+      <Action ID="NAVIGATE_TO" obj="blue_fork"/>
+      <!-- Grasp blue_fork -->
+      <Action ID="GRASP" obj="blue_fork"/>
+      <!-- Navigate to table (place on opposite side of yellow_rag) -->
+      <Action ID="NAVIGATE_TO" obj="table"/>
+      <!-- Place on table (position on opposite side of yellow_rag) -->
+      <Action ID="PLACE_ON_TOP" obj="table"/>
+      <!-- Release -->
+      <Action ID="RELEASE"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "brown_object"
+  destination: "table"
+  expanded_instruction: "Pick up the brown object from the left side of the table and place it on the table near the center."
+  scene_context: "Brown object on left edge of table, not held; other objects lined on table; table surface clear for placement."
+  expected_sequence: "Move to the brown object, pick it up, move to the table center, and place it down."

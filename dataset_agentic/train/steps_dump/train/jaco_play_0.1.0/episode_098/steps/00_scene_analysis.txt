@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "green_cup"
+  destination: "dish_rack"
+  expanded_instruction: "Pick up the green cup and place it upright into the blue dish_rack on the right side of the table."
+  scene_context: "Green cup is held by the robot above the table; blue dish_rack is empty and reachable; other items on table do not block path."
+  expected_sequence: "Move the held green cup over the dish_rack and place it inside upright."

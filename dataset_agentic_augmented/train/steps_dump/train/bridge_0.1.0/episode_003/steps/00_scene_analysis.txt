@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "knife"
+  destination: "cutting_board"
+  expanded_instruction: "Pick up the yellow-handled knife and place it on the green cutting_board at the sink edge, retrying the grasp up to 3 times if needed; if grasp fails, push or flip the knife to reposition before placing."
+  scene_context: "Knife lies on the countertop near the sink; green cutting_board on sink edge is clear and reachable."
+  expected_sequence: "Move to the knife, attempt to grasp and lift it (retry grasp up to 3 times); if grasp fails, push or flip the knife to reposition, then grasp and lift, move over the cutting_board, and place the knife down."

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "eggplant"
+  destination: "yellow_cloth"
+  expanded_instruction: "Pick up the eggplant and place it on top of the yellow cloth on the table."
+  scene_context: "Eggplant sits near the left side of the table by a folded yellow_cloth; cloth is on the table and clear; nothing is held."
+  expected_sequence: "Reach the eggplant, grasp it, move over the yellow_cloth, and place the eggplant on top of the cloth."

@@ -1,0 +1,1 @@
+place dishes in the dish rack. Retry grasping up to 3 times if it fails.

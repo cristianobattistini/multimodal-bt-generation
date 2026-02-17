@@ -1,0 +1,1 @@
+pick up maroon cube. Check if visible and use a 20 second timeout for navigation.

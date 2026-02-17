@@ -1,0 +1,10 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to other -->
+      <Action ID="NAVIGATE_TO" obj="other"/>
+      <!-- Place next to other -->
+      <Action ID="PLACE_NEXT_TO" obj="other"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

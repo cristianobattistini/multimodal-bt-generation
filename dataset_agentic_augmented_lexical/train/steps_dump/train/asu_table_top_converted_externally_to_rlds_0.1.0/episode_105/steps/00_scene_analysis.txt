@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "bread"
+  destination: "table"
+  expanded_instruction: "Pick up the bread from its current position on the table and place it on the table. If placing on top fails, retry up to 3 times; if it still fails, push to reposition the bread and then try again."
+  scene_context: "Bread is on the table among other objects; no containers open and nothing is currently held."
+  expected_sequence: "Move to the bread, grasp it, and place it on the table in a clear spot. If PLACE_ON_TOP fails, retry up to 3 times, and if unsuccessful use a push to reposition the object before placing."

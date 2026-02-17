@@ -1,0 +1,17 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Timeout: NAVIGATE_TO potato within 20s -->
+      <Timeout msec="20000">
+        <!-- Navigate to potato -->
+        <Action ID="ADVANCE_TO" obj="potato" />
+      </Timeout>
+      <!-- Advance to potato -->
+      <Action ID="GRIP" obj="potato" />
+      <!-- Grip potato -->
+      <Action ID="GO_TO" obj="plate" />
+      <!-- Go to plate -->
+      <Action ID="SET_ON" obj="plate" />
+    </Sequence>
+  </BehaviorTree>
+</root>

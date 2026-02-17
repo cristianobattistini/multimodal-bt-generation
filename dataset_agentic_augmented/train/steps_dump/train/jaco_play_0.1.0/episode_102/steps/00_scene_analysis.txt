@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "orange_fruit"
+  destination: "sink"
+  expanded_instruction: "Pick up the orange fruit from the table and place it into the blue sink basin; if placing inside fails, retry up to 3 times then use a push to reposition the fruit into the basin."
+  scene_context: "Orange on table near robot, blue sink basin is open and reachable, nothing is held."
+  expected_sequence: "Move to the orange, pick it up, carry it to the sink basin, and place it inside; if placing fails after up to 3 attempts, use a push action to reposition the orange into the basin."

@@ -1,0 +1,1 @@
+place the apple fruit in the sink. Use a 10 second timeout for navigation.

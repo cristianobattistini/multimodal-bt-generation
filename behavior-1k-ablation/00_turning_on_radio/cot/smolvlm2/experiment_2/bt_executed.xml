@@ -1,0 +1,10 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to radio_receiver -->
+      <Action ID="NAVIGATE_TO" obj="radio_receiver" />
+      <!-- To toggle on radio_receiver -->
+      <Action ID="TOGOVERNER" obj="radio_receiver" />
+    </Sequence>
+  </Root>
+</root>

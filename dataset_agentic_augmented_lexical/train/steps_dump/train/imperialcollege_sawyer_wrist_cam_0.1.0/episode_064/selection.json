@@ -1,0 +1,27 @@
+{
+  "decorator_type": "mixed",
+  "mixed_subtype": "timeout_retry",
+  "target_action_id": "GRASP",
+  "target_obj": "apple",
+  "parameters": {
+    "augmentations": [
+      {
+        "type": "timeout",
+        "action_id": "GRASP",
+        "obj": "apple",
+        "params": {
+          "msec": 15000
+        }
+      },
+      {
+        "type": "retry",
+        "action_id": "GRASP",
+        "obj": "apple",
+        "params": {
+          "num_attempts": 2
+        }
+      }
+    ]
+  },
+  "prompt_name": "mixed/timeout_retry"
+}

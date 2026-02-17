@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "right_cabinet_door"
+  destination: ""
+  expanded_instruction: "Open the right cabinet door of the white cabinet on the countertop."
+  scene_context: "White cabinet on table with doors closed; right small cabinet door has a visible handle and is not held."
+  expected_sequence: "Reach the right cabinet door, grasp the handle, and pull it open until it is fully open."

@@ -1,0 +1,7 @@
+scene_analysis:
+  target: plywood_1
+  destination: corridor_floor
+  expanded_instruction: "Bring the three plywood sheets from the garden floor to the corridor floor."
+  scene_context: "Three plywood sheets on the garden floor; none are held; workspace clear."
+  expected_sequence: "Move to the garden floor, pick up plywood_1, place it on the floor, then pick up plywood_2 and place it on the floor, and finally pick up plywood_3 and place it on the floor."
+Plan:

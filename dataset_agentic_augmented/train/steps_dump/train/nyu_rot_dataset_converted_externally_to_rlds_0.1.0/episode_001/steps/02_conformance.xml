@@ -1,0 +1,18 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to cup -->
+      <Action ID="NAVIGATE_TO" obj="cup" />
+      <!-- Check cup is holding before POUR -->
+      <Condition ID="IS_HOLDING" obj="cup" />
+      <!-- Retry POUR cup up to 3 attempts -->
+      <RetryUntilSuccessful num_attempts="3">
+        <!-- Timeout: POUR cup within 10s -->
+        <Timeout msec="10000">
+          <!-- Pour into cup -->
+          <Action ID="POUR" obj="cup" />
+        </Timeout>
+      </RetryUntilSuccessful>
+    </Sequence>
+  </BehaviorTree>
+</root>

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "top_drawer"
+  destination: ""
+  expanded_instruction: "Open the top drawer of the wooden cabinet under the countertop, first checking that the top drawer is graspable; if the initial grasp fails, retry the grasp up to 2 times."
+  scene_context: "Top drawer is closed in front of the counter; no object held; countertop clear."
+  expected_sequence: "Approach the drawer, check IS_GRASPABLE on the top drawer, then grasp its handle (retry up to 2 times if grasp fails) and pull outward until the drawer is open."

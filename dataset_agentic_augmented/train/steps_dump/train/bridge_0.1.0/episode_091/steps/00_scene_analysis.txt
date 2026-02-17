@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "basil_bottle"
+  destination: "cardboard_fence"
+  expanded_instruction: "Pick up the basil bottle and place it upright against the cardboard fence at the back of the tray. First check that the basil_bottle is graspable; if not or if a grasp fails, retry up to 3 times (within a 10s timeout) and then use a push or flip to reposition the bottle as a fallback before placing upright."
+  scene_context: "Basil bottle is on its side near the tray's back-right; cardboard fence is upright and the tray surface is clear."
+  expected_sequence: "Check IS_GRASPABLE on basil_bottle; if true, grasp the bottle, lift and rotate it upright, then place it standing against the cardboard fence on the tray. If grasp fails (retry up to 3 times/10s), use PUSH or FLIP to reposition the bottle and then place it upright."

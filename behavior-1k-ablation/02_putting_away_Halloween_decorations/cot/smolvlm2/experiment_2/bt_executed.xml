@@ -1,0 +1,20 @@
+<root main_tree_to_execute="MainTree">
+  <Sequence>
+    <!-- Open the cabinet -->
+    <Action ID="OPEN" obj="cabinet" />
+    <!-- Navigate to 2 pumpkins -->
+    <Action ID="NAVIGATE_TO" obj="2_pumpkins" />
+    <!-- Grasp 2_pumpkins -->
+    <Action ID="GRASP" obj="2_pumpkins" />
+    <!-- Place inside cabinet -->
+    <Action ID="PLACE_INSIDE" obj="cabinet" />
+    <!-- Place next to table -->
+    <Action ID="PLACE_NEXT_TO" obj="table" />
+  </Sequence>
+  <!-- Open the cabinet -->
+  <Action ID="OPEN" obj="cabinet" />
+  <!-- Place next to table -->
+  <Action ID="PLACE_NEXT_TO" obj="table" />
+  <!-- Close cabinet -->
+  <Action ID="CLOSE" obj="cabinet" />
+</root>

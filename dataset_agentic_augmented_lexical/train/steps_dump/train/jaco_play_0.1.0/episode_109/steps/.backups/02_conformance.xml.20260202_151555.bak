@@ -1,0 +1,25 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to butter_dairy -->
+      <Action ID="NAVIGATE_TO" obj="butter_dairy" />
+      <!-- Fallback: if GRASP butter_dairy fails, try PUSH, FLIP to reposition -->
+      <Fallback>
+        <!-- Grasp butter_dairy -->
+        <Action ID="GRASP" obj="butter_dairy" />
+        <Sequence>
+          <!-- Push butter_dairy forward toward front edge of table -->
+          <Action ID="PUSH" obj="butter_dairy" />
+          <!-- Grasp butter_dairy -->
+          <Action ID="GRASP" obj="butter_dairy" />
+        </Sequence>
+      </Fallback>
+      <!-- Navigate to sink -->
+      <Action ID="NAVIGATE_TO" obj="sink" />
+      <!-- Place inside sink -->
+      <Action ID="PLACE_INSIDE" obj="sink" />
+      <!-- Release -->
+      <Action ID="RELEASE" />
+    </Sequence>
+  </BehaviorTree>
+</root>

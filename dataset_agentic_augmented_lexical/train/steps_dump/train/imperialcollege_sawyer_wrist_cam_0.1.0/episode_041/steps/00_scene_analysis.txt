@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "toast"
+  destination: "toaster_slot"
+  expanded_instruction: "Grasp the slice of toast and insert it into the slot of the red toaster until it is fully inside, retrying the grasp up to 3 times if it fails."
+  scene_context: "Red toaster on counter; slice of toast next to the slot; toaster slots open and empty; toast not held."
+  expected_sequence: "Bring the slice to the toaster slot, grasp and insert it fully into the slot, and release it; if the grasp fails, retry up to 3 times."

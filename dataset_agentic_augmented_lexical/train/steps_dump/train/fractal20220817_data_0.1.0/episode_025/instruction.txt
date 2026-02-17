@@ -1,0 +1,1 @@
+move water bottle near rxbar chocolate. Check if visible, use a 10 second timeout for grasp; if it times out, try push as a fallback.

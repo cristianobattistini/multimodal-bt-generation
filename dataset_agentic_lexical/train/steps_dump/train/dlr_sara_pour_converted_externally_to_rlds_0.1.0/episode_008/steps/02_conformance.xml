@@ -1,0 +1,18 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to brown_pitcher -->
+      <Action ID="NAVIGATE_TO" obj="brown_pitcher" />
+      <!-- Grasp brown_pitcher -->
+      <Action ID="GRASP" obj="brown_pitcher" />
+      <!-- Navigate to white_mug -->
+      <Action ID="NAVIGATE_TO" obj="white_mug" />
+      <!-- Pour into white_mug -->
+      <Action ID="POUR" obj="white_mug" />
+      <!-- Navigate to table -->
+      <Action ID="NAVIGATE_TO" obj="table" />
+      <!-- Lay on table -->
+      <Action ID="LAY_ON" obj="table" />
+    </Sequence>
+  </BehaviorTree>
+</root>

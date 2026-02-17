@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "pink_cloth"
+  destination: "table"
+  expanded_instruction: "Fold the pink cloth on the table into a smaller, neat rectangle by folding its edges inward."
+  scene_context: "Pink cloth lies flat near the top-center of the clear table; no container open and cloth not held."
+  expected_sequence: "Reach the cloth, grasp an edge, fold it toward the center (repeat as needed), smooth the fold, and leave the folded cloth on the table."

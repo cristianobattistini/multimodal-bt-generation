@@ -1,0 +1,18 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to tree -->
+      <Action ID="NAVIGATE_TO" obj="tree_1" />
+      <!-- Grasp tree_1 -->
+      <Action ID="GRASP" obj="tree_1" />
+      <!-- Navigate to tree -->
+      <Action ID="NAVIGATE_TO" obj="tree_2" />
+      <!-- Grasp tree_2 -->
+      <Action ID="GRASP" obj="tree_2" />
+      <!-- Navigate to tree -->
+      <Action ID="NAVIGATE_TO" obj="tree_3" />
+      <!-- Grasp tree_3 -->
+      <Action ID="GRASP" obj="tree_3" />
+    </Sequence>
+  </BehaviorTree>
+</root>

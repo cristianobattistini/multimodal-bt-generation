@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "milk_carton"
+  destination: ""
+  expanded_instruction: "Pick up the red milk carton from the left side of the table."
+  scene_context: "Table visible and clear; red milk carton on left-front of table; carton not held; robot arm nearby on right."
+  expected_sequence: "Approach the milk carton, grasp it securely, and lift it clear of the table."

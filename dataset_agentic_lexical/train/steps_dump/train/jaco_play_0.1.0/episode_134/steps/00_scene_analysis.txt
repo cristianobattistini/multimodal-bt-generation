@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "steak_meat"
+  destination: "oven"
+  expanded_instruction: "Pick up the steak meat from the counter area and place it inside the oven"
+  scene_context: "Steak on counter edge near blue tub; oven door is open and reachable; nothing blocking oven interior."
+  expected_sequence: "Reach to the steak, grasp it, move to the open oven, and put the steak inside."

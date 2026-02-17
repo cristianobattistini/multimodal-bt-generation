@@ -1,0 +1,16 @@
+{
+  "success": true,
+  "bt_success": true,
+  "bddl_goal": true,
+  "ticks": 1,
+  "duration": 101.04057717323303,
+  "inference_time": 47.34277415275574,
+  "satisfied": [
+    "forall(['?can__of__soda.n.01', '-', 'can__of__soda.n.01'], ['inside', '?can__of__soda.n.01', '?ashcan.n.01_1'])"
+  ],
+  "unsatisfied": [],
+  "task": "01_picking_up_trash",
+  "model": "adapter",
+  "experiment": 1,
+  "timestamp": "20260205_164942"
+}

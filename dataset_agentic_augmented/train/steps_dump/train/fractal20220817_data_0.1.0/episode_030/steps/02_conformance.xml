@@ -1,0 +1,17 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Execute subtree ApproachMiddleDrawer -->
+      <SubTree ID="ApproachMiddleDrawer" />
+    </Sequence>
+  </BehaviorTree>
+  <!-- Subtree definition ApproachMiddleDrawer -->
+  <BehaviorTree ID="ApproachMiddleDrawer">
+    <Sequence>
+      <!-- Navigate to middle_drawer -->
+      <Action ID="NAVIGATE_TO" obj="middle_drawer" />
+      <!-- Open middle_drawer -->
+      <Action ID="OPEN" obj="middle_drawer" />
+    </Sequence>
+  </BehaviorTree>
+</root>

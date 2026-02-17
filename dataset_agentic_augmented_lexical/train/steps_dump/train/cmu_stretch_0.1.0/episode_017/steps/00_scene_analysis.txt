@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "drawer"
+  destination: ""
+  expanded_instruction: "Check that the lower cabinet drawer is visible before navigating to it; NAVIGATE_TO the drawer within a 10s timeout, then grasp its handle and pull outward until it is open."
+  scene_context: "Lower cabinet drawer is closed with handle visible and not held; surrounding counter clear; fridge closed."
+  expected_sequence: "Verify drawer is visible, NAVIGATE_TO the drawer (within a 10s timeout), reach the drawer handle, grasp it, and pull outward until the drawer opens."

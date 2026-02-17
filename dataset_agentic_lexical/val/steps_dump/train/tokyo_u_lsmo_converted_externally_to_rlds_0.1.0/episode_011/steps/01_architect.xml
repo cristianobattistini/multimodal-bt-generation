@@ -1,0 +1,12 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Approach table -->
+      <Action ID="APPROACH" obj="table" />
+      <!-- Approach brown_holder -->
+      <Action ID="APPROACH" obj="brown_holder" />
+      <!-- Grip scissors -->
+      <Action ID="GRIP" obj="scissors" />
+    </Sequence>
+  </BehaviorTree>
+</root>

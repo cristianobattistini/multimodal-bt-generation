@@ -1,0 +1,22 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Get tomato from sack in car and put in fridge -->
+      <Action ID="NAVIGATE_TO" obj="beefsteak_tomato.n.01_1"/>
+      <Action ID="GRASP" obj="beefsteak_tomato.n.01_1"/>
+      <Action ID="NAVIGATE_TO" obj="electric_refrigerator.n.01_1"/>
+      <Action ID="OPEN" obj="electric_refrigerator.n.01_1"/>
+      <Action ID="PLACE_INSIDE" obj="electric_refrigerator.n.01_1"/>
+      <!-- Get milk from sack and put in fridge -->
+      <Action ID="NAVIGATE_TO" obj="carton__of__milk.n.01_1"/>
+      <Action ID="GRASP" obj="carton__of__milk.n.01_1"/>
+      <Action ID="NAVIGATE_TO" obj="electric_refrigerator.n.01_1"/>
+      <Action ID="PLACE_INSIDE" obj="electric_refrigerator.n.01_1"/>
+      <!-- Close fridge -->
+      <Action ID="CLOSE" obj="electric_refrigerator.n.01_1"/>
+      <!-- Close car trunk -->
+      <Action ID="NAVIGATE_TO" obj="car.n.01_1"/>
+      <Action ID="CLOSE" obj="car.n.01_1"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

@@ -1,0 +1,1 @@
+Place the orange fruit in the sink. Check precondition and retry placing inside up to 3 times if it fails.

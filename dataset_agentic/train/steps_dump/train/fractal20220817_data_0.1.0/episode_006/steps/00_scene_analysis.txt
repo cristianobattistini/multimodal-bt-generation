@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "sponge"
+  destination: "counter"
+  expanded_instruction: "Pick up the yellow sponge from the open top drawer and place it on the counter"
+  scene_context: "Top drawer is open with a yellow sponge inside; sponge is not held; counter is reachable and has a small cup but is not blocked."
+  expected_sequence: "Reach into the open drawer, grasp the sponge, lift it out, move to the counter, and set the sponge down."

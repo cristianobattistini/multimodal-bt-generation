@@ -1,0 +1,2 @@
+Instruction: put the ranch bottle into the pot
+Allowed Actions: [APPROACH(obj), GRASP(obj), NAVIGATE_TO(obj), PLACE_INSIDE(obj, container)]

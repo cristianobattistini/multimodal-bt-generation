@@ -1,0 +1,15 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to square_bread -->
+      <Action ID="NAVIGATE_TO" obj="square_bread" />
+      <!-- Check square_bread is visible before GRASP -->
+      <Condition ID="IS_VISIBLE" obj="square_bread" />
+      <!-- Retry GRASP square_bread up to 2 attempts -->
+      <RetryUntilSuccessful num_attempts="2">
+        <!-- Grasp square_bread -->
+        <Action ID="GRASP" obj="square_bread" />
+      </RetryUntilSuccessful>
+    </Sequence>
+  </BehaviorTree>
+</root>

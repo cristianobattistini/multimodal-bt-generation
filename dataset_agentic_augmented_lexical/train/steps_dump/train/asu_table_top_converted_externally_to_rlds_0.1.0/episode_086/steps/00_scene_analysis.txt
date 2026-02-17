@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "brown_object"
+  destination: ""
+  expanded_instruction: "Push the brown object on the table toward the front edge, navigating to it with a 20 second timeout."
+  scene_context: "Brown object on table near center-left, not held; table surface clear and reachable."
+  expected_sequence: "Move to the brown_object within a 20 second NAVIGATE_TO timeout and push it forward across the table toward the front edge."

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "ranch_bottle"
+  destination: "pot"
+  expanded_instruction: "Pick up the ranch bottle from the table and place it into the metal pot. Group the actions into an ApproachRanchBottle subtree, with a 10s timeout and retry up to 3 times; if grasp fails, push to reposition and retry."
+  scene_context: "Ranch bottle on table, metal pot on table and open, robot not holding anything."
+  expected_sequence: "ApproachRanchBottle subtree: move to the ranch bottle (within 10s, retry up to 3x), grasp and lift it (if grasp fails, push to reposition and retry), move over the pot, and place the bottle into the pot."

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "white_item"
+  destination: "pan"
+  expanded_instruction: "Pick up the white item from the cloth at the back-left and place it on the pan"
+  scene_context: "White item resting on blue cloth at back-left; pan is empty and reachable; nothing is held."
+  expected_sequence: "Approach the white item, pick it up from the cloth, move to the pan, and place it in the pan."

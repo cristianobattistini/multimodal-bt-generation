@@ -1,0 +1,2 @@
+Instruction: Pull open a dishwasher. Retry opening up to 2 times if it fails.
+Allowed Actions: [ADVANCE_TO(obj), UNLOCK(obj)]

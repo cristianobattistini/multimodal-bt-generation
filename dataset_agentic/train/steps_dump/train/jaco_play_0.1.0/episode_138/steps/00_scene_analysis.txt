@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "square_bread"
+  destination: "table"
+  expanded_instruction: "Pick up the square bread (currently off the table) and place it on the table surface."
+  scene_context: "Square_bread is not held and not on the table; table has two round fruits and a blue tray; plate present."
+  expected_sequence: "Approach the bread, grasp it, move to the table area clear of fruits, and set the square bread down."

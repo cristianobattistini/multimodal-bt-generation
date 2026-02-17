@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "blue_cloth"
+  destination: "table"
+  expanded_instruction: "Pick up the blue cloth (if grasp fails, retry up to 2 times) and place it to the right, on the table directly in front of the cans."
+  scene_context: "Blue cloth on back-left of table near microwave; cans grouped at back-right; table surface otherwise clear."
+  expected_sequence: "Move to the cloth, pick it up (retry grasp up to 2 times on failure), shift right and place it on the table in front of the cans."

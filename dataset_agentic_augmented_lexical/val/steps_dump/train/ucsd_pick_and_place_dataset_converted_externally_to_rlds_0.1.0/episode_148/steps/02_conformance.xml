@@ -1,0 +1,19 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Move to pot -->
+      <Action ID="MOVE_TO" obj="pot" />
+      <!-- Check pot is visible before GRASP -->
+      <Condition ID="IS_VISIBLE" obj="pot" />
+      <!-- Retry GRASP pot up to 2 attempts -->
+      <RetryUntilSuccessful num_attempts="2">
+        <!-- Grasp pot -->
+        <Action ID="GRASP" obj="pot" />
+      </RetryUntilSuccessful>
+      <!-- Navigate to sink -->
+      <Action ID="APPROACH" obj="sink" />
+      <!-- Approach sink -->
+      <Action ID="PLACE_INSIDE" obj="pot" container="sink" />
+    </Sequence>
+  </BehaviorTree>
+</root>

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "steak_meat"
+  destination: ""
+  expanded_instruction: "Pick up the steak meat from the blue tray next to the machine on the table"
+  scene_context: "Steak on blue tray beside the black machine on table; tray is open; steak not held; table otherwise clear."
+  expected_sequence: "Approach the blue tray, grasp the steak on the tray, and lift it up."

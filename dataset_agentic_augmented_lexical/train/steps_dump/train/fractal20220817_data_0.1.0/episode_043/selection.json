@@ -1,0 +1,41 @@
+{
+  "decorator_type": "mixed",
+  "mixed_subtype": "condition_timeout_fallback",
+  "target_action_id": "GRASP",
+  "target_obj": "green_rice_chip_bag",
+  "parameters": {
+    "augmentations": [
+      {
+        "type": "condition",
+        "action_id": "GRASP",
+        "obj": "green_rice_chip_bag",
+        "params": {
+          "condition_id": "IS_VISIBLE",
+          "condition_obj": "green_rice_chip_bag"
+        }
+      },
+      {
+        "type": "timeout",
+        "action_id": "GRASP",
+        "obj": "green_rice_chip_bag",
+        "params": {
+          "msec": 15000
+        }
+      },
+      {
+        "type": "fallback",
+        "action_id": "GRASP",
+        "obj": "green_rice_chip_bag",
+        "params": {
+          "valid_fallbacks": [
+            "PUSH",
+            "FLIP"
+          ],
+          "valid_fallbacks_str": "PUSH, FLIP",
+          "hint": "PUSH/FLIP repositions the object into a better grasping position"
+        }
+      }
+    ]
+  },
+  "prompt_name": "mixed/condition_timeout_fallback"
+}

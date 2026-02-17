@@ -1,0 +1,8 @@
+scene_analysis:
+  target: "lunch_items"
+  destination: "packing_box"
+  expanded_instruction: "Place the club_sandwich, half_apple_1, half_apple_2, and chocolate_chip_cookie from the chopping_board into the packing_box, with the large flat club_sandwich first on the bottom. Then open the electric_refrigerator, take the bottle_of_tea from inside, place it into the packing_box, and ensure the electric_refrigerator is closed at the end."
+  scene_context: "Kitchen scene. Food items are on the chopping_board; the bottle_of_tea is inside the closed electric_refrigerator. The packing_box is available to receive items."
+  expected_sequence: "Navigate to each food item on the chopping_board: first club_sandwich, then half_apple_1, half_apple_2, and chocolate_chip_cookie. For each, grasp it, navigate to the packing_box, and place it inside. Next, navigate to the electric_refrigerator, open it, navigate to the bottle_of_tea, grasp it, navigate to the packing_box, place it inside, then return to the electric_refrigerator and close it."
+
+Plan:

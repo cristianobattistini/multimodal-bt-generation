@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "dishwasher_handle"
+  destination: ""
+  expanded_instruction: "Check the dishwasher handle is visible, then grasp it (retry up to 2 times if the grasp fails) and pull the dishwasher door open"
+  scene_context: "Dishwasher door closed with front handle accessible; robot arm not holding the handle."
+  expected_sequence: "Move the arm to the handle, verify the handle is visible before grasping, grasp it (retry up to 2 times if the grasp fails), and pull the door open until it latches open."

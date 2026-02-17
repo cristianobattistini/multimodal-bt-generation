@@ -1,0 +1,16 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Approach towel -->
+      <Action ID="APPROACH" obj="towel" />
+      <!-- Grasp towel -->
+      <Action ID="GRASP" obj="towel" />
+      <!-- Spread towel -->
+      <Action ID="SPREAD" obj="towel" />
+      <!-- Navigate to green_mat -->
+      <Action ID="NAVIGATE_TO" obj="green_mat" />
+      <!-- Place towel on green_mat -->
+      <Action ID="PLACE_ON_TOP" obj="towel" surface="green_mat" />
+    </Sequence>
+  </BehaviorTree>
+</root>

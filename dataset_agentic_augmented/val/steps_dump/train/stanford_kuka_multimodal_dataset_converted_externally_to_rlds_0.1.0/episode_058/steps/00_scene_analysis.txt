@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "peg"
+  destination: "hole"
+  expanded_instruction: "Check that the hole is visible (check IS_VISIBLE) before navigating to the board, then insert the peg held by the robot into the hole on the perforated board. If the hole is not visible, retry the visibility check up to 3 times within a 10s timeout."
+  scene_context: "Peg is held by the robot above a perforated board; target hole is visible; table area clear."
+  expected_sequence: "Check IS_VISIBLE on the hole before approaching; lower and align the peg over the hole, then push it down until it is fully seated. If visibility or alignment fails, retry the approach and alignment up to 3 times."

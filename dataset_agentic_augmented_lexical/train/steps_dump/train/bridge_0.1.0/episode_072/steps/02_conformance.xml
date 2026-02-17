@@ -1,0 +1,26 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Execute subtree ApproachSpoon -->
+      <SubTree ID="ApproachSpoon" />
+      <!-- Grasp spoon -->
+      <Action ID="GRASP" obj="spoon" />
+      <!-- Navigate to towel -->
+      <Action ID="NAVIGATE_TO" obj="towel" />
+      <!-- Lay on towel -->
+      <Action ID="LAY_ON" obj="towel" />
+    </Sequence>
+  </BehaviorTree>
+  <!-- Subtree definition ApproachSpoon -->
+  <BehaviorTree ID="ApproachSpoon">
+    <Sequence>
+      <!-- Timeout: NAVIGATE_TO spoon within 20s -->
+      <Timeout msec="20000">
+        <!-- Navigate to spoon -->
+        <Action ID="NAVIGATE_TO" obj="spoon" />
+      </Timeout>
+      <!-- Grasp spoon -->
+      <Action ID="GRASP" obj="spoon" />
+    </Sequence>
+  </BehaviorTree>
+</root>

@@ -1,0 +1,19 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to white_box -->
+      <Action ID="NAVIGATE_TO" obj="white_box" />
+      <!-- Fallback: if GRASP white_box fails, try PUSH, FLIP to reposition -->
+      <Fallback>
+        <!-- Grasp white_box -->
+        <Action ID="GRASP" obj="white_box" />
+        <Sequence>
+          <!-- Push white_box forward toward front edge of table -->
+          <Action ID="PUSH" obj="white_box" />
+          <!-- Grasp white_box -->
+          <Action ID="GRASP" obj="white_box" />
+        </Sequence>
+      </Fallback>
+    </Sequence>
+  </BehaviorTree>
+</root>

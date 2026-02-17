@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "small_blue_tile"
+  destination: ""
+  expanded_instruction: "Swipe the small rounded blue tile across the screen to the right"
+  scene_context: "Small rounded blue tile on clear blue screen, not held, screen unobstructed."
+  expected_sequence: "Tap the small blue tile and swipe it right until it moves across the screen or reveals content."

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "blue_bottle"
+  destination: "table"
+  expanded_instruction: "Group actions into an ApproachBlueBottle subtree: approach the blue bottle on the table, pick it up, and place it down on the table surface (retry up to 3 times with a 10s timeout; if grasp fails, push to reposition)."
+  scene_context: "Blue bottle upright on the table near center; robot not holding it; table surface clear."
+  expected_sequence: "ApproachBlueBottle subtree: approach the blue bottle, grasp it, then place it down on the table surface — retry up to 3 times within 10s; if grasp fails, push to reposition."

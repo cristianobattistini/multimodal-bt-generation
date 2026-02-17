@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "shoe"
+  destination: ""
+  expanded_instruction: "Pick up the white shoe resting on the blue surface, confirm it is visible before attempting a grasp; if grasp fails retry up to 2 times, and if still unsuccessful push or flip it to reposition before retrying."
+  scene_context: "Single white shoe on a blue surface, not held, surface clear."
+  expected_sequence: "Move to the shoe, confirm it is visible, grasp it securely (retry up to 2 times if needed) and lift it; if grasp fails repeatedly, push or flip the shoe to reposition and then grasp and lift."

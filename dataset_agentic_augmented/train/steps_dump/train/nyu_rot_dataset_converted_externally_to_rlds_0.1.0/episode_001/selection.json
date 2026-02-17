@@ -1,0 +1,36 @@
+{
+  "decorator_type": "mixed",
+  "mixed_subtype": "condition_timeout_retry",
+  "target_action_id": "POUR",
+  "target_obj": "cup",
+  "parameters": {
+    "augmentations": [
+      {
+        "type": "condition",
+        "action_id": "POUR",
+        "obj": "cup",
+        "params": {
+          "condition_id": "IS_HOLDING",
+          "condition_obj": "cup"
+        }
+      },
+      {
+        "type": "timeout",
+        "action_id": "POUR",
+        "obj": "cup",
+        "params": {
+          "msec": 10000
+        }
+      },
+      {
+        "type": "retry",
+        "action_id": "POUR",
+        "obj": "cup",
+        "params": {
+          "num_attempts": 3
+        }
+      }
+    ]
+  },
+  "prompt_name": "mixed/condition_timeout_retry"
+}

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "blue_cup"
+  destination: "brown_cup"
+  expanded_instruction: "Pick up the blue cup from the table and place it into the brown cup; when grasping use a 15s timeout and retry up to 2 times, and if grasp fails, push or flip the cup to reposition."
+  scene_context: "Blue cup on table left of upright brown cup; brown cup open and reachable; robot not holding anything."
+  expected_sequence: "Move to the blue cup, attempt grasp (15s timeout, retry up to 2 times); if grasp fails, push or flip to reposition, then move over the brown cup and place the blue cup into it."

@@ -1,0 +1,14 @@
+{
+  "decorator_type": "subtree",
+  "mixed_subtype": null,
+  "target_action_id": "NAVIGATE_TO",
+  "target_obj": "white_plate",
+  "parameters": {
+    "subtree_name": "ApproachWhitePlate",
+    "action_indices": [
+      0,
+      1
+    ]
+  },
+  "prompt_name": "subtree"
+}

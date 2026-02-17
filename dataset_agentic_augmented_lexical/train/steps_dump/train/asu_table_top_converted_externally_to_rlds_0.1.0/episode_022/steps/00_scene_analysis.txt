@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "green_bottle"
+  destination: ""
+  expanded_instruction: "Pick up the green bottle from the table in front of the robot arm, first checking that the green bottle is reachable; attempt the grasp with a 15 second timeout and retry up to 3 times if it fails."
+  scene_context: "Green bottle on the table within reach, not held; table surface otherwise clear; robot arm nearby."
+  expected_sequence: "Move the arm to the green bottle after confirming it's reachable, attempt a secure grasp (15s timeout) retrying up to 3 times on failure, and then lift it clear of the table."

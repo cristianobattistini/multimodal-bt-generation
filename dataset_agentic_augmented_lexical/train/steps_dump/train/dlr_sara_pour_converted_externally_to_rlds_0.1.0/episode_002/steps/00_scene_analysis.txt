@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "mug"
+  destination: ""
+  expanded_instruction: "Pour liquid from the brown pitcher held by the robot into the white mug on the table, first checking IS_HOLDING on the mug and, if not held, attempt to grasp the mug (retry up to 3 times or reposition) before pouring."
+  scene_context: "White mug on table, robot arm is holding a brown pitcher above the mug; table clear."
+  expected_sequence: "Check IS_HOLDING on the mug before POUR; if not holding, grasp or reposition the mug (retry up to 3 times), then bring the pitcher over the mug, tilt to pour into the mug, then upright the pitcher when done."

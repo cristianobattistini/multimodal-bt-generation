@@ -1,0 +1,1 @@
+Pick up the bread. If placing on top fails, push the plate to clear obstacles and retry placing on top.

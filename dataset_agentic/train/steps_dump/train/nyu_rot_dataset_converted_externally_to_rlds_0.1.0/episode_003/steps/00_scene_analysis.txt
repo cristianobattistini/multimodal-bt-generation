@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "box"
+  destination: ""
+  expanded_instruction: "Open the closed box sitting on the table next to the robot arm"
+  scene_context: "Box is closed on the table next to the robot arm; lid appears closed and not held."
+  expected_sequence: "Move the arm to the box, grasp and lift or flip the lid to open the box."

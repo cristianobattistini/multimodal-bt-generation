@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "lid"
+  destination: ""
+  expanded_instruction: "Group approach actions into an ApproachPot subtree, then lift up the lid from the pot sitting on the counter"
+  scene_context: "Pot on counter with lid closed; robot arm not holding anything; counter area clear."
+  expected_sequence: "Use an ApproachPot subtree to approach the pot, grasp the lid (retry up to 3 times, within 10s timeout; if grasp fails, push to reposition), and lift it off the pot."

@@ -1,0 +1,14 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Go to drawer -->
+      <Action ID="GO_TO" obj="drawer" />
+      <!-- Grasp drawer -->
+      <Action ID="GRASP" obj="drawer" />
+      <!-- Open up drawer -->
+      <Action ID="OPEN_UP" obj="drawer" />
+      <!-- Release -->
+      <Action ID="RELEASE" />
+    </Sequence>
+  </BehaviorTree>
+</root>

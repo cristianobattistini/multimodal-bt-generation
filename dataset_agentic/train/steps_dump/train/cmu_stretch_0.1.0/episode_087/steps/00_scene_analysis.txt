@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "door"
+  destination: ""
+  expanded_instruction: "Open the white cabinet door on the small white sideboard"
+  scene_context: "White cabinet doors are closed; handles visible; nothing is held and countertop is clear."
+  expected_sequence: "Move to the cabinet, grasp the door handle, and pull the door open."

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "["pan", "fish", "sausage"]"
+  destination: "stove"
+  expanded_instruction: "Pick up the pan from the counter edge and place it on the stove, then check IS_REACHABLE on the fish before navigating (if not reachable use NAVIGATE_TO with a 15s timeout), then pick up the fish and the sausage from the placemat and put them into the pan."
+  scene_context: "A dark grey pan sits near the counter edge; three pans already on the stove; fish and sausage lie on the placemat; no containers are closed."
+  expected_sequence: "Lift the pan and set it on an empty burner, then check that the fish is reachable and, if needed, NAVIGATE_TO the placemat (within a 15s timeout), then pick up the fish and sausage one by one and place them into the pan."

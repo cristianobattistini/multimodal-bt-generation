@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "bottle"
+  destination: ""
+  expanded_instruction: "Pick up the green plastic bottle lying on the blue surface. Group approach and alignment actions into an ApproachBottle subtree; if the initial grasp fails, retry the grasp up to 2 times."
+  scene_context: "Bottle lying on a blue cloth surface, not held, surface clear and reachable."
+  expected_sequence: "Move to the bottle (approach and align within an ApproachBottle subtree), grasp it securely (retry grasp up to 2 times if needed), and lift it off the surface."

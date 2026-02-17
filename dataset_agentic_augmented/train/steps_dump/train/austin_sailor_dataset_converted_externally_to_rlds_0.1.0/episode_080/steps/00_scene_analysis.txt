@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "["bread", "butter", "milk"]"
+  destination: "serving_area"
+  expanded_instruction: "Group approach actions into an ApproachBread subtree: pick up the bread, butter, and milk from the table and place them onto the serving area (round plate). If a grasp fails, retry up to 3 times with a 10s timeout and, if needed, push to reposition before retrying."
+  scene_context: "Bread, butter packet, and small milk carton are on the table; serving area (round plate) is clear and reachable."
+  expected_sequence: "For each item, within the ApproachBread subtree, approach and grasp it from the table and place it onto the round serving plate; if grasp fails, push to reposition and retry up to 3 times within a 10s timeout."

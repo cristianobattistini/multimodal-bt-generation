@@ -1,0 +1,31 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Timeout: NAVIGATE_TO kcup_holder within 20s -->
+      <Timeout msec="20000">
+        <!-- Navigate to kcup_holder -->
+        <Action ID="NAVIGATE_TO" obj="kcup_holder" />
+      </Timeout>
+      <!-- Open kcup_holder -->
+      <Action ID="OPEN" obj="kcup_holder" />
+      <!-- Navigate to kcup -->
+      <Action ID="NAVIGATE_TO" obj="kcup" />
+      <!-- Grasp kcup -->
+      <Action ID="GRASP" obj="kcup" />
+      <!-- Timeout: NAVIGATE_TO kcup_holder within 20s -->
+      <Timeout msec="20000">
+        <!-- Navigate to kcup_holder -->
+        <Action ID="NAVIGATE_TO" obj="kcup_holder" />
+      </Timeout>
+      <!-- Place inside kcup_holder -->
+      <Action ID="PLACE_INSIDE" obj="kcup_holder" />
+      <!-- Timeout: NAVIGATE_TO kcup_holder within 20s -->
+      <Timeout msec="20000">
+        <!-- Navigate to kcup_holder -->
+        <Action ID="NAVIGATE_TO" obj="kcup_holder" />
+      </Timeout>
+      <!-- Close kcup_holder -->
+      <Action ID="CLOSE" obj="kcup_holder" />
+    </Sequence>
+  </BehaviorTree>
+</root>

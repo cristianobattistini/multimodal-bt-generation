@@ -1,0 +1,1 @@
+Open the kcup holder, insert the kcup into the holder, and close the kcup holder. Use ApproachKcupHolder subtree for approach and grasp.

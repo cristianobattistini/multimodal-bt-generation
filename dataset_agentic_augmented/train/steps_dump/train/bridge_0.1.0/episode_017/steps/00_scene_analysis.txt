@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "colander"
+  destination: "table"
+  expanded_instruction: "Using the ApproachColander subtree, pick up the colander and place it on the table in front of the red_spoon (closer to the front edge); within a 10s timeout, retry approach/grasp up to 3 times and if grasp fails push to reposition."
+  scene_context: "Colander on right table edge, red_spoon upright near back-right, table clear and nothing is held."
+  expected_sequence: "ApproachColander subtree: move to the colander (retry up to 3 times, 10s timeout), grasp and lift it (if grasp fails, push to reposition), slide forward on the table and set it down between the spoon and front edge."

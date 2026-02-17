@@ -1,0 +1,10 @@
+{
+  "decorator_type": "retry",
+  "mixed_subtype": null,
+  "target_action_id": "PLACE_ON_TOP",
+  "target_obj": "plate",
+  "parameters": {
+    "num_attempts": 4
+  },
+  "prompt_name": "retry"
+}

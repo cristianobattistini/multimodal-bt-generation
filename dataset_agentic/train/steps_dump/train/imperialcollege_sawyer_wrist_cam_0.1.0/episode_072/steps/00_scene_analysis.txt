@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "cap"
+  destination: "bottle"
+  expanded_instruction: "Pick up the cap and insert it into the bottle opening until it is seated."
+  scene_context: "Bottle is open on a blue cloth, cap is nearby on the cloth and not held, surface clear."
+  expected_sequence: "Reach for the cap, pick it up, align it with the bottle opening, and insert it until seated."

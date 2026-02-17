@@ -1,0 +1,1 @@
+Place the teapot on the stove. Retry placing on top up to 4 times if it fails.

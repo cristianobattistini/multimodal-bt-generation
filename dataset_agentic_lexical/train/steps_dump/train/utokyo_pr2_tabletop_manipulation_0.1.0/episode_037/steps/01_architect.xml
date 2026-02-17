@@ -1,0 +1,20 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Go to pink_cloth -->
+      <Action ID="GO_TO" obj="pink_cloth" />
+      <!-- Latch onto pink_cloth -->
+      <Action ID="LATCH_ONTO" obj="pink_cloth" />
+      <!-- Crease pink_cloth -->
+      <Action ID="CREASE" obj="pink_cloth" />
+      <!-- Fold pink_cloth (second fold to make smaller rectangle) -->
+      <Action ID="FOLD" obj="pink_cloth" />
+      <!-- Scrub pink_cloth -->
+      <Action ID="SCRUB" obj="pink_cloth" />
+      <!-- Approach table -->
+      <Action ID="APPROACH" obj="table" />
+      <!-- Put on table -->
+      <Action ID="PUT_ON" obj="table" />
+    </Sequence>
+  </BehaviorTree>
+</root>

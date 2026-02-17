@@ -1,0 +1,14 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <Sequence>
+        <!-- Check maroon_square is reachable before NAVIGATE_TO -->
+        <Condition ID="IS_REACHABLE" obj="maroon_square" />
+        <!-- Navigate to maroon_square -->
+        <Action ID="NAVIGATE_TO" obj="maroon_square" />
+      </Sequence>
+      <!-- Push maroon_square forward toward front edge of table -->
+      <Action ID="PUSH" obj="maroon_square" />
+    </Sequence>
+  </BehaviorTree>
+</root>

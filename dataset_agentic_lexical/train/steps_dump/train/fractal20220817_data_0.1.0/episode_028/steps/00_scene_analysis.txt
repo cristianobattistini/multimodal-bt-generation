@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "pepsi_can"
+  destination: "counter"
+  expanded_instruction: "Pick up the pepsi can from the open top drawer and place it on the counter."
+  scene_context: "Top drawer is open with the pepsi_can inside; counter surface has items but a clear spot is reachable."
+  expected_sequence: "Reach into the open top drawer, grasp the pepsi_can, lift it out, move to the counter, and place it down."

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "["bread", "butter", "milk"]"
+  destination: "serving_area"
+  expanded_instruction: "Pick up the bread, butter, and milk from the table and place them onto the serving area. For each item, attempt a grasp (retry up to 3 times within a 10s timeout); if grasp fails, use push or flip to reposition the object and then grasp."
+  scene_context: "Bread on plate near center, butter stick on placemat bottom, milk carton near top-left; serving_area clear; no containers closed."
+  expected_sequence: "Pick each item from the table (bread, then butter, then milk) and place them onto the serving area, attempting a grasp for each (retry up to 3 times within 10s); if grasp fails, push or flip to reposition the item and retry the grasp before placing."

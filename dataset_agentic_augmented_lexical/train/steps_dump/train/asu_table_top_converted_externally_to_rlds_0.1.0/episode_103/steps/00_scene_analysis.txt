@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "red_can"
+  destination: "table"
+  expanded_instruction: "Check that the red can is reachable, then pick it up (retry grasp up to 3 times); if grasp fails, push or flip the can to reposition it, then place it down on the table."
+  scene_context: "Red can upright on table center-front; robot not holding it; table surface is clear."
+  expected_sequence: "Move to the red can, check IS_REACHABLE, attempt to pick it up (retry grasp up to 3 times); if grasp fails, use PUSH or FLIP to reposition the can, then place it on the table."

@@ -1,0 +1,26 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to canned_spam -->
+      <Action ID="NAVIGATE_TO" obj="canned_spam" />
+      <!-- Grasp canned_spam -->
+      <Action ID="GRASP" obj="canned_spam" />
+      <!-- Navigate to sink -->
+      <Action ID="NAVIGATE_TO" obj="sink" />
+      <!-- Fallback: if PLACE_INSIDE sink fails, try alternative to reposition -->
+      <Fallback>
+        <!-- Retry PLACE_INSIDE sink up to 3 attempts -->
+        <RetryUntilSuccessful num_attempts="3">
+          <!-- Place inside sink -->
+          <Action ID="INSERT_INTO" obj="sink" />
+        </RetryUntilSuccessful>
+        <Sequence>
+          <!-- Push sink forward toward front edge of table -->
+          <Action ID="PUSH" obj="sink" />
+          <!-- Place inside sink -->
+          <Action ID="PLACE_INSIDE" obj="sink" />
+        </Sequence>
+      </Fallback>
+    </Sequence>
+  </BehaviorTree>
+</root>

@@ -1,0 +1,19 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to banana -->
+      <Action ID="NAVIGATE_TO" obj="banana" />
+      <!-- Fallback: if GRASP banana fails, try PUSH, FLIP to reposition -->
+      <Fallback>
+        <!-- Grasp banana -->
+        <Action ID="GRASP" obj="banana" />
+        <Sequence>
+          <!-- Push banana forward toward front edge of table -->
+          <Action ID="PUSH" obj="banana" />
+          <!-- Grasp banana -->
+          <Action ID="GRASP" obj="banana" />
+        </Sequence>
+      </Fallback>
+    </Sequence>
+  </BehaviorTree>
+</root>

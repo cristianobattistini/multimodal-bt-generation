@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "blue_pen"
+  destination: ""
+  expanded_instruction: "Group actions into an ApproachTable subtree: avoid the obstacle and reach the blue pen standing in the black holder on the table. In the ApproachTable subtree, approach the table/pen holder with a 10s timeout and retry up to 3 times if blocked; if grasp fails, push to reposition and retry."
+  scene_context: "Blue pen upright in black holder on table; stack of books between robot and pen; white arm obstacle present and moving."
+  expected_sequence: "ApproachTable subtree: move around the books/white arm obstacle (retry up to 3x, 10s timeout), approach the pen holder, and grasp the blue pen (if grasp fails, push to reposition and retry)."

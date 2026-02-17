@@ -1,0 +1,1 @@
+Place the teapot on the stove. Only navigate to the stove if it is reachable.

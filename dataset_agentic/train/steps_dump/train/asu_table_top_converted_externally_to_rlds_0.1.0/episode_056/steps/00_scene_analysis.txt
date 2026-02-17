@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "red_milk_box"
+  destination: ""
+  expanded_instruction: "Push the red milk box on the table forward along the tabletop"
+  scene_context: "Red milk box on table among items, not held; table surface clear in front of box; robot arm not holding it."
+  expected_sequence: "Move the arm to contact the milk box and push it forward across the table until it shifts position."

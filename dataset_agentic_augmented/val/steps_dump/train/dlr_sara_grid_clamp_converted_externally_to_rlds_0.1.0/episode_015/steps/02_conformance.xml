@@ -1,0 +1,19 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to grid_clamp -->
+      <Action ID="NAVIGATE_TO" obj="grid_clamp" />
+      <!-- Grasp grid_clamp -->
+      <Action ID="GRASP" obj="grid_clamp" />
+      <!-- Check grid_board is visible before NAVIGATE_TO -->
+      <Condition ID="IS_VISIBLE" obj="grid_board" />
+      <!-- Timeout: NAVIGATE_TO grid_board within 10s -->
+      <Timeout msec="10000">
+        <!-- Navigate to grid_board -->
+        <Action ID="NAVIGATE_TO" obj="grid_board" />
+      </Timeout>
+      <!-- Place inside grid_board -->
+      <Action ID="PLACE_INSIDE" obj="grid_board" />
+    </Sequence>
+  </BehaviorTree>
+</root>

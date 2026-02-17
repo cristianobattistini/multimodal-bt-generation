@@ -1,0 +1,16 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to pitcher -->
+      <Action ID="NAVIGATE_TO" obj="pitcher"/>
+      <!-- Grasp pitcher -->
+      <Action ID="GRASP" obj="pitcher"/>
+      <!-- Navigate to mug -->
+      <Action ID="NAVIGATE_TO" obj="mug"/>
+      <!-- Pour mug -->
+      <Action ID="POUR" obj="mug"/>
+      <!-- Release -->
+      <Action ID="RELEASE"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

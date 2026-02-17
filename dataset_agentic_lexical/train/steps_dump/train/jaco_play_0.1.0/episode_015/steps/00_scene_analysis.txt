@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "burger_meat"
+  destination: ""
+  expanded_instruction: "Pick up the burger meat (brown patty) sitting on the table next to the black bowl"
+  scene_context: "Griddle with raw meat present; brown patty on table beside black bowl; robot not holding anything."
+  expected_sequence: "Approach the brown patty next to the black bowl and grasp it to lift it up."

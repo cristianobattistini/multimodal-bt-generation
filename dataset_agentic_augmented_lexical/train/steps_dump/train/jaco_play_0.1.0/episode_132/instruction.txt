@@ -1,0 +1,1 @@
+pick up the square bread. Use a 10 second timeout for grasping and retry up to 3 times if it fails.

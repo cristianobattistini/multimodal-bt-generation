@@ -1,0 +1,22 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Go to wrinkled_towel -->
+      <Action ID="GO_TO" obj="wrinkled_towel" />
+      <!-- Retry GRASP wrinkled_towel up to 3 attempts -->
+      <RetryUntilSuccessful num_attempts="3">
+        <!-- Timeout: GRASP wrinkled_towel within 10s -->
+        <Timeout msec="10000">
+          <!-- Grasp wrinkled_towel -->
+          <Action ID="GRIP" obj="wrinkled_towel" />
+        </Timeout>
+      </RetryUntilSuccessful>
+      <!-- Grip wrinkled_towel -->
+      <Action ID="MOVE_TO" obj="table" />
+      <!-- Move to table -->
+      <Action ID="UNFOLD" obj="wrinkled_towel" />
+      <!-- Place on table -->
+      <Action ID="PLACE_ON_TOP" obj="wrinkled_towel" surface="table" />
+    </Sequence>
+  </BehaviorTree>
+</root>

@@ -1,0 +1,1 @@
+Raise maroon square. Retry grasping up to 3 times if it fails.

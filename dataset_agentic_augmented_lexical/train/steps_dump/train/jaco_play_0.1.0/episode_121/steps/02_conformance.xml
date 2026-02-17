@@ -1,0 +1,23 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to apple -->
+      <Action ID="NAVIGATE_TO" obj="apple" />
+      <!-- Grip apple -->
+      <Action ID="GRIP" obj="apple" />
+      <!-- Move to table -->
+      <Action ID="MOVE_TO" obj="table" />
+      <!-- Fallback: if PLACE_ON_TOP table fails, try PUSH to reposition -->
+      <Fallback>
+        <!-- Place on table -->
+        <Action ID="PLACE_ON_TOP" obj="apple" surface="table" />
+        <Sequence>
+          <!-- Push table forward toward front edge of table -->
+          <Action ID="NUDGE" obj="table" />
+          <!-- Place on table -->
+          <Action ID="SET_ON" obj="table" />
+        </Sequence>
+      </Fallback>
+    </Sequence>
+  </BehaviorTree>
+</root>

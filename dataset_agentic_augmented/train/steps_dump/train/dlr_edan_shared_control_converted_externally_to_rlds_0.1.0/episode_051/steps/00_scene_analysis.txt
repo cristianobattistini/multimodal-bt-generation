@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "cube"
+  destination: ""
+  expanded_instruction: "Confirm the small white cube on top of the black shelf is visible, then approach and grasp it (grasp attempt within a 15s timeout); if grasp fails, try pushing or flipping to reposition and then grasp."
+  scene_context: "White cube resting on top of a black shelf; shelf is accessible and nothing is blocking the cube."
+  expected_sequence: "Approach the shelf, check the cube is visible, attempt to grasp and lift the cube clear of the shelf within a 15s grasp timeout; if a grasp fails, retry by pushing or flipping to reposition and then grasp."

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "dishes"
+  destination: "dish_rack"
+  expanded_instruction: "Pick up the yellow plate from the drying mat and place it into the dish_rack slots; if the PLACE_INSIDE action fails, retry up to 4 times."
+  scene_context: "Plate on cloth drying mat to the right; dish_rack open and empty; cup upright on mat."
+  expected_sequence: "Reach the plate, lift it, align it vertically over a rack slot, and place it into the dish_rack; if PLACE_INSIDE fails, retry the placement up to 4 times."

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "white_carton"
+  destination: "table"
+  expanded_instruction: "Pick up the white carton from the right side of the table and place it on the front-right edge of the table."
+  scene_context: "White_carton sits on the right side of a clear table; robot arm is free and no containers are closed."
+  expected_sequence: "Move to the white carton, grasp it, and place it on the front-right edge of the table."

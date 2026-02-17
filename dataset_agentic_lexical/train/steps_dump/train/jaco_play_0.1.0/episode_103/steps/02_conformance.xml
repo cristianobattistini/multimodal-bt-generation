@@ -1,0 +1,10 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Approach dish_rack -->
+      <Action ID="APPROACH" obj="dish_rack" />
+      <!-- Put in dish_rack -->
+      <Action ID="PUT_IN" obj="dish_rack" />
+    </Sequence>
+  </BehaviorTree>
+</root>

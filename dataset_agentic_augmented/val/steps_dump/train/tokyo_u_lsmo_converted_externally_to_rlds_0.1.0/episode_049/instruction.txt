@@ -1,0 +1,1 @@
+avoid obstacle and reach the scissors. Retry grasping up to 2 times; if all fail, use PUSH as Plan B.

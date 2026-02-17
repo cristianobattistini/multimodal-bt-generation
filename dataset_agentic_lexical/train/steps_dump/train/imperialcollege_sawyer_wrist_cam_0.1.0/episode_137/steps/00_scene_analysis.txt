@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "white_dot"
+  destination: ""
+  expanded_instruction: "Swipe the small white dot on the blue cloth to move it off its current spot"
+  scene_context: "A small white dot rests on a blue cloth near utensil-shaped objects; no containers, surface unobstructed."
+  expected_sequence: "Move to the dot and swipe it across the cloth toward the nearest clear edge to clear the spot."

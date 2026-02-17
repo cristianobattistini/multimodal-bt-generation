@@ -1,0 +1,12 @@
+{
+  "decorator_type": "condition",
+  "mixed_subtype": null,
+  "target_action_id": "FLIP",
+  "target_obj": "red_pitcher",
+  "parameters": {
+    "condition_id": "IS_HOLDING",
+    "condition_obj": "red_pitcher",
+    "allowed_conditions": "IS_HOLDING"
+  },
+  "prompt_name": "condition"
+}

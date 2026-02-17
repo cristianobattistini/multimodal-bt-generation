@@ -1,0 +1,12 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to black_shelf -->
+      <Action ID="NAVIGATE_TO" obj="black_shelf" />
+      <!-- Approach disk -->
+      <Action ID="APPROACH" obj="disk" />
+      <!-- Grip disk -->
+      <Action ID="GRIP" obj="disk" />
+    </Sequence>
+  </BehaviorTree>
+</root>

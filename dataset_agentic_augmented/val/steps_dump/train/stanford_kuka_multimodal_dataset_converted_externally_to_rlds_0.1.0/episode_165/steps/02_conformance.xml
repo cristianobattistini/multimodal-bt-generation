@@ -1,0 +1,17 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to pegboard_hole -->
+      <Action ID="NAVIGATE_TO" obj="pegboard_hole" />
+      <!-- Retry PLACE_INSIDE pegboard_hole up to 3 attempts -->
+      <RetryUntilSuccessful num_attempts="3">
+        <!-- Timeout: PLACE_INSIDE pegboard_hole within 20s -->
+        <Timeout msec="20000">
+          <!-- Place inside pegboard_hole -->
+          <Action ID="PLACE_INSIDE" obj="pegboard_hole" />
+        </Timeout>
+      </RetryUntilSuccessful>
+      
+    </Sequence>
+  </BehaviorTree>
+</root>

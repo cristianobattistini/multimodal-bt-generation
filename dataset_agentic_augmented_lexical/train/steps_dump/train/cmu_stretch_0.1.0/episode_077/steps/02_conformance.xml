@@ -1,0 +1,16 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Approach pot -->
+      <Action ID="APPROACH" obj="pot" />
+      <Sequence>
+        <!-- Check lid is visible before NAVIGATE_TO -->
+        <Condition ID="IS_VISIBLE" obj="lid" />
+        <!-- Navigate to lid -->
+        <Action ID="APPROACH" obj="lid" />
+      </Sequence>
+      <!-- Approach lid -->
+      <Action ID="GRAB" obj="lid" />
+    </Sequence>
+  </BehaviorTree>
+</root>

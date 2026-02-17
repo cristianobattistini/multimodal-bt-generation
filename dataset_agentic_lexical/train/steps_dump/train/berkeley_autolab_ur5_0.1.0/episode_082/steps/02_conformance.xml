@@ -1,0 +1,10 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Move to green_cloth -->
+      <Action ID="MOVE_TO" obj="green_cloth" />
+      <!-- Push green_cloth to left side of table -->
+      <Action ID="PUSH" obj="green_cloth" />
+    </Sequence>
+  </BehaviorTree>
+</root>

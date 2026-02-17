@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "red_can"
+  destination: ""
+  expanded_instruction: "Pick up the red can from the table near the right side, attempting the grasp with a 15s timeout, retrying up to 2 times, and if grasp fails use push or flip to reposition the can."
+  scene_context: "Red can on table near right side; table is clear; no containers open; robot not holding anything."
+  expected_sequence: "Approach the red can, attempt to grasp it (15s timeout) and lift it; retry the grasp up to 2 times if needed, and if grasping fails use push or flip to reposition before trying again."

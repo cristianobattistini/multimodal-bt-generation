@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "cup"
+  destination: "dishwasher"
+  expanded_instruction: "Using the ApproachCup subtree, pick up the cup from the counter edge and place it into the dishwasher basket; retry approach/grasp up to 3 times with a 10s timeout, and if grasp fails, push to reposition."
+  scene_context: "Dishwasher door is open and basket is visible; cup sits on the counter edge near the dishwasher."
+  expected_sequence: "ApproachCup subtree: reach the cup, lift it, move over the open dishwasher, and place it in the basket; retry approach/grasp up to 3 times within 10s, and if grasp fails, push to reposition."

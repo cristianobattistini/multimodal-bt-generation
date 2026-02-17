@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "banana"
+  destination: ""
+  expanded_instruction: "Using the ApproachWhiteBowl subtree (group approach actions; retry up to 3 times, 10s timeout), pick the banana from the white bowl on the countertop."
+  scene_context: "White bowl of bananas sits on a clear countertop; robot arm not holding anything and bowl is open."
+  expected_sequence: "Approach the bowl (as ApproachWhiteBowl subtree), reach in, grasp a banana, and lift it out of the bowl; if grasp fails, push to reposition and retry up to 3 times within a 10s timeout."

@@ -1,0 +1,17 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to cucumber -->
+      <Action ID="NAVIGATE_TO" obj="cucumber" />
+      <!-- Retry GRASP cucumber up to 3 attempts -->
+      <RetryUntilSuccessful num_attempts="3">
+        <!-- Grasp cucumber -->
+        <Action ID="GRASP" obj="cucumber" />
+      </RetryUntilSuccessful>
+      <!-- Navigate to counter -->
+      <Action ID="NAVIGATE_TO" obj="counter" />
+      <!-- Place on counter -->
+      <Action ID="PLACE_ON_TOP" obj="counter" />
+    </Sequence>
+  </BehaviorTree>
+</root>

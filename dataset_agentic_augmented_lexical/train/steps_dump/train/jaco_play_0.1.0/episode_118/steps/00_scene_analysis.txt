@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "steak_meat"
+  destination: ""
+  expanded_instruction: "Pick up the steak meat from the table next to the orange and blue basin, first check it is graspable, then grasp it (retry up to 3 times with a 10s timeout per attempt)."
+  scene_context: "Steak on table near an orange and blue basin; nothing is holding it; table surface is clear."
+  expected_sequence: "Approach the steak, verify IS_GRASPABLE, grasp it securely (allowing up to 3 retries, each within a 10s timeout) and lift it off the table."

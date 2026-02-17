@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "white_object"
+  destination: "pot_on_table"
+  expanded_instruction: "Pick up the white object from the table and place it into the pot on the table, retrying the place action up to 3 times if it fails."
+  scene_context: "Pot on table is empty and reachable; white object resting on table not held; table otherwise clear."
+  expected_sequence: "Approach the white object, pick it up, move to the pot, and place it inside, retrying the place action up to 3 times if it fails."

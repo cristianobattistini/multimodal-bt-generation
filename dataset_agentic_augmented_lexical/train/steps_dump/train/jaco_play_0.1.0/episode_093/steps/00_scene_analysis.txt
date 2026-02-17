@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "butter_dairy"
+  destination: "black_bowl"
+  expanded_instruction: "Confirm the butter_dairy is visible, then pick it up from the table (retry grasp up to 3 times; if grasp fails, push or flip to reposition) and place it into the black_bowl inside the blue tray"
+  scene_context: "Black_bowl is in the blue tray on the table; butter_dairy is on the table and not held; no containers are closed."
+  expected_sequence: "Move to the butter_dairy, confirm it is visible, grasp it (retry up to 3 times; if grasp fails, push or flip to reposition and try again), move to the black_bowl, and place it inside."

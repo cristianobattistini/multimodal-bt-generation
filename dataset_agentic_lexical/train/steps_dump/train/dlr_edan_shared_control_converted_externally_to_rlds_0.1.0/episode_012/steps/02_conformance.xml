@@ -1,0 +1,14 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Move to black_cabinet -->
+      <Action ID="MOVE_TO" obj="black_cabinet" />
+      <!-- Navigate to disk on middle shelf right side -->
+      <Action ID="NAVIGATE_TO" obj="disk" />
+      <!-- Grasp disk -->
+      <Action ID="GRASP" obj="disk" />
+      <!-- Release -->
+      <Action ID="RELEASE" />
+    </Sequence>
+  </BehaviorTree>
+</root>

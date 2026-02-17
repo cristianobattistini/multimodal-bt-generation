@@ -1,0 +1,14 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Approach rxbar_chocolate -->
+      <Action ID="APPROACH" obj="rxbar_chocolate" />
+      <!-- Grab rxbar_chocolate -->
+      <Action ID="GRAB" obj="rxbar_chocolate" />
+      <!-- Navigate to middle_drawer -->
+      <Action ID="NAVIGATE_TO" obj="middle_drawer" />
+      <!-- Set in middle_drawer -->
+      <Action ID="SET_IN" obj="middle_drawer" />
+    </Sequence>
+  </BehaviorTree>
+</root>

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "corn"
+  destination: "pan_on_stove"
+  expanded_instruction: "Check that the corn is reachable, then pick up the corn from the counter (if a grasp fails, retry up to 3 times with a 15s timeout each) and place it into the pan on the stove."
+  scene_context: "Corn sits on the counter not held; pan on the stove is reachable and appears empty; sink has an orange item."
+  expected_sequence: "Verify corn is reachable, reach for the corn, attempt to lift it (grasp may be retried up to 3 times with a 15s timeout), bring it over the pan on the stove, and put it into the pan."

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "["bread", "butter", "milk"]"
+  destination: "serving_area"
+  expanded_instruction: "Pick up the bread, butter, and milk from the table placemat and place them onto the serving_area plate. Before grasping the butter check it is visible; each GRASP should have a 10s timeout and be retried up to 2 times if it fails."
+  scene_context: "Bread on placemat right, butter on placemat bottom, milk carton near top-left; serving_area plate empty and reachable; no containers open."
+  expected_sequence: "Pick each item from the placemat (bread, butter, milk) and place them onto the serving_area plate. For butter, check IS_VISIBLE before GRASP; each GRASP has a 10s timeout and may be retried up to 2 times on failure."

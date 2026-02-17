@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "orange_fruit"
+  destination: ""
+  expanded_instruction: "Use an ApproachOrangeFruit subtree: pick up the orange fruit resting in the blue tray at the right side of the table; retry up to 3 times within a 10s timeout, and if a grasp fails, push to reposition."
+  scene_context: "Orange fruit resting in a blue tray at the right; not held; table surface around it is clear."
+  expected_sequence: "Within the ApproachOrangeFruit subtree: move to the orange, grasp it from the tray, and lift it clear of the tray; retry up to 3 times within 10s, and if grasp fails, push to reposition."

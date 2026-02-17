@@ -1,0 +1,6 @@
+scene_analysis:
+  target: ["yellow_plate", "white_cup"]
+  destination: "dish_rack"
+  expanded_instruction: "Pick up the yellow plate and white cup from the towel and place them into the dish_rack."
+  scene_context: "Yellow plate and white cup rest on the towel beside an empty, open dish_rack."
+  expected_sequence: "Pick up the plate from the towel and place it in the slotted area of the dish_rack, then pick up the cup and set it upright in the rack."

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "croissant"
+  destination: "table"
+  expanded_instruction: "Within the ApproachCroissant subtree, move to and push the croissant across the tabletop toward the right side of the table, retrying up to 3 times with a 10s timeout if positioning or push fails."
+  scene_context: "Croissant resting on table; table surface clear to the right; robot not holding the croissant."
+  expected_sequence: "ApproachCroissant subtree: move to the croissant and push it along the table until it reaches the right side, retry up to 3 times (10s timeout); if positioning or grasp fails, push to reposition."

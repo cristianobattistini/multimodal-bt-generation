@@ -1,0 +1,44 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Go to fish -->
+      <Action ID="GO_TO" obj="fish" />
+      <!-- Grasp fish -->
+      <Action ID="GRASP" obj="fish" />
+      <!-- Approach frying_pan -->
+      <Action ID="APPROACH" obj="frying_pan" />
+      <!-- Place inside frying_pan -->
+      <Action ID="PLACE_INSIDE" obj="frying_pan" />
+      <!-- Approach sausage -->
+      <Action ID="APPROACH" obj="sausage" />
+      <!-- Check sausage is visible before GRASP -->
+      <Condition ID="IS_VISIBLE" obj="sausage" />
+      <!-- Fallback: if GRASP sausage fails, try alternative to reposition -->
+      <Fallback>
+        <!-- Timeout: GRASP sausage within 15s -->
+        <Timeout msec="15000">
+          <!-- Grasp sausage -->
+          <Action ID="PICK" obj="sausage" />
+        </Timeout>
+        <Sequence>
+          <!-- Push sausage forward toward front edge of table -->
+          <Action ID="SLIDE" obj="sausage" />
+          <!-- Grasp sausage -->
+          <Action ID="GRASP" obj="sausage" />
+        </Sequence>
+      </Fallback>
+      <!-- Pick sausage -->
+      <Action ID="GO_TO" obj="frying_pan" />
+      <!-- Slide sausage -->
+      <Action ID="PUT_IN" obj="frying_pan" />
+      <!-- Navigate to tomato -->
+      <Action ID="NAVIGATE_TO" obj="tomato" />
+      <!-- Go to frying_pan -->
+      <Action ID="GRAB" obj="tomato" />
+      <!-- Put in frying_pan -->
+      <Action ID="MOVE_TO" obj="frying_pan" />
+      <!-- Place inside frying_pan -->
+      <Action ID="PLACE_INSIDE" obj="frying_pan" />
+    </Sequence>
+  </BehaviorTree>
+</root>

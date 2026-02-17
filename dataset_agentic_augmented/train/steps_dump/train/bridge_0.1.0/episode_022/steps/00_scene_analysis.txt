@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "silver_vessel"
+  destination: "purple_cloth"
+  expanded_instruction: "Pick up the silver vessel from the table and place it on the purple cloth; if placing on top fails, retry up to 2 times (within 10s), and if still unsuccessful use a PUSH to reposition the vessel onto the cloth."
+  scene_context: "Silver vessel on table left of a clear purple cloth; vessel not held; cloth unobstructed."
+  expected_sequence: "Approach and grasp the silver vessel, lift it, move over the purple cloth, and place the vessel down on the cloth; if PLACE_ON_TOP fails, retry placement up to 2 times (10s), then use PUSH as an alternative to reposition the object onto the cloth."

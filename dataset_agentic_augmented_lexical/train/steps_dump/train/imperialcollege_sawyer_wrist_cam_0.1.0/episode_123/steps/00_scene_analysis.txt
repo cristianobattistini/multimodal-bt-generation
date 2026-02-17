@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "cup"
+  destination: "dishwasher"
+  expanded_instruction: "Group actions into ApproachCup subtree: pick up the pink cup (retry up to 3 times if grasp fails, 10s timeout) and place it into the dishwasher rack"
+  scene_context: "Dishwasher rack is extended and visible; pink cup is on the counter near the rack, not held."
+  expected_sequence: "ApproachCup subtree: pick up the pink cup (retry up to 3 times if grasp fails, 10s timeout) and place it into the extended dishwasher rack."

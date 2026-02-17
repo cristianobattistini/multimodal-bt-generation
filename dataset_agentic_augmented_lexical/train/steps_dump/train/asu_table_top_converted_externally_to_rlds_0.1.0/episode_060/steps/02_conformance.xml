@@ -1,0 +1,20 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Execute subtree ApproachRedObject -->
+      <SubTree ID="ApproachRedObject" />
+    </Sequence>
+  </BehaviorTree>
+  <!-- Subtree definition ApproachRedObject -->
+  <BehaviorTree ID="ApproachRedObject">
+    <Sequence>
+      <!-- Timeout: NAVIGATE_TO red_object within 20s -->
+      <Timeout msec="20000">
+        <!-- Navigate to red_object -->
+        <Action ID="NAVIGATE_TO" obj="red_object" />
+      </Timeout>
+      <!-- Grasp red_object -->
+      <Action ID="GRASP" obj="red_object" />
+    </Sequence>
+  </BehaviorTree>
+</root>

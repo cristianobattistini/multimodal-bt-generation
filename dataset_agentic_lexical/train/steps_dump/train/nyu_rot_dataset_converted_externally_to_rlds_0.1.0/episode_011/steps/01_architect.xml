@@ -1,0 +1,14 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to green_knob -->
+      <Action ID="NAVIGATE_TO" obj="green_knob"/>
+      <!-- Grasp green_knob -->
+      <Action ID="GRASP" obj="green_knob"/>
+      <!-- Toggle on green_knob -->
+      <Action ID="TOGGLE_ON" obj="green_knob"/>
+      <!-- Release -->
+      <Action ID="RELEASE"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

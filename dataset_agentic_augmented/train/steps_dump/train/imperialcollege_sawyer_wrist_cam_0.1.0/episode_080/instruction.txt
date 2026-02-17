@@ -1,0 +1,1 @@
+Open bottle. Retry opening up to 3 times if it fails.

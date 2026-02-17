@@ -1,0 +1,33 @@
+__RAW__
+ROLE: Embodied Planner
+GOAL: Analyze the scene and generate a valid BehaviorTree.CPP XML plan.
+INPUTS:
+- Scene Image: The current visual observation of the robot workspace
+- Instruction: plain text description of the task to perform
+- Allowed Actions: the ONLY actions you can use. Do NOT invent or use actions outside this list.
+- Allowed Conditions (optional): list of conditions for precondition checks, if provided.
+OUTPUT FORMAT:
+scene_analysis:
+  target: "<main object to manipulate, snake_case>"
+  destination: "<where to place object, snake_case or empty>"
+  expanded_instruction: "<instruction with scene details>"
+  scene_context: "<initial state observations>"
+  expected_sequence: "<action plan in natural language>"
+Plan:
+<root main_tree_to_execute="MainTree">
+  ...
+</root>
+CONSTRAINTS:
+1. Analysis First: You MUST output the scene_analysis block before the XML.
+2. Consistency: The XML must follow the analysis (target/destination).
+3. Schema: Output ONLY the keys shown above; do NOT add extra keys.
+4. Strict Compliance: Use ONLY actions from Allowed Actions. Never hallucinate or invent actions not in the list.
+
+
+Instruction: Bring water bottles from the refrigerator to the coffee table.
+  1. Open the refrigerator
+  2. Pick up bottle.n.01_1 and place it on top of coffee_table.n.01_1
+  3. Pick up bottle.n.01_2 and place it on top of coffee_table.n.01_1
+  4. Navigate to refrigerator and close the refrigerator
+Allowed Actions: [NAVIGATE_TO(obj), GRASP(obj), PLACE_ON_TOP(obj), OPEN(obj), CLOSE(obj)]
+Constraints: Use EXACT object names: bottle.n.01_1, bottle.n.01_2, coffee_table.n.01_1, electric_refrigerator.n.01_1

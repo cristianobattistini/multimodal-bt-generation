@@ -1,0 +1,6 @@
+scene_analysis:
+  target: ["small_bowl", "large_bowl"]
+  destination: "large_bowl"
+  expanded_instruction: "Pick up the small bowl and place it inside the large bowl so they are stacked."
+  scene_context: "Two bowls on the table; one larger bowl is empty and reachable; neither is held."
+  expected_sequence: "Pick up the small bowl, move it over the large bowl, and place it inside to nest them."

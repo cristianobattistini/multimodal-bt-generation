@@ -1,0 +1,19 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Execute subtree ApproachMetalWireShelf -->
+      <SubTree ID="ApproachMetalWireShelf" />
+      <!-- Grasp pear -->
+      <Action ID="GRASP" obj="pear" />
+    </Sequence>
+  </BehaviorTree>
+  <!-- Subtree definition ApproachMetalWireShelf -->
+  <BehaviorTree ID="ApproachMetalWireShelf">
+    <Sequence>
+      <!-- Navigate to metal_wire_shelf -->
+      <Action ID="NAVIGATE_TO" obj="metal_wire_shelf" />
+      <!-- Navigate to pear -->
+      <Action ID="NAVIGATE_TO" obj="pear" />
+    </Sequence>
+  </BehaviorTree>
+</root>

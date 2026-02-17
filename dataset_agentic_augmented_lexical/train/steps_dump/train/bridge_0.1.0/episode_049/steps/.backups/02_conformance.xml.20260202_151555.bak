@@ -1,0 +1,27 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to cucumber -->
+      <Action ID="NAVIGATE_TO" obj="cucumber" />
+      <!-- Grasp cucumber -->
+      <Action ID="GRASP" obj="cucumber" />
+      <!-- Fallback: if FLIP cucumber fails, try PUSH to reposition -->
+      <Fallback>
+        <!-- Return cucumber upright (flip) -->
+        <Action ID="FLIP" obj="cucumber" />
+        <Sequence>
+          <!-- Push cucumber forward toward front edge of table -->
+          <Action ID="PUSH" obj="cucumber" />
+          <!-- Return cucumber upright (flip) -->
+          <Action ID="FLIP" obj="cucumber" />
+        </Sequence>
+      </Fallback>
+      <!-- Navigate to orange_bowl -->
+      <Action ID="NAVIGATE_TO" obj="orange_bowl" />
+      <!-- Place inside orange_bowl -->
+      <Action ID="PLACE_INSIDE" obj="orange_bowl" />
+      <!-- Release -->
+      <Action ID="RELEASE" />
+    </Sequence>
+  </BehaviorTree>
+</root>

@@ -1,0 +1,13 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to green_cup -->
+      <Action ID="NAVIGATE_TO" obj="green_cup" />
+      <!-- Retry GRASP green_cup up to 3 attempts -->
+      <RetryUntilSuccessful num_attempts="3">
+        <!-- Grasp green_cup -->
+        <Action ID="GRASP" obj="green_cup" />
+      </RetryUntilSuccessful>
+    </Sequence>
+  </BehaviorTree>
+</root>

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "white_box"
+  destination: "table"
+  expanded_instruction: "Check that the white box is visible, then pick up the white box from the table and place it on the table (relocate it to a clear spot). If not visible, retry visibility check up to 3 times within 10s; if grasp fails, push to reposition and retry."
+  scene_context: "White box on table between orange blocks and green bottle; table is open and arm is not holding anything."
+  expected_sequence: "Verify white box IS_VISIBLE (retry up to 3 times within 10s if needed); move to the white box, grasp it, lift and relocate it to a clear spot on the table, then set it down. If grasp fails, push to reposition and reattempt."

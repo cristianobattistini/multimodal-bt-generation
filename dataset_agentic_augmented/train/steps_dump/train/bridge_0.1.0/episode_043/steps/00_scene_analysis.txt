@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "corn"
+  destination: "table"
+  expanded_instruction: "Pick up the corn and place it on the table immediately to the left of the metal pan. When moving, use NAVIGATE_TO with a 15s timeout."
+  scene_context: "Corn lies on the table near the front-right edge; metal pan (bowl) sits on the table to its right-back; table otherwise clear."
+  expected_sequence: "Pick up the corn, move to the table area left of the pan (NAVIGATE_TO within 15s timeout), and place the corn down to the left of the pan."

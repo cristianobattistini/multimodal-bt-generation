@@ -1,0 +1,1 @@
+open lid. Only navigate to the lid if the object is reachable.

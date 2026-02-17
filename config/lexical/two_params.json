@@ -1,0 +1,61 @@
+{
+  "version": "1.0",
+  "description": "Varianti a 2 parametri per primitive PLACE-like (dalla tabella utente)",
+  "note": "param1 = holding (ultimo GRASP), param2 = obj originale (destinazione)",
+  "primitives": {
+    "PLACE_ON_TOP": {
+      "original_signature": "PLACE_ON_TOP(obj)",
+      "two_param_signature": "PLACE_ON_TOP(obj, surface)",
+      "param1_name": "obj",
+      "param1_meaning": "oggetto tenuto (holding)",
+      "param2_name": "surface",
+      "param2_meaning": "superficie destinazione",
+      "comment_template": "Place {obj} on {surface}"
+    },
+    "PLACE_INSIDE": {
+      "original_signature": "PLACE_INSIDE(obj)",
+      "two_param_signature": "PLACE_INSIDE(obj, container)",
+      "param1_name": "obj",
+      "param1_meaning": "oggetto tenuto (holding)",
+      "param2_name": "container",
+      "param2_meaning": "contenitore destinazione",
+      "comment_template": "Place {obj} inside {container}"
+    },
+    "PLACE_NEXT_TO": {
+      "original_signature": "PLACE_NEXT_TO(obj)",
+      "two_param_signature": "PLACE_NEXT_TO(obj, reference)",
+      "param1_name": "obj",
+      "param1_meaning": "oggetto tenuto (holding)",
+      "param2_name": "reference",
+      "param2_meaning": "oggetto di riferimento",
+      "comment_template": "Place {obj} next to {reference}"
+    },
+    "HANG": {
+      "original_signature": "HANG(obj)",
+      "two_param_signature": "HANG(obj, hook)",
+      "param1_name": "obj",
+      "param1_meaning": "oggetto tenuto (holding)",
+      "param2_name": "hook",
+      "param2_meaning": "gancio/supporto destinazione",
+      "comment_template": "Hang {obj} on {hook}"
+    },
+    "POUR": {
+      "original_signature": "POUR(obj)",
+      "two_param_signature": "POUR(source, dest)",
+      "param1_name": "source",
+      "param1_meaning": "contenitore sorgente (holding)",
+      "param2_name": "dest",
+      "param2_meaning": "contenitore destinazione",
+      "comment_template": "Pour from {source} into {dest}"
+    },
+    "SOAK_INSIDE": {
+      "original_signature": "SOAK_INSIDE(obj)",
+      "two_param_signature": "SOAK_INSIDE(obj, container)",
+      "param1_name": "obj",
+      "param1_meaning": "oggetto tenuto (holding)",
+      "param2_name": "container",
+      "param2_meaning": "contenitore con liquido",
+      "comment_template": "Soak {obj} inside {container}"
+    }
+  }
+}

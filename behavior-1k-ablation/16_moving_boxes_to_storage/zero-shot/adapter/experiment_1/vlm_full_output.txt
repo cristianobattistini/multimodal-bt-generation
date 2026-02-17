@@ -1,0 +1,33 @@
+scene_analysis:
+  target: "storage_container_1, storage_container_2"
+  destination: "garage_floor"
+  expanded_instruction: "Open the front door (if it is closed), then move storage_container_1 to the garage_floor and place it there, then move storage_container_2 and stack it on top of storage_container_1."
+  scene_context: "Front door is closed; storage_container_1 is left of the door on the floor and is not held; garage_floor is clear and reachable."
+  expected_sequence: "Open the front door, pick up storage_container_1 and place it on the garage_floor, then move storage_container_2 and stack it on top of storage_container_1."
+Plan:
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to door -->
+      <Action ID="NAVIGATE_TO" obj="door" />
+      <!-- Open door -->
+      <Action ID="OPEN" obj="door" />
+      <!-- Navigate to storage_container_1 -->
+      <Action ID="NAVIGATE_TO" obj="storage_container_1" />
+      <!-- Grasp storage_container_1 -->
+      <Action ID="GRASP" obj="storage_container_1" />
+      <!-- Navigate to garage_floor -->
+      <Action ID="NAVIGATE_TO" obj="garage_floor" />
+      <!-- Place on garage_floor -->
+      <Action ID="PLACE_ON_TOP" obj="garage_floor" />
+      <!-- Navigate to storage_container_2 -->
+      <Action ID="NAVIGATE_TO" obj="storage_container_2" />
+      <!-- Grasp storage_container_2 -->
+      <Action ID="GRASP" obj="storage_container_2" />
+      <!-- Navigate to storage_container_1 -->
+      <Action ID="NAVIGATE_TO" obj="storage_container_1" />
+      <!-- Place storage_container_2 on storage_container_1 -->
+      <Action ID="PLACE_ON_TOP" obj="storage_container_1" />
+    </Sequence>
+  </BehaviorTree>
+</root>

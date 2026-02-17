@@ -1,0 +1,1 @@
+put the ranch bottle into the pot. Only navigate to the object if it is visible.

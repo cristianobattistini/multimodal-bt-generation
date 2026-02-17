@@ -1,0 +1,16 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to basin -->
+      <Action ID="NAVIGATE_TO" obj="basin"/>
+      <!-- Navigate to cup -->
+      <Action ID="NAVIGATE_TO" obj="cup"/>
+      <!-- Grasp cup -->
+      <Action ID="GRASP" obj="cup"/>
+      <!-- Flip cup upright -->
+      <Action ID="FLIP" obj="cup"/>
+      <!-- Place inside basin -->
+      <Action ID="PLACE_INSIDE" obj="basin"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

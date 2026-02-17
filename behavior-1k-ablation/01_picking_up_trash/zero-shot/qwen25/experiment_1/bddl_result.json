@@ -1,0 +1,19 @@
+{
+  "success": true,
+  "bt_success": true,
+  "bddl_goal": true,
+  "ticks": 1,
+  "duration": 68.25003290176392,
+  "inference_time": 63.527220726013184,
+  "satisfied": [
+    "forall(['?can__of__soda.n.01', '-', 'can__of__soda.n.01'], ['inside', '?can__of__soda.n.01', '?ashcan.n.01_1'])"
+  ],
+  "unsatisfied": [],
+  "task": "01_picking_up_trash",
+  "condition": "zero-shot",
+  "model_dir": "qwen25",
+  "vlm_model": "qwen",
+  "inference_mode": "adapter",
+  "experiment": 3,
+  "timestamp": "20260213_084558"
+}

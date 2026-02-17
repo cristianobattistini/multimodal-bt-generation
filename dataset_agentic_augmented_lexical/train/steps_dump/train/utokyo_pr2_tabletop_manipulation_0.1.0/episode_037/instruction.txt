@@ -1,0 +1,1 @@
+Folding a cloth. Use ApproachPinkCloth subtree for approach and grasp.

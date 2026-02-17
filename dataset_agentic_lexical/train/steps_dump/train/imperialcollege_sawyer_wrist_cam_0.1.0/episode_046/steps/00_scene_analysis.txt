@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "can"
+  destination: ""
+  expanded_instruction: "Reach forward and grasp the can resting on the blue surface"
+  scene_context: "Multiple round shiny objects on a blue flat surface; surface is clear and nothing is held."
+  expected_sequence: "Approach the can, align gripper over it, and close gripper to pick it up."

@@ -1,0 +1,1 @@
+Pick up the pot and place it behind the orange cloth. Only navigate to the object if it is reachable.

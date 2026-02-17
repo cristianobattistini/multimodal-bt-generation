@@ -1,0 +1,7 @@
+scene_analysis:
+  target: "["bottle_1", "bottle_2"]"
+  destination: "coffee_table"
+  expanded_instruction: "Retain bottle_1 and bottle_2 from the open electric_refrigerator, carry them to the coffee table in the living room, and set each down on the table — ensure the refrigerator is closed after retrieval."
+  scene_context: "Bottles inside open electric_refrigerator; fridge door reachable; coffee_table clear; robot not holding anything."
+  expected_sequence: "Open the fridge, retrieve bottle_1 and bottle_2 from the fridge one at a time, move to the coffee table (live room), place each bottle on the table, then close the fridge."
+Plan:

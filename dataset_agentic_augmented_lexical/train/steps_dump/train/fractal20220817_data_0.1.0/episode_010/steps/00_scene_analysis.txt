@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "rxbar_chocolate"
+  destination: ""
+  expanded_instruction: "Pick up the rxbar chocolate bar from the front-right area of the table; if the grasp fails, retry up to 3 times."
+  scene_context: "Rxbar on the front-right of the table, table clear, no container closed, object not held."
+  expected_sequence: "Approach the bar, grasp it (retry up to 3 times if grasp fails), and lift it off the table."

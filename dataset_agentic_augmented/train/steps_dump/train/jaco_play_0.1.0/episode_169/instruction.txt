@@ -1,0 +1,1 @@
+place the gray bowl in the oven. Check precondition and retry placing inside up to 3 times if it fails.

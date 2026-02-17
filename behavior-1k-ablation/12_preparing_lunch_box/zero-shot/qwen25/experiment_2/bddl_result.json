@@ -1,0 +1,25 @@
+{
+  "success": false,
+  "bt_success": true,
+  "bddl_goal": false,
+  "ticks": 1,
+  "duration": 99.37394070625305,
+  "inference_time": 43.20186924934387,
+  "satisfied": [
+    "inside(?club_sandwich.n.01_1, ?packing_box.n.02_1)",
+    "inside(?chocolate_chip_cookie.n.01_1, ?packing_box.n.02_1)",
+    "not(['open', '?electric_refrigerator.n.01_1'])"
+  ],
+  "unsatisfied": [
+    "forall(['?half__apple.n.01', '-', 'half__apple.n.01'], ['inside', '?half__apple.n.01', '?packing_box.n.02_1'])",
+    "inside(?bottle__of__tea.n.01_1, ?packing_box.n.02_1)"
+  ],
+  "task": "12_preparing_lunch_box",
+  "condition": "zero-shot",
+  "model_dir": "qwen25",
+  "vlm_model": "qwen",
+  "inference_mode": "adapter",
+  "experiment": 2,
+  "timestamp": "20260215_222058",
+  "reason": "BT omits half_apple_2 and bottle_of_tea entirely. Only 3 of 5 required objects placed in packing_box (club_sandwich, half_apple_1, chocolate_chip_cookie). Also opens refrigerator unnecessarily mid-sequence before picking up cookie (cookie is not in fridge)."
+}

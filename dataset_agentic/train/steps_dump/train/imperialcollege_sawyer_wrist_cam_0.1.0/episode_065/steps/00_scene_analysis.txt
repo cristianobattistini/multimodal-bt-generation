@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "spoon"
+  destination: ""
+  expanded_instruction: "Use a single swipe gesture to push the spoon across the blue surface to the right/down-right"
+  scene_context: "Spoon resting on blue cloth near top-center, not held, surface clear and unobstructed."
+  expected_sequence: "Approach the spoon and perform a right/down-right swipe to slide it across the cloth."

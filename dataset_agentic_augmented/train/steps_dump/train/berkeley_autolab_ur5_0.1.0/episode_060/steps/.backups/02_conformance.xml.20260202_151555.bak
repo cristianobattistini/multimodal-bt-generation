@@ -1,0 +1,32 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to red_bowl -->
+      <Action ID="NAVIGATE_TO" obj="red_bowl" />
+      <Sequence>
+        <!-- Check tiger is graspable before GRASP -->
+        <Condition ID="IS_GRASPABLE" obj="tiger" />
+        <!-- Fallback: if GRASP tiger fails, try alternative to reposition -->
+        <Fallback>
+          <!-- Retry GRASP tiger up to 2 attempts -->
+          <RetryUntilSuccessful num_attempts="2">
+            <!-- Grasp tiger -->
+            <Action ID="GRASP" obj="tiger" />
+          </RetryUntilSuccessful>
+          <Sequence>
+            <!-- Push tiger forward toward front edge of table -->
+            <Action ID="PUSH" obj="tiger" />
+            <!-- Grasp tiger -->
+            <Action ID="GRASP" obj="tiger" />
+          </Sequence>
+        </Fallback>
+      </Sequence>
+      <!-- Navigate to grey_bowl -->
+      <Action ID="NAVIGATE_TO" obj="grey_bowl" />
+      <!-- Place inside grey_bowl -->
+      <Action ID="PLACE_INSIDE" obj="grey_bowl" />
+      <!-- Release -->
+      <Action ID="RELEASE" />
+    </Sequence>
+  </BehaviorTree>
+</root>

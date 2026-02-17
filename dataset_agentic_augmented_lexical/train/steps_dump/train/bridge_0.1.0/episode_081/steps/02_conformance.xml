@@ -1,0 +1,17 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to blue_napkin -->
+      <Action ID="NAVIGATE_TO" obj="blue_napkin" />
+      <!-- Grasp blue_napkin -->
+      <Action ID="GRASP" obj="blue_napkin" />
+      <!-- Navigate to table -->
+      <Action ID="NAVIGATE_TO" obj="table" />
+      <!-- Retry PLACE_ON_TOP table up to 3 attempts -->
+      <RetryUntilSuccessful num_attempts="3">
+        <!-- Place on table -->
+        <Action ID="SET_ON" obj="table" />
+      </RetryUntilSuccessful>
+    </Sequence>
+  </BehaviorTree>
+</root>

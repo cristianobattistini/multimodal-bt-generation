@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "eggplant"
+  destination: "frying_pan"
+  expanded_instruction: "Pick up the eggplant from the sink edge and place it into the frying_pan in the orange holder."
+  scene_context: "Eggplant on sink edge near orange basket; frying_pan in orange holder is empty and reachable; gripper not holding anything."
+  expected_sequence: "Approach and grasp the eggplant, lift it, move over the frying_pan, and place it inside."

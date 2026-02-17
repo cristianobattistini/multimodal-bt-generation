@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "wine_glass"
+  destination: ""
+  expanded_instruction: "Check that the wine_glass is reachable (IS_REACHABLE) before acting; if reachable (retry up to 3 times within 10s if needed), swipe the wine_glass horizontally to the right across the blue surface."
+  scene_context: "Wine glass resting on a clear blue surface, not held, surface unobstructed."
+  expected_sequence: "Verify IS_REACHABLE on the wine_glass, then move to the glass and swipe it rightward across the surface until it is moved (if not reachable retry/reposition up to 3 times)."

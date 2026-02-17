@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "yellow_cup"
+  destination: ""
+  expanded_instruction: "Pick up the yellow cup from the table near the top center of the workspace."
+  scene_context: "Yellow_cup on table near top center; robot gripper empty; blue bin at right; table surface clear."
+  expected_sequence: "Move the arm to the yellow cup, close the gripper to grasp it, and lift the cup. "

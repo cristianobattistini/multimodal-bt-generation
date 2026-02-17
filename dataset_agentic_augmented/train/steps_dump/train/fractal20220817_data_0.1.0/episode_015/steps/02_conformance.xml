@@ -1,0 +1,21 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Execute subtree ApproachCokeCan -->
+      <SubTree ID="ApproachCokeCan" />
+      <!-- Navigate to bottom_drawer -->
+      <Action ID="NAVIGATE_TO" obj="bottom_drawer" />
+      <!-- Place inside bottom_drawer -->
+      <Action ID="PLACE_INSIDE" obj="bottom_drawer" />
+    </Sequence>
+  </BehaviorTree>
+  <!-- Subtree definition ApproachCokeCan -->
+  <BehaviorTree ID="ApproachCokeCan">
+    <Sequence>
+      <!-- Navigate to coke_can -->
+      <Action ID="NAVIGATE_TO" obj="coke_can" />
+      <!-- Grasp coke_can -->
+      <Action ID="GRASP" obj="coke_can" />
+    </Sequence>
+  </BehaviorTree>
+</root>

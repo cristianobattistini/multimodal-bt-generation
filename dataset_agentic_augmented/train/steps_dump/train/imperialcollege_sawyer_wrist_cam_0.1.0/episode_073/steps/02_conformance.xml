@@ -1,0 +1,20 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Execute subtree ApproachBottle -->
+      <SubTree ID="ApproachBottle" />
+    </Sequence>
+  </BehaviorTree>
+  <!-- Subtree definition ApproachBottle -->
+  <BehaviorTree ID="ApproachBottle">
+    <Sequence>
+      <!-- Navigate to bottle -->
+      <Action ID="NAVIGATE_TO" obj="bottle" />
+      <!-- Retry GRASP bottle up to 2 attempts -->
+      <RetryUntilSuccessful num_attempts="2">
+        <!-- Grasp bottle -->
+        <Action ID="GRASP" obj="bottle" />
+      </RetryUntilSuccessful>
+    </Sequence>
+  </BehaviorTree>
+</root>

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "pepper"
+  destination: "table"
+  expanded_instruction: "Pick up the green pepper and place it on the table to the right of the orange cloth."
+  scene_context: "Green pepper on the left side of the table, orange cloth on table; nothing is held and table is clear otherwise."
+  expected_sequence: "Pick up the pepper, move to the cloth, and set the pepper down on the table immediately to the right of the orange cloth."

@@ -1,0 +1,38 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Collect dice from bed -->
+      <Action ID="NAVIGATE_TO" obj="die.n.01_1"/>
+      <Action ID="GRASP" obj="die.n.01_1"/>
+      <Action ID="NAVIGATE_TO" obj="bookcase.n.01_1"/>
+      <Action ID="PLACE_INSIDE" obj="bookcase.n.01_1"/>
+      <Action ID="NAVIGATE_TO" obj="die.n.01_2"/>
+      <Action ID="GRASP" obj="die.n.01_2"/>
+      <Action ID="NAVIGATE_TO" obj="bookcase.n.01_1"/>
+      <Action ID="PLACE_INSIDE" obj="bookcase.n.01_1"/>
+      <!-- Collect teddy bears from floor -->
+      <Action ID="NAVIGATE_TO" obj="teddy.n.01_1"/>
+      <Action ID="GRASP" obj="teddy.n.01_1"/>
+      <Action ID="NAVIGATE_TO" obj="bookcase.n.01_1"/>
+      <Action ID="PLACE_INSIDE" obj="bookcase.n.01_1"/>
+      <Action ID="NAVIGATE_TO" obj="teddy.n.01_2"/>
+      <Action ID="GRASP" obj="teddy.n.01_2"/>
+      <Action ID="NAVIGATE_TO" obj="bookcase.n.01_1"/>
+      <Action ID="PLACE_INSIDE" obj="bookcase.n.01_1"/>
+      <!-- Collect train set from desk -->
+      <Action ID="NAVIGATE_TO" obj="train_set.n.01_1"/>
+      <Action ID="GRASP" obj="train_set.n.01_1"/>
+      <Action ID="NAVIGATE_TO" obj="bookcase.n.01_1"/>
+      <Action ID="PLACE_INSIDE" obj="bookcase.n.01_1"/>
+      <!-- Collect board games -->
+      <Action ID="NAVIGATE_TO" obj="board_game.n.01_1"/>
+      <Action ID="GRASP" obj="board_game.n.01_1"/>
+      <Action ID="NAVIGATE_TO" obj="bookcase.n.01_1"/>
+      <Action ID="PLACE_INSIDE" obj="bookcase.n.01_1"/>
+      <Action ID="NAVIGATE_TO" obj="board_game.n.01_2"/>
+      <Action ID="GRASP" obj="board_game.n.01_2"/>
+      <Action ID="NAVIGATE_TO" obj="bookcase.n.01_1"/>
+      <Action ID="PLACE_INSIDE" obj="bookcase.n.01_1"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

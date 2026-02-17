@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "red_kettle"
+  destination: "mug"
+  expanded_instruction: "Pour liquid from the red kettle into the white mug on the blue surface."
+  scene_context: "Red kettle on table near front, white mug upright on table; kettle not held and mug appears empty."
+  expected_sequence: "Pick up the red kettle, bring it over the mug, tilt to pour into the mug, then set the kettle down."

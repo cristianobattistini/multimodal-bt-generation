@@ -1,0 +1,18 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to ranch_bottle -->
+      <Action ID="NAVIGATE_TO" obj="ranch_bottle" />
+      <!-- Grasp ranch_bottle -->
+      <Action ID="GRASP" obj="ranch_bottle" />
+      <!-- Navigate to pot -->
+      <Action ID="NAVIGATE_TO" obj="pot" />
+      <!-- Retry PLACE_INSIDE pot up to 5 attempts -->
+      <RetryUntilSuccessful num_attempts="5">
+        <!-- Place inside pot -->
+        <Action ID="PLACE_INSIDE" obj="pot" />
+      </RetryUntilSuccessful>
+      
+    </Sequence>
+  </BehaviorTree>
+</root>

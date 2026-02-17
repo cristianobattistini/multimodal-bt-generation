@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "blue_cup"
+  destination: "brown_cup"
+  expanded_instruction: "Pick up the blue cup from the table and place it into the brown cup"
+  scene_context: "Blue cup on table left of upright brown cup; brown cup open and reachable; robot not holding anything."
+  expected_sequence: "Move to the blue cup, pick it up, move over the brown cup, and place the blue cup into it."

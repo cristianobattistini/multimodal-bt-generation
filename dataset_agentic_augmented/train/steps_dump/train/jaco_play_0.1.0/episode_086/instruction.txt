@@ -1,0 +1,1 @@
+Place the apple fruit in the white plate. Check precondition and retry placing the apple into the white plate up to 2 times if it fails.

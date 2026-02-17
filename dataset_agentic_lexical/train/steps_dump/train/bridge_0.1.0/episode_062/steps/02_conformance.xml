@@ -1,0 +1,10 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Move to zipper_bag -->
+      <Action ID="MOVE_TO" obj="zipper_bag" />
+      <!-- Unseal zipper_bag -->
+      <Action ID="UNSEAL" obj="zipper_bag" />
+    </Sequence>
+  </BehaviorTree>
+</root>

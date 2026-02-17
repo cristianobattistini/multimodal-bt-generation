@@ -1,0 +1,17 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Move to long_bread -->
+      <Action ID="MOVE_TO" obj="long_bread" />
+      <!-- Grip long_bread -->
+      <Action ID="GRIP" obj="long_bread" />
+      <!-- Go to table -->
+      <Action ID="GO_TO" obj="table" />
+      <!-- Retry PLACE_ON_TOP table up to 3 attempts -->
+      <RetryUntilSuccessful num_attempts="3">
+        <!-- Place on table -->
+        <Action ID="PLACE_ON_TOP" obj="long_bread" surface="table" />
+      </RetryUntilSuccessful>
+    </Sequence>
+  </BehaviorTree>
+</root>

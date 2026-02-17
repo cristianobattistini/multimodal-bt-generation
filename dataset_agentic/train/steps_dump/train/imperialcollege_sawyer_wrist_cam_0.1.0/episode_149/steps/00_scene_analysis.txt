@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "bottle"
+  destination: ""
+  expanded_instruction: "Pick up the green bottle from the blue surface in front of the robot"
+  scene_context: "Green bottle upright on a blue cloth/table, not held, surface clear and reachable."
+  expected_sequence: "Move to the bottle, grasp its body near the middle, and lift it off the surface."

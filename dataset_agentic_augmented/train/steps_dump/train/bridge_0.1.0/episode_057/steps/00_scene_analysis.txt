@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "pot"
+  destination: ""
+  expanded_instruction: "Check that the metal pot resting in the sink is reachable (IS_REACHABLE), then pick it up."
+  scene_context: "Sink basin open; metal pot resting in sink and not held; counter has small clutter but reachable."
+  expected_sequence: "Approach the sink, verify IS_REACHABLE for the pot (reposition and retry up to 3 times if needed), grasp the pot, and lift it out."

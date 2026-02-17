@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "cloth"
+  destination: "table"
+  expanded_instruction: "Pick up and fold the pink cloth on the table into a smaller folded shape."
+  scene_context: "Pink cloth flat on table in diamond orientation; table clear; robot not holding the cloth."
+  expected_sequence: "Approach the cloth, grasp an edge, fold it toward the center and press it flat to form a smaller folded shape."

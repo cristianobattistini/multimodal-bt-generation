@@ -1,0 +1,25 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to utensil -->
+      <Action ID="NAVIGATE_TO" obj="utensil" />
+      <!-- Check utensil is reachable before GRASP -->
+      <Condition ID="IS_REACHABLE" obj="utensil" />
+      <!-- Fallback: if GRASP utensil fails, try alternative to reposition -->
+      <Fallback>
+        <!-- Grasp utensil -->
+        <Action ID="PICK" obj="utensil" />
+        <Sequence>
+          <!-- Push utensil forward toward front edge of table -->
+          <Action ID="SHOVE" obj="utensil" />
+          <!-- Grasp utensil -->
+          <Action ID="GRASP" obj="utensil" />
+        </Sequence>
+      </Fallback>
+      <!-- Pick utensil -->
+      <Action ID="MOVE_TO" obj="table" />
+      <!-- Shove utensil -->
+      <Action ID="PLACE_ON_TOP" obj="utensil" surface="table" />
+    </Sequence>
+  </BehaviorTree>
+</root>

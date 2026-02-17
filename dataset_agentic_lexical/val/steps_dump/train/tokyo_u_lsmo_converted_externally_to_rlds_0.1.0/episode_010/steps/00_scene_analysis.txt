@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "scissors"
+  destination: ""
+  expanded_instruction: "Reach into the brown desk holder on the table and pick up the scissors while avoiding the books obstacle."
+  scene_context: "Scissors are inside a brown pen holder on the table; stack_of_books and a round gauge sit between arm and holder; arm is free."
+  expected_sequence: "Move the arm around the stack_of_books, approach the brown pen holder, and grasp and lift the scissors."

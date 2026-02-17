@@ -1,0 +1,1 @@
+Unfold a wrinkled towel. Use a 10 second timeout for grasping and retry up to 3 times if it fails.

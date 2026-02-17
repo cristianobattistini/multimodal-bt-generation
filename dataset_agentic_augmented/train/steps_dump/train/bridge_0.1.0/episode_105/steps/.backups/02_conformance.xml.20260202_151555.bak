@@ -1,0 +1,19 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to blue_cloth -->
+      <Action ID="NAVIGATE_TO" obj="blue_cloth" />
+      <!-- Retry GRASP blue_cloth up to 2 attempts -->
+      <RetryUntilSuccessful num_attempts="2">
+        <!-- Grasp blue_cloth -->
+        <Action ID="GRASP" obj="blue_cloth" />
+      </RetryUntilSuccessful>
+      <!-- Navigate to table -->
+      <Action ID="NAVIGATE_TO" obj="table" />
+      <!-- Place on table -->
+      <Action ID="PLACE_ON_TOP" obj="table" />
+      <!-- Release -->
+      <Action ID="RELEASE" />
+    </Sequence>
+  </BehaviorTree>
+</root>

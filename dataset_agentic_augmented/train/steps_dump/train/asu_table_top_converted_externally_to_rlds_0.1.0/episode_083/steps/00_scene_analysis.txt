@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "brown_object"
+  destination: ""
+  expanded_instruction: "Pick up the brown object from the right side of the table near the green bottle; if a grasp fails, retry up to 3 times, with each grasp attempt subject to a 15s timeout."
+  scene_context: "Table has multiple bottles; brown object sits on the right near a green bottle; robot not holding anything; table unobstructed."
+  expected_sequence: "Approach the brown object on the right, attempt to grasp it (each attempt within a 15s timeout, retry up to 3 times if it fails), and lift it clear of the table."

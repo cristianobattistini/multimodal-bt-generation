@@ -1,0 +1,14 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to long_bread -->
+      <Action ID="NAVIGATE_TO" obj="long_bread" />
+      <!-- Grab long_bread -->
+      <Action ID="GRAB" obj="long_bread" />
+      <!-- Navigate to sink -->
+      <Action ID="NAVIGATE_TO" obj="sink" />
+      <!-- Insert into sink -->
+      <Action ID="INSERT_INTO" obj="sink" />
+    </Sequence>
+  </BehaviorTree>
+</root>

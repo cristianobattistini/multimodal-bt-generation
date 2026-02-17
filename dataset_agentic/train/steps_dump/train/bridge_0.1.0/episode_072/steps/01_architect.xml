@@ -1,0 +1,14 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to spoon -->
+      <Action ID="NAVIGATE_TO" obj="spoon"/>
+      <!-- Grasp spoon -->
+      <Action ID="GRASP" obj="spoon"/>
+      <!-- Navigate to towel -->
+      <Action ID="NAVIGATE_TO" obj="towel"/>
+      <!-- Place on towel -->
+      <Action ID="PLACE_ON_TOP" obj="towel"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

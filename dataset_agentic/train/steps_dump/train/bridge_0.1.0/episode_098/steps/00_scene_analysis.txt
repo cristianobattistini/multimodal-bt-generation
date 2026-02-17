@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "red_towel"
+  destination: "table"
+  expanded_instruction: "Pick up the red towel from the countertop and place it just left of the yellow knife on the table."
+  scene_context: "Red towel on countertop/back-left; yellow knife on table near the pan; countertop/table is clear and no containers are closed."
+  expected_sequence: "Approach and pick up the red towel, move to the area just left of the yellow knife on the table, and place the towel there."

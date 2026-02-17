@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "touchscreen"
+  destination: ""
+  expanded_instruction: "Perform a lateral swipe across the visible blue touchscreen interface"
+  scene_context: "Blue touchscreen face visible and unobstructed; no objects held; interface icons present."
+  expected_sequence: "Place contact on the screen and swipe horizontally across the interface."

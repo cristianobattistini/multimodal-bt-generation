@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "pepsi_can"
+  destination: "table"
+  expanded_instruction: "Pick up the pepsi_can and place it on the table next to the 7up_can."
+  scene_context: "Pepsi can upright near back center, 7up_can upright left-front on table; no containers open and nothing held."
+  expected_sequence: "Grasp the pepsi_can, move it to the table beside the 7up_can, and set it down."

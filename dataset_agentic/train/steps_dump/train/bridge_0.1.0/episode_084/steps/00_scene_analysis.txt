@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "pot"
+  destination: "sink"
+  expanded_instruction: "Grasp the metal pot lying on its side in the sink and flip it upright inside the sink."
+  scene_context: "Metal pot is on its side inside the sink; sink is open and not occupied; gripper not holding the pot."
+  expected_sequence: "Reach to the pot, grasp it, rotate it upright, and set it down upright in the sink."

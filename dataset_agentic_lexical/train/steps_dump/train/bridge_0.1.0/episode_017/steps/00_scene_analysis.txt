@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "colander"
+  destination: "table"
+  expanded_instruction: "Pick up the colander and place it on the table in front of the red_spoon (closer to the front edge)"
+  scene_context: "Colander on right table edge, red_spoon upright near back-right, table clear and nothing is held."
+  expected_sequence: "Move to the colander, grasp and lift it, slide forward on the table and set it down between the spoon and front edge."

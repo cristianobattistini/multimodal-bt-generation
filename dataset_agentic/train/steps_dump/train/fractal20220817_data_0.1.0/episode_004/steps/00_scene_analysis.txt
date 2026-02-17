@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "brown_chip_bag"
+  destination: "counter"
+  expanded_instruction: "Pick up the brown chip bag from the top drawer and place it on the counter above the drawer."
+  scene_context: "Top drawer is open with the brown chip bag inside; counter above has a water bottle but space to place the bag."
+  expected_sequence: "Reach into the open top drawer, grasp the brown chip bag, lift it out, and set it down on the counter."

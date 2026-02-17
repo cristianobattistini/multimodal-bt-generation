@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "green_rag"
+  destination: "table"
+  expanded_instruction: "Navigate to the green rag (NAVIGATE_TO within a 15s timeout) and slide it into the corner of the table next to the blue_handle"
+  scene_context: "Green rag on the table; blue_handle on the table to the rag's right; nothing blocking the corner; rag not held."
+  expected_sequence: "Navigate to the rag within a 15s timeout, then slide it along the table into the corner adjacent to the blue_handle."

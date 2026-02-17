@@ -1,0 +1,18 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to red_pitcher -->
+      <Action ID="NAVIGATE_TO" obj="red_pitcher" />
+      <!-- Grab red_pitcher -->
+      <Action ID="GRAB" obj="red_pitcher" />
+      <!-- Approach mug -->
+      <Action ID="APPROACH" obj="mug" />
+      <!-- Pour from red_pitcher into mug -->
+      <Action ID="POUR" source="red_pitcher" dest="mug" />
+      <!-- Locomote to table -->
+      <Action ID="LOCOMOTE_TO" obj="table" />
+      <!-- Deposit on table -->
+      <Action ID="DEPOSIT_ON" obj="table" />
+    </Sequence>
+  </BehaviorTree>
+</root>

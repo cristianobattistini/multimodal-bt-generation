@@ -1,0 +1,17 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to lid -->
+      <Action ID="NAVIGATE_TO" obj="lid" />
+      <!-- Grasp lid -->
+      <Action ID="GRASP" obj="lid" />
+      <!-- Retry OPEN lid up to 3 attempts -->
+      <RetryUntilSuccessful num_attempts="3">
+        <!-- Open lid -->
+        <Action ID="OPEN_UP" obj="lid" />
+      </RetryUntilSuccessful>
+      <!-- Open up lid -->
+      <Action ID="RELEASE" />
+    </Sequence>
+  </BehaviorTree>
+</root>

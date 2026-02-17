@@ -1,0 +1,14 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Locomote to ranch_bottle -->
+      <Action ID="LOCOMOTE_TO" obj="ranch_bottle" />
+      <!-- Grab ranch_bottle -->
+      <Action ID="GRAB" obj="ranch_bottle" />
+      <!-- Move to pot -->
+      <Action ID="MOVE_TO" obj="pot" />
+      <!-- Put in pot -->
+      <Action ID="PUT_IN" obj="pot" />
+    </Sequence>
+  </BehaviorTree>
+</root>

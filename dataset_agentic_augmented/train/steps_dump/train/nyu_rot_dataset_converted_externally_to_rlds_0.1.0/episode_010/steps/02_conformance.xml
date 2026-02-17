@@ -1,0 +1,17 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Execute subtree ApproachBlueCup -->
+      <SubTree ID="ApproachBlueCup" />
+    </Sequence>
+  </BehaviorTree>
+  <!-- Subtree definition ApproachBlueCup -->
+  <BehaviorTree ID="ApproachBlueCup">
+    <Sequence>
+      <!-- Navigate to blue_cup -->
+      <Action ID="NAVIGATE_TO" obj="blue_cup" />
+      <!-- Place inside blue_cup -->
+      <Action ID="PLACE_INSIDE" obj="blue_cup" />
+    </Sequence>
+  </BehaviorTree>
+</root>

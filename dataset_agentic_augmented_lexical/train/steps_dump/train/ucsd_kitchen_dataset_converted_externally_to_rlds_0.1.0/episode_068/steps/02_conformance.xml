@@ -1,0 +1,17 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Timeout: NAVIGATE_TO oven_door within 10s -->
+      <Timeout msec="10000">
+        <!-- Navigate to oven_door -->
+        <Action ID="NAVIGATE_TO" obj="oven_door" />
+      </Timeout>
+      <!-- Grasp oven_door -->
+      <Action ID="GRASP" obj="oven_door" />
+      <!-- Open oven_door -->
+      <Action ID="OPEN" obj="oven_door" />
+      <!-- Release -->
+      <Action ID="RELEASE" />
+    </Sequence>
+  </BehaviorTree>
+</root>

@@ -1,0 +1,1 @@
+Move maroon square. If placing on top fails, push the table surface to clear obstacles and retry placing on top.

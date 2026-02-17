@@ -1,0 +1,28 @@
+{
+  "decorator_type": "mixed",
+  "mixed_subtype": "condition_timeout",
+  "target_action_id": "NAVIGATE_TO",
+  "target_obj": "teapot",
+  "parameters": {
+    "augmentations": [
+      {
+        "type": "condition",
+        "action_id": "NAVIGATE_TO",
+        "obj": "teapot",
+        "params": {
+          "condition_id": "IS_VISIBLE",
+          "condition_obj": "teapot"
+        }
+      },
+      {
+        "type": "timeout",
+        "action_id": "NAVIGATE_TO",
+        "obj": "teapot",
+        "params": {
+          "msec": 15000
+        }
+      }
+    ]
+  },
+  "prompt_name": "mixed/condition_timeout"
+}

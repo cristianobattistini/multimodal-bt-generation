@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "["yellow_plate", "white_cup"]"
+  destination: "dish_rack"
+  expanded_instruction: "Group actions into an ApproachYellowPlate subtree: approach and pick up the yellow plate (retry up to 3 times, 10s timeout, if grasp fails, push to reposition), then pick up the white cup and place both into the dish_rack."
+  scene_context: "Dish_rack is empty and reachable; yellow_plate on table left of rack; white_cup on towel to the right; towel on tray."
+  expected_sequence: "Group into ApproachYellowPlate subtree: approach and pick up the yellow plate one at a time (retry up to 3 times, 10s timeout, if grasp fails, push to reposition), then pick up the white cup and place them into the dish_rack."

@@ -1,0 +1,17 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Execute subtree ApproachCroissant -->
+      <SubTree ID="ApproachCroissant" />
+    </Sequence>
+  </BehaviorTree>
+  <!-- Subtree definition ApproachCroissant -->
+  <BehaviorTree ID="ApproachCroissant">
+    <Sequence>
+      <!-- Navigate to croissant -->
+      <Action ID="NAVIGATE_TO" obj="croissant" />
+      <!-- Push croissant forward toward front edge of table -->
+      <Action ID="PUSH" obj="croissant" />
+    </Sequence>
+  </BehaviorTree>
+</root>

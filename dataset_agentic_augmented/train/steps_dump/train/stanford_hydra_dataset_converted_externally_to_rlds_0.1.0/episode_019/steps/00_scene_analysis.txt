@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "dishes"
+  destination: "dish_rack"
+  expanded_instruction: "Check the yellow plate is reachable (IS_REACHABLE), then pick it up from the counter—grasp with a 10s timeout and retry up to 2 times if needed—and place it into the dish_rack."
+  scene_context: "Yellow plate off the rack on the counter; dish_rack is open and mostly empty; towel and cup to the right."
+  expected_sequence: "Verify IS_REACHABLE for the plate, reach to the plate, grasp it (within a 10s timeout, retry up to 2 times on failure), move over the dish_rack, and set the plate into the rack upright."

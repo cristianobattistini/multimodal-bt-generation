@@ -1,0 +1,20 @@
+{
+  "success": false,
+  "bt_success": false,
+  "bddl_goal": false,
+  "ticks": 0,
+  "duration": 0.13439130783081055,
+  "inference_time": 7.845860958099365,
+  "satisfied": [],
+  "unsatisfied": [
+    "forall(['?plywood.n.01', '-', 'plywood.n.01'], ['ontop', '?plywood.n.01', '?floor.n.01_2'])"
+  ],
+  "task": "15_bringing_in_wood",
+  "condition": "cot",
+  "model_dir": "smolvlm2",
+  "vlm_model": "smol500",
+  "inference_mode": "adapter",
+  "experiment": 2,
+  "timestamp": "20260213_175044",
+  "reason": "Incorrect plan: missing NAVIGATE_TO(corridor_floor) before each PLACE_ON_TOP, and PLACE_ON_TOP targets plywood objects instead of corridor_floor. Only 9 actions generated instead of 12. BT failed to parse (0 ticks)."
+}

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "gray_bowl"
+  destination: "oven"
+  expanded_instruction: "Group actions into an ApproachGrayBowl subtree: pick up the gray bowl and place it inside the open oven on the oven tray. For the subtree, retry up to 3 times with a 10s timeout; if grasp fails, push to reposition and retry."
+  scene_context: "Oven is open with tray pulled out; gray_bowl is near the robot arm above the table and not inside oven."
+  expected_sequence: "ApproachGrayBowl subtree: grasp the gray_bowl (retry up to 3 times, 10s timeout; if grasp fails, push to reposition), carry it to the open oven, and set it down on the oven tray."

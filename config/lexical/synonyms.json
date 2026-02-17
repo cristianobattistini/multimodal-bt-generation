@@ -1,0 +1,72 @@
+{
+  "version": "1.0",
+  "description": "Sinonimi per le 22 primitive PAL v1 (dalla tabella utente)",
+  "primitives": {
+    "GRASP": {
+      "synonyms": ["GRAB", "PICK", "GRIP"]
+    },
+    "NAVIGATE_TO": {
+      "synonyms": ["GO_TO", "MOVE_TO", "APPROACH"]
+    },
+    "RELEASE": {
+      "synonyms": ["DROP", "LET_GO", "UNGRASP"]
+    },
+    "PLACE_ON_TOP": {
+      "synonyms": ["PUT_ON", "SET_ON", "LAY_ON"]
+    },
+    "PLACE_INSIDE": {
+      "synonyms": ["PUT_IN", "INSERT_INTO", "SET_IN"]
+    },
+    "PLACE_NEXT_TO": {
+      "synonyms": ["PUT_BESIDE", "SET_NEAR", "POSITION_NEXT_TO"]
+    },
+    "PUSH": {
+      "synonyms": ["NUDGE", "SHOVE", "SLIDE"]
+    },
+    "OPEN": {
+      "synonyms": ["UNLOCK", "UNSEAL", "OPEN_UP"]
+    },
+    "CLOSE": {
+      "synonyms": ["SHUT", "SEAL", "CLOSE_UP"]
+    },
+    "TOGGLE_ON": {
+      "synonyms": ["TURN_ON", "SWITCH_ON", "ACTIVATE"]
+    },
+    "TOGGLE_OFF": {
+      "synonyms": ["TURN_OFF", "SWITCH_OFF", "DEACTIVATE"]
+    },
+    "POUR": {
+      "synonyms": ["EMPTY_INTO", "TIP_INTO", "TRANSFER_LIQUID"]
+    },
+    "FOLD": {
+      "synonyms": ["BEND", "CREASE", "DOUBLE_OVER"]
+    },
+    "UNFOLD": {
+      "synonyms": ["SPREAD", "OPEN_FLAT", "EXTEND"]
+    },
+    "FLIP": {
+      "synonyms": ["TURN_OVER", "INVERT", "ROTATE_FLIP"]
+    },
+    "HANG": {
+      "synonyms": ["SUSPEND", "DRAPE", "HOOK_ON"]
+    },
+    "WIPE": {
+      "synonyms": ["CLEAN", "SCRUB", "RUB"]
+    },
+    "CUT": {
+      "synonyms": ["SLICE", "CHOP", "SEVER"]
+    },
+    "SCREW": {
+      "synonyms": ["TWIST", "ROTATE_SCREW", "TIGHTEN"]
+    },
+    "SOAK_UNDER": {
+      "synonyms": ["RINSE_UNDER", "WET_UNDER", "WASH_UNDER"]
+    },
+    "SOAK_INSIDE": {
+      "synonyms": ["SUBMERGE", "DIP_IN", "IMMERSE"]
+    },
+    "PLACE_NEAR_HEATING_ELEMENT": {
+      "synonyms": ["PUT_NEAR_HEAT", "SET_BY_HEATER", "POSITION_NEAR_HEAT"]
+    }
+  }
+}

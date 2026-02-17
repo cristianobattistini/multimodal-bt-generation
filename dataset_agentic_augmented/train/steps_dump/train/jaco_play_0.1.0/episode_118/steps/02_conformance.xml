@@ -1,0 +1,18 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to steak_meat -->
+      <Action ID="NAVIGATE_TO" obj="steak_meat" />
+      <!-- Check steak_meat is graspable before GRASP -->
+      <Condition ID="IS_GRASPABLE" obj="steak_meat" />
+      <!-- Retry GRASP steak_meat up to 3 attempts -->
+      <RetryUntilSuccessful num_attempts="3">
+        <!-- Timeout: GRASP steak_meat within 10s -->
+        <Timeout msec="10000">
+          <!-- Grasp steak_meat -->
+          <Action ID="GRASP" obj="steak_meat" />
+        </Timeout>
+      </RetryUntilSuccessful>
+    </Sequence>
+  </BehaviorTree>
+</root>

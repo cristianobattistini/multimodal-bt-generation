@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "redbull_can"
+  destination: "table"
+  expanded_instruction: "Pick up the redbull can and place it on the table next to the 7up can, checking the target spot (IS_HOLDING) before placing; if PLACE_ON_TOP fails retry up to 2 times, and if it still fails use a push to reposition the can."
+  scene_context: "Table is clear; redbull can on rear table surface, 7up can on front-left of same table; no containers open."
+  expected_sequence: "Pick up the redbull can, move it to the table beside the 7up can, check IS_HOLDING on the target spot before attempting PLACE_ON_TOP, attempt PLACE_ON_TOP and retry up to 2 times if it fails, and if unsuccessful use PUSH to reposition it and then set it down."

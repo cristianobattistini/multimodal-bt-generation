@@ -1,0 +1,21 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Execute subtree ApproachBlueBowl -->
+      <SubTree ID="ApproachBlueBowl" />
+      <!-- Navigate to table -->
+      <Action ID="NAVIGATE_TO" obj="table" />
+      <!-- Place on table -->
+      <Action ID="PLACE_ON_TOP" obj="table" />
+    </Sequence>
+  </BehaviorTree>
+  <!-- Subtree definition ApproachBlueBowl -->
+  <BehaviorTree ID="ApproachBlueBowl">
+    <Sequence>
+      <!-- Navigate to blue_bowl -->
+      <Action ID="NAVIGATE_TO" obj="blue_bowl" />
+      <!-- Grasp butter_dairy -->
+      <Action ID="GRASP" obj="butter_dairy" />
+    </Sequence>
+  </BehaviorTree>
+</root>

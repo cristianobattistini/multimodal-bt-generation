@@ -1,0 +1,27 @@
+ scene_analysis:
+  target: "easter_egg_1,easter_egg_2,easter_egg_3"
+  destination: "tree_1"
+  expanded_instruction: "Pick up each Easter egg from the wicker basket and place them next to the tree on the lawn."
+  scene_context: "Three Easter eggs are inside the wicker basket on the lawn; the basket is open and reachable."
+  expected_sequence: "Pick up each egg from the basket and place it next to the tree on the lawn."
+Plan:
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to tree -->
+      <Action ID="NAVIGATE_TO" obj="tree_1" />
+      <!-- Grasp tree_1 -->
+      <Action ID="GRASP" obj="tree_1" />
+      <!-- Navigate to tree -->
+      <Action ID="NAVIGATE_TO" obj="tree_2" />
+      <!-- Grasp tree_2 -->
+      <Action ID="GRASP" obj="tree_2" />
+      <!-- Navigate to tree -->
+      <Action ID="NAVIGATE_TO" obj="tree_3" />
+      <!-- Grasp tree_3 -->
+      <Action ID="GRASP" obj="tree_3" />
+    </Sequence>
+  </BehaviorTree>
+</root>
+
+Allowed Conditions: [IS_REACHABLE]

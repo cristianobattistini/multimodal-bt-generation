@@ -1,0 +1,20 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to long_bread -->
+      <Action ID="NAVIGATE_TO" obj="long_bread" />
+      <!-- Grasp long_bread -->
+      <Action ID="GRASP" obj="long_bread" />
+      <!-- Navigate to gray_bowl -->
+      <Action ID="NAVIGATE_TO" obj="gray_bowl" />
+      <Sequence>
+        <!-- Check gray_bowl is open before PLACE_INSIDE -->
+        <Condition ID="IS_OPEN" obj="gray_bowl" />
+        <!-- Place inside gray_bowl -->
+        <Action ID="PLACE_INSIDE" obj="gray_bowl" />
+      </Sequence>
+      <!-- Release -->
+      <Action ID="RELEASE" />
+    </Sequence>
+  </BehaviorTree>
+</root>

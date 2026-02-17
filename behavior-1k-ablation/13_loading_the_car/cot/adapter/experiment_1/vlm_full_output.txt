@@ -1,0 +1,45 @@
+scene_analysis:
+  target: "car"
+  destination: "container"
+  expanded_instruction: "Load the red car from the garage into the garage so the tennis racket and digital camera are inside; when done, close the trunk."
+  scene_context: "Red car is in the garage, trunk is closed; tennis_racket and digital_camera are on the living room table; container (bag) on the living room floor."
+  expected_sequence: "Open the car trunk, pick up the tennis racket, place it inside the car, then close the trunk; then pick up the digital camera and place it inside the car, then close the trunk."
+Plan:
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to car -->
+      <Action ID="NAVIGATE_TO" obj="car" />
+      <!-- Open car -->
+      <Action ID="OPEN" obj="car" />
+      <!-- Navigate to digital_camera -->
+      <Action ID="NAVIGATE_TO" obj="digital_camera" />
+      <!-- Grasp digital_camera -->
+      <Action ID="GRASP" obj="digital_camera" />
+      <!-- Navigate to container -->
+      <Action ID="NAVIGATE_TO" obj="container" />
+      <!-- Place inside container -->
+      <Action ID="PLACE_INSIDE" obj="container" />
+      <!-- Navigate to container -->
+      <Action ID="NAVIGATE_TO" obj="container" />
+      <!-- Grasp container -->
+      <Action ID="GRASP" obj="container" />
+      <!-- Navigate to car -->
+      <Action ID="NAVIGATE_TO" obj="car" />
+      <!-- Place inside car -->
+      <Action ID="PLACE_INSIDE" obj="car" />
+      <!-- Navigate to tennis_racket -->
+      <Action ID="NAVIGATE_TO" obj="tennis_racket" />
+      <!-- Grasp tennis_racket -->
+      <Action ID="GRASP" obj="tennis_racket" />
+      <!-- Navigate to car -->
+      <Action ID="NAVIGATE_TO" obj="car" />
+      <!-- Place inside car -->
+      <Action ID="PLACE_INSIDE" obj="car" />
+      <!-- Navigate to car -->
+      <Action ID="NAVIGATE_TO" obj="car" />
+      <!-- Close car -->
+      <Action ID="CLOSE" obj="car" />
+    </Sequence>
+  </BehaviorTree>
+</root>

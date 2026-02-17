@@ -1,0 +1,26 @@
+ROLE: Embodied Planner
+GOAL: Analyze the scene and generate a valid BehaviorTree.CPP XML plan.
+
+INPUTS:
+- Scene Image: The current visual observation of the robot workspace
+- Instruction: pick the banana. If grasping fails, push it slightly to reposition it and retry.
+- Allowed Actions: [NAVIGATE_TO(obj), PUSH(obj), GRASP(obj)]
+
+OUTPUT FORMAT:
+scene_analysis:
+  target: "<main object to manipulate, snake_case>"
+  destination: "<where to place object, snake_case or empty>"
+  expanded_instruction: "<instruction with scene details>"
+  scene_context: "<initial state observations>"
+  expected_sequence: "<action plan in natural language>"
+Plan:
+<root main_tree_to_execute="MainTree">
+  ...
+</root>
+
+CONSTRAINTS:
+1. Analysis First: You MUST output the scene_analysis block before the XML.
+2. Consistency: The XML must follow the analysis (target/destination).
+3. Schema: Output ONLY the keys shown above; do NOT add extra keys.
+4. Compliance: Use ONLY the Allowed Actions provided.
+5. Robustness: If grasping fails, use the PUSH fallback to reposition the object (addressing awkward orientations, occlusions, or distance) and then retry grasping; this ensures a different physical strategy rather than retrying the same primitive.

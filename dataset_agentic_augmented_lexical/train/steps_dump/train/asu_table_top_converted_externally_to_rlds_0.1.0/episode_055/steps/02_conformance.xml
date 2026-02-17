@@ -1,0 +1,13 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to pepsi_can -->
+      <Action ID="NAVIGATE_TO" obj="pepsi_can" />
+      <!-- Retry PUSH pepsi_can up to 5 attempts -->
+      <RetryUntilSuccessful num_attempts="5">
+        <!-- Push pepsi_can forward toward front edge of table -->
+        <Action ID="PUSH" obj="pepsi_can" />
+      </RetryUntilSuccessful>
+    </Sequence>
+  </BehaviorTree>
+</root>

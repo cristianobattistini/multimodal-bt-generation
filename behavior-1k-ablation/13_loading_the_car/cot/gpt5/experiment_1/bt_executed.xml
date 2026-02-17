@@ -1,0 +1,20 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <NAVIGATE_TO obj="car"/>
+      <OPEN obj="car"/>
+      <NAVIGATE_TO obj="digital_camera"/>
+      <GRASP obj="digital_camera"/>
+      <NAVIGATE_TO obj="container"/>
+      <PLACE_INSIDE obj="container"/>
+      <GRASP obj="container"/>
+      <NAVIGATE_TO obj="car"/>
+      <PLACE_INSIDE obj="car"/>
+      <NAVIGATE_TO obj="tennis_racket"/>
+      <GRASP obj="tennis_racket"/>
+      <NAVIGATE_TO obj="car"/>
+      <PLACE_INSIDE obj="car"/>
+      <CLOSE obj="car"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

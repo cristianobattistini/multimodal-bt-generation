@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "orange_fruit"
+  destination: ""
+  expanded_instruction: "Pick up the orange fruit from the gray plate next to the blue container on the table. Verify the orange is visible before grasping; retry the grasp up to 2 times if it fails, and if still unsuccessful, push or flip the fruit to reposition before grasping."
+  scene_context: "Orange fruit on gray plate on table; plate next to blue container; no containers closed; robot not holding object."
+  expected_sequence: "Approach the plate, confirm the orange fruit is visible, attempt to grasp it (retry up to 2 times on failure); if grasp still fails, push then flip the fruit to reposition, then grasp and lift it clear from the plate."

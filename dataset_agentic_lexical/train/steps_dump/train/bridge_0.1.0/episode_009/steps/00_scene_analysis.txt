@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "cheese_wedge"
+  destination: "table"
+  expanded_instruction: "Pick up the cheese_wedge from the metal bowl on the left and place it on the front right side of the table"
+  scene_context: "Cheese_wedge in metal bowl at left of table; bowl and sponge on table; no containers closed; table front-right is reachable."
+  expected_sequence: "Approach the bowl, remove the cheese_wedge, move to the table, and place it on the front right side."

@@ -1,0 +1,28 @@
+{
+  "decorator_type": "mixed",
+  "mixed_subtype": "condition_timeout",
+  "target_action_id": "NAVIGATE_TO",
+  "target_obj": "apple",
+  "parameters": {
+    "augmentations": [
+      {
+        "type": "condition",
+        "action_id": "NAVIGATE_TO",
+        "obj": "apple",
+        "params": {
+          "condition_id": "IS_VISIBLE",
+          "condition_obj": "apple"
+        }
+      },
+      {
+        "type": "timeout",
+        "action_id": "NAVIGATE_TO",
+        "obj": "apple",
+        "params": {
+          "msec": 20000
+        }
+      }
+    ]
+  },
+  "prompt_name": "mixed/condition_timeout"
+}

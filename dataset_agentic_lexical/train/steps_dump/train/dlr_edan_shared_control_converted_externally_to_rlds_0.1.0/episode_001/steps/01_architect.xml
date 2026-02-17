@@ -1,0 +1,10 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Move to die -->
+      <Action ID="MOVE_TO" obj="die" />
+      <!-- Latch onto die -->
+      <Action ID="LATCH_ONTO" obj="die" />
+    </Sequence>
+  </BehaviorTree>
+</root>

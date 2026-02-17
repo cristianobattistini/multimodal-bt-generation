@@ -1,0 +1,1 @@
+Pick up the green cup. Check if graspable before grasping, retry grasping up to 3 times if it fails, use push as Plan B if unsuccessful.

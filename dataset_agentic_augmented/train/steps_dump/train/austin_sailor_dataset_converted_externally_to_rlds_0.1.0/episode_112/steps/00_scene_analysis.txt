@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "["bread", "butter", "milk"]"
+  destination: "serving_area"
+  expanded_instruction: "Pick up the bread, the butter, and the milk from the table and place them onto the serving area. Before each place, check IS_HOLDING on the serving_area; if it reports occupied, wait up to 10s and retry up to 3 times before placing."
+  scene_context: "Bread on a plate and a yellow butter packet on the table; serving_area is clear; no containers are open."
+  expected_sequence: "Pick each item from the table one by one (bread, butter, milk); before each PLACE_ON_TOP, check IS_HOLDING(serving_area), if occupied wait up to 10s and retry up to 3 times, then place onto the serving_area."

@@ -1,0 +1,1 @@
+pick up bowl and put in small4fbox. Use a 10 second timeout for navigation.

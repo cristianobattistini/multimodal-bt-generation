@@ -1,0 +1,14 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Approach butter_dairy -->
+      <Action ID="APPROACH" obj="butter_dairy" />
+      <!-- Grasp butter_dairy -->
+      <Action ID="GRASP" obj="butter_dairy" />
+      <!-- Go to table -->
+      <Action ID="GO_TO" obj="table" />
+      <!-- Set on table -->
+      <Action ID="SET_ON" obj="table" />
+    </Sequence>
+  </BehaviorTree>
+</root>

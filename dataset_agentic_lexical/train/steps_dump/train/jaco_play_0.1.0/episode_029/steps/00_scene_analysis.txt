@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "yellow_cup"
+  destination: "dish_rack"
+  expanded_instruction: "Pick up the yellow cup and place it inside the blue dish rack"
+  scene_context: "Yellow cup is held by the robot above the table; blue dish_rack is open and reachable; other objects nearby."
+  expected_sequence: "Lower the held yellow cup into the dish rack and release it."

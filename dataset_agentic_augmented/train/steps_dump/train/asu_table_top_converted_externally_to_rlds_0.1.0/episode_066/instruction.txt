@@ -1,0 +1,1 @@
+move green bottle. If placing on top fails, push the destination area on the table to clear obstacles and retry placing on top.

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "coke_bottle"
+  destination: ""
+  expanded_instruction: "Push the coke bottle forward across the table toward the front edge, retrying the push up to 3 times if it fails."
+  scene_context: "Table clear; coke bottle near front-center on table; robot arm not holding anything; no closed containers."
+  expected_sequence: "Move the arm to contact the coke bottle and push it forward toward the table edge until it shifts forward; if it does not move, retry the push up to 3 times."

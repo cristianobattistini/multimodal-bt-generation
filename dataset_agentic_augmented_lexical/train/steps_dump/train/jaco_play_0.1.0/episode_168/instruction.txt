@@ -1,0 +1,1 @@
+pick up the green cup. Retry grasping up to 3 times if it fails.

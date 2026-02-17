@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "white_item"
+  destination: "pan"
+  expanded_instruction: "Pick up the white item from the cloth at the back-left and place it on the pan. Before placing, check whether the pan is holding the object; if PLACE_ON_TOP fails, retry up to 3 times and, if still unsuccessful, use a PUSH to reposition the object as a fallback."
+  scene_context: "White item resting on blue cloth at back-left; pan is empty and reachable; nothing is held."
+  expected_sequence: "Approach the white item, pick it up from the cloth, move to the pan, check IS_HOLDING on the pan before PLACE_ON_TOP, attempt to place it on the pan retrying up to 3 times if placement fails, and if placement still fails use a PUSH to reposition the object and then place it in the pan."

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "wrinkled_towel"
+  destination: "grass_mat"
+  expanded_instruction: "Pick up the wrinkled towel from the green mat and unfold it flat on the mat; if unfolding fails after 2 attempts or within 10s, flip the towel to reposition it and then spread it flat."
+  scene_context: "Wrinkled pink towel on green mat; robot not holding it; mat clear and reachable."
+  expected_sequence: "Approach the towel, grasp and lift corners or edges, spread and smooth it flat on the mat; if unfold attempts fail (2 tries or 10s), flip/turn the towel to reposition and then smooth it flat."

@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "kcup"
+  destination: "kcup_holder"
+  expanded_instruction: "Open the kcup holder, pick up the green-topped kcup from the table, place it into the kcup holder (retry placing up to 2 times if it fails; if placing still fails, push to reposition the kcup), and close the holder"
+  scene_context: "Kcup holder is closed and on the table; green-topped kcup is on the table and not held."
+  expected_sequence: "Open the holder, pick up the kcup, insert it into the holder (retry up to 2 times on failure; if insert still fails, push to reposition and then place), then close the holder."

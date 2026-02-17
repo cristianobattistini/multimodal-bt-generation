@@ -1,0 +1,21 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Execute subtree ApproachBottle -->
+      <SubTree ID="ApproachBottle" />
+      <!-- Unlock bottle -->
+      <Action ID="UNLOCK" obj="bottle" />
+      <!-- Let go -->
+      <Action ID="LET_GO" />
+    </Sequence>
+  </BehaviorTree>
+  <!-- Subtree definition ApproachBottle -->
+  <BehaviorTree ID="ApproachBottle">
+    <Sequence>
+      <!-- Navigate to bottle -->
+      <Action ID="NAVIGATE_TO" obj="bottle" />
+      <!-- Grasp bottle -->
+      <Action ID="GRASP" obj="bottle" />
+    </Sequence>
+  </BehaviorTree>
+</root>

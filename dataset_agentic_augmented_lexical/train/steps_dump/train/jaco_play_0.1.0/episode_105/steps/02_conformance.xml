@@ -1,0 +1,17 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Go to milk_dairy -->
+      <Action ID="GO_TO" obj="milk_dairy" />
+      <!-- Grab milk_dairy -->
+      <Action ID="GRAB" obj="milk_dairy" />
+      <!-- Approach table -->
+      <Action ID="APPROACH" obj="table" />
+      <!-- Retry PLACE_ON_TOP table up to 5 attempts -->
+      <RetryUntilSuccessful num_attempts="5">
+        <!-- Place on table -->
+        <Action ID="LAY_ON" obj="table" />
+      </RetryUntilSuccessful>
+    </Sequence>
+  </BehaviorTree>
+</root>

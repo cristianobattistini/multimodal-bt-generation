@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "pot_lid"
+  destination: ""
+  expanded_instruction: "Lift the lid off the pot sitting on the countertop; if a grasp fails, retry up to 2 times, and if still unsuccessful, push or flip the lid to reposition before lifting."
+  scene_context: "Pot on counter with lid covering; lid not held; countertop reachable and mostly clear."
+  expected_sequence: "Approach the pot, grasp the lid (retry up to 2 times if needed), and lift it off; if grasping repeatedly fails, push or flip the lid to reposition, then grasp and lift."

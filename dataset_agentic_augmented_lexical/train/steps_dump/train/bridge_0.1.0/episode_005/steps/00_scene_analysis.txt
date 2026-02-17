@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "banana"
+  destination: "green_cloth"
+  expanded_instruction: "Pick up the banana from the stovetop and place it on the green cloth on the stove. Use an ApproachBanana subtree for the approach phase; retry up to 3 times with a 10s timeout, and if grasp fails, push to reposition before retrying."
+  scene_context: "Banana lies on the stovetop next to a blue brush; green cloth on stove is clear; robot not holding anything."
+  expected_sequence: "Approach the banana (as an ApproachBanana subtree: approach with up to 3 retries and 10s timeout), grasp it (if grasp fails, push to reposition and retry), lift it, and set it down on the green cloth."

@@ -1,0 +1,17 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to peeler -->
+      <Action ID="NAVIGATE_TO" obj="peeler" />
+      <!-- Retry GRASP peeler up to 5 attempts -->
+      <RetryUntilSuccessful num_attempts="5">
+        <!-- Grasp peeler -->
+        <Action ID="GRIP" obj="peeler" />
+      </RetryUntilSuccessful>
+      <!-- Grip peeler -->
+      <Action ID="ADVANCE_TO" obj="table" />
+      <!-- Advance to table -->
+      <Action ID="PLACE_ON_TOP" obj="peeler" surface="table" />
+    </Sequence>
+  </BehaviorTree>
+</root>

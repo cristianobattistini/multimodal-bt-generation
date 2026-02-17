@@ -1,0 +1,19 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to cup -->
+      <Action ID="NAVIGATE_TO" obj="cup" />
+      <!-- Retry GRASP cup up to 5 attempts -->
+      <RetryUntilSuccessful num_attempts="5">
+        <!-- Grasp cup -->
+        <Action ID="GRASP" obj="cup" />
+      </RetryUntilSuccessful>
+      <!-- Navigate to hook -->
+      <Action ID="NAVIGATE_TO" obj="hook" />
+      <!-- Hang bag on hook -->
+      <Action ID="HANG" obj="hook" />
+      <!-- Release -->
+      <Action ID="RELEASE" />
+    </Sequence>
+  </BehaviorTree>
+</root>

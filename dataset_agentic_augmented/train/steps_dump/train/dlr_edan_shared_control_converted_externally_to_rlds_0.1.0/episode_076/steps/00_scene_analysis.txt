@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "pear"
+  destination: ""
+  expanded_instruction: "Using the ApproachMetalWireShelf subtree, pick up the pear from the metal wire shelf next to the black cabinet; if approach or grasp fails, retry up to 3 times with a 10s timeout and push to reposition before retrying."
+  scene_context: "Pear resting on open metal wire shelf beside cabinet; robot not holding anything; shelf reachable."
+  expected_sequence: "ApproachMetalWireShelf subtree: move to the shelf, grasp the pear (if grasp fails, push to reposition and retry up to 3 times within 10s), and lift it clear of the shelf."

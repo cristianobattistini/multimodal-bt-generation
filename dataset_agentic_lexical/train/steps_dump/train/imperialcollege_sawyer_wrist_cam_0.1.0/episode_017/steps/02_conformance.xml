@@ -1,0 +1,10 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to wine_glass -->
+      <Action ID="NAVIGATE_TO" obj="wine_glass" />
+      <!-- Shove wine_glass -->
+      <Action ID="SHOVE" obj="wine_glass" />
+    </Sequence>
+  </BehaviorTree>
+</root>

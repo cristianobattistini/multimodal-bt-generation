@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "zipper_bag"
+  destination: ""
+  expanded_instruction: "Unzip the small black zipper bag sitting on the table by pulling the zipper open, retrying the open action up to 3 times if it fails."
+  scene_context: "Black zipper bag on table, zipper closed, bag not held, table clear and reachable."
+  expected_sequence: "Move to the bag, grasp the zipper pull, and slide it along the track to open the bag, retrying the open up to 3 times if it fails."

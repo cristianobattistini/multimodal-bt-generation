@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "maroon_square"
+  destination: ""
+  expanded_instruction: "Pick up the maroon square block from the table"
+  scene_context: "Table has multiple objects; maroon square resting on table near the right front; no containers open and object not held."
+  expected_sequence: "Approach the maroon square, grasp it, and lift it off the table."

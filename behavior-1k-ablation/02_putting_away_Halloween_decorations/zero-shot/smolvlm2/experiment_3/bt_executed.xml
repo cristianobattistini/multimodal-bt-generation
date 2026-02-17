@@ -1,0 +1,20 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to pumpkin -->
+      <Action ID="NAVIGATE_TO" obj="pumpkin" />
+      <!-- Grasp pumpkin -->
+      <Action ID="GRASP" obj="pumpkin" />
+      <!-- Place inside cabinet -->
+      <Action ID="PLACE_INSIDE" obj="cabinet" />
+      <!-- Place next to table -->
+      <Action ID="PLACE_NEXT_TO" obj="table" />
+      <!-- Open cabinet -->
+      <Action ID="OPEN" />
+      <!-- Place next to table -->
+      <Action ID="PLACE_NEXT_TO" obj="table" />
+      <!-- Close cabinet -->
+      <Action ID="CLOSE" />
+    </Sequence>
+  </BehaviorTree>
+</root>

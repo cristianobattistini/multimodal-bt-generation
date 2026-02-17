@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "maroon_cube"
+  destination: ""
+  expanded_instruction: "Confirm the maroon cube is visible, then navigate to it (within a 20s timeout) and pick it up from the table near the right-front group of objects."
+  scene_context: "Maroon cube on table right of center, not held; table is clear otherwise and no containers are closed."
+  expected_sequence: "Check the maroon cube is visible, navigate to it (20s timeout), grasp it, and lift it clear of the table."

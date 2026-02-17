@@ -1,0 +1,16 @@
+{
+  "success": true,
+  "bt_success": true,
+  "bddl_goal": true,
+  "ticks": 1,
+  "duration": 97.4949426651001,
+  "inference_time": 110.99741721153259,
+  "satisfied": [
+    "forall(['?plywood.n.01', '-', 'plywood.n.01'], ['ontop', '?plywood.n.01', '?floor.n.01_2'])"
+  ],
+  "unsatisfied": [],
+  "task": "15_bringing_in_wood",
+  "model": "adapter",
+  "experiment": 1,
+  "timestamp": "20260210_161225"
+}

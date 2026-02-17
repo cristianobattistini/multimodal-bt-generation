@@ -1,0 +1,21 @@
+ scene_analysis:
+  target: "ashcan"
+  destination: "trash_can"
+  expanded_instruction: "Pick up the three cans of soda from the living room floor and place them into the trash_can in the kitchen."
+  scene_context: "Three cans of soda on the living room floor; the cans are not held; the trash_can is open and empty."
+  expected_sequence: "Pick up the cans from the living room floor, move to the trash_can, and place each can into the trash_can."
+Plan:
+<root main_tree_to_execute="MainTree">
+  <Sequence>
+    <!-- Navigate to ashcan -->
+    <Action ID="NAVIGATE_TO" obj="ashcan" />
+    <!-- Grasp ashcan -->
+    <Action ID="GRASP" obj="ashcan" />
+    <!-- Navigate to trash_can -->
+    <Action ID="NAVIGATE_TO" obj="trash_can" />
+    <!-- Place inside trash_can -->
+    <Action ID="PLACE_INSIDE" obj="trash_can" />
+  </Sequence>
+</root>
+
+Allowed Conditions: [NAVIGATE_TO(obj), GRASP(obj), PLACE_INSIDE(obj)]

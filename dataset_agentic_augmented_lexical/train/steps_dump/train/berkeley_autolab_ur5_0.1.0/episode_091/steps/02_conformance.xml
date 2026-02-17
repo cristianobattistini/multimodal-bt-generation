@@ -1,0 +1,21 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Execute subtree ApproachRedBowl -->
+      <SubTree ID="ApproachRedBowl" />
+      <!-- Go to grey_bowl -->
+      <Action ID="GO_TO" obj="grey_bowl" />
+      <!-- Insert into grey_bowl -->
+      <Action ID="INSERT_INTO" obj="grey_bowl" />
+    </Sequence>
+  </BehaviorTree>
+  <!-- Subtree definition ApproachRedBowl -->
+  <BehaviorTree ID="ApproachRedBowl">
+    <Sequence>
+      <!-- Go to red_bowl -->
+      <Action ID="GO_TO" obj="red_bowl" />
+      <!-- Grasp tiger -->
+      <Action ID="GRASP" obj="tiger" />
+    </Sequence>
+  </BehaviorTree>
+</root>

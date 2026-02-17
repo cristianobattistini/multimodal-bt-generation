@@ -1,0 +1,29 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to long_bread -->
+      <Action ID="NAVIGATE_TO" obj="long_bread" />
+      <!-- Fallback: if GRASP long_bread fails, try alternative to reposition -->
+      <Fallback>
+        <!-- Retry GRASP long_bread up to 3 attempts -->
+        <RetryUntilSuccessful num_attempts="3">
+          <!-- Timeout: GRASP long_bread within 15s -->
+          <Timeout msec="15000">
+            <!-- Grasp long_bread -->
+            <Action ID="GRASP" obj="long_bread" />
+          </Timeout>
+        </RetryUntilSuccessful>
+        <Sequence>
+          <!-- Push long_bread forward toward front edge of table -->
+          <Action ID="PUSH" obj="long_bread" />
+          <!-- Grasp long_bread -->
+          <Action ID="GRASP" obj="long_bread" />
+        </Sequence>
+      </Fallback>
+      <!-- Navigate to sink -->
+      <Action ID="NAVIGATE_TO" obj="sink" />
+      <!-- Place inside sink -->
+      <Action ID="PLACE_INSIDE" obj="sink" />
+    </Sequence>
+  </BehaviorTree>
+</root>

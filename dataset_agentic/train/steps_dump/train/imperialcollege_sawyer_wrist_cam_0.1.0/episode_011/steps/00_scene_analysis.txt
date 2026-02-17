@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "lid"
+  destination: ""
+  expanded_instruction: "Open the lower-right white round lid on the blue panel"
+  scene_context: "Multiple white round lids on blue surface; lower-right lid is closed and accessible."
+  expected_sequence: "Move to the lower-right lid and open it by lifting the lid."

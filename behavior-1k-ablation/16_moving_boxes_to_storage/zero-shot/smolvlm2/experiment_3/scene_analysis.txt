@@ -1,0 +1,7 @@
+scene_analysis:
+  target: storage_container_1
+  destination: garage_floor
+  expanded_instruction: "Open the door, then pick up the white storage container from the table and place it on the garage floor."
+  scene_context: "White storage container on table near the blue couch; door is closed and reachable; no containers on garage floor."
+  expected_sequence: "Open the door, pick up the white storage container from the table, move it to the garage floor, and set it down."
+Plan:

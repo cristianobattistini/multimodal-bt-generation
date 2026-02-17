@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "apple_fruit"
+  destination: "sink"
+  expanded_instruction: "Pick up the apple fruit from the table and place it into the sink; check the apple is visible before grasping, retry the grasp up to 3 times if it fails, and if grasping still fails use push or flip to reposition the apple."
+  scene_context: "Apple fruit on table; blue sink open and empty; robot not holding apple; path clear."
+  expected_sequence: "Approach the apple, verify IS_VISIBLE, attempt to grasp (retry up to 3 times), if grasp fails push or flip to reposition the apple, then move to the sink and release it inside."

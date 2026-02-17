@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "red_cube"
+  destination: "table"
+  expanded_instruction: "Verify the red cube is visible, then pick up the red cube from the table and place it down on the table surface nearby; if the grasp fails, retry up to 3 times."
+  scene_context: "Red cube on the table; robot not holding it; table surface is clear and reachable."
+  expected_sequence: "Check that the red cube is visible, approach the red cube, grasp it (retry up to 3 times if grasp fails), then place it down on the table nearby."

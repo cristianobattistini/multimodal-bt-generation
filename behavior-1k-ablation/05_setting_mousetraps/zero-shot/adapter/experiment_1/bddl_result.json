@@ -1,0 +1,20 @@
+{
+  "success": true,
+  "bt_success": true,
+  "bddl_goal": true,
+  "ticks": 1,
+  "duration": 51.32021880149841,
+  "inference_time": 67.04444456100464,
+  "satisfied": [
+    "exists(['?floor.n.01', '-', 'floor.n.01'], ['forall', ['?mousetrap.n.01', '-', 'mousetrap.n.01'], ['ontop', '?mousetrap.n.01', '?floor.n.01']])",
+    "exists(['?sink.n.01', '-', 'sink.n.01'], ['forn', ['2'], ['?mousetrap.n.01', '-', 'mousetrap.n.01'], ['or', ['under', '?mousetrap.n.01', '?sink.n.01'], ['nextto', '?mousetrap.n.01', '?sink.n.01']]])"
+  ],
+  "unsatisfied": [],
+  "task": "05_setting_mousetraps",
+  "condition": "zero-shot",
+  "model_dir": "adapter",
+  "vlm_model": "gemma",
+  "inference_mode": "adapter",
+  "experiment": 2,
+  "timestamp": "20260213_092114"
+}

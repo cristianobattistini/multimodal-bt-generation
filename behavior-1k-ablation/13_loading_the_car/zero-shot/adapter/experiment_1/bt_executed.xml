@@ -1,0 +1,50 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to tennis_racket -->
+      <Action ID="NAVIGATE_TO" obj="tennis_racket" />
+      <!-- Grasp tennis_racket -->
+      <Action ID="GRASP" obj="tennis_racket" />
+      <!-- Navigate to trunk -->
+      <Action ID="NAVIGATE_TO" obj="trunk" />
+      <!-- Place inside trunk -->
+      <Action ID="PLACE_INSIDE" obj="trunk" />
+      <!-- Open trunk -->
+      <Action ID="OPEN" obj="trunk" />
+      <!-- Navigate to container -->
+      <Action ID="NAVIGATE_TO" obj="container" />
+      <!-- Navigate to container -->
+      <Action ID="NAVIGATE_TO" obj="container" />
+      <!-- Navigate to container -->
+      <Action ID="NAVIGATE_TO" obj="container" />
+      <!-- Grasp container -->
+      <Action ID="GRASP" obj="container" />
+      <!-- Navigate to car -->
+      <Action ID="NAVIGATE_TO" obj="car" />
+      <!-- Place inside car -->
+      <Action ID="PLACE_INSIDE" obj="car" />
+      <!-- Navigate to digital_camera -->
+      <Action ID="NAVIGATE_TO" obj="digital_camera" />
+      <!-- Navigate to digital_camera -->
+      <Action ID="NAVIGATE_TO" obj="digital_camera" />
+      <!-- Grasp digital_camera -->
+      <Action ID="GRASP" obj="digital_camera" />
+      <!-- Navigate to container -->
+      <Action ID="NAVIGATE_TO" obj="container" />
+      <!-- Place inside container -->
+      <Action ID="PLACE_INSIDE" obj="container" />
+      <!-- Navigate to car -->
+      <Action ID="NAVIGATE_TO" obj="car" />
+      <!-- Navigate to car -->
+      <Action ID="NAVIGATE_TO" obj="car" />
+      <!-- Grasp digital_camera -->
+      <Action ID="GRASP" obj="digital_camera" />
+      <!-- Navigate to car -->
+      <Action ID="NAVIGATE_TO" obj="car" />
+      <!-- Place inside car -->
+      <Action ID="PLACE_INSIDE" obj="car" />
+      <!-- Close trunk -->
+      <Action ID="CLOSE" obj="trunk" />
+    </Sequence>
+  </BehaviorTree>
+</root>

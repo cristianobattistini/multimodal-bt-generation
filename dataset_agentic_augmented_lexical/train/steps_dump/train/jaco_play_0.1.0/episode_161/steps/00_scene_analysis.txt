@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "gray_bowl"
+  destination: "dish_rack"
+  expanded_instruction: "Pick up the gray bowl from the table and place it inside the blue dish rack. Before navigating, check IS_REACHABLE on dish_rack and retry up to 3 times with a 10s timeout; if unreachable, abort and report failure."
+  scene_context: "Gray bowl on table not held; dish_rack is open and reachable; nearby sponge and red toy on table."
+  expected_sequence: "Move to the gray bowl, grasp it, check IS_REACHABLE on dish_rack, then navigate to the dish rack (retry up to 3 times, 10s timeout), carry the bowl to the dish rack, and set it inside."

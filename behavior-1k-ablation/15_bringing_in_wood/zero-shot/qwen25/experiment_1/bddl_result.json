@@ -1,0 +1,19 @@
+{
+  "success": true,
+  "bt_success": true,
+  "bddl_goal": true,
+  "ticks": 1,
+  "duration": 99.67804384231567,
+  "inference_time": 55.60819125175476,
+  "satisfied": [
+    "forall(['?plywood.n.01', '-', 'plywood.n.01'], ['ontop', '?plywood.n.01', '?floor.n.01_2'])"
+  ],
+  "unsatisfied": [],
+  "task": "15_bringing_in_wood",
+  "condition": "zero-shot",
+  "model_dir": "qwen25",
+  "vlm_model": "qwen",
+  "inference_mode": "adapter",
+  "experiment": 1,
+  "timestamp": "20260213_180207"
+}

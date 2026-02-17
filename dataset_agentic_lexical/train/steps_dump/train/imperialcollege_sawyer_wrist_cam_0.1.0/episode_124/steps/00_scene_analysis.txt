@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "shoe"
+  destination: ""
+  expanded_instruction: "Pick up the white shoe resting on the blue surface"
+  scene_context: "White shoe lying on a clear blue floor/mat, not held, no closed containers."
+  expected_sequence: "Approach the shoe, grasp it securely, and lift it up."

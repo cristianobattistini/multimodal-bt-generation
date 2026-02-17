@@ -1,0 +1,21 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Execute subtree ApproachPot -->
+      <SubTree ID="ApproachPot" />
+      <!-- Go to sink -->
+      <Action ID="GO_TO" obj="sink" />
+      <!-- Set in sink -->
+      <Action ID="SET_IN" obj="sink" />
+    </Sequence>
+  </BehaviorTree>
+  <!-- Subtree definition ApproachPot -->
+  <BehaviorTree ID="ApproachPot">
+    <Sequence>
+      <!-- Navigate to pot -->
+      <Action ID="GO_TO" obj="pot" />
+      <!-- Grasp pot -->
+      <Action ID="GRASP" obj="pot" />
+    </Sequence>
+  </BehaviorTree>
+</root>

@@ -1,0 +1,16 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to pot -->
+      <Action ID="NAVIGATE_TO" obj="pot" />
+      <!-- Grip pot -->
+      <Action ID="GRIP" obj="pot" />
+      <!-- Flip pot upright -->
+      <Action ID="FLIP" obj="pot" />
+      <!-- Move to sink -->
+      <Action ID="MOVE_TO" obj="sink" />
+      <!-- Place pot inside sink -->
+      <Action ID="PLACE_INSIDE" obj="pot" container="sink" />
+    </Sequence>
+  </BehaviorTree>
+</root>

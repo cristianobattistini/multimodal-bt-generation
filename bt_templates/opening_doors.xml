@@ -1,0 +1,12 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Open door 1 in bathroom -->
+      <Action ID="NAVIGATE_TO" obj="door.n.01_1"/>
+      <Action ID="OPEN" obj="door.n.01_1"/>
+      <!-- Open door 2 in living room -->
+      <Action ID="NAVIGATE_TO" obj="door.n.01_2"/>
+      <Action ID="OPEN" obj="door.n.01_2"/>
+    </Sequence>
+  </BehaviorTree>
+</root>

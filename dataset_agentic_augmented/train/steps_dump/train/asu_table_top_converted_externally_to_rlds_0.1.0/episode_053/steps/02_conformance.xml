@@ -1,0 +1,14 @@
+<root main_tree_to_execute="MainTree">
+  <BehaviorTree ID="MainTree">
+    <Sequence>
+      <!-- Navigate to coke_bottle -->
+      <Action ID="NAVIGATE_TO" obj="coke_bottle" />
+      <Sequence>
+        <!-- Check coke_bottle is reachable before GRASP -->
+        <Condition ID="IS_REACHABLE" obj="coke_bottle" />
+        <!-- Grasp coke_bottle -->
+        <Action ID="GRASP" obj="coke_bottle" />
+      </Sequence>
+    </Sequence>
+  </BehaviorTree>
+</root>

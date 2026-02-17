@@ -1,0 +1,6 @@
+scene_analysis:
+  target: "spatula"
+  destination: "table"
+  expanded_instruction: "Pick up the light-blue-handled spatula from the table and place it at the table's bottom-left corner."
+  scene_context: "Spatula lies on the table near the right/top area; table surface is clear; robot is not holding anything."
+  expected_sequence: "Move to the spatula, grasp it, carry it to the table's bottom-left corner, and set it down."

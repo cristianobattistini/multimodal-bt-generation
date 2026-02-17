@@ -1,0 +1,10 @@
+{
+  "decorator_type": "timeout",
+  "mixed_subtype": null,
+  "target_action_id": "NAVIGATE_TO",
+  "target_obj": "maroon_cube",
+  "parameters": {
+    "msec": 20000
+  },
+  "prompt_name": "timeout"
+}
