@@ -66,13 +66,13 @@ parser.add_argument(
 parser.add_argument(
     "--demo-jsonl",
     type=str,
-    default="/home/cristiano/oxe-bt-pipeline/dataset_agentic_student/val/train_e2e.jsonl",
+    default="/home/cristiano/multimodal-bt-generation/dataset_agentic/val/train_e2e.jsonl",
     help="Path to demo jsonl file"
 )
 parser.add_argument(
     "--demo-root",
     type=str,
-    default="/home/cristiano/oxe-bt-pipeline/dataset_agentic_student/val",
+    default="/home/cristiano/multimodal-bt-generation/dataset_agentic/val",
     help="Root folder for demo images"
 )
 parser.add_argument(

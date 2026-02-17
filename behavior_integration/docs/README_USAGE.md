@@ -11,7 +11,7 @@ Sistema completo per generare Behavior Trees con VLM e eseguirli in BEHAVIOR-1K 
 ## 📁 Struttura del Progetto
 
 ```
-oxe-bt-pipeline/
+multimodal-bt-generation/
 ├── behavior_integration/                     # 📦 Package: integrazione BEHAVIOR-1K
 │   ├── scripts/
 │   │   ├── run_continuous_pipeline.py        # 🌟 Pipeline persistente (multi-episodio)
@@ -34,7 +34,7 @@ oxe-bt-pipeline/
 ```bash
 # Attiva l'ambiente behavior (include tutto: OmniGibson + VLM)
 conda activate behavior
-cd /home/cristiano/oxe-bt-pipeline
+cd /home/cristiano/multimodal-bt-generation
 ```
 
 ### 2. Avvia il VLM server (in un terminale separato)
@@ -287,11 +287,11 @@ python3 behavior_integration/scripts/run_continuous_pipeline.py \
 ## 🌐 GitHub Repository
 
 Tutti i file sono pushati su:
-**https://github.com/tuozaibeibei/oxe-bt-pipeline**
+**https://github.com/cristianobattistini/multimodal-bt-generation**
 
 ```bash
 # Verifica stato git
-cd /home/cristiano/oxe-bt-pipeline
+cd /home/cristiano/multimodal-bt-generation
 git status
 git log --oneline -10
 
@@ -321,7 +321,7 @@ tar -czf gemma3_lora_backup.tar.gz /home/cristiano/lora_models/
 
 ```bash
 conda activate behavior
-cd /home/cristiano/oxe-bt-pipeline
+cd /home/cristiano/multimodal-bt-generation
 
 python3 behavior_integration/scripts/run_continuous_pipeline.py \
   --scene house_single_floor \
@@ -374,7 +374,7 @@ python3 behavior_integration/scripts/run_continuous_pipeline.py \
 Prima di ogni esecuzione:
 
 - [ ] `conda activate behavior` attivo
-- [ ] In directory `/home/cristiano/oxe-bt-pipeline`
+- [ ] In directory `/home/cristiano/multimodal-bt-generation`
 - [ ] LoRA models esistono in `/home/cristiano/lora_models/`
 - [ ] Isaac Sim disponibile in `/home/cristiano/isaacsim/`
 - [ ] BEHAVIOR-1K datasets in `/home/cristiano/BEHAVIOR-1K/datasets/`

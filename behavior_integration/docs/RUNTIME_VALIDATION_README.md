@@ -92,7 +92,7 @@ These tend to load quickly and use fewer objects:
 ```
 OMNIHUB_ENABLED=0 OMNIGIBSON_DATA_PATH=/home/cristiano/BEHAVIOR-1K/datasets \
 /home/cristiano/miniconda3/envs/behavior/bin/python -u \
-/home/cristiano/oxe-bt-pipeline/behavior_integration/scripts/run_bt_agent_pipeline.py \
+/home/cristiano/multimodal-bt-generation/behavior_integration/scripts/run_bt_agent_pipeline.py \
   --instruction "<your instruction>" \
   --task <task_name> \
   --scene <scene_name> \

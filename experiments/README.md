@@ -5,7 +5,7 @@ This directory contains the experiment tracking system for evaluating models on 
 ## Directory Structure
 
 ```
-oxe-bt-pipeline/
+multimodal-bt-generation/
 ├── experiments/
 │   ├── README.md                        # This file
 │   └── behavior_1k_experiments.json     # Tracking file with all 50 tasks

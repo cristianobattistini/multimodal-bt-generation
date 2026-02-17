@@ -29,14 +29,14 @@ Il server supporta due modelli VLM trainati:
 ### Lanciare il server con Qwen
 
 ```bash
-cd /home/cristiano/oxe-bt-pipeline
+cd /home/cristiano/multimodal-bt-generation
 python behavior_integration/scripts/vlm_server.py --model qwen --port 7860
 ```
 
 ### Lanciare il server con Gemma
 
 ```bash
-cd /home/cristiano/oxe-bt-pipeline
+cd /home/cristiano/multimodal-bt-generation
 python behavior_integration/scripts/vlm_server.py --model gemma --port 7861
 ```
 

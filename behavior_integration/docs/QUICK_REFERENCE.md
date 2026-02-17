@@ -5,7 +5,7 @@
 Terminal 1 (VLM):
 ```bash
 conda activate behavior
-cd /home/cristiano/oxe-bt-pipeline
+cd /home/cristiano/multimodal-bt-generation
 python3 behavior_integration/scripts/vlm_server.py --model qwen --port 7860
 ```
 

@@ -7,7 +7,7 @@ import os
 import subprocess
 from pathlib import Path
 
-GSUTIL = "/home/cristiano/oxe-bt-pipeline/.conda/gsutil/bin/gsutil"
+GSUTIL = os.getenv("GSUTIL_PATH", "/usr/bin/gsutil")
 DATASETS = [
     "jaco_play",
     "fractal20220817_data",

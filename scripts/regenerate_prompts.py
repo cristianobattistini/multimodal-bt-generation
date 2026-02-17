@@ -9,7 +9,7 @@ import re
 from pathlib import Path
 
 # Paths
-BASE_DIR = Path("/home/cristiano/oxe-bt-pipeline")
+BASE_DIR = Path("/home/cristiano/multimodal-bt-generation")
 BDDL_DIR = Path("/home/cristiano/BEHAVIOR-1K/bddl3/bddl/activity_definitions")
 PROMPTS_DIR = BASE_DIR / "prompts/tasks/behavior-1k"
 TASKS_JSON = BASE_DIR / "behavior_1k_tasks.json"

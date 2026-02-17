@@ -55,7 +55,7 @@ Aggiungendo `--interactive-control` a qualsiasi modalità si attiva il menu inte
 conda activate behavior_gpu
 
 # Naviga alla cartella del progetto
-cd ~/oxe-bt-pipeline
+cd ~/multimodal-bt-generation
 ```
 
 ### Test Fase 1: Solo Navigazione

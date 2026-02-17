@@ -514,7 +514,7 @@ Per `--task tidying_bedroom`:
 ### Layout
 
 ```
-oxe-bt-pipeline/
+multimodal-bt-generation/
 ├── debug_images/
 │   └── {bt_name}_{task}/           # Es: tidying_bedroom_book_tidying_bedroom
 │       └── {timestamp}/            # Es: 20260128_114356
