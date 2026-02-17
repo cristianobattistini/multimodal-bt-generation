@@ -1,0 +1,72 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+*.egg
+*.manifest
+*.spec
+
+# Virtual environments
+.env
+.venv/
+env/
+venv/
+ENV/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Build / packaging
+build/
+dist/
+*.whl
+*.tar.gz
+
+# Logs & cache
+*.log
+*.out
+*.err
+*.pid
+*.tmp
+.pytest_cache/
+.mypy_cache/
+.cache/
+.coverage
+htmlcov/
+
+# Debug artifacts
+debug_logs/
+debug_tasks/
+debug_images/
+failure_screenshots/
+
+# Models / checkpoints (stored on Drive/HuggingFace)
+*.ckpt
+*.pt
+*.pth
+*.bin
+*.safetensors
+
+# IDE / editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Secrets
+keys.py
+
+# Temporary outputs
+out/
+output/
+
+# Claude Code workspace
+.claude/
+
+# Compiled caches
+unsloth_compiled_cache/
+
+# Archives
+*.zip
