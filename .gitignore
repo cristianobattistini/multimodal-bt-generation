@@ -68,5 +68,10 @@ output/
 # Compiled caches
 unsloth_compiled_cache/
 
+# Backup artifacts
+*.backup
+*.bak
+.backups/
+
 # Archives
 *.zip

@@ -6,19 +6,19 @@ Loads predefined BT templates and executes them directly in OmniGibson.
 Useful for verifying that the simulation works before testing the full pipeline.
 
 Usage:
-    # Fase 1: Solo navigazione
+    # Phase 1: Navigation only
     python behavior_integration/scripts/run_bt_test.py \
         --bt test_navigate --task tidying_bedroom --symbolic --headless
 
-    # Fase 2: Navigate + Grasp
+    # Phase 2: Navigate + Grasp
     python behavior_integration/scripts/run_bt_test.py \
         --bt test_grasp --task tidying_bedroom --symbolic --headless
 
-    # Fase 3: Task completo (libro)
+    # Phase 3: Full task (book)
     python behavior_integration/scripts/run_bt_test.py \
         --bt tidying_bedroom_book --task tidying_bedroom --symbolic --headless
 
-    # Fase 4: Con OPEN/CLOSE (bottiglia)
+    # Phase 4: With OPEN/CLOSE (bottle)
     python behavior_integration/scripts/run_bt_test.py \
         --bt bringing_water_one --task bringing_water --symbolic --headless
 """

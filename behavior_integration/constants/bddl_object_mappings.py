@@ -280,14 +280,14 @@ BDDL_OBJECT_MAPPINGS = {
         'plywoods': ['plywood.n.01_1', 'plywood.n.01_2', 'plywood.n.01_3'],
     },
     '16_moving_boxes_to_storage': {
-        'car_door': 'door_bexenl_0',  # VLM alias - vede porta garage e la chiama car_door
+        'car_door': 'door_bexenl_0',  # VLM alias - sees garage door and calls it car_door
         'container': ['storage_container.n.01_1', 'storage_container.n.01_2'],
-        'door': 'door_bexenl_0',  # porta tra garage e corridor
-        'garage_door': 'door_bexenl_0',  # alias - porta interna, NON la grande del garage
+        'door': 'door_bexenl_0',  # door between garage and corridor
+        'garage_door': 'door_bexenl_0',  # alias - internal door, NOT the large garage door
         'floor': ['floor.n.01_1', 'floor.n.01_2'],
         'floors': ['floor.n.01_1', 'floor.n.01_2'],
-        'garage_floor': 'floor.n.01_2',  # floor nel garage (destination)
-        'living_room_floor': 'floor.n.01_1',  # floor nel living room
+        'garage_floor': 'floor.n.01_2',  # floor in the garage (destination)
+        'living_room_floor': 'floor.n.01_1',  # floor in the living room
         'storage_container': ['storage_container.n.01_1', 'storage_container.n.01_2'],
         'storage_containers': ['storage_container.n.01_1', 'storage_container.n.01_2'],
     },
