@@ -1,18 +1,17 @@
 """
 Task: 08_rearranging_kitchen_furniture
 
-PROBLEMA PRINCIPALE: Physics instability dopo OPEN del cabinet.
-Il cabinet ha articulated joints (porta) che causano accumulo di errori fisici.
-Dopo ~100-200 step di simulazione, i quaternioni diventano NaN e il robot "esplode".
-Stesso problema del task 04 (can_meat) con hinged_jar.
+Main problem: Physics instability after OPEN on cabinet.
+The cabinet has articulated joints (door) that cause physics error accumulation.
+After ~100-200 simulation steps, quaternions become NaN and the robot "explodes".
+Same problem as task 04 (can_meat) with hinged_jar.
 
 Scene layout:
 - Top Cabinet: X: 8.30, Y: -0.37
 - Countertop/Bar: X: 6.75, Y: -0.71
 - Breakfast Table (obstacle): X: 4.29, Y: 1.44
 
-Soluzione: Minimizzare TUTTI gli step di simulazione per completare prima che
-la fisica diventi instabile.
+Solution: Minimize ALL simulation steps to complete before physics becomes unstable.
 """
 
 from behavior_integration.constants.primitive_config import PrimitiveConfig

@@ -1,10 +1,10 @@
 """
 Task: 19_outfit_a_basic_toolbox
 
-PROBLEMA: Physics instability - la toolbox cade dal tabletop durante PLACE_INSIDE.
-Con 5 oggetti da inserire, le forze si accumulano e fanno cadere il container.
+Problem: Physics instability - the toolbox falls off the tabletop during PLACE_INSIDE.
+With 5 objects to insert, forces accumulate and cause the container to fall.
 
-Soluzione: Minimizzare settling steps (pattern task 11), mantenendo orientation.
+Solution: Minimize settling steps (pattern from task 11), preserving orientation.
 """
 
 from behavior_integration.constants.primitive_config import PrimitiveConfig

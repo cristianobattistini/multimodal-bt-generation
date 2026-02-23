@@ -87,13 +87,13 @@ class VLMInference:
     def _load_model(self, load_in_4bit: bool):
         base_model_name = self.SUPPORTED_MODELS[self.model_type]
 
-        # Importante: evita device_map="auto" (sparge su CPU/disk)
+        # Important: avoid device_map="auto" (spreads across CPU/disk)
         common_kwargs = dict(
             model_name=base_model_name,
             load_in_4bit=load_in_4bit,
             device_map="sequential",
-            gpu_memory_utilization=0.90,   # prova 0.90-0.95 se hai VRAM libera
-            # opzionale se Unsloth lo supporta per questo modello:
+            gpu_memory_utilization=0.90,   # try 0.90-0.95 if you have free VRAM
+            # optional if Unsloth supports it for this model:
             # max_seq_length=2048,
         )
 

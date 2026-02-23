@@ -1,11 +1,11 @@
 """
 Task: 11_putting_dishes_away_after_cleaning
 
-PROBLEMA: Physics instability dopo OPEN del cabinet (come task 08).
-Con 8 piatti da spostare (vs 3 oggetti del task 08), il rischio è maggiore.
-I cabinet hanno articulated joints che causano accumulo di errori fisici.
+Problem: Physics instability after OPEN on cabinet (same as task 08).
+With 8 plates to move (vs 3 objects in task 08), the risk is higher.
+Cabinets have articulated joints that cause physics error accumulation.
 
-Soluzione: Minimizzare step di simulazione + smart placement per collisioni.
+Solution: Minimize simulation steps + smart placement for collisions.
 """
 
 from behavior_integration.constants.primitive_config import PrimitiveConfig

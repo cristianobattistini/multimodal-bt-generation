@@ -357,10 +357,10 @@ class BDDLGrounder:
 
     def rewrite_bt_with_grounding(self, bt_xml: str) -> str:
         """
-        Grounding disabilitato - ritorna BT originale.
+        Grounding disabled - return original BT.
 
-        I nomi BDDL nel BT (es. book.n.02_1) corrispondono già
-        ai nomi degli oggetti nella scena OmniGibson.
+        BDDL names in the BT (e.g. book.n.02_1) already match
+        the object names in the OmniGibson scene.
         """
         self.log("[GROUNDING] BT rewriting disabled - using exact BDDL names")
         return bt_xml

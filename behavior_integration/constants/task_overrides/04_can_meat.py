@@ -1,14 +1,14 @@
 """
 Task: 04_can_meat
 
-PROBLEMA: Physics instability con hinged_jar (articulated joints del coperchio).
-NaN quaternion errors dopo pochi step di simulazione.
-Stesso problema del task 08 con cabinet doors.
+Problem: Physics instability with hinged_jar (articulated joints on the lid).
+NaN quaternion errors after a few simulation steps.
+Same problem as task 08 with cabinet doors.
 
-Soluzione: Minimizzare TUTTI gli step di simulazione:
-- instant_settle_steps=1 → attiva _settle_robot minimo (1 step invece di 50)
-- skip_orientation=True → salta orientamenti che aggiungono step
-- skip_base_rotation=True → salta rotazioni base
+Solution: Minimize ALL simulation steps:
+- instant_settle_steps=1 -> triggers minimal _settle_robot (1 step instead of 50)
+- skip_orientation=True -> skip orientations that add steps
+- skip_base_rotation=True -> skip base rotations
 """
 
 from behavior_integration.constants.primitive_config import PrimitiveConfig

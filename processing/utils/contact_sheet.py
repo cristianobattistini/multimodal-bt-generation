@@ -53,7 +53,7 @@ def create_from_dir(
         raise FileNotFoundError(f"No frames matched in {frames_dir} (expected frame_*.jpg|jpeg|png)")
     src_indices = _pick_indices(total=len(paths), k=k, n=n, start=start)
     imgs = [_load_image(paths[i]) for i in src_indices]
-    c, r = _compute_grid(num_tiles=len(imgs), cols=cols, rows=rows)  # <- gestione colonne/righe qui
+    c, r = _compute_grid(num_tiles=len(imgs), cols=cols, rows=rows)
     written = _render_sheet(
         imgs=imgs,
         src_indices=src_indices,
@@ -100,7 +100,7 @@ def create_from_images(
 ) -> Dict[str, object]:
     """
     Same as create_from_dir but you provide PIL images + their original indices.
-    Useful se hai già caricato/filtrato i frame a monte.
+    Useful when you have already loaded/filtered frames upstream.
     """
     if len(images) != len(src_indices):
         raise ValueError("images and src_indices must have same length")
@@ -145,8 +145,8 @@ def _load_image(path: str) -> Image.Image:
 
 def _pick_indices(total: int, k: int, n: int, start: int) -> List[int]:
     """
-    Seleziona indici con passo k a partire da start. Garantisce l'ultimo frame.
-    Se più di n, riduce uniformemente mantenendo first/last.
+    Select indices with step k starting from start. Ensures the last frame is included.
+    If more than n, reduce uniformly keeping first/last.
     """
     if total <= 0 or start >= total:
         return []
@@ -156,7 +156,7 @@ def _pick_indices(total: int, k: int, n: int, start: int) -> List[int]:
     if n is not None and n > 0 and len(idxs) > n:
         keep = [0]
         if n > 2:
-            # sceglie (n-2) indici intermedi circa equispaziati
+            # pick (n-2) roughly equispaced intermediate indices
             import numpy as _np
             mids = _np.linspace(1, len(idxs) - 2, n - 2, dtype=int).tolist()
             keep += mids
@@ -166,18 +166,18 @@ def _pick_indices(total: int, k: int, n: int, start: int) -> List[int]:
 
 def _compute_grid(num_tiles: int, cols: Optional[int], rows: Optional[int]) -> Tuple[int, int]:
     """
-    Gestione RIGHE/COLONNE:
-    - Se passi sia cols che rows → usiamo quelli (verifica num_tiles ≤ cols*rows; altrimenti aumentiamo rows).
-    - Se passi solo cols → rows = ceil(num_tiles / cols).
-    - Se passi solo rows → cols = ceil(num_tiles / rows).
-    - Se non passi nulla → default estetico: rows=2, cols=ceil(num_tiles/2).
+    Grid layout logic:
+    - If both cols and rows are given -> use them (auto-expand rows if num_tiles > cols*rows).
+    - If only cols -> rows = ceil(num_tiles / cols).
+    - If only rows -> cols = ceil(num_tiles / rows).
+    - If neither -> default aesthetic: rows=2, cols=ceil(num_tiles/2).
     """
     if num_tiles <= 0:
         raise ValueError("num_tiles must be > 0")
     if cols is not None and rows is not None:
         capacity = cols * rows
         if num_tiles > capacity:
-            # estende automaticamente le righe per contenere tutto
+            # auto-expand rows to fit all tiles
             rows = math.ceil(num_tiles / cols)
         return int(cols), int(rows)
     if cols is not None:
@@ -186,7 +186,7 @@ def _compute_grid(num_tiles: int, cols: Optional[int], rows: Optional[int]) -> T
     if rows is not None:
         cols = math.ceil(num_tiles / rows)
         return int(cols), int(rows)
-    # default: 2 righe (look & feel tipo 4x2 per 8)
+    # default: 2 rows (aesthetic layout, e.g. 4x2 for 8 tiles)
     rows = 2
     cols = math.ceil(num_tiles / rows)
     return int(cols), int(rows)
@@ -212,10 +212,10 @@ def _render_sheet(
     if not imgs:
         raise ValueError("No images to render.")
     if os.path.exists(out_path) and not force:
-        # non sovrascrive: consideralo "non scritto" ma OK
+        # don't overwrite: consider it "not written" but OK
         return False
 
-    # Se le immagini < cols*rows, paddo duplicando l'ultima per riempire la griglia
+    # If images < cols*rows, pad by duplicating the last one to fill the grid
     tiles = list(imgs)
     srcs  = list(src_indices)
     capacity = cols * rows
@@ -226,7 +226,7 @@ def _render_sheet(
         tiles.append(tiles[-1])
         srcs.append(srcs[-1])
 
-    # Resize uniforme (stessa larghezza, aspect preservato)
+    # Uniform resize (same width, aspect ratio preserved)
     resized: List[Image.Image] = []
     for im in tiles:
         w, h = im.size
@@ -271,7 +271,7 @@ def _render_sheet(
         y = header_h + r * tile_h
         sheet.paste(im, (x, y))
         if draw_tile_indices:
-            # Overlay indice della tile [0..] (small, non-intrusive)
+            # Overlay tile index [0..] (small, non-intrusive)
             ix, iy = x + 6, y + 4
             label = f"[{idx}]"
             try:
@@ -286,7 +286,7 @@ def _render_sheet(
             )
             draw.text((ix, iy), label, fill=(255, 255, 255, 255), font=font_idx)
         if draw_src_indices:
-            # Overlay indice sorgente (small, bottom-left)
+            # Overlay source index (small, bottom-left)
             s = srcs[idx]
             txt = f"src={s}"
             sx, sy = x + 6, y + im.size[1] - max(18, int(src_size * 1.2))

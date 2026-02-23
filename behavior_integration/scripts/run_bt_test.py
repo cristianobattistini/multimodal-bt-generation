@@ -55,7 +55,7 @@ if os.path.exists(_og_path):
 
 # Predefined BT templates based on BDDL analysis
 BT_TEMPLATES = {
-    # Fase 1: Solo navigazione - verifica che OmniGibson si avvia
+    # Phase 1: Navigation only - verify OmniGibson starts
     "test_navigate": """
 <root main_tree_to_execute="MainTree">
   <BehaviorTree ID="MainTree">
@@ -66,7 +66,7 @@ BT_TEMPLATES = {
 </root>
 """,
 
-    # Fase 2: Navigate + Grasp - verifica manipolazione base
+    # Phase 2: Navigate + Grasp - verify basic manipulation
     "test_grasp": """
 <root main_tree_to_execute="MainTree">
   <BehaviorTree ID="MainTree">
@@ -94,7 +94,7 @@ BT_TEMPLATES = {
 </root>
 """,
 
-    # Fase 4: bringing_water con OPEN/CLOSE
+    # Phase 4: bringing_water with OPEN/CLOSE
     # BDDL: bottle INSIDE fridge -> bottle ON TOP coffee_table, fridge CLOSED
     "bringing_water_one": """
 <root main_tree_to_execute="MainTree">
@@ -155,12 +155,12 @@ def parse_args():
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Available BT templates:
-  test_navigate        - Solo NAVIGATE_TO (verifica avvio)
+  test_navigate        - NAVIGATE_TO only (verify startup)
   test_grasp           - NAVIGATE_TO + GRASP
-  tidying_bedroom_book - Task completo: libro dal letto al tavolo
-  bringing_water_one   - Con OPEN/CLOSE: bottiglia dal frigo al coffee_table
-  picking_up_toys_one  - PLACE_INSIDE: board_game nel toy_box
-  storing_food_one     - OPEN + PLACE_INSIDE: chips nel cabinet
+  tidying_bedroom_book - Full task: book from bed to nightstand
+  bringing_water_one   - With OPEN/CLOSE: bottle from fridge to coffee_table
+  picking_up_toys_one  - PLACE_INSIDE: board_game into toy_box
+  storing_food_one     - OPEN + PLACE_INSIDE: chips into cabinet
         """
     )
 

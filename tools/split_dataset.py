@@ -167,7 +167,7 @@ def split_dataset(input_file, output_dir):
     output_path = Path(output_dir)
     output_path.mkdir(parents=True, exist_ok=True)
 
-    # Caricamento template e PAL spec
+    # Load template and PAL spec
     tmpl_e2e = load_template("system_interface")
     pal_spec = load_pal_spec()
 

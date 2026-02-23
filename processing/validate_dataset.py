@@ -57,11 +57,11 @@ def validate_bt_xml_text(text: str) -> str:
     Return the BehaviorTree XML string if well-formed; raise ValueError otherwise.
     Rule: if the text contains extra material, only the LAST <BehaviorTree>...</BehaviorTree> block is validated.
     """
-    # 1) estrai ultimo blocco se presente; altrimenti usa tutto il testo (file “pulito”).
+    # 1) extract last block if present; otherwise use the full text (clean file).
     matches = _BT_PATTERN.findall(text or "")
     xml_candidate = matches[-1] if matches else (text or "").strip()
 
-    # 2) verifica well-formedness
+    # 2) verify well-formedness
     try:
         ET.fromstring(xml_candidate)
     except ET.ParseError as e:
