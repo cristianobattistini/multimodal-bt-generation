@@ -1,116 +1,188 @@
-# Multimodal Behavior Tree Generation
+# Multimodal Behavior Tree Generation for Robotic Task Planning
 
-The first multimodal dataset for Behavior Tree generation from text and images, together with a complete pipeline for fine-tuning Vision-Language Models and evaluating them in robotic simulation.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+<!-- [![arXiv](https://img.shields.io/badge/arXiv-XXXX.XXXXX-b31b1b.svg)](https://arxiv.org/abs/XXXX.XXXXX) -->
+<!-- [![HuggingFace](https://img.shields.io/badge/HuggingFace-Dataset-orange)](https://huggingface.co/datasets/AIRLab-POLIMI/multimodal-bt-dataset) -->
 
-## Overview
+This repository contains the code, datasets, and experiment results for the paper:
 
-This project introduces a novel approach to robot task planning by creating the **first multimodal dataset** that pairs visual scene observations and natural language instructions with executable **Behavior Trees (BehaviorTree.CPP XML)**. The pipeline:
+> **Multimodal Behavior Tree Generation for Robotic Task Planning with Vision-Language Models**
+>
+> Cristiano Battistini, Gianluca Bardaro, Matteo Matteucci
+>
+> AIRLab, Politecnico di Milano
 
-1. **Dataset Creation** - Transforms Open-X-Embodiment (OXE) robot demonstration episodes into supervised `(image + instruction) -> BT XML` pairs, with augmentation and lexical variation strategies
-2. **VLM Fine-tuning** - Trains lightweight Vision-Language Models (Gemma3-4B, Qwen2.5-VL-3B, Qwen3-VL-8B, SmolVLM2) via LoRA adapters to generate BT XML from multimodal input
-3. **Simulation Execution** - Deploys generated Behavior Trees in OmniGibson simulation with BDDL grounding for the BEHAVIOR-1K benchmark
-4. **Evaluation** - Ablation study comparing zero-shot vs Chain-of-Thought prompting across multiple models
+## Abstract
+
+We present the first **multimodal dataset** for Behavior Tree (BT) generation that pairs visual scene observations and natural language instructions with executable BT XML plans. We fine-tune lightweight Vision-Language Models (Gemma3-4B, Qwen2.5-VL-3B, Qwen3-VL-8B, SmolVLM2) via LoRA adapters on this dataset and evaluate them on 20 household tasks from the BEHAVIOR-1K benchmark in OmniGibson simulation. Our ablation study compares zero-shot vs Chain-of-Thought prompting across all models, showing that fine-tuned compact VLMs can generate executable robot behavior plans from a single image and instruction.
+
+## Pipeline Overview
+
+```
+                    ┌──────────────────────────────────────┐
+                    │     Open-X-Embodiment Episodes        │
+                    │   (image sequences + instructions)    │
+                    └──────────────┬───────────────────────┘
+                                   │  processing/
+                                   ▼
+                    ┌──────────────────────────────────────┐
+                    │  Multimodal BT Dataset (4 variants)   │
+                    │   image + instruction → BT XML pair   │
+                    └──────────────┬───────────────────────┘
+                                   │  nb_agentic/
+                                   ▼
+                    ┌──────────────────────────────────────┐
+                    │    Fine-tuned VLM (LoRA adapters)     │
+                    │  Gemma3 | Qwen2.5 | Qwen3 | SmolVLM2 │
+                    └──────────────┬───────────────────────┘
+                                   │  behavior_integration/
+                                   ▼
+                    ┌──────────────────────────────────────┐
+                    │   OmniGibson Simulation Execution     │
+                    │   BEHAVIOR-1K benchmark (20 tasks)    │
+                    └──────────────────────────────────────┘
+```
 
 ## Repository Structure
 
 ```
 multimodal-bt-generation/
-|
-|-- behavior_integration/     Core pipeline: VLM inference -> BT generation -> OmniGibson execution
-|   |-- scripts/              Main entry points (run_continuous_pipeline.py, vlm_server.py)
-|   |-- pipeline/             BT executor, environment manager, episode runner
-|   |-- vlm/                  VLM client, BT generation, object mapping
-|   |-- camera/               Camera control, image capture, video recording
-|   |-- bddl/                 BDDL task parsing, grounding, task selection
-|   |-- constants/            Task mappings, primitive config, task overrides
-|   +-- ui/                   Interactive control, ablation controller
-|
-|-- embodied_bt_brain/        Agentic teacher system and runtime
-|   |-- runtime/              BT execution runtime, VLM inference bridge
-|   |-- agentic_teacher/      LLM-driven BT repair, augmentation, validation
-|   |-- dataset_proposer_agentic/  Dataset generation pipeline
-|   |-- primitive_library/    BT node definitions (PAL v1)
-|   +-- data/                 Training and validation datasets
-|
-|-- nb_agentic/               Jupyter notebooks for VLM training and evaluation
-|-- processing/               OXE dataset export and processing pipeline
-|-- scripts/                  Benchmarking and prompt generation utilities
-|-- tools/                    Dataset transformation and splitting tools
-|-- bt_templates/             Reference BT XML templates (50 BEHAVIOR-1K tasks)
-|-- prompts/                  Task-specific prompt definitions
-|-- config/                   Lexical transformation configuration
-|-- experiments/              Experiment tracking metadata
-|-- behavior-1k-ablation/     Ablation study results (zero-shot vs CoT, 20 tasks x 4 models)
-+-- dataset_agentic*/         Training datasets (4 variants: base, augmented, lexical, augmented+lexical)
+│
+├── behavior_integration/        # Simulation pipeline: VLM → BT → OmniGibson execution
+│   ├── scripts/                 #   Entry points (vlm_server.py, run_continuous_pipeline.py)
+│   ├── pipeline/                #   BT executor, environment manager, episode runner
+│   ├── vlm/                     #   VLM client, BT generation, object mapping
+│   ├── camera/                  #   Camera control, image capture
+│   ├── bddl/                    #   BDDL task parsing and grounding
+│   ├── constants/               #   Task mappings, primitive config
+│   └── ui/                      #   Interactive control, ablation controller
+│
+├── embodied_bt_brain/           # Agentic teacher system
+│   ├── runtime/                 #   BT execution runtime, VLM inference bridge
+│   ├── agentic_teacher/         #   LLM-driven BT repair and augmentation
+│   ├── dataset_proposer_agentic/  # Dataset generation pipeline
+│   └── primitive_library/       #   BT node definitions (PAL v1)
+│
+├── nb_agentic/                  # Training and evaluation notebooks (12 notebooks)
+├── processing/                  # OXE dataset export and processing pipeline
+├── scripts/                     # Benchmarking and prompt generation utilities
+├── tools/                       # Dataset transformation and splitting tools
+├── prompts/                     # Task-specific prompt definitions
+├── config/                      # Lexical transformation configuration
+├── experiments/                 # Experiment tracking metadata
+│
+├── dataset_agentic/             # Base dataset (1,470 train / 152 val)
+├── dataset_agentic_augmented/   # + scene augmentation (735 train / 76 val)
+├── dataset_agentic_lexical/     # + lexical variation (1,470 train / 152 val)
+├── dataset_agentic_augmented_lexical/  # Both combined (735 train / 76 val)
+│
+└── behavior-1k-ablation/        # Ablation study results (20 tasks × 2 strategies × 4 models)
 ```
 
 ## Setup
 
 ### Prerequisites
 
-- Python 3.10
+- Python 3.10+
 - NVIDIA GPU with CUDA support
-- OmniGibson and BEHAVIOR-1K datasets (for simulation execution)
+- [OmniGibson](https://behavior.stanford.edu/omnigibson/) and BEHAVIOR-1K datasets (for simulation only)
 
 ### Installation
 
 ```bash
-# Create conda environment
+git clone https://github.com/cristianobattistini/multimodal-bt-generation.git
+cd multimodal-bt-generation
+
+# Option A: conda (recommended)
 conda env create -f environment.yml
 conda activate multimodal-bt-generation
 
-# Or install with pip
+# Option B: pip
 pip install -r requirement.txt
 ```
 
 ## Usage
 
-### VLM Fine-tuning
+### 1. VLM Fine-tuning
 
-Training notebooks are in `nb_agentic/`. Each notebook handles a specific model:
+Training notebooks are in `nb_agentic/`. Each notebook targets a specific model:
 
-| Notebook | Model | Parameters |
-|----------|-------|------------|
+| Notebook | Model | Method |
+|----------|-------|--------|
 | `Gemma3_(4B)_Vision.ipynb` | Gemma3-4B | LoRA r=16 |
 | `qwen25_3B_Vision.ipynb` | Qwen2.5-VL-3B | LoRA r=16 |
 | `Qwen3_VL_(8B)_Vision_ok.ipynb` | Qwen3-VL-8B | LoRA r=16 |
-| `smolvlm2_oxe_bt_finetune_wandb.ipynb` | SmolVLM2-2.2B | QLoRA r=16 |
+| `smolvlm2_bt_finetune_wandb.ipynb` | SmolVLM2-2.2B | QLoRA r=16 |
+| `smolvlm2_500M_bt_finetune_wandb.ipynb` | SmolVLM2-500M | QLoRA r=16 |
 
-### Running Experiments in Simulation
+### 2. Inference Server
 
 ```bash
-# 1. Start the VLM inference server
+# Start the VLM inference server (Gradio)
 python behavior_integration/scripts/vlm_server.py --model qwen --port 7860
+```
 
-# 2. Run the continuous pipeline (keeps OmniGibson alive between episodes)
+### 3. Simulation Execution
+
+```bash
+# Run a task in OmniGibson with the continuous pipeline
 ./run_continuous_pipeline.sh \
     --instruction "put the book on the nightstand" \
     --task tidying_bedroom \
     --colab-url http://127.0.0.1:7860
 ```
 
-### Evaluation
+### 4. Evaluation
 
-- **Automatic metrics**: `nb_agentic/evalutation.ipynb` (BLEU, ROUGE scores)
-- **Inference testing**: `nb_agentic/*_Inference_Testing.ipynb` (per-model evaluation)
-- **Ablation results**: `behavior-1k-ablation/` (zero-shot vs CoT comparison)
-
-## Ablation Study
-
-The `behavior-1k-ablation/` directory contains results comparing two prompting strategies across 20 BEHAVIOR-1K tasks:
-
-- **Zero-shot**: Clean prompts with only instruction + BDDL goal + available actions/objects
-- **CoT (Chain-of-Thought)**: Prompts with explicit workflow steps
-
-Models evaluated: fine-tuned adapter, GPT-5, Qwen2.5-VL, SmolVLM2
+| Notebook | Purpose |
+|----------|---------|
+| `evalutation.ipynb` | Automatic metrics (BLEU, ROUGE) |
+| `*_Inference_Testing.ipynb` | Per-model qualitative evaluation |
 
 ## Dataset
 
-Four dataset variants are provided (all in JSONL format with image + BT XML pairs):
+The dataset is constructed from [Open-X-Embodiment](https://robotics-transformer-x.github.io/) robot demonstrations. Each sample contains an image observation, a natural language instruction, and the corresponding BT XML plan.
 
-| Variant | Description | Size |
-|---------|-------------|------|
-| `dataset_agentic/` | Base dataset | 2,205 train / 228 val |
-| `dataset_agentic_augmented/` | With scene augmentation | - |
-| `dataset_agentic_lexical/` | With lexical variations (synonym substitution) | - |
-| `dataset_agentic_augmented_lexical/` | Both augmentations combined | - |
+Four variants with different augmentation strategies:
+
+| Variant | Description | Train | Val |
+|---------|-------------|------:|----:|
+| `dataset_agentic` | Base dataset | 1,470 | 152 |
+| `dataset_agentic_augmented` | + scene augmentation | 735 | 76 |
+| `dataset_agentic_lexical` | + synonym substitution | 1,470 | 152 |
+| `dataset_agentic_augmented_lexical` | Both combined | 735 | 76 |
+
+## Ablation Study
+
+The `behavior-1k-ablation/` directory contains results for 20 BEHAVIOR-1K household tasks, comparing:
+
+- **Zero-shot**: instruction + BDDL goal + available actions/objects
+- **Chain-of-Thought (CoT)**: explicit reasoning steps before BT generation
+
+Models evaluated: fine-tuned adapter, GPT-5, Qwen2.5-VL, SmolVLM2.
+
+## Acknowledgements
+
+- [BEHAVIOR-1K](https://behavior.stanford.edu/) benchmark and [OmniGibson](https://behavior.stanford.edu/omnigibson/) simulator (Stanford)
+- [Open-X-Embodiment](https://robotics-transformer-x.github.io/) dataset
+- [BehaviorTree.CPP](https://www.behaviortree.dev/) framework
+- [Unsloth](https://github.com/unslothai/unsloth) for efficient LoRA fine-tuning
+- [BTGenBot](https://github.com/AIRLab-POLIMI/BTGenBot) for foundational work on LLM-based BT generation
+
+<!-- ## Citation
+
+If you find this work useful, please cite:
+
+```bibtex
+@inproceedings{battistini2026multimodal,
+  author    = {Battistini, Cristiano and Bardaro, Gianluca and Matteucci, Matteo},
+  title     = {Multimodal Behavior Tree Generation for Robotic Task Planning with Vision-Language Models},
+  booktitle = {TODO},
+  year      = {2026},
+}
+```
+-->
+
+## License
+
+This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.

@@ -11,7 +11,8 @@ from pathlib import Path
 
 # Setup paths
 sys.path.insert(0, str(Path(__file__).parent))
-sys.path.insert(0, "/home/cristiano/BEHAVIOR-1K")
+_b1k_dir = os.getenv("BEHAVIOR_1K_DIR", str(Path.home() / "BEHAVIOR-1K"))
+sys.path.insert(0, _b1k_dir)
 
 print("="*80)
 print("BEHAVIOR-1K Integration Test")

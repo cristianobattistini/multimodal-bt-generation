@@ -32,16 +32,10 @@ sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
 # Try to add OmniGibson path if not in pythonpath
-if "OMNIGIBSON_PATH" in os.environ:
-    sys.path.insert(0, os.environ["OMNIGIBSON_PATH"])
-else:
-    possible_og_path = "/home/cristiano/BEHAVIOR-1K/OmniGibson"
-    if os.path.exists(possible_og_path):
-        sys.path.insert(0, possible_og_path)
-    else:
-        possible_og_path = f"/home/{os.environ.get('USER', 'kcbat')}/BEHAVIOR-1K/OmniGibson"
-        if os.path.exists(possible_og_path):
-            sys.path.insert(0, possible_og_path)
+_b1k_dir = os.getenv("BEHAVIOR_1K_DIR", str(Path.home() / "BEHAVIOR-1K"))
+_og_path = os.getenv("OMNIGIBSON_PATH", f"{_b1k_dir}/OmniGibson")
+if os.path.exists(_og_path):
+    sys.path.insert(0, _og_path)
 
 
 # --------------------------------------------------------------------------
@@ -73,7 +67,7 @@ def main():
     parser.add_argument("--model", default="qwen25-vl-3b",
                         help="VLM model type")
     parser.add_argument(
-        "--lora", default="/home/cristiano/lora_models/qwen2dot5-3B-Instruct_bt_lora_08012026", help="LoRA model path")
+        "--lora", default=str(Path.home() / "lora_models/qwen2dot5-3B-Instruct_bt_lora_08012026"), help="LoRA model path")
     parser.add_argument("--server-url", type=str, default=None,
                         help="Gradio URL for VLM server (e.g., http://10.79.2.183:7860). If provided, uses remote GPU instead of local.")
     parser.add_argument("--show-window", action="store_true",

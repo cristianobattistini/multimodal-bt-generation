@@ -21,25 +21,30 @@ from PIL import Image
 import tempfile
 
 # Set Isaac Sim environment variables BEFORE importing OmniGibson
-os.environ["ISAAC_PATH"] = "/home/cristiano/isaacsim"
-os.environ["EXP_PATH"] = "/home/cristiano/isaacsim/apps"
-os.environ["CARB_APP_PATH"] = "/home/cristiano/isaacsim/kit"
+_ISAAC_DIR = os.getenv("ISAAC_PATH", str(Path.home() / "isaacsim"))
+os.environ.setdefault("ISAAC_PATH", _ISAAC_DIR)
+os.environ.setdefault("EXP_PATH", f"{_ISAAC_DIR}/apps")
+os.environ.setdefault("CARB_APP_PATH", f"{_ISAAC_DIR}/kit")
 
 # Set OmniGibson data path
-os.environ["OMNIGIBSON_DATA_PATH"] = "/home/cristiano/BEHAVIOR-1K/datasets"
+_B1K_DIR = os.getenv("BEHAVIOR_1K_DIR", str(Path.home() / "BEHAVIOR-1K"))
+os.environ.setdefault("OMNIGIBSON_DATA_PATH", f"{_B1K_DIR}/datasets")
 
 # Disable torch.compile to avoid typing_extensions conflicts with PyTorch 2.9
 os.environ["TORCH_COMPILE_DISABLE"] = "1"
 
 # Add paths
 sys.path.insert(0, str(Path(__file__).parent.parent.parent))
-sys.path.insert(0, "/home/cristiano/BEHAVIOR-1K/OmniGibson")
+_og_path = os.getenv("OMNIGIBSON_PATH", f"{_B1K_DIR}/OmniGibson")
+if os.path.exists(_og_path):
+    sys.path.insert(0, _og_path)
 
 
 def main():
     parser = argparse.ArgumentParser(description="🤖 BT Agent: VLM → Simulation")
     parser.add_argument("--instruction", required=True, help="Task instruction in natural language")
-    parser.add_argument("--lora", default="/home/cristiano/lora_models/gemma3_4b_vision_bt_lora_08012026", 
+    _lora_dir = os.getenv("LORA_MODELS_DIR", str(Path.home() / "lora_models"))
+    parser.add_argument("--lora", default=f"{_lora_dir}/gemma3_4b_vision_bt_lora_08012026",
                         help="LoRA model path")
     parser.add_argument("--model", default="gemma3-4b", choices=["gemma3-4b", "qwen25-vl-3b"],
                         help="VLM model type")

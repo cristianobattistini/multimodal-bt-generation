@@ -12,7 +12,9 @@ Usage:
 
 import argparse
 import gc
+import os
 import time
+from pathlib import Path
 
 import numpy as np
 import torch
@@ -38,7 +40,7 @@ from benchmark_utils import (
 CONFIG = {
     "model_key": "smolvlm2_500m",
     "base_model": "HuggingFaceTB/SmolVLM2-500M-Video-Instruct",
-    "adapter_path": "/home/cristiano/lora_models/smolvlm2_500M_bt_lora_02022026",
+    "adapter_path": os.path.join(os.getenv("LORA_MODELS_DIR", os.path.join(str(Path.home()), "lora_models")), "smolvlm2_500M_bt_lora_02022026"),
     "generation_params": {
         "max_new_tokens": 4096,
         "do_sample": False,       # greedy decoding per notebook

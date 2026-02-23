@@ -17,13 +17,14 @@ Options:
 
 import argparse
 import json
+import os
 import re
 from pathlib import Path
 from typing import Dict, List, Tuple, Optional, Any
 
 
 # Paths
-BEHAVIOR_DIR = Path("/home/cristiano/BEHAVIOR-1K")
+BEHAVIOR_DIR = Path(os.getenv("BEHAVIOR_1K_DIR", str(Path.home() / "BEHAVIOR-1K")))
 PROJECT_ROOT = Path(__file__).parent.parent
 TASK_DATA_PATH = BEHAVIOR_DIR / "docs/challenge/task_data.json"
 SCENE_MAPPING_PATH = BEHAVIOR_DIR / "bddl3/bddl/activity_to_preselected_scenes.json"

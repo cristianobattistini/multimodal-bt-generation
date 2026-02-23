@@ -478,7 +478,7 @@ class BDDLParser:
 
 
 # Default local path for BDDL files
-BDDL_LOCAL_PATH = Path("/home/cristiano/BEHAVIOR-1K/bddl3/bddl/activity_definitions")
+BDDL_LOCAL_PATH = Path(os.getenv("BEHAVIOR_1K_DIR", str(Path.home() / "BEHAVIOR-1K"))) / "bddl3/bddl/activity_definitions"
 
 
 def load_bddl_local(task_name: str, definition_id: int = 0, base_path: Optional[Path] = None) -> str:

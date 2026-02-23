@@ -66,13 +66,13 @@ parser.add_argument(
 parser.add_argument(
     "--demo-jsonl",
     type=str,
-    default="/home/cristiano/multimodal-bt-generation/dataset_agentic/val/train_e2e.jsonl",
+    default=str(Path(__file__).resolve().parent.parent.parent / "dataset_agentic/val/train_e2e.jsonl"),
     help="Path to demo jsonl file"
 )
 parser.add_argument(
     "--demo-root",
     type=str,
-    default="/home/cristiano/multimodal-bt-generation/dataset_agentic/val",
+    default=str(Path(__file__).resolve().parent.parent.parent / "dataset_agentic/val"),
     help="Root folder for demo images"
 )
 parser.add_argument(
@@ -190,37 +190,40 @@ _STATIC_MODEL_CONFIGS = {
 # Combined lookup for all models (dynamic + static)
 _ALL_MODEL_CONFIGS = {**MODEL_CONFIGS, **_STATIC_MODEL_CONFIGS}
 
-# Checkpoint configuration per model (unchanged)
+# Checkpoint configuration per model
+# Set LORA_MODELS_DIR env var to override the default location
+_LORA_DIR = os.getenv("LORA_MODELS_DIR", str(Path.home() / "lora_models"))
+
 CHECKPOINT_MAP = {
     "gemma": {
-        "base": "/home/cristiano/lora_models/training_outputs/gemma3_vision_bt_training_outputs_02022026",
+        "base": f"{_LORA_DIR}/training_outputs/gemma3_vision_bt_training_outputs_02022026",
         "checkpoints": {"1": "checkpoint-138", "2": "checkpoint-276", "3": "checkpoint-414"},
-        "final": "/home/cristiano/lora_models/gemma3_4b_vision_bt_lora_02022026",
+        "final": f"{_LORA_DIR}/gemma3_4b_vision_bt_lora_02022026",
         "valid_checkpoints": ["1", "2"],  # checkpoint 3 has no weights
     },
     "qwen": {
-        "base": "/home/cristiano/lora_models/training_outputs/qwen2dot5-VL-2B-bt_training_outputs_02022026",
+        "base": f"{_LORA_DIR}/training_outputs/qwen2dot5-VL-2B-bt_training_outputs_02022026",
         "checkpoints": {"1": "checkpoint-138", "2": "checkpoint-276", "3": "checkpoint-414"},
-        "final": "/home/cristiano/lora_models/qwen2dot5-3B-Instruct_bt_lora_02022026",
+        "final": f"{_LORA_DIR}/qwen2dot5-3B-Instruct_bt_lora_02022026",
         "valid_checkpoints": ["1", "2", "3"],
     },
     "qwen3": {
-        "base": "/home/cristiano/lora_models/training_outputs/qwen3_vl_bt_training_outputs_02022026",
+        "base": f"{_LORA_DIR}/training_outputs/qwen3_vl_bt_training_outputs_02022026",
         "checkpoints": {"1": "checkpoint-276", "2": "checkpoint-552", "3": "checkpoint-828"},
-        "final": "/home/cristiano/lora_models/qwen3_vl_8b_bt_lora__02022026",
+        "final": f"{_LORA_DIR}/qwen3_vl_8b_bt_lora__02022026",
         "valid_checkpoints": ["3"],  # only checkpoint 3 has weights
     },
     "smol500": {
-        "base": "/home/cristiano/lora_models/training_outputs/smolvlm2_500M_bt_training_outputs_02022026",
+        "base": f"{_LORA_DIR}/training_outputs/smolvlm2_500M_bt_training_outputs_02022026",
         "checkpoints": {"1": "checkpoint-138", "2": "checkpoint-276", "3": "checkpoint-414"},
-        "final": "/home/cristiano/lora_models/smolvlm2_500M_bt_lora_02022026",
+        "final": f"{_LORA_DIR}/smolvlm2_500M_bt_lora_02022026",
         "valid_checkpoints": ["1", "2", "3"],
     },
     # SmolVLM2 2B model not yet supported (training not complete)
     "smol2b": {
         "base": None,
         "checkpoints": {},
-        "final": "/home/cristiano/lora_models/smolvlm2_2B_bt_lora__02022026",
+        "final": f"{_LORA_DIR}/smolvlm2_2B_bt_lora__02022026",
         "valid_checkpoints": [],
     },
 }

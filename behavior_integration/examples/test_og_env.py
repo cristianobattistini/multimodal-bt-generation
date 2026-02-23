@@ -3,15 +3,20 @@
 
 import os
 import sys
+from pathlib import Path
 
-# Set environment variables
-os.environ["ISAAC_PATH"] = "/home/cristiano/isaacsim"
-os.environ["EXP_PATH"] = "/home/cristiano/isaacsim/apps"
-os.environ["CARB_APP_PATH"] = "/home/cristiano/isaacsim/kit"
-os.environ["OMNIGIBSON_DATA_PATH"] = "/home/cristiano/BEHAVIOR-1K/datasets"
+# Set environment variables (override with env vars if needed)
+_ISAAC_DIR = os.getenv("ISAAC_PATH", str(Path.home() / "isaacsim"))
+_B1K_DIR = os.getenv("BEHAVIOR_1K_DIR", str(Path.home() / "BEHAVIOR-1K"))
+os.environ.setdefault("ISAAC_PATH", _ISAAC_DIR)
+os.environ.setdefault("EXP_PATH", f"{_ISAAC_DIR}/apps")
+os.environ.setdefault("CARB_APP_PATH", f"{_ISAAC_DIR}/kit")
+os.environ.setdefault("OMNIGIBSON_DATA_PATH", f"{_B1K_DIR}/datasets")
 os.environ["TORCH_COMPILE_DISABLE"] = "1"
 
-sys.path.insert(0, "/home/cristiano/BEHAVIOR-1K/OmniGibson")
+_og_path = os.getenv("OMNIGIBSON_PATH", f"{_B1K_DIR}/OmniGibson")
+if os.path.exists(_og_path):
+    sys.path.insert(0, _og_path)
 
 import omnigibson as og
 from omnigibson.macros import gm

@@ -10,11 +10,15 @@ Usage:
 """
 
 import argparse
+import os
 import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
-sys.path.insert(0, "/home/cristiano/BEHAVIOR-1K/OmniGibson")
+_b1k_dir = os.getenv("BEHAVIOR_1K_DIR", str(Path.home() / "BEHAVIOR-1K"))
+_og_path = os.getenv("OMNIGIBSON_PATH", f"{_b1k_dir}/OmniGibson")
+if os.path.exists(_og_path):
+    sys.path.insert(0, _og_path)
 
 
 def main():

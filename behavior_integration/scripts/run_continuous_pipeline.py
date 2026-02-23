@@ -30,12 +30,10 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 
 # OmniGibson path setup
-if "OMNIGIBSON_PATH" in os.environ:
-    sys.path.insert(0, os.environ["OMNIGIBSON_PATH"])
-else:
-    possible_og_path = "/home/cristiano/BEHAVIOR-1K/OmniGibson"
-    if os.path.exists(possible_og_path):
-        sys.path.insert(0, possible_og_path)
+_b1k_dir = os.getenv("BEHAVIOR_1K_DIR", str(Path.home() / "BEHAVIOR-1K"))
+_og_path = os.getenv("OMNIGIBSON_PATH", f"{_b1k_dir}/OmniGibson")
+if os.path.exists(_og_path):
+    sys.path.insert(0, _og_path)
 
 # BDDL grounding support
 try:
@@ -140,7 +138,7 @@ def list_available_prompts():
 
 # Predefined BT templates (no VLM needed) - FALLBACK
 # These BTs are designed to satisfy the BDDL goals from:
-# /home/cristiano/BEHAVIOR-1K/bddl3/bddl/activity_definitions/
+# $BEHAVIOR_1K_DIR/bddl3/bddl/activity_definitions/
 # NOTE: Prefer loading from bt_templates/ directory for hot-reload support
 BT_TEMPLATES = {
     # Test: Solo navigazione

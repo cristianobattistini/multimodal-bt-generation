@@ -119,7 +119,7 @@ io_workers = int(os.getenv("OXE_IO_WORKERS", "4"))
 
 # TFDS directory (use environment variable to avoid hardcoding host paths)
 # Example Windows: TFDS_DATA_DIR=/mnt/c/Users/<USER>/Documents/tensorflow_datasets
-tfds_data_dir = os.getenv("TFDS_DATA_DIR", "/home/cristiano/tensorflow_datasets")
+tfds_data_dir = os.getenv("TFDS_DATA_DIR", os.path.join(os.path.expanduser("~"), "tensorflow_datasets"))
 
 
 # Embedding-based selection

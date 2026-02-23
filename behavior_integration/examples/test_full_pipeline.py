@@ -2,10 +2,14 @@
 """
 Test the full pipeline: VLM generation → BT execution in simulation
 """
+import os
 import sys
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent))
-sys.path.insert(0, '/home/cristiano/BEHAVIOR-1K/OmniGibson')
+_b1k_dir = os.getenv("BEHAVIOR_1K_DIR", str(Path.home() / "BEHAVIOR-1K"))
+_og_path = os.getenv("OMNIGIBSON_PATH", f"{_b1k_dir}/OmniGibson")
+if os.path.exists(_og_path):
+    sys.path.insert(0, _og_path)
 
 from embodied_bt_brain.runtime.vlm_inference import VLMInference
 from embodied_bt_brain.runtime import BehaviorTreeExecutor
@@ -21,7 +25,7 @@ dummy_img = Image.new('RGB', (224, 224), color='gray')
 
 vlm = VLMInference(
     model_type='gemma3-4b',
-    lora_path='/home/cristiano/lora_models/gemma3_4b_vision_bt_lora_06012026',
+    lora_path=os.path.join(os.getenv("LORA_MODELS_DIR", str(Path.home() / "lora_models")), "gemma3_4b_vision_bt_lora_06012026"),
     temperature=0.3
 )
 
