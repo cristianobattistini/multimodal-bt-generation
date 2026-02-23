@@ -106,7 +106,7 @@ def select_keyframes_contact(move: np.ndarray,
         intervals.append((cur_s, T-1))
 
     if not intervals:
-        # fallback uniforme
+        # uniform fallback
         return (0, max(1,T//3), max(2,(2*T)//3), T-1)
 
     # pick the longest interval
@@ -246,7 +246,7 @@ def kmeans_select_keyframes(
     margin: int = 3,
 ) -> tuple[tuple[int,int,int,int], dict]:
     """
-    Segmenta automaticamente 'move_norm' in k cluster (default 2) e seleziona 4 keyframe:
+    Automatically segment 'move_norm' into k clusters (default 2) and select 4 keyframes:
       t0=approach, t1=contact, t2=push/transport, t3=retract.
     Returns: (t0,t1,t2,t3), debug_info
     """
@@ -273,7 +273,7 @@ def kmeans_select_keyframes(
     # main active interval
     interval = _longest_run(mask, merge_gap=merge_gap, min_run=min_run)
     if interval is None:
-        # fallback uniforme
+        # uniform fallback
         t0, t1, t2, t3 = 0, max(1, T//3), max(2, (2*T)//3), T-1
         return (t0, t1, t2, t3), {
             "mode": "kmeans",
@@ -351,10 +351,10 @@ def make_keyframe_grid(ep_dir: str, idx: tuple[int,int,int,int], grid_name="keyf
 
 def _preprocess_and_resize(frames: np.ndarray, img_size: int, backbone: str) -> np.ndarray:
     """
-    Ridimensiona e normalizza i frame per il backbone scelto.
+    Resize and normalize frames for the chosen backbone.
     - frames: array (N,H,W,C) uint8
-    - img_size: lato input (es. 224)
-    - backbone: nome del modello ("mobilenet_v2" o "efficientnet_b0")
+    - img_size: input side (e.g. 224)
+    - backbone: model name ("mobilenet_v2" or "efficientnet_b0")
     Returns float32 array ready for the model.
     """
     from tensorflow.keras.applications import mobilenet_v2, efficientnet
@@ -469,8 +469,8 @@ def embedding_select_from_raw(ep_dir: str, cfg: Dict) -> Optional[Dict]:
     if T == 0:
         return None
 
-    # 1) k_slicing: se float in (0,1] è percentuale p -> stride ≈ round(1/p); se int è già stride
-    raw = cfg["k_slicing"]  # cfg è già CFG.embeds passato dal chiamante
+    # 1) k_slicing: if float in (0,1] it's percentage p -> stride ≈ round(1/p); if int it's already stride
+    raw = cfg["k_slicing"]  # cfg is CFG.embeds passed by the caller
     if isinstance(raw, float) and 0.0 < raw <= 1.0:
         k_slicing = max(1, int(round(1.0 / raw)))
     else:

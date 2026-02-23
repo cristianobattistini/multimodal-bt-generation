@@ -254,11 +254,11 @@ def main():
 
                 build_all_episode_phases(
                     ep_dir=ep_dir,
-                    episode_steps=steps,          # per arricchire attributes se disponibili
+                    episode_steps=steps,          # to enrich attributes if available
                     export_mode=mode,             # "full" | "final_only"
                     filename_mode=filename_mode,  # "original" | "sequential"
                     normalize_names=normalize_names,
-                    prune_only=prune_only,        # se True, ripulisce fasi intermedie
+                    prune_only=prune_only,        # if True, removes intermediate phases
                 )
 
                 if not _episode_is_complete(ep_dir):

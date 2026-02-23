@@ -408,13 +408,13 @@ def main():
     print("STEP 2: CAPTURING INITIAL OBSERVATION")
     print("="*80)
 
-    # Cattura multiple osservazioni per assicurare stabilità
+    # Capture multiple observations to ensure stability
     print("Capturing observation (waiting for valid image)...")
     max_attempts = args.capture_attempts
     valid_image = False
 
     for attempt in range(max_attempts):
-        # Prendi nuova osservazione
+        # Take new observation
         step_result = env.step(np.zeros(env.robots[0].action_dim))
         obs = step_result[0]
         if hasattr(env, "render"):
@@ -429,7 +429,7 @@ def main():
             print(f"  Attempt {attempt+1}/{max_attempts}: No RGB found")
             continue
         
-        # Converti a numpy se necessario
+        # Convert to numpy if needed
         if hasattr(rgb, 'cpu'):
             rgb_np = rgb.cpu().numpy()
         elif hasattr(rgb, 'numpy'):
@@ -437,16 +437,16 @@ def main():
         else:
             rgb_np = np.asarray(rgb)
         
-        # Normalizza se float
+        # Normalize if float
         if rgb_np.max() <= 1.0 and rgb_np.dtype != np.uint8:
             rgb_np = (rgb_np * 255).astype(np.uint8)
         
-        # Valida qualità immagine
+        # Validate image quality
         if rgb_np.shape[0] < 100 or rgb_np.shape[1] < 100:
             print(f"  Attempt {attempt+1}/{max_attempts}: Image too small {rgb_np.shape}")
             continue
         
-        # Controlla se l'immagine non è completamente nera/bianca/rumore
+        # Check if image is not completely black/white/noise
         mean_value = rgb_np.mean()
         std_value = rgb_np.std()
         

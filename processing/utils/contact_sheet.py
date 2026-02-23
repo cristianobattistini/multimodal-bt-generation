@@ -296,16 +296,16 @@ def _render_sheet(
             draw.text((sx, sy), txt, fill=(255, 255, 255), font=font_src)
 
 
-    # Salvataggio in base all'estensione del file
+    # Save based on file extension
     sheet_rgb = sheet.convert("RGB")
     ext = os.path.splitext(out_path)[1].lower()
     if ext in (".png",):
-        # PNG: niente "quality"; abilita ottimizzazione lossless
+        # PNG: no "quality" param; enable lossless optimization
         sheet_rgb.save(out_path, format="PNG", optimize=True, compress_level=6)
     elif ext in (".jpg", ".jpeg"):
-        # JPEG: alta qualità e niente subsampling per testi più nitidi
+        # JPEG: high quality, no subsampling for sharper text
         sheet_rgb.save(out_path, format="JPEG", quality=95, subsampling=0)
     else:
-        # fallback (lascia a Pillow decidere)
+        # fallback (let Pillow decide)
         sheet_rgb.save(out_path)
     return True

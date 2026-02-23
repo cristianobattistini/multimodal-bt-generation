@@ -78,9 +78,9 @@ BT_TEMPLATES = {
 </root>
 """,
 
-    # Fase 3: Task completo tidying_bedroom (solo libro)
-    # BDDL: book ON bed -> book ON TOP nightstand (comodino nella camera)
-    # Nota: PLACE_ON_TOP già rilascia l'oggetto, RELEASE non serve
+    # Phase 3: Full tidying_bedroom task (book only)
+    # BDDL: book ON bed -> book ON TOP nightstand
+    # Note: PLACE_ON_TOP already releases the object, RELEASE not needed
     "tidying_bedroom_book": """
 <root main_tree_to_execute="MainTree">
   <BehaviorTree ID="MainTree">

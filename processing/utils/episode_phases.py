@@ -48,7 +48,7 @@ def write_episode_phase(
     gif: bool = True,
     attributes: List[Dict] | None = None,
     filename_mode: str = "original",   # "original" | "sequential"
-    normalize_names: bool | None = None # alias legacy; se dato, forza il mode
+    normalize_names: bool | None = None # legacy alias; if set, overrides mode
 ):
     """
     Save:
@@ -189,7 +189,7 @@ def build_all_episode_phases(
     T = arr.shape[0]
     instruction = _read_instruction_if_any(ep_dir)
 
-    # 1) k_slicing → k (accetta 0<frac<=1 o un intero k)
+    # 1) k_slicing → k (accepts 0<frac<=1 or an integer k)
     raw = CFG.embeds["k_slicing"]
     k = max(1, int(round(1.0 / raw))) if isinstance(raw, float) and 0.0 < raw <= 1.0 else max(1, int(raw))
     sampled_arr, indices = sample_every_k(arr, k)
@@ -254,7 +254,7 @@ def build_all_episode_phases(
             )
             print(f"[EMBEDS] selected {len(sel_idx)} frames.")
         else:
-            # fallback: in final_only crea almeno final_selected dai sampled
+            # fallback: in final_only create at least final_selected from sampled
             if export_mode == "final_only" and len(indices) > 0:
                 write_episode_phase(
                     ep_dir=ep_dir,
@@ -269,7 +269,7 @@ def build_all_episode_phases(
                 )
                 print(f"[EMBEDS] fallback: used sampled_k{k} as final_selected ({len(indices)} frames).")
 
-    # 5) pruning (vale sia in final_only che se prune_only=True)
+    # 5) pruning (applies both in final_only and if prune_only=True)
     if export_mode == "final_only" or prune_only:
         _prune_episode_dir(ep_dir, keep=getattr(CFG, "prune_keep", ["final_selected"]))
         print(f"[PRUNE] kept only {getattr(CFG, 'prune_keep', ['final_selected'])} in {ep_dir}")
