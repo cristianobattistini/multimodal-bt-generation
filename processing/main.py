@@ -28,15 +28,15 @@ from processing.utils.episode_phases import build_all_episode_phases
 
 def _sanitize(s: str) -> str:
     """
-    Rende il nome del dataset sicuro come nome di cartella.
-    Sostituisce caratteri non alfanumerici con '_'.
-    Esempio: 'utokyo_xarm_pick_and_place/0.1.0' → 'utokyo_xarm_pick_and_place_0.1.0'
+    Make the dataset name safe as a directory name.
+    Replaces non-alphanumeric characters with '_'.
+    Example: 'utokyo_xarm_pick_and_place/0.1.0' → 'utokyo_xarm_pick_and_place_0.1.0'
     """
     return re.sub(r"[^A-Za-z0-9._-]+", "_", s)
 
 def _existing_episode_indices(ds_root: str) -> list[int]:
     """
-    Ritorna gli indici episode_XXX già presenti (numerici).
+    Return the numeric indices of existing episode_XXX directories.
     """
     indices = []
     if not os.path.isdir(ds_root):
@@ -51,8 +51,8 @@ def _existing_episode_indices(ds_root: str) -> list[int]:
 
 def _episode_is_complete(ep_dir: str) -> bool:
     """
-    Considera "completo" un episodio se esiste la fase finale (di default: final_selected)
-    con almeno 1 frame e metadati minimi.
+    An episode is considered complete if the final phase (default: final_selected)
+    exists with at least 1 frame and minimum metadata.
     """
     phase = getattr(CFG, "episode_complete_phase", "final_selected")
     frames_dir = os.path.join(ep_dir, phase, "sampled_frames")
@@ -68,10 +68,10 @@ def _episode_is_complete(ep_dir: str) -> bool:
 
 def _first_gap_or_incomplete(ds_root: str, existing_sorted: list[int], stop_at: int | None = None) -> int:
     """
-    Restituisce il primo indice i a partire da 0 tale che:
-      - episode_i manca, oppure
-      - episode_i esiste ma non è "completo".
-    Se non ci sono gap/incompleti, ritorna il prossimo indice dopo l'ultimo presente.
+    Return the first index i (starting from 0) such that:
+      - episode_i is missing, or
+      - episode_i exists but is not complete.
+    If no gaps/incomplete episodes, return the next index after the last one.
     """
     expected = 0
     for idx in existing_sorted:
@@ -89,11 +89,11 @@ def _first_gap_or_incomplete(ds_root: str, existing_sorted: list[int], stop_at: 
 
 def _discover_local_tfds_datasets(data_dir: str) -> list[str]:
     """
-    Scansiona {data_dir}/<dataset>/<version>/dataset_info.json e ritorna "dataset/version".
-    Usa la versione "più recente" in ordine lessicografico.
+    Scan {data_dir}/<dataset>/<version>/dataset_info.json and return "dataset/version".
+    Uses the most recent version in lexicographic order.
     """
     if not data_dir or not os.path.isdir(data_dir):
-        raise ValueError(f"tfds_data_dir non valido o non esiste: {data_dir!r}")
+        raise ValueError(f"tfds_data_dir is invalid or does not exist: {data_dir!r}")
 
     include_re = getattr(CFG, "local_tfds_include_regex", None)
     include_pat = re.compile(include_re) if include_re else None
@@ -132,21 +132,21 @@ def _discover_local_tfds_datasets(data_dir: str) -> list[str]:
 
 def _resolve_dataset_list() -> list[str]:
     """
-    Se CFG.datasets è non vuota, usa quella; altrimenti usa [CFG.dataset].
-    Consente sia il caso singolo sia più dataset nello stesso run.
+    If CFG.datasets is non-empty, use it; otherwise use [CFG.dataset].
+    Supports both single and multi-dataset runs.
     """
     if hasattr(CFG, "datasets") and CFG.datasets:
         return CFG.datasets
     if getattr(CFG, "dataset", ""):
         return [CFG.dataset]
-    raise ValueError("Nessun dataset specificato: configura 'dataset' o 'datasets' in config.py.")
+    raise ValueError("No dataset specified: set 'dataset' or 'datasets' in config.py.")
 
 
 def _keys_for_dataset(ds_name: str) -> tuple[str, str]:
     """
-    Restituisce (image_key, instruction_key) per il dataset corrente.
-    1) Cerca override in CFG.dataset_keys
-    2) Altrimenti usa i fallback globali in config.py
+    Return (image_key, instruction_key) for the given dataset.
+    1) Looks for overrides in CFG.dataset_keys
+    2) Falls back to global defaults in config.py
     """
     dmap = getattr(CFG, "dataset_keys", {}) or {}
     if ds_name in dmap:
@@ -236,7 +236,7 @@ def main():
             os.makedirs(ep_dir, exist_ok=True)
 
             try:
-                # 1) attributes.json per ispezione rapida della struttura
+                # 1) attributes.json for quick structure inspection
                 dump_attributes(episode, ep_dir)
 
                 # 2) frame + gif + instruction
@@ -249,7 +249,7 @@ def main():
                     max_frames=max_frames,
                 )
 
-                # Prova a estrarre i passi (se l'episodio è un dict OXE/RLDS)
+                # Try to extract steps (if the episode is an OXE/RLDS dict)
                 steps = episode.get("steps", None) if isinstance(episode, dict) else None
 
                 build_all_episode_phases(

@@ -4,7 +4,7 @@ from PIL import Image
 
 def make_gif(frames, out_path: str, duration: int = 300):
     """
-    Salva una GIF animata da una lista di immagini (array o PIL).
+    Save an animated GIF from a list of images (arrays or PIL).
     """
     if not frames:
         return
@@ -15,15 +15,15 @@ def make_gif(frames, out_path: str, duration: int = 300):
 
 def _to_1d(x):
     """
-    Converte x in un array NumPy monodimensionale.
-    Gestisce liste, array con shape arbitraria, scalari.
+    Convert x to a 1D NumPy array.
+    Handles lists, arrays with arbitrary shape, and scalars.
     """
     return np.asarray(x).reshape(-1)
 
 # utils.py
 
 def to_json_safe(obj):
-    """Ricorsivamente converte np.ndarray e np.float32/64 in tipi compatibili con JSON."""
+    """Recursively convert np.ndarray and np.float32/64 to JSON-compatible types."""
     if isinstance(obj, np.ndarray):
         return obj.tolist()
     elif isinstance(obj, (np.float32, np.float64)):

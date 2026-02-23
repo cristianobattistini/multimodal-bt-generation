@@ -16,7 +16,7 @@ from tensorflow.keras import applications as Kapps
 
 
 def _to_1d(arr: Any) -> np.ndarray:
-    """Converte in array 1D schiacciando forme (1,8) → (8,), scalari → (1,)."""
+    """Convert to 1D array by flattening shapes (1,8) → (8,), scalars → (1,)."""
     a = np.asarray(arr)
     if a.ndim == 0:
         a = a.reshape(1)
@@ -26,7 +26,7 @@ def _to_1d(arr: Any) -> np.ndarray:
 
 
 def _moving_average(x: np.ndarray, w: int = 5) -> np.ndarray:
-    """Media mobile simmetrica senza introdurre ritardi apprezzabili."""
+    """Symmetric moving average without introducing noticeable delay."""
     if w <= 1 or x.size < 2:
         return x
     k = np.ones(w, dtype=float) / w
@@ -39,12 +39,12 @@ def derive_signals_from_episode(
     smooth_w: int = 5
 ) -> Dict[str, np.ndarray]:
     """
-    Input: episodio come dict con "steps" = list di step (numpy-friendly).
-    Output: dict con serie 1D smussate per step:
+    Input: episode as dict with "steps" = list of steps (numpy-friendly).
+    Output: dict with smoothed 1D series per step:
         - "move_norm": ||world_vector||_2      shape (T,)
         - "rot_norm" : ||rotation_delta||_2    shape (T,)
-        - "g_cont"   : comando gripper continuo shape (T,) (0.0 se assente)
-        - "term"     : terminate                shape (T,) (non smussato)
+        - "g_cont"   : continuous gripper cmd   shape (T,) (0.0 if absent)
+        - "term"     : terminate                shape (T,) (not smoothed)
     """
     steps: List[Dict[str, Any]] = episode.get("steps", [])
     w_buf, r_buf, g_buf, t_buf = [], [], [], []
@@ -69,7 +69,7 @@ def derive_signals_from_episode(
         "move_norm": _moving_average(move, smooth_w),
         "rot_norm":  _moving_average(rot,  smooth_w),
         "g_cont":    _moving_average(grip, smooth_w),
-        "term":      term,  # lasciato “grezzo”: spesso è già 0/1 sporadico
+        "term":      term,  # left raw: typically already sparse 0/1
     }
 
 
@@ -79,8 +79,8 @@ def select_keyframes_contact(move: np.ndarray,
                              gap_tol: int = 2,
                              margin: int = 3) -> tuple[int,int,int,int]:
     """
-    Seleziona 4 indici (t0,t1,t2,t3) per task senza gripper
-    basandosi su burst di movimento.
+    Select 4 indices (t0,t1,t2,t3) for gripper-less tasks
+    based on movement bursts.
     """
     T = len(move)
     if T == 0:
@@ -88,7 +88,7 @@ def select_keyframes_contact(move: np.ndarray,
 
     mask = move > eps_pos
 
-    # Trova intervalli continui con tolleranza ai piccoli buchi
+    # Find continuous intervals with tolerance for small gaps
     intervals = []
     cur_s = None; zeros = 0
     for i, m in enumerate(mask):
@@ -109,15 +109,15 @@ def select_keyframes_contact(move: np.ndarray,
         # fallback uniforme
         return (0, max(1,T//3), max(2,(2*T)//3), T-1)
 
-    # scegli l'intervallo più lungo
+    # pick the longest interval
     s, e = max(intervals, key=lambda ab: ab[1]-ab[0]+1)
     t1, t3 = s, e
 
-    # t0: picco pre-contatto
+    # t0: pre-contact peak
     pre_end = max(t1 - margin, 1)
     t0 = int(np.argmax(move[:pre_end])) if pre_end > 0 else 0
 
-    # t2: massimo cumulato dentro l'intervallo
+    # t2: max cumulative displacement within the interval
     seg = move[t1:t3+1]
     if seg.size > 0:
         cum = np.cumsum(seg)
@@ -125,7 +125,7 @@ def select_keyframes_contact(move: np.ndarray,
     else:
         t2 = (t1 + t3)//2
 
-    # assicura ordinamento
+    # ensure ordering
     t0 = max(0, min(t0, t1))
     t2 = max(t1, min(t2, t3))
 
@@ -133,7 +133,7 @@ def select_keyframes_contact(move: np.ndarray,
 
 
 
-# --- SEGMENTAZIONE AUTOMATICA (K-MEANS 1D, PURE NUMPY) -----------------------
+# --- AUTOMATIC SEGMENTATION (1D K-MEANS, PURE NUMPY) -------------------------
 
 import numpy as np
 
@@ -147,8 +147,8 @@ def _moving_average(x: np.ndarray, w: int) -> np.ndarray:
 
 def _kmeans_1d(x: np.ndarray, k: int = 2, n_init: int = 5, max_iter: int = 100) -> tuple[np.ndarray, np.ndarray]:
     """
-    K-Means su scalari (1D) senza sklearn.
-    Ritorna: labels (N,), centroids (k,)
+    K-Means on scalars (1D) without sklearn.
+    Returns: labels (N,), centroids (k,)
     """
     assert x.ndim == 1 and x.size > 0 and 1 <= k <= min(8, x.size)
     best_inertia = np.inf
@@ -158,7 +158,7 @@ def _kmeans_1d(x: np.ndarray, k: int = 2, n_init: int = 5, max_iter: int = 100) 
 
     rng = np.random.default_rng(12345)
     for _ in range(n_init):
-        # init: k campioni unici
+        # init: k unique samples
         idx = rng.choice(len(X), size=k, replace=False)
         centroids = X[idx, :].copy()  # (k,1)
 
@@ -173,7 +173,7 @@ def _kmeans_1d(x: np.ndarray, k: int = 2, n_init: int = 5, max_iter: int = 100) 
                 if np.any(mask):
                     c = X[mask].mean(axis=0)
                 else:
-                    # reinit se cluster vuoto
+                    # reinit if cluster is empty
                     ii = rng.integers(0, len(X))
                     c = X[ii]
                 if not np.allclose(c, centroids[j]):
@@ -189,7 +189,7 @@ def _kmeans_1d(x: np.ndarray, k: int = 2, n_init: int = 5, max_iter: int = 100) 
             best_labels = labels.copy()
             best_centroids = centroids.copy().reshape(-1)
 
-    # ordina centroids e rietichetta in ordine crescente (0=valori bassi)
+    # sort centroids and relabel in ascending order (0=low values)
     order = np.argsort(best_centroids)
     remap = {old: new for new, old in enumerate(order)}
     labels_sorted = np.array([remap[l] for l in best_labels], dtype=int)
@@ -198,29 +198,29 @@ def _kmeans_1d(x: np.ndarray, k: int = 2, n_init: int = 5, max_iter: int = 100) 
 
 def _longest_run(mask: np.ndarray, merge_gap: int = 2, min_run: int = 3) -> tuple[int,int] | None:
     """
-    Trova l’intervallo True più lungo unendo buchi ≤ merge_gap.
-    Ritorna (s,e) inclusivi oppure None.
+    Find the longest True interval, merging gaps ≤ merge_gap.
+    Returns (s,e) inclusive or None.
     """
     N = len(mask)
     if N == 0:
         return None
-    # comprimi buchi piccoli
+    # fill small gaps
     m = mask.astype(int)
     i = 0
     while i < N:
         if m[i] == 1:
             i += 1
             continue
-        # tratto di zeri
+        # span of zeros
         j = i
         while j < N and m[j] == 0:
             j += 1
         gap_len = j - i
         if 0 < gap_len <= merge_gap:
-            m[i:j] = 1  # riempi il buco
+            m[i:j] = 1  # fill the gap
         i = j
 
-    # trova run True più lunga
+    # find longest True run
     best = None
     i = 0
     while i < N:
@@ -248,7 +248,7 @@ def kmeans_select_keyframes(
     """
     Segmenta automaticamente 'move_norm' in k cluster (default 2) e seleziona 4 keyframe:
       t0=approach, t1=contact, t2=push/transport, t3=retract.
-    Ritorna: (t0,t1,t2,t3), debug_info
+    Returns: (t0,t1,t2,t3), debug_info
     """
     x = np.asarray(move_norm, dtype=float)
     T = x.size
@@ -258,7 +258,7 @@ def kmeans_select_keyframes(
     # smoothing
     xs = _moving_average(x, smooth_w)
 
-    # normalizzazione opzionale
+    # optional normalization
     if normalize:
         mx = xs.max()
         if mx > 0:
@@ -266,11 +266,11 @@ def kmeans_select_keyframes(
 
     # k-means 1D
     labels, centroids = _kmeans_1d(xs, k=k, n_init=5, max_iter=100)
-    # cluster "attivo" = quello con centroide più alto
+    # "active" cluster = the one with the highest centroid
     active_id = int(np.argmax(centroids))
     mask = (labels == active_id)
 
-    # intervallo principale attivo
+    # main active interval
     interval = _longest_run(mask, merge_gap=merge_gap, min_run=min_run)
     if interval is None:
         # fallback uniforme
@@ -287,11 +287,11 @@ def kmeans_select_keyframes(
     s, e = interval
     t1, t3 = int(s), int(e)
 
-    # t0: picco pre-contact con margine
+    # t0: pre-contact peak with margin
     pre_end = max(t1 - margin, 1)
     t0 = int(np.argmax(xs[:pre_end])) if pre_end > 0 else 0
 
-    # t2: massimo spostamento cumulato nell'intervallo
+    # t2: max cumulative displacement within the interval
     seg = xs[t1:t3+1]
     if seg.size > 0:
         cum = np.cumsum(seg)
@@ -299,7 +299,7 @@ def kmeans_select_keyframes(
     else:
         t2 = (t1 + t3) // 2
 
-    # ordina e clamp
+    # sort and clamp
     t0 = max(0, min(t0, t1))
     t2 = max(t1, min(t2, t3))
 
@@ -316,15 +316,15 @@ def kmeans_select_keyframes(
 
 def make_keyframe_grid(ep_dir: str, idx: tuple[int,int,int,int], grid_name="keyframes.jpg", side=256):
     """
-    Crea una griglia 2x2 con i frame selezionati t0,t1,t2,t3.
-    - ep_dir: cartella episodio (contiene raw_frames/frame_xxxx.jpg)
+    Create a 2x2 grid with the selected frames t0,t1,t2,t3.
+    - ep_dir: episode directory (contains raw_frames/frame_xxxx.jpg)
     - idx: tuple (t0,t1,t2,t3)
-    - side: dimensione lato finale della griglia
+    - side: grid tile side length
     """
     frames_dir = os.path.join(ep_dir, "raw_frames")
     files = sorted([f for f in os.listdir(frames_dir) if f.endswith(".jpg")])
     if not files:
-        raise RuntimeError(f"Nessun frame trovato in {frames_dir}")
+        raise RuntimeError(f"No frames found in {frames_dir}")
 
     selected = []
     for t in idx:
@@ -333,10 +333,10 @@ def make_keyframe_grid(ep_dir: str, idx: tuple[int,int,int,int], grid_name="keyf
             img = Image.open(fp).convert("RGB").resize((side, side))
             selected.append(img)
         else:
-            # se l'indice eccede, usa un'immagine vuota
+            # if index exceeds bounds, use a blank image
             selected.append(Image.new("RGB", (side, side), (128,128,128)))
 
-    # griglia 2x2
+    # 2x2 grid
     grid = Image.new("RGB", (2*side, 2*side))
     grid.paste(selected[0], (0,0))
     grid.paste(selected[1], (side,0))
@@ -345,7 +345,7 @@ def make_keyframe_grid(ep_dir: str, idx: tuple[int,int,int,int], grid_name="keyf
 
     out_fp = os.path.join(ep_dir, grid_name)
     grid.save(out_fp, quality=95)
-    print(f"[OK] griglia keyframes salvata in {out_fp}")
+    print(f"[OK] keyframe grid saved to {out_fp}")
     return out_fp
 
 
@@ -355,7 +355,7 @@ def _preprocess_and_resize(frames: np.ndarray, img_size: int, backbone: str) -> 
     - frames: array (N,H,W,C) uint8
     - img_size: lato input (es. 224)
     - backbone: nome del modello ("mobilenet_v2" o "efficientnet_b0")
-    Ritorna array float32 pronto per il modello.
+    Returns float32 array ready for the model.
     """
     from tensorflow.keras.applications import mobilenet_v2, efficientnet
 
@@ -460,8 +460,8 @@ def _kcenter_greedy(E: np.ndarray, K: int, include: Optional[List[int]] = None) 
 
 def embedding_select_from_raw(ep_dir: str, cfg: Dict) -> Optional[Dict]:
     """
-    Seleziona K frame da raw_frames/ usando k-slicing -> embedding -> k-center greedy.
-    Se cfg['mode']=="decimate_only", seleziona solo il sottoinsieme campionato.
+    Select K frames from raw_frames/ using k-slicing -> embedding -> k-center greedy.
+    If cfg['mode']=="decimate_only", only select the decimated subset.
     """
     frames_dir = os.path.join(ep_dir, "raw_frames")
     frames, paths = _load_frames_from_raw(frames_dir)
@@ -476,17 +476,17 @@ def embedding_select_from_raw(ep_dir: str, cfg: Dict) -> Optional[Dict]:
     else:
         k_slicing = max(1, int(raw))
 
-    # pool candidati con stride
+    # candidate pool with stride
     idx_subset = list(range(0, T, k_slicing))
 
-    # 2) salvaguardia: se i candidati sono meno di K, promuovi a K indici uniformi
+    # 2) safeguard: if candidates are fewer than K, promote to K uniform indices
     K = int(cfg.get("K", 16))
     if K > 0 and T > 0 and len(idx_subset) < K:
         if K == 1:
             idx_subset = [0]
         else:
             idx_subset = [min(T - 1, round(i * (T - 1) / (K - 1))) for i in range(K)]
-        # opzionale: log per capire quando scatta la salvaguardia
+        # optional: log when the safeguard triggers
         print(f"[EMBEDS] candidates_raw<{K}: upgraded to {len(idx_subset)} uniform over T={T}")
 
     subset = frames[idx_subset]
@@ -509,7 +509,7 @@ def embedding_select_from_raw(ep_dir: str, cfg: Dict) -> Optional[Dict]:
                 np.savez_compressed(cache_path, E=E)
 
         include = [0, len(idx_subset) - 1] if cfg.get("include_boundaries", True) and len(idx_subset) > 1 else None
-        # k-center greedy lavora sul sottoinsieme -> selezioniamo indici nel subset e poi rimappiamo al globale
+        # k-center greedy works on the subset -> select indices in subset then remap to global
         sel_subset = _kcenter_greedy(E, K, include)
         sel_global = [idx_subset[i] for i in sel_subset]
 
@@ -524,7 +524,7 @@ def embedding_select_from_raw(ep_dir: str, cfg: Dict) -> Optional[Dict]:
             keep_core = core[:max(0, K - 2)]
             sel_global = sorted(set([0, T - 1] + keep_core))
 
-    # salvataggi
+    # save outputs
     out_sel = os.path.join(embeds_dir, "selected")
     os.makedirs(out_sel, exist_ok=True)
     for rank, t in enumerate(sorted(sel_global)):

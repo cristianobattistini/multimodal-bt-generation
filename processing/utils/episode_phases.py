@@ -5,7 +5,7 @@ from PIL import Image
 import numpy as np
 from glob import glob
 import shutil
-from processing.utils.utils import make_gif, to_json_safe  # Assicurati che esista
+from processing.utils.utils import make_gif, to_json_safe
 from processing.utils.loader import sample_every_k, parse_action_fields
 from processing.frame_selection import embedding_select_from_raw
 import processing.utils.config as CFG
@@ -18,7 +18,7 @@ except Exception:
 
 
 def _load_raw_frames_from_disk(ep_dir: str) -> Tuple[np.ndarray, List[str]]:
-    """Carica i frame già salvati in raw_frames/ come array uint8 e lista path."""
+    """Load saved frames from raw_frames/ as uint8 array and path list."""
     frames_dir = os.path.join(ep_dir, "raw_frames")
     if not os.path.isdir(frames_dir):
         return np.empty((0,), dtype=np.uint8), []
@@ -51,21 +51,21 @@ def write_episode_phase(
     normalize_names: bool | None = None # alias legacy; se dato, forza il mode
 ):
     """
-    Salva:
-      - sampled_frames/  (nomi coerenti con filename_mode)
-      - preview.gif      (ordine coerente con filename_mode)
-      - attributes.json  (chiavi = filename salvato; include sempre selected_index = t originale)
+    Save:
+      - sampled_frames/  (filenames consistent with filename_mode)
+      - preview.gif      (order consistent with filename_mode)
+      - attributes.json  (keys = saved filename; always includes selected_index = original t)
       - episode_data.json
 
     filename_mode:
-      - "original":   nome file = frame_{t:04d}.jpg    (usa l'indice temporale reale)
-      - "sequential": nome file = frame_{i:04d}.jpg    (rinominati in ordine temporale)
+      - "original":   filename = frame_{t:04d}.jpg    (uses the real temporal index)
+      - "sequential": filename = frame_{i:04d}.jpg    (renamed in temporal order)
     """
     import os, json
     from PIL import Image
     from processing.utils.utils import make_gif, to_json_safe
 
-    # --- risoluzione finale del mode, gestendo l'alias legacy ---
+    # --- final mode resolution, handling legacy alias ---
     if normalize_names is not None:
         filename_mode = "sequential" if normalize_names else "original"
     if filename_mode not in ("original", "sequential"):
@@ -77,7 +77,7 @@ def write_episode_phase(
     frames_dir = os.path.join(out_dir, "sampled_frames")
     os.makedirs(frames_dir, exist_ok=True)
 
-    # Normalizza frames in lista
+    # Normalize frames to list
     if isinstance(frames, np.ndarray):
         if frames.ndim == 3:
             frames = frames[None, ...]
@@ -87,32 +87,32 @@ def write_episode_phase(
 
     if len(frames_list) != len(frame_indices):
         raise ValueError(
-            f"frames_list ({len(frames_list)}) e frame_indices ({len(frame_indices)}) non coincidono."
+            f"frames_list ({len(frames_list)}) and frame_indices ({len(frame_indices)}) length mismatch."
         )
 
-    # Allinea o genera attributi
+    # Align or generate attributes
     if attributes is None:
         attributes = [{"selected_index": int(t)} for t in frame_indices]
     else:
         if len(attributes) != len(frame_indices):
             raise ValueError(
-                f"attributes ({len(attributes)}) e frame_indices ({len(frame_indices)}) non coincidono."
+                f"attributes ({len(attributes)}) and frame_indices ({len(frame_indices)}) length mismatch."
             )
 
-    # Aggrega triplette (t, frame, attr)
+    # Aggregate triplets (t, frame, attr)
     items = list(zip(frame_indices, frames_list, attributes))  # (t, img, attr)
 
-    # Se sequential, ordina per t crescente
+    # If sequential, sort by ascending t
     if filename_mode == "sequential":
         items.sort(key=lambda x: x[0])
 
-    # Salvataggio
+    # Save
     rel_paths = []
     attr_data = {}
     frames_for_gif = []
 
     if filename_mode == "sequential":
-        # padding fisso a 4 per uniformità (oppure calcolalo da len(items))
+        # fixed padding of 4 for uniformity
         width = 4
         for i, (t, img_arr, attr) in enumerate(items):
             img = Image.fromarray(img_arr)
@@ -120,14 +120,14 @@ def write_episode_phase(
             img.save(os.path.join(frames_dir, fname), quality=95)
             rel_paths.append(os.path.join("sampled_frames", fname))
 
-            # conserva l’indice temporale originale
+            # preserve the original temporal index
             a = dict(attr)
             a["selected_index"] = int(t)
             attr_data[fname] = to_json_safe(a)
 
             frames_for_gif.append(img_arr)
     else:
-        # original: usa l’indice reale t nel nome
+        # original: use the real index t in the filename
         for (t, img_arr, attr) in items:
             img = Image.fromarray(img_arr)
             fname = f"frame_{t:04d}.jpg"
@@ -140,7 +140,7 @@ def write_episode_phase(
 
             frames_for_gif.append(img_arr)
 
-    # GIF coerente con l’ordine di salvataggio
+    # GIF consistent with save order
     if gif and len(frames_for_gif) >= 2:
         gif_path = os.path.join(out_dir, "preview.gif")
         make_gif(frames_for_gif, gif_path)
@@ -164,18 +164,18 @@ def build_all_episode_phases(
     episode_steps: Optional[list] = None,
     export_mode: str = "full",              # "full" | "final_only"
     filename_mode: str = "original",        # "original" | "sequential"
-    normalize_names: bool | None = None,    # alias legacy; se True -> "sequential"
-    prune_only: bool = False,               # se True, ripulisce e lascia solo final_selected/
+    normalize_names: bool | None = None,    # legacy alias; if True -> "sequential"
+    prune_only: bool = False,               # if True, clean up and keep only final_selected/
 ):
     """
-    - Legge i frame da raw_frames/ (fonte unica)
-    - Campiona con CFG.embeds['k_slicing']
-    - Se export_mode == "full": scrive sampled_k{K} e final_selected/
-      Se export_mode == "final_only": scrive SOLO final_selected/
-    - filename_mode controlla i nomi file nella/e fase/i
-    - prune_only rimuove tutto tranne final_selected/ a fine episodio
+    - Read frames from raw_frames/ (single source)
+    - Sample with CFG.embeds['k_slicing']
+    - If export_mode == "full": write sampled_k{K} and final_selected/
+      If export_mode == "final_only": write ONLY final_selected/
+    - filename_mode controls filenames in the phase(s)
+    - prune_only removes everything except final_selected/ at the end
     """
-    # 0) Carica i frame
+    # 0) Load frames
     arr, _ = _load_raw_frames_from_disk(ep_dir)
     if arr.size == 0:
         print(f"[PHASES] skip: no raw_frames in {ep_dir}")
@@ -194,7 +194,7 @@ def build_all_episode_phases(
     k = max(1, int(round(1.0 / raw))) if isinstance(raw, float) and 0.0 < raw <= 1.0 else max(1, int(raw))
     sampled_arr, indices = sample_every_k(arr, k)
 
-    # 2) attributi base
+    # 2) base attributes
     if episode_steps is not None and isinstance(episode_steps, (list, tuple)) and len(episode_steps) == T:
         base_attrs = []
         for i in indices:
@@ -205,7 +205,7 @@ def build_all_episode_phases(
     else:
         base_attrs = [{"selected_index": int(i)} for i in indices]
 
-    # 3) sampled_kX/ solo in modalità full
+    # 3) sampled_kX/ only in full mode
     if export_mode == "full":
         write_episode_phase(
             ep_dir=ep_dir,
@@ -220,7 +220,7 @@ def build_all_episode_phases(
         )
         print(f"[PHASES] wrote sampled_k{k} with {len(indices)} frames.")
 
-    # 4) selezione embedding → final_selected/
+    # 4) embedding selection → final_selected/
     if getattr(CFG, "run_embed_selection", True):
         try:
             sel = embedding_select_from_raw(ep_dir, CFG.embeds)
@@ -276,8 +276,8 @@ def build_all_episode_phases(
 
 def _prune_episode_dir(ep_dir: str, keep: list[str] = None) -> None:
     """
-    Cancella tutto dentro ep_dir tranne gli elementi elencati in keep (dir o file).
-    Esempio: keep=["final_selected"] → mantiene solo la cartella final_selected/.
+    Delete everything inside ep_dir except the items listed in keep (dirs or files).
+    Example: keep=["final_selected"] → keep only the final_selected/ folder.
     """
     if keep is None:
         keep = []

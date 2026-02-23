@@ -136,7 +136,7 @@ python behavior_integration/scripts/vlm_server.py --model qwen --port 7860
 
 | Notebook | Purpose |
 |----------|---------|
-| `evalutation.ipynb` | Automatic metrics (BLEU, ROUGE) |
+| `evaluation.ipynb` | Automatic metrics (BLEU, ROUGE) |
 | `*_Inference_Testing.ipynb` | Per-model qualitative evaluation |
 
 ## Dataset
